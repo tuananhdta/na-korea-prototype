@@ -1,0 +1,382 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* 1. Đỏ Nhân sâm (Ginseng Red) — Nút CTA chính, link, trạng thái active, giá khuyến mãi */
+  --red-700: #B5222A;
+  --brand-primary: #B5222A;
+  --color-primary: #B5222A;
+  --color-primary-hover: #991C23;
+
+  /* 2. Tím mận hoàng gia (Royal Plum) — Footer, hero, các dải editorial nền sẫm */
+  --plum-700: #4B193E;
+  --color-plum: #4B193E;
+  --color-brand-footer: #4B193E;
+
+  /* 3. Vàng hổ phách (Amber Gold) — Tiết chế: nhãn, sao đánh giá, chi tiết nguồn gốc (Không dùng làm nút) */
+  --gold-600: #F0831F;
+  --color-secondary: #F0831F;
+  --color-secondary-hover: #D97013;
+
+  /* 4. Typography & Text */
+  --color-heading: #2D2D2D;
+  --color-text: #4B4F52;
+  --color-text-secondary: #666666;
+
+  /* 5. Backgrounds & Surfaces */
+  --color-background: #FFFFFF;
+  --color-background-soft: #F8F8F8;
+  --color-background-warm: #ECEBE9;
+
+  /* 6. Borders & Dividers */
+  --color-border: #E5E5E5;
+
+  /* System tokens */
+  --background: #FFFFFF;
+  --foreground: #4B4F52;
+  --radius: 0.5rem;
+
+  /* Motion & elevation */
+  --na-motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --na-shadow-surface: 0 8px 24px rgba(75, 25, 62, 0.08), 0 2px 6px rgba(45, 45, 45, 0.04);
+  --na-shadow-surface-hover: 0 22px 44px rgba(75, 25, 62, 0.16), 0 6px 16px rgba(45, 45, 45, 0.06);
+  --na-shadow-media: 0 14px 32px rgba(44, 13, 35, 0.18), 0 4px 12px rgba(45, 45, 45, 0.08);
+  --na-shadow-media-hover: 0 28px 52px rgba(44, 13, 35, 0.27), 0 8px 20px rgba(45, 45, 45, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-text);
+  
+  --color-brand-primary: var(--brand-primary);
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  
+  --color-plum: var(--plum-700);
+  --color-plum-700: var(--plum-700);
+  --color-brand-footer: var(--color-brand-footer);
+
+  --color-gold: var(--gold-600);
+  --color-gold-600: var(--gold-600);
+  --color-secondary: var(--color-secondary);
+  --color-secondary-hover: var(--color-secondary-hover);
+  
+  --color-heading: var(--color-heading);
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+  
+  --color-bg-soft: var(--color-background-soft);
+  --color-bg-warm: var(--color-background-warm);
+  --color-border-subtle: var(--color-border);
+  
+  --font-sans: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-serif: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--color-heading);
+    letter-spacing: -0.015em;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: #FFFFFF;
+  }
+}
+
+/* Brand Utility Classes */
+.text-heading {
+  color: var(--color-heading);
+}
+
+.text-body {
+  color: var(--color-text);
+}
+
+.text-body-muted {
+  color: var(--color-text-secondary);
+}
+
+.bg-plum {
+  background-color: var(--plum-700);
+}
+
+.text-plum {
+  color: var(--plum-700);
+}
+
+.border-plum {
+  border-color: var(--plum-700);
+}
+
+.bg-soft {
+  background-color: var(--color-background-soft);
+}
+
+.bg-warm {
+  background-color: var(--color-background-warm);
+}
+
+.border-brand {
+  border-color: var(--color-border);
+}
+
+/* Shared, restrained elevation transitions for interactive surfaces */
+.na-surface-lift,
+.na-media-lift {
+  transition:
+    transform 500ms var(--na-motion-ease),
+    box-shadow 500ms var(--na-motion-ease),
+    border-color 500ms var(--na-motion-ease);
+}
+
+.na-surface-lift {
+  box-shadow: var(--na-shadow-surface);
+}
+
+.na-media-lift {
+  box-shadow: var(--na-shadow-media);
+}
+
+.na-surface-lift:focus-within {
+  transform: translate3d(0, -5px, 0);
+  box-shadow: var(--na-shadow-surface-hover);
+}
+
+.na-media-lift:focus-visible,
+.na-media-lift:focus-within {
+  transform: translate3d(0, -5px, 0);
+  box-shadow: var(--na-shadow-media-hover);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .na-surface-lift:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: var(--na-shadow-surface-hover);
+  }
+
+  .na-media-lift:hover {
+    transform: translate3d(0, -5px, 0);
+    box-shadow: var(--na-shadow-media-hover);
+  }
+}
+
+.na-drawer-transition {
+  transition:
+    transform 480ms var(--na-motion-ease),
+    opacity 360ms var(--na-motion-ease),
+    box-shadow 480ms var(--na-motion-ease);
+}
+
+/* Shared viewport reveal for page sections and content panels. */
+.na-scroll-fade {
+  opacity: 0;
+  transform: translate3d(0, 22px, 0);
+  transition:
+    opacity 720ms var(--na-motion-ease),
+    transform 720ms var(--na-motion-ease);
+  will-change: opacity, transform;
+}
+
+.na-scroll-fade[data-scroll-fade-visible="true"] {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+.na-scroll-fade:focus-within {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: auto;
+}
+
+/* Refined entrance motion for imagery and editorial content */
+@keyframes na-image-reveal {
+  from {
+    opacity: 0;
+    transform: scale(1.045);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes na-content-reveal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 18px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes na-image-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes na-hero-image {
+  from {
+    transform: scale(1.15);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.na-image-reveal {
+  animation: na-image-reveal 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: opacity, transform;
+}
+
+.na-image-fade {
+  animation: na-image-fade 700ms ease-out both;
+}
+
+.na-hero-image {
+  animation: na-hero-image 8000ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: transform;
+}
+
+.na-hero-content > * {
+  animation: na-content-reveal 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: opacity, transform;
+}
+
+.na-stagger-grid > * {
+  animation: na-image-fade 650ms ease-out both;
+  will-change: opacity;
+}
+
+.na-hero-content > *:nth-child(1),
+.na-stagger-grid > *:nth-child(1) {
+  animation-delay: 80ms;
+}
+
+.na-hero-content > *:nth-child(2),
+.na-stagger-grid > *:nth-child(2) {
+  animation-delay: 160ms;
+}
+
+.na-hero-content > *:nth-child(3),
+.na-stagger-grid > *:nth-child(3) {
+  animation-delay: 240ms;
+}
+
+.na-hero-content > *:nth-child(4),
+.na-stagger-grid > *:nth-child(4) {
+  animation-delay: 320ms;
+}
+
+.na-stagger-grid > *:nth-child(5) {
+  animation-delay: 400ms;
+}
+
+.na-stagger-grid > *:nth-child(6) {
+  animation-delay: 480ms;
+}
+
+.na-stagger-grid > *:nth-child(7) {
+  animation-delay: 560ms;
+}
+
+.na-stagger-grid > *:nth-child(8) {
+  animation-delay: 640ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .na-image-reveal,
+  .na-image-fade,
+  .na-hero-image,
+  .na-hero-content > *,
+  .na-stagger-grid > * {
+    animation: none;
+    transform: none;
+    opacity: 1;
+    will-change: auto;
+  }
+
+  .na-scroll-fade {
+    opacity: 1;
+    transform: none;
+    transition-duration: 1ms;
+    will-change: auto;
+  }
+
+  .na-surface-lift,
+  .na-media-lift,
+  .na-drawer-transition {
+    transition-duration: 1ms !important;
+  }
+
+  .na-surface-lift:hover,
+  .na-surface-lift:focus-within,
+  .na-media-lift:hover,
+  .na-media-lift:focus-visible,
+  .na-media-lift:focus-within {
+    transform: none;
+  }
+
+  .animate-bounce,
+  .animate-ping,
+  .animate-pulse {
+    animation: none !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-background-soft);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c5c8cc;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-primary);
+}
