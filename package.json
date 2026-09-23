@@ -4,7 +4,7 @@
   "private": true,
   "description": "Website chính thức của Tổng công ty Nông nghiệp Nhân sâm Punggi",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --webpack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
