@@ -47,6 +47,8 @@ next-env.d.ts
 
 # Local temp files
 temp/
+2 file mẫu cho catalog/
+scripts/sample*.html
 
 .vercel
 .env*

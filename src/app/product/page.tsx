@@ -2,46 +2,66 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
 import { ProductCard } from "@/components/ProductCard";
+import { PageHero } from "@/components/PageHero";
+import { CustomerReviewsSection } from "@/components/CustomerReviewsSection";
+import { EeatKnowledgeSection } from "@/components/EeatKnowledgeSection";
 import productsData from "@/data/products.json";
 import { Product } from "@/types/product";
 import { Search, SlidersHorizontal, ChevronRight } from "lucide-react";
 
-const CATEGORIES = [
+const MAIN_AUDIENCE_TABS = [
   { id: "all", label: "Tất Cả Sản Phẩm" },
   { id: "adults", label: "Hồng Sâm Người Lớn" },
-  { id: "kids", label: "Hồng Sâm Trẻ Con" },
-  { id: "gifts", label: "Bộ Quà Biếu" },
-  { id: "pure", label: "Hồng Sâm Nguyên Chất" },
+  { id: "kids", label: "Hồng Sâm Trẻ Em" },
 ];
 
 export default function ProductCatalogPage() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedAudience, setSelectedAudience] = useState("all");
+  const [selectedForm, setSelectedForm] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState<"default" | "price-asc" | "price-desc" | "name">("default");
 
   const products = productsData as Product[];
 
+  // Pre-calculate counts for audience tabs
+  const audienceCounts = useMemo(() => {
+    return {
+      all: products.length,
+      adults: products.filter((p) => p.categories.some((c) => c.toLowerCase().includes("người lớn"))).length,
+      kids: products.filter((p) => p.categories.some((c) => c.toLowerCase().includes("trẻ") || c.toLowerCase().includes("em") || p.title.toLowerCase().includes("trẻ") || p.title.toLowerCase().includes("easy"))).length,
+    };
+  }, [products]);
+
   const filteredProducts = useMemo(() => {
     return products
       .filter((p) => {
-        // Category filter
-        if (selectedCategory === "adults") {
+        // Audience filter
+        if (selectedAudience === "adults") {
           return p.categories.some((c) => c.toLowerCase().includes("người lớn"));
         }
-        if (selectedCategory === "kids") {
-          return p.categories.some((c) => c.toLowerCase().includes("trẻ") || c.toLowerCase().includes("em"));
+        if (selectedAudience === "kids") {
+          return p.categories.some((c) => c.toLowerCase().includes("trẻ") || c.toLowerCase().includes("em") || p.title.toLowerCase().includes("trẻ") || p.title.toLowerCase().includes("easy"));
         }
-        if (selectedCategory === "gifts") {
-          return p.categories.some((c) => c.toLowerCase().includes("quà") || c.toLowerCase().includes("set") || p.title.toLowerCase().includes("set") || p.title.toLowerCase().includes("quà"));
+        return true;
+      })
+      .filter((p) => {
+        // Form sub-filter
+        if (selectedForm === "extract") {
+          return p.categories.some((c) => c.toLowerCase().includes("nguyên chất")) || p.title.toLowerCase().includes("nguyên chất") || p.title.toLowerCase().includes("cao");
         }
-        if (selectedCategory === "pure") {
-          return p.categories.some((c) => c.toLowerCase().includes("nguyên chất"));
+        if (selectedForm === "stick") {
+          return p.categories.some((c) => c.toLowerCase().includes("nước")) || p.title.toLowerCase().includes("balance") || p.title.toLowerCase().includes("nước") || p.title.toLowerCase().includes("stick");
+        }
+        if (selectedForm === "honey") {
+          return p.categories.some((c) => c.toLowerCase().includes("mật ong")) || p.title.toLowerCase().includes("mật ong") || p.title.toLowerCase().includes("lát") || p.title.toLowerCase().includes("củ");
+        }
+        if (selectedForm === "candy") {
+          return p.categories.some((c) => c.toLowerCase().includes("kẹo") || c.toLowerCase().includes("trà")) || p.title.toLowerCase().includes("kẹo") || p.title.toLowerCase().includes("trà");
         }
         return true;
       })
@@ -67,10 +87,53 @@ export default function ProductCatalogPage() {
         }
         return 0;
       });
-  }, [products, selectedCategory, searchTerm, sortBy]);
+  }, [products, selectedAudience, selectedForm, searchTerm, sortBy]);
+
+  // Schema.org Structured Data (JSON-LD) for SEO & GEO
+  const catalogJsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Trang Chủ",
+            "item": "https://hongsamkim.com"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Sản Phẩm",
+            "item": "https://hongsamkim.com/product"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "name": "Danh Mục Sản Phẩm Hồng Sâm Kim's Red Ginseng",
+        "description": "Các sản phẩm hồng sâm 6 năm tuổi Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea.",
+        "numberOfItems": filteredProducts.length,
+        "itemListElement": filteredProducts.map((p, idx) => ({
+          "@type": "ListItem",
+          "position": idx + 1,
+          "name": p.title,
+          "url": `https://hongsamkim.com/product/${p.id}`,
+          "image": `https://hongsamkim.com${p.image}`
+        }))
+      }
+    ]
+  };
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] flex flex-col">
+      {/* Schema.org Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogJsonLd) }}
+      />
+
       <Header onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
       <MobileDrawer
         isOpen={isMobileMenuOpen}
@@ -79,25 +142,14 @@ export default function ProductCatalogPage() {
 
       <main className="flex-1 pb-20">
         {/* Banner Hero */}
-        <div data-floating-contact-hero className="relative -mt-2 overflow-hidden border-b border-gray-800 bg-[#161e27] px-4 py-14 text-white sm:px-6">
-          <Image
-            src="/images/production.jpg"
-            alt="Sản phẩm Hồng Sâm Kim's Red Ginseng"
-            fill
-            sizes="100vw"
-            preload
-            className="na-image-reveal object-cover object-center"
-          />
-          <div className="absolute inset-0 z-0 bg-gradient-to-r from-black/55 via-[#161e27]/30 to-transparent" />
-          <div className="na-hero-content max-w-[1240px] mx-auto relative z-10 space-y-3">
-            <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.45)]">
-              Tất Cả Sản Phẩm Hồng Sâm Kim&apos;s Red Ginseng
-            </h1>
-            <p className="text-white/90 text-sm max-w-2xl leading-relaxed drop-shadow-[0_1px_5px_rgba(0,0,0,0.45)]">
-              Trải nghiệm tinh hoa nhân sâm 6 năm tuổi từ vùng núi Punggi, Hàn Quốc – Trực tiếp sản xuất bởi nghệ nhân Kim Jeong Hwan.
-            </p>
-          </div>
-        </div>
+        <PageHero
+          eyebrow="DANH MỤC SẢN PHẨM"
+          showEyebrow={false}
+          title="Tất Cả Sản Phẩm Hồng Sâm Kim's Red Ginseng"
+          description="Sản phẩm bồi bổ sức khỏe cao cấp chế biến từ 100% nhân sâm 6 năm tuổi thủ phủ Punggi Hàn Quốc – Nghệ nhân Kim Jeong Hwan."
+          image="/images/production.jpg"
+          imageAlt="Sản phẩm Hồng Sâm Kim's Red Ginseng"
+        />
 
         {/* Breadcrumbs */}
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
@@ -107,63 +159,114 @@ export default function ProductCatalogPage() {
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-gray-900 font-medium">Sản Phẩm</span>
-            {selectedCategory !== "all" && (
+            {selectedAudience !== "all" && (
               <>
                 <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
                 <span className="text-[#b5222a] font-medium">
-                  {CATEGORIES.find((c) => c.id === selectedCategory)?.label}
+                  {MAIN_AUDIENCE_TABS.find((c) => c.id === selectedAudience)?.label}
                 </span>
               </>
             )}
           </nav>
         </div>
 
-        {/* Filters and Controls */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-2 mb-8">
-          <div className="bg-white p-4 sm:p-6 rounded-xl shadow-xs border border-gray-200 flex flex-col lg:flex-row lg:items-center justify-between gap-4">
-            {/* Category Tabs */}
-            <div className="flex flex-wrap items-center gap-2">
-              {CATEGORIES.map((cat) => {
-                const isActive = selectedCategory === cat.id;
-                return (
-                  <button
-                    key={cat.id}
-                    onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-4 py-2 rounded-lg text-xs sm:text-sm font-medium transition-all duration-200 ${
-                      isActive
-                        ? "bg-[#b5222a] text-white shadow-xs font-semibold"
-                        : "bg-gray-100 text-gray-700 hover:bg-gray-200 hover:text-black"
-                    }`}
-                  >
-                    {cat.label}
-                  </button>
-                );
-              })}
+        {/* ═══ TẦNG 1: TAB ĐỐI TƯỢNG (Underline Tabs thanh lịch, không rớt dòng) ═══ */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-1 mb-5">
+          <div className="flex items-center gap-6 sm:gap-10 border-b border-[#EAE6E1] overflow-x-auto no-scrollbar">
+            {MAIN_AUDIENCE_TABS.map((tab) => {
+              const isActive = selectedAudience === tab.id;
+              const count = audienceCounts[tab.id as keyof typeof audienceCounts] || 0;
+              return (
+                <button
+                  key={tab.id}
+                  onClick={() => setSelectedAudience(tab.id)}
+                  className={`group relative pb-3.5 text-sm sm:text-base font-semibold whitespace-nowrap transition-colors duration-200 ${
+                    isActive
+                      ? "text-[#B5222A]"
+                      : "text-[#666666] hover:text-[#2D2D2D]"
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    {tab.label}
+                    <span
+                      className={`inline-flex items-center justify-center rounded-full px-2 py-0.5 text-xs font-bold transition-colors ${
+                        isActive
+                          ? "bg-[#B5222A]/10 text-[#B5222A]"
+                          : "bg-gray-100 text-gray-500 group-hover:bg-gray-200 group-hover:text-gray-700"
+                      }`}
+                    >
+                      {count}
+                    </span>
+                  </span>
+                  {/* Active Underline Accent */}
+                  {isActive && (
+                    <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[#B5222A] rounded-full" />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+
+        {/* ═══ TẦNG 2: THANH CÔNG CỤ & TÌM KIẾM (Utility Toolbar) ═══ */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mb-8">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-3 border-b border-[#EAE6E1]/80">
+            {/* Left: Counter & Form Sub-Filter */}
+            <div className="flex flex-wrap items-center gap-4">
+              <span className="text-xs sm:text-sm text-gray-600">
+                Hiển thị <strong className="text-[#2D2D2D] font-bold">{filteredProducts.length}</strong> sản phẩm
+              </span>
+
+              <div className="h-4 w-[1px] bg-gray-300 hidden sm:block" />
+
+              {/* Form Filter Dropdown */}
+              <div className="flex items-center gap-1.5">
+                <select
+                  value={selectedForm}
+                  onChange={(e) => setSelectedForm(e.target.value)}
+                  className="h-9 rounded-lg border border-[#EAE6E1] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                >
+                  <option value="all">Tất cả dạng sản phẩm</option>
+                  <option value="extract">Cao sâm cô đặc</option>
+                  <option value="stick">Nước sâm dạng Stick</option>
+                  <option value="honey">Sâm lát / củ mật ong</option>
+                  <option value="candy">Trà & Kẹo hồng sâm</option>
+                </select>
+              </div>
             </div>
 
-            {/* Search & Sort Controls */}
-            <div className="flex flex-wrap sm:flex-nowrap items-center gap-3">
-              {/* Search input */}
-              <div className="relative flex-1 sm:w-64">
-                <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
+            {/* Right: Search Input & Sort Dropdown */}
+            <div className="flex items-center gap-3">
+              {/* Search input with sleek styling */}
+              <div className="relative w-full sm:w-64">
+                <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                 <input
                   type="text"
                   placeholder="Tìm kiếm sản phẩm..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-9 pr-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-xs sm:text-sm focus:outline-none focus:border-[#b5222a] focus:bg-white transition-colors"
+                  className="h-9 w-full rounded-lg border border-[#EAE6E1] bg-white pl-9 pr-8 text-xs sm:text-sm text-[#2D2D2D] placeholder:text-gray-400 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 />
+                {searchTerm && (
+                  <button
+                    onClick={() => setSearchTerm("")}
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 text-xs p-0.5"
+                    aria-label="Xóa tìm kiếm"
+                  >
+                    ✕
+                  </button>
+                )}
               </div>
 
-              {/* Sort dropdown */}
+              {/* Sort Dropdown */}
               <div className="flex items-center gap-1.5 shrink-0">
-                <SlidersHorizontal className="w-4 h-4 text-gray-500" />
+                <SlidersHorizontal className="w-3.5 h-3.5 text-gray-500 hidden sm:inline" />
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                  className="bg-gray-50 border border-gray-200 rounded-lg px-3 py-2 text-xs sm:text-sm text-gray-700 focus:outline-none focus:border-[#b5222a]"
+                  className="h-9 rounded-lg border border-[#EAE6E1] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 >
-                  <option value="default">Mặc định</option>
+                  <option value="default">Sắp xếp: Mặc định</option>
                   <option value="price-asc">Giá: Thấp → Cao</option>
                   <option value="price-desc">Giá: Cao → Thấp</option>
                   <option value="name">Tên: A → Z</option>
@@ -182,7 +285,8 @@ export default function ProductCatalogPage() {
               </p>
               <button
                 onClick={() => {
-                  setSelectedCategory("all");
+                  setSelectedAudience("all");
+                  setSelectedForm("all");
                   setSearchTerm("");
                 }}
                 className="mt-4 px-5 py-2 bg-[#b5222a] text-white text-xs font-semibold rounded-lg hover:bg-[#8f1920] transition-colors"
@@ -198,9 +302,16 @@ export default function ProductCatalogPage() {
             </div>
           )}
         </div>
+
+        {/* Customer Reviews Section (Social Proof) */}
+        <CustomerReviewsSection />
+
+        {/* E-E-A-T Knowledge Section (Authoritative SEO content) */}
+        <EeatKnowledgeSection />
       </main>
 
       <Footer />
     </div>
   );
 }
+

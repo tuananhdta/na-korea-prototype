@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, ShoppingBag } from "lucide-react";
 import { navItems } from "@/lib/navigation";
 import { BRAND_LOGOS } from "@/lib/logos";
@@ -16,10 +17,53 @@ interface HeaderProps {
 }
 
 export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isBannerVisible, setIsBannerVisible] = useState(true);
+
+  // Active route detection for main menu items and their children (including nested sub-items)
+  const isNavActive = (itemHref: string, subItems?: any[]) => {
+    if (!pathname) return false;
+    if (itemHref === "/") {
+      return pathname === "/";
+    }
+    // Direct match or exact sub-path
+    if (pathname === itemHref || pathname.startsWith(itemHref + "/")) {
+      return true;
+    }
+    // SubItems match (including nested children)
+    if (
+      subItems &&
+      subItems.some((sub) => {
+        if (pathname === sub.href || (sub.href !== "/" && pathname.startsWith(sub.href + "/"))) {
+          return true;
+        }
+        if (
+          sub.subItems &&
+          sub.subItems.some(
+            (child: any) =>
+              pathname === child.href ||
+              (child.href !== "/" && pathname.startsWith(child.href + "/"))
+          )
+        ) {
+          return true;
+        }
+        return false;
+      })
+    ) {
+      return true;
+    }
+    // Specific sections
+    if (itemHref === "/product" && (pathname.startsWith("/product") || pathname.startsWith("/products"))) {
+      return true;
+    }
+    if (itemHref === "/catalog" && pathname.startsWith("/catalog")) {
+      return true;
+    }
+    return false;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -39,11 +83,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
   const headerOffset = isBannerVisible ? "top-24 sm:top-20" : "top-0";
   const pageSpacerHeight = isBannerVisible
     ? isScrolled
-      ? "h-40 sm:h-36"
-      : "h-44 sm:h-40"
+      ? "h-44 sm:h-40"
+      : "h-[184px] sm:h-44"
     : isScrolled
-      ? "h-16"
-      : "h-20";
+      ? "h-20"
+      : "h-[88px] sm:h-24";
 
   const isOverlayTop = overlay && !isScrolled;
   const headerBgClass = isOverlayTop
@@ -69,26 +113,32 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
       >
         <div
           className={`mx-auto flex max-w-[1180px] items-center justify-between px-6 transition-all duration-400 ease-in-out sm:px-8 ${
-            isScrolled ? "h-16" : "h-20"
+            isScrolled ? "h-20" : "h-[88px] sm:h-[96px]"
           }`}
         >
           <Link
             href="/"
-            className="relative block h-12 w-40 shrink-0 transition-transform duration-300 hover:scale-[1.03]"
+            className={`relative block shrink-0 transition-all duration-300 hover:scale-[1.03] ${
+              isScrolled
+                ? "h-[50px] w-[168px] sm:h-[54px] sm:w-[180px]"
+                : "h-[58px] w-[194px] sm:h-[62.4px] sm:w-[208px]"
+            }`}
           >
             <Image
               src={BRAND_LOGOS.horizontalWhite}
               alt="6년근 김정환홍삼 | Kim's Red Ginseng"
               fill
-              sizes="160px"
+              sizes="(max-width: 640px) 194px, 208px"
               className="object-contain object-left drop-shadow-[0_1px_3px_rgba(0,0,0,0.65)]"
-              preload
+              priority
             />
           </Link>
 
         <nav className="hidden h-full flex-1 items-center justify-end gap-0.5 lg:flex xl:gap-1.5">
           {navItems.map((item) => {
-            const isItemActive = activeMenu === item.title;
+            const isHovered = activeMenu === item.title;
+            const isRouteActive = isNavActive(item.href, item.subItems);
+
             return (
               <div
                 key={item.title}
@@ -104,26 +154,36 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                 <Link
                   href={item.href}
                   aria-haspopup={item.subItems ? "menu" : undefined}
-                  aria-expanded={item.subItems ? isItemActive : undefined}
-                  className={`relative flex h-full min-w-[74px] max-w-[132px] items-center justify-center gap-1 px-2 text-center text-[14px] font-medium leading-[1.15] tracking-[0.03em] drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 xl:px-2.5 ${
-                    isItemActive
-                      ? "text-[#FFD8DB]"
-                      : "text-white hover:text-[#FFF7F7]"
+                  aria-expanded={item.subItems ? isHovered : undefined}
+                  className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center text-[14px] leading-[1.15] tracking-[0.03em] drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 xl:px-2.5 ${
+                    isHovered
+                      ? "font-semibold text-white/95"
+                      : isRouteActive
+                        ? "font-bold text-white"
+                        : "font-medium text-white hover:text-[#FFF7F7]"
                   }`}
                 >
                   <span>{item.title}</span>
+
                   {item.subItems && (
                     <ChevronDown
                       aria-hidden="true"
                       className={`h-3 w-3 shrink-0 transition-transform duration-200 ${
-                        isItemActive ? "rotate-180 text-[#FFD8DB]" : "text-white/80"
+                        isHovered
+                          ? "rotate-180 text-white"
+                          : isRouteActive
+                            ? "text-white"
+                            : "text-white/80"
                       }`}
                     />
                   )}
 
+                  {/* Active / Hover underline indicator bar in WHITE */}
                   <span
                     aria-hidden="true"
-                    className={`absolute bottom-0 left-2 right-2 h-[2px] origin-center rounded-t-full bg-white transition-transform duration-300 ${isItemActive ? "scale-x-100" : "scale-x-0"}`}
+                    className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full bg-white transition-all duration-300 ${
+                      isHovered || isRouteActive ? "scale-x-100 opacity-100 shadow-[0_0_8px_rgba(255,255,255,0.85)]" : "scale-x-0 opacity-0"
+                    }`}
                   />
                 </Link>
               </div>
@@ -194,21 +254,88 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             >
               <div className="mx-auto max-w-[1180px] px-6 py-3.5 sm:px-8">
                 <div className="mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8 lg:gap-x-11">
-                  {item.subItems.map((sub) => (
-                    <Link
-                      key={sub.title}
-                      href={sub.href}
-                      className="group relative flex min-h-11 shrink-0 items-center justify-center px-2 py-2 text-center text-sm font-medium tracking-[0.02em] text-white/90 whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)] transition-colors duration-200 hover:text-white focus:text-white"
-                    >
-                      <span className="relative inline-block whitespace-nowrap py-1 transition-transform duration-200 group-hover:-translate-y-0.5">
-                        {sub.title}
-                        <span
-                          aria-hidden="true"
-                          className="absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full bg-[#B5222A] shadow-[0_0_8px_rgba(181,34,42,0.9)] transition-transform duration-300 ease-out group-hover:scale-x-100"
-                        />
-                      </span>
-                    </Link>
-                  ))}
+                  {item.subItems.map((sub) => {
+                    const isSubActive = (() => {
+                      if (!pathname) return false;
+                      if (pathname === sub.href) return true;
+                      if (
+                        sub.subItems &&
+                        sub.subItems.some((child) => pathname === child.href)
+                      ) {
+                        return true;
+                      }
+                      // Product detail pages under "Tất Cả Sản Phẩm"
+                      if (
+                        sub.href === "/product" &&
+                        (pathname.startsWith("/product/") || pathname.startsWith("/san-pham/")) &&
+                        !pathname.startsWith("/products/")
+                      ) {
+                        return true;
+                      }
+                      return false;
+                    })();
+
+                    return (
+                      <div
+                        key={sub.title}
+                        className="relative group/sub flex items-center"
+                      >
+                        <Link
+                          href={sub.href}
+                          className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center text-sm tracking-[0.02em] whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)] transition-colors duration-200 ${
+                            isSubActive
+                              ? "font-bold text-white"
+                              : "font-medium text-white/90 hover:text-white"
+                          }`}
+                        >
+                          <span className="relative inline-flex items-center gap-1.5 whitespace-nowrap py-1 transition-transform duration-200 group-hover/sub:-translate-y-0.5">
+                            {/* Animated Active White Indicator Dot */}
+                            {isSubActive && (
+                              <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.95)] animate-pulse" />
+                            )}
+                            <span>{sub.title}</span>
+                            {sub.subItems && (
+                              <ChevronDown className="h-3 w-3 text-white/70 transition-transform duration-200 group-hover/sub:rotate-180" />
+                            )}
+                            {/* Hover-only underline */}
+                            <span
+                              aria-hidden="true"
+                              className="absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.9)] transition-transform duration-300 ease-out group-hover/sub:scale-x-100"
+                            />
+                          </span>
+                        </Link>
+
+                        {/* Child dropdown for sub-items like "Về Nhân Sâm" */}
+                        {sub.subItems && (
+                          <div className="absolute left-1/2 top-full -translate-x-1/2 pt-1 opacity-0 invisible -translate-y-1 group-hover/sub:opacity-100 group-hover/sub:visible group-hover/sub:translate-y-0 transition-all duration-200 pointer-events-none group-hover/sub:pointer-events-auto z-50">
+                            <div className="min-w-[170px] rounded-xl border border-white/15 bg-[#3B1231]/95 backdrop-blur-md p-1.5 shadow-[0_14px_30px_rgba(0,0,0,0.5)] space-y-0.5">
+                              {sub.subItems.map((child) => {
+                                const isChildActive = pathname === child.href;
+                                return (
+                                  <Link
+                                    key={child.title}
+                                    href={child.href}
+                                    className={`flex items-center gap-2 rounded-lg px-3.5 py-2 text-xs tracking-wide transition-all duration-150 ${
+                                      isChildActive
+                                        ? "bg-white/15 font-bold text-white shadow-inner"
+                                        : "font-medium text-white/80 hover:bg-white/10 hover:text-white"
+                                    }`}
+                                  >
+                                    {isChildActive ? (
+                                      <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.95)] animate-pulse" />
+                                    ) : (
+                                      <span className="h-1 w-1 rounded-full bg-white/40" />
+                                    )}
+                                    <span>{child.title}</span>
+                                  </Link>
+                                );
+                              })}
+                            </div>
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

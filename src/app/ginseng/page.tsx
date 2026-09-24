@@ -23,17 +23,37 @@ export default function GinsengPage() {
           imageOpacity={0.96}
         />
 
-        {/* Breadcrumb */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
+        {/* Breadcrumb & Navigation Tabs */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-4 pb-2 space-y-4">
           <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
             <Link href="/" className="hover:text-black transition-colors">
               Trang Chủ
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-gray-900 font-medium">Nhân Sâm</span>
+            <Link href="/summary" className="hover:text-black transition-colors">
+              Giới Thiệu
+            </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-medium">Nhân Sâm Goryeo</span>
+            <span className="text-gray-600 font-medium">Về Nhân Sâm</span>
+            <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
+            <span className="text-[#b5222a] font-bold">Nhân Sâm</span>
           </nav>
+
+          {/* 2-Article Tab Control */}
+          <div className="flex items-center gap-2 p-1.5 bg-gray-100/80 rounded-xl border border-gray-200/80 max-w-md shadow-2xs">
+            <Link
+              href="/ginseng"
+              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#B5222A] text-white shadow-xs transition-all"
+            >
+              Nhân Sâm (Goryeo)
+            </Link>
+            <Link
+              href="/red-ginseng"
+              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-white/60 transition-all"
+            >
+              Hồng Sâm (6 Năm Tuổi)
+            </Link>
+          </div>
         </div>
 
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-16 mt-4">
@@ -263,7 +283,7 @@ export default function GinsengPage() {
             <div className="pt-2">
               <Link
                 href="/red-ginseng"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#b5222a] hover:bg-[#8f1920] text-white font-bold rounded-lg transition-colors text-sm shadow-md"
+                className="na-btn-primary px-8 py-3.5 text-sm"
               >
                 <span>TÌM HIỂU VỀ HỒNG SÂM</span>
                 <ChevronRight className="w-4 h-4" />

@@ -140,7 +140,7 @@ export function OrderSuccessModal({
           <button
             type="button"
             onClick={onClose}
-            className="flex-1 py-3 px-4 rounded-lg border border-[#E5E5E5] bg-white text-sm font-semibold text-[#4B4F52] hover:bg-gray-50 hover:text-[#2D2D2D] transition-colors text-center"
+            className="na-btn-outline flex-1 py-3 px-4 text-sm"
           >
             Đóng
           </button>
@@ -148,9 +148,9 @@ export function OrderSuccessModal({
           <button
             type="button"
             onClick={onContinueShopping}
-            className="flex-1 py-3 px-4 rounded-lg bg-[#B5222A] hover:bg-[#991C23] text-white text-sm font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2"
+            className="na-btn-primary group flex-1 py-3 px-4 text-sm"
           >
-            <ShoppingBag className="h-4 w-4" />
+            <ShoppingBag className="h-4 w-4 transition-transform duration-300 group-hover:scale-110" />
             <span>Tiếp tục mua hàng</span>
           </button>
         </div>

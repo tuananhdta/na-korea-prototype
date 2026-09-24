@@ -166,20 +166,20 @@ export function CartDrawer() {
                 <span>Cam kết chính hãng 100% ｜ Đổi trả trong 7 ngày</span>
               </div>
 
-              <div className="space-y-2">
+              <div className="space-y-2.5">
                 <Link
                   href="/checkout"
                   onClick={closeCart}
-                  className="w-full py-3.5 bg-[#b5222a] hover:bg-[#8f1920] text-white font-bold rounded-lg shadow-md flex items-center justify-center gap-2 transition-colors text-sm tracking-wide"
+                  className="na-btn-primary group w-full py-3.5 text-sm tracking-wide"
                 >
                   <span>TIẾN HÀNH THANH TOÁN</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
 
                 <Link
                   href="/cart"
                   onClick={closeCart}
-                  className="w-full py-2.5 bg-white border border-[#2D2D2D] hover:bg-gray-50 text-[#2D2D2D] font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors text-xs"
+                  className="na-btn-outline w-full py-2.5 text-xs font-semibold"
                 >
                   <span>Xem giỏ hàng chi tiết</span>
                 </Link>

@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
-import { ChevronRight, Calendar, ArrowLeft, Sparkles } from "lucide-react";
+import { ChevronRight, Calendar, ArrowLeft } from "lucide-react";
 import blogsData from "@/data/blogs.json";
 
 interface BlogDetailPageProps {
@@ -57,8 +57,7 @@ export default async function BlogDetailPage({ params }: BlogDetailPageProps) {
           <article data-scroll-fade="on" className="bg-white rounded-2xl shadow-xs border border-gray-100 p-6 sm:p-10 lg:p-14 space-y-8">
             {/* Meta */}
             <div className="space-y-4 pb-6 border-b border-gray-100">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-red-50 text-[#b5222a] text-xs font-bold rounded-md uppercase tracking-wider">
-                <Sparkles className="w-3.5 h-3.5" />
+              <div className="inline-flex items-center px-3 py-1 bg-red-50 text-[#b5222a] text-xs font-bold rounded-md uppercase tracking-wider">
                 <span>{post.category}</span>
               </div>
               <div className="flex items-center gap-4 text-xs text-gray-400">

@@ -72,10 +72,10 @@ export function HeroSlider() {
               isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
             }`}
           >
-            {/* Background Image Container with Smooth Slow Zoom-Out */}
+            {/* Background Image Container with Dynamic Ken Burns Animation */}
             <div
               className={`absolute inset-0 w-full h-full ${
-                isActive ? "na-hero-image" : "scale-[1.15]"
+                isActive ? (idx % 2 === 0 ? "kenburns-in" : "kenburns-out") : "scale-[1.05]"
               }`}
             >
               <Image
@@ -83,7 +83,7 @@ export function HeroSlider() {
                 alt={slide.title.join(" ")}
                 fill
                 sizes="100vw"
-                preload={idx === 0}
+                priority={idx === 0}
                 unoptimized
                 className="object-cover object-center"
               />
@@ -114,9 +114,10 @@ export function HeroSlider() {
               <div className="mt-8 md:mt-10">
                 <Link
                   href={slide.link}
-                  className="inline-block px-10 py-3 border border-white/80 text-white font-sans text-xs md:text-sm font-normal tracking-[0.25em] uppercase hover:bg-white hover:text-black transition-all duration-300 backdrop-blur-xs"
+                  className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-white/70 bg-white/10 px-9 py-3.5 text-xs md:text-sm font-bold tracking-[0.22em] uppercase text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-[#B5222A] hover:bg-[#B5222A] hover:text-white hover:shadow-[0_8px_25px_rgba(181,34,42,0.5)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent hover:before:translate-x-full before:transition-transform before:duration-700"
                 >
-                  XEM CHI TIẾT
+                  <span>XEM CHI TIẾT</span>
+                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
                 </Link>
               </div>
             </div>

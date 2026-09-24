@@ -6,6 +6,7 @@ import { HeroSlider } from "@/components/HeroSlider";
 import { ProductSection } from "@/components/ProductSection";
 import { GinsengSection } from "@/components/GinsengSection";
 import { BrandStorySection } from "@/components/BrandStorySection";
+import { PartnerSection } from "@/components/PartnerSection";
 import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
 
@@ -30,6 +31,9 @@ export function HomeClientView() {
 
         {/* 4. Brand Story & Video Section */}
         <BrandStorySection />
+
+        {/* 5. Enterprise Partners Infinite Marquee Section */}
+        <PartnerSection />
       </main>
 
       {/* Footer */}

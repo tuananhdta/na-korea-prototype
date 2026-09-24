@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Sparkles } from "lucide-react";
 
 interface PageHeroProps {
   eyebrow: string;
@@ -21,27 +20,26 @@ export function PageHero({
   imageOpacity = 0.92,
 }: PageHeroProps) {
   return (
-    <section data-floating-contact-hero className="relative isolate flex min-h-[clamp(320px,45vh,430px)] items-center overflow-hidden bg-[#161e27] px-4 py-16 text-white sm:px-6 md:py-20">
+    <section data-floating-contact-hero className="relative isolate flex min-h-[clamp(260px,34vh,350px)] items-center overflow-hidden bg-[#161e27] px-4 py-14 text-white sm:px-6 md:py-18">
       {image && (
-        <div className="na-image-reveal absolute inset-0 z-0">
+        <div className="kenburns-pulse absolute inset-0 z-0">
           <Image
             src={image}
             alt={imageAlt}
             fill
             sizes="100vw"
-            preload
+            priority
             style={{ opacity: imageOpacity }}
-            className="object-cover object-center brightness-[1.08] saturate-[1.04]"
+            className="object-cover object-center brightness-[1.05] saturate-[1.04]"
           />
         </div>
       )}
 
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/55 via-[#161e27]/30 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-[#161e27]/40 to-transparent" />
 
       <div className="na-hero-content relative z-10 mx-auto w-full max-w-[1240px] space-y-4">
         {showEyebrow && (
-          <div className="inline-flex items-center gap-2 rounded-full bg-[#b5222a] px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">
-            <Sparkles className="h-3.5 w-3.5" />
+          <div className="inline-flex items-center rounded-full bg-[#b5222a] px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">
             <span>{eyebrow}</span>
           </div>
         )}

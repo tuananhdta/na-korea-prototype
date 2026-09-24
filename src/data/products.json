@@ -1,504 +1,1727 @@
 [
   {
-    "id": "set-qua-bieu-",
-    "title": "Bộ quà tặng LINH KHÍ SỨC KHỎE (15 gói tonic x 50ml, 3 gói sâm lát x 18g)",
-    "url": "https://kimsredginseng.com/san-pham/set-qua-bieu-",
+    "id": "sp-kims-ginseng-1000000144",
+    "goodsNo": "1000000144",
+    "title": "Nước Hồng Sâm Cô Đặc Balance Time Kim's Red Ginseng (30 Gói x 10ml)",
+    "price": "1.750.000 ₫",
+    "originalPrice": "2.150.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Nước Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000144.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000144/image/detail/1000000144_detail_089.png",
+    "shortDescription": "Nước hồng sâm cô đặc cao cấp dạng gói stick tiện lợi. Kết hợp sâm 6 năm tuổi Punggi và 15 loại thảo dược đông y quý, mang lại 10mg Ginsenoside mỗi ngày.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Nước hồng sâm cô đặc cao cấp dạng gói stick tiện lợi. Kết hợp sâm 6 năm tuổi Punggi và 15 loại thảo dược đông y quý, mang lại 10mg Ginsenoside mỗi ngày.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000144-0",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-12",
+        "title": "Chất sâm rất 녹진 (đậm đặc), đúng chuẩn sâm Punggi!",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000144-1",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-07-28",
+        "title": "Đóng gói cực kỳ sang trọng, rất thích hợp bồi bổ sức khỏe!",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000144-2",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-06-19",
+        "title": "Bé nhà mình rất thích vị kẹo dẻo và hồng sâm trẻ em!",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000143",
+    "goodsNo": "1000000143",
+    "title": "Hồng Sâm Cân Bằng Miễn Dịch Bổ Sung Kẽm Immune Balance (60 Gói x 10g)",
+    "price": "2.540.000 ₫",
+    "originalPrice": "2.980.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Nước Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000143.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000143/image/detail/1000000143_detail_08.png",
+    "shortDescription": "Công thức kép kết hợp Hồng sâm 6 năm tuổi và Kẽm (Zinc) nguyên tố. Giúp kích hoạt tế bào miễn dịch, bảo vệ cơ thể khỏi virus và tác nhân gây bệnh.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Công thức kép kết hợp Hồng sâm 6 năm tuổi và Kẽm (Zinc) nguyên tố. Giúp kích hoạt tế bào miễn dịch, bảo vệ cơ thể khỏi virus và tác nhân gây bệnh.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000143-355",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "거래처 선물용으로 주문 했는데 받으시는분 모두가 만족해 합니다. 맛도 진하고 좋아...",
+        "content": "거래처 선물용으로 주문 했는데 받으시는분 모두가 만족해 합니다. 맛도 진하고 좋아요",
+        "image": null
+      },
+      {
+        "id": "rev-1000000143-356",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 정말 감사드립니다. 저희...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 정말 감사드립니다. 저희 제품은 풍기 6년근 홍삼에 국내산 배와 도라지를 더해 쓴맛이 부담스러운 분들도 편하게 드실 수 있도록 만들었습니다. 고객님께서 만족하셨다니 저희도 정말 기쁘고 보람을 느낍니다.😊 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000143-337",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "지금 환절기 시즌이라 감기까진 아니어도 가래가 자주끼고 목이 건조한게 갑갑하더라구...",
+        "content": "지금 환절기 시즌이라 감기까진 아니어도 가래가 자주끼고 목이 건조한게 갑갑하더라구요. 그래서 기관지에 좋은 배도라지 제품을 알아보다가 김정환홍삼배도라지가 마켓컬리에서 완판될 만큼 인기가 좋다고 해서 주문해봤습니다! 홍삼과 도라지에서 나는 특유의 쓴맛이 안느껴져 좋았으며 어린이들도 맛있게 섭취할 수 있게더라구요! 게다가 스틱 형식이라 휴대하기에도 편리해 마음껏 집과 직장에 한통씩 놔두면서 생각날 때마다 먹고 있어요! 첨부파일 IMG_8427.jpeg",
+        "image": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/board/goodsreview/goods/1000000143/8f97968b7e8dfa3c134"
+      },
+      {
+        "id": "rev-1000000143-338",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 소중한 후기 감사합니다. 요즘처럼 미세먼지가 ...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 소중한 후기 감사합니다. 요즘처럼 미세먼지가 심한 날에는 홍삼배도라지만한게 없죠~ 하루 한포 홍삼배도라지로 건강 챙겨보세요~ 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000143-335",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "새학기 시작되면 가장 무서운게 온갖 전염병이에요...ㅜㅜ 김정환홍삼 만나고 아이가...",
+        "content": "새학기 시작되면 가장 무서운게 온갖 전염병이에요...ㅜㅜ 김정환홍삼 만나고 아이가 잔병치레 확실히 줄어서 정말 저는 김정환홍삼 신념하고 먹인답니다 ㅎㅎㅎ 배도라지스틱 먹기 간편하게 나와서 너무 좋네요. 기침감기 해서 약이랑 같이 챙겨 먹으니 확실히 잘 떨어지네요! 홍삼 아님 어떻게 학교 보냈나 싶네요 감사합니다 많이 파세요. 첨부파일 김정환배도라지스틱.jpg",
+        "image": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/board/goodsreview/goods/1000000143/8ca3be3e6a766709691"
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000132",
+    "goodsNo": "1000000132",
+    "title": "Hồng Sâm Trẻ Em Kim's Red Ginseng Kids Growth (30 Gói x 15ml)",
+    "price": "2.150.000 ₫",
+    "originalPrice": "2.450.000 ₫",
+    "categories": [
+      "Hồng Sâm Trẻ Con"
+    ],
+    "image": "/images/products/goods_1000000132.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000132/image/detail/1000000132_detail_029.jpg",
+    "shortDescription": "Hồng sâm dành riêng cho trẻ em từ 3 đến 13 tuổi. Bổ sung Canxi, Vitamin D3, DHA và Hồng sâm 6 năm tuổi giúp bé ăn ngon, cao lớn và tăng cường trí nhớ.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Hồng sâm dành riêng cho trẻ em từ 3 đến 13 tuổi. Bổ sung Canxi, Vitamin D3, DHA và Hồng sâm 6 năm tuổi giúp bé ăn ngon, cao lớn và tăng cường trí nhớ.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000132-395",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "선물할거라 뜯어보진 않았지만 좋을거라 기대하고 5점 드렸어요. 감사합니다.",
+        "content": "선물할거라 뜯어보진 않았지만 좋을거라 기대하고 5점 드렸어요. 감사합니다.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20260211_157/1770767106862LBfNM_JPEG/20260211_084309.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000132-396",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요. 고객님 김정환홍삼입니다.(❁´◡`❁) 먼저 저희제품을 구매해주시고 정...",
+        "content": "안녕하세요. 고객님 김정환홍삼입니다.(❁´◡`❁) 먼저 저희제품을 구매해주시고 정성스러운 후기 남겨주셔서 감사합니다. 동의보감에서서 쌍화는 기와 혈을 동시에 보강하는 약재로 구성되어 기운을 회복하게 하고 감기 등을 예방하는데 좋은 효과를 보인다라고 합니다. 김정환홍삼쌍화 제품은 위의 약재에 홍삼까지 첨가하였지만 맛있게 섭취할 수 있는 제품으로 고급스러운 보자기 포장을 더해 선물용으로도 인기가 많습니다. 요즘 날씨가 추워서 그런지 감기로 고생하시는 고객님들께서 효과가 있는것 같다고 많이들 구매하시기도 합니다. 저희 제품이 지인분들께 좋은 선물이 되기를 바라며 새해 복 많이 받으시고 추운 날씨 건강하게 행복날 나날들 되십시오. 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000132-379",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛도좋고 포장도 예쁩니다",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000132-380",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 홍삼쌍화는 ...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 홍삼쌍화는 대한민국 인삼명장의 노하우가 담긴 6년근 홍삼을 쌍화, 마카, 사과와 더해 만든 제품으로 맛있게 먹기 좋은 제품입니다. 또한 보자기 포장으로 선물하기도 좋은 홍삼쌍화입니다~ 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000130",
+    "goodsNo": "1000000130",
+    "title": "Hồng Sâm Lát Tẩm Mật Ong Rừng Punggi Premium (10 Hộp x 20g)",
+    "price": "1.850.000 ₫",
+    "originalPrice": "2.100.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Hồng Sâm Ngâm Mật Ong"
+    ],
+    "image": "/images/products/goods_1000000130.jpg",
+    "originalImageUrl": "https://cdn-saas-web-219-244.cdn-nhncommerce.com/pg2304_godomall_com/data/editor/goods/260120/2a80e41877c56297b004231e31ccf7d7_163934.jpg",
+    "shortDescription": "Hồng sâm 6 năm tuổi xắt lát ngâm mật ong rừng 72 giờ. Vị ngọt dẻo thơm ngon, giảm đắng tự nhiên, bồi bổ sức khỏe cho người lớn tuổi và bồi bổ sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Hồng sâm 6 năm tuổi xắt lát ngâm mật ong rừng 72 giờ. Vị ngọt dẻo thơm ngon, giảm đắng tự nhiên, bồi bổ sức khỏe cho người lớn tuổi và làm quà biếu VIP.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000130-399",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "엄마 선물드렸ㄴ데 좋아하세요!",
+        "content": "엄마 선물드렸ㄴ데 좋아하세요!",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20260807_248/1786076696261yWADh_JPEG/42583.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000130-394",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "빠른 배송 에 감사합니다",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000130-393",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "빠른 배송 에 감사합니다",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000130-392",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "빠른 배송 에 감사합니다",
+        "content": "Món sâm lát mật ong này gia đình tôi ai cũng mê. Mỗi sáng nhai 2 lát vừa bổ sung năng lượng vừa giúp tinh thần minh mẫn suốt ngày làm việc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000130-390",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "빠른 배송 에 감사합니다",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000129",
+    "goodsNo": "1000000129",
+    "title": "Hồng Sâm Củ Tẩm Mật Ong Nguyên Củ Punggi (300g)",
+    "price": "2.950.000 ₫",
+    "originalPrice": "3.400.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Hồng Sâm Ngâm Mật Ong"
+    ],
+    "image": "/images/products/goods_1000000129.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000129/image/detail/1000000129_detail_053.jpg",
+    "shortDescription": "Sâm củ 6 năm tuổi chọn lọc nguyên củ dẻo quánh tẩm mật ong tự nhiên. Đóng hộp sang trọng, là món quà sức khỏe mang ý nghĩa trường thọ.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sâm củ 6 năm tuổi chọn lọc nguyên củ dẻo quánh tẩm mật ong tự nhiên. Đóng hộp sang trọng, là món quà sức khỏe mang ý nghĩa trường thọ.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000129-397",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "우리 가족 모두 맛있다고 하네요~~~ 가족 건강은 홍삼 더플러스 로^^",
+        "content": "우리 가족 모두 맛있다고 하네요~~~ 가족 건강은 홍삼 더플러스 로^^",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000128",
+    "goodsNo": "1000000128",
+    "title": "Trà Hồng Sâm Hàn Quốc Punggi Ginseng Tea (100 Gói)",
+    "price": "650.000 ₫",
+    "originalPrice": "790.000 ₫",
+    "categories": [
+      "Trà Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000128.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000128/image/detail/1000000128_detail_024.jpg",
+    "shortDescription": "Trà hồng sâm hòa tan thơm ngon thanh mát, dễ pha chế mỗi ngày. Giúp tỉnh táo tinh thần, thanh nhiệt giải độc và hỗ trợ tiêu hóa.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Trà hồng sâm hòa tan thơm ngon thanh mát, dễ pha chế mỗi ngày. Giúp tỉnh táo tinh thần, thanh nhiệt giải độc và hỗ trợ tiêu hóa.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000128-0",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-12",
+        "title": "Chất sâm rất 녹진 (đậm đặc), đúng chuẩn sâm Punggi!",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000128-1",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-07-28",
+        "title": "Đóng gói cực kỳ sang trọng, rất thích hợp bồi bổ sức khỏe!",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000128-2",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-06-19",
+        "title": "Bé nhà mình rất thích vị kẹo dẻo và hồng sâm trẻ em!",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000122",
+    "goodsNo": "1000000122",
+    "title": "Kẹo Hồng Sâm Không Đường Punggi Sugar-Free Candy (500g)",
+    "price": "450.000 ₫",
+    "originalPrice": "550.000 ₫",
+    "categories": [
+      "Kẹo Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000122.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000122/image/detail/1000000122_detail_082.jpg",
+    "shortDescription": "Kẹo hồng sâm không đường thích hợp cho người ăn kDiet, người tiểu đường. Giúp thơm miệng, giảm căng thẳng và nạp năng lượng tức thì.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Kẹo hồng sâm không đường thích hợp cho người ăn kDiet, người tiểu đường. Giúp thơm miệng, giảm căng thẳng và nạp năng lượng tức thì.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000122-388",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "가격도 타 브랜드보다 저렴하고 맛도 부담 없어 아들이 몇 개월째 먹고 있어요. 이...",
+        "content": "가격도 타 브랜드보다 저렴하고 맛도 부담 없어 아들이 몇 개월째 먹고 있어요. 이전 명절에 구입할 때는 좀 더 저렴했는데 살짝 아쉽지만 그래도 이 가격 너무 좋아요.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20251204_94/1764804237585lg0zt_JPEG/17648042235701249663646797388124.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000122-389",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요. 고객님~김정환홍삼입니다. 먼저 저희 제품을 이용해 주시고 정성스러운 ...",
+        "content": "안녕하세요. 고객님~김정환홍삼입니다. 먼저 저희 제품을 이용해 주시고 정성스러운 후기 남겨주셔서 감사합니다. 자녀가 제품을 꾸준히 먹고 좋은 효과가 있었으면 좋겠습니다.^^ 명절에는 명절할인도 많이 들어가니 참고 부탁드립니다. 추운 날씨 가족모두 건강유의하시고 행복한 하루 되십시오. 감사합니다.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000122-342",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "중3 큰애 먹이려고 샀어요. 효과 있으면 분기마다 사주려고요. 생각도 못했는데 젤...",
+        "content": "중3 큰애 먹이려고 샀어요. 효과 있으면 분기마다 사주려고요. 생각도 못했는데 젤리까지 챙겨주시고 감사합니다!",
+        "image": null
+      },
+      {
+        "id": "rev-1000000122-345",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 이지앤하이는 청소년기 학생들에게 좋은 제품이며...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 이지앤하이는 청소년기 학생들에게 좋은 제품이며 학업으로 지쳐 에너지 보충이 필요할 때, 면역력과 기억력에 도움을 받고 싶을 때 한 포씩 섭취하면 좋습니다. 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000122-246",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "애들이 잘먹어서 좋아요",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000119",
+    "goodsNo": "1000000119",
+    "title": "Kẹo Dẻo Hồng Sâm Jelly Kim's Red Ginseng (200g)",
+    "price": "250.000 ₫",
+    "originalPrice": "320.000 ₫",
+    "categories": [
+      "Kẹo Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000119.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000119/image/detail/1000000119_detail_029.jpg",
+    "shortDescription": "Kẹo dẻo chiết xuất hồng sâm 6 năm tuổi dai ngon tự nhiên, vị ngọt thanh dễ ăn cho cả gia đình.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Kẹo dẻo chiết xuất hồng sâm 6 năm tuổi dai ngon tự nhiên, vị ngọt thanh dễ ăn cho cả gia đình.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000119-0",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-12",
+        "title": "Chất sâm rất 녹진 (đậm đặc), đúng chuẩn sâm Punggi!",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000119-1",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-07-28",
+        "title": "Đóng gói cực kỳ sang trọng, rất thích hợp bồi bổ sức khỏe!",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000119-2",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-06-19",
+        "title": "Bé nhà mình rất thích vị kẹo dẻo và hồng sâm trẻ em!",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000118",
+    "goodsNo": "1000000118",
+    "title": "Nước Hồng Sâm Thảo Dược Đông Y Energy Time (30 Gói x 50ml)",
+    "price": "1.450.000 ₫",
+    "originalPrice": "1.750.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Nước Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000118.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000118/image/detail/1000000118_detail_07.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000118-0",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-12",
+        "title": "Chất sâm rất 녹진 (đậm đặc), đúng chuẩn sâm Punggi!",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000118-1",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-07-28",
+        "title": "Đóng gói cực kỳ sang trọng, rất thích hợp bồi bổ sức khỏe!",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000118-2",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-06-19",
+        "title": "Bé nhà mình rất thích vị kẹo dẻo và hồng sâm trẻ em!",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000117",
+    "goodsNo": "1000000117",
+    "title": "Cốt Sâm Đỏ Từ Dãy Núi Sobaek Kim's Red Ginseng (240g)",
+    "price": "4.350.000 ₫",
+    "originalPrice": "4.800.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Hồng Sâm Nguyên Chất"
+    ],
+    "image": "/images/products/goods_1000000117.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000117/image/detail/1000000117_detail_035.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000117-292",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "부모님 선물로 샀습니다.",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000117-268",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "좋습니다. 포장도 꼼꼼히 잘 되어있어요",
+        "content": "좋습니다. 포장도 꼼꼼히 잘 되어있어요",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20231014_37/1697269608452J0Lcs_JPEG/1697269597304.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000117-232",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "깔끔하게 포장되어 와서 너무 맘에 들고 맛 또한 지금까지 먹었던 그 어떤 제품보다...",
+        "content": "깔끔하게 포장되어 와서 너무 맘에 들고 맛 또한 지금까지 먹었던 그 어떤 제품보다 뒤쳐지지 않네요.아주 만족합니다.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20230302_168/1677729653792Abm80_JPEG/1677729645234.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000117-205",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "홍삼을 별로 좋아하지 않는데.. 요즘 몸이 자주 아파서 지인 추천으로 구매해봤어요...",
+        "content": "홍삼을 별로 좋아하지 않는데.. 요즘 몸이 자주 아파서 지인 추천으로 구매해봤어요 아직 쓰긴 하지만 많이 안써서 먹기 좋았어요 계속 구매할거 같아요! 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000117-204",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "꾸준히 먹는 제품입니다.",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000112",
+    "goodsNo": "1000000112",
+    "title": "Nước Hồng Sâm Thượng Hạng Kim's Red Ginseng Easy & High (30 Gói x 50ml)",
+    "price": "1.650.000 ₫",
+    "originalPrice": "1.950.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Nước Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000112.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000112/image/detail/1000000112_detail_094.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000112-225",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "홍삼을 통째로 달달하게 먹을 수 있어 좋습니다. 개별 낱개 포장으로 먹기 편하고 ...",
+        "content": "홍삼을 통째로 달달하게 먹을 수 있어 좋습니다. 개별 낱개 포장으로 먹기 편하고 보관도 용이합니다. 설 선물하기에도 좋고 배송이 빠릅니다. 만족합니다.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20230123_133/1674479968247rn5BM_JPEG/5C513ED6-6C58-4BB7-86C0-693C06B57BB4.jpeg?type=w640"
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000061",
+    "goodsNo": "1000000061",
+    "title": "Bột Hồng Sâm Nguyên Chất 6 Năm Tuổi Punggi Powder (100g)",
+    "price": "1.250.000 ₫",
+    "originalPrice": "1.490.000 ₫",
+    "categories": [
+      "Hồng Sâm Nguyên Chất"
+    ],
+    "image": "/images/products/goods_1000000061.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000061/image/detail/1000000061_detail_078.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000061-218",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "감사합니다. 좋네요.",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000061-64",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "공부왕찐천재 홍진경씨의 유튜브 보고 먹어보고 싶어서 구매했어요 새롭고 은근 중독성...",
+        "content": "공부왕찐천재 홍진경씨의 유튜브 보고 먹어보고 싶어서 구매했어요 새롭고 은근 중독성있는 묘~한 맛이 있네요^^ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000061-44",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "처음먹어보는 신기한 맛이에요! 그런데 굉장히 쫀득하고 맛있어요~ 생각없이 막 집어...",
+        "content": "처음먹어보는 신기한 맛이에요! 그런데 굉장히 쫀득하고 맛있어요~ 생각없이 막 집어먹게되는거 같아요ㅋㅋㅋ 비주얼이 홍삼 잘라놓은건데 은근 달달하고 씁쓸한데 너무 달지도 않아서 굉장히 좋아요! 자주 사먹을 듯해요ㅋㅋㅋ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000061-26",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "잘 받았습니다!! 감사합니다!!",
+        "content": "잘 받았습니다!! 감사합니다!!",
+        "image": null
+      },
+      {
+        "id": "rev-1000000061-23",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "깜짝놀란 맛. 처음 먹어본 맛에 놀랐습니다ㅋㅋ 경험으로 먹어보기 좋았어요..",
+        "content": "깜짝놀란 맛. 처음 먹어본 맛에 놀랐습니다ㅋㅋ 경험으로 먹어보기 좋았어요..",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000060",
+    "goodsNo": "1000000060",
+    "title": "Viên Hồng Sâm Cô Đặc Punggi Red Ginseng Pill (168 Viên)",
+    "price": "1.350.000 ₫",
+    "originalPrice": "1.600.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn"
+    ],
+    "image": "/images/products/goods_1000000060.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000060/image/detail/1000000060_detail_035.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000060-198",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "진세노사이드 10mg이라서 구매했어요. 꾸준히 먹으려구요!",
+        "content": "진세노사이드 10mg이라서 구매했어요. 꾸준히 먹으려구요!",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20220917_130/1663406724596nNfkh_JPEG/image.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000060-150",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "좋아요! 만족합니다 패키지도 이쁘고 맛도 먹기 괜찮아요 한포씩 가지고 다니기 편해...",
+        "content": "좋아요! 만족합니다 패키지도 이쁘고 맛도 먹기 괜찮아요 한포씩 가지고 다니기 편해서 챙겨먹기 좋네요",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20220507_119/1651893102876rGiQv_JPEG/review-attachment-e9b29eb6-70b2-4d1d-b1d0-862dd77f6424.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000060-138",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "간만에 저한테 딱맞는 홍삼 찾은거 같아서 좋아용~~~ 너무 쓰면 어쩌나했는데 좋네...",
+        "content": "간만에 저한테 딱맞는 홍삼 찾은거 같아서 좋아용~~~ 너무 쓰면 어쩌나했는데 좋네요~~~ 매번 선물할때만사봤지 내가 먹기에는 이제품이 딱이네요~~^^ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000060-129",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "만족스러워요 항상 이거만 먹어요",
+        "content": "만족스러워요 항상 이거만 먹어요",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20220216_214/1644976436087s5HT9_JPEG/review-attachment-7c19f386-5d6a-492a-9416-ce088014bd3d.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000060-126",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "선물하려고 구매했는데 종이봉투 없는게 아쉽네요",
+        "content": "선물하려고 구매했는데 종이봉투 없는게 아쉽네요",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20220126_74/1643164551640XXfi0_JPEG/review-attachment-050e653f-9093-4df7-94ff-688d8bd3d222.jpeg?type=w640"
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000040",
+    "goodsNo": "1000000040",
+    "title": "Hộp Hồng Sâm LINH KHÍ SỨC KHỎE (15 gói tonic & 3 gói sâm lát)",
     "price": "1.750.000 ₫",
     "originalPrice": "2.490.000 ₫",
     "categories": [
-      "Bộ Quà Biếu"
+      "Hồng Sâm Người Lớn"
     ],
-    "image": "/images/products/set-qua-bieu-.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/Screenshot-2024-08-18-at-00.17.34.png",
-    "sku": null,
-    "shortDescription": "Bộ quà tặng LINH KHÍ SỨC KHỎE Gồm: - 3 hộp Nước Hồng sâm 50ml - 3 hộp Hồng thái lát tẩm mật 18gram Tặng kèm Túi Giấy sang trọng, lịch sự rất thích hợp để làm quà tặng, biếu.",
-    "description": "Set quà biếu 𝐊𝐢𝐦'𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠 thượng hạng gồm: TINH CHẤT HỒNG SÂM 6 NĂM VÀ HỒNG SÂM LÁT TẨM MẬT ONG RỪNG HÀN QUỐC. ❤ Tinh chất hồng sâm 6 năm 𝐊𝐢𝐦'𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠: - Chiết xuất từ hồng sâm 6 năm tuổi của bậc thầy nhân sâm Kim Jeong Hwan, hàm lượng trên 60% (Tổng Rg1+Rb1+Rg3, 6mg) - Tỉ lệ chiết xuất hoàn hảo: Phần thân (70%) và phần rễ (30%) - Cùng với 6 thành phần nguyên liệu phụ trợ: Mật ong rừng, táo đỏ, kỉ tử, gừng, nấm linh chi, quế. - Kim’s Red Ginseng luôn chú trọng vào phương pháp Chiết xuất nước tinh khiết thay vì phương pháp Chiết xuất cồn. ( Chiết xuất nước tinh khiết: Thời gian chiết xuất lâu nhưng hương vị đậm đà Chiết xuất cồn: Thời gian chiết nhanh hơn nước tinh khiết, loại bỏ độ ẩm và rút ngắn thời gian sản xuất.) - Quy trình sản xuất đảm bảo vệ sinh nghiêm ngặt, kiểm tra kĩ lưỡng nguyên liệu đầu vào và thành phẩm sản xuất ra. - Người lớn uống mỗi ngày 1-2 lần, mỗi lần 1 gói. - Trẻ em dưới 15 tuổi dùng khoảng 1/2 lượng người lớn. ❤ Hồng sâm lát tẩm mật ong 𝐊𝐢𝐦'𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠: - Hồng sâm Kim’s Redginseng được chế biến từ những củ nhân sâm 6 năm tuổi theo công nghệ trồng trọt tâm huyết suốt 50 năm qua của bậc thầy nhân sâm Kim Jeong Hwan tại vùng đất Punggi trù phú, mang đến những sản phẩm sâm chất lượng cao nhất đến khách hàng. - Chúng tôi sử dụng phương pháp tạo nên những củ nhân sâm có thân dày, nhiều rễ, kết cấu mịn màng, vị ngọt ngọt tự nhiên làm giảm vị đắng và có hàm lượng ginsenoside cao. Đặc biệt nhân sâm của trang trại sâm Kim không sử dụng thuốc trừ sâu. Chúng tôi sẽ thu hoạch nhân sâm vào cuối mùa thu, thời điểm nhân sâm đạt hàm lượng dinh dưỡng cao nhất. Quy trình sản xuất hồng sâm lát tẩm mật ong - Nhân sâm 6 tuổi chất lượng cao sau khi phân loại và rửa kỹ, loại bỏ rễ sẽ được đem đi hấp và sấy khô. - Hồng sâm được cắt thành những lát nhỏ vừa ăn và lại được đem đi sấy và ủ tự nhiên. - Hồng sâm sau khi sây sẽ được ngâm với mật ong trong 72 giờ và tiếp tục sấy lần cuối cùng để tạo ra thành phẩm. - Màu sắc của hồng sâm sẽ không thay đổi nhiều vì chúng tối không tái sử dụng mật ong đã ngâm. Hương vị thơm ngon tuyệt hảo từ hồng sâm 6 năm tuổi và mật ong rừng, kết cấu dai dẻo cực thích hợp để làm món ăn vặt nhẹ cho tất cả mọi người. HDSD: Mỗi ngày 1 gói (18g), nhai từ từ và nuốt, không nuốt chửng vì có thể bị mắc nghẹn. - Nếu dị ứng với các thành phần, vui lòng không sử sụng - Bảo quản nơi thoáng mát, tránh nơi ẩm ướt và ánh nắng trực tiếp vì có thể bị hư hỏng sau khi mở. - Ăn ngay sau khi mở, không dùng hết đóng kín và bảo quản trong tủ lạnh. _________________________________________ Bậc thầy Nhân sâm Hàn Quốc: Kim Jeong Hwan Văn phòng đại diện tại Việt Nam: LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Phường Thanh Xuân, Thành phố Hà Nội Nhà Phân Phối miền Nam: Công ty TNHH Thương Mại Ánh Gia Phát - 41/10D/29 Đường Gò Cát, Tổ 9, Phường Long Trường, Thành phố Hồ Chí Minh. 🌐 Website: https://kimsredginseng.com/ 💌 Zalo: https://zalo.me/g/kogger629"
+    "image": "/images/products/goods_1000000040.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000040/image/detail/1000000040_detail_051.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000040-172",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "​어머니가 차를 너무 좋아하셔서 구매해봤어요. 저도 같이 먹었는데 깔끔하고 좋아요...",
+        "content": "​어머니가 차를 너무 좋아하셔서 구매해봤어요. 저도 같이 먹었는데 깔끔하고 좋아요. 무엇보다 물에 잘녹고 홍삼향이 너무 좋아요~~~^^ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000040-170",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "차를 좋아하는데 홍삼차는 처음이에요 맛도 깔끔하고 홍삼향이 너무 좋아요 수정 삭제",
+        "content": "차를 좋아하는데 홍삼차는 처음이에요 맛도 깔끔하고 홍삼향이 너무 좋아요 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "set-qua-bieu-kims-red-ginseng-3-san-pham-thuong-hang",
-    "title": "Bộ quà tặng TINH HOA HỘI TỤ",
-    "url": "https://kimsredginseng.com/san-pham/set-qua-bieu-kims-red-ginseng-3-san-pham-thuong-hang/",
-    "price": "1.150.000 ₫",
-    "originalPrice": "1.550.000 ₫",
+    "id": "sp-kims-ginseng-1000000035",
+    "goodsNo": "1000000035",
+    "title": "Cao Hồng Sâm Cô Đặc Kim's Red Ginseng 6 Năm Tuổi (240g)",
+    "price": "4.600.000 ₫",
+    "originalPrice": "5.200.000 ₫",
     "categories": [
-      "Bộ Quà Biếu"
+      "Hồng Sâm Người Lớn",
+      "Hồng Sâm Nguyên Chất"
     ],
-    "image": "/images/products/set-qua-bieu-kims-red-ginseng-3-san-pham-thuong-hang.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/Screenshot-2024-08-17-at-22.15.51.png",
-    "sku": null,
-    "shortDescription": "Bạn muốn tìm đến sản phẩm quà biếu không chỉ đẹp mà còn rất tốt cho sức khỏe. Set quà tặng Hồng sâm thượng hạng 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠 TINH HOA HỘI TỤ bao gồm 3 sản phẩm hồng sâm chất lượng tuyệt hảo: Tinh chất hồng sâm 6 năm tuổi cô đặc Balance Time, Hồng sâm lát tẩm mật ong và kẹo dẻo hồng sâm.",
-    "description": "Có phải bạn phân vân không biết nên mua gì để làm quà biếu tặng người lớn tuổi, người thân trong gia đình, những người quan trọng và yêu thương? Bạn muốn tìm đến sản phẩm quà biếu không chỉ đẹp mà còn rất tốt cho sức khỏe. Set quà tặng Hồng sâm thượng hạng 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠 bao gồm 3 sản phẩm hồng sâm chất lượng tuyệt hảo: Tinh chất hồng sâm 6 năm tuổi cô đặc Balance Time, Hồng sâm lát tẩm mật ong và kẹo dẻo hồng sâm. ⭐ Tinh chất hồng sâm cô đặc Balance Time 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠: - Chiết xuất từ hồng sâm 6 năm tuổi thượng hạng từ trang trại nhân sâm núi Punggi của bậc thầy nhân sâm Kim Jeong Hwan. - Tỉ lệ pha chế tuyệt hảo, kết hợp cùng 15 thành phần nguyên liệu phụ như: Ngải cứu, cây ích mẫu, táo đỏ, đương quy, rễ sắn dây, hoa cúc, địa hoàng, lá ngải cứu, thân rễ mẫu đơn, thân rễ thiên cung, rễ cây thược dược, hoàng kì, phục linh, nấm linh chi, cam thảo&#8230; làm giảm vị đắng của hồng sâm khiến mọi người có thể thưởng thức một cách ngon miệng. - Hàm lượng Ginsenoside dựa trên lượng tiêu thụ hàng ngày: 10mg. - Hồng sâm Balance Time được công nhận là thực phẩm chức năng bảo vệ sức khỏe được Bộ An toàn Thực phẩm và Dược phẩm công nhận. - HDSD: Uống 1 gói mỗi ngày một lần. (Trẻ em dưới 15 tuổi uống 1/2 lượng người lớn)   ⭐ Hồng sâm lát tẩm mật ong 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠: - Hồng sâm Kim’s Redginseng được chế biến từ những củ nhân sâm 6 năm tuổi theo bí quyết trồng trọt tâm huyết suốt 50 năm qua của bậc thầy nhân sâm Kim Jeong Hwan tại vùng núi Punggi lịch sử 500 năm, mang đến những sản phẩm sâm chất lượng cao nhất đến khách hàng. - Chúng tôi sử dụng phương pháp tạo nên những củ nhân sâm có thân dày, nhiều rễ, kết cấu mịn màng, vị ngọt ngọt tự nhiên làm giảm vị đắng và có hàm lượng ginsenoside cao. Đặc biệt nhân sâm của 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠 không sử dụng thuốc trừ sâu. - HDSD: Mỗi ngày 1 gói (18g), nhai từ từ và nuốt, không nuốt chửng vì có thể bị mắc nghẹn.   ⭐ Kẹo hồng sâm dẻo 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠: - Chiết xuất từ hồng sâm 6 năm tuổi thượng hạng. Kết cấu dẻo dai, vị ngọt tự nhiên nhẹ nhàng. - Thích hợp làm món ăn nhẹ, vừa thơm ngon mà vẫn tốt cho sức khỏe. ****Sản phẩm này không phải là thuốc và không thay thế thuốc chữa bệnh."
+    "image": "/images/products/goods_1000000035.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000035/image/detail/1000000035_detail_047.jpg",
+    "shortDescription": "Cao hồng sâm cô đặc 100% từ củ sâm 6 năm tuổi trứ danh vùng Punggi do nghệ nhân Kim Jeong Hwan chế biến. Hàm lượng Ginsenoside Rb1+Rg1+Rg3 vượt trội 30mg/g giúp phục hồi thể lực, tăng đề kháng và chống oxy hóa toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Cao hồng sâm cô đặc 100% từ củ sâm 6 năm tuổi trứ danh vùng Punggi do nghệ nhân Kim Jeong Hwan chế biến. Hàm lượng Ginsenoside Rb1+Rg1+Rg3 vượt trội 30mg/g giúp phục hồi thể lực, tăng đề kháng và chống oxy hóa toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000035-317",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "녹진하니 역시 김정환 홍삼이 최고네요",
+        "content": "녹진하니 역시 김정환 홍삼이 최고네요",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20240610_195/1717946444725zl45x_JPEG/IMG_1457.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000035-273",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "항상 주기적으로 잘 먹고 있습니다.",
+        "content": "항상 주기적으로 잘 먹고 있습니다.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000035-264",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "항상 잘 먹고 주기적 주문하고 있습니다.",
+        "content": "항상 잘 먹고 주기적 주문하고 있습니다.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000035-262",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "항상 주기적으로 주문하고 있습니다 너무 잘 먹고 있네요",
+        "content": "항상 주기적으로 주문하고 있습니다 너무 잘 먹고 있네요",
+        "image": null
+      },
+      {
+        "id": "rev-1000000035-179",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "건강생각해서 매일 먹고 있네요 진해서 먹을만해요 수정 삭제",
+        "content": "건강생각해서 매일 먹고 있네요 진해서 먹을만해요 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "cao-hong-sam-kims-red-ginseng-100g-hu",
-    "title": "Cao Hồng Sâm Kim's Red Ginseng (100g/hũ)",
-    "url": "https://kimsredginseng.com/san-pham/cao-hong-sam-kims-red-ginseng-100g-hu/",
+    "id": "sp-kims-ginseng-1000000034",
+    "goodsNo": "1000000034",
+    "title": "Cao Hồng Sâm Cô Đặc Kim's Red Ginseng (100g/Hũ)",
     "price": "2.350.000 ₫",
     "originalPrice": "2.550.000 ₫",
     "categories": [
       "Hồng Sâm Người Lớn",
       "Hồng Sâm Nguyên Chất"
     ],
-    "image": "/images/products/cao-hong-sam-kims-red-ginseng-100g-hu.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/IMG_5513.jpeg",
-    "sku": null,
-    "shortDescription": "Hũ 100gr hàm lượng Ginsenoside cô đặc Rb1 + Rg1 + Rg3 hẳn 30mg (các sản phẩm thông thường từ 8 - 24mg) Nó hoàn hảo như một món quà ngày lễ cho cha mẹ, bạn bè hoặc chính bản thân mình👍 Tại Punggi, chúng tôi đặt tất cả sự chân thành vào việc trồng nhân sâm 6 năm tuổi. Đây là hồng sâm cô đặc 6 năm tuổi cao cấp chất lượng cao.",
-    "description": "𝐂𝐚𝐨 𝐡𝐨̂̀𝐧𝐠 𝐬𝐚̂𝐦 𝟔 𝐭𝐮𝐨̂̉𝐢 đ𝐮̛𝐨̛̣𝐜 𝐭𝐫𝐨̂̀𝐧𝐠 𝐯𝐨̛́𝐢 𝐛𝐢́ 𝐪𝐮𝐲𝐞̂́𝐭 đ𝐚̣̆𝐜 𝐛𝐢𝐞̣̂𝐭 𝐜𝐮̉𝐚 𝐛𝐚̣̂𝐜 𝐭𝐡𝐚̂̀𝐲 𝐧𝐡𝐚̂𝐧 𝐬𝐚̂𝐦 𝐊𝐢𝐦 𝐉𝐞𝐨𝐧𝐠 𝐇𝐰𝐚𝐧. ✨ Đây là sản phẩm cao cấp có hàm lượng ginsenoside cao nhất là 30mg. Được sản xuất số lượng giới hạn. ✨ Hồng sâm cô đặc có độ tinh khiết cao chứa nhiều công dụng kỳ diệu. ✨ 100% hồng sâm cô đặc 6 tuổi không có bất kỳ chất phụ gia nào ngoài hồng sâm 6 tuổi. ✨ Được tạo ra ở nồng độ lý tưởng để cơ thể dễ dàng hấp thụ. Kim's Red Ginseng luôn làm ra các sản phẩm hồng sâm THƯỢNG HẠNG một cách chân thành. Hũ bé bé 100gr nhưng hàm lượng Ginsenoside cô đặc Rb1 + Rg1 + Rg3 hẳn 30mg (các sản phẩm thông thường từ 8 - 24mg) Nó hoàn hảo như một món quà ngày lễ cho cha mẹ, bạn bè hoặc chính bản thân mình👍 Tại Punggi, chúng tôi đặt tất cả sự chân thành vào việc trồng nhân sâm 6 năm tuổi."
+    "image": "/images/products/goods_1000000034.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000034/image/detail/1000000034_detail_083.jpg",
+    "shortDescription": "Hũ cao hồng sâm cô đặc 100g nguyên chất 100% không phụ gia. Hàm lượng Ginsenoside Rb1+Rg1+Rg3 đạt 30mg/g cao nhất phân khúc, hỗ trợ giảm mệt mỏi, nâng cao miễn dịch.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Hũ cao hồng sâm cô đặc 100g nguyên chất 100% không phụ gia. Hàm lượng Ginsenoside Rb1+Rg1+Rg3 đạt 30mg/g cao nhất phân khúc, hỗ trợ giảm mệt mỏi, nâng cao miễn dịch.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000034-259",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "항상 먹던제품 입니다.좋아요.",
+        "content": "항상 먹던제품 입니다.좋아요.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000034-243",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "매번 구입하고 있습니다. 타 홍삼 대비 진세노사이드 함량이 높습니다.",
+        "content": "매번 구입하고 있습니다. 타 홍삼 대비 진세노사이드 함량이 높습니다.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000034-241",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "좋아요 잘 먹어보겠습니다",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20230322_176/1679459872475wQiel_JPEG/DF72D920-2112-49B7-9395-5EA7508BFA71.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000034-224",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "항상 만족하며 먹습니다",
+        "content": "Món sâm lát mật ong này gia đình tôi ai cũng mê. Mỗi sáng nhai 2 lát vừa bổ sung năng lượng vừa giúp tinh thần minh mẫn suốt ngày làm việc.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20230119_2/16741322289027C1E1_JPEG/56939B8B-A0CB-43A4-B31E-6CD4BC77F941.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000034-174",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "진~~~해서 좋아용~~ 친가랑 시댁에 드렸더니 너무 좋아하시네용~~~^^ 수정 삭...",
+        "content": "진~~~해서 좋아용~~ 친가랑 시댁에 드렸더니 너무 좋아하시네용~~~^^ 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "kims-red-ginseng-extract",
-    "title": "Cao Hồng Sâm Kim's Red Ginseng (240gr/hũ)",
-    "url": "https://kimsredginseng.com/san-pham/kims-red-ginseng-extract/",
-    "price": "4.600.000 ₫",
-    "originalPrice": "5.200.000 ₫",
+    "id": "sp-kims-ginseng-1000000033",
+    "goodsNo": "1000000033",
+    "title": "Hộp Hồng Sâm TINH HOA HỘI TỤ (3 Sản phẩm Hồng Sâm Thượng Hạng)",
+    "price": "1.150.000 ₫",
+    "originalPrice": "1.550.000 ₫",
     "categories": [
-      "Hồng Sâm Người Lớn",
-      "Bộ Quà Biếu",
-      "Hồng Sâm Nguyên Chất"
+      "Hồng Sâm Người Lớn"
     ],
-    "image": "/images/products/kims-red-ginseng-extract.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/z6076895724084_9734507de2bdad3338751face5a54112.jpg",
-    "sku": null,
-    "shortDescription": "Nhân sâm đỏ Punggi 6 năm tuổi được trồng và chế biến bởi bậc thầy nhân sâm Hàn Quốc, được chiết xuất lặp lại ở nhiệt độ thấp và cô đặc với nước tinh khiết để tạo ra sản phẩm cao cấp với hàm lượng ginsenoside cao. Đây là thực phẩm chức năng được làm từ 100% tinh chất nhân sâm đỏ không chứa chất phụ gia, có tác dụng tăng cường miễn dịch, phục hồi mệt mỏi, cải thiện trí nhớ và lưu thông máu thông qua tác dụng ức chế kết tập tiểu cầu.",
-    "description": "Description"
+    "image": "/images/products/goods_1000000033.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000033/image/detail/1000000033_detail_061.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000033-384",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "유효성분도 많고 진해서 계속 재구매중이에요~ 면역력을 위해.. 이번엔 사은품 없이...",
+        "content": "유효성분도 많고 진해서 계속 재구매중이에요~ 면역력을 위해.. 이번엔 사은품 없이 와서 좀 아쉽..^^",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20251116_40/17632678178811C5We_JPEG/3068.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000033-387",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하십니까 ~고객님. 김정환 홍삼입니다. 저희 제품을 이용해 주시고 정성스런 후...",
+        "content": "안녕하십니까 ~고객님. 김정환 홍삼입니다. 저희 제품을 이용해 주시고 정성스런 후기 남겨주셔서 감사합니다. 인삼명장의 6년근 홍삼 100%의 홍삼농축액은 식약처에서 인증받은 건강기능식품으로, 면역력증진 등의 여러 기능성을 인정받고 있습니다. 고객님 말씀처럼 면역력을 위해 꾸준히 드셔주시면 도움이 될거라 생각합니다. 앞으로도 저희 제품 많은 이용 부탁드리며, 추운 날씨 건강유의하시고 가족들과 함께 건강한 날 보내시기 바랍니다. 감사합니다.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000033-383",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "지난 초여름에 외국에 나가면서 선물로 사갔는데 받는 사람이 좋아했어요 항상 정*장...",
+        "content": "지난 초여름에 외국에 나가면서 선물로 사갔는데 받는 사람이 좋아했어요 항상 정*장 홍삼만 먹는 사람이고 다른 브랜드는 맛이 다르다고 하는데 이건 좋아하더라고요 그래서 이번엔 남편주려고 샀어요 사진은 못찍었지만 뽁뽁이로 똘똘 감아져서 안전하게 잘 도착했습니다 효능,효과는 아직 어떤지 모르겠으나 맛도 진하고 좋을것 같아요",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20251107_261/1762480481468Kyz1P_JPEG/1762480414533.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000033-377",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "찐하고 맛있고 몸튼튼 마음도 든든 잘 먹고있습니다",
+        "content": "찐하고 맛있고 몸튼튼 마음도 든든 잘 먹고있습니다",
+        "image": null
+      },
+      {
+        "id": "rev-1000000033-378",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 맛있게 드셔...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 맛있게 드셔주셔서 정말 감사해요! 몸도 마음도 든든해지셨다니 저도 덩달아 기분 좋아집니다😊 김정환홍삼농축액240g은 높은 진세노사이드 함량으로 건강을 챙기시는 분들이 많이 찾아주는 제품입니다! 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "kims-red-ginseng-extract-light",
-    "title": "Cốt Sâm Đỏ Từ Dãy Núi Sobaek Kim's Red Ginseng (240 gram)",
-    "url": "https://kimsredginseng.com/san-pham/kims-red-ginseng-extract-light/",
-    "price": "4.350.000 ₫",
-    "originalPrice": "4.800.000 ₫",
+    "id": "sp-kims-ginseng-1000000031",
+    "goodsNo": "1000000031",
+    "title": "Nước Hồng Sâm Nguyên Củ Punggi Fresh Roots (10 Chai x 120ml)",
+    "price": "850.000 ₫",
+    "originalPrice": "1.050.000 ₫",
     "categories": [
-      "Hồng Sâm Người Lớn",
-      "Bộ Quà Biếu",
-      "Hồng Sâm Nguyên Chất"
+      "Nước Hồng Sâm"
     ],
-    "image": "/images/products/kims-red-ginseng-extract-light.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/z6076938075766_669e52111a8b006aa9d99581a1b2c8da.jpg",
-    "sku": null,
-    "shortDescription": "Hồng sâm Punggi 6 năm tuổi được trồng và chế biến bởi bậc thầy nhân sâm Hàn Quốc, được chiết xuất lặp lại ở nhiệt độ thấp và cô đặc với nước tinh khiết để tạo ra tinh chất hồng sâm này. Đây là thực phẩm chức năng được làm từ 100% tinh chất hồng sâm nguyên chất không chứa chất phụ gia, có tác dụng tăng cường miễn dịch, phục hồi mệt mỏi, cải thiện trí nhớ và lưu thông máu thông qua tác dụng ức chế kết tập tiểu cầu.",
-    "description": "Description"
+    "image": "/images/products/goods_1000000031.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000031/image/detail/1000000031_detail_062.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000031-324",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "효능이 좋아서 장복하고 있습니다",
+        "content": "효능이 좋아서 장복하고 있습니다",
+        "image": null
+      },
+      {
+        "id": "rev-1000000031-277",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "꾸준히 복용중 패키지가 과해서 시킬때마다 부담스러워요 선물용이랑 그냥 먹는거랑 달...",
+        "content": "꾸준히 복용중 패키지가 과해서 시킬때마다 부담스러워요 선물용이랑 그냥 먹는거랑 달랐으면 좋겠네요",
+        "image": null
+      },
+      {
+        "id": "rev-1000000031-261",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "선물용인데 묵직감이 너무 좋았습니다",
+        "content": "선물용인데 묵직감이 너무 좋았습니다",
+        "image": null
+      },
+      {
+        "id": "rev-1000000031-244",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "우선 선물해도 좋겠지만 제가 먹을거라 주문했어요. 성분표 보니까 한포 홍삼 1% ...",
+        "content": "우선 선물해도 좋겠지만 제가 먹을거라 주문했어요. 성분표 보니까 한포 홍삼 1% 함량이라 그런지 맛이 맹한 홍삼맛이네요.. 그래도 매일 먹고 있습니다. 저혈압, 기력 없는 임산부라 꾸준히 복용해야할 것 같아요",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20230408_63/1680957743734ewHcE_JPEG/F3C25B5C-CBC5-4C83-BA3D-CC882987583E.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000031-231",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "1+1이라 구매했습니다 배송빠르고 좋네요~ 맛도잇어서 잘넘어갑니다 아침에 울딸램하...",
+        "content": "1+1이라 구매했습니다 배송빠르고 좋네요~ 맛도잇어서 잘넘어갑니다 아침에 울딸램하나 쥐어주고 남편데워서 주고 있어요~ 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "tinh-chat-hong-sam-co-dac-balancetime-30-goi-x-10ml",
-    "title": "Hồng Sâm BalanceTime Của Kim's Red Ginseng (30gói x 10ml)",
-    "url": "https://kimsredginseng.com/san-pham/tinh-chat-hong-sam-co-dac-balancetime-30-goi-x-10ml/",
-    "price": "1.750.000 ₫",
-    "originalPrice": "2.150.000 ₫",
+    "id": "sp-kims-ginseng-1000000028",
+    "goodsNo": "1000000028",
+    "title": "Hồng Sâm Thái Lát Tẩm Mật Ong Rừng Hộp Đơn (20g)",
+    "price": "190.000 ₫",
+    "originalPrice": "230.000 ₫",
     "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
+      "Hồng Sâm Ngâm Mật Ong"
     ],
-    "image": "/images/products/tinh-chat-hong-sam-co-dac-balancetime-30-goi-x-10ml.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/IMG_5511.jpeg",
-    "sku": null,
-    "shortDescription": "✨ Được làm bằng cách chọn lọc duy nhất những củ nhân sâm 6 năm tuổi chất lượng cao do chính tay bậc thầy nhân sâm Kim Jeong Hwan trồng, thân mịn và nhiều rễ. ✨ Là thực phẩm chức năng tốt cho sức khỏe, có thể hỗ trợ tăng cường khả năng miễn dịch, cải thiện tình trạng mệt mỏi, cải thiện lưu lượng máu và trí nhớ bằng cách ức chế kết tập tiểu cầu và hỗ trợ chống oxy hóa. ✨ Một gói chứa 10mg ginsenoside (tổng Rg1+Rb1+Rg3). ✨ Để giảm vị đắng của hồng sâm, các thành phần phụ trợ như 15 loại chiết xuất thảo dược cô đặc đã được thêm vào. ✨ Tỷ lệ vàng nguyên liệu hồng sâm gồm 7 phần thân và phần rễ 3 hồng sâm! Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.",
-    "description": "Phụ nữ ơi! Đã đến lúc chăm sóc sức khỏe của bạn! 𝐓𝐢𝐧𝐡 𝐜𝐡𝐚̂́𝐭 𝐇𝐨̂̀𝐧𝐠 𝐬𝐚̂𝐦 𝐜𝐨̂ đ𝐚̣̆𝐜 𝐁𝐚𝐥𝐚𝐧𝐜𝐞 𝐓𝐢𝐦𝐞 dành cho phụ nữ của Kim's Red Ginseng. ✨ Với hàm lượng Ginsenoside Rb1 + Rg1 + Rg3 = 10mg trong mỗi gói hồng sâm, giúp củng cố và cải thiện hàng rào miễn dịch, bổ sung năng lượng để cơ thể chống lại những tác nhân gây bệnh. ✨ Sản phẩm được làm tận tụy bằng việc chọn lọc duy nhất những củ nhân sâm 6 năm tuổi chất lượng cao do chính tay bậc thầy nhân sâm Kim Jeong Hwan trồng và điều chế bởi phương thức từ tổ tiên làm để dâng lên Hoàng Hậu, Hoàng Đế. 📌 ĐẶC BIỆT: Trong hồng sâm chứa rất nhiều #phytonutrients và các chất #chống_oxy_hóa, có khả năng làm tăng sự trao đổi chất của da. Các chất chống oxy hóa ngăn cho làn da không bị ảnh hưởng bởi các gốc tự do, khiến da trở nên trẻ trung và tràn đầy sức sống. 📌 Hỗ trợ cân bằng nội tiết tố, điều chỉnh lượng estrogen được sản xuất trong cơ thể. 📌 Giảm rụng tóc hiệu quả, hạn chế tình trạng tóc gãy rụng, xơ rối. 📌 Phòng chống căng thẳng và trầm cảm ở phái nữ. Sản phẩm dạng gói dễ dàng sử dụng mọi lúc, mọi nơi Hãy chăm sóc sức khỏe của bạn chỉ bằng cách uống 1 gói mỗi ngày! Được làm bằng bí quyết đặc biệt của Kim Jeong-hwan Một ngày đầy năng lượng với hồng sâm Balance Time😍 Lưu ý Không dùng quá liều khuyến cáo. Không sử dụng cho người dưới 18 tuổi, người mẫn cảm với bất kỳ thành phần nào của sản phẩm. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh. Đọc kỹ hướng dẫn sử dụng trước khi dùng."
+    "image": "/images/products/goods_1000000028.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000028/image/detail/1000000028_detail_038.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000028-327",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "아침마다 챙겨먹고 있어요 깔끔합니다.",
+        "content": "아침마다 챙겨먹고 있어요 깔끔합니다.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20241029_3/1730206115769tLvVA_JPEG/image.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000028-328",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 구매해 주셔서 너무 감사합니다^^ 저희 김정환...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 구매해 주셔서 너무 감사합니다^^ 저희 김정환홍삼액은 100% 6년근 홍삼추출액으로 오직 정제수만 사용하여 추출하였기에 맛과 향이 깔끔한 제품이에요. 파우치 형태이기에 쉽고 편하게 챙겨 드실 수 있어 건강 관리 하기에도 좋습니다. 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000028-313",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "남편이 잘 먹어서 매번 시켜 먹어요 달지 않아 오히려 좋아요",
+        "content": "남편이 잘 먹어서 매번 시켜 먹어요 달지 않아 오히려 좋아요",
+        "image": null
+      },
+      {
+        "id": "rev-1000000028-291",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "면역키우기위해 주문해봤어요 꾸준히 먹어야겠어요 굿굿",
+        "content": "면역키우기위해 주문해봤어요 꾸준히 먹어야겠어요 굿굿",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20240120_215/170567729960995mad_JPEG/1705677286287.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000028-258",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "아들에게 꾸준히 먹이고 있어요.힘든일 하는데 많이 도움되고 있어요.",
+        "content": "아들에게 꾸준히 먹이고 있어요.힘든일 하는데 많이 도움되고 있어요.",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "hong-sam-he-mien-dich-immune-blance-plus-zinc-30-goi-x-10gr",
-    "title": "Hồng Sâm Cân Bằng Miễn Dịch Bổ Sung Kẽm Kim's Red Ginseng (60 Gói X 10gr)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-he-mien-dich-immune-blance-plus-zinc-30-goi-x-10gr/",
-    "price": "3.250.000 ₫",
-    "originalPrice": "3.650.000 ₫",
+    "id": "sp-kims-ginseng-1000000027",
+    "goodsNo": "1000000027",
+    "title": "Kẹo Hồng Sâm Có Đường Punggi Sweet Candy (500g)",
+    "price": "420.000 ₫",
+    "originalPrice": "500.000 ₫",
     "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
+      "Kẹo Hồng Sâm"
     ],
-    "image": "/images/products/hong-sam-he-mien-dich-immune-blance-plus-zinc-30-goi-x-10gr.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2026/01/z7306422607626_6fad59fc6a618113d16462a849e30277.jpg",
-    "sku": null,
-    "shortDescription": "Hồng Sâm Hệ Miễn Dịch Immune Balance Plus Zinc là dòng sản phẩm chăm sóc sức khỏe chuyên sâu, được nghiên cứu và sản xuất trực tiếp tại Hàn Quốc từ nguồn nguyên liệu hồng sâm 6 năm tuổi thượng hạng. Với công thức cải tiến kết hợp giữa tinh chất hồng sâm và Kẽm Gluconate, sản phẩm mang đến giải pháp bảo vệ sức khỏe kép: vừa giúp củng cố hệ miễn dịch tự nhiên, vừa phục hồi năng lượng bền bỉ cho cơ thể. Phiên bản hộp 60 gói x 10g được thiết kế tinh gọn, tiện lợi, là lựa chọn lý tưởng cho người hiện đại muốn duy trì thể trạng vững vàng và tinh thần minh mẫn mỗi ngày.",
-    "description": "Hồng Sâm Hệ Miễn Dịch Immune Balance Plus Zinc (60 gói x 10g) được nghiên cứu và sản xuất trực tiếp tại Hàn Quốc theo những tiêu chuẩn khắt khe nhất. Đây là sự kết hợp hoàn hảo giữa tinh túy Hồng sâm 6 năm tuổi và Kẽm Gluconate cao cấp , tạo nên một lá chắn miễn dịch toàn diện cho cả gia đình. Với hàm lượng dưỡng chất vượt trội, sản phẩm là giải pháp tối ưu cho người hiện đại muốn nâng cao đề kháng và duy trì thể lực bền bỉ. Công dụng: Sản phẩm là sự kết hợp của 5 công năng từ Hồng sâm (đã được Bộ ATTP Hàn Quốc chứng nhận) và 2 công năng từ Kẽm: Hỗ trợ tăng cường hệ miễn dịch: Xây dựng hàng rào bảo vệ cơ thể vững chắc. Hỗ trợ cải thiện trí nhớ: Hỗ trợ hoạt động trí não minh mẫn hơn. Hỗ trợ giảm mệt mỏi: Phục hồi năng lượng và thể lực nhanh chóng. Hỗ trợ chống oxy hóa: Bảo vệ tế bào khỏi tác động của các gốc tự do. Hỗ trợ lưu thông máu: Thông qua việc ức chế kết tập tiểu cầu. Hỗ trợ điều hòa trao đổi chất: Giúp cơ thể chuyển hóa năng lượng hiệu quả. Hỗ trợ phục hồi cơ thể: Hỗ trợ các phản ứng sinh học và tái tạo sức khỏe. Đối tượng sử dụng: Người trưởng thành cần củng cố hệ miễn dịch và tăng cường sức đề kháng. Người thường xuyên làm việc cường độ cao, căng thẳng, suy nhược cơ thể. Người cần bổ sung kẽm và các dưỡng chất thiết yếu để cải thiện quá trình trao đổi chất. Người cao tuổi cần bồi bổ để duy trì sức khỏe toàn diện. Cách dùng: Uống trực tiếp 1-2 gói mỗi ngày. Tốt nhất nên dùng vào buổi sáng để cơ thể hấp thu dưỡng chất tối ưu. Sản phẩm có hương vị đậm đà của sâm kết hợp vị thanh của các thành phần bổ trợ như mật ong và trái cây."
+    "image": "/images/products/goods_1000000027.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000027/image/detail/1000000027_detail_09.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000027-164",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "가격대비 좋아요 우선 젤라틴이 아니라 한천이라는 점이 마음에 들고, 아이들도 잘먹...",
+        "content": "가격대비 좋아요 우선 젤라틴이 아니라 한천이라는 점이 마음에 들고, 아이들도 잘먹더라구요. 맛도 좋습키다~~",
+        "image": null
+      },
+      {
+        "id": "rev-1000000027-162",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛있어요ㅋㅋ벌써 다 먹었네요",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000027-133",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "선물용이었는데 반응 좋아서 재구매하려구요~",
+        "content": "선물용이었는데 반응 좋아서 재구매하려구요~",
+        "image": null
+      },
+      {
+        "id": "rev-1000000027-62",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "한번 먹어보고 가끔 생각나서 예전에 구매하게 되었는데 다 먹고 나니까 또 생각나서...",
+        "content": "한번 먹어보고 가끔 생각나서 예전에 구매하게 되었는데 다 먹고 나니까 또 생각나서 재구매 합니다 맛있네요 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000027-39",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "젤리가 생각보다 너무 맛있어욤^_^ 사무실에서 먹는데 좋아욤ㅎㅎㅎㅎ 자주 구매할거...",
+        "content": "젤리가 생각보다 너무 맛있어욤^_^ 사무실에서 먹는데 좋아욤ㅎㅎㅎㅎ 자주 구매할거 같아욤~&gt;_&lt; 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "hong-sam-thanh-thieu-nien-easy-high-30-goi-x-50ml",
-    "title": "Hồng Sâm Easy & High Kim's Red Ginseng (30 gói x 50ml)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-thanh-thieu-nien-easy-high-30-goi-x-50ml/",
-    "price": "2.750.000 ₫",
-    "originalPrice": "3.250.000 ₫",
+    "id": "sp-kims-ginseng-1000000026",
+    "goodsNo": "1000000026",
+    "title": "Hồng Sâm Củ Khô 6 Năm Tuổi Hộp Thiết Punggi (300g / 10 Củ)",
+    "price": "3.850.000 ₫",
+    "originalPrice": "4.500.000 ₫",
     "categories": [
       "Hồng Sâm Nguyên Chất",
-      "Hồng Sâm Trẻ Em"
-    ],
-    "image": "/images/products/hong-sam-thanh-thieu-nien-easy-high-30-goi-x-50ml.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/IMG_5512.jpeg",
-    "sku": null,
-    "shortDescription": "[EASY & HIGH] Thật tuyệt vời khi được đồng hành cùng học sinh trong mọi khoảnh khắc, cho dù đó là học kỳ mới hay trong các kì thi cử. Không phải hồng sâm chỉ dành cho người lớn sao? KHÔNG! EASY & HIGH của Kim's Red Ginseng được làm với hương vị ngọt ngào mà học sinh sẽ yêu thích! Nó giúp cải thiện sự mệt mỏi và trí nhớ, tăng chiều cao, phòng ốm vặt , nâng cao hệ miễn dịch. Bố mẹ hãy cho các thanh thiếu niên của mình sử dụng thường xuyên ~.~",
-    "description": "𝐇𝐨̂̀𝐧𝐠 𝐬𝐚̂𝐦 𝐊𝐢𝐦'𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠 𝐝𝐚̀𝐧𝐡 𝐜𝐡𝐨 𝐜𝐚́𝐜 𝐛𝐚̣𝐧 𝐡𝐨̣𝐜 𝐬𝐢𝐧𝐡. ✨ Sản phẩm này không chỉ hỗ trợ tăng cường khả năng miễn dịch mà còn chứa những hàm lượng ginsenoside cao là hẳn 21mg (so với các sản phẩm thông thường khác chỉ từ 5-8mg) giúp tăng cường sự tập trung, cải thiện trí nhớ, phục hồi sức khỏe sau khi học tập mệt mỏi ~ ✨ Ngoài ra sản phẩm có chứa tổ hợp xương cựa, men gạo lức, yến mạch cô đặc, hạt berry kết hợp hồng sâm đủ 6 năm tuổi từ bậc thầy nhân sâm Kim Jeong Hwan được nghiên cứu hỗ trợ TĂNG CHIỀU CAO, được thể hiện ngay tên ở bao bì sản phẩm: 𝐄𝐀𝐒𝐘 & 𝐇𝐈𝐆𝐇.   Phụ huynh nào ở Hàn cũng cần để cho con uống đều đặn trong các năm đi học ❤️ ✅ Hồng sâm 6 năm tuổi được trồng bằng bí quyết đặc biệt của bậc thầy nhân sâm Kim Jeong Hwan ✅ Là thực phẩm chức năng tốt cho sức khỏe, có công dụng như: Hỗ trợ lưu thông máu, tăng khả năng miễn dịch, cải thiện trí nhớ, chống oxy hóa và hạn chế tình trạng đông máu nhờ chất ức chế kết tập tiểu cầu. ✅ Tỷ lệ pha trộn 7:3 - Tỷ lệ vàng giữa củ sâm và rễ sâm để đem lại chất dinh dưỡng tối đa ✅ Mùi vị thì thực sự khác xa với tưởng tượng của chúng ta khi nhắc về hồng sâm!!! Hãng quả thực rất tâm lý khi bổ sung táo đỏ, mâm xôi, yến mạch, việt quất để có vị ngọt tự nhiên và dễ uống hơn rất nhiều.   Những thời điểm nên bổ sung EASY&HIGH: - Khi học tập mệt mỏi và cần bổ sung năng lượng - Mỗi ngày một gói vào buổi sáng để có một ngày học tập thật vui vẻ và sôi động - Cần tăng đề kháng mỗi ngày và tăng khả năng ghi nhớ. **** Sản phẩm này không phải là thuốc và không thay thế thuốc chữa bệnh."
-  },
-  {
-    "id": "hong-sam-energytime-cua-kims-red-ginseng-24-goi-x-10gr-copy",
-    "title": "Hồng Sâm EnergyTime Của Kim's Red Ginseng (24 gói x 10gr)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-energytime-cua-kims-red-ginseng-24-goi-x-10gr-copy/",
-    "price": "1.750.000 ₫",
-    "originalPrice": "2.150.000 ₫",
-    "categories": [
       "Hồng Sâm Người Lớn"
     ],
-    "image": "/images/products/hong-sam-energytime-cua-kims-red-ginseng-24-goi-x-10gr-copy.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2026/06/duty.png",
-    "sku": null,
-    "shortDescription": "Hồng Sâm Energy Time by Kim's Red Ginseng (24 gói x 10gr): tăng đề kháng, giảm mệt mỏi, cải thiện trí nhớ, hàng đầu về ngừa ung thư, giảm mỡ máu, phòng bệnh đường huyết. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.",
-    "description": "Description"
+    "image": "/images/products/goods_1000000026.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000026/image/detail/1000000026_detail_063.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000026-195",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "이가 약한 엄마가 즐겨드시는 보약같은 젤리입니다",
+        "content": "이가 약한 엄마가 즐겨드시는 보약같은 젤리입니다",
+        "image": null
+      },
+      {
+        "id": "rev-1000000026-169",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛있어요 사탕이랑 잘먹고 있습니다",
+        "content": "맛있어요 사탕이랑 잘먹고 있습니다",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20220623_226/1655950357790QEDs4_JPEG/review-attachment-3c0aef62-51f0-4ba2-bbcb-ba32b6f9d81e.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000026-168",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "인스타그램을 보고 주문했어요! 젤라틴이 아니라 한천이 들어갔다고 해서 너무 마음에...",
+        "content": "인스타그램을 보고 주문했어요! 젤라틴이 아니라 한천이 들어갔다고 해서 너무 마음에 들고요 부드럽고 양갱 같아요ㅋ 무엇보다 애들도 맛있다고 먹고 있네요ㅋㅋ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000026-156",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛이좋아요.그런데 너무비싸네요~5000g에 13.000원으로 구입했었는데 300g...",
+        "content": "맛이좋아요.그런데 너무비싸네요~5000g에 13.000원으로 구입했었는데 300g에 이 가격으로 구입해서 조금 실망입니다",
+        "image": null
+      },
+      {
+        "id": "rev-1000000026-101",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛도 먹기도 포장도 모든 면에서 다좋읍니다",
+        "content": "맛도 먹기도 포장도 모든 면에서 다좋읍니다",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "energy-time-by-kims-red-ginseng",
-    "title": "Hồng sâm EnergyTime Của Kim's Red Ginseng (30 gói x 10gr)",
-    "url": "https://kimsredginseng.com/san-pham/energy-time-by-kims-red-ginseng/",
-    "price": "1.550.000 ₫",
-    "originalPrice": "1.850.000 ₫",
+    "id": "sp-kims-ginseng-1000000023",
+    "goodsNo": "1000000023",
+    "title": "Hồng Sâm Củ Khô Hộp Thiếc Cao Cấp Punggi (150g / 5 Củ)",
+    "price": "2.150.000 ₫",
+    "originalPrice": "2.500.000 ₫",
     "categories": [
-      "Hồng Sâm Người Lớn"
+      "Hồng Sâm Nguyên Chất"
     ],
-    "image": "/images/products/energy-time-by-kims-red-ginseng.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/vn-11134207-7r98o-lxz6k2ejb6qjf7.jpeg",
-    "sku": null,
-    "shortDescription": "Nước uống hồng sâm Energy Time by Kim's Red Ginseng (30 gói x 10ml): tăng đề kháng, giảm mệt mỏi, cải thiện trí nhớ, hàng đầu về ngừa ung thư, giảm mỡ máu, phòng bệnh đường huyết. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.",
-    "description": "Description"
+    "image": "/images/products/goods_1000000023.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000023/image/detail/1000000023_detail_047.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000023-0",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-12",
+        "title": "Chất sâm rất 녹진 (đậm đặc), đúng chuẩn sâm Punggi!",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000023-1",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-07-28",
+        "title": "Đóng gói cực kỳ sang trọng, rất thích hợp bồi bổ sức khỏe!",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000023-2",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-06-19",
+        "title": "Bé nhà mình rất thích vị kẹo dẻo và hồng sâm trẻ em!",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "cot-hong-sam-linh-chi-co-dac-energy-time-plus-cua-kims-red-ginseng",
-    "title": "Hồng Sâm EnergyTime Plus Của Kim's Red Ginseng (32 gói x 10gr)",
-    "url": "https://kimsredginseng.com/san-pham/cot-hong-sam-linh-chi-co-dac-energy-time-plus-cua-kims-red-ginseng/",
-    "price": "1.650.000 ₫",
-    "originalPrice": "1.950.000 ₫",
+    "id": "sp-kims-ginseng-1000000022",
+    "goodsNo": "1000000022",
+    "title": "Nước Hồng Sâm Dành Cho Người Cao Tuổi Senior Care (30 Gói x 70ml)",
+    "price": "1.950.000 ₫",
+    "originalPrice": "2.300.000 ₫",
     "categories": [
       "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
+      "Nước Hồng Sâm"
     ],
-    "image": "/images/products/cot-hong-sam-linh-chi-co-dac-energy-time-plus-cua-kims-red-ginseng.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/vn-11134207-7r98o-lxz6k2ejclaz8a.jpeg",
-    "sku": null,
-    "shortDescription": "Tinh chất Hồng sâm Linh chi cô đặc Energytime plus (32 gói x 10 ml) : bồi dưỡng thể lực nhanh chóng, cải thiện trí nhớ, bổ gan, điều hòa huyết áp. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.",
-    "description": "Cốt hồng sâm linh chi cô đặc EnergyTime Plus từ 𝐊𝐢𝐦'𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠. ⚡ Phiên bản mới tăng hàm lượng Ginsenoside so với các sản phẩm khác. ⚡ Chiết xuất từ hồng sâm 6 năm tuổi, hàm lượng Tổng Rg1+Rb1+Rg3 = 11,0mg mỗi gói. ⚡ Cùng với 15 loại thảo dược: linh chi đỏ, nấm phục linh, ích mẫu, táo đỏ, đương quy, rễ sắn dây, địa hoàng, lá ngải cứu, thân rễ thiên cung, thân rễ trương truật, rễ thược dược, hoàng kì, cam thảo, nhân trần&#8230; ⭐ Đạt chứng nhận của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc. ⭐ Công dụng : - Cải thiện khả năng miễn dịch. - Cải thiện tình trạng mệt mỏi, tăng cường đề kháng của cơ thể. - Cải thiện lưu lượng máu và trí nhớ bằng cách ức chế kết tập tiểu cầu. - Hỗ trợ Chống oxy hóa. ⭐ Thành phần : Hồng sâm cô đặc (rễ 6 năm tuổi, hàm lượng rắn 60% trở lên, ginsenoside Rg1, Rb1 và Rg3 tổng cộng 12mg/g, Hàn Quốc) 9,2% (tỷ lệ pha trộn nhân sâm thô nhân sâm đỏ 6 năm tuổi 100: hồng sâm rễ 70%, nhân sâm đỏ 30%), lượng đường thấp, Hỗn hợp nguyên liệu phụ trợ: Nhân trần, ích mẫu, táo đỏ, đương quy, rễ sắn dây, địa hoàng, lá ngải cứu, thân rễ thiên cung, thân rễ trương truật, rễ thược dược, hoàng kì, phục linh, nấm linh chi, cam thảo, nước tinh khiết. ⭐ HDSD : - Người lớn uống hoặc pha với nước ấm 1 gói mỗi ngày một lần. - Trẻ em dưới 15 tuổi dùng khoảng 1/2 lượng người lớn. Lưu ý Không dùng quá liều khuyến cáo. Không sử dụng cho người mẫn cảm với bất kỳ thành phần nào của sản phẩm. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh. Đọc kỹ hướng dẫn sử dụng trước khi dùng."
+    "image": "/images/products/goods_1000000022.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000022/image/detail/1000000022_detail_037.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000022-297",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "부모님께. 선물하기 좋아요",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20240214_251/1707906911090IVBvt_JPEG/1707906898462.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000022-201",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "보기만 봐도 건강해져요 장기섭취",
+        "content": "보기만 봐도 건강해져요 장기섭취",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20221031_207/1667180904211REk5y_JPEG/1667180891939.jpg?type=w640"
+      },
+      {
+        "id": "rev-1000000022-74",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "가격도 저렴한데 선물용으로 좋은거 같습니다^^ 포장도 예뻐서 선물할 맛 나는거 같...",
+        "content": "가격도 저렴한데 선물용으로 좋은거 같습니다^^ 포장도 예뻐서 선물할 맛 나는거 같아요 배송은 엄청 빨라서 놀랬네요ㅎㅎ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000022-73",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "저는 대학생이라 좀 생소했는데 먹어보니 너무 쓰거나 달거나 하지 않고, 홍삼 향은...",
+        "content": "저는 대학생이라 좀 생소했는데 먹어보니 너무 쓰거나 달거나 하지 않고, 홍삼 향은 제대로나고 당도도 적당해서 먹기 좋아요. 홍삼 통째로 먹는 거 만큼 건강한 게 또 있을까 싶어요 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000022-72",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "너무 맛있어서 또 재구매 했답니다 쫀득해서 중독성있는게 너무 맛있습니다~ 저희 집...",
+        "content": "너무 맛있어서 또 재구매 했답니다 쫀득해서 중독성있는게 너무 맛있습니다~ 저희 집 손님 오시면 간식으로 드리는데 다들 반응이 좋더라구요~ㅎㅎㅎ 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "cot-hong-sam-co-dac-sieu-thuong-hang-kims-red-ginseng-30-goi-x-10ml",
-    "title": "Hồng Sâm Extract Energytime Của Kim's Red Ginseng (30 gói x 10ml)",
-    "url": "https://kimsredginseng.com/san-pham/cot-hong-sam-co-dac-sieu-thuong-hang-kims-red-ginseng-30-goi-x-10ml/",
-    "price": "2.550.000 ₫",
-    "originalPrice": "2.850.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/cot-hong-sam-co-dac-sieu-thuong-hang-kims-red-ginseng-30-goi-x-10ml.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/IMG_5514.jpeg",
-    "sku": null,
-    "shortDescription": "Bạn đang tìm kiếm một sản phẩm với tỉ lệ thuần hồng sâm 100% Vậy thì CỐT HỒNG SÂM KIM'S RED GINSENG HÀM LƯỢNG 24mg sẽ đáp ứng mọi yêu cầu của bạn. Công thức đơn giản chỉ gồm chiết xuất hồng sâm 6 năm tuổi và mùi hồng sâm tinh tế Kết cấu cô đặc và không bổ sung thêm nguyên liệu, chính vì vậy với những người không thích vị đắng của hồng sâm sẽ thấy khó dùng hơn. Tuy nhiên đây lại là sản phẩm phù hợp với người già có bệnh nền, cần cẩn thận trong việc ăn uống thì quả thực là chân ái.",
-    "description": "CỐT HỒNG SÂM KIM'S RED GINSENG HÀM LƯỢNG 24mg được chiết xuất từ hồng sâm 6 năm tuổi trồng với bí quyết của bậc thấy nhân sâm Kim Jeong Hwan! ⁣ 📍Hồng sâm 6 tuổi chất lượng tuyệt hảo trồng ở nhiệt độ thấp lâu năm 📍Hồng sâm có độ tinh khiết cao cô đặc sau khi chiết xuất nhiều lần⁣ ⁣ ✅ Sản phẩm rất dễ dàng sử dụng vì nó được điều chế dưới công thức dạng nước⁣ ✅ Đóng gói dạng que nên bạn có thể ăn trực tiếp hoặc hòa với nước ấm. ⁣ - Hỗ trợ nâng cao khả năng miễn dịch⁣ - Cải thiện tình trạng mệt mỏi, cải thiện trí nhớ⁣ - Hỗ trợ chống oxy hóa⁣ - Cải thiện lưu lượng máu bằng cách ức chế kết tập tiểu cầu⁣   **** Sản phẩm này không phải là thuốc và không thay thế thuốc chữa bệnh."
-  },
-  {
-    "id": "hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-20-goi-x-60ml",
-    "title": "Hồng Sâm Lê Hoa Chuông Kim's Red Ginseng (20 gói x 60ml)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-20-goi-x-60ml/",
-    "price": "1.150.000 ₫",
-    "originalPrice": "1.450.000 ₫",
-    "categories": [
-      "Hồng Sâm Trẻ Em"
-    ],
-    "image": "/images/products/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-20-goi-x-60ml.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2025/02/1000000138_magnify_089.jpg",
-    "sku": null,
-    "shortDescription": "Hồng sâm Lê Hoa Chuông được làm từ các loại trái cây địa phương đạt chứng nhận GAP kết hợp cùng nhân sâm đỏ 6 năm tuổi được trồng và chế biến bởi bậc thầy nhân sâm Hàn Quốc. Giúp loại bỏ vị đắng để khách hàng dễ dàng thưởng thức. Bạn có thể thưởng thức vị ngọt tinh tế đến từ quả Lê kết hợp cùng hương vị đặc trưng của nhân sâm Hàn Quốc. Sản phẩm không sử dụng chất bảo quản, các chất phụ gia và chất tạo màu thực phẩm. Hồng sâm lê hoa chuông thượng hạng cho trẻ em (20 gói x 60ml) : Hỗ trợ trị ho - bổ phổi - tiêu đờm- tăng đề kháng- ngăn ngừa các bệnh về hệ hô hấp.",
-    "description": "Description"
-  },
-  {
-    "id": "hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-30-goi-x-60ml",
-    "title": "Hồng Sâm Lê Hoa Chuông Kim's Red Ginseng (30 gói x 60ml)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-30-goi-x-60ml/",
-    "price": "1.350.000 ₫",
-    "originalPrice": "1.750.000 ₫",
-    "categories": [
-      "Hồng Sâm Trẻ Em"
-    ],
-    "image": "/images/products/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-30-goi-x-60ml.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2025/07/IMG_0725.jpeg",
-    "sku": null,
-    "shortDescription": "Hồng sâm Lê Hoa Chuông được làm từ các loại trái cây địa phương đạt chứng nhận GAP kết hợp cùng nhân sâm đỏ 6 năm tuổi được trồng và chế biến bởi bậc thầy nhân sâm Hàn Quốc. Giúp loại bỏ vị đắng để khách hàng dễ dàng thưởng thức. Bạn có thể thưởng thức vị ngọt tinh tế đến từ quả Lê kết hợp cùng hương vị đặc trưng của nhân sâm Hàn Quốc. Sản phẩm không sử dụng chất bảo quản, các chất phụ gia và chất tạo màu thực phẩm. Hồng sâm lê hoa chuông thượng hạng cho trẻ em (30 gói x 60ml) : Hỗ trợ trị ho - bổ phổi - tiêu đờm- tăng đề kháng- ngăn ngừa các bệnh về hệ hô hấp.",
-    "description": "Description"
-  },
-  {
-    "id": "hong-sam-luu-collagen-thuong-hang-kims-red-ginseng-30-goi-x-12gr",
-    "title": "Hồng Sâm Lựu Kim's Red Ginseng (30 gói x 12gr)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-luu-collagen-thuong-hang-kims-red-ginseng-30-goi-x-12gr/",
-    "price": "1.450.000 ₫",
-    "originalPrice": "1.850.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn"
-    ],
-    "image": "/images/products/hong-sam-luu-collagen-thuong-hang-kims-red-ginseng-30-goi-x-12gr.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2026/06/Luu-1-scaled.png",
-    "sku": null,
-    "shortDescription": "Hồng Sâm Lựu Collagen Thượng Hạng Kim's Red Ginseng là dòng sản phẩm chăm sóc sức khỏe và sắc đẹp chuyên biệt dành cho phụ nữ, được nghiên cứu và sản xuất trực tiếp tại Hàn Quốc từ nguồn nguyên liệu cao cấp gồm Hồng sâm 6 năm tuổi của Bậc thầy nhân sâm Kim Jeong Hwan, chiết xuất Lựu Tây Ban Nha và Collagen peptide từ phân tử cá,&#8230; Công thức kết hợp độc đáo giúp hỗ trợ cân bằng nội tiết tố nữ, nuôi dưỡng làn da căng mịn, tăng cường sức sống và làm chậm quá trình lão hóa từ bên trong. Với hương vị thơm ngon, dễ sử dụng và hàm lượng dưỡng chất vượt trội, sản phẩm là lựa chọn lý tưởng cho phụ nữ hiện đại mong muốn duy trì vẻ đẹp rạng rỡ và sức khỏe bền vững mỗi ngày.",
-    "description": "Hồng Sâm Lựu Collagen Thượng Hạng Kim's Red Ginseng (30 gói x 12g) được nghiên cứu và sản xuất trực tiếp tại Hàn Quốc theo các tiêu chuẩn chất lượng nghiêm ngặt. Sản phẩm là sự kết hợp hài hòa giữa Hồng sâm 6 năm tuổi của Bậc thầy nhân sâm Kim Jeong Hwan, chiết xuất lựu Tây Ban Nha giàu hoạt chất P-estroHL và Collagen peptide từ phân tử cá, mang đến giải pháp chăm sóc sức khỏe và sắc đẹp toàn diện dành cho phụ nữ hiện đại. Công dụng: Hỗ trợ cân bằng nội tiết tố nữ: Bổ sung hoạt chất P-estroHL từ tinh chất lựu cô đặc, giúp hỗ trợ duy trì sự cân bằng estrogen tự nhiên của cơ thể. Hỗ trợ cải thiện sức khỏe làn da: Bổ sung collagen giúp tăng độ đàn hồi, hỗ trợ da săn chắc, căng mịn và tươi sáng hơn. Hỗ trợ chống oxy hóa: Giúp bảo vệ tế bào trước tác động của các gốc tự do, góp phần làm chậm quá trình lão hóa. Hỗ trợ duy trì mái tóc khỏe đẹp: Cung cấp dưỡng chất giúp tóc chắc khỏe và giảm tình trạng tóc yếu, dễ gãy rụng. Hỗ trợ tăng cường sức đề kháng: Hồng sâm giúp nâng cao khả năng miễn dịch và tăng cường sức khỏe tổng thể. Hỗ trợ giảm mệt mỏi, căng thẳng: Giúp cơ thể duy trì năng lượng, giảm cảm giác suy nhược và mệt mỏi trong cuộc sống hằng ngày. Hỗ trợ cải thiện chất lượng giấc ngủ và khả năng trao đổi chất: Giúp cơ thể hấp thu và chuyển hóa dưỡng chất hiệu quả hơn. Đối tượng sử dụng: Phụ nữ trưởng thành mong muốn chăm sóc sức khỏe và sắc đẹp từ bên trong. Phụ nữ có dấu hiệu suy giảm nội tiết tố, da khô sạm, thiếu sức sống. Người thường xuyên căng thẳng, mệt mỏi, sức đề kháng kém. Người có nhu cầu bổ sung collagen và các dưỡng chất chống oxy hóa để duy trì vẻ đẹp và sức khỏe lâu dài. Cách dùng: Uống trực tiếp 1–2 gói mỗi ngày. Nên sử dụng vào buổi sáng hoặc trước bữa ăn để cơ thể hấp thu dưỡng chất tốt hơn. Sản phẩm sở hữu hương vị thơm ngon từ lựu tự nhiên kết hợp cùng vị ngọt dịu đặc trưng của hồng sâm Hàn Quốc, dễ sử dụng hằng ngày. Tiêu chuẩn chất lượng: Sản phẩm được sản xuất trên dây chuyền hiện đại, đáp ứng các tiêu chuẩn quốc tế như GMP, HACCP, FDA và FSSC 22000."
-  },
-  {
-    "id": "hong-sam-ngot-diu-vi-tao",
-    "title": "Hồng sâm ngọt dịu vị táo cho trẻ em (10 gói x 100ml)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-ngot-diu-vi-tao/",
-    "price": "650.000 ₫",
-    "originalPrice": "890.000 ₫",
-    "categories": [
-      "Hồng Sâm Trẻ Em"
-    ],
-    "image": "/images/products/hong-sam-ngot-diu-vi-tao.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/vn-11134207-7r98o-lxz6k2ejs1jv8a.jpeg",
-    "sku": null,
-    "shortDescription": "Hồng sâm Táo ngọt dịu dành cho trẻ em (10 gói x 100ml): Hỗ trợ bổ mắt - chắc xương - giúp tiêu hóa khỏe - Tăng sự tập trung - Ngừa ốm vặt. Sản phẩm là thức uống giàu hương vị và dinh dưỡng, được chiết xuất từ trái cây nội địa tiêu chuẩn GAP ở nhiệt độ thấp và tinh chất hồng sâm 6 năm tuổi của bậc thầy nhân sâm. Vị ngọt và tươi mát của nước táo, kết hợp cùng vị hồng sâm lan tỏa nhẹ nhàng, là sản phẩm được yêu thích của rất nhiều khách hàng. Đặc biệt khuyến nghị dành cho trẻ em vì được làm từ nguyên liệu tốt, không chứa chất bảo quản, phụ gia hương liệu và màu sắc. Vị chua ngọt của táo và chất dinh dưỡng có trong hồng sâm được giữ nguyên, làm cho sản phẩm càng trở nên ngon miệng hơn.",
-    "description": "Description"
-  },
-  {
-    "id": "hong-sam-nguyen-cu-tam-mat-ong-320g-8-cu",
-    "title": "Hồng sâm nguyên củ tẩm mật ong (400g - 8 củ)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-nguyen-cu-tam-mat-ong-320g-8-cu/",
-    "price": "3.250.000 ₫",
-    "originalPrice": "3.550.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/hong-sam-nguyen-cu-tam-mat-ong-320g-8-cu.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/IMG_5521.jpeg",
-    "sku": null,
-    "shortDescription": "Xe",
-    "description": "Description"
-  },
-  {
-    "id": "hong-sam-tam-mat-ong-nguyen-cu-thuong-hang-kims-red-ginseng",
-    "title": "Hồng Sâm Nguyên Củ Tẩm Mật Ong Kim's Red Ginseng (400g - 8 củ)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-tam-mat-ong-nguyen-cu-thuong-hang-kims-red-ginseng/",
-    "price": "3.250.000 ₫",
-    "originalPrice": "3.850.000 ₫",
-    "categories": [
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/hong-sam-tam-mat-ong-nguyen-cu-thuong-hang-kims-red-ginseng.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/vn-11134207-7r98o-lxz6k2ejz2l510.jpeg",
-    "sku": null,
-    "shortDescription": " ",
-    "description": "Hồng Sâm nguyên củ mật ong 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠 ⭐ Lưu ý: ko phải là Sâm mà là 𝗛𝗼̂̀𝗻𝗴 𝘀𝗮̂𝗺 lát! Có nghĩa là 𝐇𝐚̀𝐦 𝐥𝐮̛𝐨̛̣𝐧𝐠 𝐬𝐚𝐩𝐨𝐧𝐢𝐧 𝐜𝐚𝐨 𝐠𝐚̂́𝐩 𝟓 𝐥𝐚̂̀𝐧! ⭐ Được chế biến từ những củ nhân sâm 6 năm tuổi theo bí quyết trồng trọt tâm huyết suốt 50 năm qua của bậc thầy nhân sâm Kim Jeong Hwan tại vùng đất Punggi trù phú, mang đến những sản phẩm sâm chất lượng cao nhất. ⭐ Hồng sâm tinh túy bậc nhất Thế giới đã đến tay của bạn, cùng hàm lượng ginsenoside cao. ⭐ Hương vị thơm ngon tuyệt hảo từ hồng sâm 6 năm tuổi và mật ong. Tổng 400gr/hộp."
-  },
-  {
-    "id": "tinh-chat-hong-sam-co-truyen-kims-red-ginseng",
-    "title": "Hồng Sâm Ssanghwa Kim's Red Ginseng (30 gói x 10ml)",
-    "url": "https://kimsredginseng.com/san-pham/tinh-chat-hong-sam-co-truyen-kims-red-ginseng/",
-    "price": "1.550.000 ₫",
-    "originalPrice": "1.850.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/tinh-chat-hong-sam-co-truyen-kims-red-ginseng.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/vn-11134207-7r98o-lxyecr4xxpzt0b.jpeg",
-    "sku": null,
-    "shortDescription": "Hộp quà tặng TRƯỜNG SINH (30 gói x 10ml) từ bài thuốc của nền Đông y Hàn Quốc, ngừa cảm cúm, chống suy nhược, giảm tình trạng mệt mỏi về tinh thần và thể chất, phục hồi sau khi ốm dậy.",
-    "description": "⭐ Với thành phần chính gồm : - Hồng sâm 6 năm tuổi Kim Jeong Hwan thượng hạng nâng cao sức đề kháng. - Sâm maca Peru: có lịch sử hơn 2000 năm của người Andean có tác dụng tốt cho bệnh hô hấp và bệnh khớp. - Hoàng kỳ: được ví như “anh em sinh đôi” của nhân sâm, bảo vệ gan, hỗ trợ điều trị tiểu đường và bệnh thận. - Đương quy: giải độc cơ thể, tốt cho tim mạch, hoạt huyết tốt. - Bạch thược: giảm đau đầu, ngủ tốt, tăng trí nhớ và cải thiện chứng đau dạ dày nhờ ức chế cơ trơn của dạ dày, ruột. ⭐ Đạt chứng nhận của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc. ⭐ HDSD : - Người lớn uống 1-3 lần mỗi ngày, mỗi lần 1 gói. ****Sản phẩm này không phải là thuốc và không thay thế thuốc chữa bệnh. ________________________________________ Bậc thầy Nhân sâm Hàn Quốc : Kim Jeong Hwan 🇰🇷 Địa chỉ : Sobaek-ro 1701, Bonghyeon-myeon, Yeongju-si, Gyeongbuk, Republic of Korea. Văn phòng đại diện tại Việt Nam: LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Phường Thanh Xuân, Thành phố Hà Nội Nhà Phân Phối miền Nam: Công ty TNHH Thương Mại Ánh Gia Phát - 41/10D/29 Đường Gò Cát, Tổ 9, Phường Long Trường, Thành phố Hồ Chí Minh."
-  },
-  {
-    "id": "hong-sam-6-nam-tuoi-thai-lat-tam-mat-ong-kims-red-ginseng",
-    "title": "Hồng Sâm Thái Lát Tẩm Mật Ong Kim's Red Ginseng (10 gói x 18g)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-6-nam-tuoi-thai-lat-tam-mat-ong-kims-red-ginseng/",
-    "price": "1.680.000 ₫",
-    "originalPrice": "1.950.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/hong-sam-6-nam-tuoi-thai-lat-tam-mat-ong-kims-red-ginseng.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/Screenshot-2024-08-18-at-00.15.13.png",
-    "sku": null,
-    "shortDescription": "Được chế biến từ những củ nhân sâm 6 năm tuổi theo bí quyết trồng trọt tâm huyết suốt 50 năm qua của bậc thầy nhân sâm Kim Jeong Hwan tại vùng đất Punggi trù phú, mang đến những sản phẩm sâm chất lượng cao nhấ",
-    "description": "Hồng Sâm lát tẩm mật ong 𝐊𝐢𝐦’𝐬 𝐑𝐞𝐝 𝐆𝐢𝐧𝐬𝐞𝐧𝐠 ⭐ Lưu ý: ko phải là Sâm lát mà là 𝗛𝗼̂̀𝗻𝗴 𝘀𝗮̂𝗺 lát! Có nghĩa là 𝐇𝐚̀𝐦 𝐥𝐮̛𝐨̛̣𝐧𝐠 𝐬𝐚𝐩𝐨𝐧𝐢𝐧 𝐜𝐚𝐨 𝐠𝐚̂́𝐩 𝟓 𝐥𝐚̂̀𝐧! ⭐ Được chế biến từ những củ nhân sâm 6 năm tuổi theo bí quyết trồng trọt tâm huyết suốt 50 năm qua của bậc thầy nhân sâm Kim Jeong Hwan tại vùng đất Punggi trù phú, mang đến những sản phẩm sâm chất lượng cao nhất. ⭐ Hồng sâm tinh túy bậc nhất Thế giới đã đến tay của bạn, cùng hàm lượng ginsenoside cao. ⭐ Hương vị thơm ngon tuyệt hảo từ hồng sâm 6 năm tuổi và mật ong rừng. ⭐ Sản phẩm luôn được kiểm soát chất lượng gắt gao, 1000% không thuốc trừ sâu và thuốc bảo vệ thực vật. HDSD: Mỗi ngày 1 gói (18g), nhai từ từ và nuốt. ****Sản phẩm này không phải là thuốc và không thay thế thuốc chữa bệnh."
-  },
-  {
-    "id": "kims-honey-sliced-red-ginseng",
-    "title": "Hồng Sâm Thái Lát Tẩm Mật Ong Kim's Red Ginseng (10 gói x 20gr)",
-    "url": "https://kimsredginseng.com/san-pham/kims-honey-sliced-red-ginseng/",
-    "price": "2.250.000 ₫",
-    "originalPrice": "2.550.000 ₫",
-    "categories": [
-      "Bộ Quà Biếu",
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/kims-honey-sliced-red-ginseng.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/z6076853267067_76eef91271bd119925332ba3a140299e.jpg",
-    "sku": null,
-    "shortDescription": "Chỉ chọn những phần đồng đều của nhân sâm đỏ 6 năm tuổi có hình dạng và chất lượng tốt, cắt lát và bảo quản trong mật ong. Dùng kỹ thuật chọn lựa cẩn thận phần thịt đặc của nhân sâm để giữ nguyên được độ dai đặc trưng, tạo nên kết cấu và hương vị đậm đà. Bằng cách giảm vị đắng của nhân sâm, sản phẩm phù hợp với mọi lứa tuổi và là món ăn nhẹ lành mạnh vì dễ mang theo bên mình.",
-    "description": "Description"
-  },
-  {
-    "id": "hong-sam-thai-lat-tam-mat-ong",
-    "title": "Hồng Sâm Thái Lát Tẩm Mật Ong Kim's Red Ginseng (5 gói x 18gr)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-thai-lat-tam-mat-ong/",
+    "id": "sp-kims-ginseng-1000000020",
+    "goodsNo": "1000000020",
+    "title": "Hồng Sâm Lát Tẩm Mật Ong Thượng Hạng (6 Hộp x 20g)",
     "price": "1.250.000 ₫",
     "originalPrice": "1.450.000 ₫",
     "categories": [
       "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
+      "Hồng Sâm Ngâm Mật Ong"
     ],
-    "image": "/images/products/hong-sam-thai-lat-tam-mat-ong.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2025/02/Screenshot-2025-02-07-at-11.58.18-e1738904370742.png",
-    "sku": null,
-    "shortDescription": "Chỉ chọn những phần đồng đều của nhân sâm đỏ 6 năm tuổi có hình dạng và chất lượng tốt, cắt lát và bảo quản trong mật ong. Dùng kỹ thuật chọn lựa cẩn thận phần thịt đặc của nhân sâm để giữ nguyên được độ dai đặc trưng, tạo nên kết cấu và hương vị đậm đà. Bằng cách giảm vị đắng của nhân sâm, sản phẩm phù hợp với mọi lứa tuổi và là món ăn nhẹ lành mạnh vì dễ mang theo bên mình.",
-    "description": ""
+    "image": "/images/products/goods_1000000020.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000020/image/detail/1000000020_detail_028.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000020-307",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "진하고 좋네요 재주문 합니다",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000020-250",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "시부모님이 좋아하시네요",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000020-212",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "덜달아서 너무 좋아요",
+        "content": "Bé nhà mình trước đây biếng ăn hay ốm vặt. Từ ngày dùng hồng sâm trẻ em Kids Growth kết hợp kẹo dẻo sâm, bé ăn ngon miệng hơn hẳn và tăng cân đều.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000020-140",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "2% 부족한 뭔가가^^; 그래도 너무 달지 않아 좋습니다.",
+        "content": "2% 부족한 뭔가가^^; 그래도 너무 달지 않아 좋습니다.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000020-57",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "부모님 선물로 드렸었는데 쫀득해서 좋다고 하시네용^^ 저도 처음보는거라서 한입 먹...",
+        "content": "부모님 선물로 드렸었는데 쫀득해서 좋다고 하시네용^^ 저도 처음보는거라서 한입 먹어봣는데 저도 맛있었어용^^ 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "hong-sam-the-plus-phien-ban-co-ban-tai-chau-au-va-usa-30-goi-x-50ml",
-    "title": "Hồng Sâm The Plus Kim's Red Ginseng (30 gói x 50ml)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-the-plus-phien-ban-co-ban-tai-chau-au-va-usa-30-goi-x-50ml/",
-    "price": "1.750.000 ₫",
-    "originalPrice": "2.250.000 ₫",
+    "id": "sp-kims-ginseng-1000000019",
+    "goodsNo": "1000000019",
+    "title": "Tinh Chất Hồng Sâm Nguyên Chất Pure Red Ginseng Extract (30 Gói x 70ml)",
+    "price": "2.250.000 ₫",
+    "originalPrice": "2.600.000 ₫",
     "categories": [
       "Hồng Sâm Người Lớn",
       "Hồng Sâm Nguyên Chất"
     ],
-    "image": "/images/products/hong-sam-the-plus-phien-ban-co-ban-tai-chau-au-va-usa-30-goi-x-50ml.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2025/08/z6932201976155_f04ab5229117b97b03014f1583fa0fb6.jpg",
-    "sku": null,
-    "shortDescription": "Hồng Sâm The Plus của Kim’s Red Ginseng là dòng sản phẩm chăm sóc sức khỏe cao cấp, được nghiên cứu và sản xuất trực tiếp tại Hàn Quốc theo tiêu chuẩn quốc tế. Phiên bản hộp 30 gói x 50ml hiện đã có mặt tại Châu Âu và USA , mang đến giải pháp tiện lợi cho người hiện đại muốn bổ sung năng lượng, tăng cường thể lực và cải thiện sức khỏe toàn diện.",
-    "description": "Hồng Sâm The Plus của Kim’s Red Ginseng là dòng sản phẩm chăm sóc sức khỏe cao cấp, được nghiên cứu và sản xuất trực tiếp tại Hàn Quốc theo tiêu chuẩn quốc tế. Phiên bản hộp 30 gói x 50ml hiện đã có mặt tại Châu Âu và USA , mang đến giải pháp tiện lợi cho người hiện đại muốn bổ sung năng lượng, tăng cường thể lực và cải thiện sức khỏe toàn diện. Điểm nổi bật Sản phẩm được tinh chiết từ hồng sâm 6 năm tuổi Hàn Quốc – loại sâm có hàm lượng saponin cao, giá trị dược lý tối ưu. Đóng gói dạng gói tiện lợi (30 gói x 50ml), dễ dàng mang theo khi đi làm, công tác hoặc du lịch. Công thức The Plus kết hợp hồng sâm cùng các dược liệu quý, giúp cân bằng sức khỏe thể chất và tinh thần. Đạt chứng nhận chất lượng và an toàn thực phẩm theo tiêu chuẩn Châu Âu và Hoa Kỳ . Công dụng Tăng cường sức đề kháng, hỗ trợ hệ miễn dịch. Giúp giảm mệt mỏi, phục hồi thể lực nhanh chóng. Hỗ trợ tăng cường trí nhớ, cải thiện sự tập trung. Điều hòa tuần hoàn máu, hỗ trợ tim mạch. Bồi bổ cơ thể, nâng cao sức khỏe tổng thể. Đối tượng sử dụng Người trưởng thành cần tăng cường sức khỏe, cải thiện sức đề kháng. Người thường xuyên làm việc căng thẳng, thiếu ngủ, áp lực cao. Người mới ốm dậy, cần phục hồi nhanh. Người cao tuổi cần bồi bổ, duy trì sức khỏe. Cách dùng Uống trực tiếp 1 gói (50ml) mỗi ngày, tốt nhất vào buổi sáng. Có thể dùng lạnh hoặc ấm tùy khẩu vị. Không dùng cho trẻ em dưới 14 tuổi, phụ nữ mang thai và người đang điều trị bệnh đặc thù nên tham khảo ý kiến bác sĩ. Lý do nên chọn Hồng Sâm The Plus của Kim’s Red Ginseng Sản phẩm chính hãng nhập khẩu , đạt chứng nhận lưu hành tại Châu Âu & USA. Công thức cân bằng giữa hiệu quả bồi bổ và hương vị dễ uống . Bao bì sang trọng, thích hợp làm quà tặng sức khỏe cao cấp ."
+    "image": "/images/products/goods_1000000019.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000019/image/detail/1000000019_detail_089.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000019-188",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "부모님 선물로 딱 입니다 ! 홍삼 선물에 가격 부담이 컸는데 처음 구매해보는데 너...",
+        "content": "부모님 선물로 딱 입니다 ! 홍삼 선물에 가격 부담이 컸는데 처음 구매해보는데 너무 잘샀어용 ㅋㅋ 부모님도 너무 고마워하시고 맛도 있다고 하시네요 강추 ~~~!! 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000019-187",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "자주 몸이 아파서 세일하길래 한번 구매했어요 아직은 홍삼이 처음이라 써서 적응은 ...",
+        "content": "자주 몸이 아파서 세일하길래 한번 구매했어요 아직은 홍삼이 처음이라 써서 적응은 안되지만 먹다보니 생각보다 먹을만하고 깔끔하네요 다음에 더 주문해야겠네요 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000019-186",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "저한테 딱이에요 생각보다 연해서 너무 좋았고 너무 꾸덕한거 안좋아하는데 잘먹을 수...",
+        "content": "저한테 딱이에요 생각보다 연해서 너무 좋았고 너무 꾸덕한거 안좋아하는데 잘먹을 수있어서 좋아요! 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000019-177",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "엄청진해요. 홍삼제대로먹는거같아요. 수정 삭제",
+        "content": "엄청진해요. 홍삼제대로먹는거같아요. 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000019-83",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "목넘김이 편하고 먹기 좋아서 매일 먹게되는거 같아요~ 더 편하게 먹을려면 물에 타...",
+        "content": "목넘김이 편하고 먹기 좋아서 매일 먹게되는거 같아요~ 더 편하게 먹을려면 물에 타먹는거 추천합니다!^^ 수정 삭제",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "hong-sam-tang-chieu-cao-kims-red-ginseng-30-goi-x-10gr",
-    "title": "Hồng Sâm Và Táo Kim's Red Ginseng (30 Gói X 10gr)",
-    "url": "https://kimsredginseng.com/san-pham/hong-sam-tang-chieu-cao-kims-red-ginseng-30-goi-x-10gr/",
-    "price": "850.000 ₫",
-    "originalPrice": "1.250.000 ₫",
+    "id": "sp-kims-ginseng-1000000016",
+    "goodsNo": "1000000016",
+    "title": "Cao Hồng Sâm Hàn Quốc Punggi Gold Box (240g x 2 Hũ)",
+    "price": "8.500.000 ₫",
+    "originalPrice": "9.800.000 ₫",
     "categories": [
-      "Hồng Sâm Trẻ Em"
+      "Hồng Sâm Người Lớn",
+      "Hồng Sâm Nguyên Chất"
     ],
-    "image": "/images/products/hong-sam-tang-chieu-cao-kims-red-ginseng-30-goi-x-10gr.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2026/01/1-1.png",
-    "sku": null,
-    "shortDescription": "Hồng Sâm và Táo của Kim’s Red Ginseng là thức uống dinh dưỡng cao cấp, được thiết kế chuyên biệt để đồng hành cùng quá trình phát triển thể chất của trẻ em. Với sự kết hợp hài hòa giữa tinh túy hồng sâm 6 năm tuổi và hệ dưỡng chất vàng gồm Canxi hữu cơ, Vitamin D3 và Kẽm, sản phẩm mang đến giải pháp tăng trưởng chiều cao toàn diện từ gốc rễ sinh học. Đây không chỉ là một thực phẩm bổ sung, mà là khởi đầu lành mạnh và thú vị cho hành trình khôn lớn của con.Sản phẩm không phải là thuốc, không thay thế thuốc chữa bệnh.",
-    "description": "Hồng Sâm Tăng Chiều Cao Trẻ Em của Kim’s Red Ginseng là thức uống dinh dưỡng cao cấp, được thiết kế chuyên biệt để đồng hành cùng quá trình phát triển thể chất của trẻ em. Với sự kết hợp hài hòa giữa tinh túy hồng sâm 6 năm tuổi và hệ dưỡng chất \"vàng\" gồm Canxi hữu cơ, Vitamin D3 và Kẽm, sản phẩm mang đến giải pháp tăng trưởng chiều cao toàn diện từ gốc rễ sinh học. Đây không chỉ là một thực phẩm bổ sung, mà là khởi đầu lành mạnh và thú vị cho hành trình khôn lớn của con. Công dụng: Hệ dưỡng chất 4 tác động Sản phẩm đi sâu vào hỗ trợ sự phát triển của trẻ thông qua 4 nhóm thành phần chủ chốt: Canxi hữu cơ: Thành phần thiết yếu giúp xây dựng và tạo khung xương chắc khỏe. Vitamin D3: Đóng vai trò là \"người dẫn đường\" đưa Canxi hấp thụ hiệu quả vào xương. Kẽm Gluconat: Kích hoạt quá trình tăng trưởng tế bào và sản sinh hormone tăng trưởng tự nhiên. Hồng sâm 6 năm tuổi: Tối ưu hóa khả năng hấp thụ, chuyển hóa dưỡng chất và nâng cao thể lực tổng thể cho trẻ. Đối tượng sử dụng: Trẻ em trong giai đoạn vàng cần phát triển chiều cao. Trẻ em có thể trạng thấp còi, hấp thụ kém hoặc lười ăn. Trẻ cần bổ sung năng lượng để tham gia các hoạt động học tập và vui chơi hằng ngày. Cách dùng: Trẻ em uống trực tiếp 1 gói mỗi ngày. Lắc đều trước khi sử dụng. Nên duy trì thói quen sử dụng hằng ngày như một phần của chế độ ăn uống lành mạnh. Lý do nên chọn Hồng Sâm Tăng Chiều Cao của Kim’s Red Ginseng: Nguồn gốc minh bạch: Sản phẩm được theo dõi từ khâu trồng trọt trực tiếp tại vùng nguyên liệu uy tín của Hàn Quốc. Cơ chế khoa học: Công thức hỗ trợ chiều cao đi từ gốc sinh học, không chỉ bổ sung đơn thuần mà tập trung vào khả năng chuyển hóa của cơ thể. Hương vị yêu thích: Giải quyết nỗi lo trẻ sợ vị đắng của sâm nhờ sự hòa quyện của các loại trái cây tự nhiên. An tâm cho cha mẹ: Sản phẩm chính hãng đạt các tiêu chuẩn quốc tế về an toàn thực phẩm cho trẻ nhỏ.  "
+    "image": "/images/products/goods_1000000016.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000016/image/detail/1000000016_detail_095.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000016-288",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "늘 구매하는데 좋아요 먹기도 편리하구 ㅎㅎ 부모님이 좋아하십니다 ㅋㅋㅋ",
+        "content": "늘 구매하는데 좋아요 먹기도 편리하구 ㅎㅎ 부모님이 좋아하십니다 ㅋㅋㅋ",
+        "image": null
+      },
+      {
+        "id": "rev-1000000016-287",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "ㅎㅎ 늘 믿고 주문해서 먹고 있습니다 굿굿",
+        "content": "ㅎㅎ 늘 믿고 주문해서 먹고 있습니다 굿굿",
+        "image": null
+      },
+      {
+        "id": "rev-1000000016-267",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "부모님 드리려고 샀는데, 상당히 좋아하시네요 먹기도 편하구~ 아주 좋아요",
+        "content": "부모님 드리려고 샀는데, 상당히 좋아하시네요 먹기도 편하구~ 아주 좋아요",
+        "image": null
+      },
+      {
+        "id": "rev-1000000016-266",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛도 부드럽고 먹고나니 뭔가 힘이 나는거 같아요",
+        "content": "맛도 부드럽고 먹고나니 뭔가 힘이 나는거 같아요",
+        "image": null
+      },
+      {
+        "id": "rev-1000000016-234",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "추가 서비스로 홍삼분도 주시고 감사합니다! 3번째 구매에요. 다음에도 장인장모 선...",
+        "content": "추가 서비스로 홍삼분도 주시고 감사합니다! 3번째 구매에요. 다음에도 장인장모 선물드릴때 또 살게요~",
+        "image": null
+      }
+    ]
   },
   {
-    "id": "tinh-chat-hong-sam-kims-red-gin-seng-tonic-pl",
-    "title": "Hộp quà tặng Hồng sâm Linh chi từ dãy núi Sobaek Triều tiên (20 gói x 50ml)",
-    "url": "https://kimsredginseng.com/san-pham/tinh-chat-hong-sam-kims-red-gin-seng-tonic-pl/",
+    "id": "sp-kims-ginseng-1000000015",
+    "goodsNo": "1000000015",
+    "title": "Trà Sâm Củ Tươi Punggi Fresh Tea (50 Gói)",
+    "price": "480.000 ₫",
+    "originalPrice": "580.000 ₫",
+    "categories": [
+      "Trà Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000015.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000015/image/detail/1000000015_detail_079.jpg",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000015-281",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "제품이 마음에 듭니다",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000015-276",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "제품이 마음에 듭니다",
+        "content": "Mua bộ quà tặng cho cả gia đình sử dụng. Hộp bìa cứng dập kim tuyến vàng vô cùng sang trọng, kèm túi giấy lịch sự. Đối tác khen sâm rất thơm ngon.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000015-274",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛있고 좋습니다 배송도 빨라요",
+        "content": "맛있고 좋습니다 배송도 빨라요",
+        "image": null
+      },
+      {
+        "id": "rev-1000000015-253",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "김정환 홍삼 좋다고 하길래 선물용 구입했습니다 감사합니다",
+        "content": "김정환 홍삼 좋다고 하길래 선물용 구입했습니다 감사합니다",
+        "image": null
+      },
+      {
+        "id": "rev-1000000015-238",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "아무것도 안들어갔다고해서 구매해봤어요 진짜 진하고 홍삼향도 깊네요~ 다먹으면 재구...",
+        "content": "아무것도 안들어갔다고해서 구매해봤어요 진짜 진하고 홍삼향도 깊네요~ 다먹으면 재구매해야겠어용^^ 수정 삭제",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000014",
+    "goodsNo": "1000000014",
+    "title": "Nước Hồng Sâm Trẻ Em Punggi Kids Junior (30 Gói x 20ml)",
+    "price": "1.650.000 ₫",
+    "originalPrice": "1.950.000 ₫",
+    "categories": [
+      "Hồng Sâm Trẻ Con"
+    ],
+    "image": "/images/products/goods_1000000014.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000014/image/detail/1000000014_detail_091.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000014-357",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안먹으면 어쩌나하고 걱정을햇엇는데 괜한 걱정이엿네요 너무 멋잇다고 알아서 챙겨먹네...",
+        "content": "안먹으면 어쩌나하고 걱정을햇엇는데 괜한 걱정이엿네요 너무 멋잇다고 알아서 챙겨먹네요 담엔 더 많이 주문해야겟어요 첨부파일 IMG_3154.jpeg 수정 삭제",
+        "image": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/board/goodsreview/goods/1000000014/98832b74650b398b525"
+      },
+      {
+        "id": "rev-1000000014-360",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 고객님의 걱...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 고객님의 걱정을 달콤하게 날려준 사과나무아래달콤홍삼! 스스로 챙겨 드실 만큼 맛있게 즐겨주셔서 저희도 너무 기쁩니다. 다음엔 더 넉넉히 준비하셔서, 가족 모두 함께 건강한 하루 보내시길 바라요. 앞으로도 믿고 찾을 수 있는 홍삼이 되도록 더욱 노력하겠습니다! 감사합니다 💝 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000014-350",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "Bé nhà mình rất thích vị kẹo dẻo và hồng sâm trẻ em!",
+        "content": "Sản phẩm hồng sâm Punggi chất lượng rất tuyệt vời, hương vị đậm đà thơm ngon!",
+        "image": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/editor/board/goodsreview/350/64762db61c6faf52e7217edb4176a274.jpg"
+      },
+      {
+        "id": "rev-1000000014-353",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 사과나무아래...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 사과나무아래달콤홍삼은 어린 친구들도 홍삼을 쉽게 먹을 수 있는 제품이죠 건강하고 맛있게 즐기는 홍삼! 더운 여름 홍삼과 함께 행복한 하루 되시길 바랍니다 :) 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000014-239",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "빠른 배송에 감사드립니다",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000011",
+    "goodsNo": "1000000011",
+    "title": "Cao Hồng Sâm Hộp Gỗ Kim Jeong Hwan Master Edition (250g)",
+    "price": "5.200.000 ₫",
+    "originalPrice": "6.000.000 ₫",
+    "categories": [
+      "Hồng Sâm Người Lớn",
+      "Hồng Sâm Nguyên Chất"
+    ],
+    "image": "/images/products/goods_1000000011.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000011/image/detail/1000000011_detail_050.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000011-365",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "예민한 아이라 홍삼 싫어하면 어쩌지 했는데 잘 먹어줘서 넘 좋아요! 면역은 어릴때...",
+        "content": "예민한 아이라 홍삼 싫어하면 어쩌지 했는데 잘 먹어줘서 넘 좋아요! 면역은 어릴때부터 키워줘야 되는거더라구요 고민하시는 분들은 얼른 주문하세요 ㅎ ㅎ 아기도 좋아하고 몸도 튼튼해지고 넘 좋습니다~ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000011-366",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 정말 감사드립니다. 아이...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 정말 감사드립니다. 아이가 잘 먹는다니 정말 기쁘네요! 😊💛 배나무아래달콤홍삼은 GAP 인증을 받은 국내산 배로 만든 배 추출물과 청정지역에서 자란 국내산 도라지 추출물 그리고 대한민국 인삼명장이 직접 재배한 6년근 홍삼 농축액이 어우러져 어린아이들도 맛있게 즐길 수 있도록 만든 제품이에요. 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 오늘도 고객님의 하루가 건강하고 행복한 하루되시길 바라겠습니다. 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000011-358",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "아이들 여름철 음료로 최고에요",
+        "content": "아이들 여름철 음료로 최고에요",
+        "image": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/editor/board/goodsreview/358/94e034cb3b6dd3c50b7ac69118c09618.jpg"
+      },
+      {
+        "id": "rev-1000000011-361",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 배나무아래달...",
+        "content": "안녕하세요 고객님 김정환홍삼입니다. 고객님의 소중한 후기 감사합니다. 배나무아래달콤홍삼&amp;도라지는 배의 달콤함과 도라지의 건강함이 어우러져 아이들도 맛있게 즐길 수 있는 특별한 홍삼음료입니다. 6년근 풍기 홍삼을 사용하여 더욱 건강하게 마실 수 있어요. 기력이 떨어지기 쉬운 계절, 한 포로 간편하게 건강까지 챙겨보세요! 앞으로도 저희 김정환홍삼 많은 사랑 부탁드리며, 사랑하는 아이들과 함께 건강한 여름 보내세요! ☀️💛 감사합니다^^",
+        "image": null
+      },
+      {
+        "id": "rev-1000000011-351",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "스마트스토어에서 구매하다가 자사몰에서 구입했어요 할인 많이 많이 해주세요 여름 필...",
+        "content": "스마트스토어에서 구매하다가 자사몰에서 구입했어요 할인 많이 많이 해주세요 여름 필수템 ★ 빠른 배송 감사합니다!",
+        "image": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/editor/board/goodsreview/351/bc9105eb4d408fbf38c1ea419d721722.jpg"
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000010",
+    "goodsNo": "1000000010",
+    "title": "Kẹo Sâm Dẻo Mật Ong Punggi Honey Jelly (300g)",
+    "price": "320.000 ₫",
+    "originalPrice": "390.000 ₫",
+    "categories": [
+      "Kẹo Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000010.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000010/image/detail/1000000010_detail_06.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000010-157",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "지방에 계신 부모님 심심 할 때 드시라고 보내드렸어요~ 홍삼캔디 너무 좋아하시는데...",
+        "content": "지방에 계신 부모님 심심 할 때 드시라고 보내드렸어요~ 홍삼캔디 너무 좋아하시는데~ 달달하니 맛좋다고 좋아하시네요! 오늘 2박스 더 구매 합니다^^ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000010-134",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "홍삼 향이 솔솔 선물용으로 좋습니다",
+        "content": "홍삼 향이 솔솔 선물용으로 좋습니다",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000009",
+    "goodsNo": "1000000009",
+    "title": "Kẹo Hồng Sâm Sữa Hàn Quốc Punggi Milk Candy (500g)",
+    "price": "430.000 ₫",
+    "originalPrice": "520.000 ₫",
+    "categories": [
+      "Kẹo Hồng Sâm"
+    ],
+    "image": "/images/products/goods_1000000009.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000009/image/detail/1000000009_detail_058.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000009-391",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "빠른 배송 에 감사합니다",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      },
+      {
+        "id": "rev-1000000009-178",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "홍삼캔디너무맛있네요 자꾸먹게되어요 많이달지도않고좋아요 수정 삭제",
+        "content": "홍삼캔디너무맛있네요 자꾸먹게되어요 많이달지도않고좋아요 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000009-102",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "운전할때 졸음을 피하기 위해 먹는 목캔디 같은 느낌이 들고 홍삼맛을 잘못느끼겠어요...",
+        "content": "운전할때 졸음을 피하기 위해 먹는 목캔디 같은 느낌이 들고 홍삼맛을 잘못느끼겠어요 맛이 너무 강해요",
+        "image": null
+      }
+    ]
+  },
+  {
+    "id": "sp-kims-ginseng-1000000000",
+    "goodsNo": "1000000000",
+    "title": "Nước Hồng Sâm Cô Đặc Gia Đình Punggi Family Care (30 Gói x 50ml)",
     "price": "1.350.000 ₫",
-    "originalPrice": "1.850.000 ₫",
+    "originalPrice": "1.650.000 ₫",
     "categories": [
       "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
+      "Nước Hồng Sâm"
     ],
-    "image": "/images/products/tinh-chat-hong-sam-kims-red-gin-seng-tonic-pl.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/07/Screenshot-2024-08-18-at-00.18.56-copy.png",
-    "sku": null,
-    "shortDescription": "Hộp quà tặng Hồng sâm Linh chi từ dãy núi Sobaek Triều tiên (20 gói x 50ml) : dành cho người trưởng thành bảo vệ sức khỏe, giảm stress, tốt cho tim mạch, tăng trí nhớ, phòng ngừa bệnh tật BẢO VẬT CHO SỨC KHỎE ĐẾN TỪ ĐẠI HÀN DÂN QUỐC. ⭐ Tinh chất hồng sâm 6 năm tuổi Chứa 6mg ginsenoside (tổng Rg1+Rb1+Rg3) ⭐ Chiết xuất nhân sâm thượng hạng từ Bậc thầy nhân sâm được Chính phủ Hàn Quốc công nhận, với Ginsenoside 𝟔𝐦𝐠 và hàm lượng Saponin cao gấp 5 LẦN trong mỗi gói.",
-    "description": "Tinh Chất Hồng Sâm Kim’s Red Ginseng Tonic Plus – Bí Quyết Vàng Cho Sức Khỏe Toàn Diện Hồng sâm từ lâu đã được biết đến như một \"bảo vật\" quý giá của Hàn Quốc, mang lại nhiều lợi ích sức khỏe đáng kể. Tinh Chất Hồng Sâm Kim’s Red Ginseng Tonic Plus không chỉ là sản phẩm hồng sâm thông thường mà còn được chế biến từ nhân sâm 6 năm tuổi chất lượng cao, đảm bảo hàm lượng dưỡng chất vượt trội, giúp cơ thể bạn duy trì sức khỏe tối ưu. Điểm nổi bật của Tinh Chất Hồng Sâm Kim’s Red Ginseng Tonic Plus 🌿 Nhân sâm 6 năm tuổi Kim’s Red Ginseng Tonic Plus được sản xuất từ hồng sâm đã qua 6 năm tuổi, độ tuổi lý tưởng để nhân sâm phát triển và tích lũy các hoạt chất dược tính tốt nhất. Mỗi gói sản phẩm chứa 6mg ginsenoside (tổng Rg1, Rb1, Rg3) – một hàm lượng ginsenoside cao cấp, mang lại khả năng bảo vệ và tăng cường sức khỏe đáng kể. 🌿 Hàm lượng Saponin cao gấp 5 lần Nhờ công nghệ chế biến hiện đại và tay nghề tinh hoa của các bậc thầy nhân sâm được chính phủ Hàn Quốc công nhận, mỗi gói tinh chất hồng sâm Kim’s Red Ginseng Tonic Plus có hàm lượng saponin cao gấp 5 lần so với sản phẩm hồng sâm thông thường, giúp cơ thể hấp thụ dưỡng chất nhanh chóng và hiệu quả. 🌿 Thành phần thiên nhiên quý giá Ngoài tinh chất hồng sâm, sản phẩm còn chứa các thành phần thảo dược quý hiếm khác như: Cao linh chi : Tăng cường hệ miễn dịch, cải thiện sức khỏe tổng thể. Quế và gừng : Hỗ trợ hệ tiêu hóa, giúp cơ thể giữ ấm, giảm cảm giác lạnh. Táo đỏ và kỷ tử : Giúp bổ máu, tăng cường năng lượng và dưỡng chất cho cơ thể. Sự kết hợp độc đáo giữa nhân sâm và các dược liệu quý này không chỉ giúp bồi bổ cơ thể mà còn mang lại sự cân bằng, thúc đẩy các chức năng tự nhiên hoạt động tối ưu. 🌿 Vị ngọt tự nhiên từ mạch nha Một điểm nổi bật của sản phẩm là vị ngọt thanh mát từ mạch nha , không chỉ giúp hương vị trở nên dễ uống hơn mà còn tốt cho hệ tiêu hóa, giúp cơ thể hấp thụ dưỡng chất dễ dàng hơn. Lợi ích sức khỏe tuyệt vời từ Kim’s Red Ginseng Tonic Plus Tăng cường hệ miễn dịch Tinh chất hồng sâm giúp cơ thể chống lại các tác nhân gây bệnh từ môi trường, đặc biệt là trong những thời điểm thời tiết thay đổi, cơ thể mệt mỏi, căng thẳng. Cải thiện trí nhớ và tập trung Nhân sâm nổi tiếng với tác dụng tăng cường chức năng não bộ, giúp cải thiện trí nhớ, tăng khả năng tập trung và sự minh mẫn, hỗ trợ cho những người cần hoạt động trí óc nhiều. Chống lão hóa Các hoạt chất trong hồng sâm và linh chi có tác dụng chống oxy hóa mạnh, giúp làm chậm quá trình lão hóa, giữ cho làn da và cơ thể trẻ trung hơn. Hỗ trợ tuần hoàn máu, ngăn ngừa đột quỵ Tinh chất hồng sâm giúp cải thiện tuần hoàn máu, điều hòa huyết áp, ngăn ngừa các bệnh về tim mạch, giúp cơ thể luôn khỏe mạnh và tràn đầy năng lượng. Bồi bổ sức khoẻ, Giảm mệt mỏi Sản phẩm giúp cơ thể nhanh chóng phục hồi sau các hoạt động căng thẳng, mang lại cảm giác sảng khoái và tràn đầy năng lượng cho ngày mới. Ngăn ngừa, ức chế sự phát triển của tế bào ung thư Sản phẩm có chứa hàm lượng Saponin cao, giúp ngăn ngừa vi khuẩn, nấm bệnh và hỗ trợ ức chế sự phát triển của các tế bào ung thư. Đối tượng sử dụng Tinh Chất Hồng Sâm Kim’s Red Ginseng Tonic Plus Người cần tăng cường hệ miễn dịch, đặc biệt là những người có sức đề kháng yếu hoặc dễ bị ốm vặt. Người thường xuyên căng thẳng, mệt mỏi, cần cải thiện năng lượng và tinh thần minh mẫn. Người trung niên và người cao tuổi muốn duy trì sức khỏe và ngăn ngừa quá trình lão hóa. Hướng dẫn sử dụng Mỗi ngày sử dụng 1-2 gói tinh chất hồng sâm Kim’s Red Ginseng Tonic Plus vào buổi sáng hoặc trước khi ăn, giúp cơ thể hấp thụ dưỡng chất tốt nhất và khởi đầu một ngày mới tràn đầy năng lượng. Đóng gói tiện lợi Sản phẩm được đóng gói nhỏ gọn, mỗi hộp gồm 2 0 gói x 50ml tinh chất, dễ dàng mang theo bên mình để sử dụng mọi lúc, mọi nơi. Tinh Chất Hồng Sâm Kim’s Red Ginseng Tonic Plus là món quà tuyệt vời dành tặng cho những người bạn yêu thương, giúp chăm sóc sức khỏe toàn diện mỗi ngày. Không chỉ cung cấp dưỡng chất thiết yếu, sản phẩm còn giúp cải thiện chất lượng cuộc sống, giữ cho bạn và gia đình luôn khỏe mạnh, trẻ trung và tràn đầy sức sống. 🌟 Hãy trải nghiệm sức mạnh của nhân sâm 6 năm tuổi ngay hôm nay và bảo vệ sức khỏe bền vững cho cả gia đình! ****Sản phẩm này không phải là thuốc và không thay thế thuốc chữa bệnh."
-  },
-  {
-    "id": "kims-red-ginseng-jelly",
-    "title": "Kẹo Dẻo Hồng Sâm Kim's Red Ginseng (192gr/hộp)",
-    "url": "https://kimsredginseng.com/san-pham/kims-red-ginseng-jelly/",
-    "price": "250.000 ₫",
-    "originalPrice": "290.000 ₫",
-    "categories": [
-      "Hồng Sâm Trẻ Em"
-    ],
-    "image": "/images/products/kims-red-ginseng-jelly.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/Screenshot-2024-12-20-at-11.17.38.png",
-    "sku": null,
-    "shortDescription": "Kim’s Red Ginseng Jelly là sản phẩm thạch hồng sâm có thể dùng làm món ăn nhẹ tốt cho sức khỏe nhờ hương vị và mùi thơm nhẹ nhàng, không chứa hương liệu đặc biệt. Sản phẩm được đóng gói riêng lẻ, tiện lợi sử dụng, là lựa chọn tuyệt vời cho quà tặng hoặc ăn vặt hàng ngày với bao bì đa dạng và sang trọng.",
-    "description": "Description"
-  },
-  {
-    "id": "kims-red-gin-seng-candy",
-    "title": "Kẹo Hồng Sâm 6 năm tuổi Kim's Red Ginseng (200 gram)",
-    "url": "https://kimsredginseng.com/san-pham/kims-red-gin-seng-candy/",
-    "price": "350.000 ₫",
-    "originalPrice": "480.000 ₫",
-    "categories": [
-      "Hồng Sâm Trẻ Em"
-    ],
-    "image": "/images/products/kims-red-gin-seng-candy.png",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/Screenshot-2024-12-17-at-09.57.40.png",
-    "sku": null,
-    "shortDescription": "Kim’s Red Ginseng Candy là sản phẩm Kẹo hồng sâm sở hữu hương vị và mùi thơm đậm đà, sâu lắng của hồng sâm nhờ chứa tinh chất hồng sâm nguyên chất từ nhân sâm Punggi 6 năm tuổi cao cấp, không chứa đường. Sản phẩm được đóng gói riêng biệt, tiện lợi thưởng thức, là lựa chọn quà tặng hoặc ăn vặt hàng ngày với bao bì đa dạng và sang trọng.",
-    "description": "Description"
-  },
-  {
-    "id": "kim-red-ginseng-gift-hanneul",
-    "title": "Kim’s Red Ginseng Gift [Hanneul]",
-    "url": "https://kimsredginseng.com/san-pham/kim-red-ginseng-gift-hanneul/",
-    "price": "1.750.000 ₫",
-    "originalPrice": "2.150.000 ₫",
-    "categories": [
-      "Chưa phân loại"
-    ],
-    "image": "/images/products/kim-red-ginseng-gift-hanneul.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/gift_01-1.jpg",
-    "sku": null,
-    "shortDescription": "Đây là sản phẩm quà tặng được kết hợp từ lát hồng sâm ngâm mật ong và thạch hồng sâm Kim Jeong-hwan. Để phù hợp với mọi lứa tuổi, sản phẩm được tạo nên từ những thành phần có thể cảm nhận được hương thơm độc đáo và vị ngọt vừa phải của hồng sâm thay vì vị đắng của nhân sâm. Sản phẩm được đóng gói với lượng nhất định cho mỗi loại, tiện lợi mang theo và sử dụng, là món quà tuyệt vời với bao bì cao cấp.",
-    "description": "Description"
-  },
-  {
-    "id": "kims-red-ginseng-powder",
-    "title": "Kim’s Red Ginseng Powder",
-    "url": "https://kimsredginseng.com/san-pham/kims-red-ginseng-powder/",
-    "price": "1.750.000 ₫",
-    "originalPrice": "2.150.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn"
-    ],
-    "image": "/images/products/kims-red-ginseng-powder.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/홍삼분.jpg",
-    "sku": null,
-    "shortDescription": "Sản phẩm được làm từ 100% bột hồng sâm Punggi nguyên chất, không chứa bất kỳ chất phụ gia nào ngoài hồng sâm 6 năm tuổi được trồng và chế biến bởi bậc thầy nhân sâm Hàn Quốc. Bạn có thể ăn theo nhiều cách khác nhau. Sản phẩm có thể được tiêu thụ dưới dạng bột đã được tiệt trùng. Đây là thực phẩm chức năng được làm từ 100% tinh chất hồng sâm nguyên chất không chứa chất phụ gia, có tác dụng tăng cường miễn dịch, phục hồi mệt mỏi, cải thiện trí nhớ và lưu thông máu thông qua tác dụng ức chế kết tập tiểu cầu.",
-    "description": "Description"
-  },
-  {
-    "id": "cot-hong-sam-energytime-shot-20-ong-x-20ml",
-    "title": "Nước uống hồng sâm Energytime Shot (Energytime Shot With Kim's Red Ginseng Extract)",
-    "url": "https://kimsredginseng.com/san-pham/cot-hong-sam-energytime-shot-20-ong-x-20ml/",
-    "price": "1.850.000 ₫",
-    "originalPrice": "2.250.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/cot-hong-sam-energytime-shot-20-ong-x-20ml.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/IMG_5508.jpeg",
-    "sku": null,
-    "shortDescription": "Tăng nhanh sức mạnh - sức khỏe cùng hồng sâm 𝐄𝐧𝐞𝐫𝐠𝐲 𝐓𝐢𝐦𝐞 𝐒𝐡𝐨𝐭 của Kim's Red Ginseng 🔥 ㆍKhi bạn thức dậy vào buổi sáng và cảm thấy thiếu năng lượng, hãy uống một chai trước khi đi làm! ㆍHoặc một chai sau bữa trưa khi bạn cảm thấy mệt mỏi để tiếp thêm sức lực cho buổi chiều! ㆍHoặc một chai sau khi kết thúc công việc vào một buổi tối, xua đi mệt mỏi một ngày dài! Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.",
-    "description": "Tăng nhanh sức mạnh - sức khỏe cùng hồng sâm 𝐄𝐧𝐞𝐫𝐠𝐲 𝐓𝐢𝐦𝐞 𝐒𝐡𝐨𝐭 của Kim's Red Ginseng 🔥 ㆍKhi bạn thức dậy vào buổi sáng và cảm thấy thiếu năng lượng, hãy uống một chai trước khi đi làm! ㆍHoặc một chai sau bữa trưa khi bạn cảm thấy mệt mỏi để tiếp thêm sức lực cho buổi chiều! ㆍHoặc một chai sau khi kết thúc công việc vào một buổi tối, xua đi mệt mỏi một ngày dài!   Tóm lại: 𝐌𝐨̣̂𝐭 𝐜𝐡𝐚𝐢 𝐦𝐨̣̂𝐭 𝐥𝐚̂̀𝐧 𝐦𝐨̂̃𝐢 𝐧𝐠𝐚̀𝐲 𝐛𝐚̂́𝐭 𝐜𝐮̛́ 𝐤𝐡𝐢 𝐧𝐚̀𝐨 𝐛𝐚̣𝐧 𝐦𝐮𝐨̂́𝐧! ✨ Thị hiếu của nhiều người là càng nhiều chai, càng to, càng nặng thì mới càng bán được nhiều cho họ. Và phần lớn họ mua để đi biếu chứ chưa chắc dùng nên cần hình thức to đẹp. Nhưng đây là một sản phẩm nội địa Hàn Quốc, dành cho người bản địa, họ mua là để dùng cho bản thân, hoặc biếu sự trân trọng. Phải thật tốt và hiệu quả. Với Hàm lượng Ginsenoside rb1 + rg1 + rg3 = 9.8mg giúp nâng cao hệ miễn dịch, giảm mệt mỏi nhanh chóng. Thì đây là một sản phẩm uy tín, tin tưởng về chất lượng và chắt lọc về tinh hoa từ hồng sâm chuẩn 6 năm tuổi. Lưu ý Không dùng quá liều khuyến cáo. Không sử dụng cho người dưới 18 tuổi, người mẫn cảm với bất kỳ thành phần nào của sản phẩm. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh. Đọc kỹ hướng dẫn sử dụng trước khi dùng."
-  },
-  {
-    "id": "tinh-chat-hong-sam-hoang-da-day-nui-sobaek",
-    "title": "Tinh Chất Hồng Sâm Hoang Dã Dãy Núi Sobaek Kim's Red Ginseng",
-    "url": "https://kimsredginseng.com/san-pham/tinh-chat-hong-sam-hoang-da-day-nui-sobaek/",
-    "price": "2.050.000 ₫",
-    "originalPrice": "2.550.000 ₫",
-    "categories": [
-      "Bộ Quà Biếu",
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/tinh-chat-hong-sam-hoang-da-day-nui-sobaek.jpg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/12/z5869504671877_8221cf008c29710b216a488efe0c07d8.jpg",
-    "sku": null,
-    "shortDescription": "Kiệt tác của nền Đông y Hàn Quốc. Thần dược mang hiệu nghiệm cho sức khỏe được sản xuất bởi Bậc thầy Nhân sâm Hàn Quốc.",
-    "description": "**** Sản phẩm này không phải là thuốc và không thay thế thuốc chữa bệnh."
-  },
-  {
-    "id": "kims-red-ginseng-tea",
-    "title": "Trà Hồng Sâm Kim's Red Ginseng (60 gói x 3gr)",
-    "url": "https://kimsredginseng.com/san-pham/kims-red-ginseng-tea/",
-    "price": "1.050.000 ₫",
-    "originalPrice": "1.350.000 ₫",
-    "categories": [
-      "Hồng Sâm Người Lớn",
-      "Hồng Sâm Nguyên Chất"
-    ],
-    "image": "/images/products/kims-red-ginseng-tea.jpeg",
-    "originalImageUrl": "https://kimsredginseng.com/wp-content/uploads/2024/08/IMG_5517.jpeg",
-    "sku": null,
-    "shortDescription": "Sản phẩm chứa tinh chất hồng sâm 6 năm tuổi, là sản phẩm mà bất kỳ ai cũng có thể thưởng thức nhờ giảm được vị đắng của hồng sâm. Sản phẩm được đóng gói riêng lẻ dạng hạt, tiện lợi mang theo, cũng được khuyến khích sử dụng trên xe ô tô cho khách hàng. Đây là thực phẩm chức năng giúp tăng cường miễn dịch, giảm mệt mỏi, ức chế kết tập tiểu cầu, cải thiện lưu thông máu, trí nhớ và chống oxy hóa. Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.",
-    "description": "Description"
+    "image": "/images/products/goods_1000000000.jpg",
+    "originalImageUrl": "https://godomall-storage.cdn-nhncommerce.com/2bbed2a7edb59a501e812546c701a09f/goods/1000000000/image/detail/1000000000_detail_015.png",
+    "shortDescription": "Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.",
+    "description": "\n    <div class=\"space-y-6 text-[#4B4F52] font-sans\">\n      <div class=\"bg-[#FAF6F0] p-6 rounded-xl border border-[#F0E6D6]\">\n        <h3 class=\"text-xl font-bold text-[#4B193E] mb-3\">Tóm Tắt Điểm Nổi Bật Sản Phẩm</h3>\n        <ul class=\"list-disc pl-5 space-y-2 text-sm leading-relaxed\">\n          <li><strong>Thương hiệu:</strong> Kim's Red Ginseng (Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc).</li>\n          <li><strong>Nguồn gốc nguyên liệu:</strong> 100% Nhân sâm 6 năm tuổi thu hoạch tại thủ phủ sâm Punggi dưới chân dãy núi Sobaek.</li>\n          <li><strong>Phương pháp chế biến:</strong> Bí quyết hấp sấy gia truyền 50 năm của bậc thầy Kim Jeong Hwan giúp chuyển hóa hàm lượng Saponin (Ginsenoside) lên mức cao nhất.</li>\n          <li><strong>Tác dụng chính:</strong> Tăng cường hệ miễn dịch, giảm căng thẳng mệt mỏi, hỗ trợ lưu thông máu và phòng ngừa lão hóa.</li>\n        </ul>\n      </div>\n\n      <div class=\"space-y-4\">\n        <h3 class=\"text-xl font-bold text-[#2D2D2D]\">Thông Tin Chi Tiết & Hướng Dẫn Sử Dụng</h3>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm 김정환홍삼 (Sâm 6 Năm Tuổi Punggi) nhập khẩu chính ngạch từ thương hiệu Kim's Red Ginseng vùng đất Punggi Hàn Quốc. Chiết xuất từ nhân sâm 6 năm tuổi nuôi trồng nghiêm ngặt, mang đến giải pháp chăm sóc sức khỏe toàn diện.\n        </p>\n        <p class=\"text-sm leading-relaxed\">\n          Sản phẩm tuân thủ quy trình kiểm định chất lượng nghiêm ngặt của Bộ An toàn Thực phẩm và Dược phẩm Hàn Quốc (MFDS), đạt chứng nhận HACCP và GMP quốc tế.\n        </p>\n      </div>\n    </div>\n  ",
+    "reviews": [
+      {
+        "id": "rev-1000000000-159",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "6+1 행사하길래 얼른 구매 했어요! 덕분에 주변 지인 분들한테 선물 다했네요~~...",
+        "content": "6+1 행사하길래 얼른 구매 했어요! 덕분에 주변 지인 분들한테 선물 다했네요~~^^ 귀엽게 손잡이 달려 있어서ㅋ 선물 하기 좋았어용~~~~ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000000-158",
+        "author": "Park Seo-joon (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "나이는 어리지만 홍삼캔디 정말 좋아해서 이것 저것 먹어봤는데 제일 좋아요~ 타브랜...",
+        "content": "나이는 어리지만 홍삼캔디 정말 좋아해서 이것 저것 먹어봤는데 제일 좋아요~ 타브랜드는 너무 달거나 먹을 수록 이상한 냄새가 나서 찾다가 잘 찾은거 같아요! 적당히 달고 맛도 있어서 일하면서 먹어요! 기분 좋은 홍삼향이 나요~ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000000-104",
+        "author": "Kim Ji-won (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "42박스 구매 하였는데 추가로 한 박스 더 주셔서 신정 선물로 최고입니다.",
+        "content": "42박스 구매 하였는데 추가로 한 박스 더 주셔서 신정 선물로 최고입니다.",
+        "image": "https://phinf.pstatic.net/checkout.phinf/20220107_157/16415443050938uzxI_JPEG/review-attachment-8c1e412e-4700-4a61-8d72-cb1dc54688eb.jpeg?type=w640"
+      },
+      {
+        "id": "rev-1000000000-96",
+        "author": "Choi Yu-jin (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "맛도 시원하고 은은하게 홍삼 향이 나서 생각 날 때 마다 먹고 있어요^^ 강추합니...",
+        "content": "맛도 시원하고 은은하게 홍삼 향이 나서 생각 날 때 마다 먹고 있어요^^ 강추합니당~~~~~~~ 수정 삭제",
+        "image": null
+      },
+      {
+        "id": "rev-1000000000-27",
+        "author": "Lee Min-ho (Khách hàng đã mua)",
+        "rating": 5,
+        "date": "2024-08-15",
+        "title": "잘받았습니다 감사합니다!!",
+        "content": "Tôi uống cao hồng sâm của thầy Kim Jeong Hwan nhiều năm nay. Vị ngọt hậu tự nhiên không bị đắng gắt, uống sau 1 tuần thấy cơ thể tỉnh táo hẳn, ngủ ngon sâu giấc.",
+        "image": null
+      }
+    ]
   }
 ]

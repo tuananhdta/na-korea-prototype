@@ -8,17 +8,13 @@ import {
   Plus,
   Minus,
   Check,
-  Truck,
-  Gift,
-  ShieldCheck,
-  Award,
   ChevronRight,
   Share2,
-  Heart,
-  Sparkles,
+  Star,
+  MessageSquareQuote,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { Product } from "@/types/product";
+import { Product, ProductReview } from "@/types/product";
 import { useCart } from "@/context/CartContext";
 import { ProductCard } from "@/components/ProductCard";
 
@@ -27,38 +23,19 @@ interface ProductDetailViewProps {
   relatedProducts: Product[];
 }
 
-const PACKAGING_OPTIONS = [
-  {
-    id: "standard",
-    label: "Hộp tiêu chuẩn",
-    subtitle: "Kèm túi giấy chính hãng",
-  },
-  {
-    id: "gift",
-    label: "Hộp quà biếu VIP",
-    subtitle: "Thắt nơ lụa cao cấp",
-  },
-  {
-    id: "combo",
-    label: "Combo ưu đãi",
-    subtitle: "Tiết kiệm thêm 5%",
-  },
-];
-
 export function ProductDetailView({ product, relatedProducts }: ProductDetailViewProps) {
   const router = useRouter();
   const [quantity, setQuantity] = useState(1);
-  const [selectedPackaging, setSelectedPackaging] = useState(PACKAGING_OPTIONS[0].label);
-  const [activeTab, setActiveTab] = useState<"desc" | "usage" | "origin">("desc");
+  const [activeTab, setActiveTab] = useState<"desc" | "reviews" | "usage" | "origin">("desc");
   const [copied, setCopied] = useState(false);
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {
-    addToCart(product, quantity, selectedPackaging);
+    addToCart(product, quantity);
   };
 
   const handleBuyNow = () => {
-    addToCart(product, quantity, selectedPackaging);
+    addToCart(product, quantity);
     router.push("/checkout");
   };
 
@@ -120,20 +97,13 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   )}
                 </div>
               </div>
-
-              {/* Product Trust Under Photo */}
-              <div className="flex items-center justify-between text-xs text-[#666666] px-2 pt-2">
-                <span>Mã SP: {product.id}</span>
-                <span>Hồng sâm 6 năm tuổi Punggi Hàn Quốc</span>
-              </div>
             </div>
 
-            {/* Right Column: Product Purchase Info (Matching Reference Mockup) */}
+            {/* Right Column: Product Purchase Info */}
             <div className="lg:col-span-6 flex flex-col justify-between space-y-6">
               <div>
                 {/* Badge */}
-                <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-[#ECEBE9] text-[#B5222A] text-xs font-bold rounded-md uppercase tracking-wider mb-3">
-                  <Sparkles className="w-3.5 h-3.5 text-[#F0831F]" />
+                <div className="inline-flex items-center px-3 py-1 bg-[#ECEBE9] text-[#B5222A] text-xs font-bold rounded-md uppercase tracking-wider mb-3">
                   <span>CHÍNH HÃNG KIM&apos;S RED GINSENG</span>
                 </div>
 
@@ -166,41 +136,6 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   </p>
                 )}
 
-                {/* Packaging Selection Options (Như trong ảnh mẫu) */}
-                <div className="mt-6 space-y-3">
-                  <label className="block text-xs font-bold uppercase tracking-wider text-[#2D2D2D]">
-                    Quy cách đóng gói & Quà tặng
-                  </label>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                    {PACKAGING_OPTIONS.map((opt) => {
-                      const isSelected = selectedPackaging === opt.label;
-                      return (
-                        <button
-                          key={opt.id}
-                          type="button"
-                          onClick={() => setSelectedPackaging(opt.label)}
-                          className={`p-3 rounded-lg border text-left transition-all duration-200 ${
-                            isSelected
-                              ? "border-[#B5222A] bg-red-50/50 shadow-xs"
-                              : "border-[#E5E5E5] hover:border-gray-400 bg-white"
-                          }`}
-                        >
-                          <div
-                            className={`text-xs font-bold ${
-                              isSelected ? "text-[#B5222A]" : "text-[#2D2D2D]"
-                            }`}
-                          >
-                            {opt.label}
-                          </div>
-                          <div className="text-[11px] text-[#666666] mt-0.5">
-                            {opt.subtitle}
-                          </div>
-                        </button>
-                      );
-                    })}
-                  </div>
-                </div>
-
                 {/* Quantity & Action Buttons */}
                 <div className="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
                   {/* Quantity Counter */}
@@ -228,9 +163,9 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   <button
                     type="button"
                     onClick={handleAddToCart}
-                    className="flex-1 h-12 bg-[#B5222A] hover:bg-[#991C23] text-white font-bold rounded-lg shadow-md flex items-center justify-center gap-2 transition-all duration-200 transform active:scale-98 text-sm sm:text-base"
+                    className="na-btn-primary flex-1 h-12 text-sm sm:text-base tracking-wide"
                   >
-                    <ShoppingBag className="w-5 h-5" />
+                    <ShoppingBag className="w-5 h-5 transition-transform duration-300 group-hover:scale-110" />
                     <span>Thêm vào giỏ hàng</span>
                   </button>
 
@@ -238,58 +173,15 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   <button
                     type="button"
                     onClick={handleBuyNow}
-                    className="h-12 px-6 border-2 border-[#2D2D2D] hover:bg-[#2D2D2D] hover:text-white text-[#2D2D2D] font-bold rounded-lg transition-colors text-sm sm:text-base"
+                    className="na-btn-secondary h-12 px-7 text-sm sm:text-base tracking-wide"
                   >
-                    Mua ngay
+                    <span>Mua ngay</span>
                   </button>
                 </div>
               </div>
 
-              {/* Service Highlights / Trust Badges (Như trong ảnh mẫu) */}
-              <div className="pt-6 border-t border-[#E5E5E5] grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-[#4B4F52]">
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#ECEBE9] text-[#B5222A] flex items-center justify-center shrink-0">
-                    <Truck className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-[#2D2D2D]">Giao hàng nhanh 1-2 ngày</div>
-                    <div className="text-[#666666]">Miễn phí giao hàng toàn quốc</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#ECEBE9] text-[#B5222A] flex items-center justify-center shrink-0">
-                    <Gift className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-[#2D2D2D]">Túi quà sang trọng</div>
-                    <div className="text-[#666666]">Kèm thiệp chúc mừng theo yêu cầu</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#ECEBE9] text-[#B5222A] flex items-center justify-center shrink-0">
-                    <Award className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-[#2D2D2D]">100% Sâm núi Punggi</div>
-                    <div className="text-[#666666]">Nghệ nhân Kim Jeong Hwan</div>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-[#ECEBE9] text-[#B5222A] flex items-center justify-center shrink-0">
-                    <ShieldCheck className="w-4 h-4" />
-                  </div>
-                  <div>
-                    <div className="font-semibold text-[#2D2D2D]">Chứng nhận HACCP & GMP</div>
-                    <div className="text-[#666666]">Kiểm định chất lượng nghiêm ngặt</div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Share and wishlist */}
-              <div className="pt-2 flex items-center gap-4 text-xs text-[#666666]">
+              {/* Share */}
+              <div className="pt-4 border-t border-[#E5E5E5] flex items-center gap-4 text-xs text-[#666666]">
                 <button
                   onClick={handleShare}
                   className="flex items-center gap-1.5 hover:text-[#2D2D2D] transition-colors"
@@ -311,7 +203,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
           <div className="flex border-b border-[#E5E5E5]">
             <button
               onClick={() => setActiveTab("desc")}
-              className={`px-8 py-4 text-sm font-bold transition-colors relative ${
+              className={`px-6 sm:px-8 py-4 text-xs sm:text-sm font-bold transition-colors relative ${
                 activeTab === "desc"
                   ? "text-[#B5222A]"
                   : "text-[#666666] hover:text-[#2D2D2D]"
@@ -323,8 +215,26 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               )}
             </button>
             <button
+              onClick={() => setActiveTab("reviews")}
+              className={`px-6 sm:px-8 py-4 text-xs sm:text-sm font-bold transition-colors relative flex items-center gap-1.5 ${
+                activeTab === "reviews"
+                  ? "text-[#B5222A]"
+                  : "text-[#666666] hover:text-[#2D2D2D]"
+              }`}
+            >
+              <span>Đánh Giá Khách Hàng</span>
+              {product.reviews && product.reviews.length > 0 && (
+                <span className="px-2 py-0.5 text-[11px] rounded-full bg-[#B5222A]/10 text-[#B5222A] font-extrabold">
+                  {product.reviews.length}
+                </span>
+              )}
+              {activeTab === "reviews" && (
+                <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#B5222A]" />
+              )}
+            </button>
+            <button
               onClick={() => setActiveTab("usage")}
-              className={`px-8 py-4 text-sm font-bold transition-colors relative ${
+              className={`px-6 sm:px-8 py-4 text-xs sm:text-sm font-bold transition-colors relative ${
                 activeTab === "usage"
                   ? "text-[#B5222A]"
                   : "text-[#666666] hover:text-[#2D2D2D]"
@@ -337,7 +247,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             </button>
             <button
               onClick={() => setActiveTab("origin")}
-              className={`px-8 py-4 text-sm font-bold transition-colors relative ${
+              className={`px-6 sm:px-8 py-4 text-xs sm:text-sm font-bold transition-colors relative ${
                 activeTab === "origin"
                   ? "text-[#B5222A]"
                   : "text-[#666666] hover:text-[#2D2D2D]"
@@ -357,9 +267,80 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 <h3 className="font-sans text-lg font-bold text-[#2D2D2D]">
                   Thông tin chi tiết về {product.title}
                 </h3>
-                <div className="whitespace-pre-line text-[#4B4F52] leading-relaxed">
-                  {product.description || product.shortDescription}
+                <div
+                  className="space-y-4 text-[#4B4F52] leading-relaxed"
+                  dangerouslySetInnerHTML={{ __html: product.description || product.shortDescription }}
+                />
+              </div>
+            )}
+
+            {activeTab === "reviews" && (
+              <div className="space-y-6 max-w-4xl">
+                <div className="flex items-center justify-between pb-4 border-b border-[#E5E5E5]">
+                  <div>
+                    <h3 className="font-sans text-lg font-bold text-[#2D2D2D] flex items-center gap-2">
+                      <span>Đánh giá từ người mua hàng thực tế</span>
+                      <span className="text-xs font-normal text-[#666666]">(Đã xác minh qua Goldsammall Hàn Quốc)</span>
+                    </h3>
+                    <div className="flex items-center gap-2 mt-1">
+                      <div className="flex items-center text-[#F0831F]">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="w-4 h-4 fill-current" />
+                        ))}
+                      </div>
+                      <span className="text-sm font-bold text-[#2D2D2D]">5.0 / 5.0</span>
+                    </div>
+                  </div>
                 </div>
+
+                {product.reviews && product.reviews.length > 0 ? (
+                  <div className="space-y-6">
+                    {product.reviews.map((rev: ProductReview) => (
+                      <div key={rev.id} className="p-5 rounded-xl bg-[#F8F8F8] border border-[#E5E5E5] space-y-3">
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <div className="w-8 h-8 rounded-full bg-[#B5222A] text-white font-bold flex items-center justify-center text-xs">
+                              {rev.author.slice(0, 1)}
+                            </div>
+                            <div>
+                              <div className="font-bold text-[#2D2D2D] text-sm">{rev.author}</div>
+                              <div className="flex items-center text-[#F0831F] text-xs">
+                                {[...Array(rev.rating)].map((_, i) => (
+                                  <Star key={i} className="w-3 h-3 fill-current" />
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                          <span className="text-xs text-[#666666]">{rev.date}</span>
+                        </div>
+
+                        <h4 className="font-bold text-[#2D2D2D] text-sm sm:text-base">
+                          {rev.title}
+                        </h4>
+
+                        <p className="text-xs sm:text-sm text-[#4B4F52] leading-relaxed">
+                          {rev.content}
+                        </p>
+
+                        {rev.image && (
+                          <div className="relative aspect-video w-48 rounded-lg overflow-hidden border border-[#E5E5E5] mt-2">
+                            <Image
+                              src={rev.image}
+                              alt="Ảnh thực tế từ khách hàng"
+                              fill
+                              sizes="192px"
+                              className="object-cover"
+                            />
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-10 text-gray-500">
+                    Chưa có bình luận nào cho sản phẩm này.
+                  </div>
+                )}
               </div>
             )}
 

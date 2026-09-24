@@ -202,9 +202,9 @@ export default function ContactPage() {
 
                   <button
                     type="submit"
-                    className="w-full py-3.5 bg-[#b5222a] hover:bg-[#8f1920] text-white font-bold rounded-lg transition-colors flex items-center justify-center gap-2 shadow-md text-sm"
+                    className="na-btn-primary group w-full py-4 text-sm font-bold tracking-wider"
                   >
-                    <Send className="w-4 h-4" />
+                    <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
                     <span>GỬI THÔNG TIN LIÊN HỆ</span>
                   </button>
                 </form>

@@ -38,7 +38,7 @@ function PungiMascot({ className = "" }: { className?: string }) {
       <path d="M43 46 Q45 43 47 46" stroke="#5C3A1E" strokeWidth="2" strokeLinecap="round" fill="none" />
       {/* Rosy cheeks */}
       <ellipse cx="30" cy="50" rx="4" ry="2.5" fill="#F4A89A" opacity="0.6" />
-      <ellipse cx="50" cy="50" rx="4" ry="2.5" fill="#F4A89A" opacity="0.6" />
+      <ellipse cx="50" cy="50" rx="4" ry="2.5" fill="#F4A89A" opacity="0.5" />
       {/* Smile */}
       <path d="M35 53 Q40 58 45 53" stroke="#5C3A1E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
 
@@ -128,18 +128,6 @@ function RewardCoin({ className = "" }: { className?: string }) {
   );
 }
 
-/* ─── Sparkle Star ─── */
-function Sparkle({ className = "" }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 16 16" fill="none" className={className} aria-hidden="true">
-      <path
-        d="M8 0 L9.5 5.5 L16 8 L9.5 10.5 L8 16 L6.5 10.5 L0 8 L6.5 5.5 Z"
-        fill="#F0B429"
-        opacity="0.85"
-      />
-    </svg>
-  );
-}
 
 /* ─── Doodle Cloud ─── */
 function DoodleCloud({ className = "" }: { className?: string }) {
@@ -167,7 +155,8 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-x-0 top-0 z-50 h-24 overflow-visible border-b border-[#E5DFD3] sm:h-20"
+    <div
+      className="fixed inset-x-0 top-0 z-50 h-24 overflow-visible border-b border-[#E5DFD3] sm:h-20"
       style={{
         background: `
           linear-gradient(to right, #FFFDF8, #FFF9ED, #FFFDF8),
@@ -181,53 +170,60 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
       <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#6B8F5B]/30 to-transparent" />
 
       <div className="relative mx-auto flex h-full max-w-[1180px] items-center justify-center px-4 sm:px-8">
-
-        {/* ─── Left: Berry Mascot + Coin ─── */}
-        <div className="absolute bottom-0 left-2 hidden w-14 items-end sm:flex md:left-6 md:w-16 lg:left-10 lg:w-[72px]">
-          <div className="animate-[bounce-gentle_2.5s_ease-in-out_infinite]">
-            <BerryMascot className="w-full drop-shadow-sm" />
+        {/* ─── Center Group (Mascots + Slogan closely framed) ─── */}
+        <div className="relative flex items-center justify-center">
+          {/* Left: Berry Mascot + Coin */}
+          <div className="absolute right-full mr-3 sm:mr-5 bottom-[-24px] sm:bottom-[-16px] hidden sm:flex w-13 md:w-15 lg:w-[62px] items-end pointer-events-none">
+            <div className="animate-[bounce-gentle_2.5s_ease-in-out_infinite]">
+              <BerryMascot className="w-full drop-shadow-sm" />
+            </div>
+            {/* Floating coin */}
+            <RewardCoin className="absolute -right-1 top-1 w-4.5 animate-[float-coin_2s_ease-in-out_infinite] drop-shadow-sm md:w-5" />
           </div>
-          {/* Floating coin */}
-          <RewardCoin className="absolute -right-1 top-1 w-5 animate-[float-coin_2s_ease-in-out_infinite] drop-shadow-sm md:w-6" />
-        </div>
 
-        {/* ─── Clouds ─── */}
-        <DoodleCloud className="absolute left-20 top-1 hidden w-9 animate-[drift_12s_linear_infinite] opacity-60 sm:block md:left-28 md:w-10" />
-        <DoodleCloud className="absolute right-20 top-0.5 hidden w-8 animate-[drift_15s_linear_infinite_reverse] opacity-50 sm:block md:right-28 md:w-9" />
+          {/* Left Cloud */}
+          <DoodleCloud className="absolute -left-16 -top-4 hidden w-8 animate-[drift_12s_linear_infinite] opacity-60 md:block pointer-events-none" />
 
-        {/* ─── Center: Text Content ─── */}
-        <div className="flex flex-col items-center gap-1 text-center sm:flex-row sm:gap-3">
-          {/* Sparkles before text */}
-          <Sparkle className="absolute left-[28%] top-2 hidden w-3 animate-[twinkle_2s_ease-in-out_infinite] sm:block" />
-          <Sparkle className="absolute right-[30%] top-1 hidden w-2.5 animate-[twinkle_2.5s_ease-in-out_0.8s_infinite] sm:block" />
+          {/* Center: Animated Slogan Capsule */}
+          <div className="relative z-10 flex items-center justify-center animate-[banner-float_4s_ease-in-out_infinite]">
+            <div className="flex items-center gap-2 sm:gap-3 rounded-full border border-dashed border-[#B5222A]/30 bg-white/80 px-4 py-1.5 sm:px-6 sm:py-2 shadow-[0_4px_16px_rgba(181,34,42,0.08)] backdrop-blur-xs transition-all hover:border-[#B5222A]/60 hover:shadow-[0_6px_20px_rgba(181,34,42,0.14)]">
+              {/* Slogan Words */}
+              <div className="flex items-center text-center">
+                <span className="text-gold-shimmer font-serif text-[13px] sm:text-[16px] md:text-[18px] font-extrabold tracking-wide whitespace-nowrap">
+                  Hồng sâm Kim
+                </span>
 
-          <p className="font-sans text-[11px] font-bold leading-[1.2] tracking-[0.01em] text-[#7A3B1E] sm:whitespace-nowrap sm:text-[14px] md:text-[17px]">
-            Đăng ký thành viên mới sẽ được tặng điểm
-            <span className="block sm:inline"> có thể sử dụng ngay!</span>
-          </p>
+                {/* Pulsing Ginseng Heartbeat dot */}
+                <span className="mx-2 sm:mx-2.5 inline-flex h-1.5 w-1.5 rounded-full bg-[#B5222A] animate-pulse" />
 
-          <span className="inline-flex shrink-0 cursor-pointer items-center rounded-full border-2 border-dashed border-[#A8422B]/40 bg-[#A8422B] px-4 py-1 text-[10px] font-bold leading-none text-white shadow-sm transition-all duration-300 hover:scale-105 hover:border-[#A8422B] hover:shadow-md sm:px-3 sm:py-1 sm:text-xs md:px-5 md:py-1.5 md:text-sm">
-            Đăng ký ngay <span aria-hidden="true" className="ml-1 inline-block text-base leading-none transition-transform duration-300 group-hover:translate-x-0.5">›</span>
-          </span>
-        </div>
+                <span className="font-sans text-[12px] sm:text-[15px] md:text-[17px] font-bold text-[#5A2B18] tracking-tight whitespace-nowrap">
+                  Nơi tận tâm trở thành kiệt tác
+                </span>
+              </div>
+            </div>
+          </div>
 
-        {/* ─── Right: Pung-i Mascot ─── */}
-        <div className="absolute bottom-0 right-8 hidden w-14 items-end sm:flex md:right-12 md:w-16 lg:right-16 lg:w-[72px]">
-          <div className="animate-[bounce-gentle_3s_ease-in-out_0.5s_infinite]">
-            <PungiMascot className="w-full drop-shadow-sm" />
+          {/* Right Cloud */}
+          <DoodleCloud className="absolute -right-16 -top-4 hidden w-8 animate-[drift_15s_linear_infinite_reverse] opacity-50 md:block pointer-events-none" />
+
+          {/* Right: Pung-i Mascot */}
+          <div className="absolute left-full ml-3 sm:ml-5 bottom-[-24px] sm:bottom-[-16px] hidden sm:flex w-13 md:w-15 lg:w-[62px] items-end pointer-events-none">
+            <div className="animate-[bounce-gentle_3s_ease-in-out_0.5s_infinite]">
+              <PungiMascot className="w-full drop-shadow-sm" />
+            </div>
           </div>
         </div>
-
-        {/* ─── Close Button ─── */}
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Đóng banner"
-          className="absolute right-2 top-2 flex h-14 w-14 items-center justify-center text-[#7A3B1E] transition-colors hover:animate-[shake_0.4s_ease-in-out_infinite] hover:text-[#B5222A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B5222A] sm:right-4 sm:top-1/2 sm:-translate-y-1/2"
-        >
-          <X aria-hidden="true" className="h-8 w-8" />
-        </button>
       </div>
+
+      {/* ─── Close Button (Positioned at right edge of viewport with standard padding) ─── */}
+      <button
+        type="button"
+        onClick={onClose}
+        aria-label="Đóng banner"
+        className="absolute right-3 sm:right-5 md:right-7 lg:right-9 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full text-[#7A3B1E] transition-all duration-200 hover:bg-black/5 hover:text-[#B5222A] hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B5222A]"
+      >
+        <X aria-hidden="true" className="h-5 w-5 sm:h-5.5 sm:w-5.5" />
+      </button>
     </div>
   );
 }

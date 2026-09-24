@@ -40,10 +40,10 @@ export function BrandStorySection() {
           <div className="lg:col-span-7">
             <div className="na-media-lift group relative aspect-video w-full overflow-hidden rounded-xl border border-[#E5E5E5] bg-black">
               <iframe
-                src="https://player.vimeo.com/video/294700352?title=0&byline=0&portrait=0"
-                title="Video giới thiệu thương hiệu Nhân sâm Punggi"
+                src="https://www.youtube.com/embed/F0obQn6c_50?rel=0"
+                title="Video giới thiệu thương hiệu Kim's Red Ginseng - Nhân sâm Punggi"
                 className="w-full h-full border-0"
-                allow="autoplay; fullscreen; picture-in-picture"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
               />
             </div>
@@ -71,13 +71,11 @@ export function BrandStorySection() {
 
             <div className="mt-10">
               <Link
-                href="/brand-story"
-                className="group inline-flex items-center gap-3 text-sm font-semibold tracking-wider text-[#4B4F52] hover:text-[#B5222A] transition-colors uppercase"
+                href="/summary"
+                className="group na-btn-outline px-6 py-3 text-xs sm:text-sm font-bold tracking-wider uppercase"
               >
                 <span>CÂU CHUYỆN THƯƠNG HIỆU</span>
-                <span className="p-2 rounded-full border border-[#E5E5E5] group-hover:border-[#B5222A] group-hover:bg-[#B5222A] group-hover:text-white transition-all duration-300">
-                  <ArrowRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 transition-transform" />
-                </span>
+                <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
             </div>
           </div>

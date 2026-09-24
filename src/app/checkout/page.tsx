@@ -666,7 +666,7 @@ export default function CheckoutPage() {
                     <button
                       type="submit"
                       disabled={isSubmitting || items.length === 0}
-                      className="w-full py-4 bg-[#B5222A] hover:bg-[#991C23] disabled:bg-gray-400 text-white font-bold rounded-xl shadow-md hover:shadow-lg flex items-center justify-center gap-2 transition-all duration-200 text-base tracking-wide cursor-pointer disabled:cursor-not-allowed"
+                      className="na-btn-primary w-full py-4 text-base tracking-wider disabled:bg-gray-400 disabled:cursor-not-allowed"
                     >
                       {isSubmitting ? (
                         <span>Đang xử lý đặt hàng...</span>

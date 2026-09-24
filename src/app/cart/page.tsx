@@ -85,7 +85,7 @@ export default function CartPage() {
               </p>
               <Link
                 href="/product"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#B5222A] hover:bg-[#991C23] text-white text-sm font-bold rounded-lg shadow-md transition-all duration-200 transform hover:-translate-y-0.5"
+                className="na-btn-primary px-8 py-3.5 text-sm"
               >
                 <ShoppingBag className="w-4 h-4" />
                 <span>Khám phá sản phẩm ngay</span>
@@ -282,7 +282,7 @@ export default function CartPage() {
                   {/* Proceed to Checkout CTA Button */}
                   <Link
                     href="/checkout"
-                    className="w-full py-4 bg-[#B5222A] hover:bg-[#991C23] text-white font-bold rounded-xl shadow-md hover:shadow-lg flex items-center justify-center gap-2 transition-all duration-200 text-sm sm:text-base tracking-wide"
+                    className="na-btn-primary w-full py-4 text-sm sm:text-base tracking-wide"
                   >
                     <span>TIẾN HÀNH THANH TOÁN</span>
                     <ArrowRight className="w-4 h-4" />
