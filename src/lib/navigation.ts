@@ -28,14 +28,7 @@ export const navItems: NavItem[] = [
       { title: "Lời Chào Đầu", href: "/loi-chao-nghe-nhan" },
       { title: "Lịch Sử Hình Thành", href: "/lich-su-hinh-thanh" },
       { title: "Chứng Chỉ Đạt Được", href: "/chung-chi-chat-luong" },
-      {
-        title: "Về Nhân Sâm",
-        href: "/nhan-sam",
-        subItems: [
-          { title: "Nhân Sâm", href: "/nhan-sam" },
-          { title: "Hồng Sâm", href: "/hong-sam" },
-        ],
-      },
+      { title: "Về Nhân Sâm", href: "/nhan-sam" },
       { title: "Về nhà nhập khẩu", href: "/ve-nha-nhap-khau" },
     ],
   },

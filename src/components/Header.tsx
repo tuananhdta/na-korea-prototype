@@ -33,11 +33,15 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
     if (pathname === itemHref || pathname.startsWith(itemHref + "/")) {
       return true;
     }
-    // SubItems match (including nested children)
+    // SubItems match (including nested children and related aliases like /hong-sam)
     if (
       subItems &&
       subItems.some((sub) => {
-        if (pathname === sub.href || (sub.href !== "/" && pathname.startsWith(sub.href + "/"))) {
+        if (
+          pathname === sub.href ||
+          (sub.href !== "/" && pathname.startsWith(sub.href + "/")) ||
+          (sub.href === "/nhan-sam" && (pathname === "/hong-sam" || pathname.startsWith("/hong-sam/")))
+        ) {
           return true;
         }
         if (
@@ -262,6 +266,12 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                       if (!pathname) return false;
                       if (pathname === sub.href) return true;
                       if (
+                        sub.href === "/nhan-sam" &&
+                        (pathname === "/hong-sam" || pathname.startsWith("/hong-sam/"))
+                      ) {
+                        return true;
+                      }
+                      if (
                         sub.subItems &&
                         sub.subItems.some((child) => pathname === child.href)
                       ) {
@@ -299,9 +309,6 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                               <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.95)] animate-pulse" />
                             )}
                             <span>{sub.title}</span>
-                            {sub.subItems && (
-                              <ChevronDown className="h-3 w-3 text-white/70 transition-transform duration-200 group-hover/sub:rotate-180" />
-                            )}
                             {/* Hover-only underline */}
                             <span
                               aria-hidden="true"
@@ -309,35 +316,6 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                             />
                           </span>
                         </Link>
-
-                        {/* Child dropdown for sub-items like "Về Nhân Sâm" */}
-                        {sub.subItems && (
-                          <div className="absolute left-1/2 top-full -translate-x-1/2 pt-1 opacity-0 invisible -translate-y-1 group-hover/sub:opacity-100 group-hover/sub:visible group-hover/sub:translate-y-0 transition-all duration-200 pointer-events-none group-hover/sub:pointer-events-auto z-50">
-                            <div className="min-w-[170px] rounded-xl border border-white/15 bg-[#3B1231]/95 backdrop-blur-md p-1.5 shadow-[0_14px_30px_rgba(0,0,0,0.5)] space-y-0.5">
-                              {sub.subItems.map((child) => {
-                                const isChildActive = pathname === child.href;
-                                return (
-                                  <Link
-                                    key={child.title}
-                                    href={child.href}
-                                    className={`flex items-center gap-2 rounded-lg px-3.5 py-2 text-xs tracking-wide transition-all duration-150 ${
-                                      isChildActive
-                                        ? "bg-white/15 font-bold text-white shadow-inner"
-                                        : "font-medium text-white/80 hover:bg-white/10 hover:text-white"
-                                    }`}
-                                  >
-                                    {isChildActive ? (
-                                      <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.95)] animate-pulse" />
-                                    ) : (
-                                      <span className="h-1 w-1 rounded-full bg-white/40" />
-                                    )}
-                                    <span>{child.title}</span>
-                                  </Link>
-                                );
-                              })}
-                            </div>
-                          </div>
-                        )}
                       </div>
                     );
                   })}

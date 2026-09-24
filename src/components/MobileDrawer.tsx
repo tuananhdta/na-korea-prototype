@@ -26,7 +26,11 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     if (
       subItems &&
       subItems.some((sub) => {
-        if (pathname === sub.href || (sub.href !== "/" && pathname.startsWith(sub.href + "/"))) {
+        if (
+          pathname === sub.href ||
+          (sub.href !== "/" && pathname.startsWith(sub.href + "/")) ||
+          (sub.href === "/nhan-sam" && (pathname === "/hong-sam" || pathname.startsWith("/hong-sam/")))
+        ) {
           return true;
         }
         if (
@@ -147,6 +151,12 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                       const isSubActive = (() => {
                         if (!pathname) return false;
                         if (pathname === sub.href) return true;
+                        if (
+                          sub.href === "/nhan-sam" &&
+                          (pathname === "/hong-sam" || pathname.startsWith("/hong-sam/"))
+                        ) {
+                          return true;
+                        }
                         if (
                           sub.subItems &&
                           sub.subItems.some((child) => pathname === child.href)
