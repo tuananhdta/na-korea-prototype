@@ -1,63 +1,14 @@
 "use client";
 
-import { useState, useMemo } from "react";
 import Link from "next/link";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 import productsData from "@/data/products.json";
 import { Product } from "@/types/product";
 
-const TABS = [
-  { id: "all", label: "Tất Cả Sản Phẩm" },
-  { id: "gifts", label: "Bộ Quà Biếu" },
-  { id: "extracts", label: "Cao & Củ Khô" },
-  { id: "tonics", label: "Nước Sâm & Trẻ Em" },
-] as const;
+const featuredProducts = (productsData as Product[]).slice(0, 8);
 
 export function ProductSection() {
-  const [activeTab, setActiveTab] = useState<string>("all");
-
-  const filteredProducts = useMemo(() => {
-    const all = productsData as Product[];
-    if (activeTab === "all") return all.slice(0, 8);
-    if (activeTab === "gifts") {
-      return all
-        .filter((p) =>
-          p.categories.some(
-            (c) => c.toLowerCase().includes("quà") || c.toLowerCase().includes("set")
-          )
-        )
-        .slice(0, 8);
-    }
-    if (activeTab === "extracts") {
-      return all
-        .filter((p) =>
-          p.categories.some(
-            (c) =>
-              c.toLowerCase().includes("cao") ||
-              c.toLowerCase().includes("nguyên chất") ||
-              c.toLowerCase().includes("củ")
-          )
-        )
-        .slice(0, 8);
-    }
-    if (activeTab === "tonics") {
-      return all
-        .filter((p) =>
-          p.categories.some(
-            (c) =>
-              c.toLowerCase().includes("trẻ") ||
-              c.toLowerCase().includes("nước") ||
-              c.toLowerCase().includes("tonic") ||
-              c.toLowerCase().includes("kẹo") ||
-              c.toLowerCase().includes("trà")
-          )
-        )
-        .slice(0, 8);
-    }
-    return all.slice(0, 8);
-  }, [activeTab]);
-
   return (
     <section id="products" className="py-20 md:py-28 bg-[#FAF8F5]">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
@@ -78,32 +29,11 @@ export function ProductSection() {
           <p className="mt-3 text-sm sm:text-base text-[#4B4F52] max-w-xl leading-relaxed">
             Chiết xuất từ nhân sâm 6 năm tuổi vùng núi Punggi nguyên chất 100%, bảo đảm hàm lượng Saponin và Ginsenoside cao nhất.
           </p>
-
-          {/* Category Filter Tabs */}
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-2 p-1.5 rounded-full bg-[#EAE6E1]/70 backdrop-blur-xs">
-            {TABS.map((tab) => {
-              const isActive = activeTab === tab.id;
-              return (
-                <button
-                  key={tab.id}
-                  type="button"
-                  onClick={() => setActiveTab(tab.id)}
-                  className={`relative rounded-full px-5 py-2 text-xs font-semibold tracking-wide transition-all duration-300 sm:text-sm ${
-                    isActive
-                      ? "bg-[#4B193E] text-white shadow-sm"
-                      : "text-[#555555] hover:bg-white/80 hover:text-[#4B193E]"
-                  }`}
-                >
-                  {tab.label}
-                </button>
-              );
-            })}
-          </div>
         </div>
 
-        {/* Product Cards Grid with smooth transition */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7 transition-opacity duration-300">
-          {filteredProducts.map((product) => (
+        {/* Product Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
+          {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
         </div>

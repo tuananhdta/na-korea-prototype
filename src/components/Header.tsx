@@ -3,11 +3,12 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ChevronDown, Menu, ShoppingBag, X } from "lucide-react";
+import { ChevronDown, Menu, ShoppingBag } from "lucide-react";
 import { navItems } from "@/lib/navigation";
 import { BRAND_LOGOS } from "@/lib/logos";
 import { useCart } from "@/context/CartContext";
 import { MobileDrawer } from "./MobileDrawer";
+import { PromoBanner } from "./PromoBanner";
 
 interface HeaderProps {
   onOpenMobileMenu?: () => void;
@@ -35,11 +36,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
   }, []);
 
   const { totalCount, openCart } = useCart();
-  const headerOffset = isBannerVisible ? "top-20 sm:top-16" : "top-0";
+  const headerOffset = isBannerVisible ? "top-24 sm:top-20" : "top-0";
   const pageSpacerHeight = isBannerVisible
     ? isScrolled
-      ? "h-36 sm:h-32"
-      : "h-40 sm:h-36"
+      ? "h-40 sm:h-36"
+      : "h-44 sm:h-40"
     : isScrolled
       ? "h-16"
       : "h-20";
@@ -53,27 +54,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
 
   return (
     <>
-      {isBannerVisible && (
-        <div className="fixed inset-x-0 top-0 z-50 h-20 overflow-hidden border-b border-[#E5E5E5] bg-[#FFFCFA] sm:h-16">
-          <div className="relative mx-auto flex h-full max-w-[1180px] flex-col items-center justify-center px-10 py-2 text-center sm:flex-row sm:gap-2 sm:px-8 sm:pr-16 sm:text-left md:gap-4 md:px-16 md:pr-20">
-            <p className="banner-text font-sans text-[11px] font-bold leading-[1.15] tracking-[0.01em] text-[#B5222A] sm:whitespace-nowrap sm:text-[14px] md:text-[18px]">
-              Đăng ký thành viên mới sẽ được tặng điểm
-              <span className="block sm:inline"> có thể sử dụng ngay!</span>
-            </p>
-            <span className="mt-1 inline-flex shrink-0 items-center rounded-full bg-[#B5222A] px-4 py-1 text-[10px] font-bold leading-none text-white sm:mt-0 sm:px-3 sm:py-1 sm:text-xs md:px-5 md:py-1.5 md:text-sm">
-              Đăng ký ngay <span aria-hidden="true" className="ml-1 text-base leading-none">›</span>
-            </span>
-          </div>
-          <button
-            type="button"
-            onClick={() => setIsBannerVisible(false)}
-            aria-label="Đóng banner"
-            className="absolute right-2 top-2 flex h-8 w-8 items-center justify-center text-[#4B193E] transition-colors hover:text-[#B5222A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B5222A] focus-visible:ring-offset-2 focus-visible:ring-offset-white sm:right-6 sm:top-1/2 sm:-translate-y-1/2"
-          >
-            <X aria-hidden="true" className="h-4 w-4" />
-          </button>
-        </div>
-      )}
+      <PromoBanner visible={isBannerVisible} onClose={() => setIsBannerVisible(false)} />
 
       {!overlay && (
         <div
