@@ -51,6 +51,13 @@ export function BrandStorySection() {
 
           {/* Text & CTA */}
           <div className="lg:col-span-5 flex flex-col justify-center">
+            <div className="mb-3.5 inline-flex items-center gap-2">
+              <span className="h-px w-6 bg-[#B5222A]" />
+              <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
+                Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
+              </span>
+            </div>
+
             <h3 className="font-sans text-lg sm:text-xl md:text-[20px] font-normal text-[#2D2D2D] leading-snug">
               Hồng sâm Kim&#8217;s lưu giữ trọn vẹn ở trạng thái nguyên bản trí tuệ ngàn năm của tiền nhân cùng vẻ đẹp thanh cao và nguồn sinh khí dồi dào từ triều đại Cao Ly.
             </h3>

@@ -43,13 +43,13 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
     : isScrolled
       ? "h-16"
       : "h-20";
-  const submenuOffset = isBannerVisible
-    ? isScrolled
-      ? "top-36 sm:top-32"
-      : "top-40 sm:top-36"
-    : isScrolled
-      ? "top-16"
-      : "top-20";
+
+  const isOverlayTop = overlay && !isScrolled;
+  const headerBgClass = isOverlayTop
+    ? activeMenu
+      ? "bg-[#4B193E]/10 backdrop-blur-md shadow-[0_12px_30px_rgba(0,0,0,0.25)]"
+      : "bg-transparent shadow-none"
+    : "bg-[#4B193E]/95 backdrop-blur-sm shadow-[0_12px_30px_rgba(33,11,28,0.24)]";
 
   return (
     <>
@@ -84,9 +84,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
 
       <header
         onMouseLeave={() => setActiveMenu(null)}
-        className={`fixed left-0 right-0 ${headerOffset} z-50 text-white transition-[background-color,box-shadow,backdrop-filter] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-          overlay && !isScrolled ? "bg-transparent shadow-none" : "bg-[#4B193E]/95 backdrop-blur-sm"
-        } ${isScrolled ? "shadow-[0_12px_30px_rgba(33,11,28,0.24)]" : "shadow-none"}`}
+        className={`fixed left-0 right-0 ${headerOffset} z-50 text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-in-out ${headerBgClass}`}
       >
         <div
           className={`mx-auto flex max-w-[1180px] items-center justify-between px-6 transition-all duration-400 ease-in-out sm:px-8 ${
@@ -147,35 +145,6 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     className={`absolute bottom-0 left-2 right-2 h-[2px] origin-center rounded-t-full bg-white transition-transform duration-300 ${isItemActive ? "scale-x-100" : "scale-x-0"}`}
                   />
                 </Link>
-
-                {item.subItems && (
-                  <div
-                    aria-hidden={!isItemActive}
-                    className={`fixed inset-x-0 ${submenuOffset} hidden border-t border-white/15 bg-[#643054]/95 text-white shadow-[0_18px_34px_rgba(33,11,28,0.2)] backdrop-blur-sm transition-[opacity,transform,visibility] duration-200 lg:block ${
-                      isItemActive
-                        ? "visible translate-y-0 opacity-100"
-                        : "invisible -translate-y-2 opacity-0 pointer-events-none"
-                    }`}
-                  >
-                    <div className="mx-auto max-w-[1180px] px-6 py-4 sm:px-8">
-                      <div
-                        className={`grid grid-cols-2 gap-2 sm:grid-cols-3 ${
-                          item.title === "Giới Thiệu" ? "lg:grid-cols-5" : "lg:grid-cols-4"
-                        }`}
-                      >
-                        {item.subItems.map((sub) => (
-                          <Link
-                            key={sub.title}
-                            href={sub.href}
-                            className="flex min-h-12 items-center px-4 py-3 text-sm font-medium tracking-[0.02em] text-white/90 transition-colors hover:bg-white/10 hover:text-white focus:bg-white/10 focus:text-white"
-                          >
-                            {sub.title}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                )}
               </div>
             );
           })}
@@ -222,6 +191,48 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
           </button>
         </div>
         </div>
+
+        {/* Full-width Submenus anchored directly under header */}
+        {navItems.map((item) => {
+          if (!item.subItems) return null;
+          const isItemActive = activeMenu === item.title;
+          return (
+            <div
+              key={item.title}
+              aria-hidden={!isItemActive}
+              onMouseEnter={() => setActiveMenu(item.title)}
+              className={`absolute inset-x-0 top-full hidden border-t border-white/10 ${
+                isOverlayTop
+                  ? "bg-[#4B193E]/10 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
+                  : "bg-[#4B193E]/95 backdrop-blur-sm shadow-[0_18px_34px_rgba(33,11,28,0.2)]"
+              } text-white transition-[opacity,transform,visibility] duration-200 lg:block ${
+                isItemActive
+                  ? "visible translate-y-0 opacity-100"
+                  : "invisible -translate-y-2 opacity-0 pointer-events-none"
+              }`}
+            >
+              <div className="mx-auto max-w-[1180px] px-6 py-3.5 sm:px-8">
+                <div className="mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8 lg:gap-x-11">
+                  {item.subItems.map((sub) => (
+                    <Link
+                      key={sub.title}
+                      href={sub.href}
+                      className="group relative flex min-h-11 shrink-0 items-center justify-center px-2 py-2 text-center text-sm font-medium tracking-[0.02em] text-white/90 whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)] transition-colors duration-200 hover:text-white focus:text-white"
+                    >
+                      <span className="relative inline-block whitespace-nowrap py-1 transition-transform duration-200 group-hover:-translate-y-0.5">
+                        {sub.title}
+                        <span
+                          aria-hidden="true"
+                          className="absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full bg-[#B5222A] shadow-[0_0_8px_rgba(181,34,42,0.9)] transition-transform duration-300 ease-out group-hover:scale-x-100"
+                        />
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          );
+        })}
 
         {!onOpenMobileMenu && <MobileDrawer isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)} />}
       </header>

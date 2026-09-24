@@ -91,7 +91,15 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
             </div>
           ))}
 
-          <div className="pt-6">
+          <div className="pt-6 space-y-2.5">
+            <Link
+              href="/cart"
+              onClick={onClose}
+              className="flex w-full items-center justify-center gap-2 rounded-md border border-white/20 bg-white/10 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
+            >
+              <ShoppingCart className="w-4 h-4 text-[#F0831F]" />
+              <span>GIỎ HÀNG CỦA BẠN</span>
+            </Link>
             <a
               href="http://www.goldsammall.com/"
               target="_blank"

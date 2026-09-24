@@ -167,19 +167,22 @@ export function CartDrawer() {
               </div>
 
               <div className="space-y-2">
-                <a
-                  href={`https://zalo.me/g/kogger629?text=${encodeURIComponent(
-                    `Chào Kim's Red Ginseng, tôi muốn đặt hàng:\n${items
-                      .map((it) => `- ${it.product.title} (x${it.quantity}): ${it.product.price}`)
-                      .join("\n")}\nTổng tiền: ${formattedTotalPrice}`
-                  )}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full py-3.5 bg-[#b5222a] hover:bg-[#8f1920] text-white font-bold rounded-lg shadow-md flex items-center justify-center gap-2 transition-colors text-sm"
+                <Link
+                  href="/checkout"
+                  onClick={closeCart}
+                  className="w-full py-3.5 bg-[#b5222a] hover:bg-[#8f1920] text-white font-bold rounded-lg shadow-md flex items-center justify-center gap-2 transition-colors text-sm tracking-wide"
                 >
-                  <span>TIẾN HÀNH ĐẶT HÀNG / TƯ VẤN</span>
+                  <span>TIẾN HÀNH THANH TOÁN</span>
                   <ArrowRight className="w-4 h-4" />
-                </a>
+                </Link>
+
+                <Link
+                  href="/cart"
+                  onClick={closeCart}
+                  className="w-full py-2.5 bg-white border border-[#2D2D2D] hover:bg-gray-50 text-[#2D2D2D] font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors text-xs"
+                >
+                  <span>Xem giỏ hàng chi tiết</span>
+                </Link>
 
                 <div className="flex items-center justify-between pt-1">
                   <button

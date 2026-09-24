@@ -13,13 +13,17 @@ const openSans = Open_Sans({
   weight: ["300", "400", "500", "600", "700", "800"],
 });
 
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
 export const metadata: Metadata = {
-  title: "Kim's Red Ginseng - Hồng Sâm 6 Năm Tuổi Punggi Hàn Quốc",
-  description: "Tổng công ty Nông nghiệp Nhân sâm Punggi - Chuyên sản xuất Hồng sâm 6 năm tuổi Kim's Red Ginseng và Thực phẩm chức năng bảo vệ sức khỏe cao cấp",
+  metadataBase: new URL(SITE_CONFIG.siteUrl),
+  title: {
+    default: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
+    template: `%s | ${SITE_CONFIG.brandName}`,
+  },
+  description: `${SITE_CONFIG.slogan}. Tổng công ty Nông nghiệp Nhân sâm Punggi - Hồng sâm 6 năm tuổi Kim's Red Ginseng phân phối độc quyền bởi NA Korea tại Việt Nam.`,
   icons: {
-    icon: [
-      { url: "/favicon.ico" },
-    ],
+    icon: [{ url: "/favicon.ico" }],
   },
 };
 

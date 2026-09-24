@@ -1,29 +1,30 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const usefulLinks = [
   {
     label: "Chính sách bảo mật thông tin cá nhân",
-    href: "https://kimsredginseng.com/chinh-sach-bao-mat/",
+    href: "/chinh-sach-bao-mat",
   },
   {
     label: "Hướng dẫn mua hàng",
-    href: "https://kimsredginseng.com/huong-dan-mua-hang/",
+    href: "/huong-dan-mua-hang",
   },
   {
     label: "Chính sách đổi trả",
-    href: "https://kimsredginseng.com/chinh-sach-doi-tra/",
+    href: "/chinh-sach-doi-tra",
   },
   {
     label: "Chính sách kiểm hàng",
-    href: "https://kimsredginseng.com/chinh-sach-kiem-hang/",
+    href: "/chinh-sach-kiem-hang",
   },
   {
     label: "Chính sách giao hàng",
-    href: "https://kimsredginseng.com/chinh-sach-giao-hang/",
+    href: "/chinh-sach-giao-hang",
   },
   {
     label: "Chính sách thanh toán",
-    href: "https://kimsredginseng.com/chinh-sach-thanh-toan/",
+    href: "/chinh-sach-thanh-toan",
   },
 ] as const;
 
@@ -195,14 +196,14 @@ export function Footer() {
             <ul className="mt-3">
               {usefulLinks.map((link) => (
                 <li key={link.href} className="group flex items-center text-[15px] font-normal leading-10 text-[#111111]">
-                  <a href={link.href} target="_blank" rel="noopener noreferrer" className="flex items-center transition-colors group-hover:text-[#111111]">
+                  <Link href={link.href} className="flex items-center transition-colors group-hover:text-[#B5222A]">
                     <span aria-hidden="true" className="mr-2 flex h-[6px] w-[6px] shrink-0 items-center justify-center text-[#111111] transition-colors group-hover:text-[#ea5356]">
                       <svg viewBox="0 0 10 10" className="h-[6px] w-[6px] fill-none stroke-current" strokeWidth="1.5">
                         <path d="m3 2 3 3-3 3" />
                       </svg>
                     </span>
                     <span>{link.label}</span>
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

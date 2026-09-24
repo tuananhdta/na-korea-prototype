@@ -17,6 +17,7 @@ import {
   Heart,
   Sparkles,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { Product } from "@/types/product";
 import { useCart } from "@/context/CartContext";
 import { ProductCard } from "@/components/ProductCard";
@@ -45,11 +46,12 @@ const PACKAGING_OPTIONS = [
 ];
 
 export function ProductDetailView({ product, relatedProducts }: ProductDetailViewProps) {
+  const router = useRouter();
   const [quantity, setQuantity] = useState(1);
   const [selectedPackaging, setSelectedPackaging] = useState(PACKAGING_OPTIONS[0].label);
   const [activeTab, setActiveTab] = useState<"desc" | "usage" | "origin">("desc");
   const [copied, setCopied] = useState(false);
-  const { addToCart, openCart } = useCart();
+  const { addToCart } = useCart();
 
   const handleAddToCart = () => {
     addToCart(product, quantity, selectedPackaging);
@@ -57,7 +59,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
   const handleBuyNow = () => {
     addToCart(product, quantity, selectedPackaging);
-    openCart();
+    router.push("/checkout");
   };
 
   const handleShare = () => {

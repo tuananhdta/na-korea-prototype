@@ -1,9 +1,9 @@
 "use client";
 
-import React, { createContext, useContext, useState, useEffect } from "react";
+import React, { createContext, useContext, useState, useCallback, useSyncExternalStore } from "react";
 import { Product, CartItem } from "@/types/product";
 
-interface CartContextType {
+export interface CartContextType {
   items: CartItem[];
   addToCart: (product: Product, quantity?: number, option?: string) => void;
   removeFromCart: (productId: string) => void;
@@ -19,14 +19,60 @@ interface CartContextType {
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
 
-function parsePriceToNumber(priceStr: string): number {
+const CART_KEY = "kims_cart";
+const EMPTY_ITEMS_STR = "[]";
+
+let cachedCartStr = EMPTY_ITEMS_STR;
+let cachedCartItems: CartItem[] = [];
+
+const EMPTY_CART_ARRAY: CartItem[] = [];
+
+function getCartSnapshot(): CartItem[] {
+  if (typeof window === "undefined") return EMPTY_CART_ARRAY;
+  const currentStr = localStorage.getItem(CART_KEY) || EMPTY_ITEMS_STR;
+  if (currentStr !== cachedCartStr) {
+    try {
+      cachedCartItems = JSON.parse(currentStr);
+      cachedCartStr = currentStr;
+    } catch {
+      cachedCartItems = EMPTY_CART_ARRAY;
+      cachedCartStr = EMPTY_ITEMS_STR;
+    }
+  }
+  return cachedCartItems;
+}
+
+function getServerSnapshot(): CartItem[] {
+  return EMPTY_CART_ARRAY;
+}
+
+function subscribeToStorage(callback: () => void) {
+  if (typeof window === "undefined") return () => {};
+  const handler = () => callback();
+  window.addEventListener("storage", handler);
+  window.addEventListener("kims_cart_update", handler);
+  return () => {
+    window.removeEventListener("storage", handler);
+    window.removeEventListener("kims_cart_update", handler);
+  };
+}
+
+function writeCartToStorage(items: CartItem[]) {
+  if (typeof window === "undefined") return;
+  const str = JSON.stringify(items);
+  cachedCartStr = str;
+  cachedCartItems = items;
+  localStorage.setItem(CART_KEY, str);
+  window.dispatchEvent(new Event("kims_cart_update"));
+}
+
+export function parsePriceToNumber(priceStr: string): number {
   if (!priceStr) return 0;
-  // Strip out "₫", ".", " ", ","
   const clean = priceStr.replace(/[^0-9]/g, "");
   return parseInt(clean, 10) || 0;
 }
 
-function formatNumberToVnd(num: number): string {
+export function formatNumberToVnd(num: number): string {
   return new Intl.NumberFormat("vi-VN", {
     style: "currency",
     currency: "VND",
@@ -34,65 +80,53 @@ function formatNumberToVnd(num: number): string {
 }
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
-  const [items, setItems] = useState<CartItem[]>([]);
+  const items = useSyncExternalStore(subscribeToStorage, getCartSnapshot, getServerSnapshot);
   const [isCartOpen, setIsCartOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => {
-    setMounted(true);
-    try {
-      const saved = localStorage.getItem("kims_cart");
-      if (saved) {
-        setItems(JSON.parse(saved));
-      }
-    } catch (e) {
-      console.error("Failed to load cart from storage", e);
+  const addToCart = useCallback((product: Product, quantity = 1, option?: string) => {
+    const currentItems = getCartSnapshot();
+    const existingIndex = currentItems.findIndex(
+      (item) => item.product.id === product.id && item.selectedOption === option
+    );
+    let next: CartItem[];
+    if (existingIndex > -1) {
+      next = [...currentItems];
+      next[existingIndex] = {
+        ...next[existingIndex],
+        quantity: next[existingIndex].quantity + quantity,
+      };
+    } else {
+      next = [...currentItems, { product, quantity, selectedOption: option }];
     }
+    writeCartToStorage(next);
+    setIsCartOpen(true);
   }, []);
 
-  useEffect(() => {
-    if (mounted) {
-      try {
-        localStorage.setItem("kims_cart", JSON.stringify(items));
-      } catch (e) {
-        console.error("Failed to persist cart", e);
-      }
-    }
-  }, [items, mounted]);
+  const removeFromCart = useCallback((productId: string) => {
+    const currentItems = getCartSnapshot();
+    const next = currentItems.filter((item) => item.product.id !== productId);
+    writeCartToStorage(next);
+  }, []);
 
-  const addToCart = (product: Product, quantity = 1, option?: string) => {
-    setItems((prev) => {
-      const existingIndex = prev.findIndex((item) => item.product.id === product.id);
-      if (existingIndex > -1) {
-        const next = [...prev];
-        next[existingIndex].quantity += quantity;
-        if (option) next[existingIndex].selectedOption = option;
-        return next;
-      }
-      return [...prev, { product, quantity, selectedOption: option }];
-    });
-    setIsCartOpen(true);
-  };
-
-  const removeFromCart = (productId: string) => {
-    setItems((prev) => prev.filter((item) => item.product.id !== productId));
-  };
-
-  const updateQuantity = (productId: string, quantity: number) => {
+  const updateQuantity = useCallback((productId: string, quantity: number) => {
+    const currentItems = getCartSnapshot();
     if (quantity <= 0) {
-      removeFromCart(productId);
+      const next = currentItems.filter((item) => item.product.id !== productId);
+      writeCartToStorage(next);
       return;
     }
-    setItems((prev) =>
-      prev.map((item) =>
-        item.product.id === productId ? { ...item, quantity } : item
-      )
+    const next = currentItems.map((item) =>
+      item.product.id === productId ? { ...item, quantity } : item
     );
-  };
+    writeCartToStorage(next);
+  }, []);
 
-  const clearCart = () => setItems([]);
-  const openCart = () => setIsCartOpen(true);
-  const closeCart = () => setIsCartOpen(false);
+  const clearCart = useCallback(() => {
+    writeCartToStorage([]);
+  }, []);
+
+  const openCart = useCallback(() => setIsCartOpen(true), []);
+  const closeCart = useCallback(() => setIsCartOpen(false), []);
 
   const totalCount = items.reduce((acc, item) => acc + item.quantity, 0);
 
@@ -131,3 +165,4 @@ export function useCart() {
   }
   return context;
 }
+
