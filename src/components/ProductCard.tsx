@@ -47,7 +47,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Thumbnail Container */}
         <div className="relative aspect-square w-full overflow-hidden bg-[#FAF7F5]">
           <Link
-            href={`/product/${product.id}`}
+            href={`/san-pham/${product.id}`}
             className="relative block h-full w-full"
             aria-label={`Xem chi tiết ${product.title}`}
           >
@@ -78,7 +78,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Slide-Up Glassmorphism Action Bar on Desktop */}
           <div className="absolute inset-x-0 bottom-0 z-20 flex translate-y-full items-center justify-between gap-2 border-t border-white/60 bg-white/90 p-2.5 backdrop-blur-md opacity-0 transition-all duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-hover:opacity-100">
             <Link
-              href={`/product/${product.id}`}
+              href={`/san-pham/${product.id}`}
               className="na-btn-outline flex-1 py-2 text-xs font-semibold shadow-none border-[#4B193E]/20 hover:bg-[#4B193E] hover:text-white"
               title="Xem chi tiết sản phẩm"
             >
@@ -101,7 +101,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex flex-1 flex-col justify-between p-4 sm:p-4.5">
           <div>
             {/* Product Title */}
-            <Link href={`/product/${product.id}`} className="block">
+            <Link href={`/san-pham/${product.id}`} className="block">
               <h3 className="line-clamp-2 text-[14px] font-semibold leading-snug text-[#2D2D2D] transition-colors duration-200 group-hover:text-[#B5222A]">
                 {product.title}
               </h3>

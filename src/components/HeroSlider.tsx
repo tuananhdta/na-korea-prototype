@@ -23,7 +23,7 @@ const slides: Slide[] = [
       "Tổng công ty Nông nghiệp Nhân sâm Punggi gửi trọn tấm lòng chân thành vào mảnh đất màu mỡ.",
       "Chúng tôi gìn giữ trọn vẹn sự kiên định nuôi trồng nhân sâm 6 năm tuổi trứ danh vùng Punggi.",
     ],
-    link: "/summary",
+    link: "/gioi-thieu",
   },
   {
     image: "/images/slide_2.jpg",
@@ -35,7 +35,7 @@ const slides: Slide[] = [
       "Hồng sâm 6 năm tuổi được nuôi dưỡng tại Punggi – vùng đất thanh khiết dưới chân dãy núi Sobaek huyền thoại,",
       "niềm tự hào của những nghệ nhân nhân sâm Hàn Quốc.",
     ],
-    link: "/greeting",
+    link: "/loi-chao-nghe-nhan",
   },
 ];
 

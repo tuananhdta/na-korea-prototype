@@ -22,18 +22,18 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Giới Thiệu",
-    href: "/summary",
+    href: "/gioi-thieu",
     subItems: [
-      { title: "Về Chúng Tôi", href: "/summary" },
-      { title: "Lời Chào Đầu", href: "/greeting" },
-      { title: "Lịch Sử Hình Thành", href: "/history" },
-      { title: "Chứng Chỉ Đạt Được", href: "/certification" },
+      { title: "Về Chúng Tôi", href: "/gioi-thieu" },
+      { title: "Lời Chào Đầu", href: "/loi-chao-nghe-nhan" },
+      { title: "Lịch Sử Hình Thành", href: "/lich-su-hinh-thanh" },
+      { title: "Chứng Chỉ Đạt Được", href: "/chung-chi-chat-luong" },
       {
         title: "Về Nhân Sâm",
-        href: "/ginseng",
+        href: "/nhan-sam",
         subItems: [
-          { title: "Nhân Sâm", href: "/ginseng" },
-          { title: "Hồng Sâm", href: "/red-ginseng" },
+          { title: "Nhân Sâm", href: "/nhan-sam" },
+          { title: "Hồng Sâm", href: "/hong-sam" },
         ],
       },
       { title: "Về nhà nhập khẩu", href: "/ve-nha-nhap-khau" },
@@ -41,11 +41,11 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Sản Phẩm",
-    href: "/product",
+    href: "/san-pham",
     subItems: [
-      { title: "Tất Cả Sản Phẩm", href: "/product" },
-      { title: "Hồng Sâm Người Lớn", href: "/products/adults" },
-      { title: "Hồng Sâm Trẻ Em", href: "/products/kids" },
+      { title: "Tất Cả Sản Phẩm", href: "/san-pham" },
+      { title: "Hồng Sâm Người Lớn", href: "/san-pham/nguoi-lon" },
+      { title: "Hồng Sâm Trẻ Em", href: "/san-pham/tre-em" },
     ],
   },
   {
@@ -58,14 +58,15 @@ export const navItems: NavItem[] = [
   },
   {
     title: "Đăng Ký Đại Lý",
-    href: "/wholesale",
+    href: "/dang-ky-dai-ly",
   },
   {
     title: "Tin Tức",
-    href: "/notice",
+    href: "/tin-tuc",
   },
   {
     title: "Liên Hệ",
-    href: "/contact",
+    href: "/lien-he",
   },
 ];
+

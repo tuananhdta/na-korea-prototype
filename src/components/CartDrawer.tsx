@@ -168,7 +168,7 @@ export function CartDrawer() {
 
               <div className="space-y-2.5">
                 <Link
-                  href="/checkout"
+                  href="/thanh-toan"
                   onClick={closeCart}
                   className="na-btn-primary group w-full py-3.5 text-sm tracking-wide"
                 >
@@ -177,7 +177,7 @@ export function CartDrawer() {
                 </Link>
 
                 <Link
-                  href="/cart"
+                  href="/gio-hang"
                   onClick={closeCart}
                   className="na-btn-outline w-full py-2.5 text-xs font-semibold"
                 >

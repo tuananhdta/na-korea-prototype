@@ -56,7 +56,10 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
       return true;
     }
     // Specific sections
-    if (itemHref === "/product" && (pathname.startsWith("/product") || pathname.startsWith("/products"))) {
+    if (
+      (itemHref === "/san-pham" || itemHref === "/product") &&
+      (pathname.startsWith("/san-pham") || pathname.startsWith("/product") || pathname.startsWith("/products"))
+    ) {
       return true;
     }
     if (itemHref === "/catalog" && pathname.startsWith("/catalog")) {
@@ -266,9 +269,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                       }
                       // Product detail pages under "Tất Cả Sản Phẩm"
                       if (
-                        sub.href === "/product" &&
+                        (sub.href === "/san-pham" || sub.href === "/product") &&
                         (pathname.startsWith("/product/") || pathname.startsWith("/san-pham/")) &&
-                        !pathname.startsWith("/products/")
+                        !pathname.startsWith("/products/") &&
+                        !pathname.startsWith("/san-pham/nguoi-lon") &&
+                        !pathname.startsWith("/san-pham/tre-em")
                       ) {
                         return true;
                       }

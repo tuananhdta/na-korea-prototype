@@ -1,2 +1,2 @@
-import NoticePage from "../notice/page";
-export default NoticePage;
+import TinTucPage from "../tin-tuc/page";
+export default TinTucPage;

@@ -36,7 +36,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
   const handleBuyNow = () => {
     addToCart(product, quantity);
-    router.push("/checkout");
+    router.push("/thanh-toan");
   };
 
   const handleShare = () => {
@@ -56,7 +56,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             Trang Chủ
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-          <Link href="/product" className="hover:text-black transition-colors">
+          <Link href="/san-pham" className="hover:text-black transition-colors">
             Sản Phẩm
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
@@ -394,7 +394,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 </h2>
               </div>
               <Link
-                href="/product"
+                href="/san-pham"
                 className="text-sm font-semibold text-[#B5222A] hover:underline flex items-center gap-1"
               >
                 <span>Xem tất cả</span>

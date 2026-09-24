@@ -42,7 +42,7 @@ export function GinsengSection() {
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
             {/* Box 1: Nhân sâm là gì? */}
             <Link
-              href="/ginseng"
+              href="/nhan-sam"
               className="na-media-lift group relative flex h-[380px] flex-col justify-between overflow-hidden rounded-2xl p-7 text-white sm:h-[420px]"
             >
               <Image
@@ -69,7 +69,7 @@ export function GinsengSection() {
 
             {/* Box 2: Hồng sâm là gì? */}
             <Link
-              href="/red-ginseng"
+              href="/hong-sam"
               className="na-media-lift group relative flex h-[380px] flex-col justify-between overflow-hidden rounded-2xl p-7 text-white sm:h-[420px]"
             >
               <Image

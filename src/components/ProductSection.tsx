@@ -40,7 +40,7 @@ export function ProductSection() {
         {/* View All Button */}
         <div className="mt-14 text-center">
           <Link
-            href="/product"
+            href="/san-pham"
             className="group na-btn-secondary px-8 py-3.5 text-sm uppercase tracking-wider"
           >
             <span>XEM TẤT CẢ 32+ SẢN PHẨM</span>

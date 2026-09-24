@@ -1,3 +1,3 @@
-import BlogDetailPage, { generateStaticParams } from "../../blog/[id]/page";
+import TinTucDetailPage, { generateStaticParams } from "../../tin-tuc/[id]/page";
 export { generateStaticParams };
-export default BlogDetailPage;
+export default TinTucDetailPage;

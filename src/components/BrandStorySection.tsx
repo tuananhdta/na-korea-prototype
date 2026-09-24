@@ -71,7 +71,7 @@ export function BrandStorySection() {
 
             <div className="mt-10">
               <Link
-                href="/summary"
+                href="/gioi-thieu"
                 className="group na-btn-outline px-6 py-3 text-xs sm:text-sm font-bold tracking-wider uppercase"
               >
                 <span>CÂU CHUYỆN THƯƠNG HIỆU</span>

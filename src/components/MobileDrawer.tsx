@@ -44,7 +44,10 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     ) {
       return true;
     }
-    if (itemHref === "/product" && (pathname.startsWith("/product") || pathname.startsWith("/products"))) {
+    if (
+      (itemHref === "/san-pham" || itemHref === "/product") &&
+      (pathname.startsWith("/san-pham") || pathname.startsWith("/product") || pathname.startsWith("/products"))
+    ) {
       return true;
     }
     if (itemHref === "/catalog" && pathname.startsWith("/catalog")) {
@@ -152,9 +155,11 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                         }
                         // Product detail pages under "Tất Cả Sản Phẩm"
                         if (
-                          sub.href === "/product" &&
+                          (sub.href === "/san-pham" || sub.href === "/product") &&
                           (pathname.startsWith("/product/") || pathname.startsWith("/san-pham/")) &&
-                          !pathname.startsWith("/products/")
+                          !pathname.startsWith("/products/") &&
+                          !pathname.startsWith("/san-pham/nguoi-lon") &&
+                          !pathname.startsWith("/san-pham/tre-em")
                         ) {
                           return true;
                         }
@@ -214,7 +219,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
           <div className="pt-6 space-y-2.5">
             <Link
-              href="/cart"
+              href="/gio-hang"
               onClick={onClose}
               className="flex w-full items-center justify-center gap-2 rounded-md border border-white/20 bg-white/10 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/20"
             >

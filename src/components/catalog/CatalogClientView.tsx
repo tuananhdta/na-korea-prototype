@@ -124,14 +124,14 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
 
               <div className="pt-3 flex flex-wrap items-center gap-4">
                 <Link
-                  href="/wholesale"
+                  href="/dang-ky-dai-ly"
                   className="na-btn-primary group px-7 py-3.5 text-sm"
                 >
                   <span>ĐĂNG KÝ HỢP TÁC ĐẠI LÝ</span>
                   <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
                 </Link>
                 <Link
-                  href="/product"
+                  href="/san-pham"
                   className="na-btn-outline group px-6 py-3.5 text-sm !border-white/30 !bg-white/10 !text-white hover:!bg-white/20 hover:!border-white/60"
                 >
                   <Eye className="h-4 w-4" />

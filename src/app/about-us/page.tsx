@@ -1,2 +1,2 @@
-import AboutUsPage from "../summary/page";
-export default AboutUsPage;
+import GioiThieuPage from "../gioi-thieu/page";
+export default GioiThieuPage;
