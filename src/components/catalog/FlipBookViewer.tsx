@@ -223,7 +223,7 @@ export function FlipBookViewer({
                 </span>
               )}
             </div>
-            <h2 className={`font-serif text-base font-bold tracking-tight sm:text-lg ${isFullscreen ? "text-white" : "text-[#2D2D2D]"}`}>
+            <h2 className={`font-sans text-base font-bold tracking-tight sm:text-lg ${isFullscreen ? "text-white" : "text-[#2D2D2D]"}`}>
               {title}
             </h2>
           </div>

@@ -115,7 +115,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                 <span>CHÍNH SÁCH ĐỐI TÁC & ĐẠI LÝ 2026</span>
               </div>
 
-              <h3 className="font-serif text-2xl sm:text-3xl font-extrabold tracking-tight">
+              <h3 className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight">
                 Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Kim&apos;s Red Ginseng?
               </h3>
               <p className="text-sm sm:text-base text-gray-300 leading-relaxed">

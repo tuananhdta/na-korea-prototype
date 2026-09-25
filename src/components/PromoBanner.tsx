@@ -189,7 +189,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
             <div className="flex items-center gap-2 sm:gap-3 rounded-full border border-dashed border-[#B5222A]/30 bg-white/80 px-4 py-1.5 sm:px-6 sm:py-2 shadow-[0_4px_16px_rgba(181,34,42,0.08)] backdrop-blur-xs transition-all hover:border-[#B5222A]/60 hover:shadow-[0_6px_20px_rgba(181,34,42,0.14)]">
               {/* Slogan Words */}
               <div className="flex items-center text-center">
-                <span className="text-gold-shimmer font-serif text-[13px] sm:text-[16px] md:text-[18px] font-extrabold tracking-wide whitespace-nowrap">
+                <span className="text-gold-shimmer font-sans text-[13px] sm:text-[16px] md:text-[18px] font-extrabold tracking-wide whitespace-nowrap">
                   Hồng sâm Kim
                 </span>
 

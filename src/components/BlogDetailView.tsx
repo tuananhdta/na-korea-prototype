@@ -172,7 +172,7 @@ export function BlogDetailView({
                     </span>
                   </div>
 
-                  <h1 className="font-serif text-2xl font-black leading-tight text-[#2D2D2D] sm:text-3xl md:text-4xl">
+                  <h1 className="font-sans text-2xl font-extrabold leading-tight text-[#2D2D2D] sm:text-3xl md:text-4xl tracking-tight">
                     {post.title}
                   </h1>
 
@@ -249,7 +249,7 @@ export function BlogDetailView({
                   <div className="my-8 rounded-2xl border border-[#EAE4DC] bg-[#FAF9F6] p-5 sm:p-6 shadow-xs">
                     <div
                       onClick={() => setIsTocOpen(!isTocOpen)}
-                      className="flex cursor-pointer items-center justify-between font-serif text-lg font-bold text-[#4B193E]"
+                      className="flex cursor-pointer items-center justify-between font-sans text-lg font-bold text-[#4B193E]"
                     >
                       <div className="flex items-center gap-2.5">
                         <ListOrdered className="h-5 w-5 text-[#B5222A]" />
@@ -291,7 +291,7 @@ export function BlogDetailView({
                 {/* 4. FAQ Accordion (If exists) */}
                 {post.faqs && post.faqs.length > 0 && (
                   <div className="my-10 space-y-4 rounded-2xl border border-[#EAE4DC] bg-[#FAF9F6] p-6 sm:p-8">
-                    <div className="flex items-center gap-2.5 font-serif text-xl font-bold text-[#4B193E]">
+                    <div className="flex items-center gap-2.5 font-sans text-xl font-bold text-[#4B193E]">
                       <HelpCircle className="h-6 w-6 text-[#B5222A]" />
                       <span>Giải Đáp Thắc Mắc Thường Gặp (FAQ)</span>
                     </div>
@@ -356,7 +356,7 @@ export function BlogDetailView({
                   </div>
                   <div className="space-y-2 text-center sm:text-left">
                     <div className="flex flex-wrap items-center justify-center sm:justify-start gap-2">
-                      <h4 className="font-serif text-lg font-bold text-[#2D2D2D]">
+                      <h4 className="font-sans text-lg font-bold text-[#2D2D2D]">
                         {post.author.name}
                       </h4>
                       <span className="inline-flex items-center rounded-full bg-[#4B193E]/10 px-2.5 py-0.5 text-xs font-semibold text-[#4B193E]">
@@ -416,7 +416,7 @@ export function BlogDetailView({
                     <ShieldCheck className="h-6 w-6 text-[#F0831F]" />
                   </div>
                   <div>
-                    <h3 className="font-serif text-base font-bold text-[#2D2D2D]">NA Korea</h3>
+                    <h3 className="font-sans text-base font-bold text-[#2D2D2D]">NA Korea</h3>
                     <p className="text-xs text-[#B5222A] font-semibold">Nhà phân phối độc quyền chính thức</p>
                   </div>
                 </div>
@@ -439,7 +439,7 @@ export function BlogDetailView({
               {featuredProducts.length > 0 && (
                 <div className="rounded-2xl border border-[#EAE4DC] bg-white p-6 shadow-sm space-y-4">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-serif text-base font-bold text-[#4B193E] flex items-center gap-2">
+                    <h3 className="font-sans text-base font-bold text-[#4B193E] flex items-center gap-2">
                       <Award className="h-4 w-4 text-[#B5222A]" />
                       <span>Sản Phẩm Tiêu Biểu</span>
                     </h3>
@@ -480,7 +480,7 @@ export function BlogDetailView({
 
               {/* Widget 3: Recent & Popular Articles */}
               <div className="rounded-2xl border border-[#EAE4DC] bg-white p-6 shadow-sm space-y-4">
-                <h3 className="font-serif text-base font-bold text-[#4B193E]">
+                <h3 className="font-sans text-base font-bold text-[#4B193E]">
                   Bài Viết Đáng Chú Ý
                 </h3>
 
@@ -491,7 +491,7 @@ export function BlogDetailView({
                       href={`/tin-tuc/${item.id}`}
                       className="group flex gap-3 items-start"
                     >
-                      <span className="font-serif text-lg font-black text-[#A8A196] group-hover:text-[#B5222A] shrink-0 w-5">
+                      <span className="font-sans text-lg font-black text-[#A8A196] group-hover:text-[#B5222A] shrink-0 w-5">
                         0{idx + 1}
                       </span>
                       <div className="space-y-1 min-w-0 flex-1">
@@ -511,7 +511,7 @@ export function BlogDetailView({
 
               {/* Widget 4: Newsletter Box */}
               <div className="rounded-2xl border border-[#EAE4DC] bg-gradient-to-br from-[#4B193E] to-[#2D0C24] p-6 text-white shadow-md space-y-3.5">
-                <div className="flex items-center gap-2 font-serif text-base font-bold text-[#F0831F]">
+                <div className="flex items-center gap-2 font-sans text-base font-bold text-[#F0831F]">
                   <Send className="h-4 w-4" />
                   <span>Bản Tin Sức Khỏe Kim&apos;s</span>
                 </div>
@@ -549,7 +549,7 @@ export function BlogDetailView({
                   <PhoneCall className="h-5 w-5 animate-pulse" />
                 </div>
                 <div>
-                  <h4 className="font-serif text-sm font-bold text-[#2D2D2D]">Tư Vấn Chuyên Gia Sâm Hàn Quốc</h4>
+                  <h4 className="font-sans text-sm font-bold text-[#2D2D2D]">Tư Vấn Chuyên Gia Sâm Hàn Quốc</h4>
                   <p className="text-xs text-[#666666] mt-0.5">Hỗ trợ 24/7 từ chuyên viên dinh dưỡng</p>
                 </div>
                 <a
@@ -574,7 +574,7 @@ export function BlogDetailView({
               <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
                 CÓ THỂ BẠN QUAN TÂM
               </span>
-              <h2 className="font-serif text-2xl font-bold text-[#2D2D2D] sm:text-3xl mt-1">
+              <h2 className="font-sans text-2xl font-extrabold text-[#2D2D2D] sm:text-3xl mt-1 tracking-tight">
                 Bài Viết & Hoạt Động Khác
               </h2>
             </div>
@@ -613,7 +613,7 @@ export function BlogDetailView({
                       <Calendar className="h-3.5 w-3.5 text-[#B5222A]" />
                       <span>{item.formattedDate}</span>
                     </div>
-                    <h3 className="font-serif text-base font-bold text-[#2D2D2D] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
+                    <h3 className="font-sans text-base font-bold text-[#2D2D2D] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
                       {item.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#666666] leading-relaxed line-clamp-2">

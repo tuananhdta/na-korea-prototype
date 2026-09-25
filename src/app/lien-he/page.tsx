@@ -177,7 +177,7 @@ export default function LienHePage() {
                     <ShieldCheck className="h-4 w-4" />
                     <span>HỆ THỐNG TRỤ SỞ & CHI NHÁNH</span>
                   </div>
-                  <h2 className="font-serif text-2xl font-bold text-[#2D2D2D]">
+                  <h2 className="font-sans text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
                     Mạng Lưới Hoạt Động
                   </h2>
                   <p className="text-xs text-[#666666] leading-relaxed">
@@ -292,7 +292,7 @@ export default function LienHePage() {
                       <CheckCircle2 className="h-10 w-10" />
                     </div>
                     <div className="space-y-2">
-                      <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#2D2D2D]">
+                      <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight">
                         Gửi Yêu Cầu Thành Công!
                       </h3>
                       <p className="text-sm sm:text-base text-[#666666] max-w-md mx-auto leading-relaxed">
@@ -320,7 +320,7 @@ export default function LienHePage() {
                       <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
                         TIẾP NHẬN YÊU CẦU TRỰC TUYẾN
                       </span>
-                      <h2 className="font-serif text-2xl sm:text-3xl font-bold text-[#2D2D2D]">
+                      <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight">
                         Đặt Lịch Tư Vấn Với Chuyên Gia
                       </h2>
                       <p className="text-xs sm:text-sm text-[#666666]">
@@ -451,7 +451,7 @@ export default function LienHePage() {
                   <Award className="h-6 w-6" />
                 </div>
                 <div className="space-y-0.5">
-                  <h4 className="font-serif text-sm font-bold text-[#2D2D2D]">100% Sâm Punggi 6 Năm</h4>
+                  <h4 className="font-sans text-sm font-bold text-[#2D2D2D]">100% Sâm Punggi 6 Năm</h4>
                   <p className="text-xs text-[#666666] leading-relaxed">
                     Độc quyền nhập khẩu từ Tổng công ty Nông nghiệp Punggi.
                   </p>
@@ -463,7 +463,7 @@ export default function LienHePage() {
                   <ShieldCheck className="h-6 w-6" />
                 </div>
                 <div className="space-y-0.5">
-                  <h4 className="font-serif text-sm font-bold text-[#2D2D2D]">Bảo Chứng Quốc Tế</h4>
+                  <h4 className="font-sans text-sm font-bold text-[#2D2D2D]">Bảo Chứng Quốc Tế</h4>
                   <p className="text-xs text-[#666666] leading-relaxed">
                     Đạt chuẩn HACCP, GMP, ISO 22000 và FDA Hoa Kỳ.
                   </p>
@@ -475,7 +475,7 @@ export default function LienHePage() {
                   <Clock className="h-6 w-6" />
                 </div>
                 <div className="space-y-0.5">
-                  <h4 className="font-serif text-sm font-bold text-[#2D2D2D]">Giao Hàng Hỏa Tốc</h4>
+                  <h4 className="font-sans text-sm font-bold text-[#2D2D2D]">Giao Hàng Hỏa Tốc</h4>
                   <p className="text-xs text-[#666666] leading-relaxed">
                     Giao nhanh 2h tại Hà Nội & TP.HCM, toàn quốc 24-48h.
                   </p>
@@ -487,7 +487,7 @@ export default function LienHePage() {
                   <Sparkles className="h-6 w-6" />
                 </div>
                 <div className="space-y-0.5">
-                  <h4 className="font-serif text-sm font-bold text-[#2D2D2D]">Dịch Vụ Concierge VIP</h4>
+                  <h4 className="font-sans text-sm font-bold text-[#2D2D2D]">Dịch Vụ Concierge VIP</h4>
                   <p className="text-xs text-[#666666] leading-relaxed">
                     Tư vấn 1:1 tận tâm theo thể trạng của từng khách hàng.
                   </p>

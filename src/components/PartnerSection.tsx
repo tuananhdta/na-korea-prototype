@@ -136,7 +136,7 @@ export function PartnerSection() {
             Uy tín làm nên thương hiệu
           </span>
 
-          <h2 className="font-serif mt-2.5 text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#2D2D2D] tracking-tight">
+          <h2 className="font-sans mt-2.5 text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#2D2D2D] tracking-tight">
             Đối tác của Kim&apos;s Red Ginseng tại Việt Nam & Quốc tế
           </h2>
 

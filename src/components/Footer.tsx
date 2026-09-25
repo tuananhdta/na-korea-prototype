@@ -302,7 +302,7 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="font-serif text-sm font-bold text-[#F0831F] tracking-wide">
+            <p className="font-sans text-sm font-bold text-[#F0831F] tracking-wide">
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 

@@ -108,7 +108,7 @@ export default function TinTucPage() {
                     <span>{featuredPost.readTime}</span>
                   </div>
 
-                  <h2 className="font-serif text-xl sm:text-2xl md:text-3xl font-bold text-[#2D2D2D] leading-snug hover:text-[#B5222A] transition-colors">
+                  <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-extrabold text-[#2D2D2D] leading-snug tracking-tight hover:text-[#B5222A] transition-colors">
                     <Link href={`/tin-tuc/${featuredPost.id}`}>
                       {featuredPost.title}
                     </Link>
@@ -166,7 +166,7 @@ export default function TinTucPage() {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <h3 className="font-serif text-base sm:text-lg font-bold text-[#2D2D2D] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
+                    <h3 className="font-sans text-base sm:text-lg font-bold text-[#2D2D2D] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#666666] leading-relaxed line-clamp-3">
