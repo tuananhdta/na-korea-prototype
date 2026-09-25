@@ -369,23 +369,11 @@ export function Footer() {
                   <span>LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
                 </div>
 
-                {/* Hotline 24/7 with Live Green Dot & Ringing Phone Icon (Animation #3) */}
-                <div className="flex items-center gap-2.5 rounded-lg border border-white/10 bg-white/5 p-2 transition-all duration-300 hover:border-[#F0831F]/40 hover:bg-white/10">
-                  <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[#F0831F]/20 text-[#F0831F]">
-                    <Phone className="h-3.5 w-3.5 animate-phone-ring" />
-                  </div>
-                  <div className="flex flex-col">
-                    <div className="flex items-center gap-1.5">
-                      <span className="relative flex h-2 w-2">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-                      </span>
-                      <span className="text-[10px] font-semibold text-emerald-300 uppercase tracking-wider">Trực tuyến 24/7</span>
-                    </div>
-                    <a href="tel:0903409939" className="font-sans text-sm font-extrabold text-[#F0831F] tracking-wide hover:underline">
-                      090.340.9939
-                    </a>
-                  </div>
+                <div className="flex items-center gap-2 text-gray-300">
+                  <Phone className="h-4 w-4 shrink-0 text-[#F0831F]" />
+                  <a href="tel:0903409939" className="hover:text-white transition-colors">
+                    090.340.9939
+                  </a>
                 </div>
 
                 <div className="flex items-center gap-2 text-gray-300">
