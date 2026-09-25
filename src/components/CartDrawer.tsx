@@ -71,12 +71,13 @@ export function CartDrawer() {
                 <p className="text-xs text-gray-400 max-w-xs mb-6">
                   Hãy khám phá các sản phẩm Hồng sâm 6 năm tuổi thượng hạng của chúng tôi
                 </p>
-                <button
+                <Link
+                  href="/san-pham"
                   onClick={closeCart}
                   className="px-6 py-2.5 bg-[#b5222a] text-white rounded-md text-sm font-semibold hover:bg-[#8f1920] transition-colors"
                 >
                   Mua sắm ngay
-                </button>
+                </Link>
               </div>
             ) : (
               items.map(({ product, quantity, selectedOption }) => (
