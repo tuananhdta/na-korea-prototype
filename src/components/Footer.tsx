@@ -344,7 +344,14 @@ export function Footer() {
             </div>
 
             <div className="space-y-3 text-xs leading-relaxed text-gray-300">
-              <div className="inline-block rounded-md bg-white p-1.5 shadow-sm transition-transform duration-300 hover:scale-105">
+              <a
+                href="https://nakorea.vn/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Trang chủ NA Korea"
+                title="NA Korea - https://nakorea.vn/"
+                className="inline-block rounded-md bg-white p-1.5 shadow-sm transition-transform duration-300 hover:scale-105"
+              >
                 <Image
                   src="/images/wholesale/Logo-Na-Korea-01-300x87.png"
                   alt="NA Korea Import & Distribution"
@@ -352,7 +359,7 @@ export function Footer() {
                   height={40}
                   className="h-7 w-auto object-contain"
                 />
-              </div>
+              </a>
 
               <div>
                 <p className="font-bold text-white uppercase text-[13px]">
