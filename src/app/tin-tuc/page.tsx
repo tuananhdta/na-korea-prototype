@@ -6,7 +6,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
-import { ChevronRight, Calendar, Clock, ArrowRight, Award, Sparkles } from "lucide-react";
+import { ChevronRight, Calendar, Clock, ArrowRight, Award } from "lucide-react";
 import blogsData from "@/data/blogs.json";
 import { BlogPost } from "@/types/blog";
 
@@ -89,9 +89,8 @@ export default function TinTucPage() {
                     className="object-cover"
                     priority
                   />
-                  <span className="absolute top-4 left-4 inline-flex items-center gap-1.5 rounded-full bg-[#B5222A] px-3.5 py-1 text-xs font-bold text-white shadow-md">
-                    <Sparkles className="h-3.5 w-3.5" />
-                    TIÊU ĐIỂM NỔI BẬT
+                  <span className="absolute top-4 left-4 rounded-full bg-[#B5222A] px-3.5 py-1 text-xs font-bold text-white shadow-md">
+                    TIÊU ĐIỂM
                   </span>
                 </div>
 

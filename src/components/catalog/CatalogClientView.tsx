@@ -110,11 +110,6 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
             </div>
 
             <div className="relative z-10 max-w-3xl space-y-4">
-              <div className="inline-flex items-center gap-2 rounded-full bg-[#F0831F]/20 px-3.5 py-1 text-xs font-bold text-[#F0831F] uppercase tracking-wider">
-                <ShieldCheck className="h-3.5 w-3.5" />
-                <span>CHÍNH SÁCH ĐỐI TÁC & ĐẠI LÝ 2026</span>
-              </div>
-
               <h3 className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight">
                 Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Kim&apos;s Red Ginseng?
               </h3>

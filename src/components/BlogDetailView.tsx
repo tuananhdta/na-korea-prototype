@@ -571,10 +571,7 @@ export function BlogDetailView({
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                CÓ THỂ BẠN QUAN TÂM
-              </span>
-              <h2 className="font-sans text-2xl font-extrabold text-[#2D2D2D] sm:text-3xl mt-1 tracking-tight">
+              <h2 className="font-sans text-2xl font-extrabold text-[#2D2D2D] sm:text-3xl tracking-tight">
                 Bài Viết & Hoạt Động Khác
               </h2>
             </div>

@@ -15,7 +15,6 @@ import {
   Building2,
   ShieldCheck,
   Clock,
-  Sparkles,
   Award,
   MessageCircle,
   Truck,
@@ -150,10 +149,6 @@ export default function LienHePage() {
                 
                 <div className="space-y-5">
                   <div className="space-y-1.5 pb-4 border-b border-[#EAE4DC]">
-                    <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                      <Building2 className="h-4 w-4" />
-                      <span>HỆ THỐNG VĂN PHÒNG</span>
-                    </div>
                     <h2 className="font-sans text-xl sm:text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
                       NA Korea – Phân Phối Độc Quyền
                     </h2>
@@ -275,9 +270,6 @@ export default function LienHePage() {
                   <form onSubmit={handleSubmit} className="space-y-4">
                     
                     <div className="space-y-1 pb-1">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                        GỬI TIN NHẮN TRỰC TUYẾN
-                      </span>
                       <h2 className="font-sans text-xl sm:text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
                         Tư Vấn Sức Khỏe & Sản Phẩm
                       </h2>

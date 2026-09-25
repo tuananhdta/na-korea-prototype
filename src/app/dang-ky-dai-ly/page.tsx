@@ -20,7 +20,6 @@ import {
   Send,
   ShieldCheck,
   Building2,
-  Sparkles,
 } from "lucide-react";
 
 const POLICIES = [
@@ -109,10 +108,6 @@ export default function DangKyDaiLyPage() {
           <section className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xs border border-[#EAE4DC]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                  <Sparkles className="h-4 w-4" />
-                  <span>ĐỐI TÁC CHIẾN LƯỢC CỦA NA KOREA</span>
-                </div>
                 <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight leading-tight">
                   Thương Hiệu Bảo Chứng Bởi Bậc Thầy Nhân Sâm Kim Jeong Hwan
                 </h2>
@@ -139,10 +134,7 @@ export default function DangKyDaiLyPage() {
 
           {/* Section: 6 Chính sách hợp tác dành cho đối tác */}
           <section className="space-y-8">
-            <div className="text-center max-w-3xl mx-auto space-y-2.5">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                QUYỀN LỢI HỢP TÁC CHIẾN LƯỢC
-              </span>
+            <div className="text-center max-w-3xl mx-auto space-y-2">
               <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight">
                 Chính Sách Ưu Đãi Dành Riêng Cho Đối Tác & Đại Lý
               </h2>
@@ -181,10 +173,7 @@ export default function DangKyDaiLyPage() {
               {/* Left Contact Info */}
               <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
                 <div className="space-y-4">
-                  <div className="space-y-1 pb-3 border-b border-[#EAE4DC]">
-                    <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                      BỘ PHẬN PHÁT TRIỂN ĐẠI LÝ B2B
-                    </span>
+                  <div className="pb-3 border-b border-[#EAE4DC]">
                     <h2 className="font-sans text-xl sm:text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
                       Liên Hệ Trực Tiếp Với NA Korea
                     </h2>
@@ -288,9 +277,6 @@ export default function DangKyDaiLyPage() {
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
                     <div className="space-y-1 pb-1">
-                      <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                        TIẾP NHẬN ĐĂNG KÝ ĐỐI TÁC
-                      </span>
                       <h3 className="font-sans text-xl font-extrabold text-[#2D2D2D] tracking-tight">
                         Nhận Bảng Báo Giá Sỉ & Chính Sách Đại Lý
                       </h3>
