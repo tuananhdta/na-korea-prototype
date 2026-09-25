@@ -1,10 +1,12 @@
+// Server Component — do NOT add "use client" here
 import type { Metadata } from "next";
-import { ThanhToanView } from "@/components/ThanhToanView";
 import { SITE_CONFIG } from "@/lib/siteConfig";
+import { ThanhToanView } from "@/components/ThanhToanView";
 
 export const metadata: Metadata = {
   title: "Thanh Toán Đơn Hàng",
-  description: "Trang thanh toán an toàn, bảo mật đơn hàng Hồng sâm Kim's Red Ginseng tại NA Korea.",
+  description:
+    "Trang thanh toán an toàn, bảo mật đơn hàng Hồng sâm Kim's Red Ginseng tại NA Korea.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/thanh-toan`,
   },
