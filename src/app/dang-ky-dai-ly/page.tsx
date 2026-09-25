@@ -13,120 +13,141 @@ import {
   Truck,
   Award,
   BookOpen,
-  TrendingUp,
   Image as ImageIcon,
   Phone,
   Mail,
   MapPin,
   Send,
+  ShieldCheck,
+  Building2,
+  Sparkles,
 } from "lucide-react";
 
 const POLICIES = [
   {
-    icon: DollarSign,
-    title: "Vốn Nhỏ, Lợi Nhuận Cao",
-    desc: "Nhà phân phối chỉ cần bỏ ra số vốn nhỏ, với chiết khấu không giới hạn và lợi nhuận lên đến hàng chục triệu đồng/đơn hàng.",
+    icon: ShieldCheck,
+    title: "Bảo Hộ Thị Trường & Chống Phá Giá",
+    desc: "Chính sách giá niêm yết minh bạch trên toàn quốc, cam kết bảo vệ tối đa quyền lợi và biên lợi nhuận bền vững cho từng đại lý chính thức.",
   },
   {
     icon: Award,
-    title: "Chất Lượng Đạt Chuẩn Quốc Tế",
-    desc: "Sản xuất từ sâm 6 năm tuổi, đạt chuẩn HACCP, xuất khẩu sang Mỹ, Canada, Châu Âu và có mặt tại các Duty Free Lotte, Shilla, Shinsegae.",
+    title: "Chất Lượng Quốc Tế & Đầy Đủ Pháp Lý",
+    desc: "100% sâm củ 6 năm tuổi Punggi đạt chuẩn HACCP, GMP, FDA Hoa Kỳ, nhập khẩu chính ngạch với đầy đủ chứng từ CO/CQ và hóa đơn VAT.",
+  },
+  {
+    icon: DollarSign,
+    title: "Chiết Khấu Bậc Thang Vượt Trội",
+    desc: "Mức chiết khấu hấp dẫn theo bậc thang doanh số, thưởng quý, thưởng năm và hỗ trợ chính sách công nợ linh hoạt cho các đối tác chiến lược.",
   },
   {
     icon: Truck,
-    title: "Hỗ Trợ Kho Hàng & Giao Hàng",
-    desc: "Hỗ trợ miễn phí lưu kho và đóng gói giao hàng trực tiếp từ kho đến tay khách hàng, giúp đại lý tiết kiệm tối đa chi phí vận hành.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Chính Sách Nâng Hạng Đại Lý",
-    desc: "Sau một tháng hợp tác, đại lý đạt chỉ tiêu sẽ được nâng hạn mức ký quỹ và hưởng mức chiết khấu cùng quyền lợi ưu tiên cao hơn.",
+    title: "Kho Hàng Sẵn Sàng & Giao Vận Tốc Hành",
+    desc: "Hệ thống tổng kho hiện đại tại Hà Nội và TP.HCM luôn sẵn sàng nguồn hàng ổn định, hỗ trợ đóng gói và giao hàng hỏa tốc trên toàn quốc.",
   },
   {
     icon: ImageIcon,
-    title: "Cung Cấp Tư Liệu Quảng Bá",
-    desc: "Cung cấp miễn phí trọn bộ hình ảnh, video sản phẩm, poster thương hiệu và hỗ trợ đại lý xây dựng nội dung truyền thông chuyên nghiệp.",
+    title: "Bộ Tư Liệu Sales Kit & Truyền Thông Cao Cấp",
+    desc: "Cung cấp miễn phí trọn bộ Catalog dập nhũ vàng sang trọng, Standee trưng bày, hình ảnh/video 4K bản quyền cùng tài liệu truyền thông bài bản.",
   },
   {
     icon: BookOpen,
-    title: "Đào Tạo Bán Hàng Chuyên Nghiệp",
-    desc: "Tham gia các khóa đào tạo miễn phí về kiến thức sản phẩm, kỹ năng tư vấn khách hàng, marketing online và xây dựng thương hiệu cá nhân.",
+    title: "Đào Tạo Dược Tính & Kỹ Năng Chuyên Sâu",
+    desc: "Tham gia các khóa chuyển giao chuyên sâu về dược tính Ginsenoside, phương pháp tư vấn dinh dưỡng theo thể trạng và tư vấn quà biếu VIP.",
   },
 ];
 
 export default function DangKyDaiLyPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    city: "",
+    businessModel: "Chuỗi cửa hàng TPCN / Showroom",
+    message: "",
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+      setSubmitted(true);
+    }, 500);
   };
 
   return (
-    <div className="min-h-screen bg-[#fcfcfc] flex flex-col">
+    <div className="min-h-screen bg-[#FAF7F2] flex flex-col font-sans text-[#4B4F52]">
       <Header />
 
       <main className="flex-1 pb-20">
         <PageHero
-          eyebrow="HỢP TÁC KINH DOANH TOÀN QUỐC"
-          title="Tìm Nhà Phân Phối Hồng Sâm Kim's Red Ginseng"
-          description="Cơ hội kinh doanh với vốn nhỏ, không cần mặt bằng, và thu nhập hấp dẫn từ thương hiệu Hồng sâm 6 năm tuổi uy tín hàng đầu Hàn Quốc!"
+          title="Chính Sách Đối Tác & Đại Lý Phân Phối"
+          description="Đồng hành cùng NA Korea phân phối thương hiệu Hồng sâm 6 năm tuổi Kim's Red Ginseng chính ngạch từ Hàn Quốc – Cơ hội gia tăng doanh thu vượt trội cho đối tác chăm sóc sức khỏe và quà biếu cao cấp."
           image="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
           imageAlt="Đại lý Kim's Red Ginseng"
-          imageOpacity={0.9}
+          imageOpacity={0.92}
         />
 
         {/* Breadcrumb */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
-          <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
-            <Link href="/" className="hover:text-black transition-colors">Trang Chủ</Link>
-            <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-medium">Đăng Ký Đại Lý</span>
-          </nav>
+        <div className="border-b border-[#EAE4DC] bg-[#FAF9F6] py-3">
+          <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
+            <nav className="flex items-center space-x-2 text-xs text-[#666666]">
+              <Link href="/" className="hover:text-[#B5222A] transition-colors">
+                Trang Chủ
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
+              <span className="text-[#B5222A] font-semibold">Chính Sách Đại Lý</span>
+            </nav>
+          </div>
         </div>
 
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-16 mt-4">
-          {/* Section: Giới thiệu thương hiệu & Điểm mạnh */}
-          <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
+        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 space-y-12 mt-8">
+          
+          {/* Section: Giới thiệu thương hiệu & Điểm tựa uy tín */}
+          <section className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xs border border-[#EAE4DC]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
-                  VỀ SẢN PHẨM HỒNG SÂM KIM'S RED GINSENG
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
-                  Thương Hiệu Được Bảo Chứng Bởi Nghệ Nhân Kim Jeong Hwan
+                <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B5222A]">
+                  <Sparkles className="h-4 w-4" />
+                  <span>ĐỐI TÁC CHIẾN LƯỢC CỦA NA KOREA</span>
+                </div>
+                <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight leading-tight">
+                  Thương Hiệu Bảo Chứng Bởi Bậc Thầy Nhân Sâm Kim Jeong Hwan
                 </h2>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Kim&apos;s Red Ginseng là thương hiệu hồng sâm 6 năm tuổi nổi tiếng đến từ Hàn Quốc, được sản xuất bởi Bậc Thầy Nhân Sâm với quy trình kiểm soát nghiêm ngặt từ khâu trồng trọt đến đóng gói.
+                <p className="text-sm sm:text-base text-[#4B4F52] leading-relaxed">
+                  <strong>Kim&apos;s Red Ginseng</strong> là thương hiệu hồng sâm 6 năm tuổi thượng hạng đến từ vùng đất thánh Punggi (Hàn Quốc), được chế tác dưới sự dẫn dắt của Bậc thầy Nhân sâm với quy trình kiểm định nghiêm ngặt từ nông trường đến thành phẩm.
                 </p>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Sản phẩm đạt chuẩn <strong>HACCP</strong> về an toàn thực phẩm và có đầy đủ giấy tờ chứng nhận xuất xứ rõ ràng. Hồng sâm Kim&apos;s Red Ginseng không chỉ được ưa chuộng tại Hàn Quốc mà còn xuất khẩu đến các thị trường lớn như <em>Mỹ, Canada, Châu Âu, Nga, HongKong</em>... và có mặt trên các trang Duty Free uy tín như <strong>Lotte, Shilla, Shinsegae</strong>.
+                <p className="text-sm sm:text-base text-[#4B4F52] leading-relaxed">
+                  Sản phẩm đạt chuẩn <strong>HACCP, GMP, FDA Hoa Kỳ</strong> và được tỉnh Gyeongsangbuk-do lựa chọn làm <strong>Quà tặng ngoại giao quốc gia</strong>. Tại Việt Nam, <strong>NA Korea</strong> cam kết bảo hộ quyền lợi đối tác, hỗ trợ pháp lý 100% và tạo mọi điều kiện để đại lý phát triển bền vững.
                 </p>
               </div>
 
-              <div className="lg:col-span-6 relative aspect-4/3 rounded-xl overflow-hidden shadow-md bg-gray-50 border border-gray-100">
+              <div className="lg:col-span-6 relative aspect-4/3 rounded-2xl overflow-hidden shadow-md bg-[#161e27] border border-[#EAE4DC]">
                 <Image
                   src="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
                   alt="Kim's Red Ginseng Store"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
+                  priority
                 />
               </div>
             </div>
           </section>
 
-          {/* Section: 6 Chính sách hợp tác dành cho nhà phân phối */}
+          {/* Section: 6 Chính sách hợp tác dành cho đối tác */}
           <section className="space-y-8">
-            <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
-                QUYỀN LỢI HỢP TÁC
+            <div className="text-center max-w-3xl mx-auto space-y-2.5">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
+                QUYỀN LỢI HỢP TÁC CHIẾN LƯỢC
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                Chính Sách Ưu Đãi Dành Riêng Cho Nhà Phân Phối
+              <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight">
+                Chính Sách Ưu Đãi Dành Riêng Cho Đối Tác & Đại Lý
               </h2>
-              <p className="text-sm text-gray-600">
-                Phù hợp cho sinh viên, mẹ bỉm sữa, dân văn phòng, chủ spa, phòng khám và các cá nhân muốn kinh doanh sản phẩm sức khỏe cao cấp.
+              <p className="text-xs sm:text-sm text-[#666666] max-w-2xl mx-auto leading-relaxed">
+                Giải pháp hợp tác tối ưu dành cho Chuỗi thực phẩm chức năng, Nhà thuốc, Phòng khám, Spa cao cấp, Doanh nghiệp quà tặng VIP và Nhà phân phối khu vực.
               </p>
             </div>
 
@@ -136,13 +157,17 @@ export default function DangKyDaiLyPage() {
                 return (
                   <div
                     key={idx}
-                    className="bg-white rounded-2xl p-6 sm:p-8 shadow-xs border border-gray-100 space-y-3 hover:border-red-200 transition-colors"
+                    className="group bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-[#EAE4DC] space-y-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-md"
                   >
-                    <div className="w-12 h-12 rounded-xl bg-red-50 text-[#b5222a] flex items-center justify-center">
+                    <div className="w-12 h-12 rounded-2xl bg-[#FAF6F0] text-[#B5222A] border border-[#EAE4DC] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <h3 className="font-bold text-gray-900 text-lg">{p.title}</h3>
-                    <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">{p.desc}</p>
+                    <h3 className="font-sans font-bold text-[#2D2D2D] text-base sm:text-lg leading-snug">
+                      {p.title}
+                    </h3>
+                    <p className="text-xs sm:text-sm text-[#666666] leading-relaxed">
+                      {p.desc}
+                    </p>
                   </div>
                 );
               })}
@@ -150,154 +175,247 @@ export default function DangKyDaiLyPage() {
           </section>
 
           {/* Section: Registration Form & Contact Details */}
-          <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
+          <section className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xs border border-[#EAE4DC]">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">
+              
               {/* Left Contact Info */}
-              <div className="lg:col-span-5 space-y-6">
-                <div>
-                  <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
-                    THÔNG TIN LIÊN HỆ
-                  </span>
-                  <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                    Trụ Sở & Văn Phòng Phân Phối
-                  </h2>
+              <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
+                <div className="space-y-4">
+                  <div className="space-y-1 pb-3 border-b border-[#EAE4DC]">
+                    <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
+                      BỘ PHẬN PHÁT TRIỂN ĐẠI LÝ B2B
+                    </span>
+                    <h2 className="font-sans text-xl sm:text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
+                      Liên Hệ Trực Tiếp Với NA Korea
+                    </h2>
+                  </div>
+
+                  <div className="space-y-4 text-xs sm:text-sm text-[#4B4F52]">
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FAF6F0] border border-[#EAE4DC] text-[#B5222A]">
+                        <Building2 className="w-4 h-4" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <strong className="block text-[#2D2D2D] font-bold">Trụ sở Công ty:</strong>
+                        <span>210 Trung Kính, P. Yên Hòa, Q. Cầu Giấy, TP. Hà Nội</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FAF6F0] border border-[#EAE4DC] text-[#B5222A]">
+                        <MapPin className="w-4 h-4" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <strong className="block text-[#2D2D2D] font-bold">Văn phòng Hà Nội:</strong>
+                        <span>LK 19-TT1, Khu nhà ở 96-96B Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FAF6F0] border border-[#EAE4DC] text-[#B5222A]">
+                        <MapPin className="w-4 h-4" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <strong className="block text-[#2D2D2D] font-bold">Chi nhánh Miền Nam:</strong>
+                        <span>41/10D/29 Đường Gò Cát, P. Phú Hữu, TP. Thủ Đức, TP.HCM</span>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FAF6F0] border border-[#EAE4DC] text-[#B5222A]">
+                        <Phone className="w-4 h-4" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <strong className="block text-[#2D2D2D] font-bold">Hotline B2B / Zalo:</strong>
+                        <a href="tel:0903409939" className="text-base font-extrabold text-[#B5222A] hover:underline block">
+                          090.340.9939
+                        </a>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#FAF6F0] border border-[#EAE4DC] text-[#B5222A]">
+                        <Mail className="w-4 h-4" />
+                      </div>
+                      <div className="space-y-0.5">
+                        <strong className="block text-[#2D2D2D] font-bold">Hộp thư Đối tác:</strong>
+                        <a href="mailto:Kimsredginseng@gmail.com" className="text-xs text-[#2D2D2D] font-semibold hover:underline">
+                          Kimsredginseng@gmail.com
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <div className="space-y-4 text-xs sm:text-sm text-gray-700">
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#b5222a] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="block text-gray-900">Trụ sở Tập đoàn:</strong>
-                      <span>Sobaek-ro 1701, Bonghyeon-myeon, Yeongju-si, Gyeongbuk, Republic of Korea.</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#b5222a] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="block text-gray-900">Văn phòng đại diện tại Việt Nam:</strong>
-                      <span>LK 19-TT1, Khu nhà ở 96-96B Nguyễn Huy Tưởng, Phường Thanh Xuân, TP. Hà Nội</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <MapPin className="w-5 h-5 text-[#b5222a] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="block text-gray-900">Nhà Phân Phối miền Nam:</strong>
-                      <span>Công ty TNHH TM Ánh Gia Phát – 41/10D/29 Đường Gò Cát, Phường Phú Hữu, TP. Thủ Đức, TP.HCM</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <Phone className="w-5 h-5 text-[#b5222a] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="block text-gray-900">Hotline / Zalo:</strong>
-                      <span className="text-lg font-bold text-[#b5222a]">090.340.9939</span>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <Mail className="w-5 h-5 text-[#b5222a] shrink-0 mt-0.5" />
-                    <div>
-                      <strong className="block text-gray-900">Email:</strong>
-                      <span>Kimsredginseng@gmail.com</span>
-                    </div>
+                <div className="rounded-2xl bg-[#FAF9F6] border border-[#EAE4DC] p-4 text-xs text-[#5A402D] leading-relaxed flex items-center gap-2.5">
+                  <ShieldCheck className="h-5 w-5 text-[#B5222A] shrink-0" />
+                  <div>
+                    <span className="font-bold text-[#2D2D2D]">CÔNG TY TNHH TM NA KOREA</span>
+                    <span className="text-[#888888] block text-[11px]">Đại diện pháp lý & phân phối độc quyền Kim&apos;s Red Ginseng</span>
                   </div>
                 </div>
               </div>
 
               {/* Right Registration Form */}
-              <div className="lg:col-span-7 bg-gray-50/70 rounded-xl p-6 sm:p-8 border border-gray-200">
+              <div className="lg:col-span-7 bg-[#FAF9F6] rounded-2xl p-6 sm:p-8 md:p-10 border border-[#EAE4DC] flex flex-col justify-center">
                 {submitted ? (
-                  <div className="text-center py-10 space-y-3">
-                    <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto">
+                  <div className="text-center py-10 space-y-4">
+                    <div className="w-16 h-16 bg-emerald-50 border-2 border-emerald-500 text-emerald-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
                       <CheckCircle2 className="w-8 h-8" />
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900">Đăng Ký Hợp Tác Thành Công!</h3>
-                    <p className="text-sm text-gray-600 max-w-md mx-auto">
-                      Bộ phận quản lý đối tác của Kim&apos;s Red Ginseng sẽ liên hệ lại với bạn qua số điện thoại/Zalo trong thời gian sớm nhất.
-                    </p>
+                    <div className="space-y-1.5">
+                      <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
+                        Đăng Ký Hợp Tác Thành Công!
+                      </h3>
+                      <p className="text-xs sm:text-sm text-[#666666] max-w-md mx-auto leading-relaxed">
+                        Giám đốc kinh doanh phụ trách khu vực của <strong>NA Korea</strong> sẽ trực tiếp liên hệ và gửi bảng chính sách chiết khấu chi tiết tới bạn trong thời gian sớm nhất.
+                      </p>
+                    </div>
+
+                    <div className="pt-2">
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSubmitted(false);
+                          setFormData({ name: "", phone: "", email: "", city: "", businessModel: "Chuỗi cửa hàng TPCN / Showroom", message: "" });
+                        }}
+                        className="inline-flex items-center gap-2 rounded-xl border border-[#EAE4DC] bg-white px-5 py-2 text-xs font-bold text-[#4B4F52] hover:border-[#B5222A] hover:text-[#B5222A] transition-all"
+                      >
+                        <span>Gửi thêm yêu cầu khác</span>
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    <div>
-                      <h3 className="text-lg font-bold text-gray-900">Điền Thông Tin Để Nhận Chính Sách Chi Tiết</h3>
-                      <p className="text-xs text-gray-500 mt-0.5">Nhận bảng giá sỉ và chính sách thưởng đại lý ngay hôm nay.</p>
+                    <div className="space-y-1 pb-1">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[#B5222A]">
+                        TIẾP NHẬN ĐĂNG KÝ ĐỐI TÁC
+                      </span>
+                      <h3 className="font-sans text-xl font-extrabold text-[#2D2D2D] tracking-tight">
+                        Nhận Bảng Báo Giá Sỉ & Chính Sách Đại Lý
+                      </h3>
+                      <p className="text-xs text-[#666666]">
+                        Vui lòng điền thông tin bên dưới để nhận chính sách chiết khấu độc quyền ngay hôm nay.
+                      </p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Họ và tên *</label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label className="block text-xs font-bold text-[#2D2D2D]">
+                          Họ và tên người liên hệ <span className="text-[#B5222A]">*</span>
+                        </label>
                         <input
                           type="text"
                           required
-                          placeholder="Nguyễn Văn A"
-                          className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-[#b5222a]"
+                          value={formData.name}
+                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          placeholder="Ví dụ: Nguyễn Văn A"
+                          className="w-full rounded-xl border border-[#EAE4DC] bg-white px-3.5 py-2.5 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                         />
                       </div>
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Số điện thoại / Zalo *</label>
+
+                      <div className="space-y-1.5">
+                        <label className="block text-xs font-bold text-[#2D2D2D]">
+                          Số điện thoại / Zalo <span className="text-[#B5222A]">*</span>
+                        </label>
                         <input
                           type="tel"
                           required
-                          placeholder="090 340 9939"
-                          className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-[#b5222a]"
+                          value={formData.phone}
+                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                          placeholder="Ví dụ: 090 340 9939"
+                          className="w-full rounded-xl border border-[#EAE4DC] bg-white px-3.5 py-2.5 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                         />
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Email</label>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label className="block text-xs font-bold text-[#2D2D2D]">
+                          Địa chỉ Email
+                        </label>
                         <input
                           type="email"
+                          value={formData.email}
+                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                           placeholder="email@example.com"
-                          className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-[#b5222a]"
+                          className="w-full rounded-xl border border-[#EAE4DC] bg-white px-3.5 py-2.5 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                         />
                       </div>
-                      <div>
-                        <label className="block text-xs font-semibold text-gray-700 mb-1">Tỉnh / Thành phố *</label>
+
+                      <div className="space-y-1.5">
+                        <label className="block text-xs font-bold text-[#2D2D2D]">
+                          Tỉnh / Thành phố dự kiến phân phối <span className="text-[#B5222A]">*</span>
+                        </label>
                         <input
                           type="text"
                           required
+                          value={formData.city}
+                          onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                           placeholder="Hà Nội, TP.HCM, Đà Nẵng..."
-                          className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-[#b5222a]"
+                          className="w-full rounded-xl border border-[#EAE4DC] bg-white px-3.5 py-2.5 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                         />
                       </div>
                     </div>
 
-                    <div>
-                      <label className="block text-xs font-semibold text-gray-700 mb-1">Mô hình kinh doanh hiện tại</label>
-                      <select className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-[#b5222a]">
-                        <option>Cá nhân / Bán hàng Online</option>
-                        <option>Cửa hàng thực phẩm chức năng / Showroom</option>
-                        <option>Nhà thuốc / Phòng khám Đông y</option>
-                        <option>Doanh nghiệp mua quà biếu</option>
-                        <option>Đại lý độc quyền khu vực</option>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-[#2D2D2D]">
+                        Mô hình kinh doanh hiện tại
+                      </label>
+                      <select
+                        value={formData.businessModel}
+                        onChange={(e) => setFormData({ ...formData, businessModel: e.target.value })}
+                        className="w-full rounded-xl border border-[#EAE4DC] bg-white px-3.5 py-2.5 text-sm text-[#2D2D2D] transition-all focus:border-[#B5222A] focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                      >
+                        <option value="Chuỗi cửa hàng TPCN / Showroom">Chuỗi cửa hàng thực phẩm chức năng / Showroom cao cấp</option>
+                        <option value="Nhà thuốc / Phòng khám Đông y">Hệ thống nhà thuốc / Phòng khám Đông y & Dinh dưỡng</option>
+                        <option value="Spa / Thẩm mỹ viện cao cấp">Spa / Thẩm mỹ viện / Trung tâm chăm sóc sức khỏe</option>
+                        <option value="Doanh nghiệp quà tặng B2B">Doanh nghiệp phân phối quà biếu tặng VIP & Doanh nghiệp</option>
+                        <option value="Đại lý độc quyền khu vực">Đăng ký làm Đại lý Độc quyền Tỉnh / Khu vực</option>
+                        <option value="Cá nhân kinh doanh cao cấp">Cá nhân kinh doanh online sản phẩm cao cấp</option>
                       </select>
                     </div>
 
-                    <div>
-                      <label className="block text-xs font-semibold text-gray-700 mb-1">Lời nhắn / Yêu cầu</label>
+                    <div className="space-y-1.5">
+                      <label className="block text-xs font-bold text-[#2D2D2D]">
+                        Lời nhắn / Đề xuất hợp tác
+                      </label>
                       <textarea
                         rows={3}
-                        placeholder="Nhu cầu hoặc thắc mắc của bạn..."
-                        className="w-full px-3.5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-[#b5222a]"
+                        value={formData.message}
+                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                        placeholder="Quý đối tác vui lòng chia sẻ thêm về kế hoạch kinh doanh hoặc các câu hỏi cần giải đáp..."
+                        className="w-full rounded-xl border border-[#EAE4DC] bg-white px-3.5 py-2.5 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15 resize-none"
                       />
                     </div>
 
-                    <button
-                      type="submit"
-                      className="na-btn-primary group w-full py-4 text-sm font-bold tracking-wider"
-                    >
-                      <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                      <span>NHẬN CHÍNH SÁCH ĐẠI LÝ NGAY</span>
-                    </button>
+                    <div className="pt-2">
+                      <button
+                        type="submit"
+                        disabled={loading}
+                        className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#B5222A] via-[#A01C23] to-[#8C161D] py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
+                      >
+                        {loading ? (
+                          <span>Đang gửi thông tin...</span>
+                        ) : (
+                          <>
+                            <span>NHẬN CHÍNH SÁCH ĐẠI LÝ NGAY</span>
+                            <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                          </>
+                        )}
+                      </button>
+                    </div>
+
+                    <p className="text-center text-[11px] text-[#888888]">
+                      🔒 Thông tin đối tác được bảo mật tuyệt đối theo chính sách bảo hộ phân phối của NA Korea.
+                    </p>
                   </form>
                 )}
               </div>
+
             </div>
           </section>
+
         </div>
       </main>
 
