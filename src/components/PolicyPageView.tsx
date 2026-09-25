@@ -5,13 +5,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   ChevronRight,
-  ShieldCheck,
   FileText,
   Phone,
   Mail,
   Clock,
   MapPin,
-  CheckCircle2,
   HelpCircle,
   ChevronDown,
   Building2,
@@ -124,7 +122,6 @@ export function PolicyPageView({ slug }: { slug: string }) {
       },
     },
     datePublished: "2024-01-01T08:00:00+07:00",
-    dateModified: new Date().toISOString(),
   };
 
   const localBusinessSchema = {
@@ -214,7 +211,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
         {/* Banner Hero */}
         <div className="relative overflow-hidden bg-gradient-to-r from-[#4B193E] via-[#35102c] to-[#1a0815] text-white py-12 sm:py-16 px-4 sm:px-6">
           <div className="max-w-[1240px] mx-auto relative z-10 space-y-3">
-            <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight drop-shadow-sm">
+            <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight drop-shadow-sm text-white">
               {policy.title}
             </h1>
             <p className="text-xs sm:text-sm text-white/80 max-w-2xl leading-relaxed">
@@ -265,24 +262,6 @@ export function PolicyPageView({ slug }: { slug: string }) {
                     Áp dụng cho toàn bộ hoạt động mua sắm, giao nhận và hậu mãi trên toàn quốc của Na Korea
                   </p>
                 </div>
-
-                {/* GEO & AI Executive Summary (Tối ưu Trích xuất bởi AI Overviews & Search Engines) */}
-                {policy.summaryHighlights && policy.summaryHighlights.length > 0 && (
-                  <div className="mb-8 rounded-xl border border-red-200/80 bg-gradient-to-br from-red-50/70 to-amber-50/40 p-5 sm:p-6 shadow-2xs">
-                    <div className="flex items-center gap-2 mb-3 text-xs font-bold uppercase tracking-wider text-[#B5222A]">
-                      <CheckCircle2 className="w-4 h-4 text-[#B5222A]" />
-                      <span>Tóm Tắt Điểm Trọng Tâm (Key Takeaways)</span>
-                    </div>
-                    <ul className="space-y-2 text-xs sm:text-sm text-[#4B4F52]">
-                      {policy.summaryHighlights.map((highlight, idx) => (
-                        <li key={idx} className="flex items-start gap-2 leading-relaxed">
-                          <span className="text-[#B5222A] font-bold text-sm shrink-0 mt-0.5">•</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
 
                 {/* Main Rendered Policy HTML */}
                 <div

@@ -265,13 +265,6 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                     />
                   </div>
 
-                  {/* Label Status Badge */}
-                  <div className="absolute bottom-3 inset-x-0 flex items-center justify-center pointer-events-none z-10 px-2">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#2D2D2D] text-[10px] sm:text-[11px] font-semibold border border-white/60 shadow-xs truncate max-w-full">
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A] animate-pulse shrink-0" />
-                      <span className="truncate">{activeImage.label}</span>
-                    </span>
-                  </div>
                 </div>
               </div>
 

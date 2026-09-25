@@ -56,7 +56,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
     ) {
       return true;
     }
-    if (itemHref === "/catalog" && pathname.startsWith("/catalog")) {
+    if (itemHref === "/cam-nang" && pathname.startsWith("/cam-nang")) {
       return true;
     }
     return false;

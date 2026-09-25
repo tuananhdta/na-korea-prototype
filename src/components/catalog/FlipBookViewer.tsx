@@ -34,16 +34,12 @@ interface FlipBookViewerProps {
   title: string;
   pdfDownloadUrl?: string;
   aspectRatio?: "portrait" | "landscape";
-  fileSize?: string;
-  badge?: string;
 }
 
 export function FlipBookViewer({
   pages,
   title,
   aspectRatio = "portrait",
-  fileSize,
-  badge = "E-CATALOGUE 2026",
 }: FlipBookViewerProps) {
   const [currentPage, setCurrentPage] = useState(0);
   const [totalPages, setTotalPages] = useState(pages.length);
@@ -213,16 +209,6 @@ export function FlipBookViewer({
             <BookOpen className="h-5 w-5" />
           </div>
           <div>
-            <div className="flex items-center gap-2">
-              <span className="rounded-full bg-[#B5222A] px-2.5 py-0.5 text-[10px] font-extrabold tracking-wider text-white uppercase">
-                {badge}
-              </span>
-              {fileSize && (
-                <span className="text-[11px] font-medium text-[#7A7468]">
-                  • {fileSize}
-                </span>
-              )}
-            </div>
             <h2 className={`font-sans text-base font-bold tracking-tight sm:text-lg ${isFullscreen ? "text-white" : "text-[#2D2D2D]"}`}>
               {title}
             </h2>

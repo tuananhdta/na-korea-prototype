@@ -1,8 +1,9 @@
 "use client";
 
-import { useState, useRef, useEffect, MouseEvent as ReactMouseEvent, TouchEvent as ReactTouchEvent } from "react";
+import { useState, useRef, useEffect, MouseEvent as ReactMouseEvent } from "react";
 import { usePathname } from "next/navigation";
-import { Phone, Mail, MessageCircle, X, ChevronUp } from "lucide-react";
+import Link from "next/link";
+import { Phone, Mail, MessageCircle, X, ShoppingBag } from "lucide-react";
 
 export function FloatingContact() {
   const pathname = usePathname();
@@ -246,7 +247,7 @@ export function FloatingContact() {
       )}
 
       {/* ─── 2. MOBILE FLOATING ACTION BUTTON (Visible on Mobile Only) ─── */}
-      <div className="md:hidden fixed bottom-6 right-4 z-40 flex flex-col items-end gap-2.5">
+      <div className="md:hidden fixed inset-x-4 bottom-4 z-40 flex flex-col items-stretch gap-2.5 pb-[env(safe-area-inset-bottom)]">
         {/* Expanded Options */}
         {mobileExpanded && (
           <div className="flex flex-col items-end gap-2 pb-1 animate-in fade-in slide-in-from-bottom-3 duration-200">
@@ -283,25 +284,37 @@ export function FloatingContact() {
           </div>
         )}
 
-        {/* Main Floating Trigger Button */}
-        <button
-          type="button"
-          onClick={() => setMobileExpanded(!mobileExpanded)}
-          aria-label={mobileExpanded ? "Đóng liên hệ" : "Mở liên hệ"}
-          className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#4B193E] to-[#B5222A] text-white shadow-[0_8px_20px_rgba(75,25,62,0.45)] border border-white/30 transition-transform duration-200 active:scale-90"
-        >
-          {mobileExpanded ? (
-            <X className="w-5 h-5" />
-          ) : (
-            <div className="relative flex items-center justify-center">
-              <Phone className="w-5 h-5 animate-pulse" />
-              <span className="absolute -top-1 -right-1 flex h-2.5 w-2.5">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500" />
-              </span>
-            </div>
-          )}
-        </button>
+        {/* Two mobile actions: contact channels and product catalogue */}
+        <div className="flex w-full items-center gap-2.5">
+          <button
+            type="button"
+            onClick={() => setMobileExpanded(!mobileExpanded)}
+            aria-label={mobileExpanded ? "Đóng liên hệ" : "Mở liên hệ"}
+            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-white/30 bg-gradient-to-br from-[#4B193E] to-[#B5222A] px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(75,25,62,0.45)] transition-transform duration-200 active:scale-[0.98]"
+          >
+            {mobileExpanded ? (
+              <X className="h-4 w-4 shrink-0" />
+            ) : (
+              <div className="relative flex shrink-0 items-center justify-center">
+                <Phone className="h-4 w-4 animate-pulse" />
+                <span className="absolute -right-1 -top-1 flex h-2 w-2">
+                  <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+                  <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+                </span>
+              </div>
+            )}
+            <span>Liên hệ</span>
+          </button>
+
+          <Link
+            href="/san-pham"
+            aria-label="Xem sản phẩm"
+            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-[#B5222A]/20 bg-white px-4 text-sm font-bold text-[#4B193E] shadow-[0_8px_20px_rgba(75,25,62,0.16)] transition-transform duration-200 active:scale-[0.98]"
+          >
+            <ShoppingBag className="h-4 w-4 shrink-0 text-[#B5222A]" />
+            <span>Sản Phẩm</span>
+          </Link>
+        </div>
       </div>
     </>
   );

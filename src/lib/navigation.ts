@@ -42,11 +42,11 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    title: "Catalog",
-    href: "/catalog",
+    title: "Cẩm Nang",
+    href: "/cam-nang",
     subItems: [
-      { title: "Kim's Red Ginseng", href: "/catalog" },
-      { title: "Công dụng Ginsenoside", href: "/catalog/ginsenoside" },
+      { title: "Kim's Red Ginseng", href: "/cam-nang" },
+      { title: "Công dụng Ginsenoside", href: "/cam-nang/ginsenoside" },
     ],
   },
   {

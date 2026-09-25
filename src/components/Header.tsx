@@ -63,7 +63,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
     ) {
       return true;
     }
-    if (itemHref === "/catalog" && pathname.startsWith("/catalog")) {
+    if (itemHref === "/cam-nang" && pathname.startsWith("/cam-nang")) {
       return true;
     }
     return false;
@@ -84,11 +84,13 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
   }, []);
 
   const { totalCount, openCart } = useCart();
-  const headerOffset = isBannerVisible ? "top-24 sm:top-20" : "top-0";
+  // Keep the navigation directly below the 80px promo banner on every mobile
+  // viewport. The old mobile `top-24` left a visible 16px strip between them.
+  const headerOffset = isBannerVisible ? "top-20" : "top-0";
   const pageSpacerHeight = isBannerVisible
     ? isScrolled
-      ? "h-44 sm:h-40"
-      : "h-[184px] sm:h-44"
+      ? "h-40"
+      : "h-[168px] sm:h-44"
     : isScrolled
       ? "h-20"
       : "h-[88px] sm:h-24";

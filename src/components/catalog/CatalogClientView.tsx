@@ -14,7 +14,6 @@ import {
 } from "@/data/catalogs";
 import {
   ArrowRight,
-  ShieldCheck,
   Eye,
 } from "lucide-react";
 
@@ -28,9 +27,9 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
 
   // Sync tab if route changes
   useEffect(() => {
-    if (pathname === "/catalog/ginsenoside") {
+    if (pathname === "/cam-nang/ginsenoside") {
       setActiveTab("ginsenoside-guide");
-    } else if (pathname === "/catalog") {
+    } else if (pathname === "/cam-nang") {
       setActiveTab("product-2026");
     }
   }, [pathname]);
@@ -82,8 +81,6 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                 title={CATALOG_PRODUCTS_2026.title}
                 pdfDownloadUrl={CATALOG_PRODUCTS_2026.pdfDownloadUrl}
                 aspectRatio={CATALOG_PRODUCTS_2026.aspectRatio}
-                fileSize={CATALOG_PRODUCTS_2026.fileSize}
-                badge={CATALOG_PRODUCTS_2026.badge}
               />
             ) : (
               <FlipBookViewer
@@ -92,8 +89,6 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                 title={CATALOG_GINSENOSIDE_GUIDE.title}
                 pdfDownloadUrl={CATALOG_GINSENOSIDE_GUIDE.pdfDownloadUrl}
                 aspectRatio={CATALOG_GINSENOSIDE_GUIDE.aspectRatio}
-                fileSize={CATALOG_GINSENOSIDE_GUIDE.fileSize}
-                badge={CATALOG_GINSENOSIDE_GUIDE.badge}
               />
             )}
           </div>
@@ -132,6 +127,17 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                   <Eye className="h-4 w-4" />
                   <span>Xem 32 Sản Phẩm Chính Hãng</span>
                 </Link>
+              </div>
+
+              <div className="relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-lg sm:aspect-[16/7]">
+                <Image
+                  src={heroContent.image}
+                  alt={heroContent.imageAlt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, 768px"
+                  className="object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
               </div>
             </div>
           </div>
