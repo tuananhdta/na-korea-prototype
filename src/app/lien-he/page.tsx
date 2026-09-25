@@ -69,7 +69,7 @@ export default function LienHePage() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-[1160px] px-4 sm:px-6 mt-10 space-y-10">
+        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 mt-10 space-y-10">
           
           {/* ─── 3 VIP QUICK-CONTACT CARDS ─── */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">

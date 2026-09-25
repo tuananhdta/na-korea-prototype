@@ -169,7 +169,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
       <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6B8F5B]/30 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#6B8F5B]/30 to-transparent" />
 
-      <div className="relative mx-auto flex h-full max-w-[1180px] items-center justify-center px-4 sm:px-8">
+      <div className="relative mx-auto flex h-full max-w-[1240px] items-center justify-center px-4 sm:px-6 lg:px-8">
         {/* ─── Center Group (Mascots + Slogan closely framed) ─── */}
         <div className="relative flex items-center justify-center">
           {/* Left: Berry Mascot + Coin */}

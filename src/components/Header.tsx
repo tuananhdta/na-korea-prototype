@@ -119,7 +119,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
         className={`fixed left-0 right-0 ${headerOffset} z-50 text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-in-out ${headerBgClass}`}
       >
         <div
-          className={`mx-auto flex max-w-[1180px] items-center justify-between px-6 transition-all duration-400 ease-in-out sm:px-8 ${
+          className={`mx-auto flex max-w-[1240px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
             isScrolled ? "h-20" : "h-[88px] sm:h-[96px]"
           }`}
         >
@@ -259,7 +259,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                   : "invisible -translate-y-2 opacity-0 pointer-events-none"
               }`}
             >
-              <div className="mx-auto max-w-[1180px] px-6 py-3.5 sm:px-8">
+              <div className="mx-auto max-w-[1240px] px-4 py-3.5 sm:px-6 lg:px-8">
                 <div className="mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8 lg:gap-x-11">
                   {item.subItems.map((sub) => {
                     const isSubActive = (() => {
