@@ -11,6 +11,7 @@ export interface ProductReview {
 export interface Product {
   id: string;
   goodsNo?: string;
+  slug?: string;
   title: string;
   url?: string;
   price: string;
@@ -18,6 +19,7 @@ export interface Product {
   categories: string[];
   image: string;
   originalImageUrl?: string;
+  galleryImages?: string[];
   sku?: string | null;
   shortDescription: string;
   description: string;

@@ -11,15 +11,20 @@ interface SanPhamPageProps {
 
 export async function generateStaticParams() {
   const products = productsData as Product[];
-  return products.map((p) => ({
-    id: p.id,
-  }));
+  const params: { id: string }[] = [];
+  products.forEach((p) => {
+    params.push({ id: p.id });
+    if (p.goodsNo && p.goodsNo !== p.id) {
+      params.push({ id: p.goodsNo });
+    }
+  });
+  return params;
 }
 
 export default async function SanPhamDetailPage({ params }: SanPhamPageProps) {
   const { id } = await params;
   const products = productsData as Product[];
-  const product = products.find((p) => p.id === id);
+  const product = products.find((p) => p.id === id || p.goodsNo === id || p.slug === id);
 
   if (!product) {
     notFound();

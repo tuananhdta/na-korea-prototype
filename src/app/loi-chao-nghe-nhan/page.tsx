@@ -58,7 +58,7 @@ export default function LoiChaoNgheNhanPage() {
 
               <div className="lg:col-span-6 relative aspect-4/3 rounded-xl overflow-hidden shadow-md bg-gray-50 border border-gray-100">
                 <Image
-                  src="/images/greeting.jpg"
+                  src="/images/sub02.jpg"
                   alt="Nghệ nhân Kim Jeong Hwan"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
