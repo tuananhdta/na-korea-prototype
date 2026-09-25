@@ -32,5 +32,12 @@ export const SITE_CONFIG = {
     "https://www.tiktok.com/@kimsredginsenghq",
     "https://zalo.me/g/kogger629",
   ],
+  bankInfo: {
+    bankName: "MB Bank (Ngân hàng Quân Đội)",
+    bankId: "MB",
+    accountNumber: "1888888856789",
+    accountHolder: "DOÃN TUẤN ANH",
+    accountHolderAscii: "DOAN TUAN ANH",
+  },
 };
 

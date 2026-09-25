@@ -16,12 +16,15 @@ import {
   AlertCircle,
   Building2,
   QrCode,
+  Copy,
+  Check,
 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
 import { OrderSuccessModal, OrderDetails } from "@/components/OrderSuccessModal";
 import { useCart, parsePriceToNumber, formatNumberToVnd } from "@/context/CartContext";
+import { SITE_CONFIG } from "@/lib/siteConfig";
 
 const VALID_COUPONS: Record<
   string,
@@ -68,11 +71,26 @@ export default function ThanhToanPage() {
   // Success Modal
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [completedOrder, setCompletedOrder] = useState<OrderDetails | null>(null);
+  const [copiedField, setCopiedField] = useState<string | null>(null);
 
   // Calculate discounts and totals
   const discountAmount = appliedCoupon ? appliedCoupon.discountAmount : 0;
   const finalTotalNumber = Math.max(0, totalPrice - discountAmount);
   const formattedFinalTotal = formatNumberToVnd(finalTotalNumber);
+
+  const cleanPhone = phone.replace(/[^0-9]/g, "");
+  const qrMemo = cleanPhone ? `NAK ${cleanPhone}` : "NAK DATHANG";
+  const vietQrUrl = `https://img.vietqr.io/image/${SITE_CONFIG.bankInfo.bankId}-${SITE_CONFIG.bankInfo.accountNumber}-compact2.png?amount=${finalTotalNumber}&addInfo=${encodeURIComponent(
+    qrMemo
+  )}&accountName=${encodeURIComponent(SITE_CONFIG.bankInfo.accountHolderAscii)}`;
+
+  const handleCopy = (text: string, field: string) => {
+    if (typeof navigator !== "undefined" && navigator.clipboard?.writeText) {
+      navigator.clipboard.writeText(text);
+      setCopiedField(field);
+      setTimeout(() => setCopiedField(null), 2000);
+    }
+  };
 
   const handleApplyCoupon = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
@@ -479,28 +497,107 @@ export default function ThanhToanPage() {
 
                           {/* Bank details expansion when selected */}
                           {paymentMethod === "bank_transfer" && (
-                            <div className="mt-3.5 p-3.5 rounded-lg bg-white border border-[#E5E5E5] text-xs space-y-2 text-[#4B4F52]">
-                              <div className="font-bold text-[#2D2D2D] text-xs flex items-center gap-1.5">
-                                <QrCode className="w-4 h-4 text-[#F0831F]" />
-                                <span>Thông tin tài khoản thụ hưởng:</span>
+                            <div className="mt-4 p-4 rounded-xl bg-white border border-[#E5E5E5] text-xs space-y-3.5 text-[#4B4F52] shadow-xs">
+                              <div className="flex items-center justify-between border-b border-gray-100 pb-2">
+                                <div className="font-bold text-[#2D2D2D] text-xs flex items-center gap-1.5">
+                                  <QrCode className="w-4 h-4 text-[#B5222A]" />
+                                  <span>Mã VietQR thanh toán nhanh:</span>
+                                </div>
+                                <span className="text-[10px] font-semibold text-[#B5222A] bg-red-50 px-2 py-0.5 rounded-md">
+                                  Chính thức MB Bank
+                                </span>
                               </div>
-                              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 pt-1 border-t border-gray-100">
-                                <div>
-                                  <span className="text-[#666666]">Ngân hàng:</span>{" "}
-                                  <strong className="text-[#2D2D2D]">Techcombank</strong>
+
+                              <div className="flex flex-col sm:flex-row gap-4 items-center">
+                                {/* VietQR Code Preview */}
+                                <div className="flex flex-col items-center shrink-0">
+                                  <div className="relative w-40 h-40 bg-white rounded-lg overflow-hidden border border-gray-200 p-1 shadow-xs">
+                                    <Image
+                                      src={vietQrUrl}
+                                      alt="Mã VietQR chuyển khoản Na Korea"
+                                      width={160}
+                                      height={160}
+                                      className="w-full h-full object-contain"
+                                      unoptimized
+                                    />
+                                  </div>
+                                  <span className="text-[10px] text-gray-500 mt-1 font-medium flex items-center gap-1">
+                                    <CheckCircle2 className="w-3 h-3 text-green-600 inline" /> Tự động điền tiền & nội dung
+                                  </span>
                                 </div>
-                                <div>
-                                  <span className="text-[#666666]">Số tài khoản:</span>{" "}
-                                  <strong className="text-[#B5222A]">19036888666999</strong>
+
+                                {/* Bank Details With Copy */}
+                                <div className="flex-1 w-full space-y-2 text-xs">
+                                  <div className="bg-[#F8F8F8] p-2.5 rounded-lg border border-gray-100">
+                                    <div className="text-[10px] uppercase font-bold text-gray-400">Ngân hàng</div>
+                                    <div className="font-bold text-[#2D2D2D]">{SITE_CONFIG.bankInfo.bankName}</div>
+                                  </div>
+
+                                  <div className="bg-[#F8F8F8] p-2.5 rounded-lg border border-gray-100 flex items-center justify-between">
+                                    <div>
+                                      <div className="text-[10px] uppercase font-bold text-gray-400">Số tài khoản</div>
+                                      <div className="font-mono font-bold text-[#B5222A] text-sm tracking-wide">
+                                        {SITE_CONFIG.bankInfo.accountNumber}
+                                      </div>
+                                    </div>
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        handleCopy(SITE_CONFIG.bankInfo.accountNumber, "stk");
+                                      }}
+                                      className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 flex items-center gap-1 transition-colors"
+                                    >
+                                      {copiedField === "stk" ? (
+                                        <>
+                                          <Check className="w-3.5 h-3.5 text-green-600" />
+                                          <span className="text-green-600">Đã chép</span>
+                                        </>
+                                      ) : (
+                                        <>
+                                          <Copy className="w-3.5 h-3.5 text-gray-500" />
+                                          <span>Sao chép</span>
+                                        </>
+                                      )}
+                                    </button>
+                                  </div>
+
+                                  <div className="bg-[#F8F8F8] p-2.5 rounded-lg border border-gray-100">
+                                    <div className="text-[10px] uppercase font-bold text-gray-400">Chủ tài khoản</div>
+                                    <div className="font-bold text-[#2D2D2D] uppercase">{SITE_CONFIG.bankInfo.accountHolder}</div>
+                                  </div>
+
+                                  <div className="bg-amber-50/80 p-2.5 rounded-lg border border-amber-200/80 flex items-center justify-between">
+                                    <div>
+                                      <div className="text-[10px] uppercase font-bold text-amber-800">Nội dung chuyển khoản</div>
+                                      <div className="font-mono font-bold text-[#B5222A] text-xs sm:text-sm">{qrMemo}</div>
+                                    </div>
+                                    <button
+                                      type="button"
+                                      onClick={(e) => {
+                                        e.preventDefault();
+                                        handleCopy(qrMemo, "memo");
+                                      }}
+                                      className="px-2.5 py-1 text-[11px] font-semibold rounded-md bg-white border border-amber-300 hover:bg-amber-50 text-amber-900 flex items-center gap-1 transition-colors"
+                                    >
+                                      {copiedField === "memo" ? (
+                                        <>
+                                          <Check className="w-3.5 h-3.5 text-green-600" />
+                                          <span className="text-green-600">Đã chép</span>
+                                        </>
+                                      ) : (
+                                        <>
+                                          <Copy className="w-3.5 h-3.5 text-amber-700" />
+                                          <span>Sao chép</span>
+                                        </>
+                                      )}
+                                    </button>
+                                  </div>
                                 </div>
-                                <div>
-                                  <span className="text-[#666666]">Chủ tài khoản:</span>{" "}
-                                  <strong className="text-[#2D2D2D]">CÔNG TY CỔ PHẦN NA KOREA</strong>
-                                </div>
-                                <div>
-                                  <span className="text-[#666666]">Nội dung:</span>{" "}
-                                  <strong className="text-[#B5222A]">{phone ? `NAK ${phone}` : "NAK SĐT_CỦA_BẠN"}</strong>
-                                </div>
+                              </div>
+
+                              <div className="text-[11px] text-[#666666] leading-relaxed bg-[#F8F8F8] p-2 rounded-lg border border-gray-100">
+                                💡 Quý khách có thể quét QR thanh toán ngay bây giờ hoặc nhấn <strong>"Đặt Hàng Ngay"</strong> để quét mã QR kèm theo mã đơn hàng tại bước xác nhận.
                               </div>
                             </div>
                           )}
