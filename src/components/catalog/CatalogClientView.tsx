@@ -94,50 +94,75 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
           </div>
 
           {/* ═══ Additional Brand Trust & Wholesale CTA Banner ═══ */}
-          <div className="mt-14 rounded-3xl bg-[#1C161B] p-8 sm:p-12 text-white shadow-xl relative overflow-hidden">
-            <div className="absolute right-0 top-0 bottom-0 w-1/3 opacity-10 pointer-events-none">
+          <div className="relative mt-12 sm:mt-16 overflow-hidden rounded-3xl border border-[#4B193E]/60 bg-gradient-to-br from-[#38112E] via-[#2A0D23] to-[#1C0817] p-6 sm:p-10 lg:p-12 text-white shadow-[0_20px_50px_rgba(45,13,36,0.25)] ring-1 ring-white/10">
+            {/* Background Texture & Glow */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#B5222A]/20 blur-3xl"
+            />
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-[#F0831F]/15 blur-3xl"
+            />
+            <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-full sm:w-1/2 opacity-10 mix-blend-luminosity">
               <Image
                 src="/images/ginseng.jpg"
                 alt="Nhân sâm background"
                 fill
-                className="object-cover"
+                className="object-cover object-right"
               />
             </div>
 
-            <div className="relative z-10 max-w-3xl space-y-4">
-              <h3 className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight">
-                Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Kim&apos;s Red Ginseng?
-              </h3>
-              <p className="text-sm sm:text-base text-gray-300 leading-relaxed">
-                NA Korea cung cấp chính sách chiết khấu đại lý hấp dẫn, hỗ trợ tài liệu in ấn Catalog, chứng từ nguồn gốc xuất xứ CO/CQ và đào tạo chuyên sâu về dược tính Ginsenoside cho đội ngũ tư vấn.
-              </p>
+            {/* 2-Column Responsive Grid Content */}
+            <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
+              {/* Left Column: Text & CTA */}
+              <div className="lg:col-span-7 space-y-4 sm:space-y-5">
+                {/* Brand Accent Dots */}
+                <div aria-hidden="true" className="flex h-3.5 items-center gap-1.5">
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#F0831F]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+                </div>
 
-              <div className="pt-3 flex flex-wrap items-center gap-4">
-                <Link
-                  href="/dang-ky-dai-ly"
-                  className="na-btn-primary group px-7 py-3.5 text-sm"
-                >
-                  <span>ĐĂNG KÝ HỢP TÁC ĐẠI LÝ</span>
-                  <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                </Link>
-                <Link
-                  href="/san-pham"
-                  className="na-btn-outline group px-6 py-3.5 text-sm !border-white/30 !bg-white/10 !text-white hover:!bg-white/20 hover:!border-white/60"
-                >
-                  <Eye className="h-4 w-4" />
-                  <span>Xem 32 Sản Phẩm Chính Hãng</span>
-                </Link>
+                <h3 className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug !text-white">
+                  Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Kim&apos;s Red Ginseng?
+                </h3>
+                
+                <p className="text-sm sm:text-base text-[#D4CDC7] leading-relaxed">
+                  NA Korea cung cấp chính sách chiết khấu đại lý hấp dẫn, hỗ trợ tài liệu in ấn Catalog, chứng từ nguồn gốc xuất xứ CO/CQ và đào tạo chuyên sâu về dược tính Ginsenoside cho đội ngũ tư vấn.
+                </p>
+
+                <div className="pt-2 sm:pt-3 flex flex-wrap items-center gap-3.5">
+                  <Link
+                    href="/dang-ky-dai-ly"
+                    className="na-btn-primary group px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider"
+                  >
+                    <span>ĐĂNG KÝ HỢP TÁC ĐẠI LÝ</span>
+                    <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  </Link>
+                  <Link
+                    href="/san-pham"
+                    className="na-btn-outline group px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold !border-white/25 !bg-white/10 !text-white hover:!bg-white hover:!text-[#4B193E] hover:!border-white transition-all backdrop-blur-sm"
+                  >
+                    <Eye className="h-4 w-4" />
+                    <span>Xem 32 Sản Phẩm Chính Hãng</span>
+                  </Link>
+                </div>
               </div>
 
-              <div className="relative mt-8 aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/15 bg-white/10 shadow-lg sm:aspect-[16/7]">
-                <Image
-                  src={heroContent.image}
-                  alt={heroContent.imageAlt}
-                  fill
-                  sizes="(max-width: 640px) 100vw, 768px"
-                  className="object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
+              {/* Right Column: Framed Visual Showcase */}
+              <div className="lg:col-span-5">
+                <div className="group relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[4/3] w-full overflow-hidden rounded-2xl border border-white/20 bg-white/5 shadow-2xl">
+                  <Image
+                    src={heroContent.image}
+                    alt={heroContent.imageAlt}
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 42vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                  <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-white/10 rounded-2xl" />
+                </div>
               </div>
             </div>
           </div>
