@@ -110,7 +110,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
       {!overlay && (
         <div
           aria-hidden="true"
-          className={`shrink-0 transition-[height] duration-400 ease-in-out ${pageSpacerHeight} ${overlay ? "bg-transparent" : "bg-[#4B193E]"}`}
+          className={`shrink-0 transition-[height] duration-400 ease-in-out ${pageSpacerHeight} bg-transparent`}
         />
       )}
 
