@@ -1048,3 +1048,36 @@
   animation: shimmer-sweep 4s ease-in-out infinite;
   pointer-events: none;
 }
+
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 3.5s ease-in-out infinite;
+}
+
+@keyframes ring-wave {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+}
+
+.animate-ring-wave {
+  animation: ring-wave 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+

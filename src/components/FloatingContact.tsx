@@ -4,6 +4,7 @@ import { useState, useRef, useEffect, MouseEvent as ReactMouseEvent } from "reac
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Phone, Mail, MessageCircle, X, ShoppingBag } from "lucide-react";
+import { ZaloLogo, GoogleGmailLogo, MessengerLogo, ZaloIconOnly } from "@/components/icons/BrandIcons";
 
 export function FloatingContact() {
   const pathname = usePathname();
@@ -169,8 +170,8 @@ export function FloatingContact() {
               aria-label="Gọi điện Hotline"
               className="group relative w-full py-2.5 flex items-center justify-center hover:bg-white/15 transition-colors"
             >
-              <div className="p-1.5 rounded-full bg-white/10 group-hover:bg-[#b5222a] group-hover:scale-110 transition-all duration-200">
-                <Phone className="w-5 h-5 text-white animate-pulse" />
+              <div className="p-1.5 rounded-full bg-white/10 group-hover:bg-emerald-600 group-hover:scale-110 transition-all duration-200">
+                <Phone className="w-5 h-5 text-white animate-phone-ring" />
               </div>
 
               {/* Tooltip */}
@@ -189,7 +190,7 @@ export function FloatingContact() {
               aria-label="Gửi email liên hệ"
               className="group relative w-full py-2.5 flex items-center justify-center hover:bg-white/15 transition-colors"
             >
-              <div className="p-1.5 rounded-full bg-white/10 group-hover:bg-[#b5222a] group-hover:scale-110 transition-all duration-200">
+              <div className="p-1.5 rounded-full bg-white/10 group-hover:bg-[#EA4335] group-hover:scale-110 transition-all duration-200">
                 <Mail className="w-5 h-5 text-white" />
               </div>
 
@@ -211,7 +212,7 @@ export function FloatingContact() {
               className="group relative w-full py-2.5 flex items-center justify-center hover:bg-white/15 transition-colors"
             >
               <div className="p-1.5 rounded-full bg-white/10 group-hover:bg-[#0068ff] group-hover:scale-110 transition-all duration-200 flex items-center justify-center">
-                <span className="text-xs font-black text-white">Zalo</span>
+                <ZaloLogo className="w-5 h-5" />
               </div>
 
               {/* Tooltip */}
@@ -233,7 +234,7 @@ export function FloatingContact() {
               className="group relative w-full py-2.5 pb-3 flex items-center justify-center hover:bg-white/15 transition-colors rounded-b-xl"
             >
               <div className="p-1.5 rounded-full bg-white/10 group-hover:bg-[#0084ff] group-hover:scale-110 transition-all duration-200 flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-white" />
+                <MessengerLogo className="w-5 h-5" />
               </div>
 
               {/* Tooltip */}
@@ -267,7 +268,7 @@ export function FloatingContact() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-full bg-[#0068ff] text-white px-4 py-2 shadow-lg text-xs font-bold transition-transform active:scale-95"
             >
-              <span className="text-xs font-black">Zalo</span>
+              <ZaloLogo className="w-4 h-4" />
               <span>Chat Zalo</span>
             </a>
 
@@ -276,9 +277,9 @@ export function FloatingContact() {
               href="https://m.me/KimRedGinseng"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-full bg-[#4B193E] text-white px-4 py-2 shadow-lg text-xs font-bold transition-transform active:scale-95 border border-white/20"
+              className="flex items-center gap-2 rounded-full bg-[#0084ff] text-white px-4 py-2 shadow-lg text-xs font-bold transition-transform active:scale-95 border border-white/20"
             >
-              <MessageCircle className="w-3.5 h-3.5 text-[#F0831F]" />
+              <MessengerLogo className="w-3.5 h-3.5" />
               <span>Messenger</span>
             </a>
           </div>

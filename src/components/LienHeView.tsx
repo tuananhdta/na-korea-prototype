@@ -5,17 +5,15 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { ZaloLogo, GoogleGmailLogo, PhoneCallFilledIcon } from "@/components/icons/BrandIcons";
 import {
   ChevronRight,
-  Phone,
-  Mail,
   MapPin,
   Send,
   CheckCircle2,
   ShieldCheck,
   Clock,
   Award,
-  MessageCircle,
   Truck,
   HeartHandshake,
 } from "lucide-react";
@@ -72,19 +70,31 @@ export function LienHeView() {
           {/* ─── 3 VIP QUICK-CONTACT CARDS ─── */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             
-            {/* Card 1: Hotline */}
+            {/* Card 1: Hotline (Phone màu xanh + animation rung chuông & sóng lan tỏa) */}
             <a
               href="tel:0903409939"
-              className="group flex items-center gap-4 rounded-2xl border border-[#EAE4DC] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-[#B5222A] hover:shadow-md"
+              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#EAE4DC] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-[0_12px_28px_rgba(16,185,129,0.18)] active:scale-[0.99]"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#4B193E] to-[#2D0C24] text-white shadow-xs transition-transform duration-300 group-hover:scale-105">
-                <Phone className="h-5 w-5 text-[#F0831F]" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-[#888888]">
-                  Hotline 24/7
+              {/* Subtle green ambient sheen on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-emerald-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+
+              <div className="relative flex h-13 w-13 shrink-0 items-center justify-center">
+                {/* Ripple wave ring */}
+                <span className="absolute inset-0 rounded-2xl bg-emerald-400/35 animate-ring-wave pointer-events-none" />
+                <span className="absolute -inset-0.5 rounded-2xl bg-emerald-500/20 animate-ping opacity-60 pointer-events-none group-hover:opacity-100" />
+                
+                {/* Vibrant green phone container with filled icon */}
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-green-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.38)] transition-all duration-300 group-hover:scale-108 group-hover:shadow-[0_6px_20px_rgba(16,185,129,0.5)]">
+                  <PhoneCallFilledIcon className="h-5 w-5 text-white animate-phone-ring transition-transform duration-300 group-hover:scale-110" />
                 </div>
-                <div className="font-sans text-lg font-extrabold text-[#B5222A] group-hover:underline truncate">
+              </div>
+
+              <div className="relative min-w-0 flex-1">
+                <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#888888]">
+                  <span>Hotline 24/7</span>
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                </div>
+                <div className="font-sans text-lg font-extrabold text-[#15803D] group-hover:text-emerald-600 transition-colors truncate">
                   090.340.9939
                 </div>
                 <div className="text-xs text-[#666666] truncate">
@@ -93,19 +103,30 @@ export function LienHeView() {
               </div>
             </a>
 
-            {/* Card 2: Zalo VIP */}
+            {/* Card 2: Zalo VIP (Zalo chuẩn logo chính thức + animation floating nhịp nhàng) */}
             <a
               href="https://zalo.me/0903409939"
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-center gap-4 rounded-2xl border border-[#EAE4DC] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-[#0068FF] hover:shadow-md"
+              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#EAE4DC] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#0068FF] hover:shadow-[0_12px_28px_rgba(0,104,255,0.18)] active:scale-[0.99]"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#0068FF] to-[#004BB5] text-white shadow-xs transition-transform duration-300 group-hover:scale-105">
-                <MessageCircle className="h-5 w-5 text-white" />
+              {/* Subtle blue ambient sheen on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+
+              <div className="relative flex h-13 w-13 shrink-0 items-center justify-center">
+                {/* Ripple wave ring */}
+                <span className="absolute inset-0 rounded-2xl bg-blue-400/35 animate-ring-wave pointer-events-none" />
+                
+                {/* Official Zalo icon container */}
+                <div className="relative flex h-12 w-12 items-center justify-center transition-all duration-300 group-hover:scale-108">
+                  <ZaloLogo className="h-12 w-12 rounded-xl shadow-[0_4px_14px_rgba(0,104,255,0.38)] group-hover:shadow-[0_6px_20px_rgba(0,104,255,0.5)] animate-float-gentle" />
+                </div>
               </div>
-              <div className="min-w-0 flex-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-[#888888]">
-                  Chat Zalo Trực Tuyến
+
+              <div className="relative min-w-0 flex-1">
+                <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#888888]">
+                  <span>Chat Zalo Trực Tuyến</span>
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#0068FF] animate-pulse" />
                 </div>
                 <div className="font-sans text-lg font-extrabold text-[#2D2D2D] group-hover:text-[#0068FF] transition-colors truncate">
                   Zalo OA Kim&apos;s Ginseng
@@ -116,19 +137,32 @@ export function LienHeView() {
               </div>
             </a>
 
-            {/* Card 3: Email */}
+            {/* Card 3: Google Gmail (Chuẩn logo Gmail Google 4 màu chính thức + floating & hover glow) */}
             <a
               href="mailto:Kimsredginseng@gmail.com"
-              className="group flex items-center gap-4 rounded-2xl border border-[#EAE4DC] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:border-[#4B193E] hover:shadow-md"
+              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#EAE4DC] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#EA4335] hover:shadow-[0_12px_28px_rgba(234,67,53,0.18)] active:scale-[0.99]"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-[#4B193E] to-[#2D0C24] text-white shadow-xs transition-transform duration-300 group-hover:scale-105">
-                <Mail className="h-5 w-5 text-[#F0831F]" />
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="text-[11px] font-bold uppercase tracking-wider text-[#888888]">
-                  Hộp Thư Tiếp Nhận
+              {/* Subtle red ambient sheen on hover */}
+              <div className="absolute inset-0 bg-gradient-to-r from-red-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
+
+              <div className="relative flex h-13 w-13 shrink-0 items-center justify-center">
+                {/* Ripple wave ring */}
+                <span className="absolute inset-0 rounded-2xl bg-red-400/30 animate-ring-wave pointer-events-none" />
+                
+                {/* Gmail icon container */}
+                <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white border border-[#EAE4DC] shadow-[0_4px_14px_rgba(234,67,53,0.18)] transition-all duration-300 group-hover:scale-108 group-hover:border-[#EA4335]/40 group-hover:shadow-[0_6px_20px_rgba(234,67,53,0.3)]">
+                  <div className="animate-float-gentle transition-transform duration-300 group-hover:scale-110">
+                    <GoogleGmailLogo className="h-6 w-6" />
+                  </div>
                 </div>
-                <div className="font-sans text-base font-extrabold text-[#2D2D2D] group-hover:text-[#4B193E] transition-colors truncate">
+              </div>
+
+              <div className="relative min-w-0 flex-1">
+                <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#888888]">
+                  <span>Hộp Thư Tiếp Nhận</span>
+                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#EA4335] animate-pulse" />
+                </div>
+                <div className="font-sans text-base font-extrabold text-[#2D2D2D] group-hover:text-[#EA4335] transition-colors truncate">
                   Kimsredginseng@gmail.com
                 </div>
                 <div className="text-xs text-[#666666] truncate">
