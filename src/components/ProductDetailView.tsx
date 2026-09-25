@@ -19,6 +19,7 @@ import { useRouter } from "next/navigation";
 import { Product, ProductReview } from "@/types/product";
 import { useCart } from "@/context/CartContext";
 import { ProductCard } from "@/components/ProductCard";
+import { sanitizeProductDescription } from "@/lib/sanitizeHtml";
 
 interface ProductDetailViewProps {
   product: Product;
@@ -450,8 +451,12 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   Thông tin chi tiết về {product.title}
                 </h3>
                 <div
-                  className="space-y-4 text-[#4B4F52] leading-relaxed"
-                  dangerouslySetInnerHTML={{ __html: product.description || product.shortDescription }}
+                  className="na-product-content"
+                  dangerouslySetInnerHTML={{
+                    __html: sanitizeProductDescription(
+                      product.description || product.shortDescription
+                    ),
+                  }}
                 />
               </div>
             )}

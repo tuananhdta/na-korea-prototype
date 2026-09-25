@@ -497,6 +497,181 @@
   80% { transform: translateX(2px) rotate(3deg); }
 }
 
+/* ═══ Product Description Prose Styling ═══
+   Applied to dangerouslySetInnerHTML content from WordPress.
+   Ensures consistent typography, spacing, and responsive images/tables
+   for SEO-friendly, well-structured product detail pages.
+   ═══════════════════════════════════════════ */
+.na-product-content {
+  color: var(--color-text);
+  font-size: 0.9375rem; /* 15px */
+  line-height: 1.75;
+}
+
+/* Headings */
+.na-product-content h2 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--color-heading);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-border);
+  letter-spacing: -0.01em;
+}
+
+.na-product-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.na-product-content h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-heading);
+  margin-top: 1.25rem;
+  margin-bottom: 0.375rem;
+}
+
+/* Paragraphs */
+.na-product-content p {
+  margin-bottom: 0.875rem;
+}
+
+.na-product-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Strong / Bold */
+.na-product-content strong,
+.na-product-content b {
+  font-weight: 700;
+  color: var(--color-heading);
+}
+
+/* Links */
+.na-product-content a {
+  color: var(--color-primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 200ms ease;
+}
+
+.na-product-content a:hover {
+  color: var(--color-primary-hover);
+}
+
+/* Lists */
+.na-product-content ul,
+.na-product-content ol {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+}
+
+.na-product-content ul {
+  list-style-type: disc;
+}
+
+.na-product-content ol {
+  list-style-type: decimal;
+}
+
+.na-product-content li {
+  margin-bottom: 0.375rem;
+  padding-left: 0.25rem;
+}
+
+.na-product-content li::marker {
+  color: var(--color-primary);
+}
+
+/* Images — responsive + rounded + centered */
+.na-product-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.25rem auto;
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* Tables — clean bordered style with brand accents */
+.na-product-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.8125rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+
+.na-product-content thead {
+  background-color: var(--color-background-soft);
+}
+
+.na-product-content thead th {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--color-heading);
+  border-bottom: 2px solid var(--color-border);
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.na-product-content tbody td {
+  padding: 0.625rem 1rem;
+  border-bottom: 1px solid var(--color-border);
+  vertical-align: top;
+}
+
+.na-product-content tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.na-product-content tbody tr:hover {
+  background-color: var(--color-background-soft);
+}
+
+.na-product-content tbody td strong {
+  color: var(--color-heading);
+  font-weight: 700;
+}
+
+/* Responsive table on mobile */
+@media (max-width: 640px) {
+  .na-product-content table {
+    font-size: 0.75rem;
+  }
+
+  .na-product-content thead th,
+  .na-product-content tbody td {
+    padding: 0.5rem 0.625rem;
+  }
+}
+
+/* Horizontal rules */
+.na-product-content hr {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  margin: 1.5rem 0;
+}
+
+/* Blockquotes */
+.na-product-content blockquote {
+  border-left: 3px solid var(--color-primary);
+  padding-left: 1rem;
+  margin: 1rem 0;
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
 /* ═══ E-Catalog 3D FlipBook Custom Styles ═══ */
 .flip-book-shadow {
   box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.1);
