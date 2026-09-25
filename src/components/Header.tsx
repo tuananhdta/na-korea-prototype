@@ -27,7 +27,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
   const isNavActive = (itemHref: string, subItems?: any[]) => {
     if (!pathname) return false;
     if (itemHref === "/") {
-      return pathname === "/";
+      return false;
     }
     if (pathname === itemHref || pathname.startsWith(itemHref + "/")) {
       return true;
