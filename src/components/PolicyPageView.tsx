@@ -214,10 +214,6 @@ export function PolicyPageView({ slug }: { slug: string }) {
         {/* Banner Hero */}
         <div className="relative overflow-hidden bg-gradient-to-r from-[#4B193E] via-[#35102c] to-[#1a0815] text-white py-12 sm:py-16 px-4 sm:px-6">
           <div className="max-w-[1240px] mx-auto relative z-10 space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-white/10 rounded-full text-xs font-semibold text-[#FFD8DB]">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#F0831F]" />
-              <span>Chính sách & Quy định chính thức</span>
-            </div>
             <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight drop-shadow-sm">
               {policy.title}
             </h1>

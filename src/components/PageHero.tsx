@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 interface PageHeroProps {
-  eyebrow: string;
+  eyebrow?: string;
   showEyebrow?: boolean;
   title: string;
   description: string;
@@ -12,7 +12,7 @@ interface PageHeroProps {
 
 export function PageHero({
   eyebrow,
-  showEyebrow = true,
+  showEyebrow = false,
   title,
   description,
   image,
@@ -38,11 +38,6 @@ export function PageHero({
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-[#161e27]/40 to-transparent" />
 
       <div className="na-hero-content relative z-10 mx-auto w-full max-w-[1240px] space-y-4">
-        {showEyebrow && (
-          <div className="inline-flex items-center rounded-full bg-[#b5222a] px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-white shadow-sm">
-            <span>{eyebrow}</span>
-          </div>
-        )}
         <h1 className="max-w-5xl text-3xl font-extrabold leading-tight tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl">
           {title}
         </h1>
