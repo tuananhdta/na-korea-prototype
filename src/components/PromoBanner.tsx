@@ -128,7 +128,6 @@ function RewardCoin({ className = "" }: { className?: string }) {
   );
 }
 
-
 /* ─── Doodle Cloud ─── */
 function DoodleCloud({ className = "" }: { className?: string }) {
   return (
@@ -156,7 +155,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
 
   return (
     <div
-      className="fixed inset-x-0 top-0 z-50 h-24 overflow-visible border-b border-[#E5DFD3] sm:h-20"
+      className="fixed inset-x-0 top-0 z-50 h-20 sm:h-20 overflow-visible border-b border-[#E5DFD3]"
       style={{
         background: `
           linear-gradient(to right, #FFFDF8, #FFF9ED, #FFFDF8),
@@ -165,7 +164,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
         `,
       }}
     >
-      {/* Decorative grid notebook border (top & bottom dashed lines) */}
+      {/* Decorative grid lines */}
       <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#6B8F5B]/30 to-transparent" />
       <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#6B8F5B]/30 to-transparent" />
 
@@ -173,11 +172,10 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
         {/* ─── Center Group (Mascots + Slogan closely framed) ─── */}
         <div className="relative flex items-center justify-center">
           {/* Left: Berry Mascot + Coin */}
-          <div className="absolute right-full mr-3 sm:mr-5 bottom-[-24px] sm:bottom-[-16px] hidden sm:flex w-13 md:w-15 lg:w-[62px] items-end pointer-events-none">
+          <div className="absolute right-full mr-3 sm:mr-5 bottom-[-16px] hidden sm:flex w-13 md:w-15 lg:w-[62px] items-end pointer-events-none">
             <div className="animate-[bounce-gentle_2.5s_ease-in-out_infinite]">
               <BerryMascot className="w-full drop-shadow-sm" />
             </div>
-            {/* Floating coin */}
             <RewardCoin className="absolute -right-1 top-1 w-4.5 animate-[float-coin_2s_ease-in-out_infinite] drop-shadow-sm md:w-5" />
           </div>
 
@@ -186,17 +184,17 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
 
           {/* Center: Animated Slogan Capsule */}
           <div className="relative z-10 flex items-center justify-center animate-[banner-float_4s_ease-in-out_infinite]">
-            <div className="flex items-center gap-2 sm:gap-3 rounded-full border border-dashed border-[#B5222A]/30 bg-white/80 px-4 py-1.5 sm:px-6 sm:py-2 shadow-[0_4px_16px_rgba(181,34,42,0.08)] backdrop-blur-xs transition-all hover:border-[#B5222A]/60 hover:shadow-[0_6px_20px_rgba(181,34,42,0.14)]">
+            <div className="flex items-center gap-1.5 sm:gap-3 rounded-full border border-dashed border-[#B5222A]/30 bg-white/85 px-3 py-1 sm:px-6 sm:py-2 shadow-[0_4px_16px_rgba(181,34,42,0.08)] backdrop-blur-xs transition-all hover:border-[#B5222A]/60">
               {/* Slogan Words */}
               <div className="flex items-center text-center">
-                <span className="text-gold-shimmer font-sans text-[13px] sm:text-[16px] md:text-[18px] font-extrabold tracking-wide whitespace-nowrap">
+                <span className="text-gold-shimmer font-sans text-[11px] sm:text-[15px] md:text-[17px] font-extrabold tracking-wide whitespace-nowrap">
                   Hồng sâm Kim
                 </span>
 
                 {/* Pulsing Ginseng Heartbeat dot */}
-                <span className="mx-2 sm:mx-2.5 inline-flex h-1.5 w-1.5 rounded-full bg-[#B5222A] animate-pulse" />
+                <span className="mx-1.5 sm:mx-2.5 inline-flex h-1.5 w-1.5 rounded-full bg-[#B5222A] animate-pulse shrink-0" />
 
-                <span className="font-sans text-[12px] sm:text-[15px] md:text-[17px] font-bold text-[#5A2B18] tracking-tight whitespace-nowrap">
+                <span className="font-sans text-[11px] sm:text-[14px] md:text-[16px] font-bold text-[#5A2B18] tracking-tight whitespace-nowrap">
                   Nơi tận tâm trở thành kiệt tác
                 </span>
               </div>
@@ -207,7 +205,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
           <DoodleCloud className="absolute -right-16 -top-4 hidden w-8 animate-[drift_15s_linear_infinite_reverse] opacity-50 md:block pointer-events-none" />
 
           {/* Right: Pung-i Mascot */}
-          <div className="absolute left-full ml-3 sm:ml-5 bottom-[-24px] sm:bottom-[-16px] hidden sm:flex w-13 md:w-15 lg:w-[62px] items-end pointer-events-none">
+          <div className="absolute left-full ml-3 sm:ml-5 bottom-[-16px] hidden sm:flex w-13 md:w-15 lg:w-[62px] items-end pointer-events-none">
             <div className="animate-[bounce-gentle_3s_ease-in-out_0.5s_infinite]">
               <PungiMascot className="w-full drop-shadow-sm" />
             </div>
@@ -215,14 +213,14 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
         </div>
       </div>
 
-      {/* ─── Close Button (Positioned at right edge of viewport with standard padding) ─── */}
+      {/* ─── Close Button ─── */}
       <button
         type="button"
         onClick={onClose}
         aria-label="Đóng banner"
-        className="absolute right-3 sm:right-5 md:right-7 lg:right-9 top-1/2 -translate-y-1/2 z-20 flex h-10 w-10 items-center justify-center rounded-full text-[#7A3B1E] transition-all duration-200 hover:bg-black/5 hover:text-[#B5222A] hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#B5222A]"
+        className="absolute right-2.5 sm:right-5 md:right-7 lg:right-9 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full text-[#7A3B1E] transition-all duration-200 hover:bg-black/5 hover:text-[#B5222A] active:scale-95 focus-visible:outline-none cursor-pointer"
       >
-        <X aria-hidden="true" className="h-5 w-5 sm:h-5.5 sm:w-5.5" />
+        <X aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
       </button>
     </div>
   );

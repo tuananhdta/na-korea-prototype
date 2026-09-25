@@ -23,17 +23,15 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [isBannerVisible, setIsBannerVisible] = useState(true);
 
-  // Active route detection for main menu items and their children (including nested sub-items)
+  // Active route detection for main menu items and their children
   const isNavActive = (itemHref: string, subItems?: any[]) => {
     if (!pathname) return false;
     if (itemHref === "/") {
       return pathname === "/";
     }
-    // Direct match or exact sub-path
     if (pathname === itemHref || pathname.startsWith(itemHref + "/")) {
       return true;
     }
-    // SubItems match (including nested children and related aliases like /hong-sam)
     if (
       subItems &&
       subItems.some((sub) => {
@@ -59,7 +57,6 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
     ) {
       return true;
     }
-    // Specific sections
     if (
       (itemHref === "/san-pham" || itemHref === "/product") &&
       (pathname.startsWith("/san-pham") || pathname.startsWith("/product") || pathname.startsWith("/products"))
@@ -116,7 +113,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
 
       <header
         onMouseLeave={() => setActiveMenu(null)}
-        className={`fixed left-0 right-0 ${headerOffset} z-50 text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-in-out ${headerBgClass}`}
+        className={`fixed left-0 right-0 ${headerOffset} z-40 text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-in-out ${headerBgClass}`}
       >
         <div
           className={`mx-auto flex max-w-[1240px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
@@ -141,106 +138,109 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             />
           </Link>
 
-        <nav className="hidden h-full flex-1 items-center justify-end gap-0.5 lg:flex xl:gap-1.5">
-          {navItems.map((item) => {
-            const isHovered = activeMenu === item.title;
-            const isRouteActive = isNavActive(item.href, item.subItems);
+          {/* Desktop Nav */}
+          <nav className="hidden h-full flex-1 items-center justify-end gap-0.5 lg:flex xl:gap-1.5">
+            {navItems.map((item) => {
+              const isHovered = activeMenu === item.title;
+              const isRouteActive = isNavActive(item.href, item.subItems);
 
-            return (
-              <div
-                key={item.title}
-                className="relative flex h-full items-center"
-                onMouseEnter={() => setActiveMenu(item.title)}
-                onFocus={() => setActiveMenu(item.title)}
-                onBlur={(event) => {
-                  if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
-                    setActiveMenu(null);
-                  }
-                }}
-              >
-                <Link
-                  href={item.href}
-                  aria-haspopup={item.subItems ? "menu" : undefined}
-                  aria-expanded={item.subItems ? isHovered : undefined}
-                  className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center text-[14px] leading-[1.15] tracking-[0.03em] drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 xl:px-2.5 ${
-                    isHovered
-                      ? "font-semibold text-white/95"
-                      : isRouteActive
-                        ? "font-bold text-white"
-                        : "font-medium text-white hover:text-[#FFF7F7]"
-                  }`}
+              return (
+                <div
+                  key={item.title}
+                  className="relative flex h-full items-center"
+                  onMouseEnter={() => setActiveMenu(item.title)}
+                  onFocus={() => setActiveMenu(item.title)}
+                  onBlur={(event) => {
+                    if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                      setActiveMenu(null);
+                    }
+                  }}
                 >
-                  <span>{item.title}</span>
+                  <Link
+                    href={item.href}
+                    aria-haspopup={item.subItems ? "menu" : undefined}
+                    aria-expanded={item.subItems ? isHovered : undefined}
+                    className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center text-[14px] leading-[1.15] tracking-[0.03em] drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 xl:px-2.5 ${
+                      isHovered
+                        ? "font-semibold text-white/95"
+                        : isRouteActive
+                          ? "font-bold text-white"
+                          : "font-medium text-white hover:text-[#FFF7F7]"
+                    }`}
+                  >
+                    <span>{item.title}</span>
 
-                  {item.subItems && (
-                    <ChevronDown
+                    {item.subItems && (
+                      <ChevronDown
+                        aria-hidden="true"
+                        className={`h-3 w-3 shrink-0 transition-transform duration-200 ${
+                          isHovered
+                            ? "rotate-180 text-white"
+                            : isRouteActive
+                              ? "text-white"
+                              : "text-white/80"
+                        }`}
+                      />
+                    )}
+
+                    {/* Active / Hover underline indicator bar in WHITE */}
+                    <span
                       aria-hidden="true"
-                      className={`h-3 w-3 shrink-0 transition-transform duration-200 ${
-                        isHovered
-                          ? "rotate-180 text-white"
-                          : isRouteActive
-                            ? "text-white"
-                            : "text-white/80"
+                      className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full bg-white transition-all duration-300 ${
+                        isHovered || isRouteActive ? "scale-x-100 opacity-100 shadow-[0_0_8px_rgba(255,255,255,0.85)]" : "scale-x-0 opacity-0"
                       }`}
                     />
-                  )}
+                  </Link>
+                </div>
+              );
+            })}
 
-                  {/* Active / Hover underline indicator bar in WHITE */}
-                  <span
-                    aria-hidden="true"
-                    className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full bg-white transition-all duration-300 ${
-                      isHovered || isRouteActive ? "scale-x-100 opacity-100 shadow-[0_0_8px_rgba(255,255,255,0.85)]" : "scale-x-0 opacity-0"
-                    }`}
-                  />
-                </Link>
-              </div>
-            );
-          })}
+            <button
+              type="button"
+              onClick={openCart}
+              className="relative ml-2 flex h-[54px] min-w-[72px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-md px-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 hover:bg-white/10 hover:text-white cursor-pointer"
+            >
+              <ShoppingBag className="h-5 w-5" />
+              {totalCount > 0 && (
+                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-extrabold text-white ring-2 ring-black/20">
+                  {totalCount}
+                </span>
+              )}
+            </button>
+          </nav>
 
-          <button
-            type="button"
-            onClick={openCart}
-            className="relative ml-2 flex h-[54px] min-w-[72px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-md px-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 hover:bg-white/10 hover:text-white"
-          >
-            <ShoppingBag className="h-5 w-5" />
-            {totalCount > 0 && (
-              <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-extrabold text-white ring-2 ring-black/20">
-                {totalCount}
-              </span>
-            )}
-          </button>
-        </nav>
-
-        <div className="flex items-center gap-2 lg:hidden">
-          <button
-            type="button"
-            onClick={openCart}
-            className="relative rounded-md p-2 text-white transition-colors hover:bg-white/10"
-          >
-            <ShoppingBag className="h-5 w-5" />
-            {totalCount > 0 && (
-              <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-bold text-white">
-                {totalCount}
-              </span>
-            )}
-          </button>
-          <button
-            onClick={() => {
-              if (onOpenMobileMenu) {
-                onOpenMobileMenu();
-              } else {
-                setIsMobileOpen(true);
-              }
-            }}
-            aria-label="Mở menu"
-            className="rounded-md p-2 text-white transition-colors hover:bg-white/10"
-          >
-            <Menu className="h-6 w-6" />
-          </button>
-        </div>
+          {/* Mobile Right Controls (Cart + Hamburger) */}
+          <div className="flex items-center gap-2 lg:hidden">
+            <button
+              type="button"
+              onClick={openCart}
+              aria-label="Giỏ hàng"
+              className="relative rounded-md p-2 text-white transition-colors hover:bg-white/10 cursor-pointer"
+            >
+              <ShoppingBag className="h-6 w-6" />
+              {totalCount > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-bold text-white">
+                  {totalCount}
+                </span>
+              )}
+            </button>
+            <button
+              onClick={() => {
+                if (onOpenMobileMenu) {
+                  onOpenMobileMenu();
+                } else {
+                  setIsMobileOpen(true);
+                }
+              }}
+              aria-label="Mở menu điều hướng"
+              className="rounded-md p-2 text-white transition-colors hover:bg-white/10 cursor-pointer"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
+          </div>
         </div>
 
-        {/* Full-width Submenus anchored directly under header */}
+        {/* Full-width Desktop Submenus */}
         {navItems.map((item) => {
           if (!item.subItems) return null;
           const isItemActive = activeMenu === item.title;
@@ -277,7 +277,6 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                       ) {
                         return true;
                       }
-                      // Product detail pages under "Tất Cả Sản Phẩm"
                       if (
                         (sub.href === "/san-pham" || sub.href === "/product") &&
                         (pathname.startsWith("/product/") || pathname.startsWith("/san-pham/")) &&
@@ -304,12 +303,10 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                           }`}
                         >
                           <span className="relative inline-flex items-center gap-1.5 whitespace-nowrap py-1 transition-transform duration-200 group-hover/sub:-translate-y-0.5">
-                            {/* Animated Active White Indicator Dot */}
                             {isSubActive && (
                               <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.95)] animate-pulse" />
                             )}
                             <span>{sub.title}</span>
-                            {/* Hover-only underline */}
                             <span
                               aria-hidden="true"
                               className="absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.9)] transition-transform duration-300 ease-out group-hover/sub:scale-x-100"
@@ -324,9 +321,12 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             </div>
           );
         })}
-
-        {!onOpenMobileMenu && <MobileDrawer isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)} />}
       </header>
+
+      {/* ─── Render Mobile Drawer OUTSIDE header element so it covers 100% full screen cleanly ─── */}
+      {!onOpenMobileMenu && (
+        <MobileDrawer isOpen={isMobileOpen} onClose={() => setIsMobileOpen(false)} />
+      )}
     </>
   );
 }
