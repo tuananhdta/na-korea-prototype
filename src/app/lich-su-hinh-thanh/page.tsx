@@ -1,10 +1,30 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { ChevronRight, Calendar } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Lịch Sử Hình Thành & Phát Triển",
+  description: "Hành trình hơn 50 năm khởi nguồn từ trang trại nhân sâm truyền thống Punggi (1968) đến thương hiệu Hồng sâm Kim's Red Ginseng vươn tầm quốc tế.",
+  keywords: [
+    "Lịch sử hình thành",
+    "Trang trại sâm Punggi",
+    "Kim's Red Ginseng",
+    "Nghệ nhân Kim Jeong Hwan",
+  ],
+  alternates: {
+    canonical: `${SITE_CONFIG.siteUrl}/lich-su-hinh-thanh`,
+  },
+  openGraph: {
+    title: `Lịch Sử Hình Thành & Phát Triển | ${SITE_CONFIG.brandName}`,
+    description: "Hơn nửa thế kỷ gìn giữ tinh hoa trồng sâm truyền thống vùng núi Sobaek Hàn Quốc.",
+    url: `${SITE_CONFIG.siteUrl}/lich-su-hinh-thanh`,
+    type: "website",
+  },
+};
 
 const TIMELINE = [
   {

@@ -1,2 +1,3 @@
-import LienHePage from "../lien-he/page";
+import LienHePage, { metadata } from "../lien-he/page";
+export { metadata };
 export default LienHePage;

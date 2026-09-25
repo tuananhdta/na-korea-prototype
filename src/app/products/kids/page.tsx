@@ -1,2 +1,3 @@
-import KidsProductPage from "../../san-pham/tre-em/page";
+import KidsProductPage, { metadata } from "../../san-pham/tre-em/page";
+export { metadata };
 export default KidsProductPage;

@@ -3,7 +3,7 @@ import { CatalogClientView } from "@/components/catalog/CatalogClientView";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: `Cẩm Nang Dược Tính & Công Dụng Ginsenoside | ${SITE_CONFIG.brandName}`,
+  title: "Cẩm Nang Dược Tính & Công Dụng Ginsenoside",
   description: `Cẩm nang chuyên sâu về 30+ loại hoạt chất Ginsenoside (Saponin) quý hiếm trong Hồng sâm 6 năm tuổi Punggi Hàn Quốc: cơ chế miễn dịch, phục hồi thể lực và lưu thông khí huyết.`,
   keywords: [
     "Công dụng Ginsenoside",

@@ -1,11 +1,32 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { ChevronRight, CheckCircle2 } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Về Chúng Tôi - NA Korea & Kim's Red Ginseng",
+  description: "Tổng công ty Nông nghiệp Nhân sâm Punggi – Chuyên canh tác và chế biến Nhân sâm 6 năm tuổi Kim's Red Ginseng với hơn 50 năm truyền thống gia tộc, nhập khẩu độc quyền bởi NA Korea.",
+  keywords: [
+    "Về chúng tôi",
+    "Kim's Red Ginseng",
+    "NA Korea",
+    "Nghệ nhân Kim Jeong Hwan",
+    "Nhân sâm Punggi",
+  ],
+  alternates: {
+    canonical: `${SITE_CONFIG.siteUrl}/gioi-thieu`,
+  },
+  openGraph: {
+    title: `Về Chúng Tôi - NA Korea & Kim's Red Ginseng | ${SITE_CONFIG.brandName}`,
+    description: "Kế thừa tinh hoa nhân sâm 500 năm vùng núi Sobaek – Thủ phủ Punggi Hàn Quốc.",
+    url: `${SITE_CONFIG.siteUrl}/gioi-thieu`,
+    type: "website",
+  },
+};
 
 export default function GioiThieuPage() {
   return (

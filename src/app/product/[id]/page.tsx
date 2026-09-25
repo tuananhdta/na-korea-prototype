@@ -1,3 +1,3 @@
-import SanPhamDetailPage, { generateStaticParams } from "../../san-pham/[id]/page";
-export { generateStaticParams };
+import SanPhamDetailPage, { generateStaticParams, generateMetadata } from "../../san-pham/[id]/page";
+export { generateStaticParams, generateMetadata };
 export default SanPhamDetailPage;

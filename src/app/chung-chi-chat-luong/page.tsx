@@ -1,11 +1,33 @@
-"use client";
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { ChevronRight } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Chứng Chỉ & Giải Thưởng Quốc Tế",
+  description: "Bộ chứng nhận chất lượng quốc tế của Kim's Red Ginseng: HACCP, GMP, FDA Hoa Kỳ, ISO 22000, Halal và Bằng sáng chế độc quyền từ Nghệ nhân Hàn Quốc.",
+  keywords: [
+    "Chứng chỉ chất lượng",
+    "HACCP",
+    "GMP",
+    "FDA",
+    "ISO 22000",
+    "Kim's Red Ginseng",
+  ],
+  alternates: {
+    canonical: `${SITE_CONFIG.siteUrl}/chung-chi-chat-luong`,
+  },
+  openGraph: {
+    title: `Chứng Chỉ & Giải Thưởng Quốc Tế | ${SITE_CONFIG.brandName}`,
+    description: "Bảo chứng chất lượng vàng chuẩn mực quốc tế của Kim's Red Ginseng.",
+    url: `${SITE_CONFIG.siteUrl}/chung-chi-chat-luong`,
+    type: "website",
+  },
+};
 
 const CERTIFICATE_IMAGES = [
   { src: "/images/certification/cc1.jpg", alt: "Chứng chỉ đạt được 1", title: "Geographical indication Certificate\n(ginseng)" },

@@ -3,7 +3,7 @@ import { CatalogClientView } from "@/components/catalog/CatalogClientView";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: `Catalogue Sản Phẩm & Di Sản 2026 | ${SITE_CONFIG.brandName}`,
+  title: "Catalogue Sản Phẩm & Di Sản 2026",
   description: `Khám phá trọn bộ ấn phẩm Catalogue 32 sản phẩm Hồng sâm 6 năm tuổi Kim's Red Ginseng vùng Punggi Hàn Quốc, quy trình hấp sấy gia truyền của nghệ nhân Kim Jeong Hwan.`,
   keywords: [
     "Catalogue Kim's Red Ginseng",

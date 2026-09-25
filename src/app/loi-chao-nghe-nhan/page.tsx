@@ -1,11 +1,31 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { ChevronRight } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Lời Chào Nghệ Nhân Kim Jeong Hwan",
+  description: "Tâm huyết suốt 50 năm của Nghệ nhân Nhân sâm Hàn Quốc Kim Jeong Hwan – Giữ trọn sự chân thành và bền bỉ trong từng củ hồng sâm 6 năm tuổi.",
+  keywords: [
+    "Nghệ nhân Kim Jeong Hwan",
+    "Lời chào nghệ nhân",
+    "Kim's Red Ginseng",
+    "Nhân sâm Hàn Quốc",
+  ],
+  alternates: {
+    canonical: `${SITE_CONFIG.siteUrl}/loi-chao-nghe-nhan`,
+  },
+  openGraph: {
+    title: `Lời Chào Nghệ Nhân Kim Jeong Hwan | ${SITE_CONFIG.brandName}`,
+    description: "Tâm huyết suốt 50 năm của Nghệ nhân Nhân sâm Hàn Quốc Kim Jeong Hwan.",
+    url: `${SITE_CONFIG.siteUrl}/loi-chao-nghe-nhan`,
+    type: "website",
+  },
+};
 
 export default function LoiChaoNgheNhanPage() {
   return (

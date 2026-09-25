@@ -5,7 +5,7 @@ export const SITE_CONFIG = {
   subBrandName: "Kim's Red Ginseng",
   companyName: "Công ty TNHH Thương Mại NA Korea",
   taxId: "0109946846",
-  slogan: "Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác",
+  slogan: "Nơi tận tâm trở thành kiệt tác",
   hotline: "0903409939",
   hotlineDisplay: "090.340.9939",
   email: "contact@nakorea.vn",

@@ -1,11 +1,32 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
-import { ChevronRight, Award, ShieldCheck, CheckCircle, ArrowRight } from "lucide-react";
+import { ChevronRight, ArrowRight } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Quy Trình Chế Biến Hồng Sâm 6 Năm Tuổi Thượng Hạng",
+  description: "Khám phá quy trình hấp sấy độc quyền chuyển hóa nhân sâm 6 năm tuổi thành Hồng sâm với hơn 30 loại Ginsenoside quý hiếm tại Punggi Hàn Quốc.",
+  keywords: [
+    "Hồng sâm 6 năm tuổi",
+    "Quy trình hấp sấy hồng sâm",
+    "Ginsenoside",
+    "Kim's Red Ginseng",
+    "Hồng sâm Hàn Quốc",
+  ],
+  alternates: {
+    canonical: `${SITE_CONFIG.siteUrl}/hong-sam`,
+  },
+  openGraph: {
+    title: `Quy Trình Chế Biến Hồng Sâm 6 Năm Tuổi Thượng Hạng | ${SITE_CONFIG.brandName}`,
+    description: "Sự biến đổi kỳ diệu từ nhân sâm tươi thành Hồng sâm 6 năm tuổi thượng hạng.",
+    url: `${SITE_CONFIG.siteUrl}/hong-sam`,
+    type: "website",
+  },
+};
 
 export default function HongSamPage() {
   return (

@@ -4,8 +4,10 @@ import { HomeClientView } from "@/components/HomeClientView";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
-  description: `${SITE_CONFIG.slogan}. Phân phối chính hãng Hồng sâm 6 năm tuổi Kim's Red Ginseng Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
+  title: {
+    absolute: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
+  },
+  description: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}. Phân phối chính hãng Hồng sâm 6 năm tuổi Kim's Red Ginseng Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
   keywords: [
     "Hồng sâm Kim",
     "Nơi tận tâm trở thành kiệt tác",

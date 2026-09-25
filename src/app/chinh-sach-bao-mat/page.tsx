@@ -1,21 +1,22 @@
 import { Metadata } from "next";
 import { PolicyPageView } from "@/components/PolicyPageView";
 import policiesData from "@/data/policies.json";
+import { SITE_CONFIG } from "@/lib/siteConfig";
 
 const policy = policiesData["chinh-sach-bao-mat"];
 
 export const metadata: Metadata = {
-  title: policy.metaTitle,
+  title: policy.title,
   description: policy.metaDescription,
   keywords: policy.keywords,
   alternates: {
-    canonical: "https://nakorea.vn/chinh-sach-bao-mat",
+    canonical: `${SITE_CONFIG.siteUrl}/chinh-sach-bao-mat`,
   },
   openGraph: {
-    title: policy.metaTitle,
+    title: `${policy.title} | ${SITE_CONFIG.brandName}`,
     description: policy.metaDescription,
-    url: "https://nakorea.vn/chinh-sach-bao-mat",
-    siteName: "Na Korea - Kim's Red Ginseng Việt Nam",
+    url: `${SITE_CONFIG.siteUrl}/chinh-sach-bao-mat`,
+    siteName: `${SITE_CONFIG.brandName} - NA Korea`,
     locale: "vi_VN",
     type: "article",
     images: [
@@ -29,7 +30,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: policy.metaTitle,
+    title: policy.title,
     description: policy.metaDescription,
     images: ["/images/production.jpg"],
   },

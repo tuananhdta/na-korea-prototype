@@ -1,11 +1,32 @@
-"use client";
-
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { ChevronRight, ShieldCheck, HeartPulse, Zap, Flame, CheckCircle2, XCircle } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/siteConfig";
+
+export const metadata: Metadata = {
+  title: "Khám Phá Vùng Đất Nhân Sâm Punggi 500 Năm",
+  description: "Tìm hiểu nguồn gốc Nhân sâm Goryeo (Cao Ly) và truyền thống canh tác nhân sâm 6 năm tuổi hơn 500 năm tại thủ phủ Punggi – Chân núi Sobaek Hàn Quốc.",
+  keywords: [
+    "Nhân sâm Punggi",
+    "Nhân sâm Goryeo",
+    "Nhân sâm Hàn Quốc",
+    "Saponin Ginsenoside",
+    "Kim's Red Ginseng",
+  ],
+  alternates: {
+    canonical: `${SITE_CONFIG.siteUrl}/nhan-sam`,
+  },
+  openGraph: {
+    title: `Khám Phá Vùng Đất Nhân Sâm Punggi 500 Năm | ${SITE_CONFIG.brandName}`,
+    description: "Di sản 500 năm nhân sâm Punggi huyền thoại dưới chân núi Sobaek Hàn Quốc.",
+    url: `${SITE_CONFIG.siteUrl}/nhan-sam`,
+    type: "website",
+  },
+};
 
 export default function NhanSamPage() {
   return (

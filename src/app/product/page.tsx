@@ -1,2 +1,3 @@
-import SanPhamCatalogPage from "../san-pham/page";
-export default SanPhamCatalogPage;
+import SanPhamPage, { metadata } from "../san-pham/page";
+export { metadata };
+export default SanPhamPage;

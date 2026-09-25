@@ -1,2 +1,3 @@
-import ThanhToanPage from "../thanh-toan/page";
+import ThanhToanPage, { metadata } from "../thanh-toan/page";
+export { metadata };
 export default ThanhToanPage;

@@ -1,2 +1,3 @@
-import LoiChaoNgheNhanPage from "../loi-chao-nghe-nhan/page";
+import LoiChaoNgheNhanPage, { metadata } from "../loi-chao-nghe-nhan/page";
+export { metadata };
 export default LoiChaoNgheNhanPage;

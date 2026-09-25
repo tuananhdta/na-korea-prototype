@@ -1,2 +1,3 @@
-import HongSamPage from "../hong-sam/page";
+import HongSamPage, { metadata } from "../hong-sam/page";
+export { metadata };
 export default HongSamPage;
