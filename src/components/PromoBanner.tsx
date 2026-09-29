@@ -76,23 +76,6 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
             />
           </div>
 
-          {/* Subtle Dark Gradient Overlay for Typography Contrast */}
-          <div className="absolute inset-0 bg-black/20 transition-opacity group-hover:bg-black/10" />
-
-          {/* ─── Center Vietnamese Slogan Overlay ─── */}
-          <div className="absolute inset-0 z-10 flex items-center justify-center px-4 pr-32 sm:pr-40">
-            <div className="flex items-center gap-2 rounded-full border border-dashed border-[#F0831F]/50 bg-black/45 px-3 py-1 sm:px-6 sm:py-1.5 shadow-xl backdrop-blur-md transition-all group-hover:border-[#B5222A]">
-              <span className="font-sans text-xs sm:text-base font-extrabold text-[#F0831F] tracking-wide whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-                Hồng sâm Kim
-              </span>
-
-              <span className="mx-1 inline-flex h-1.5 w-1.5 rounded-full bg-[#B5222A] animate-pulse shrink-0" />
-
-              <span className="font-sans text-xs sm:text-sm md:text-base font-bold text-white tracking-tight whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
-                Nơi tận tâm trở thành kiệt tác
-              </span>
-            </div>
-          </div>
         </Link>
       </div>
     </div>
