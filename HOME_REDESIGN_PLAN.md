@@ -50,8 +50,8 @@
 
 ---
 
-### 🔲 Phase 1 — Video Showcase (1 Video Điện Ảnh Nổi Bật)
-* **Vị trí:** Ngay bên dưới `HeroSlider`.
+### ✅ Phase 1 — Video Showcase (1 Video Điện Ảnh Nổi Bật)
+* **Trạng thái:** COMPLETED (`commit f00a7d4`)
 * **Giải pháp Kỹ thuật & UI/UX:**
   - **Layout:** 1 Khung Video chuẩn điện ảnh căn giữa (`max-w-5xl mx-auto`), aspect ratio 16:9 (`aspect-video`).
   - **Khung Video:** Bo góc `rounded-2xl`, viền mờ `border border-[#E5E5E5]` kết hợp shadow nổi sang trọng `shadow-2xl` và hiệu ứng `na-media-lift` khi hover.
@@ -60,7 +60,7 @@
 * **Nội Dung & Thông Điệp Đi Kèm:**
   - **Tiêu đề Section:** *"Khởi Đầu Tuyệt Đẹp Của Vùng Đất Hồng Sâm Punggi"*
   - **Subtitle:** *"Hành Trình Di Sản 50 Năm & Quy Trình Chế Tác Thượng Hạng Nghệ Nhân Kim Jeong Hwan"*
-  - **Video Embed URL:** `https://www.youtube.com/embed/F0obQn6c_50?rel=0` (hoặc URL video YouTube chính thức của thương hiệu).
+  - **Video Embed URL:** `https://www.youtube.com/embed/F0obQn6c_50?rel=0`.
 
 ---
 
