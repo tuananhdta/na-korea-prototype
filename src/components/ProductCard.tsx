@@ -61,7 +61,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Discount Badge */}
           {discountPercent > 0 && (
             <div className="absolute left-3 top-3 z-10">
-              <span className="inline-flex items-center bg-[#B5222A] px-2 py-0.5 text-[11px] font-bold text-white">
+              <span className="inline-flex items-center bg-[#B5222A] px-2 py-0.5 text-[11px] font-bold text-white font-figtree">
                 -{discountPercent}%
               </span>
             </div>
@@ -91,7 +91,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex flex-1 flex-col justify-between p-4">
           <div>
             <Link href={`/san-pham/${product.id}`} className="block">
-              <h3 className="line-clamp-2 text-sm font-bold text-[#111111] leading-snug transition-colors group-hover:text-[#B5222A]">
+              <h3 className="line-clamp-2 text-sm sm:text-[15px] font-bold text-[#111111] leading-snug transition-colors group-hover:text-[#B5222A]">
                 {product.title}
               </h3>
             </Link>
@@ -102,8 +102,8 @@ export function ProductCard({ product }: ProductCardProps) {
                   <Star key={i} className="h-3 w-3 fill-amber-500 text-amber-500" />
                 ))}
               </div>
-              <span className="font-bold text-[#333333] text-[11px]">{ratingScore.toFixed(1)}</span>
-              <span className="text-[11px] text-[#888888]">({reviewCount})</span>
+              <span className="font-bold text-[#333333] text-[11px] font-figtree">{ratingScore.toFixed(1)}</span>
+              <span className="text-[11px] text-[#888888] font-figtree">({reviewCount})</span>
             </div>
           </div>
 
@@ -118,11 +118,11 @@ export function ProductCard({ product }: ProductCardProps) {
             <link itemProp="availability" href="https://schema.org/InStock" />
 
             <div className="flex items-baseline gap-2">
-              <span className="text-base font-extrabold text-[#B5222A]">
+              <span className="text-base sm:text-lg font-extrabold text-[#B5222A] font-figtree">
                 {product.price}
               </span>
               {product.originalPrice && (
-                <span className="text-xs text-[#888888] line-through font-normal">
+                <span className="text-xs text-[#888888] line-through font-normal font-figtree">
                   {product.originalPrice}
                 </span>
               )}

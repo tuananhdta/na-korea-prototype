@@ -146,11 +146,11 @@ export function MetricsSection() {
             <CheckCircle2 className="w-4 h-4 text-[#B5222A]" />
             <span>Năng Lực & Uy Tín Thương Hiệu</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#2D2D2D] tracking-tight font-serif">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-[#111111] tracking-tight font-serif">
             NA Korea — Khẳng Định Vị Thế Dẫn Đầu
           </h2>
           <div className="w-16 h-1 bg-[#B5222A] mx-auto my-4 rounded-full" />
-          <p className="text-sm sm:text-base text-[#4B4F52] leading-relaxed">
+          <p className="text-sm sm:text-base text-[#666666] leading-relaxed">
             Đại diện phân phối chính thức các dòng sản phẩm Hồng sâm 6 năm tuổi Kim&apos;s Red Ginseng thượng hạng từ vùng núi Punggi, Hàn Quốc tại Việt Nam.
           </p>
         </div>
@@ -186,18 +186,18 @@ export function MetricsSection() {
                       <IconComponent className="w-4 h-4" />
                     </div>
 
-                    {/* Counter Number */}
+                    {/* Counter Number (Figtree) */}
                     <div className="relative z-10 flex items-baseline justify-center gap-0.5">
-                      <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-sans">
+                      <span className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight font-figtree">
                         {currentCount}
                       </span>
-                      <span className="text-xl sm:text-2xl font-extrabold text-[#F0831F]">
+                      <span className="text-xl sm:text-2xl font-extrabold text-[#F0831F] font-figtree">
                         {metric.suffix}
                       </span>
                     </div>
 
                     {/* Category Tag inside Circle bottom */}
-                    <div className="relative z-10 mt-1 px-2.5 py-0.5 rounded-full bg-[#F0831F]/10 border border-[#F0831F]/20 text-[10px] font-bold text-[#F0831F] tracking-widest uppercase">
+                    <div className="relative z-10 mt-1 px-2.5 py-0.5 rounded-full bg-[#F0831F]/10 border border-[#F0831F]/20 text-[10px] font-bold text-[#F0831F] tracking-widest uppercase font-figtree">
                       {metric.badge}
                     </div>
 
