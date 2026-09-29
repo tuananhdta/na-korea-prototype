@@ -48,17 +48,12 @@
 
 ---
 
-### ✅ Phase 1 — Video Showcase (1 Video Điện Ảnh Nổi Bật)
-* **Trạng thái:** COMPLETED (`commit f00a7d4`)
+### ✅ Phase 1 — Hero Fullscreen Video Background (Nền Video Đỉnh Trang)
+* **Trạng thái:** COMPLETED (`commit 7f806f2 & bbf5494`)
 * **Giải pháp Kỹ thuật & UI/UX:**
-  - **Layout:** 1 Khung Video chuẩn điện ảnh căn giữa (`max-w-5xl mx-auto`), aspect ratio 16:9 (`aspect-video`).
-  - **Khung Video:** Bo góc `rounded-2xl`, viền mờ `border border-[#E5E5E5]` kết hợp shadow nổi sang trọng `shadow-2xl` và hiệu ứng `na-media-lift` khi hover.
-  - **Tối ưu Tải Trang:** Embed YouTube chính thức với `loading="lazy"`, hỗ trợ chế độ xem toàn màn hình và tự động tối ưu Core Web Vitals.
-  
-* **Nội Dung & Thông Điệp Đi Kèm:**
-  - **Tiêu đề Section:** *"Khởi Đầu Tuyệt Đẹp Của Vùng Đất Hồng Sâm Punggi"*
-  - **Subtitle:** *"Hành Trình Di Sản 50 Năm & Quy Trình Chế Tác Thượng Hạng Nghệ Nhân Kim Jeong Hwan"*
-  - **Video Embed URL:** `https://www.youtube.com/embed/F0obQn6c_50?rel=0`.
+  - **Dạng Video:** Phát trực tiếp file MP4 local `/videos/hero-bg.mp4` siêu nét 1080p bằng thẻ HTML5 `<video autoPlay muted loop playsInline>`.
+  - **Sạch 100% Giao Diện:** Loại bỏ hoàn toàn 100% logo YouTube, nút chia sẻ & video đề xuất rác.
+  - **Tương Thích Cross-Platform:** Đã tối ưu 100% khả năng tự động phát 0.0s trên cả Windows (Edge/Chrome) & macOS (Safari/Chrome).
 
 ---
 
