@@ -96,11 +96,10 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
       : "h-[88px] sm:h-24";
 
   const isOverlayTop = overlay && !isScrolled;
-  const isTopTransparent = isOverlayTop && !activeMenu;
+  // Transparent even while a submenu is open — stays transparent until user scrolls
+  const isTopTransparent = isOverlayTop;
   const headerBgClass = isOverlayTop
-    ? activeMenu
-      ? "bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#F0EDE8]"
-      : "bg-transparent shadow-none border-b border-transparent"
+    ? "bg-transparent shadow-none border-b border-transparent"
     : "bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#F0EDE8]";
 
   return (
@@ -116,7 +115,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
 
       <header
         onMouseLeave={() => setActiveMenu(null)}
-        className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#2D2D2D] transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-in-out ${headerBgClass}`}
+        className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#2D2D2D] transition-[background-color,box-shadow,backdrop-filter] duration-400 ease-in-out ${headerBgClass}`}
       >
         <div
           className={`mx-auto flex max-w-[1240px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
@@ -131,12 +130,27 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                 : "h-[58px] w-[194px] sm:h-[62.4px] sm:w-[208px]"
             }`}
           >
+            {/* White logo — fades IN when at top of page (transparent) */}
             <Image
-              src={isTopTransparent ? BRAND_LOGOS.horizontalWhite : BRAND_LOGOS.horizontal}
+              src={BRAND_LOGOS.horizontalWhite}
               alt="6년근 김정환홍삼 | Kim's Red Ginseng"
               fill
               sizes="(max-width: 640px) 194px, 208px"
-              className="object-contain object-left transition-all duration-300"
+              className={`object-contain object-left transition-opacity duration-400 ease-in-out ${
+                isOverlayTop ? "opacity-100" : "opacity-0"
+              }`}
+              priority
+            />
+            {/* Dark logo — fades IN when scrolled or on inner pages */}
+            <Image
+              src={BRAND_LOGOS.horizontal}
+              alt=""
+              aria-hidden="true"
+              fill
+              sizes="(max-width: 640px) 194px, 208px"
+              className={`object-contain object-left transition-opacity duration-400 ease-in-out ${
+                isOverlayTop ? "opacity-0" : "opacity-100"
+              }`}
               priority
             />
           </Link>
