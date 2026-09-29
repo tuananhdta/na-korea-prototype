@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { HeroSlider } from "@/components/HeroSlider";
+import { MetricsSection } from "@/components/MetricsSection";
 import { ProductSection } from "@/components/ProductSection";
 import { GinsengSection } from "@/components/GinsengSection";
 import { BrandStorySection } from "@/components/BrandStorySection";
@@ -27,7 +28,10 @@ export function HomeClientView() {
         {/* 1. Fullscreen Video Hero Background */}
         <HeroSlider />
 
-        {/* 2. Products Showcase Section */}
+        {/* 2. Metrics & Certifications Section (Phase 2) */}
+        <MetricsSection />
+
+        {/* 3. Products Showcase Section */}
         <ProductSection />
 
         {/* 3. Korean Ginseng & Red Ginseng Section */}

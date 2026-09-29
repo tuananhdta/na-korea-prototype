@@ -13,7 +13,7 @@
 ├─────────────────────────────────────────────────────────┤
 │ [Hero Video Background] Fullscreen Video (p9detg0Rt_Q)  │ (Đã xong)
 ├─────────────────────────────────────────────────────────┤
-│ 2. Metrics & Certifications (10+ năm, 130+ đối tác...)  │ (Phase 2)
+│ 2. Metrics & Certifications (10+ năm, 130+ đối tác...)  │ (Đã xong)
 ├─────────────────────────────────────────────────────────┤
 │ 3. Dual Marquee Tickers (Đối tác Quốc tế & Trong nước)   │ (Phase 3)
 ├─────────────────────────────────────────────────────────┤
@@ -57,23 +57,23 @@
 
 ---
 
-### 🔲 Phase 2 — Tổng Quan Chỉ Số & Chứng Chỉ (Metrics & Certifications)
-* **Vị trí:** Ngay sau phần Video Showcase (hoặc HeroSlider).
+### ✅ Phase 2 — Tổng Quan Chỉ Số & Chứng Chỉ (Metrics & Certifications)
+* **Trạng thái:** COMPLETED (`commit pending`)
+* **Vị trí:** Ngay sau Hero Fullscreen Video Background (`<HeroSlider />`).
 * **Giải pháp Kỹ thuật & UI/UX:**
-  - **Color Palette & Nền:** Background kem ấm vi khí hậu sâm Punggi (`bg-[#FAF7F2]`) kết hợp viền mờ `border-[#E8DFD1]` cùng hiệu ứng watermark củ sâm nhẹ (`opacity-[0.03]`).
-  - **Layout:** Grid 4 Cột (Desktop), 2 Cột (Tablet & Mobile compact) giúp hiển thị cân đối trên mọi màn hình.
-  - **Typography & Con số:** 
-    - Font sans-serif siêu đậm (`font-extrabold`), kích thước `text-4xl sm:text-5xl lg:text-6xl`, màu đỏ sâm `#B5222A` phối cùng dấu `+`/`%` màu cam kim `#F0831F`.
-    - Hiệu ứng **Count-Up Animation** mượt mà chạy từ `0` tới con số mục tiêu khi khách hàng cuộn tới (dùng `IntersectionObserver` thuần, 0 dependency).
+  - **Color Palette & Nền:** Background kem ấm vi khí hậu sâm Punggi (`bg-[#FAF7F2]`) kết hợp viền mờ `border-[#E8DFD1]` cùng hiệu ứng watermark củ sâm nhẹ (`opacity-[0.025]`).
+  - **Layout:** Grid 4 Cột (Desktop), 2 Cột (Tablet & Mobile) dàn đều chuẩn responsive.
+  - **Typography & Con số:** Font sans-serif siêu đậm (`font-extrabold`), kích thước `text-4xl sm:text-5xl lg:text-6xl`, con số màu đỏ sâm `#B5222A` phối cùng dấu `+`/`%` màu cam kim `#F0831F`.
+  - **Animation:** Hiệu ứng **Count-Up Animation** mượt mà chạy từ `0` tới con số mục tiêu khi cuộn tới (`IntersectionObserver` + `requestAnimationFrame`).
   
-* **Chi tiết 4 Thẻ Chỉ Số:**
-  1. 🏆 **10+ Năm** — *Kinh nghiệm nhập khẩu & phân phối hồng sâm chính hãng tại VN*.
-  2. 🤝 **130+ Đối tác** — *Tập đoàn, ngân hàng và doanh nghiệp đồng hành*.
-  3. 🏬 **100+ Điểm bán** — *Hệ thống nhà phân phối & đại lý phủ sóng toàn quốc*.
-  4. 🛡️ **100% Chuẩn hóa** — *Đạt đầy đủ chứng nhận chất lượng quốc tế & Bộ Y Tế*.
+* **Chi tiết 4 Thẻ Chỉ Số (Nội dung chuẩn 100% người dùng yêu cầu):**
+  1. 🏆 **10+** — *Năm kinh nghiệm trong lĩnh vực nhập khẩu và phát triển thương hiệu*
+  2. 🏪 **130+** — *Nhà phân phối & đại lý trên toàn quốc*
+  3. 🤝 **11+** — *Đối tác chiến lược Hàn Quốc*
+  4. 🛡️ **100%** — *Sản phẩm chính hãng, nguồn gốc rõ ràng*
 
-* **Dải Badge Chứng Chỉ Đi Kèm (Certification Strip):**
-  - Đặt ở dải dưới cùng của Section với 4 Badge biểu tượng: **GMP**, **HACCP**, **ISO 22000**, **Tem Bộ Công Thương**.
+* **Dải Badge Chứng Chỉ (Certification Strip):**
+  - Dải dưới với 4 Badge biểu tượng chuẩn hóa: **GMP Korea**, **HACCP Certified**, **ISO 22000**, **Tem Bộ Công Thương**.
 
 ---
 
