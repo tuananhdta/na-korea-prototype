@@ -40,6 +40,23 @@
 
 ---
 
+### 🎬 Tính Năng Đặc Biệt — Intro Screen Màn Hình Chào (Tương Tự JungKwanJang)
+* **Mục tiêu:** Tạo trải nghiệm ấn tượng di sản ngay khi khách hàng lần đầu mở website (nghiên cứu từ cơ chế `home-intro` của `jungkwanjang.com`).
+* **Cơ chế Quản lý Session:**
+  - Kiểm tra `sessionStorage.getItem('na_intro_played')`.
+  - Nếu là lần truy cập đầu tiên ➔ Hiển thị màn hình Intro phủ kín Fullscreen (`fixed inset-0 z-[9999]`).
+  - Sau khi kết thúc (khoảng 2.5 - 3 giây) ➔ Fade-out mượt trong 700ms ➔ Đánh dấu `sessionStorage` để không lặp lại khi chuyển trang / F5.
+
+* **2 Phương Án Kỹ Thuật Đề Xuất:**
+  1. **Phương Án 1 (Intro Video MP4 - Chuẩn JungKwanJang):**
+     - Đặt 1 thẻ `<video playsinline autoPlay muted>` phát file MP4 hoạt họa logo cọ thư pháp nét đỏ / trắng trên nền đen hoặc trắng.
+     - Tự động bắt sự kiện `onEnded` để mờ dần và chuyển vào trang chủ.
+  2. **Phương Án 2 (Intro SVG / CSS Canvas Animation - Siêu Nhẹ & Tải Nhanh):**
+     - Vẽ mộc đỏ di sản + slogan *"Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác"* phát sáng và mở rèm rèm trập (curtain reveal) vào Hero Slider.
+     - Không cần tải file Video MP4 nặng, tối ưu 100% tốc độ tải trang trên cả iOS/Android.
+
+---
+
 ### 🔲 Phase 1 — Video Showcase (2 Video Nằm Song Song)
 * **Vị trí:** Ngay bên dưới `HeroSlider`.
 * **Giải pháp Kỹ thuật & UI/UX:**
