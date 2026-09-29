@@ -24,12 +24,11 @@ export const navItems: NavItem[] = [
     title: "Giới Thiệu",
     href: "/gioi-thieu",
     subItems: [
-      { title: "Về Chúng Tôi", href: "/gioi-thieu" },
       { title: "Lời Chào Đầu", href: "/loi-chao-nghe-nhan" },
+      { title: "Thương Hiệu", href: "/gioi-thieu" },
       { title: "Lịch Sử Hình Thành", href: "/lich-su-hinh-thanh" },
-      { title: "Chứng Chỉ Đạt Được", href: "/chung-chi-chat-luong" },
-      { title: "Về Nhân Sâm", href: "/nhan-sam" },
-      { title: "Về nhà nhập khẩu", href: "/ve-nha-nhap-khau" },
+      { title: "Chứng Chỉ Quốc Tế", href: "/chung-chi-chat-luong" },
+      { title: "Nguồn Gốc Nhân Sâm", href: "/nhan-sam" },
     ],
   },
   {
