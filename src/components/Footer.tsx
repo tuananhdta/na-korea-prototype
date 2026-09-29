@@ -20,6 +20,7 @@ const usefulLinks = [
   {
     label: "Chính sách bảo mật thông tin cá nhân",
     href: "/chinh-sach-bao-mat",
+    highlight: true,
   },
   {
     label: "Hướng dẫn mua hàng",
@@ -91,7 +92,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-[#222222] text-white hover:bg-[#B5222A] transition-colors"
         >
           <SocialIcon name="facebook" />
         </a>
@@ -102,7 +103,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-[#222222] text-white hover:bg-[#B5222A] transition-colors"
         >
           <SocialIcon name="instagram" />
         </a>
@@ -113,7 +114,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Tiktok"
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-[#222222] text-white hover:bg-[#B5222A] transition-colors"
         >
           <SocialIcon name="tiktok" />
         </a>
@@ -124,7 +125,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Zalo"
-          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-[#222222] text-white hover:bg-[#B5222A] transition-colors"
         >
           <SocialIcon name="zalo" />
         </a>
@@ -145,8 +146,8 @@ function ConsultationForm() {
 
   if (submitted) {
     return (
-      <div className="rounded border border-emerald-500/30 bg-emerald-950/40 p-4 text-center text-xs font-medium leading-relaxed text-emerald-200">
-        <div className="flex items-center justify-center gap-2 mb-1 text-emerald-400 font-bold">
+      <div className="rounded border border-emerald-500/30 bg-emerald-50 p-4 text-center text-xs font-medium leading-relaxed text-emerald-800">
+        <div className="flex items-center justify-center gap-2 mb-1 text-emerald-600 font-bold">
           <CheckCircle2 className="h-4 w-4" />
           <span>Đã gửi thành công!</span>
         </div>
@@ -165,10 +166,10 @@ function ConsultationForm() {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         aria-label="Họ và tên"
-        className="h-9 w-full rounded border border-white/20 bg-white/5 px-3 text-xs text-white placeholder:text-gray-400 outline-none focus:border-[#B5222A] transition-colors"
+        className="h-9 w-full rounded border border-[#DDDDDD] bg-[#FAFAFA] px-3 text-xs text-[#111111] placeholder:text-[#888888] outline-none focus:border-[#B5222A] focus:bg-white transition-colors"
       />
       <div className="relative">
-        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/20 pr-2 text-xs text-gray-400">
+        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-[#DDDDDD] pr-2 text-xs text-[#666666]">
           +84
         </span>
         <input
@@ -179,7 +180,7 @@ function ConsultationForm() {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           aria-label="Số điện thoại"
-          className="h-9 w-full rounded border border-white/20 bg-white/5 pl-13 pr-3 text-xs text-white placeholder:text-gray-400 outline-none focus:border-[#B5222A] transition-colors"
+          className="h-9 w-full rounded border border-[#DDDDDD] bg-[#FAFAFA] pl-13 pr-3 text-xs text-[#111111] placeholder:text-[#888888] outline-none focus:border-[#B5222A] focus:bg-white transition-colors"
         />
       </div>
       <input
@@ -189,7 +190,7 @@ function ConsultationForm() {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         aria-label="Lời nhắn"
-        className="h-9 w-full rounded border border-white/20 bg-white/5 px-3 text-xs text-white placeholder:text-gray-400 outline-none focus:border-[#B5222A] transition-colors"
+        className="h-9 w-full rounded border border-[#DDDDDD] bg-[#FAFAFA] px-3 text-xs text-[#111111] placeholder:text-[#888888] outline-none focus:border-[#B5222A] focus:bg-white transition-colors"
       />
       <button
         type="submit"
@@ -213,7 +214,7 @@ const footerJsonLd = {
       url: SITE_CONFIG.siteUrl,
       logo: {
         "@type": "ImageObject",
-        url: `${SITE_CONFIG.siteUrl}${BRAND_LOGOS.horizontalWhite}`,
+        url: `${SITE_CONFIG.siteUrl}${BRAND_LOGOS.horizontal}`,
       },
       taxID: SITE_CONFIG.taxId,
       sameAs: SITE_CONFIG.sameAs,
@@ -229,7 +230,7 @@ const footerJsonLd = {
       "@type": "LocalBusiness",
       "@id": `${SITE_CONFIG.siteUrl}/#localbusiness`,
       name: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.subBrandName} (NA Korea)`,
-      image: `${SITE_CONFIG.siteUrl}${BRAND_LOGOS.horizontalWhite}`,
+      image: `${SITE_CONFIG.siteUrl}${BRAND_LOGOS.horizontal}`,
       url: SITE_CONFIG.siteUrl,
       telephone: "+84-90-340-9939",
       email: SITE_CONFIG.email,
@@ -270,21 +271,21 @@ const footerJsonLd = {
 
 export function Footer() {
   return (
-    <footer className="bg-[#181818] text-white border-t border-[#333333]">
+    <footer className="bg-white text-[#333333] border-t-2 border-[#111111]">
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(footerJsonLd) }}
       />
 
-      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-14">
+      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           {/* Cột 1: Thương hiệu */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block" aria-label="Trang chủ Kim's Red Ginseng">
               <div className="relative h-12 w-44">
                 <Image
-                  src={BRAND_LOGOS.horizontalWhite}
+                  src={BRAND_LOGOS.horizontal}
                   alt="6년근 김정환홍삼 | Kim's Red Ginseng"
                   fill
                   sizes="180px"
@@ -297,7 +298,7 @@ export function Footer() {
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 
-            <p className="text-xs text-[#999999] leading-relaxed max-w-sm">
+            <p className="text-xs text-[#666666] leading-relaxed max-w-sm">
               Thương hiệu Hồng sâm 6 năm tuổi thượng hạng vùng núi Punggi Hàn Quốc, được kiến tạo từ 50 năm tâm huyết và bí quyết gia truyền của nghệ nhân Kim Jeong Hwan.
             </p>
 
@@ -318,7 +319,7 @@ export function Footer() {
                 />
               </a>
 
-              <div className="inline-flex items-center gap-1.5 rounded border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] text-[#999999]">
+              <div className="inline-flex items-center gap-1.5 rounded border border-[#EEEEEE] bg-[#FAFAFA] px-2.5 py-1 text-[11px] text-[#666666]">
                 <ShieldCheck className="h-3.5 w-3.5 text-[#B5222A]" />
                 <span>GMP • HACCP • ISO 22000</span>
               </div>
@@ -327,17 +328,17 @@ export function Footer() {
 
           {/* Cột 2: Đơn vị nhập khẩu */}
           <div className="lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-[#333333] pb-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#111111] border-b border-[#EEEEEE] pb-2">
               Đơn vị nhập khẩu
             </h3>
 
-            <div className="space-y-3 text-xs leading-relaxed text-[#999999]">
+            <div className="space-y-3 text-xs leading-relaxed text-[#666666]">
               <a
                 href="https://nakorea.vn/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Trang chủ NA Korea"
-                className="inline-block rounded bg-white p-1"
+                className="inline-block border border-[#EEEEEE] rounded p-1 bg-white"
               >
                 <Image
                   src="/images/wholesale/Logo-Na-Korea-01-300x87.png"
@@ -349,7 +350,7 @@ export function Footer() {
               </a>
 
               <div>
-                <p className="font-bold text-white uppercase text-[12px]">
+                <p className="font-bold text-[#111111] uppercase text-[12px]">
                   CÔNG TY TNHH THƯƠNG MẠI NA KOREA
                 </p>
                 <p className="text-[#888888] text-[11px] mt-0.5">
@@ -365,14 +366,14 @@ export function Footer() {
 
                 <div className="flex items-center gap-2">
                   <Phone className="h-4 w-4 shrink-0 text-[#B5222A]" />
-                  <a href="tel:0903409939" className="hover:text-white transition-colors">
+                  <a href="tel:0903409939" className="hover:text-[#B5222A] transition-colors">
                     090.340.9939
                   </a>
                 </div>
 
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 shrink-0 text-[#B5222A]" />
-                  <a href="mailto:contact@nakorea.vn" className="hover:text-white transition-colors">
+                  <a href="mailto:contact@nakorea.vn" className="hover:text-[#B5222A] transition-colors">
                     contact@nakorea.vn
                   </a>
                 </div>
@@ -382,17 +383,21 @@ export function Footer() {
 
           {/* Cột 3: Chính sách */}
           <div className="lg:col-span-2 space-y-3">
-            <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-[#333333] pb-2">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-[#111111] border-b border-[#EEEEEE] pb-2">
               Chính sách
             </h3>
 
             <nav aria-label="Liên kết chính sách">
-              <ul className="space-y-2 text-xs text-[#999999]">
+              <ul className="space-y-2 text-xs text-[#666666]">
                 {usefulLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="flex items-center gap-1 hover:text-white transition-colors"
+                      className={`flex items-center gap-1 transition-colors ${
+                        'highlight' in link && link.highlight
+                          ? 'text-[#B5222A] font-bold hover:underline'
+                          : 'hover:text-[#111111]'
+                      }`}
                     >
                       <ChevronRight className="h-3 w-3 shrink-0 text-[#B5222A]" />
                       <span>{link.label}</span>
@@ -405,14 +410,14 @@ export function Footer() {
 
           {/* Cột 4: Đăng ký tư vấn */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="rounded border border-[#333333] bg-[#222222] p-4">
+            <div className="rounded border border-[#EEEEEE] bg-[#FAFAFA] p-4">
               <div className="flex items-center gap-2 mb-2">
                 <FileText className="h-4 w-4 text-[#B5222A]" />
-                <h3 className="text-xs font-bold uppercase tracking-wider text-white">
+                <h3 className="text-xs font-bold uppercase tracking-wider text-[#111111]">
                   Đăng ký nhận tư vấn
                 </h3>
               </div>
-              <p className="text-[11px] text-[#999999] leading-relaxed mb-3">
+              <p className="text-[11px] text-[#666666] leading-relaxed mb-3">
                 Nhận báo giá ưu đãi & tư vấn liệu trình hồng sâm chuyên sâu từ chuyên gia.
               </p>
               <ConsultationForm />
@@ -422,13 +427,13 @@ export function Footer() {
       </div>
 
       {/* Dải đáy */}
-      <div className="border-t border-[#262626] bg-[#111111] py-4 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-[#888888]">
+      <div className="border-t border-[#EEEEEE] bg-[#FAFAFA] py-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-[#666666]">
           <p>
             © 2026 NA Korea - Kim&apos;s Red Ginseng Vietnam. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
-            <span className="text-[#888888] text-[11px] hidden md:inline">Kết nối với chúng tôi:</span>
+            <span className="text-[#666666] text-[11px] hidden md:inline">Kết nối với chúng tôi:</span>
             <SocialLinks />
           </div>
         </div>

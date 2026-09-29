@@ -134,7 +134,7 @@ export function MetricsSection() {
     <section
       ref={sectionRef}
       aria-label="Tổng quan năng lực & chứng chỉ NA Korea"
-      className="relative py-16 sm:py-24 bg-[#FAF7F2] border-y border-[#E8DFD1] overflow-hidden"
+      className="relative py-16 sm:py-24 bg-white border-y border-[#EEEEEE] overflow-hidden"
     >
       {/* Decorative Ginseng Subtle Grid Background */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#B5222A_1px,transparent_1px)] [background-size:24px_24px]" />

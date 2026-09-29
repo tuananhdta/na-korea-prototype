@@ -112,7 +112,7 @@ export const PARTNERS_LIST: Partner[] = [
 
 export function PartnerSection() {
   return (
-    <section className="relative overflow-hidden bg-[#FBF9F5] py-20 md:py-28 border-t border-[#EDE8DD]">
+    <section className="relative overflow-hidden bg-white py-20 md:py-28 border-t border-[#EEEEEE]">
       {/* Background Decorative Pattern */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.035]"
@@ -151,11 +151,11 @@ export function PartnerSection() {
         {/* Left & Right Gradient Masks for Seamless Edge Fade */}
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 left-0 z-20 w-16 sm:w-36 md:w-48 bg-gradient-to-r from-[#FBF9F5] via-[#FBF9F5]/90 to-transparent"
+          className="pointer-events-none absolute inset-y-0 left-0 z-20 w-16 sm:w-36 md:w-48 bg-gradient-to-r from-white via-white/90 to-transparent"
         />
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-y-0 right-0 z-20 w-16 sm:w-36 md:w-48 bg-gradient-to-l from-[#FBF9F5] via-[#FBF9F5]/90 to-transparent"
+          className="pointer-events-none absolute inset-y-0 right-0 z-20 w-16 sm:w-36 md:w-48 bg-gradient-to-l from-white via-white/90 to-transparent"
         />
 
         {/* Continuous Marquee Track */}
