@@ -70,7 +70,6 @@ function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" | "zal
     );
   }
 
-  // Zalo official icon
   return (
     <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4">
       <g fill="currentColor">
@@ -85,14 +84,14 @@ function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" | "zal
 
 function SocialLinks() {
   return (
-    <ul className="flex items-center gap-2.5" aria-label="Mạng xã hội">
+    <ul className="flex items-center gap-2" aria-label="Mạng xã hội">
       <li>
         <a
           href="https://www.facebook.com/KimRedGinseng"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
         >
           <SocialIcon name="facebook" />
         </a>
@@ -103,7 +102,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
         >
           <SocialIcon name="instagram" />
         </a>
@@ -114,7 +113,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Tiktok"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
         >
           <SocialIcon name="tiktok" />
         </a>
@@ -125,7 +124,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Zalo"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-[#B5222A] hover:text-white transition-colors"
         >
           <SocialIcon name="zalo" />
         </a>
@@ -146,8 +145,8 @@ function ConsultationForm() {
 
   if (submitted) {
     return (
-      <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-4 text-center text-xs font-medium leading-relaxed text-emerald-200">
-        <div className="flex items-center justify-center gap-2 mb-1.5 text-emerald-400 font-bold">
+      <div className="rounded border border-emerald-500/30 bg-emerald-950/40 p-4 text-center text-xs font-medium leading-relaxed text-emerald-200">
+        <div className="flex items-center justify-center gap-2 mb-1 text-emerald-400 font-bold">
           <CheckCircle2 className="h-4 w-4" />
           <span>Đã gửi thành công!</span>
         </div>
@@ -157,7 +156,7 @@ function ConsultationForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-2.5" aria-label="Đăng ký nhận tư vấn">
+    <form onSubmit={handleSubmit} className="space-y-2" aria-label="Đăng ký nhận tư vấn">
       <input
         type="text"
         name="Ho_ten_khach_hang"
@@ -166,10 +165,10 @@ function ConsultationForm() {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         aria-label="Họ và tên"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#F0831F] focus:ring-1 focus:ring-[#F0831F]/40 focus:bg-white/15"
+        className="h-9 w-full rounded border border-white/20 bg-white/5 px-3 text-xs text-white placeholder:text-gray-400 outline-none focus:border-[#B5222A] transition-colors"
       />
       <div className="relative">
-        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/15 pr-2.5 text-xs text-gray-300">
+        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/20 pr-2 text-xs text-gray-400">
           +84
         </span>
         <input
@@ -180,7 +179,7 @@ function ConsultationForm() {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           aria-label="Số điện thoại"
-          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#F0831F] focus:ring-1 focus:ring-[#F0831F]/40 focus:bg-white/15"
+          className="h-9 w-full rounded border border-white/20 bg-white/5 pl-13 pr-3 text-xs text-white placeholder:text-gray-400 outline-none focus:border-[#B5222A] transition-colors"
         />
       </div>
       <input
@@ -190,14 +189,14 @@ function ConsultationForm() {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         aria-label="Lời nhắn"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#F0831F] focus:ring-1 focus:ring-[#F0831F]/40 focus:bg-white/15"
+        className="h-9 w-full rounded border border-white/20 bg-white/5 px-3 text-xs text-white placeholder:text-gray-400 outline-none focus:border-[#B5222A] transition-colors"
       />
       <button
         type="submit"
-        className="na-btn-primary animate-shimmer-btn group w-full h-10 text-xs uppercase tracking-wider font-bold shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98]"
+        className="na-btn-primary w-full h-9 text-xs uppercase tracking-wider font-bold"
       >
         <span>GỬI YÊU CẦU TƯ VẤN</span>
-        <Send className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        <Send className="h-3.5 w-3.5" />
       </button>
     </form>
   );
@@ -271,127 +270,108 @@ const footerJsonLd = {
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#1E0A0D] text-white overflow-hidden border-t border-[#B5222A]/25">
-      {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
+    <footer className="bg-[#181818] text-white border-t border-[#333333]">
+      {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(footerJsonLd) }}
       />
 
-      {/* Subtle Luxury Radial Texture */}
-      <div
-        aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
-        style={{
-          backgroundImage: `radial-gradient(#FFF 1px, transparent 1px)`,
-          backgroundSize: "28px 28px",
-        }}
-      />
-
-      {/* Top Brand Red Accent Line with Infinite Border Beam */}
-      <div className="relative h-[2px] w-full overflow-hidden bg-white/10">
-        <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#B5222A] to-transparent animate-border-beam" />
-      </div>
-
-      <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-16 pb-12">
+      <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
-          {/* ═══ Cột 1: Thương hiệu & Di sản (Col 4) ═══ */}
+          {/* Cột 1: Thương hiệu */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-block group" aria-label="Trang chủ Kim's Red Ginseng">
-              <div className="relative h-14 w-48 transition-transform duration-300 group-hover:scale-105">
+            <Link href="/" className="inline-block" aria-label="Trang chủ Kim's Red Ginseng">
+              <div className="relative h-12 w-44">
                 <Image
                   src={BRAND_LOGOS.horizontalWhite}
                   alt="6년근 김정환홍삼 | Kim's Red Ginseng"
                   fill
-                  sizes="200px"
-                  className="object-contain object-left drop-shadow-md"
+                  sizes="180px"
+                  className="object-contain object-left"
                 />
               </div>
             </Link>
 
-            <p className="font-sans text-sm font-bold text-[#F0831F] tracking-wide">
+            <p className="text-xs font-bold text-[#B5222A] uppercase tracking-wider">
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-sm">
+            <p className="text-xs text-[#999999] leading-relaxed max-w-sm">
               Thương hiệu Hồng sâm 6 năm tuổi thượng hạng vùng núi Punggi Hàn Quốc, được kiến tạo từ 50 năm tâm huyết và bí quyết gia truyền của nghệ nhân Kim Jeong Hwan.
             </p>
 
-            {/* Certification & Sale Notification Badge */}
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
                 href="http://online.gov.vn/Home/WebDetails/127493"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block transition-transform duration-300 hover:scale-105"
+                className="inline-block"
                 title="Đã thông báo Bộ Công Thương"
               >
                 <Image
                   src="/images/wholesale/logoSaleNoti.png"
                   alt="Đã thông báo Bộ Công Thương"
-                  width={140}
-                  height={53}
-                  className="h-10 w-auto object-contain brightness-[1.05]"
+                  width={130}
+                  height={48}
+                  className="h-9 w-auto object-contain"
                 />
               </a>
 
-              <div className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 text-[11px] font-semibold text-gray-200 shadow-xs">
-                <ShieldCheck className="h-3.5 w-3.5 text-[#F0831F]" />
+              <div className="inline-flex items-center gap-1.5 rounded border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] text-[#999999]">
+                <ShieldCheck className="h-3.5 w-3.5 text-[#B5222A]" />
                 <span>GMP • HACCP • ISO 22000</span>
               </div>
             </div>
           </div>
 
-          {/* ═══ Cột 2: Đơn vị nhập khẩu & Trụ sở (Col 3) ═══ */}
-          <div className="lg:col-span-3 space-y-4">
-            <div className="border-b border-white/10 pb-2">
-              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
-                Đơn vị nhập khẩu
-              </h3>
-            </div>
+          {/* Cột 2: Đơn vị nhập khẩu */}
+          <div className="lg:col-span-3 space-y-3">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-[#333333] pb-2">
+              Đơn vị nhập khẩu
+            </h3>
 
-            <div className="space-y-3 text-xs leading-relaxed text-gray-300">
+            <div className="space-y-3 text-xs leading-relaxed text-[#999999]">
               <a
                 href="https://nakorea.vn/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Trang chủ NA Korea"
-                title="NA Korea - https://nakorea.vn/"
-                className="inline-block rounded-md bg-white p-1.5 shadow-sm transition-transform duration-300 hover:scale-105"
+                className="inline-block rounded bg-white p-1"
               >
                 <Image
                   src="/images/wholesale/Logo-Na-Korea-01-300x87.png"
                   alt="NA Korea Import & Distribution"
-                  width={140}
-                  height={40}
-                  className="h-7 w-auto object-contain"
+                  width={130}
+                  height={38}
+                  className="h-6 w-auto object-contain"
                 />
               </a>
 
               <div>
-                <p className="font-bold text-white uppercase text-[13px]">
+                <p className="font-bold text-white uppercase text-[12px]">
                   CÔNG TY TNHH THƯƠNG MẠI NA KOREA
                 </p>
-                <p className="text-gray-400 mt-0.5 text-[11px]">
+                <p className="text-[#888888] text-[11px] mt-0.5">
                   GPĐKKD/MST: 0109946846 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp
                 </p>
               </div>
 
-              <address className="not-italic space-y-2.5 pt-1">
-                <div className="flex items-start gap-2 text-gray-300">
-                  <MapPin className="h-4 w-4 shrink-0 text-[#F0831F] mt-0.5" />
+              <address className="not-italic space-y-2 pt-1 text-[12px]">
+                <div className="flex items-start gap-2">
+                  <MapPin className="h-4 w-4 shrink-0 text-[#B5222A] mt-0.5" />
                   <span>LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-gray-300">
-                  <Phone className="h-4 w-4 shrink-0 text-[#F0831F]" />
+                <div className="flex items-center gap-2">
+                  <Phone className="h-4 w-4 shrink-0 text-[#B5222A]" />
                   <a href="tel:0903409939" className="hover:text-white transition-colors">
                     090.340.9939
                   </a>
                 </div>
 
-                <div className="flex items-center gap-2 text-gray-300">
-                  <Mail className="h-4 w-4 shrink-0 text-[#F0831F]" />
+                <div className="flex items-center gap-2">
+                  <Mail className="h-4 w-4 shrink-0 text-[#B5222A]" />
                   <a href="mailto:contact@nakorea.vn" className="hover:text-white transition-colors">
                     contact@nakorea.vn
                   </a>
@@ -400,23 +380,21 @@ export function Footer() {
             </div>
           </div>
 
-          {/* ═══ Cột 3: Chính sách & Hỗ trợ (Col 2) ═══ */}
-          <div className="lg:col-span-2 space-y-4">
-            <div className="border-b border-white/10 pb-2">
-              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
-                Chính sách
-              </h3>
-            </div>
+          {/* Cột 3: Chính sách */}
+          <div className="lg:col-span-2 space-y-3">
+            <h3 className="text-xs font-bold uppercase tracking-wider text-white border-b border-[#333333] pb-2">
+              Chính sách
+            </h3>
 
             <nav aria-label="Liên kết chính sách">
-              <ul className="space-y-2.5 text-xs text-gray-300">
+              <ul className="space-y-2 text-xs text-[#999999]">
                 {usefulLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="group flex items-start gap-1.5 transition-all duration-200 hover:text-white hover:translate-x-1"
+                      className="flex items-center gap-1 hover:text-white transition-colors"
                     >
-                      <ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#F0831F]/70 transition-transform duration-200 group-hover:text-[#F0831F] group-hover:translate-x-1 mt-0.5" />
+                      <ChevronRight className="h-3 w-3 shrink-0 text-[#B5222A]" />
                       <span>{link.label}</span>
                     </Link>
                   </li>
@@ -425,16 +403,16 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) (Animation #2: Glow & Shimmer) ═══ */}
+          {/* Cột 4: Đăng ký tư vấn */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="rounded-2xl border border-white/15 bg-white/5 p-4 sm:p-5 backdrop-blur-md shadow-xl transition-all duration-300 hover:border-[#F0831F]/40 hover:bg-white/[0.08] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)]">
+            <div className="rounded border border-[#333333] bg-[#222222] p-4">
               <div className="flex items-center gap-2 mb-2">
-                <FileText className="h-4 w-4 text-[#F0831F]" />
-                <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
+                <FileText className="h-4 w-4 text-[#B5222A]" />
+                <h3 className="text-xs font-bold uppercase tracking-wider text-white">
                   Đăng ký nhận tư vấn
                 </h3>
               </div>
-              <p className="text-[11px] text-gray-300 leading-relaxed mb-3.5">
+              <p className="text-[11px] text-[#999999] leading-relaxed mb-3">
                 Nhận báo giá ưu đãi & tư vấn liệu trình hồng sâm chuyên sâu từ chuyên gia.
               </p>
               <ConsultationForm />
@@ -443,14 +421,14 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ═══ Dải đáy: Copyright & Social Links ═══ */}
-      <div className="border-t border-[#B5222A]/20 bg-[#120407]/90 py-4 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-gray-400">
+      {/* Dải đáy */}
+      <div className="border-t border-[#262626] bg-[#111111] py-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-[#888888]">
           <p>
             © 2026 NA Korea - Kim&apos;s Red Ginseng Vietnam. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
-            <span className="text-gray-400 text-[11px] hidden md:inline">Kết nối với chúng tôi:</span>
+            <span className="text-[#888888] text-[11px] hidden md:inline">Kết nối với chúng tôi:</span>
             <SocialLinks />
           </div>
         </div>
@@ -458,5 +436,3 @@ export function Footer() {
     </footer>
   );
 }
-
-

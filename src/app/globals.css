@@ -4,90 +4,92 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ════════════════════════════════════════════════════════════════════
+   JUNG KWAN JANG DESIGN SYSTEM & BRAND TOKENS
+   Inspired by official JungKwanJang (jungkwanjang.com) luxury aesthetic
+   ════════════════════════════════════════════════════════════════════ */
+
 :root {
-  /* 1. Đỏ Nhân sâm (Ginseng Red) — Nút CTA chính, link, trạng thái active, giá khuyến mãi */
+  /* 1. JungKwanJang Signature Brand Red */
   --red-700: #B5222A;
   --brand-primary: #B5222A;
   --color-primary: #B5222A;
   --color-primary-hover: #991C23;
 
-  /* 2. Tím mận hoàng gia (Royal Plum) — Footer, hero, các dải editorial nền sẫm */
-  --plum-700: #4B193E;
-  --color-plum: #4B193E;
-  --color-brand-footer: #4B193E;
+  /* 2. JungKwanJang Dark Charcoal & Luxury Black */
+  --dark-bg: #181818;
+  --dark-surface: #222222;
+  --color-brand-footer: #181818;
 
-  /* 3. Vàng hổ phách (Amber Gold) — Tiết chế: nhãn, sao đánh giá, chi tiết nguồn gốc (Không dùng làm nút) */
-  --gold-600: #F0831F;
-  --color-secondary: #F0831F;
-  --color-secondary-hover: #D97013;
+  /* 3. Accent Amber & Warm Gold */
+  --gold-600: #D4A359;
+  --color-secondary: #D4A359;
+  --color-secondary-hover: #B88942;
 
-  /* 4. Typography & Text */
-  --color-heading: #2D2D2D;
-  --color-text: #4B4F52;
+  /* 4. Typography & Text Colors */
+  --color-heading: #111111;
+  --color-text: #333333;
   --color-text-secondary: #666666;
+  --color-text-muted: #888888;
 
   /* 5. Backgrounds & Surfaces */
   --color-background: #FFFFFF;
   --color-background-soft: #F8F8F8;
-  --color-background-warm: #ECEBE9;
+  --color-background-warm: #F5F3EF;
 
   /* 6. Borders & Dividers */
-  --color-border: #E5E5E5;
+  --color-border: #EEEEEE;
+  --color-border-dark: #333333;
 
   /* System tokens */
   --background: #FFFFFF;
-  --foreground: #4B4F52;
-  --radius: 0.5rem;
+  --foreground: #333333;
+  --radius: 0.375rem;
 
-  /* Typography Families */
-  --font-sans: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-sans-kr: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-serif: "Nanum Myeongjo", "AppleMyungjo", "Batang", Georgia, serif;
-  --font-serif-kr: "Nanum Myeongjo", "AppleMyungjo", "Batang", Georgia, serif;
+  /* Typography Families - JungKwanJang Clean Sans & Serif */
+  --font-sans: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-sans-kr: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Nanum Myeongjo", "Batang", Georgia, serif;
+  --font-serif-kr: "Nanum Myeongjo", "Batang", Georgia, serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
-  /* Motion & elevation */
-  --na-motion-ease: cubic-bezier(0.22, 1, 0.36, 1);
-  --na-shadow-surface: 0 8px 24px rgba(75, 25, 62, 0.08), 0 2px 6px rgba(45, 45, 45, 0.04);
-  --na-shadow-surface-hover: 0 22px 44px rgba(75, 25, 62, 0.16), 0 6px 16px rgba(45, 45, 45, 0.06);
-  --na-shadow-media: 0 14px 32px rgba(44, 13, 35, 0.18), 0 4px 12px rgba(45, 45, 45, 0.08);
-  --na-shadow-media-hover: 0 28px 52px rgba(44, 13, 35, 0.27), 0 8px 20px rgba(45, 45, 45, 0.1);
+  /* Motion & Elevation */
+  --na-motion-ease: cubic-bezier(0.25, 1, 0.5, 1);
+  --na-shadow-surface: 0 4px 20px rgba(0, 0, 0, 0.06);
+  --na-shadow-surface-hover: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 @theme inline {
   --color-background: var(--color-background);
   --color-foreground: var(--color-text);
-  
+
   --color-brand-primary: var(--brand-primary);
   --color-primary: var(--color-primary);
   --color-primary-hover: var(--color-primary-hover);
-  
-  --color-plum: var(--plum-700);
-  --color-plum-700: var(--plum-700);
+
+  --color-dark-bg: var(--dark-bg);
   --color-brand-footer: var(--color-brand-footer);
 
   --color-gold: var(--gold-600);
-  --color-gold-600: var(--gold-600);
   --color-secondary: var(--color-secondary);
-  --color-secondary-hover: var(--color-secondary-hover);
-  
+
   --color-heading: var(--color-heading);
   --color-text: var(--color-text);
   --color-text-secondary: var(--color-text-secondary);
-  
+
   --color-bg-soft: var(--color-background-soft);
   --color-bg-warm: var(--color-background-warm);
   --color-border-subtle: var(--color-border);
-  
-  --font-sans: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-sans-kr: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  --font-serif: "Nanum Myeongjo", "AppleMyungjo", "Batang", Georgia, serif;
-  --font-serif-kr: "Nanum Myeongjo", "AppleMyungjo", "Batang", Georgia, serif;
-  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-  
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
+
+  --font-sans: var(--font-sans);
+  --font-sans-kr: var(--font-sans-kr);
+  --font-serif: var(--font-serif);
+  --font-serif-kr: var(--font-serif-kr);
+  --font-mono: var(--font-mono);
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
 }
 
 @layer base {
@@ -105,14 +107,16 @@
   body {
     background-color: var(--color-background);
     color: var(--color-text);
-    font-family: var(--font-open-sans), "Open Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    font-family: var(--font-sans);
     overflow-x: hidden;
     line-height: 1.6;
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
     color: var(--color-heading);
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
 
   button, input, optgroup, select, textarea {
@@ -125,819 +129,102 @@
   }
 }
 
-/* Brand Utility Classes */
-.text-heading {
-  color: var(--color-heading);
-}
-
-.text-body {
-  color: var(--color-text);
-}
-
-.text-body-muted {
-  color: var(--color-text-secondary);
-}
-
-.bg-plum {
-  background-color: var(--plum-700);
-}
-
-.text-plum {
-  color: var(--plum-700);
-}
-
-.border-plum {
-  border-color: var(--plum-700);
-}
-
-.bg-soft {
-  background-color: var(--color-background-soft);
-}
-
-.bg-warm {
-  background-color: var(--color-background-warm);
-}
-
-.border-brand {
-  border-color: var(--color-border);
-}
-
-/* Shared, restrained elevation transitions for interactive surfaces */
-.na-surface-lift,
-.na-media-lift {
-  transition:
-    transform 500ms var(--na-motion-ease),
-    box-shadow 500ms var(--na-motion-ease),
-    border-color 500ms var(--na-motion-ease);
-}
-
-.na-surface-lift {
-  box-shadow: var(--na-shadow-surface);
-}
-
-.na-media-lift {
-  box-shadow: var(--na-shadow-media);
-}
-
-.na-surface-lift:focus-within {
-  transform: translate3d(0, -5px, 0);
-  box-shadow: var(--na-shadow-surface-hover);
-}
-
-.na-media-lift:focus-visible,
-.na-media-lift:focus-within {
-  transform: translate3d(0, -5px, 0);
-  box-shadow: var(--na-shadow-media-hover);
-}
-
-@media (hover: hover) and (pointer: fine) {
-  .na-surface-lift:hover {
-    transform: translate3d(0, -5px, 0);
-    box-shadow: var(--na-shadow-surface-hover);
-  }
-
-  .na-media-lift:hover {
-    transform: translate3d(0, -5px, 0);
-    box-shadow: var(--na-shadow-media-hover);
-  }
-}
-
-.na-drawer-transition {
-  transition:
-    transform 480ms var(--na-motion-ease),
-    opacity 360ms var(--na-motion-ease),
-    box-shadow 480ms var(--na-motion-ease);
-}
-
-/* Shared viewport reveal for page sections and content panels. */
-.na-scroll-fade {
-  opacity: 0;
-  transform: translate3d(0, 22px, 0);
-  transition:
-    opacity 720ms var(--na-motion-ease),
-    transform 720ms var(--na-motion-ease);
-  will-change: opacity, transform;
-}
-
-.na-scroll-fade[data-scroll-fade-visible="true"] {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  will-change: auto;
-}
-
-.na-scroll-fade:focus-within {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  will-change: auto;
-}
-
-/* Refined entrance motion for imagery and editorial content */
-@keyframes na-image-reveal {
-  from {
-    opacity: 0;
-    transform: scale(1.045);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes na-content-reveal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 18px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes na-image-fade {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes na-hero-image {
-  from {
-    transform: scale(1.15);
-  }
-  to {
-    transform: scale(1);
-  }
-}
-
-/* ═══ Ken Burns Cinematic Animations ═══ */
-@keyframes kenburns-zoom-in {
-  0% {
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-  100% {
-    transform: scale(1.12) translate3d(-1%, -1%, 0);
-  }
-}
-
-@keyframes kenburns-zoom-out {
-  0% {
-    transform: scale(1.15) translate3d(1%, 0.5%, 0);
-  }
-  100% {
-    transform: scale(1.02) translate3d(0, 0, 0);
-  }
-}
-
-@keyframes kenburns-pulse {
-  0% {
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-  50% {
-    transform: scale(1.06) translate3d(0.5%, -0.5%, 0);
-  }
-  100% {
-    transform: scale(1) translate3d(0, 0, 0);
-  }
-}
-
-.na-image-reveal {
-  animation: na-image-reveal 1100ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  will-change: opacity, transform;
-}
-
-.na-image-fade {
-  animation: na-image-fade 700ms ease-out both;
-}
-
-.na-hero-image {
-  animation: na-hero-image 8000ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  will-change: transform;
-}
-
-.kenburns-in {
-  animation: kenburns-zoom-in 8500ms cubic-bezier(0.25, 1, 0.5, 1) both;
-  will-change: transform;
-}
-
-.kenburns-out {
-  animation: kenburns-zoom-out 8500ms cubic-bezier(0.25, 1, 0.5, 1) both;
-  will-change: transform;
-}
-
-.kenburns-pulse {
-  animation: kenburns-pulse 20000ms ease-in-out infinite;
-  will-change: transform;
-}
-
-.na-hero-content > * {
-  animation: na-content-reveal 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
-  will-change: opacity, transform;
-}
-
-.na-stagger-grid > * {
-  animation: na-image-fade 650ms ease-out both;
-  will-change: opacity;
-}
-
-.na-hero-content > *:nth-child(1),
-.na-stagger-grid > *:nth-child(1) {
-  animation-delay: 80ms;
-}
-
-.na-hero-content > *:nth-child(2),
-.na-stagger-grid > *:nth-child(2) {
-  animation-delay: 160ms;
-}
-
-.na-hero-content > *:nth-child(3),
-.na-stagger-grid > *:nth-child(3) {
-  animation-delay: 240ms;
-}
-
-.na-hero-content > *:nth-child(4),
-.na-stagger-grid > *:nth-child(4) {
-  animation-delay: 320ms;
-}
-
-.na-stagger-grid > *:nth-child(5) {
-  animation-delay: 400ms;
-}
-
-.na-stagger-grid > *:nth-child(6) {
-  animation-delay: 480ms;
-}
-
-.na-stagger-grid > *:nth-child(7) {
-  animation-delay: 560ms;
-}
-
-.na-stagger-grid > *:nth-child(8) {
-  animation-delay: 640ms;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .na-image-reveal,
-  .na-image-fade,
-  .na-hero-image,
-  .kenburns-in,
-  .kenburns-out,
-  .kenburns-pulse,
-  .na-hero-content > *,
-  .na-stagger-grid > * {
-    animation: none;
-    transform: none;
-    opacity: 1;
-    will-change: auto;
-  }
-
-  .na-scroll-fade {
-    opacity: 1;
-    transform: none;
-    transition-duration: 1ms;
-    will-change: auto;
-  }
-
-  .na-surface-lift,
-  .na-media-lift,
-  .na-drawer-transition {
-    transition-duration: 1ms !important;
-  }
-
-  .na-surface-lift:hover,
-  .na-surface-lift:focus-within,
-  .na-media-lift:hover,
-  .na-media-lift:focus-visible,
-  .na-media-lift:focus-within {
-    transform: none;
-  }
-
-  .animate-bounce,
-  .animate-ping,
-  .animate-pulse {
-    animation: none !important;
-  }
-
-  html {
-    scroll-behavior: auto;
-  }
-}
-
-/* Custom Sleek Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--color-background-soft);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c5c8cc;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-primary);
-}
-
-/* ═══ Promo Banner Mascot Animations ═══ */
-@keyframes bounce-gentle {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-4px) rotate(-2deg); }
-}
-
-@keyframes wave {
-  0%, 70%, 100% { transform: rotate(0deg); }
-  10% { transform: rotate(14deg); }
-  20% { transform: rotate(-6deg); }
-  30% { transform: rotate(10deg); }
-  40% { transform: rotate(-4deg); }
-  50% { transform: rotate(6deg); }
-}
-
-@keyframes float-coin {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  25% { transform: translateY(-6px) rotate(8deg); }
-  50% { transform: translateY(-3px) rotate(-4deg); }
-  75% { transform: translateY(-8px) rotate(4deg); }
-}
-
-@keyframes drift {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(12px); }
-  100% { transform: translateX(0); }
-}
-
-@keyframes twinkle {
-  0%, 100% { opacity: 0.3; transform: scale(0.7); }
-  50% { opacity: 1; transform: scale(1.1); }
-}
-
-@keyframes sway {
-  0%, 100% { transform: rotate(0deg); }
-  25% { transform: rotate(4deg); }
-  75% { transform: rotate(-4deg); }
-}
-
-@keyframes toss {
-  0%, 100% { transform: rotate(0deg); }
-  30% { transform: rotate(-12deg); }
-  60% { transform: rotate(4deg); }
-}
-
-@keyframes shake {
-  0%, 100% { transform: translateX(0) rotate(0deg); }
-  20% { transform: translateX(-2px) rotate(-5deg); }
-  40% { transform: translateX(2px) rotate(5deg); }
-  60% { transform: translateX(-2px) rotate(-3deg); }
-  80% { transform: translateX(2px) rotate(3deg); }
-}
-
-/* ═══ Product Description Prose Styling ═══
-   Applied to dangerouslySetInnerHTML content from WordPress.
-   Ensures consistent typography, spacing, and responsive images/tables
-   for SEO-friendly, well-structured product detail pages.
-   ═══════════════════════════════════════════ */
-.na-product-content {
-  color: var(--color-text);
-  font-size: 0.9375rem; /* 15px */
-  line-height: 1.75;
-}
-
-/* Headings */
-.na-product-content h2 {
-  font-size: 1.25rem;
-  font-weight: 800;
-  color: var(--color-heading);
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-border);
-  letter-spacing: -0.01em;
-}
-
-.na-product-content h3 {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.na-product-content h4 {
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--color-heading);
-  margin-top: 1.25rem;
-  margin-bottom: 0.375rem;
-}
-
-/* Paragraphs */
-.na-product-content p {
-  margin-bottom: 0.875rem;
-}
-
-.na-product-content p:last-child {
-  margin-bottom: 0;
-}
-
-/* Strong / Bold */
-.na-product-content strong,
-.na-product-content b {
-  font-weight: 700;
-  color: var(--color-heading);
-}
-
-/* Links */
-.na-product-content a {
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  transition: color 200ms ease;
-}
-
-.na-product-content a:hover {
-  color: var(--color-primary-hover);
-}
-
-/* Lists */
-.na-product-content ul,
-.na-product-content ol {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  padding-left: 1.5rem;
-}
-
-.na-product-content ul {
-  list-style-type: disc;
-}
-
-.na-product-content ol {
-  list-style-type: decimal;
-}
-
-.na-product-content li {
-  margin-bottom: 0.375rem;
-  padding-left: 0.25rem;
-}
-
-.na-product-content li::marker {
-  color: var(--color-primary);
-}
-
-/* Images — responsive + rounded + centered */
-.na-product-content img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: 1.25rem auto;
-  border-radius: 0.75rem;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-}
-
-/* Tables — clean bordered style with brand accents */
-.na-product-content table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 1.25rem 0;
-  font-size: 0.8125rem;
-  border-radius: 0.625rem;
-  overflow: hidden;
-  border: 1px solid var(--color-border);
-}
-
-.na-product-content thead {
-  background-color: var(--color-background-soft);
-}
-
-.na-product-content thead th {
-  padding: 0.75rem 1rem;
-  text-align: left;
-  font-weight: 700;
-  color: var(--color-heading);
-  border-bottom: 2px solid var(--color-border);
-  font-size: 0.8125rem;
-  text-transform: uppercase;
-  letter-spacing: 0.03em;
-}
-
-.na-product-content tbody td {
-  padding: 0.625rem 1rem;
-  border-bottom: 1px solid var(--color-border);
-  vertical-align: top;
-}
-
-.na-product-content tbody tr:last-child td {
-  border-bottom: none;
-}
-
-.na-product-content tbody tr:hover {
-  background-color: var(--color-background-soft);
-}
-
-.na-product-content tbody td strong {
-  color: var(--color-heading);
-  font-weight: 700;
-}
-
-/* Responsive table on mobile */
-@media (max-width: 640px) {
-  .na-product-content table {
-    font-size: 0.75rem;
-  }
-
-  .na-product-content thead th,
-  .na-product-content tbody td {
-    padding: 0.5rem 0.625rem;
-  }
-}
-
-/* Horizontal rules */
-.na-product-content hr {
-  border: none;
-  border-top: 1px solid var(--color-border);
-  margin: 1.5rem 0;
-}
-
-/* Blockquotes */
-.na-product-content blockquote {
-  border-left: 3px solid var(--color-primary);
-  padding-left: 1rem;
-  margin: 1rem 0;
-  color: var(--color-text-secondary);
-  font-style: italic;
-}
-
-/* ═══ E-Catalog 3D FlipBook Custom Styles ═══ */
-.flip-book-shadow {
-  box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.25), 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.stf__wrapper {
-  margin: 0 auto;
-}
-
-.stf__parent {
-  position: relative;
-  display: block;
-}
-
-.page-container {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  transform-style: preserve-3d;
-}
-
-/* ═══ Slogan Banner Special Animations ═══ */
-@keyframes gold-shimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-@keyframes banner-float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-@keyframes pulse-heart {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: scale(1.3);
-    opacity: 1;
-    filter: drop-shadow(0 0 6px rgba(181, 34, 42, 0.6));
-  }
-}
-
-@keyframes star-spin {
-  0% {
-    transform: rotate(0deg) scale(0.85);
-    opacity: 0.6;
-  }
-  50% {
-    transform: rotate(180deg) scale(1.25);
-    opacity: 1;
-  }
-  100% {
-    transform: rotate(360deg) scale(0.85);
-    opacity: 0.6;
-  }
-}
-
-.text-gold-shimmer {
-  background: linear-gradient(
-    90deg,
-    #8B2500 0%,
-    #B5222A 20%,
-    #F0831F 40%,
-    #FFF2A8 50%,
-    #F0831F 60%,
-    #B5222A 80%,
-    #8B2500 100%
-  );
-  background-size: 200% auto;
-  color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  animation: gold-shimmer 4s ease-in-out infinite;
-}
-
-/* ═══════════════════════════════════════════════════════
-   Unified Royal Korean CTA Button Design System
-   ═══════════════════════════════════════════════════════ */
-
-/* 1. Primary Royal Red CTA (Đỏ hồng sâm hoàng gia với hiệu ứng quét sáng và đổ bóng nổi 3D) */
+/* ════════════════════════════════════════════════════════════════════
+   JUNG KWAN JANG BRAND BUTTON & UTILITY CLASSES
+   ════════════════════════════════════════════════════════════════════ */
+
+/* Primary Brand Button (JungKwanJang Red) */
 .na-btn-primary {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  background: linear-gradient(135deg, #B5222A 0%, #C72832 50%, #B5222A 100%);
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.25rem;
+  background-color: #B5222A;
   color: #FFFFFF;
   font-weight: 700;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 4px 14px rgba(181, 34, 42, 0.28), 0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  transition: all 250ms cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
-  user-select: none;
-}
-
-.na-btn-primary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
-  transform: translateX(-100%);
-  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
+  border: 1px solid transparent;
 }
 
 .na-btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(181, 34, 42, 0.44), 0 2px 6px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(135deg, #A01B22 0%, #B5222A 50%, #A01B22 100%);
+  background-color: #991C23;
+  box-shadow: 0 4px 14px rgba(181, 34, 42, 0.3);
 }
 
-.na-btn-primary:hover::before {
-  transform: translateX(100%);
-}
-
-.na-btn-primary:active {
-  transform: translateY(0) scale(0.985);
-  box-shadow: 0 2px 8px rgba(181, 34, 42, 0.3);
-}
-
-.na-btn-primary:disabled {
-  opacity: 0.6;
-  pointer-events: none;
-  box-shadow: none;
-  transform: none;
-}
-
-/* 2. Secondary Royal Plum CTA (Tím mận hoàng gia) */
+/* Secondary Button (JungKwanJang Dark Charcoal) */
 .na-btn-secondary {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  background: #4B193E;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.25rem;
+  background-color: #181818;
   color: #FFFFFF;
   font-weight: 700;
-  box-shadow: 0 4px 14px rgba(75, 25, 62, 0.22);
-  transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  transition: all 250ms cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
-  user-select: none;
-}
-
-.na-btn-secondary::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
-  transform: translateX(-100%);
-  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
+  border: 1px solid transparent;
 }
 
 .na-btn-secondary:hover {
-  transform: translateY(-2px);
-  background: #B5222A;
-  box-shadow: 0 8px 24px rgba(181, 34, 42, 0.4);
+  background-color: #B5222A;
+  box-shadow: 0 4px 14px rgba(181, 34, 42, 0.3);
 }
 
-.na-btn-secondary:hover::before {
-  transform: translateX(100%);
-}
-
-.na-btn-secondary:active {
-  transform: translateY(0) scale(0.985);
-}
-
-/* 3. Outline White / Light CTA (Viền sang trọng) */
+/* Outline Button (Clean Border) */
 .na-btn-outline {
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.625rem;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  border: 1.5px solid rgba(75, 25, 62, 0.22);
-  background: rgba(255, 255, 255, 0.95);
-  color: #4B193E;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  color: #111111;
   font-weight: 700;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-  transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  border: 1px solid #111111;
+  transition: all 250ms cubic-bezier(0.25, 1, 0.5, 1);
   cursor: pointer;
-  user-select: none;
 }
 
 .na-btn-outline:hover {
-  transform: translateY(-2px);
-  border-color: #B5222A;
+  background-color: #111111;
+  color: #FFFFFF;
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
   background: #B5222A;
-  color: #FFFFFF;
-  box-shadow: 0 8px 20px rgba(181, 34, 42, 0.28);
 }
 
-.na-btn-outline:active {
-  transform: translateY(0) scale(0.985);
-}
-
-/* 4. Golden Amber Accent CTA (Vàng hổ phách cao cấp) */
-.na-btn-gold {
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.625rem;
-  overflow: hidden;
-  border-radius: 0.75rem;
-  background: linear-gradient(135deg, #D97013 0%, #F0831F 50%, #D97013 100%);
-  color: #FFFFFF;
-  font-weight: 700;
-  box-shadow: 0 4px 14px rgba(240, 131, 31, 0.3);
-  transition: all 300ms cubic-bezier(0.22, 1, 0.36, 1);
-  cursor: pointer;
-  user-select: none;
-}
-
-.na-btn-gold::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  transform: translateX(-100%);
-  transition: transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
-  pointer-events: none;
-}
-
-.na-btn-gold:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(240, 131, 31, 0.45);
-  background: linear-gradient(135deg, #C2620E 0%, #D97013 50%, #C2620E 100%);
-}
-
-.na-btn-gold:hover::before {
-  transform: translateX(100%);
-}
-
-.na-btn-gold:active {
-  transform: translateY(0) scale(0.985);
-}
-
-/* ═══════════════════════════════════════════
-   5. Infinite Seamless Marquee Animation
-   ═══════════════════════════════════════════ */
+/* Infinite Seamless Marquee Animation */
 @keyframes marquee-scroll {
   0% {
     transform: translate3d(0, 0, 0);
@@ -958,157 +245,3 @@
 .group-marquee:hover .animate-marquee {
   animation-play-state: paused;
 }
-
-@keyframes marquee-scroll-reverse {
-  0% {
-    transform: translate3d(-50%, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate-marquee-reverse {
-  display: flex;
-  width: max-content;
-  animation: marquee-scroll-reverse 35s linear infinite;
-  will-change: transform;
-}
-
-.animate-marquee-reverse:hover,
-.group-marquee:hover .animate-marquee-reverse {
-  animation-play-state: paused;
-}
-
-/* ═══════════════════════════════════════════
-   6. Footer Luxury Animations
-   ═══════════════════════════════════════════ */
-@keyframes footer-border-beam {
-  0% {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  20% {
-    opacity: 1;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    transform: translateX(200%);
-    opacity: 0;
-  }
-}
-
-.animate-border-beam {
-  animation: footer-border-beam 6s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  will-change: transform, opacity;
-}
-
-@keyframes phone-ring {
-  0%, 80%, 100% {
-    transform: rotate(0deg);
-  }
-  83%, 89% {
-    transform: rotate(-12deg) scale(1.08);
-  }
-  86%, 92% {
-    transform: rotate(12deg) scale(1.08);
-  }
-}
-
-.animate-phone-ring {
-  animation: phone-ring 5s ease-in-out infinite;
-  transform-origin: center center;
-}
-
-@keyframes shimmer-sweep {
-  0% {
-    transform: skewX(-20deg) translateX(-200%);
-  }
-  40%, 100% {
-    transform: skewX(-20deg) translateX(300%);
-  }
-}
-
-.animate-shimmer-btn {
-  position: relative;
-  overflow: hidden;
-}
-
-.animate-shimmer-btn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transform: skewX(-20deg) translateX(-200%);
-  animation: shimmer-sweep 4s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes float-gentle {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-3px);
-  }
-}
-
-.animate-float-gentle {
-  animation: float-gentle 3.5s ease-in-out infinite;
-}
-
-@keyframes ring-wave {
-  0% {
-    transform: scale(0.95);
-    opacity: 0.7;
-  }
-  70% {
-    transform: scale(1.35);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1.35);
-    opacity: 0;
-  }
-}
-
-.animate-ring-wave {
-  animation: ring-wave 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
-}
-
-@keyframes progress-bar {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes fade-in-up {
-  0% {
-    opacity: 0;
-    transform: translateY(16px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes zoom-in {
-  0% {
-    opacity: 0;
-    transform: scale(0.85);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
