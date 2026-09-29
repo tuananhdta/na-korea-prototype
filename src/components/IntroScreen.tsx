@@ -9,14 +9,7 @@ export function IntroScreen() {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Check if intro has already been played in this session
-    const hasSeenIntro = sessionStorage.getItem("na_intro_played");
-
-    if (hasSeenIntro) {
-      setIsDestroyed(true);
-      return;
-    }
-
+    // Option A: Always play intro on every F5 / page refresh
     setIsVisible(true);
     document.body.style.overflow = "hidden";
 
@@ -46,7 +39,6 @@ export function IntroScreen() {
     setTimeout(() => {
       setIsDestroyed(true);
       document.body.style.overflow = "";
-      sessionStorage.setItem("na_intro_played", "true");
     }, 850);
   };
 
@@ -80,7 +72,7 @@ export function IntroScreen() {
         className="h-full w-full object-cover object-center"
       />
 
-      {/* 2. Top & Bottom Brand Red Sweep Accent Bars (Appears on transition finish like JungKwanJang) */}
+      {/* 2. Top & Bottom Brand Red Sweep Accent Bars */}
       <div
         aria-hidden="true"
         className={`absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-transparent via-[#B5222A] to-transparent transition-opacity duration-500 ${
