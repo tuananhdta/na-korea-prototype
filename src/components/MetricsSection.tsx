@@ -1,7 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Award, Store, Handshake, ShieldCheck, CheckCircle2 } from "lucide-react";
+import Link from "next/link";
+import {
+  Award,
+  Store,
+  Handshake,
+  ShieldCheck,
+  ArrowUpRight,
+  CheckCircle2,
+} from "lucide-react";
 
 interface MetricItem {
   id: string;
@@ -9,6 +17,8 @@ interface MetricItem {
   suffix: string;
   lines: string[];
   icon: React.ElementType;
+  href: string;
+  badge: string;
 }
 
 const METRICS: MetricItem[] = [
@@ -22,6 +32,8 @@ const METRICS: MetricItem[] = [
       "và phát triển thương hiệu",
     ],
     icon: Award,
+    href: "/gioi-thieu",
+    badge: "Kinh Nghiệm",
   },
   {
     id: "distributors",
@@ -32,6 +44,8 @@ const METRICS: MetricItem[] = [
       "đại lý trên toàn quốc",
     ],
     icon: Store,
+    href: "/dang-ky-dai-ly",
+    badge: "Hệ Thống",
   },
   {
     id: "partners",
@@ -42,6 +56,8 @@ const METRICS: MetricItem[] = [
       "Hàn Quốc",
     ],
     icon: Handshake,
+    href: "/ve-nha-nhap-khau",
+    badge: "Đối Tác",
   },
   {
     id: "quality",
@@ -52,6 +68,8 @@ const METRICS: MetricItem[] = [
       "nguồn gốc rõ ràng",
     ],
     icon: ShieldCheck,
+    href: "/chung-chi-chat-luong",
+    badge: "Cam Kết",
   },
 ];
 
@@ -75,7 +93,7 @@ export function MetricsSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
 
     if (sectionRef.current) {
@@ -94,8 +112,6 @@ export function MetricsSection() {
     const animate = (currentTime: number) => {
       const elapsedTime = currentTime - startTime;
       const progress = Math.min(elapsedTime / duration, 1);
-      
-      // Easing function for smooth slowdown at the end (easeOutQuad)
       const easeProgress = 1 - Math.pow(1 - progress, 3);
 
       const nextCounts = METRICS.map((m) =>
@@ -118,15 +134,15 @@ export function MetricsSection() {
     <section
       ref={sectionRef}
       aria-label="Tổng quan năng lực & chứng chỉ NA Korea"
-      className="relative py-16 sm:py-20 bg-[#FAF7F2] border-y border-[#E8DFD1] overflow-hidden"
+      className="relative py-16 sm:py-24 bg-[#FAF7F2] border-y border-[#E8DFD1] overflow-hidden"
     >
-      {/* Decorative Ginseng Watermark Pattern */}
-      <div className="absolute inset-0 opacity-[0.025] pointer-events-none bg-[radial-gradient(#B5222A_1px,transparent_1px)] [background-size:24px_24px]" />
+      {/* Decorative Ginseng Subtle Grid Background */}
+      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(#B5222A_1px,transparent_1px)] [background-size:24px_24px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#B5222A]/10 border border-[#B5222A]/20 text-[#B5222A] text-xs sm:text-sm font-semibold tracking-wider uppercase mb-4">
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#B5222A]/10 border border-[#B5222A]/20 text-[#B5222A] text-xs sm:text-sm font-semibold tracking-wider uppercase mb-4 shadow-2xs">
             <CheckCircle2 className="w-4 h-4 text-[#B5222A]" />
             <span>Năng Lực & Uy Tín Thương Hiệu</span>
           </div>
@@ -139,53 +155,77 @@ export function MetricsSection() {
           </p>
         </div>
 
-        {/* 4 Metric Cards Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 mb-14 sm:mb-16">
-          {METRICS.map((metric, idx) => {
-            const IconComponent = metric.icon;
-            const currentCount = counts[idx];
+        {/* 4 Circular Medallions Row */}
+        <div className="relative mb-16 sm:mb-20">
+          {/* Subtle Horizontal Connecting Line (Desktop) */}
+          <div className="absolute top-28 left-20 right-20 h-[2px] bg-gradient-to-r from-transparent via-[#B5222A]/25 to-transparent pointer-events-none hidden lg:block" />
 
-            return (
-              <div
-                key={metric.id}
-                className="group relative bg-white/90 backdrop-blur-sm p-6 sm:p-8 rounded-2xl border border-[#E8DFD1] shadow-sm hover:shadow-lg hover:border-[#B5222A]/40 transition-all duration-300 flex flex-col justify-between"
-              >
-                {/* Top Icon Badge */}
-                <div className="flex items-center justify-between mb-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#FAF7F2] border border-[#E8DFD1] flex items-center justify-[#B5222A] justify-center text-[#B5222A] group-hover:bg-[#B5222A] group-hover:text-white transition-colors duration-300">
-                    <IconComponent className="w-6 h-6" />
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-8 justify-items-center">
+            {METRICS.map((metric, idx) => {
+              const IconComponent = metric.icon;
+              const currentCount = counts[idx];
+
+              return (
+                <Link
+                  key={metric.id}
+                  href={metric.href}
+                  className="group relative flex flex-col items-center text-center w-full max-w-[240px] focus:outline-none"
+                  title={`Click để xem chi tiết: ${metric.lines.join(" ")}`}
+                >
+                  {/* Outer Circular Medallion */}
+                  <div className="relative w-44 h-44 sm:w-52 sm:h-52 lg:w-56 lg:h-56 rounded-full bg-white border-2 border-[#E8DFD1] shadow-md group-hover:shadow-2xl group-hover:border-[#B5222A] transition-all duration-500 flex flex-col items-center justify-center p-5 overflow-hidden group-hover:-translate-y-2">
+                    
+                    {/* Inner Dashed Accent Ring */}
+                    <div className="absolute inset-2 rounded-full border border-dashed border-[#E8DFD1] group-hover:border-[#B5222A]/40 transition-colors duration-500 pointer-events-none" />
+
+                    {/* Subtle Pulsing Background Glow on Hover */}
+                    <div className="absolute inset-0 bg-radial from-[#B5222A]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                    {/* Watermark Icon */}
+                    <IconComponent className="absolute -bottom-2 -right-2 w-24 h-24 text-[#FAF7F2] group-hover:text-[#B5222A]/5 transition-colors duration-500 pointer-events-none" />
+
+                    {/* Top Icon Pill */}
+                    <div className="relative z-10 w-9 h-9 rounded-full bg-[#FAF7F2] border border-[#E8DFD1] flex items-center justify-center text-[#B5222A] group-hover:bg-[#B5222A] group-hover:text-white group-hover:scale-110 transition-all duration-300 mb-1 shadow-2xs">
+                      <IconComponent className="w-4 h-4" />
+                    </div>
+
+                    {/* Counter Number */}
+                    <div className="relative z-10 flex items-baseline justify-center gap-0.5 my-0.5">
+                      <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#B5222A] tracking-tight font-sans">
+                        {currentCount}
+                      </span>
+                      <span className="text-xl sm:text-2xl font-extrabold text-[#F0831F]">
+                        {metric.suffix}
+                      </span>
+                    </div>
+
+                    {/* Compact Label Inside Circle */}
+                    <div className="relative z-10 px-2 max-w-[160px]">
+                      <p className="text-xs sm:text-sm font-bold text-[#2D2D2D] leading-tight group-hover:text-[#B5222A] transition-colors">
+                        {metric.lines[0]}
+                      </p>
+                      {metric.lines[1] && (
+                        <p className="text-[11px] sm:text-xs text-[#666666] leading-tight mt-0.5 line-clamp-2">
+                          {metric.lines.slice(1).join(" ")}
+                        </p>
+                      )}
+                    </div>
+
+                    {/* Click Arrow Hint Icon */}
+                    <div className="absolute top-3 right-3 z-20 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 text-[#B5222A] bg-[#B5222A]/10 p-1.5 rounded-full">
+                      <ArrowUpRight className="w-4 h-4" />
+                    </div>
                   </div>
-                  <span className="text-xs font-semibold text-[#666666] tracking-wider uppercase">
-                    0{idx + 1}
-                  </span>
-                </div>
 
-                {/* Main Counter Display */}
-                <div className="mb-4">
-                  <div className="flex items-baseline gap-0.5">
-                    <span className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-[#B5222A] tracking-tight font-sans">
-                      {currentCount}
-                    </span>
-                    <span className="text-2xl sm:text-3xl font-extrabold text-[#F0831F]">
-                      {metric.suffix}
-                    </span>
+                  {/* External Hover Badge Label Below Circle */}
+                  <div className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#666666] group-hover:text-[#B5222A] transition-colors">
+                    <span>Xem chi tiết</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
                   </div>
-                </div>
-
-                {/* Lines of text provided strictly by user */}
-                <div className="space-y-0.5 text-xs sm:text-sm lg:text-base font-semibold text-[#2D2D2D] leading-snug">
-                  {metric.lines.map((line, lineIdx) => (
-                    <p key={lineIdx} className={lineIdx > 0 ? "font-normal text-[#4B4F52]" : ""}>
-                      {line}
-                    </p>
-                  ))}
-                </div>
-
-                {/* Bottom accent line on hover */}
-                <div className="absolute bottom-0 left-6 right-6 h-0.5 bg-[#B5222A] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left rounded-full" />
-              </div>
-            );
-          })}
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
         {/* Certification Badges Strip */}
