@@ -77,12 +77,14 @@
 
 ---
 
-### 🔲 Phase 3 — 2 Dòng Ticker Chạy Ngang (Dual Partner Marquees)
-* **Vị trí:** Sau phần Chỉ số & Chứng chỉ.
-* **Yêu cầu UI/UX:**
-  - **Dòng 1 (Đối tác Quốc tế):** Hiển thị logo/tên các tập đoàn, vùng trồng, viện nghiên cứu tại Hàn Quốc & Quốc tế. Chạy liên tục từ **Phải sang Trái** (`scroll-left`).
-  - **Dòng 2 (Đối tác Trong nước):** Hiển thị logo/tên các hệ thống đại lý, nhà phân phối, đối tác bán lẻ tại Việt Nam. Chạy liên tục từ **Trái sang Phải** (`scroll-right`).
-  - Hiệu ứng: Infinite Seamless Loop CSS animation, tự động tạm dừng (`animation-play-state: paused`) khi rê chuột vào (hover).
+### ✅ Phase 3 — 2 Dòng Ticker Chạy Ngang (Dual Partner Marquees)
+* **Trạng thái:** COMPLETED
+* **Vị trí:** Sau phần Chỉ số & Chứng chỉ (`<MetricsSection />`).
+* **Giải pháp Kỹ thuật & UI/UX:**
+  - **Dòng 1 (Đối tác Quốc tế & Hàn Quốc):** Hiển thị logo/tên các tập đoàn Shinhan Bank, KEB Hana Bank, Samsung SDS, Punggi Agricultural Corp, KCI, K-Market. Chạy liên tục từ **Phải sang Trái** (`animate-marquee-left`).
+  - **Dòng 2 (Đối tác Doanh nghiệp & Phân phối Việt Nam):** Hiển thị logo/tên Vingroup, FPT, Viettel, Vietcombank, BIDV, Vietnam Airlines, Văn Phú - Invest. Chạy liên tục từ **Trái sang Phải** (`animate-marquee-right`).
+  - **Hiệu ứng:** Infinite Seamless CSS loop keyframes, tự động dừng (`hover:paused`), mặt nạ mờ Gradient Masks 2 bên viền, thẻ card bo góc sang trọng chuẩn phong cách JungKwanJang.
+  - **CTA:** Khối kết nối đăng ký đại lý và đối tác quà tặng doanh nghiệp (`/dang-ky-dai-ly`).
 
 ---
 

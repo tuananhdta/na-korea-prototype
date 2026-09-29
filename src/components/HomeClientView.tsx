@@ -33,11 +33,11 @@ export function HomeClientView() {
         {/* 3. Metrics & Certifications Section (Phase 2) */}
         <MetricsSection />
 
-        {/* 4. Products Showcase Section */}
-        <ProductSection />
-
-        {/* 5. Enterprise Partners Infinite Marquee Section */}
+        {/* 4. Enterprise Partners Infinite Marquee Section (Phase 3) */}
         <PartnerSection />
+
+        {/* 5. Products Showcase Section (Phase 4) */}
+        <ProductSection />
       </main>
 
       {/* Footer */}
