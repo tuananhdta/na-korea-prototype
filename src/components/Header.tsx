@@ -280,7 +280,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               key={item.title}
               aria-hidden={!isItemActive}
               onMouseEnter={() => setActiveMenu(item.title)}
-              className={`absolute inset-x-0 top-full hidden border-t border-[#F0EDE8] bg-white/98 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#2D2D2D] transition-[opacity,transform,visibility] duration-200 lg:block ${
+              className={`absolute inset-x-0 top-full hidden transition-[opacity,transform,visibility,background-color,border-color] duration-200 lg:block ${
+                isTopTransparent
+                  ? "border-t border-white/10 bg-black/60 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.3)] text-white"
+                  : "border-t border-[#F0EDE8] bg-white/98 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#2D2D2D]"
+              } ${
                 isItemActive
                   ? "visible translate-y-0 opacity-100"
                   : "invisible -translate-y-2 opacity-0 pointer-events-none"
@@ -326,7 +330,9 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                           className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center text-sm tracking-[0.02em] whitespace-nowrap transition-colors duration-200 ${
                             isSubActive
                               ? "font-bold text-[#B5222A]"
-                              : "font-medium text-[#4B4F52] hover:text-[#B5222A]"
+                              : isTopTransparent
+                                ? "font-semibold text-white/90 hover:text-white"
+                                : "font-medium text-[#4B4F52] hover:text-[#B5222A]"
                           }`}
                         >
                           <span className="relative inline-flex items-center gap-1.5 whitespace-nowrap py-1 transition-transform duration-200 group-hover/sub:-translate-y-0.5">
