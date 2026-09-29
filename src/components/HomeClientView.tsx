@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { HeroSlider } from "@/components/HeroSlider";
-import { FeaturedVideoSection } from "@/components/FeaturedVideoSection";
 import { ProductSection } from "@/components/ProductSection";
 import { GinsengSection } from "@/components/GinsengSection";
 import { BrandStorySection } from "@/components/BrandStorySection";
@@ -25,11 +24,8 @@ export function HomeClientView() {
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        {/* 1. Hero Fullscreen Slider */}
+        {/* 1. Fullscreen Video Hero Background */}
         <HeroSlider />
-
-        {/* Phase 1: 1 Featured Cinematic Video Showcase */}
-        <FeaturedVideoSection />
 
         {/* 2. Products Showcase Section */}
         <ProductSection />

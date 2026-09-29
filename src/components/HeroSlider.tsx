@@ -1,185 +1,81 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import Image from "next/image";
+import { useState } from "react";
 import Link from "next/link";
-import { ChevronLeft, ChevronRight } from "lucide-react";
-
-interface Slide {
-  image: string;
-  title: string[];
-  description: string[];
-  link: string;
-}
-
-const slides: Slide[] = [
-  {
-    image: "/images/slide_1.jpg",
-    title: [
-      "Lời ước hẹn cùng lòng đất mẹ",
-      "Khởi đầu tuyệt mỹ của Tổng công ty Nông nghiệp Nhân sâm Punggi",
-    ],
-    description: [
-      "Tổng công ty Nông nghiệp Nhân sâm Punggi gửi trọn tấm lòng chân thành vào mảnh đất màu mỡ.",
-      "Chúng tôi gìn giữ trọn vẹn sự kiên định nuôi trồng nhân sâm 6 năm tuổi trứ danh vùng Punggi.",
-    ],
-    link: "/gioi-thieu",
-  },
-  {
-    image: "/images/slide_2.jpg",
-    title: [
-      "Con người có thể dối lừa Đất,",
-      "nhưng Đất không bao giờ dối lừa Con người.",
-    ],
-    description: [
-      "Hồng sâm 6 năm tuổi được nuôi dưỡng tại Punggi – vùng đất thanh khiết dưới chân dãy núi Sobaek huyền thoại,",
-      "niềm tự hào của những nghệ nhân nhân sâm Hàn Quốc.",
-    ],
-    link: "/loi-chao-nghe-nhan",
-  },
-];
+import { ArrowRight, Volume2, VolumeX } from "lucide-react";
 
 export function HeroSlider() {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 8000);
-
-    return () => {
-      clearInterval(timer);
-    };
-  }, [current]);
-
-  const prevSlide = () => {
-    setCurrent((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
-  };
-
-  const nextSlide = () => {
-    setCurrent((prev) => (prev + 1) % slides.length);
-  };
+  const [isMuted, setIsMuted] = useState(true);
 
   return (
-    <section data-floating-contact-hero className="relative w-full h-screen min-h-[600px] overflow-hidden bg-[#111] text-white">
-      {/* Slides with Ken Burns slow zoom animation */}
-      {slides.map((slide, idx) => {
-        const isActive = idx === current;
-        return (
-          <div
-            key={idx}
-            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-              isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
-            }`}
-          >
-            {/* Background Image Container with Dynamic Ken Burns Animation */}
-            <div
-              className={`absolute inset-0 w-full h-full ${
-                isActive ? (idx % 2 === 0 ? "kenburns-in" : "kenburns-out") : "scale-[1.05]"
-              }`}
-            >
-              <Image
-                src={slide.image}
-                alt={slide.title.join(" ")}
-                fill
-                sizes="100vw"
-                priority={idx === 0}
-                unoptimized
-                className="object-cover object-center"
-              />
-            </div>
+    <section
+      data-floating-contact-hero
+      className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black text-white"
+    >
+      {/* ─── 1. Fullscreen YouTube Background Video ─── */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        <iframe
+          src={`https://www.youtube.com/embed/p9detg0Rt_Q?autoplay=1&mute=${
+            isMuted ? 1 : 0
+          }&controls=0&loop=1&playlist=p9detg0Rt_Q&playsinline=1&rel=0&disablekb=1&modestbranding=1`}
+          title="Video Giới Thiệu Thương Hiệu Hồng Sâm Kim"
+          className="absolute left-1/2 top-1/2 min-w-full min-h-full w-[177.77777778vh] h-[56.25vw] -translate-x-1/2 -translate-y-1/2 object-cover border-0 scale-105"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        />
+      </div>
 
-            {/* Subtle Gradient Overlay so the image is fully bright and visible */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/20 to-black/60 pointer-events-none" />
+      {/* ─── 2. Cinematic Dark Gradient Overlay (Ensures White Header & Typography Are 100% Readable) ─── */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/30 to-black/70 pointer-events-none" />
 
-            {/* Slide Text Content */}
-            <div className={`${isActive ? "na-hero-content" : ""} absolute inset-0 z-20 max-w-[1240px] mx-auto px-4 sm:px-6 flex flex-col justify-center items-center text-center pt-16 ${isActive ? "" : "pointer-events-none"}`}>
-              <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[50px] font-normal leading-tight md:leading-[1.28] text-white max-w-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-                {slide.title.map((line, lIdx) => (
-                  <span key={lIdx} className="block">
-                    {line}
-                  </span>
-                ))}
-              </h2>
-
-              <p className="font-sans mt-5 md:mt-6 text-sm sm:text-base md:text-[18px] text-gray-200 font-normal max-w-2xl leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.8)]">
-                {slide.description.map((line, lIdx) => (
-                  <span key={lIdx} className="block">
-                    {line}
-                  </span>
-                ))}
-              </p>
-
-              {/* VIEW MORE Button */}
-              <div className="mt-8 md:mt-10">
-                <Link
-                  href={slide.link}
-                  className="group relative inline-flex items-center gap-3 overflow-hidden rounded-full border border-white/70 bg-white/10 px-9 py-3.5 text-xs md:text-sm font-bold tracking-[0.22em] uppercase text-white shadow-lg backdrop-blur-sm transition-all duration-300 hover:border-[#B5222A] hover:bg-[#B5222A] hover:text-white hover:shadow-[0_8px_25px_rgba(181,34,42,0.5)] active:scale-95 before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/30 before:to-transparent hover:before:translate-x-full before:transition-transform before:duration-700"
-                >
-                  <span>XEM CHI TIẾT</span>
-                  <span className="inline-block transition-transform duration-300 group-hover:translate-x-1">→</span>
-                </Link>
-              </div>
-            </div>
-          </div>
-        );
-      })}
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        aria-label="Slide trước"
-        className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-30 p-3 text-white/70 hover:text-white transition-colors"
-      >
-        <ChevronLeft className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.5]" />
-      </button>
-
-      <button
-        onClick={nextSlide}
-        aria-label="Slide tiếp theo"
-        className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-30 p-3 text-white/70 hover:text-white transition-colors"
-      >
-        <ChevronRight className="w-8 h-8 sm:w-10 sm:h-10 stroke-[1.5]" />
-      </button>
-
-      {/* Bottom Controls: Pagination Dots & Custom Scroll Down Indicator */}
-      <div className="absolute bottom-6 left-0 right-0 z-30 flex flex-col items-center justify-center gap-4 pointer-events-none">
-        {/* Pagination Dots */}
-        <div className="flex justify-center items-center gap-3 pointer-events-auto">
-          {slides.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrent(idx)}
-              aria-label={`Chuyển đến slide ${idx + 1}`}
-              className={`transition-all duration-300 rounded-full ${
-                idx === current
-                  ? "w-7 h-1.5 bg-[#b5222a] rounded-full shadow-sm"
-                  : "w-2 h-2 bg-white/40 hover:bg-white/70 rounded-full"
-              }`}
-            />
-          ))}
+      {/* ─── 3. Hero Text Overlay Content ─── */}
+      <div className="relative z-20 max-w-[1240px] mx-auto px-4 sm:px-6 h-full flex flex-col justify-center items-center text-center pt-20">
+        {/* Subtle Brand Slogan Capsule */}
+        <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/40 px-4 py-1.5 backdrop-blur-md animate-[fade-in-down_0.8s_ease-out]">
+          <span className="h-2 w-2 rounded-full bg-[#B5222A] animate-ping" />
+          <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.18em] text-white/90">
+            Hồng sâm Kim 6 năm tuổi Punggi
+          </span>
         </div>
 
-        {/* Distinctive Animated Scroll Down Indicator */}
-        <button
-          onClick={() => {
-            const nextSec = document.getElementById("products");
-            if (nextSec) {
-              nextSec.scrollIntoView({ behavior: "smooth" });
-            } else {
-              window.scrollTo({ top: window.innerHeight, behavior: "smooth" });
-            }
-          }}
-          aria-label="Cuộn xuống khám phá"
-          className="group pointer-events-auto flex flex-col items-center gap-1 text-white/70 hover:text-white transition-all duration-300 transform hover:translate-y-0.5"
-        >
-          <div className="w-5 h-9 rounded-full border-2 border-white/60 group-hover:border-white flex items-start justify-center p-1 backdrop-blur-xs transition-colors shadow-sm">
-            <div className="w-1.5 h-2 bg-white rounded-full animate-bounce mt-0.5" />
-          </div>
-          <span className="text-[10px] uppercase font-sans tracking-[0.2em] font-medium text-white/80 group-hover:text-white drop-shadow-sm">
-            Khám phá
-          </span>
-        </button>
+        {/* Main Title */}
+        <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-[54px] font-extrabold leading-tight md:leading-[1.25] text-white max-w-4xl drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)] animate-[fade-in-up_1s_ease-out]">
+          Con người có thể dối lừa Đất, <br className="hidden sm:inline" />
+          nhưng <span className="text-[#F0831F]">Đất không bao giờ</span> dối lừa Con người.
+        </h1>
+
+        {/* Subtitle */}
+        <p className="mt-4 text-sm sm:text-base md:text-lg text-gray-200 max-w-2xl font-normal leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
+          Hồng sâm 6 năm tuổi được nuôi dưỡng tại Punggi – vùng đất thanh khiết dưới chân dãy núi Sobaek huyền thoại, niềm tự hào nghệ nhân Hàn Quốc.
+        </p>
+
+        {/* Action Button */}
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+          <Link
+            href="/nhan-sam"
+            className="na-btn-primary group inline-flex h-12 items-center justify-center gap-2.5 rounded-full bg-[#B5222A] px-8 text-sm font-bold uppercase tracking-wider text-white shadow-lg transition-all hover:bg-[#991C23] hover:scale-105 active:scale-95 cursor-pointer"
+          >
+            <span>XEM CHI TIẾT</span>
+            <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+          </Link>
+        </div>
+      </div>
+
+      {/* ─── 4. Sound Control Button (Bottom Right) ─── */}
+      <button
+        type="button"
+        onClick={() => setIsMuted(!isMuted)}
+        className="absolute bottom-6 right-6 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-black/90 hover:scale-110 active:scale-95 cursor-pointer shadow-lg"
+        title={isMuted ? "Bật âm thanh video" : "Tắt âm thanh video"}
+      >
+        {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4 text-[#F0831F]" />}
+      </button>
+
+      {/* Scroll Down Indicator */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 hidden sm:flex flex-col items-center gap-1.5 text-white/70 text-xs font-semibold">
+        <span className="tracking-widest uppercase text-[10px]">KHÁM PHÁ</span>
+        <div className="h-6 w-3.5 rounded-full border border-white/40 p-0.5 flex justify-center">
+          <div className="h-1.5 w-1 rounded-full bg-[#F0831F] animate-bounce" />
+        </div>
       </div>
     </section>
   );
