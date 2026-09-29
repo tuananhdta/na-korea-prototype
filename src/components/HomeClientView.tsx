@@ -9,12 +9,16 @@ import { BrandStorySection } from "@/components/BrandStorySection";
 import { PartnerSection } from "@/components/PartnerSection";
 import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
+import { IntroScreen } from "@/components/IntroScreen";
 
 export function HomeClientView() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
     <div className="relative min-h-screen flex flex-col bg-white">
+      {/* Intro Screen Reveal (Only on first visit per session) */}
+      <IntroScreen />
+
       {/* Header / Navbar */}
       <Header onOpenMobileMenu={() => setMobileMenuOpen(true)} overlay />
 
