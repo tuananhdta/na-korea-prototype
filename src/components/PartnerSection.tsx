@@ -2,8 +2,7 @@
 
 import { useState, useRef, MouseEvent } from "react";
 import Image from "next/image";
-import Link from "next/link";
-import { ArrowRight, Globe, Building2, Handshake, ShieldCheck } from "lucide-react";
+import { Globe, Building2, ShieldCheck } from "lucide-react";
 
 export interface Partner {
   id: string;
@@ -39,14 +38,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/samsung-sds.png",
     width: 150,
     height: 48,
-  },
-  {
-    id: "punggi-corp",
-    name: "Punggi Ginseng Agricultural Corp.",
-    category: "Hiệp Hội Vùng Trồng Punggi Hàn Quốc",
-    logo: "/images/brand_logo/Punggi ginseng corp.png",
-    width: 160,
-    height: 45,
   },
   {
     id: "kci",
@@ -194,7 +185,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
 
 export function PartnerSection() {
   return (
-    <section className="relative overflow-hidden bg-white py-20 md:py-28 border-y border-[#EEEEEE]">
+    <section className="relative overflow-hidden bg-white py-16 md:py-24 border-y border-[#EEEEEE]">
       {/* ─── Background Subtle Dot Grid Pattern ─── */}
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-[0.035]"
@@ -316,23 +307,6 @@ export function PartnerSection() {
           </div>
         </div>
 
-      </div>
-
-      {/* ─── Bottom CTA / Wholesale & Corporate Gift Banner ─── */}
-      <div className="relative z-10 mt-14 sm:mt-18 text-center">
-        <div className="inline-flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 bg-[#FAF7F2] border border-[#E8DFD1] px-6 py-4 rounded-2xl shadow-2xs hover:shadow-md transition-shadow">
-          <div className="flex items-center gap-2.5 text-xs sm:text-sm font-semibold text-[#333333]">
-            <Handshake className="w-4 h-4 text-[#B5222A]" />
-            <span>Mong muốn trở thành đối tác phân phối hoặc quà tặng doanh nghiệp?</span>
-          </div>
-          <Link
-            href="/dang-ky-dai-ly"
-            className="group inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#B5222A] hover:text-[#991C23] transition-colors"
-          >
-            <span>Đăng ký đại lý</span>
-            <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
-        </div>
       </div>
     </section>
   );
