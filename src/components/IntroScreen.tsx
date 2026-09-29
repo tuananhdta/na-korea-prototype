@@ -3,14 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 
 export function IntroScreen() {
-  const [isVisible, setIsVisible] = useState(false);
+  // Fix Flash Of Content: Start with isVisible = true so it covers the screen on 1st frame
+  const [isVisible, setIsVisible] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
   const [isDestroyed, setIsDestroyed] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
-    // Option A: Always play intro on every F5 / page refresh
-    setIsVisible(true);
+    // Lock body scrolling immediately when intro starts
     document.body.style.overflow = "hidden";
 
     // Play video programmatically if needed
