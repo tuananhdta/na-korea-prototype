@@ -33,6 +33,8 @@ const nextConfig: NextConfig = {
       { source: "/products", destination: "/san-pham", permanent: true },
       { source: "/products/adults", destination: "/san-pham/nguoi-lon", permanent: true },
       { source: "/products/kids", destination: "/san-pham/tre-em", permanent: true },
+      { source: "/san-pham/hong-sam-nguoi-lon", destination: "/san-pham/nguoi-lon", permanent: true },
+      { source: "/san-pham/hong-sam-tre-em", destination: "/san-pham/tre-em", permanent: true },
       { source: "/products/gifts", destination: "/san-pham", permanent: true },
       { source: "/product/:id", destination: "/san-pham/:id", permanent: true },
       { source: "/cart", destination: "/gio-hang", permanent: true },
