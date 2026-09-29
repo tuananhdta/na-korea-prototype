@@ -11,17 +11,15 @@
 ┌─────────────────────────────────────────────────────────┐
 │ 1. Header (Transparent Overlay + White Logo on top)     │ (Đã xong)
 ├─────────────────────────────────────────────────────────┤
-│ [HeroSlider] (Bối cảnh trang chính)                     │
+│ [Hero Video Background] Fullscreen Video (p9detg0Rt_Q)  │ (Đã xong)
 ├─────────────────────────────────────────────────────────┤
-│ 2. Video Showcase (2 Video nằm song song)               │ (Phase 1)
+│ 2. Metrics & Certifications (10+ năm, 130+ đối tác...)  │ (Phase 2)
 ├─────────────────────────────────────────────────────────┤
-│ 3. Metrics & Certifications (10+ năm, 130+ đối tác...)  │ (Phase 2)
+│ 3. Dual Marquee Tickers (Đối tác Quốc tế & Trong nước)   │ (Phase 3)
 ├─────────────────────────────────────────────────────────┤
-│ 4. Dual Marquee Tickers (Đối tác Quốc tế & Trong nước)   │ (Phase 3)
+│ 4. Featured Products (8 Sản phẩm nổi bật)               │ (Phase 4)
 ├─────────────────────────────────────────────────────────┤
-│ 5. Featured Products (8 Sản phẩm nổi bật)               │ (Phase 4)
-├─────────────────────────────────────────────────────────┤
-│ 6. Customer Reviews (Đánh giá khách hàng)               │ (Phase 5)
+│ 5. Customer Reviews (Đánh giá khách hàng)               │ (Phase 5)
 ├─────────────────────────────────────────────────────────┤
 │ [Footer] (Màu Brand Red #1E0A0D đồng bộ Header)         │ (Đã xong)
 └─────────────────────────────────────────────────────────┘
