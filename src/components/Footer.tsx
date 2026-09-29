@@ -271,7 +271,7 @@ const footerJsonLd = {
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#4B193E] text-white overflow-hidden border-t border-[#622152]">
+    <footer className="relative bg-[#1E0A0D] text-white overflow-hidden border-t border-[#B5222A]/25">
       {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
       <script
         type="application/ld+json"
@@ -288,9 +288,9 @@ export function Footer() {
         }}
       />
 
-      {/* Top Gold Accent Line with Infinite Border Beam (Animation #1) */}
+      {/* Top Brand Red Accent Line with Infinite Border Beam */}
       <div className="relative h-[2px] w-full overflow-hidden bg-white/10">
-        <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#F0831F] to-transparent animate-border-beam" />
+        <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#B5222A] to-transparent animate-border-beam" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-16 pb-12">
@@ -444,7 +444,7 @@ export function Footer() {
       </div>
 
       {/* ═══ Dải đáy: Copyright & Social Links ═══ */}
-      <div className="border-t border-white/10 bg-[#3B1231]/90 py-4 px-4 sm:px-6 lg:px-8">
+      <div className="border-t border-[#B5222A]/20 bg-[#120407]/90 py-4 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-gray-400">
           <p>
             © 2026 NA Korea - Kim&apos;s Red Ginseng Vietnam. All rights reserved.
