@@ -47,7 +47,7 @@ Apply a consistent premium Korean visual system to the NA Korea website without 
 
 ---
 
-## Design Tokens & Brand Palette
+## Design Tokens & Brand Palette (JungKwanJang Standard)
 
 ```css
 :root {
@@ -57,32 +57,33 @@ Apply a consistent premium Korean visual system to the NA Korea website without 
   --color-primary: #B5222A;
   --color-primary-hover: #991C23;
 
-  /* 2. Tím mận hoàng gia (Royal Plum) — Footer, hero, các dải editorial nền sẫm (từ nền logo Kim's Red Ginseng) */
-  --plum-700: #4B193E;
-  --color-plum: #4B193E;
-  --color-brand-footer: #4B193E;
+  /* 2. Tím mận / Dark Charcoal — Footer, hero, dải sẫm */
+  --dark-bg: #181818;
+  --color-brand-footer: #1E0A0D;
 
-  /* 3. Vàng hổ phách (Amber Gold) — Tiết chế: nhãn, sao đánh giá, chi tiết nguồn gốc (KHÔNG DÙNG LÀM NÚT) */
-  --gold-600: #F0831F;
-  --color-secondary: #F0831F;
-  --color-secondary-hover: #D97013;
+  /* 3. Vàng hổ phách (Amber Gold) — Tiết chế: nhãn, sao đánh giá, chi tiết nguồn gốc */
+  --gold-600: #D4A359;
+  --color-secondary: #D4A359;
+  --color-secondary-hover: #B88942;
 
   /* 4. Typography & Text */
-  --color-heading: #2D2D2D; /* Tiêu đề */
-  --color-text: #4B4F52;    /* Nội dung thân bài */
+  --color-heading: #111111; /* Tiêu đề */
+  --color-text: #333333;    /* Nội dung thân bài */
   --color-text-secondary: #666666;
+  --color-text-muted: #888888;
 
   /* 5. Backgrounds & Surfaces */
-  --color-background: #FFFFFF;      /* Trắng tinh khiết */
+  --color-background: #FFFFFF;      /* Trắng tinh khiết chuẩn JungKwanJang */
   --color-background-soft: #F8F8F8; /* Xám nhạt mờ */
-  --color-background-warm: #ECEBE9; /* Trung tính ấm truyền thống */
+  --color-background-warm: #F5F3EF;
 
   /* 6. Borders & Dividers */
-  --color-border: #E5E5E5;
+  --color-border: #EEEEEE;
 
-  /* Typography Families */
-  --font-serif-kr: var(--font-nanum-myeongjo), 'Nanum Myeongjo', serif;
-  --font-sans-kr: var(--font-noto-sans-kr), 'Noto Sans KR', sans-serif;
+  /* Typography Families (Chuẩn JungKwanJang) */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-figtree: "Figtree", "Pretendard", sans-serif;
+  --font-serif: "Nanum Myeongjo", "Batang", Georgia, serif;
 }
 ```
 
@@ -121,8 +122,8 @@ Apply a consistent premium Korean visual system to the NA Korea website without 
    - Read the target file using `view_file`.
    - Identify existing DOM structure, CSS classes, and content nodes.
 2. **Apply Design Tokens & Layout:**
-   - Replace hardcoded arbitrary hex colors with design tokens or brand utilities (`#B5222A`, `#F0831F`, `#2D2D2D`, `#F8F8F8`).
-   - Use `Nanum Myeongjo` (`font-serif-kr`) for traditional Korean luxury headings, and `Noto Sans KR` for crisp body text and product specs.
+   - Replace hardcoded arbitrary hex colors with design tokens or brand utilities (`#B5222A`, `#D4A359`, `#111111`, `#FFFFFF`, `#F8F8F8`).
+   - Use `Pretendard` (`font-sans`) for all UI text, headings, cards, and navigation, `Figtree` for numbers/stats, and `Nanum Myeongjo` (`font-serif`) for traditional luxury headings.
    - Refine spacing using standard 4px/8px grid increments (`gap-4`, `p-6`, `my-8`).
 3. **Verify Responsive Behavior:**
    - Ensure flex layouts wrap cleanly (`flex-wrap`) and grid columns scale gracefully (`grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`).
