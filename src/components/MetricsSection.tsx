@@ -106,7 +106,7 @@ export function MetricsSection() {
   useEffect(() => {
     if (!isVisible) return;
 
-    const duration = 1800; // ms
+    const duration = 1800;
     const startTime = performance.now();
 
     const animate = (currentTime: number) => {
@@ -155,12 +155,12 @@ export function MetricsSection() {
           </p>
         </div>
 
-        {/* 4 Circular Medallions Row */}
+        {/* 4 Royal Medallions Row */}
         <div className="relative mb-16 sm:mb-20">
-          {/* Subtle Horizontal Connecting Line (Desktop) */}
-          <div className="absolute top-28 left-20 right-20 h-[2px] bg-gradient-to-r from-transparent via-[#B5222A]/25 to-transparent pointer-events-none hidden lg:block" />
+          {/* Connecting Ribbon Line (Desktop) */}
+          <div className="absolute top-20 left-24 right-24 h-[2px] bg-gradient-to-r from-transparent via-[#F0831F]/40 to-transparent pointer-events-none hidden lg:block" />
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-8 justify-items-center">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 justify-items-center">
             {METRICS.map((metric, idx) => {
               const IconComponent = metric.icon;
               const currentCount = counts[idx];
@@ -169,29 +169,26 @@ export function MetricsSection() {
                 <Link
                   key={metric.id}
                   href={metric.href}
-                  className="group relative flex flex-col items-center text-center w-full max-w-[240px] focus:outline-none"
+                  className="group relative flex flex-col items-center text-center w-full max-w-[220px] focus:outline-none"
                   title={`Click để xem chi tiết: ${metric.lines.join(" ")}`}
                 >
-                  {/* Outer Circular Medallion */}
-                  <div className="relative w-44 h-44 sm:w-52 sm:h-52 lg:w-56 lg:h-56 rounded-full bg-white border-2 border-[#E8DFD1] shadow-md group-hover:shadow-2xl group-hover:border-[#B5222A] transition-all duration-500 flex flex-col items-center justify-center p-5 overflow-hidden group-hover:-translate-y-2">
+                  {/* Royal Dark Medallion Circle */}
+                  <div className="relative w-36 h-36 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full bg-[#1E0A0D] border-2 border-[#F0831F]/40 group-hover:border-[#F0831F] shadow-xl group-hover:shadow-[0_0_30px_rgba(240,131,31,0.3)] transition-all duration-500 flex flex-col items-center justify-center p-4 overflow-hidden group-hover:-translate-y-2">
                     
-                    {/* Inner Dashed Accent Ring */}
-                    <div className="absolute inset-2 rounded-full border border-dashed border-[#E8DFD1] group-hover:border-[#B5222A]/40 transition-colors duration-500 pointer-events-none" />
+                    {/* Inner Gold Accent Ring */}
+                    <div className="absolute inset-1.5 rounded-full border border-[#F0831F]/20 group-hover:border-[#F0831F]/50 transition-colors duration-500 pointer-events-none" />
 
-                    {/* Subtle Pulsing Background Glow on Hover */}
-                    <div className="absolute inset-0 bg-radial from-[#B5222A]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                    {/* Subtle Radial Glow Effect */}
+                    <div className="absolute inset-0 bg-radial from-[#F0831F]/15 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-                    {/* Watermark Icon */}
-                    <IconComponent className="absolute -bottom-2 -right-2 w-24 h-24 text-[#FAF7F2] group-hover:text-[#B5222A]/5 transition-colors duration-500 pointer-events-none" />
-
-                    {/* Top Icon Pill */}
-                    <div className="relative z-10 w-9 h-9 rounded-full bg-[#FAF7F2] border border-[#E8DFD1] flex items-center justify-center text-[#B5222A] group-hover:bg-[#B5222A] group-hover:text-white group-hover:scale-110 transition-all duration-300 mb-1 shadow-2xs">
+                    {/* Top Icon Badge in Gold */}
+                    <div className="relative z-10 w-8 h-8 rounded-full bg-[#F0831F]/15 border border-[#F0831F]/30 flex items-center justify-center text-[#F0831F] group-hover:scale-110 transition-transform duration-300 mb-1">
                       <IconComponent className="w-4 h-4" />
                     </div>
 
                     {/* Counter Number */}
-                    <div className="relative z-10 flex items-baseline justify-center gap-0.5 my-0.5">
-                      <span className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-[#B5222A] tracking-tight font-sans">
+                    <div className="relative z-10 flex items-baseline justify-center gap-0.5">
+                      <span className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight font-sans">
                         {currentCount}
                       </span>
                       <span className="text-xl sm:text-2xl font-extrabold text-[#F0831F]">
@@ -199,28 +196,32 @@ export function MetricsSection() {
                       </span>
                     </div>
 
-                    {/* Compact Label Inside Circle */}
-                    <div className="relative z-10 px-2 max-w-[160px]">
-                      <p className="text-xs sm:text-sm font-bold text-[#2D2D2D] leading-tight group-hover:text-[#B5222A] transition-colors">
-                        {metric.lines[0]}
-                      </p>
-                      {metric.lines[1] && (
-                        <p className="text-[11px] sm:text-xs text-[#666666] leading-tight mt-0.5 line-clamp-2">
-                          {metric.lines.slice(1).join(" ")}
-                        </p>
-                      )}
+                    {/* Category Tag inside Circle bottom */}
+                    <div className="relative z-10 mt-1 px-2.5 py-0.5 rounded-full bg-[#F0831F]/10 border border-[#F0831F]/20 text-[10px] font-bold text-[#F0831F] tracking-widest uppercase">
+                      {metric.badge}
                     </div>
 
                     {/* Click Arrow Hint Icon */}
-                    <div className="absolute top-3 right-3 z-20 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 text-[#B5222A] bg-[#B5222A]/10 p-1.5 rounded-full">
-                      <ArrowUpRight className="w-4 h-4" />
+                    <div className="absolute top-2.5 right-2.5 z-20 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 text-[#F0831F] bg-[#F0831F]/20 p-1 rounded-full">
+                      <ArrowUpRight className="w-3.5 h-3.5" />
                     </div>
                   </div>
 
-                  {/* External Hover Badge Label Below Circle */}
-                  <div className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-[#666666] group-hover:text-[#B5222A] transition-colors">
-                    <span>Xem chi tiết</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 opacity-60 group-hover:opacity-100 group-hover:translate-x-0.5 transition-all" />
+                  {/* Clean Text Description OUTSIDE the Circle */}
+                  <div className="mt-4 px-2 space-y-1">
+                    <p className="text-sm sm:text-base font-bold text-[#2D2D2D] leading-snug group-hover:text-[#B5222A] transition-colors">
+                      {metric.lines[0]}
+                    </p>
+                    {metric.lines.slice(1).map((line, lineIdx) => (
+                      <p key={lineIdx} className="text-xs sm:text-sm text-[#4B4F52] leading-tight">
+                        {line}
+                      </p>
+                    ))}
+
+                    <div className="pt-1.5 inline-flex items-center gap-1 text-xs font-semibold text-[#B5222A] opacity-80 group-hover:opacity-100 transition-opacity">
+                      <span>Xem chi tiết</span>
+                      <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                    </div>
                   </div>
                 </Link>
               );
