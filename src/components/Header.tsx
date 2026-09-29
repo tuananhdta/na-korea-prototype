@@ -282,7 +282,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               onMouseEnter={() => setActiveMenu(item.title)}
               className={`absolute inset-x-0 top-full hidden transition-[opacity,transform,visibility,background-color,border-color] duration-200 lg:block ${
                 isTopTransparent
-                  ? "border-t border-white/10 bg-black/60 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.3)] text-white"
+                  ? "border-t border-white/10 bg-black/30 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.2)] text-white"
                   : "border-t border-[#F0EDE8] bg-white/98 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#2D2D2D]"
               } ${
                 isItemActive
@@ -329,7 +329,9 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                           href={sub.href}
                           className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center text-sm tracking-[0.02em] whitespace-nowrap transition-colors duration-200 ${
                             isSubActive
-                              ? "font-bold text-[#B5222A]"
+                              ? isTopTransparent
+                                ? "font-bold text-white drop-shadow-sm"
+                                : "font-bold text-[#B5222A]"
                               : isTopTransparent
                                 ? "font-semibold text-white/90 hover:text-white"
                                 : "font-medium text-[#4B4F52] hover:text-[#B5222A]"
@@ -337,12 +339,20 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                         >
                           <span className="relative inline-flex items-center gap-1.5 whitespace-nowrap py-1 transition-transform duration-200 group-hover/sub:-translate-y-0.5">
                             {isSubActive && (
-                              <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A] shadow-[0_0_6px_rgba(181,34,42,0.5)] animate-pulse" />
+                              <span className={`h-1.5 w-1.5 rounded-full animate-pulse ${
+                                isTopTransparent
+                                  ? "bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)]"
+                                  : "bg-[#B5222A] shadow-[0_0_6px_rgba(181,34,42,0.5)]"
+                              }`} />
                             )}
                             <span>{sub.title}</span>
                             <span
                               aria-hidden="true"
-                              className="absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full bg-[#B5222A] shadow-[0_0_8px_rgba(181,34,42,0.35)] transition-transform duration-300 ease-out group-hover/sub:scale-x-100"
+                              className={`absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full transition-transform duration-300 ease-out group-hover/sub:scale-x-100 ${
+                                isTopTransparent
+                                  ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                  : "bg-[#B5222A] shadow-[0_0_8px_rgba(181,34,42,0.35)]"
+                              }`}
                             />
                           </span>
                         </Link>
