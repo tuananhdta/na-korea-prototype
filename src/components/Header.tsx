@@ -96,11 +96,12 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
       : "h-[88px] sm:h-24";
 
   const isOverlayTop = overlay && !isScrolled;
+  const isTopTransparent = isOverlayTop && !activeMenu;
   const headerBgClass = isOverlayTop
     ? activeMenu
-      ? "bg-[#4B193E]/10 backdrop-blur-md shadow-[0_12px_30px_rgba(0,0,0,0.25)]"
-      : "bg-transparent shadow-none"
-    : "bg-[#4B193E]/95 backdrop-blur-sm shadow-[0_12px_30px_rgba(33,11,28,0.24)]";
+      ? "bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#F0EDE8]"
+      : "bg-transparent shadow-none border-b border-transparent"
+    : "bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#F0EDE8]";
 
   return (
     <>
@@ -115,7 +116,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
 
       <header
         onMouseLeave={() => setActiveMenu(null)}
-        className={`fixed left-0 right-0 ${headerOffset} z-40 text-white transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-in-out ${headerBgClass}`}
+        className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#2D2D2D] transition-[background-color,box-shadow,backdrop-filter] duration-300 ease-in-out ${headerBgClass}`}
       >
         <div
           className={`mx-auto flex max-w-[1240px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
@@ -124,18 +125,18 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
         >
           <Link
             href="/"
-            className={`relative block shrink-0 transition-all duration-300 hover:scale-[1.03] ${
+            className={`relative block shrink-0 transition-all duration-300 hover:scale-[1.02] ${
               isScrolled
                 ? "h-[50px] w-[168px] sm:h-[54px] sm:w-[180px]"
                 : "h-[58px] w-[194px] sm:h-[62.4px] sm:w-[208px]"
             }`}
           >
             <Image
-              src={BRAND_LOGOS.horizontalWhite}
+              src={isTopTransparent ? BRAND_LOGOS.horizontalWhite : BRAND_LOGOS.horizontal}
               alt="6년근 김정환홍삼 | Kim's Red Ginseng"
               fill
               sizes="(max-width: 640px) 194px, 208px"
-              className="object-contain object-left drop-shadow-[0_1px_3px_rgba(0,0,0,0.65)]"
+              className="object-contain object-left transition-all duration-300"
               priority
             />
           </Link>
@@ -162,12 +163,12 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     href={item.href}
                     aria-haspopup={item.subItems ? "menu" : undefined}
                     aria-expanded={item.subItems ? isHovered : undefined}
-                    className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center text-[14px] leading-[1.15] tracking-[0.03em] drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 xl:px-2.5 ${
-                      isHovered
-                        ? "font-semibold text-white/95"
-                        : isRouteActive
-                          ? "font-bold text-white"
-                          : "font-medium text-white hover:text-[#FFF7F7]"
+                    className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center text-[14px] leading-[1.15] tracking-[0.02em] transition-all duration-200 xl:px-2.5 ${
+                      isHovered || isRouteActive
+                        ? "font-bold text-[#B5222A]"
+                        : isTopTransparent
+                          ? "font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] hover:text-[#FFF7F7]"
+                          : "font-semibold text-[#2D2D2D] hover:text-[#B5222A]"
                     }`}
                   >
                     <span>{item.title}</span>
@@ -177,19 +178,21 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                         aria-hidden="true"
                         className={`h-3 w-3 shrink-0 transition-transform duration-200 ${
                           isHovered
-                            ? "rotate-180 text-white"
+                            ? "rotate-180 text-[#B5222A]"
                             : isRouteActive
-                              ? "text-white"
-                              : "text-white/80"
+                              ? "text-[#B5222A]"
+                              : isTopTransparent
+                                ? "text-white/90"
+                                : "text-[#666666]"
                         }`}
                       />
                     )}
 
-                    {/* Active / Hover underline indicator bar in WHITE */}
+                    {/* Active / Hover underline indicator bar in BRAND RED */}
                     <span
                       aria-hidden="true"
-                      className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full bg-white transition-all duration-300 ${
-                        isHovered || isRouteActive ? "scale-x-100 opacity-100 shadow-[0_0_8px_rgba(255,255,255,0.85)]" : "scale-x-0 opacity-0"
+                      className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full bg-[#B5222A] transition-all duration-300 ${
+                        isHovered || isRouteActive ? "scale-x-100 opacity-100 shadow-[0_0_8px_rgba(181,34,42,0.4)]" : "scale-x-0 opacity-0"
                       }`}
                     />
                   </Link>
@@ -200,11 +203,15 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             <button
               type="button"
               onClick={openCart}
-              className="relative ml-2 flex h-[54px] min-w-[72px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-md px-2 text-white drop-shadow-[0_1px_2px_rgba(0,0,0,0.75)] transition-all duration-200 hover:bg-white/10 hover:text-white cursor-pointer"
+              className={`relative ml-2 flex h-[50px] min-w-[64px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 transition-all duration-200 cursor-pointer ${
+                isTopTransparent
+                  ? "text-white hover:bg-white/10 hover:text-white"
+                  : "text-[#2D2D2D] hover:bg-gray-100 hover:text-[#B5222A]"
+              }`}
             >
               <ShoppingBag className="h-5 w-5" />
               {totalCount > 0 && (
-                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-extrabold text-white ring-2 ring-black/20">
+                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-extrabold text-white ring-2 ring-white">
                   {totalCount}
                 </span>
               )}
@@ -212,16 +219,20 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
           </nav>
 
           {/* Mobile Right Controls (Cart + Hamburger) */}
-          <div className="flex items-center gap-2 lg:hidden">
+          <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
             <button
               type="button"
               onClick={openCart}
               aria-label="Giỏ hàng"
-              className="relative rounded-md p-2 text-white transition-colors hover:bg-white/10 cursor-pointer"
+              className={`relative rounded-lg p-2 transition-colors cursor-pointer ${
+                isTopTransparent
+                  ? "text-white hover:bg-white/10"
+                  : "text-[#2D2D2D] hover:bg-gray-100 hover:text-[#B5222A]"
+              }`}
             >
               <ShoppingBag className="h-6 w-6" />
               {totalCount > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-bold text-white">
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-bold text-white ring-2 ring-white">
                   {totalCount}
                 </span>
               )}
@@ -235,7 +246,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                 }
               }}
               aria-label="Mở menu điều hướng"
-              className="rounded-md p-2 text-white transition-colors hover:bg-white/10 cursor-pointer"
+              className={`rounded-lg p-2 transition-colors cursor-pointer ${
+                isTopTransparent
+                  ? "text-white hover:bg-white/10"
+                  : "text-[#2D2D2D] hover:bg-gray-100 hover:text-[#B5222A]"
+              }`}
             >
               <Menu className="h-6 w-6" />
             </button>
@@ -251,11 +266,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               key={item.title}
               aria-hidden={!isItemActive}
               onMouseEnter={() => setActiveMenu(item.title)}
-              className={`absolute inset-x-0 top-full hidden border-t border-white/10 ${
-                isOverlayTop
-                  ? "bg-[#4B193E]/10 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.35)]"
-                  : "bg-[#4B193E]/95 backdrop-blur-sm shadow-[0_18px_34px_rgba(33,11,28,0.2)]"
-              } text-white transition-[opacity,transform,visibility] duration-200 lg:block ${
+              className={`absolute inset-x-0 top-full hidden border-t border-[#F0EDE8] bg-white/98 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#2D2D2D] transition-[opacity,transform,visibility] duration-200 lg:block ${
                 isItemActive
                   ? "visible translate-y-0 opacity-100"
                   : "invisible -translate-y-2 opacity-0 pointer-events-none"
@@ -298,20 +309,20 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                       >
                         <Link
                           href={sub.href}
-                          className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center text-sm tracking-[0.02em] whitespace-nowrap drop-shadow-[0_1px_2px_rgba(0,0,0,0.85)] transition-colors duration-200 ${
+                          className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center text-sm tracking-[0.02em] whitespace-nowrap transition-colors duration-200 ${
                             isSubActive
-                              ? "font-bold text-white"
-                              : "font-medium text-white/90 hover:text-white"
+                              ? "font-bold text-[#B5222A]"
+                              : "font-medium text-[#4B4F52] hover:text-[#B5222A]"
                           }`}
                         >
                           <span className="relative inline-flex items-center gap-1.5 whitespace-nowrap py-1 transition-transform duration-200 group-hover/sub:-translate-y-0.5">
                             {isSubActive && (
-                              <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.95)] animate-pulse" />
+                              <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A] shadow-[0_0_6px_rgba(181,34,42,0.5)] animate-pulse" />
                             )}
                             <span>{sub.title}</span>
                             <span
                               aria-hidden="true"
-                              className="absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.9)] transition-transform duration-300 ease-out group-hover/sub:scale-x-100"
+                              className="absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full bg-[#B5222A] shadow-[0_0_8px_rgba(181,34,42,0.35)] transition-transform duration-300 ease-out group-hover/sub:scale-x-100"
                             />
                           </span>
                         </Link>
