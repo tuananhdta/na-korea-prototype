@@ -3,13 +3,12 @@
 import { useState, useRef, MouseEvent } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Globe, Building2, Handshake, Sparkles, ShieldCheck } from "lucide-react";
+import { ArrowRight, Globe, Building2, Handshake, ShieldCheck } from "lucide-react";
 
 export interface Partner {
   id: string;
   name: string;
   category: string;
-  badge?: string;
   logo: string;
   width: number;
   height: number;
@@ -21,7 +20,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     id: "shinhan-bank",
     name: "Shinhan Bank (Hàn Quốc)",
     category: "Tài chính - Ngân hàng Quốc tế",
-    badge: "Strategic Partner",
     logo: "/images/partners/shinhan-bank.svg",
     width: 150,
     height: 48,
@@ -30,7 +28,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     id: "hana-bank",
     name: "KEB Hana Bank (Hàn Quốc)",
     category: "Ngân hàng Quốc tế",
-    badge: "Global Banking",
     logo: "/images/partners/hana-bank.webp",
     width: 150,
     height: 48,
@@ -39,7 +36,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     id: "samsung-sds",
     name: "Samsung SDS (Hàn Quốc)",
     category: "Công nghệ Toàn cầu",
-    badge: "Enterprise Tech",
     logo: "/images/partners/samsung-sds.png",
     width: 150,
     height: 48,
@@ -48,7 +44,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     id: "punggi-corp",
     name: "Punggi Ginseng Agricultural Corp.",
     category: "Hiệp Hội Vùng Trồng Punggi Hàn Quốc",
-    badge: "Origin Heritage",
     logo: "/images/brand_logo/Punggi ginseng corp.png",
     width: 160,
     height: 45,
@@ -57,7 +52,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     id: "kci",
     name: "Tập đoàn KCI (Hàn Quốc)",
     category: "Y tế & Sản xuất Công nghệ cao",
-    badge: "Medical Partner",
     logo: "/images/partners/kci.png",
     width: 130,
     height: 45,
@@ -66,7 +60,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     id: "k-market",
     name: "K-Market Chuỗi Bán lẻ Hàn Quốc",
     category: "Hệ thống Bán lẻ & Phân phối Quốc tế",
-    badge: "Retail Network",
     logo: "/images/partners/k-market.jpg",
     width: 140,
     height: 55,
@@ -79,7 +72,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     id: "vingroup",
     name: "Tập đoàn Vingroup",
     category: "Tập đoàn Đa ngành",
-    badge: "VIP Enterprise",
     logo: "/images/partners/vingroup.png",
     width: 140,
     height: 55,
@@ -88,7 +80,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     id: "fpt",
     name: "Tập đoàn FPT",
     category: "Công nghệ & Viễn thông",
-    badge: "Corporate Gift",
     logo: "/images/partners/fpt.png",
     width: 140,
     height: 55,
@@ -97,7 +88,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     id: "viettel",
     name: "Tập đoàn Viettel",
     category: "Công nghệ & Viễn thông",
-    badge: "Corporate Partner",
     logo: "/images/partners/viettel.png",
     width: 130,
     height: 50,
@@ -106,7 +96,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     id: "vietcombank",
     name: "Ngân hàng Vietcombank",
     category: "Tài chính - Ngân hàng",
-    badge: "Priority Banking",
     logo: "/images/partners/vietcombank.webp",
     width: 140,
     height: 50,
@@ -115,7 +104,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     id: "bidv",
     name: "Ngân hàng BIDV",
     category: "Tài chính - Ngân hàng",
-    badge: "Financial Partner",
     logo: "/images/partners/bidv.png",
     width: 140,
     height: 50,
@@ -124,7 +112,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     id: "vietnam-airlines",
     name: "Vietnam Airlines",
     category: "Hàng không & Dịch vụ",
-    badge: "Diplomatic Gift",
     logo: "/images/partners/vietnam-airlines.png",
     width: 140,
     height: 50,
@@ -133,20 +120,10 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     id: "vanphu-invest",
     name: "Văn Phú - Invest",
     category: "Bất động sản & Đầu tư",
-    badge: "Enterprise Partner",
     logo: "/images/partners/vanphu-invest.webp",
     width: 140,
     height: 48,
   },
-];
-
-const WATERMARK_WORDS = [
-  "GLOBAL STRATEGIC PARTNERS",
-  "DIPLOMATIC GIFTS",
-  "PUNGGI HERITAGE",
-  "KOREAN RED GINSENG",
-  "TRUSTED SINCE 1986",
-  "130+ DISTRIBUTORS",
 ];
 
 interface PartnerCardProps {
@@ -211,16 +188,6 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
           unoptimized
         />
       </div>
-
-      {/* 4. Bottom Category Micro-Badge Reveal */}
-      {partner.badge && (
-        <div className="absolute bottom-1.5 left-1/2 -translate-x-1/2 z-20 opacity-0 translate-y-2 group-hover/card:opacity-100 group-hover/card:translate-y-0 transition-all duration-300 pointer-events-none whitespace-nowrap">
-          <span className="inline-flex items-center gap-1 rounded-full bg-[#181818]/90 px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider text-[#F0831F] shadow-sm font-figtree">
-            <Sparkles className="w-2.5 h-2.5 text-[#F0831F]" />
-            {partner.badge}
-          </span>
-        </div>
-      )}
     </div>
   );
 }
@@ -228,25 +195,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
 export function PartnerSection() {
   return (
     <section className="relative overflow-hidden bg-white py-20 md:py-28 border-y border-[#EEEEEE]">
-      {/* ─── Layer 1: Ambient Watermark Typography Scrolling in Background ─── */}
-      <div className="pointer-events-none absolute inset-0 z-0 flex items-center overflow-hidden opacity-[0.028] select-none">
-        <div className="animate-watermark-slow flex items-center gap-12 text-6xl sm:text-8xl lg:text-9xl font-extrabold uppercase tracking-[0.25em] text-[#181818] font-figtree whitespace-nowrap">
-          {WATERMARK_WORDS.map((word, idx) => (
-            <span key={`wm1-${idx}`} className="flex items-center gap-12">
-              <span>{word}</span>
-              <span className="text-4xl text-[#B5222A]">✦</span>
-            </span>
-          ))}
-          {WATERMARK_WORDS.map((word, idx) => (
-            <span key={`wm2-${idx}`} className="flex items-center gap-12">
-              <span>{word}</span>
-              <span className="text-4xl text-[#B5222A]">✦</span>
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {/* ─── Layer 2: Subtle Dot Grid Pattern ─── */}
+      {/* ─── Background Subtle Dot Grid Pattern ─── */}
       <div
         className="pointer-events-none absolute inset-0 z-0 opacity-[0.035]"
         style={{
@@ -255,7 +204,7 @@ export function PartnerSection() {
         }}
       />
 
-      {/* ─── Layer 3: Section Content ─── */}
+      {/* ─── Section Content ─── */}
       <div className="relative z-10 mx-auto max-w-[1240px] px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">

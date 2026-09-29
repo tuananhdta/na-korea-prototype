@@ -309,20 +309,3 @@
   animation: golden-shimmer-sweep 7s ease-in-out infinite;
   pointer-events: none;
 }
-
-/* Watermark Slow Background Typography Scroll */
-@keyframes marquee-watermark-left {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-50%, 0, 0);
-  }
-}
-
-.animate-watermark-slow {
-  display: flex;
-  width: max-content;
-  animation: marquee-watermark-left 90s linear infinite;
-  will-change: transform;
-}
