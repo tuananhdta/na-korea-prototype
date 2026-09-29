@@ -42,12 +42,18 @@
 
 ### 🔲 Phase 1 — Video Showcase (2 Video Nằm Song Song)
 * **Vị trí:** Ngay bên dưới `HeroSlider`.
-* **Yêu cầu UI/UX:**
-  - Cấu trúc Desktop: 2 Video dạng Grid 2 Cột (Side-by-side, tỉ lệ 16:9).
-  - Cấu trúc Mobile: Stack dọc 1 cột.
-  - Khung Video có hiệu ứng border mờ sang trọng (`border-white/10` hoặc `border-[#B5222A]/20`), hiệu ứng shadow khi hover.
-  - Tiêu đề section: *"Hành Trình Di Sản & Quy Trình Chế Tác Hồng Sâm 6 Năm Tuổi"*.
-* **Nguồn Video:** Hỗ trợ nhúng YouTube Embed iframe hoặc HTML5 `<video>` player với poster thumbnail tùy chỉnh.
+* **Giải pháp Kỹ thuật & UI/UX:**
+  - **Layout:** Grid 2 Cột (Desktop `lg:grid-cols-2`), Stack 1 cột trên Mobile/Tablet. Aspect ratio chuẩn `aspect-video` (16:9).
+  - **Khung Video:** Bo góc `rounded-2xl`, viền `border border-[#E5E5E5]` kết hợp hiệu ứng nâng nhẹ `na-media-lift` và shadow mượt khi hover.
+  - **Tối ưu Tải Trang:** Sử dụng `loading="lazy"` hoặc Custom Thumbnail Poster kèm nút Play sang trọng màu đỏ sâm `#B5222A` để đảm bảo tối ưu điểm Core Web Vitals (LCP/INP).
+  
+* **Chi Tiết 2 Khung Video:**
+  1. **Video 1 (Bên Trái):** *Hành Trình Di Sản & Vùng Trồng Punggi 6 Năm Tuổi*
+     - Embed ID: `F0obQn6c_50` (hoặc URL YouTube mẫu chính thức).
+     - Caption: Thổ nhưỡng & khí hậu đặc biệt giúp tích tụ hàm lượng Saponin vượt trội.
+  2. **Video 2 (Bên Phải):** *Quy Trình Chế Tác & Nhà Máy Tiêu Chuẩn GMP / HACCP*
+     - Embed ID: `F0obQn6c_50` (hoặc ID video thứ 2 của hãng).
+     - Caption: Dây chuyền chiết xuất & đóng gói hiện đại bậc nhất tại Hàn Quốc.
 
 ---
 
