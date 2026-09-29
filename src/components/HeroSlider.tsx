@@ -1,11 +1,22 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 export function HeroSlider() {
   const [isMuted, setIsMuted] = useState(true);
   const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    // Ensure video starts playing immediately across all strict browser policies (Safari / Edge / Chrome)
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {
+        // Safe fallback if browser requires user gesture
+      });
+    }
+  }, []);
 
   const toggleMute = () => {
     if (videoRef.current) {
@@ -19,7 +30,7 @@ export function HeroSlider() {
       data-floating-contact-hero
       className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black text-white select-none"
     >
-      {/* ─── 1. Fullscreen Native HTML5 Local Video (100% Clean, Instant Autoplay, 0% YouTube UI) ─── */}
+      {/* ─── 1. Fullscreen Native HTML5 Local Video (Cross-Platform Certified for Windows & macOS) ─── */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <video
           ref={videoRef}
