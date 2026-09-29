@@ -1,8 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
-import { X } from "lucide-react";
 
 interface PromoBannerProps {
   visible: boolean;
@@ -33,64 +33,67 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
   return (
     <div
       id="PJ_popup_head"
-      aria-label="Thanh banner ưu đãi"
-      className="fixed inset-x-0 top-0 z-50 h-20 overflow-hidden border-b border-[#E5DFD3] bg-[#FFFDF8] text-[#2D2D2D] select-none shadow-sm transition-all duration-300"
-      style={{
-        background: `
-          linear-gradient(to right, #FFFDF8, #FFF9ED, #FFFDF8),
-          repeating-linear-gradient(0deg, transparent, transparent 19px, #EDE8DD33 19px, #EDE8DD33 20px),
-          repeating-linear-gradient(90deg, transparent, transparent 19px, #EDE8DD33 19px, #EDE8DD33 20px)
-        `,
-      }}
+      aria-label="Thanh banner ưu đãi Goldsammall"
+      className="fixed inset-x-0 top-0 z-50 overflow-hidden bg-[#0F0406] text-white shadow-md transition-all duration-300"
     >
-      {/* Accent Border Beams */}
-      <div className="absolute inset-x-0 top-0 h-[2px] bg-gradient-to-r from-transparent via-[#B5222A]/40 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 h-[2px] bg-gradient-to-r from-transparent via-[#B5222A]/40 to-transparent" />
-
-      {/* ─── Banner Content Link ─── */}
-      <Link
-        href="/san-pham"
-        className="group relative flex h-full w-full items-center justify-center px-4"
-        title="Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác"
-      >
-        {/* Center Slogan Capsule */}
-        <div className="flex items-center gap-2.5 rounded-full border border-dashed border-[#B5222A]/30 bg-white/90 px-4 py-1.5 sm:px-7 sm:py-2 shadow-[0_4px_16px_rgba(181,34,42,0.08)] backdrop-blur-md transition-all group-hover:border-[#B5222A]/60 group-hover:shadow-[0_6px_20px_rgba(181,34,42,0.15)]">
-          <span className="font-sans text-xs sm:text-base md:text-lg font-extrabold text-[#B5222A] tracking-wide whitespace-nowrap">
-            Hồng sâm Kim
-          </span>
-
-          <span className="inline-flex h-1.5 w-1.5 rounded-full bg-[#F0831F] animate-pulse shrink-0" />
-
-          <span className="font-sans text-xs sm:text-sm md:text-base font-bold text-[#5A2B18] tracking-tight whitespace-nowrap">
-            Nơi tận tâm trở thành kiệt tác
-          </span>
-        </div>
-      </Link>
-
-      {/* ─── Top Right Close Controls (Clean Goldsammall Style) ─── */}
-      <div className="absolute right-3 top-1/2 -translate-y-1/2 z-20 flex items-center gap-2 rounded-full border border-[#D5C9B8] bg-white/95 px-3 py-1 text-[11px] font-medium text-[#5A2B18] shadow-sm backdrop-blur-md transition-all hover:bg-white">
+      <div className="relative w-full overflow-hidden">
+        {/* ─── PJ_popup_head_close (100% Exact Goldsammall Close Button & Image) ─── */}
         <button
           type="button"
           onClick={handleDismissToday}
-          className="flex items-center gap-1.5 text-xs text-[#5A2B18] transition-colors hover:text-[#B5222A] cursor-pointer whitespace-nowrap"
+          className="PJ_popup_head_close absolute right-4 sm:right-8 top-3 z-30 flex items-center gap-1.5 rounded-full bg-black/60 px-3 py-1.5 text-xs text-white/90 backdrop-blur-md transition-all hover:bg-black/80 hover:text-white cursor-pointer shadow-lg border border-white/20"
           title="Không hiển thị lại banner trong hôm nay"
         >
-          <span className="h-3 w-3 rounded-xs border border-[#8C7565] flex items-center justify-center text-[9px] font-bold">
-            ✓
-          </span>
-          <span className="hidden sm:inline">Không hiển thị hôm nay</span>
+          <span className="text-[11px] font-medium tracking-tight">Không hiển thị hôm nay</span>
+          <img
+            src="https://cdn-saas-web-219-244.cdn-nhncommerce.com/pg2304_godomall_com/data/skin/front/8design/img/banner/8be8c7954e8da2880584b233f523db44_70505.png"
+            alt="Đóng banner hôm nay"
+            className="h-3.5 w-3.5 object-contain"
+          />
         </button>
 
-        <span className="h-3 w-px bg-[#D5C9B8]" aria-hidden="true" />
-
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Đóng banner"
-          className="flex h-5 w-5 items-center justify-center rounded-full transition-colors hover:bg-black/5 hover:text-[#B5222A] cursor-pointer"
+        {/* ─── Banner Link & Content ─── */}
+        <Link
+          href="/san-pham"
+          className="group relative block w-full overflow-hidden"
+          title="Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác"
         >
-          <X aria-hidden="true" className="h-3.5 w-3.5 text-[#5A2B18]" />
-        </button>
+          {/* 1. Desktop Banner (Width 2000px, Height 80px, Centered like Goldsammall CSS) */}
+          <div className="hidden md:block relative h-[80px] w-full overflow-hidden">
+            <img
+              src="https://cdn-saas-web-219-244.cdn-nhncommerce.com/pg2304_godomall_com/data/skin/front/8design/img/banner/slider_2893533255/5bd669e275cee0274fac8c9934f93823_53756.jpg"
+              alt="Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác"
+              className="absolute left-1/2 top-0 h-[80px] w-[2000px] max-w-none -translate-x-1/2 object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+            />
+          </div>
+
+          {/* 2. Mobile Banner (Width 1500px, Height 70px, Centered like Goldsammall CSS) */}
+          <div className="block md:hidden relative h-[70px] w-full overflow-hidden">
+            <img
+              src="https://cdn-saas-web-219-244.cdn-nhncommerce.com/pg2304_godomall_com/data/skin/front/8design/img/banner/slider_3549783502/6b97f33c325ba526fdfe82e11609abea_91159.jpg"
+              alt="Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác"
+              className="absolute left-1/2 top-0 h-[70px] w-[1500px] max-w-none -translate-x-1/2 object-cover transition-transform duration-700 ease-out group-hover:scale-[1.015]"
+            />
+          </div>
+
+          {/* Subtle Dark Gradient Overlay for Typography Contrast */}
+          <div className="absolute inset-0 bg-black/20 transition-opacity group-hover:bg-black/10" />
+
+          {/* ─── Center Vietnamese Slogan Overlay ─── */}
+          <div className="absolute inset-0 z-10 flex items-center justify-center px-4 pr-32 sm:pr-40">
+            <div className="flex items-center gap-2 rounded-full border border-dashed border-[#F0831F]/50 bg-black/45 px-3 py-1 sm:px-6 sm:py-1.5 shadow-xl backdrop-blur-md transition-all group-hover:border-[#B5222A]">
+              <span className="font-sans text-xs sm:text-base font-extrabold text-[#F0831F] tracking-wide whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                Hồng sâm Kim
+              </span>
+
+              <span className="mx-1 inline-flex h-1.5 w-1.5 rounded-full bg-[#B5222A] animate-pulse shrink-0" />
+
+              <span className="font-sans text-xs sm:text-sm md:text-base font-bold text-white tracking-tight whitespace-nowrap drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)]">
+                Nơi tận tâm trở thành kiệt tác
+              </span>
+            </div>
+          </div>
+        </Link>
       </div>
     </div>
   );
