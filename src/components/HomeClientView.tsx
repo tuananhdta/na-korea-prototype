@@ -3,10 +3,9 @@
 import { useState } from "react";
 import { Header } from "@/components/Header";
 import { HeroSlider } from "@/components/HeroSlider";
+import { BrandStorySection } from "@/components/BrandStorySection";
 import { MetricsSection } from "@/components/MetricsSection";
 import { ProductSection } from "@/components/ProductSection";
-import { GinsengSection } from "@/components/GinsengSection";
-import { BrandStorySection } from "@/components/BrandStorySection";
 import { PartnerSection } from "@/components/PartnerSection";
 import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
@@ -28,17 +27,14 @@ export function HomeClientView() {
         {/* 1. Fullscreen Video Hero Background */}
         <HeroSlider />
 
-        {/* 2. Metrics & Certifications Section (Phase 2) */}
+        {/* 2. Brand Story & Heritage Video Section */}
+        <BrandStorySection />
+
+        {/* 3. Metrics & Certifications Section (Phase 2) */}
         <MetricsSection />
 
-        {/* 3. Products Showcase Section */}
+        {/* 4. Products Showcase Section */}
         <ProductSection />
-
-        {/* 3. Korean Ginseng & Red Ginseng Section */}
-        <GinsengSection />
-
-        {/* 4. Brand Story & Video Section */}
-        <BrandStorySection />
 
         {/* 5. Enterprise Partners Infinite Marquee Section */}
         <PartnerSection />
