@@ -282,3 +282,47 @@
 .group-marquee:hover .animate-marquee-right {
   animation-play-state: paused;
 }
+
+/* Golden Light Ray Sweep Animation */
+@keyframes golden-shimmer-sweep {
+  0% {
+    transform: translateX(-150%) skewX(-20deg);
+  }
+  30%, 100% {
+    transform: translateX(250%) skewX(-20deg);
+  }
+}
+
+.animate-shimmer-sweep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.4) 40%,
+    rgba(240, 131, 31, 0.25) 50%,
+    rgba(255, 255, 255, 0.4) 60%,
+    transparent 100%
+  );
+  animation: golden-shimmer-sweep 7s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Watermark Slow Background Typography Scroll */
+@keyframes marquee-watermark-left {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-watermark-slow {
+  display: flex;
+  width: max-content;
+  animation: marquee-watermark-left 90s linear infinite;
+  will-change: transform;
+}
