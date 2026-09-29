@@ -9,16 +9,16 @@ export function HeroSlider() {
   return (
     <section
       data-floating-contact-hero
-      className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black text-white"
+      className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black text-white select-none"
     >
-      {/* ─── 1. Fullscreen YouTube Background Video ─── */}
+      {/* ─── 1. Fullscreen YouTube Background Video (Scaled to crop all YouTube UI elements) ─── */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
         <iframe
           src={`https://www.youtube.com/embed/p9detg0Rt_Q?autoplay=1&mute=${
             isMuted ? 1 : 0
-          }&controls=0&loop=1&playlist=p9detg0Rt_Q&playsinline=1&rel=0&disablekb=1&modestbranding=1`}
+          }&controls=0&loop=1&playlist=p9detg0Rt_Q&playsinline=1&rel=0&disablekb=1&modestbranding=1&iv_load_policy=3&autohide=1&showinfo=0`}
           title="Video Giới Thiệu Thương Hiệu Hồng Sâm Kim"
-          className="absolute left-1/2 top-1/2 min-w-full min-h-full w-[177.77777778vh] h-[56.25vw] -translate-x-1/2 -translate-y-1/2 object-cover border-0 scale-105"
+          className="absolute left-1/2 top-1/2 min-w-[135vw] min-h-[135vh] w-[140vw] h-[140vh] -translate-x-1/2 -translate-y-1/2 object-cover border-0 scale-125 pointer-events-none"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         />
       </div>
