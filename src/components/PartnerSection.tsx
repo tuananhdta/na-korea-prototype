@@ -124,7 +124,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
   return (
     <div
       key={`${keyPrefix}-${partner.id}`}
-      className="group/card relative flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-[#EEEEEE] bg-white px-5 py-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] duration-300 hover:border-[#4B193E]/40 hover:shadow-[0_8px_20px_rgba(75, 25, 62,0.10)]"
+      className="group/card relative flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-[#EEEEEE] bg-white px-5 py-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] duration-300 hover:border-[#4B193E]/40 hover:shadow-[0_8px_20px_rgba(75,25,62,0.10)]"
       title={`${partner.name} - ${partner.category}`}
     >
       <div className="flex h-full w-full items-center justify-center">
@@ -152,7 +152,7 @@ export function PartnerSection() {
           </span>
 
           <h2 className="font-sans mt-2.5 text-2xl sm:text-3xl md:text-[36px] lg:text-[42px] font-bold text-[#111111] tracking-[-0.015em] leading-[1.4]">
-            Đối tác của Kim&apos;s Red Ginseng tại Việt Nam & Quốc tế
+            Đối tác của Kim&apos;s Red Ginseng tại Việt Nam &amp; Quốc tế
           </h2>
 
           <p className="mt-3.5 max-w-2xl font-sans text-sm sm:text-base text-[#666666] leading-[1.7] tracking-[-0.01em]">
@@ -161,18 +161,15 @@ export function PartnerSection() {
         </div>
       </div>
 
-      {/* ═══ Phase 3 Cinematic: Dual Marquee Showcase ═══ */}
+      {/* ═══ Dual Marquee Showcase (Staggered Solo Headers) ═══ */}
       <div className="relative z-10 mt-12 sm:mt-16 space-y-6 sm:space-y-8">
         
-        {/* ─── DÒNG 1: Đối tác Quốc tế & Hàn Quốc (Scroll Left: Phải -> Trái) ─── */}
+        {/* ─── DÒNG 1: Đối tác Quốc tế & Hàn Quốc (Header bên TRÁI - Scroll Left) ─── */}
         <div>
-          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-between">
-            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#4B193E] border-b border-[#4B193E]/30 pb-1">
-              <span>Đối Tác Quốc Tế & Hàn Quốc</span>
+          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-start">
+            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-bold uppercase tracking-[0.05em] text-[#111111] border-b-2 border-[#4B193E] pb-1">
+              <span>Đối Tác Quốc Tế &amp; Hàn Quốc</span>
             </div>
-            <span className="font-sans text-[11px] font-medium leading-[1.5] text-[#777777] hidden sm:inline-flex">
-              Tập đoàn công nghệ, ngân hàng & viện nghiên cứu Hàn Quốc
-            </span>
           </div>
 
           <div className="group-marquee relative w-full overflow-hidden py-2">
@@ -204,15 +201,12 @@ export function PartnerSection() {
           </div>
         </div>
 
-        {/* ─── DÒNG 2: Đối tác & Đại lý Trong Nước (Scroll Right: Trái -> Phải) ─── */}
+        {/* ─── DÒNG 2: Đối tác & Đại lý Trong Nước (Header bên PHẢI - Scroll Right) ─── */}
         <div>
-          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-between">
-            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#181818] border-b border-[#181818]/25 pb-1">
-              <span>Đối Tác Doanh Nghiệp & Phân Phối Việt Nam</span>
+          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-end text-right">
+            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-bold uppercase tracking-[0.05em] text-[#111111] border-b-2 border-[#4B193E] pb-1">
+              <span>Đối Tác Doanh Nghiệp &amp; Phân Phối Việt Nam</span>
             </div>
-            <span className="font-sans text-[11px] font-medium leading-[1.5] text-[#777777] hidden sm:inline-flex">
-              Hệ thống bán lẻ, tập đoàn đa ngành & ngân hàng tại Việt Nam
-            </span>
           </div>
 
           <div className="group-marquee relative w-full overflow-hidden py-2">
