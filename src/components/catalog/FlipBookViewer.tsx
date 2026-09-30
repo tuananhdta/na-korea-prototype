@@ -19,7 +19,7 @@ const HTMLFlipBook: any = dynamic(
   {
     ssr: false,
     loading: () => (
-      <div className="flex h-[550px] w-full items-center justify-center rounded-2xl bg-[#F7F5F0] text-sm text-[#4B193E]">
+      <div className="flex h-[550px] w-full items-center justify-center rounded-2xl bg-[#F8F8F8] text-sm text-[#181818]">
         <div className="flex flex-col items-center gap-3">
           <div className="h-9 w-9 animate-spin rounded-full border-3 border-[#B5222A] border-t-transparent" />
           <span className="font-semibold tracking-wide">Đang khởi tạo E-Catalog 3D...</span>
@@ -198,18 +198,18 @@ export function FlipBookViewer({
   return (
     <div
       ref={containerRef}
-      className={`relative flex flex-col items-center justify-between rounded-3xl border border-[#E8E4DA] bg-gradient-to-b from-[#FDFBF7] to-[#F5F2EA] p-4 shadow-xl transition-all duration-300 sm:p-6 lg:p-8 ${
-        isFullscreen ? "h-screen w-screen rounded-none p-4 !bg-[#1A1815] text-white" : ""
+      className={`relative flex flex-col items-center justify-between rounded-3xl border border-[#E8E4DA] bg-gradient-to-b from-[#FDFBF7] to-[#F5F3EF] p-4 shadow-xl transition-all duration-300 sm:p-6 lg:p-8 ${
+        isFullscreen ? "h-screen w-screen rounded-none p-4 !bg-[#181818] text-white" : ""
       }`}
     >
       {/* ═══ Top Header Toolbar ═══ */}
-      <div className="mb-4 flex w-full flex-wrap items-center justify-between gap-3 border-b border-[#E6E1D5]/80 pb-4">
+      <div className="mb-4 flex w-full flex-wrap items-center justify-between gap-3 border-b border-[#EEEEEE]/80 pb-4">
         <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4B193E] text-[#F0831F] shadow-sm">
+          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#181818] text-[#D4A359] shadow-sm">
             <BookOpen className="h-5 w-5" />
           </div>
           <div>
-            <h2 className={`font-sans text-base font-bold tracking-tight sm:text-lg ${isFullscreen ? "text-white" : "text-[#2D2D2D]"}`}>
+            <h2 className={`font-sans text-base font-bold tracking-tight sm:text-lg ${isFullscreen ? "text-white" : "text-[#111111]"}`}>
               {title}
             </h2>
           </div>
@@ -224,7 +224,7 @@ export function FlipBookViewer({
             className={`flex h-9 w-9 items-center justify-center rounded-lg border transition-colors ${
               isFullscreen
                 ? "border-white/20 bg-white/10 text-white hover:bg-white/20"
-                : "border-[#DCD7CB] bg-white text-[#4B4F52] hover:bg-[#F2EFE8]"
+                : "border-[#EEEEEE] bg-white text-[#333333] hover:bg-[#F2EFE8]"
             }`}
             title={isFullscreen ? "Thoát toàn màn hình" : "Xem toàn màn hình (Phím F)"}
             aria-label="Toàn màn hình"
@@ -308,7 +308,7 @@ export function FlipBookViewer({
       </div>
 
       {/* ═══ Bottom Navigation & Progress Toolbar ═══ */}
-      <div className="mt-3 flex w-full flex-wrap items-center justify-between gap-3 border-t border-[#E6E1D5]/80 pt-3">
+      <div className="mt-3 flex w-full flex-wrap items-center justify-between gap-3 border-t border-[#EEEEEE]/80 pt-3">
         {/* Page Jump Controls */}
         <div className="flex items-center gap-1.5">
           <button
@@ -318,7 +318,7 @@ export function FlipBookViewer({
             className={`flex h-8 w-8 items-center justify-center rounded-md border text-xs transition-colors disabled:opacity-30 ${
               isFullscreen
                 ? "border-white/20 bg-white/10 text-white hover:bg-white/20"
-                : "border-[#DCD7CB] bg-white text-[#4B4F52] hover:bg-[#F2EFE8]"
+                : "border-[#EEEEEE] bg-white text-[#333333] hover:bg-[#F2EFE8]"
             }`}
             title="Về trang đầu tiên"
           >
@@ -331,7 +331,7 @@ export function FlipBookViewer({
             className={`flex h-8 items-center gap-1 rounded-md border px-2.5 text-xs font-semibold transition-colors disabled:opacity-30 ${
               isFullscreen
                 ? "border-white/20 bg-white/10 text-white hover:bg-white/20"
-                : "border-[#DCD7CB] bg-white text-[#4B4F52] hover:bg-[#F2EFE8]"
+                : "border-[#EEEEEE] bg-white text-[#333333] hover:bg-[#F2EFE8]"
             }`}
             title="Lật trang trước (Phím Mũi tên Trái)"
           >
@@ -342,7 +342,7 @@ export function FlipBookViewer({
 
         {/* Current Page / Total Pages Badge */}
         <div className="flex items-center gap-2">
-          <div className="flex items-center gap-2 rounded-full border border-[#DCD7CB] bg-white/90 px-4 py-1 text-xs font-bold text-[#4B193E] shadow-2xs backdrop-blur-xs">
+          <div className="flex items-center gap-2 rounded-full border border-[#EEEEEE] bg-white/90 px-4 py-1 text-xs font-bold text-[#181818] shadow-2xs backdrop-blur-xs">
             <span>{getPageIndicator()}</span>
           </div>
         </div>
@@ -355,7 +355,7 @@ export function FlipBookViewer({
             className={`flex h-8 items-center gap-1 rounded-md border px-2.5 text-xs font-semibold transition-colors disabled:opacity-30 ${
               isFullscreen
                 ? "border-white/20 bg-white/10 text-white hover:bg-white/20"
-                : "border-[#DCD7CB] bg-white text-[#4B4F52] hover:bg-[#F2EFE8]"
+                : "border-[#EEEEEE] bg-white text-[#333333] hover:bg-[#F2EFE8]"
             }`}
             title="Lật trang sau (Phím Mũi tên Phải)"
           >
@@ -369,7 +369,7 @@ export function FlipBookViewer({
             className={`flex h-8 w-8 items-center justify-center rounded-md border text-xs transition-colors disabled:opacity-30 ${
               isFullscreen
                 ? "border-white/20 bg-white/10 text-white hover:bg-white/20"
-                : "border-[#DCD7CB] bg-white text-[#4B4F52] hover:bg-[#F2EFE8]"
+                : "border-[#EEEEEE] bg-white text-[#333333] hover:bg-[#F2EFE8]"
             }`}
             title="Đến trang cuối cùng"
           >

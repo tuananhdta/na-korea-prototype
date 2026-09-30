@@ -15,7 +15,7 @@ export function HomeClientView() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-white">
+    <div className="relative min-h-screen flex flex-col bg-white font-sans">
       {/* Intro Screen Reveal (Only on first visit per session) */}
       <IntroScreen />
 

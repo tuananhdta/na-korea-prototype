@@ -55,7 +55,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
       };
 
   return (
-    <div className="min-h-screen bg-[#FCFAF7] text-[#2D2D2D] selection:bg-[#B5222A] selection:text-white flex flex-col">
+    <div className="min-h-screen bg-[#FCFAF7] text-[#111111] selection:bg-[#B5222A] selection:text-white flex flex-col">
       <Header />
 
       <main className="flex-1 pb-24">
@@ -94,7 +94,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
           </div>
 
           {/* ═══ Additional Brand Trust & Wholesale CTA Banner ═══ */}
-          <div className="relative mt-12 sm:mt-16 overflow-hidden rounded-3xl border border-[#4B193E]/60 bg-gradient-to-br from-[#38112E] via-[#2A0D23] to-[#1C0817] p-6 sm:p-10 lg:p-12 text-white shadow-[0_20px_50px_rgba(45,13,36,0.25)] ring-1 ring-white/10">
+          <div className="relative mt-12 sm:mt-16 overflow-hidden rounded-3xl border border-[#181818]/60 bg-gradient-to-br from-[#181818] via-[#181818] to-[#181818] p-6 sm:p-10 lg:p-12 text-white shadow-[0_20px_50px_rgba(45,13,36,0.25)] ring-1 ring-white/10">
             {/* Background Texture & Glow */}
             <div
               aria-hidden="true"
@@ -102,7 +102,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
             />
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-[#F0831F]/15 blur-3xl"
+              className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-[#D4A359]/15 blur-3xl"
             />
             <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-full sm:w-1/2 opacity-10 mix-blend-luminosity">
               <Image
@@ -120,7 +120,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                 {/* Brand Accent Dots */}
                 <div aria-hidden="true" className="flex h-3.5 items-center gap-1.5">
                   <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#F0831F]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359]" />
                   <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
                 </div>
 
@@ -128,7 +128,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                   Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Kim&apos;s Red Ginseng?
                 </h3>
                 
-                <p className="text-sm sm:text-base text-[#D4CDC7] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#EEEEEE] leading-relaxed">
                   NA Korea cung cấp chính sách chiết khấu đại lý hấp dẫn, hỗ trợ tài liệu in ấn Catalog, chứng từ nguồn gốc xuất xứ CO/CQ và đào tạo chuyên sâu về dược tính Ginsenoside cho đội ngũ tư vấn.
                 </p>
 
@@ -142,7 +142,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                   </Link>
                   <Link
                     href="/san-pham"
-                    className="na-btn-outline group px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold !border-white/25 !bg-white/10 !text-white hover:!bg-white hover:!text-[#4B193E] hover:!border-white transition-all backdrop-blur-sm"
+                    className="na-btn-outline group px-5 sm:px-6 py-3.5 text-xs sm:text-sm font-semibold !border-white/25 !bg-white/10 !text-white hover:!bg-white hover:!text-[#181818] hover:!border-white transition-all backdrop-blur-sm"
                   >
                     <Eye className="h-4 w-4" />
                     <span>Xem 32 Sản Phẩm Chính Hãng</span>

@@ -59,7 +59,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
       <div className="min-h-screen bg-[#F8F8F8] flex flex-col">
         <Header onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
         <main className="flex-1 max-w-[1240px] mx-auto px-4 py-20 text-center">
-          <h1 className="text-2xl font-bold text-[#2D2D2D]">Không tìm thấy chính sách</h1>
+          <h1 className="text-2xl font-bold text-[#111111]">Không tìm thấy chính sách</h1>
           <Link href="/" className="mt-4 inline-block text-[#B5222A] hover:underline">
             Quay lại trang chủ
           </Link>
@@ -209,7 +209,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
 
       <main className="flex-1 pb-20">
         {/* Banner Hero */}
-        <div className="relative overflow-hidden bg-gradient-to-r from-[#4B193E] via-[#35102c] to-[#1a0815] text-white py-12 sm:py-16 px-4 sm:px-6">
+        <div className="relative overflow-hidden bg-gradient-to-r from-[#181818] via-[#181818] to-[#181818] text-white py-12 sm:py-16 px-4 sm:px-6">
           <div className="max-w-[1240px] mx-auto relative z-10 space-y-3">
             <h1 className="text-2xl sm:text-4xl font-extrabold tracking-tight drop-shadow-sm text-white">
               {policy.title}
@@ -221,16 +221,16 @@ export function PolicyPageView({ slug }: { slug: string }) {
         </div>
 
         {/* Breadcrumb Navigation (Rich SEO) */}
-        <div className="bg-white border-b border-[#E5E5E5]">
+        <div className="bg-white border-b border-[#EEEEEE]">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
             <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs sm:text-sm text-[#666666]">
-              <Link href="/" className="hover:text-[#2D2D2D] transition-colors">
+              <Link href="/" className="hover:text-[#111111] transition-colors">
                 Trang Chủ
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
               <span className="text-[#666666]">Chính sách</span>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-              <span className="text-[#2D2D2D] font-semibold truncate max-w-xs sm:max-w-md">
+              <span className="text-[#111111] font-semibold truncate max-w-xs sm:max-w-md">
                 {policy.title}
               </span>
             </nav>
@@ -242,9 +242,9 @@ export function PolicyPageView({ slug }: { slug: string }) {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             {/* Article Content (Left Column) */}
             <div className="lg:col-span-8 space-y-8">
-              <article className="bg-white rounded-2xl border border-[#E5E5E5] p-6 sm:p-10 shadow-xs">
+              <article className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-10 shadow-xs">
                 {/* Document Header */}
-                <div className="border-b border-[#E5E5E5] pb-6 mb-8">
+                <div className="border-b border-[#EEEEEE] pb-6 mb-8">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
                     <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-red-100 text-[#B5222A] uppercase tracking-wider">
                       <FileText className="w-3 h-3" />
@@ -255,7 +255,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
                     </span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-bold text-[#2D2D2D] leading-snug">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-[#111111] leading-snug">
                     {policy.title}
                   </h2>
                   <p className="text-xs text-[#666666] mt-2">
@@ -265,13 +265,13 @@ export function PolicyPageView({ slug }: { slug: string }) {
 
                 {/* Main Rendered Policy HTML */}
                 <div
-                  className="policy-content text-[#4B4F52] text-sm sm:text-[15px] leading-relaxed space-y-4 [&_h1]:text-xl [&_h1]:sm:text-2xl [&_h1]:font-bold [&_h1]:text-[#2D2D2D] [&_h1]:mt-8 [&_h1]:mb-3 [&_h2]:text-lg [&_h2]:sm:text-xl [&_h2]:font-bold [&_h2]:text-[#2D2D2D] [&_h2]:mt-8 [&_h2]:mb-3 [&_h2]:pt-4 [&_h2]:border-t [&_h2]:border-[#E5E5E5] [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-[#2D2D2D] [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:mb-3.5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-4 [&_ol]:space-y-1.5 [&_li]:leading-relaxed [&_strong]:text-[#2D2D2D] [&_strong]:font-bold [&_a]:text-[#B5222A] [&_a]:underline"
+                  className="policy-content text-[#333333] text-sm sm:text-[15px] leading-relaxed space-y-4 [&_h1]:text-xl [&_h1]:sm:text-2xl [&_h1]:font-bold [&_h1]:text-[#111111] [&_h1]:mt-8 [&_h1]:mb-3 [&_h2]:text-lg [&_h2]:sm:text-xl [&_h2]:font-bold [&_h2]:text-[#111111] [&_h2]:mt-8 [&_h2]:mb-3 [&_h2]:pt-4 [&_h2]:border-t [&_h2]:border-[#EEEEEE] [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-[#111111] [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:mb-3.5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-4 [&_ol]:space-y-1.5 [&_li]:leading-relaxed [&_strong]:text-[#111111] [&_strong]:font-bold [&_a]:text-[#B5222A] [&_a]:underline"
                   dangerouslySetInnerHTML={{ __html: policy.content }}
                 />
 
                 {/* Support Hotline Notice */}
-                <div className="mt-10 pt-6 border-t border-[#E5E5E5] bg-gray-50/80 rounded-xl p-5 text-xs sm:text-sm text-[#4B4F52] space-y-2">
-                  <div className="font-bold text-[#2D2D2D] flex items-center gap-2">
+                <div className="mt-10 pt-6 border-t border-[#EEEEEE] bg-gray-50/80 rounded-xl p-5 text-xs sm:text-sm text-[#333333] space-y-2">
+                  <div className="font-bold text-[#111111] flex items-center gap-2">
                     <Phone className="w-4 h-4 text-[#B5222A]" />
                     <span>Cần hỗ trợ trực tiếp hoặc giải đáp khiếu nại?</span>
                   </div>
@@ -283,10 +283,10 @@ export function PolicyPageView({ slug }: { slug: string }) {
 
               {/* FAQ Accordion Section (Tối ưu GEO / Rich Snippets) */}
               {policy.faqs && policy.faqs.length > 0 && (
-                <section aria-labelledby="faq-section-title" className="bg-white rounded-2xl border border-[#E5E5E5] p-6 sm:p-8 shadow-xs">
-                  <div className="flex items-center gap-2 mb-6 border-b border-[#E5E5E5] pb-4">
+                <section aria-labelledby="faq-section-title" className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-8 shadow-xs">
+                  <div className="flex items-center gap-2 mb-6 border-b border-[#EEEEEE] pb-4">
                     <HelpCircle className="w-5 h-5 text-[#B5222A]" />
-                    <h3 id="faq-section-title" className="text-lg sm:text-xl font-bold text-[#2D2D2D]">
+                    <h3 id="faq-section-title" className="text-lg sm:text-xl font-bold text-[#111111]">
                       Câu Hỏi Thường Gặp (FAQ)
                     </h3>
                   </div>
@@ -297,12 +297,12 @@ export function PolicyPageView({ slug }: { slug: string }) {
                       return (
                         <div
                           key={index}
-                          className="border border-[#E5E5E5] rounded-xl overflow-hidden transition-all duration-200"
+                          className="border border-[#EEEEEE] rounded-xl overflow-hidden transition-all duration-200"
                         >
                           <button
                             type="button"
                             onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                            className="w-full flex items-center justify-between p-4 text-left font-semibold text-xs sm:text-sm text-[#2D2D2D] hover:text-[#B5222A] bg-gray-50/50 hover:bg-gray-50 transition-colors"
+                            className="w-full flex items-center justify-between p-4 text-left font-semibold text-xs sm:text-sm text-[#111111] hover:text-[#B5222A] bg-gray-50/50 hover:bg-gray-50 transition-colors"
                             aria-expanded={isOpen}
                           >
                             <span className="pr-4">{faq.question}</span>
@@ -313,7 +313,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
                             />
                           </button>
                           {isOpen && (
-                            <div className="p-4 pt-2 text-xs sm:text-sm text-[#4B4F52] bg-white border-t border-gray-100 leading-relaxed">
+                            <div className="p-4 pt-2 text-xs sm:text-sm text-[#333333] bg-white border-t border-gray-100 leading-relaxed">
                               {faq.answer}
                             </div>
                           )}
@@ -328,10 +328,10 @@ export function PolicyPageView({ slug }: { slug: string }) {
             {/* Sidebar (Right Column) */}
             <div className="lg:col-span-4 space-y-6">
               {/* Other useful links navigation */}
-              <div className="bg-white rounded-2xl border border-[#E5E5E5] p-6 shadow-xs space-y-4">
-                <div className="flex items-center gap-2 border-b border-[#E5E5E5] pb-4">
+              <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 shadow-xs space-y-4">
+                <div className="flex items-center gap-2 border-b border-[#EEEEEE] pb-4">
                   <FileText className="w-5 h-5 text-[#B5222A]" />
-                  <h3 className="font-bold text-base text-[#2D2D2D]">
+                  <h3 className="font-bold text-base text-[#111111]">
                     Liên Kết Hữu Ích
                   </h3>
                 </div>
@@ -346,7 +346,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
                         className={`flex items-center justify-between p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                           isActive
                             ? "bg-[#B5222A] text-white shadow-xs"
-                            : "text-[#4B4F52] hover:bg-gray-50 hover:text-[#B5222A]"
+                            : "text-[#333333] hover:bg-gray-50 hover:text-[#B5222A]"
                         }`}
                       >
                         <span className="truncate pr-2">{item.label}</span>
@@ -362,23 +362,23 @@ export function PolicyPageView({ slug }: { slug: string }) {
               </div>
 
               {/* GEO / Local Entity Card (Tối ưu Local Business SEO) */}
-              <div className="bg-white rounded-2xl border border-[#E5E5E5] p-6 shadow-xs space-y-4">
-                <div className="flex items-center gap-2 border-b border-[#E5E5E5] pb-3">
+              <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 shadow-xs space-y-4">
+                <div className="flex items-center gap-2 border-b border-[#EEEEEE] pb-3">
                   <Building2 className="w-4 h-4 text-[#B5222A]" />
-                  <h4 className="font-bold text-sm text-[#2D2D2D]">
+                  <h4 className="font-bold text-sm text-[#111111]">
                     Đơn Vị Nhập Khẩu Độc Quyền
                   </h4>
                 </div>
 
-                <div className="space-y-3 text-xs text-[#4B4F52]">
-                  <p className="font-bold text-[#2D2D2D] text-sm">
+                <div className="space-y-3 text-xs text-[#333333]">
+                  <p className="font-bold text-[#111111] text-sm">
                     CÔNG TY TNHH THƯƠNG MẠI NA KOREA
                   </p>
                   <p className="text-[11px] text-[#666666]">
                     GPĐKKD/MST: <strong>0109946846</strong> do Sở Kế hoạch và Đầu tư TP Hà Nội cấp.
                   </p>
                   <div className="flex items-start gap-2 pt-1">
-                    <MapPin className="w-4 h-4 text-[#F0831F] shrink-0 mt-0.5" />
+                    <MapPin className="w-4 h-4 text-[#D4A359] shrink-0 mt-0.5" />
                     <span>Số 31 LK3 KĐT 90 Nguyễn Tuân, Phường Thanh Xuân Trung, Quận Thanh Xuân, Hà Nội</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -389,10 +389,10 @@ export function PolicyPageView({ slug }: { slug: string }) {
               </div>
 
               {/* Customer Care Hotline Box */}
-              <div className="bg-gradient-to-br from-[#4B193E] to-[#2b0821] text-white rounded-2xl p-6 shadow-md space-y-4">
+              <div className="bg-gradient-to-br from-[#181818] to-[#2b0821] text-white rounded-2xl p-6 shadow-md space-y-4">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
-                    <Phone className="w-4 h-4 text-[#F0831F]" />
+                    <Phone className="w-4 h-4 text-[#D4A359]" />
                   </div>
                   <div>
                     <div className="text-[11px] text-white/70 uppercase tracking-wider font-semibold">
@@ -406,11 +406,11 @@ export function PolicyPageView({ slug }: { slug: string }) {
 
                 <div className="space-y-2 text-xs text-white/80 border-t border-white/10 pt-4">
                   <div className="flex items-center gap-2">
-                    <Clock className="w-3.5 h-3.5 text-[#F0831F] shrink-0" />
+                    <Clock className="w-3.5 h-3.5 text-[#D4A359] shrink-0" />
                     <span>08:00 – 22:00 (Tất cả các ngày trong tuần)</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Mail className="w-3.5 h-3.5 text-[#F0831F] shrink-0" />
+                    <Mail className="w-3.5 h-3.5 text-[#D4A359] shrink-0" />
                     <span>na.koreaginseng@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-2 pt-1 text-[11px] text-white/60">

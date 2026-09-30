@@ -251,7 +251,7 @@ export default function HongSamPage() {
 
           {/* CTA Link to Store */}
           <div
-            className="bg-[#161e27] text-white rounded-2xl p-8 sm:p-12 text-center space-y-4"
+            className="bg-[#181818] text-white rounded-2xl p-8 sm:p-12 text-center space-y-4"
             data-scroll-fade="on"
           >
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">

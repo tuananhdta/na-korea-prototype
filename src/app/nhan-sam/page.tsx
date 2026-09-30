@@ -127,7 +127,7 @@ export default function NhanSamPage() {
 
             {/* 4 Core Saponin Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="p-6 rounded-xl bg-[#faf6f0] border border-[#f0e6d6] text-center space-y-3">
+              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
                 <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
                   <Flame className="w-6 h-6" />
                 </div>
@@ -137,7 +137,7 @@ export default function NhanSamPage() {
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#faf6f0] border border-[#f0e6d6] text-center space-y-3">
+              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
                 <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
                   <Zap className="w-6 h-6" />
                 </div>
@@ -147,7 +147,7 @@ export default function NhanSamPage() {
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#faf6f0] border border-[#f0e6d6] text-center space-y-3">
+              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
                 <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
                   <HeartPulse className="w-6 h-6" />
                 </div>
@@ -157,7 +157,7 @@ export default function NhanSamPage() {
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#faf6f0] border border-[#f0e6d6] text-center space-y-3">
+              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
                 <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
@@ -292,7 +292,7 @@ export default function NhanSamPage() {
 
           {/* CTA Link to Red Ginseng */}
           <div
-            className="bg-[#161e27] text-white rounded-2xl p-8 sm:p-12 text-center space-y-4"
+            className="bg-[#181818] text-white rounded-2xl p-8 sm:p-12 text-center space-y-4"
             data-scroll-fade="on"
           >
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">

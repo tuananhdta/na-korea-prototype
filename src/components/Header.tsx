@@ -115,7 +115,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
 
       <header
         onMouseLeave={() => setActiveMenu(null)}
-        className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#2D2D2D] transition-[background-color,box-shadow,backdrop-filter] duration-400 ease-in-out ${headerBgClass}`}
+        className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#111111] transition-[background-color,box-shadow,backdrop-filter] duration-400 ease-in-out ${headerBgClass}`}
       >
         <div
           className={`mx-auto flex max-w-[1240px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
@@ -177,12 +177,12 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     href={item.href}
                     aria-haspopup={item.subItems ? "menu" : undefined}
                     aria-expanded={item.subItems ? isHovered : undefined}
-                    className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center text-[14px] leading-[1.15] tracking-[0.02em] transition-all duration-200 xl:px-2.5 ${
+                    className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center font-sans text-[14px] leading-[1.15] tracking-[0.02em] transition-all duration-200 xl:px-2.5 ${
                       isHovered || isRouteActive
-                        ? "font-bold text-[#B5222A]"
+                        ? "font-semibold text-[#B5222A]"
                         : isTopTransparent
-                          ? "font-bold text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] hover:text-[#FFF7F7]"
-                          : "font-semibold text-[#2D2D2D] hover:text-[#B5222A]"
+                          ? "font-medium text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] hover:text-[#FFF7F7]"
+                          : "font-medium text-[#111111] hover:text-[#B5222A]"
                     }`}
                   >
                     <span>{item.title}</span>
@@ -220,12 +220,12 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               className={`relative ml-2 flex h-[50px] min-w-[64px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 transition-all duration-200 cursor-pointer ${
                 isTopTransparent
                   ? "text-white hover:bg-white/10 hover:text-white"
-                  : "text-[#2D2D2D] hover:bg-gray-100 hover:text-[#B5222A]"
+                  : "text-[#111111] hover:bg-gray-100 hover:text-[#B5222A]"
               }`}
             >
               <ShoppingBag className="h-5 w-5" />
               {totalCount > 0 && (
-                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-extrabold text-white ring-2 ring-white">
+                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[10px] font-extrabold text-white ring-2 ring-white">
                   {totalCount}
                 </span>
               )}
@@ -241,12 +241,12 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               className={`relative rounded-lg p-2 transition-colors cursor-pointer ${
                 isTopTransparent
                   ? "text-white hover:bg-white/10"
-                  : "text-[#2D2D2D] hover:bg-gray-100 hover:text-[#B5222A]"
+                  : "text-[#111111] hover:bg-gray-100 hover:text-[#B5222A]"
               }`}
             >
               <ShoppingBag className="h-6 w-6" />
               {totalCount > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] text-[10px] font-bold text-white ring-2 ring-white">
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[10px] font-bold text-white ring-2 ring-white">
                   {totalCount}
                 </span>
               )}
@@ -263,7 +263,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               className={`rounded-lg p-2 transition-colors cursor-pointer ${
                 isTopTransparent
                   ? "text-white hover:bg-white/10"
-                  : "text-[#2D2D2D] hover:bg-gray-100 hover:text-[#B5222A]"
+                  : "text-[#111111] hover:bg-gray-100 hover:text-[#B5222A]"
               }`}
             >
               <Menu className="h-6 w-6" />
@@ -283,7 +283,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               className={`absolute inset-x-0 top-full hidden transition-[opacity,transform,visibility,background-color,border-color] duration-200 lg:block ${
                 isTopTransparent
                   ? "border-t border-white/10 bg-black/30 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.2)] text-white"
-                  : "border-t border-[#F0EDE8] bg-white/98 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#2D2D2D]"
+                  : "border-t border-[#F0EDE8] bg-white/98 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#111111]"
               } ${
                 isItemActive
                   ? "visible translate-y-0 opacity-100"
@@ -327,14 +327,14 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                       >
                         <Link
                           href={sub.href}
-                          className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center text-sm tracking-[0.02em] whitespace-nowrap transition-colors duration-200 ${
+                          className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center font-sans text-sm leading-[1.15] tracking-[0.02em] whitespace-nowrap transition-colors duration-200 ${
                             isSubActive
                               ? isTopTransparent
-                                ? "font-bold text-white drop-shadow-sm"
-                                : "font-bold text-[#B5222A]"
+                                ? "font-semibold text-white drop-shadow-sm"
+                                : "font-semibold text-[#B5222A]"
                               : isTopTransparent
-                                ? "font-semibold text-white/90 hover:text-white"
-                                : "font-medium text-[#4B4F52] hover:text-[#B5222A]"
+                                ? "font-medium text-white/90 hover:text-white"
+                                : "font-medium text-[#333333] hover:text-[#B5222A]"
                           }`}
                         >
                           <span className="relative inline-flex items-center gap-1.5 whitespace-nowrap py-1 transition-transform duration-200 group-hover/sub:-translate-y-0.5">

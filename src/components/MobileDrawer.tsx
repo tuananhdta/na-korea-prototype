@@ -104,7 +104,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         aria-hidden={!isOpen}
         role="dialog"
         aria-label="Menu điều hướng"
-        className={`fixed inset-y-0 right-0 flex w-[min(320px,85vw)] flex-col bg-[#1A1A1A] text-white shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
+        className={`fixed inset-y-0 right-0 flex w-[min(320px,85vw)] flex-col bg-[#181818] text-white shadow-2xl transition-transform duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
@@ -139,14 +139,14 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className={`flex items-center gap-2 text-[15px] tracking-wide transition-colors ${
+                    className={`flex items-center gap-2 font-sans text-sm leading-[1.15] tracking-[0.02em] transition-colors ${
                       isRouteActive
-                        ? "font-bold text-[#F0831F]"
+                        ? "font-semibold text-[#D4A359]"
                         : "font-medium text-white/90 hover:text-white"
                     }`}
                   >
                     {isRouteActive && (
-                      <span className="h-1.5 w-1.5 rounded-full bg-[#F0831F] shadow-[0_0_6px_rgba(240,131,31,0.9)] animate-pulse" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359] shadow-[0_0_6px_rgba(240,131,31,0.9)] animate-pulse" />
                     )}
                     <span>{item.title}</span>
                   </Link>
@@ -177,14 +177,14 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                           <Link
                             href={sub.href}
                             onClick={onClose}
-                            className={`flex items-center gap-2 py-1.5 text-[13px] transition-colors ${
+                            className={`flex items-center gap-2 py-1.5 font-sans text-[13px] leading-[1.15] tracking-[0.02em] transition-colors ${
                               isSubActive
-                                ? "font-bold text-[#F0831F]"
+                                ? "font-semibold text-[#D4A359]"
                                 : "text-white/70 hover:text-white"
                             }`}
                           >
                             {isSubActive && (
-                              <span className="h-1.5 w-1.5 rounded-full bg-[#F0831F]" />
+                              <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359]" />
                             )}
                             <span>{sub.title}</span>
                           </Link>
@@ -197,9 +197,9 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                                   key={child.title}
                                   href={child.href}
                                   onClick={onClose}
-                                  className={`block py-1 text-xs transition-colors ${
+                                  className={`block py-1 font-sans text-xs leading-[1.15] tracking-[0.02em] transition-colors ${
                                     pathname === child.href
-                                      ? "font-bold text-[#F0831F]"
+                                      ? "font-semibold text-[#D4A359]"
                                       : "text-white/50 hover:text-white"
                                   }`}
                                 >
@@ -219,19 +219,19 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
         </div>
 
         {/* Drawer Bottom Quick Contacts & CTA */}
-        <div className="border-t border-white/10 bg-[#141414] p-5 space-y-3">
+        <div className="border-t border-white/10 bg-[#181818] p-5 space-y-3">
           <Link
             href="/gio-hang"
             onClick={onClose}
-            className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/10 py-2.5 text-xs font-bold text-white transition-colors hover:bg-white/20"
+            className="flex w-full items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/10 py-2.5 font-sans text-xs font-bold leading-[1.0] tracking-[0.03em] text-white transition-colors hover:bg-white/20"
           >
-            <ShoppingCart className="w-4 h-4 text-[#F0831F]" />
+            <ShoppingCart className="w-4 h-4 text-[#D4A359]" />
             <span>XEM GIỎ HÀNG</span>
           </Link>
 
           <a
             href="tel:0903409939"
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#B5222A] py-2.5 text-xs font-bold text-white shadow-md transition-colors hover:bg-[#991C23]"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#B5222A] py-2.5 font-sans text-xs font-bold leading-[1.0] tracking-[0.03em] text-white shadow-md transition-colors hover:bg-[#991C23]"
           >
             <Phone className="w-4 h-4" />
             <span>HOTLINE: 090.340.9939</span>

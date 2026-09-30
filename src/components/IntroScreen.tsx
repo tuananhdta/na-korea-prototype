@@ -84,7 +84,7 @@ export function IntroScreen() {
       <button
         type="button"
         onClick={handleSkip}
-        className="absolute bottom-6 right-6 z-20 flex items-center gap-1.5 rounded-full border border-white/20 bg-black/60 px-4 py-2 text-xs font-semibold text-white/90 backdrop-blur-md transition-all hover:border-white/50 hover:bg-black/80 hover:text-white cursor-pointer active:scale-95 shadow-xl"
+        className="absolute bottom-6 right-6 z-20 flex items-center gap-1.5 rounded-full border border-white/20 bg-black/60 px-4 py-2 font-sans text-xs font-semibold leading-[1.0] tracking-[0.03em] text-white/90 backdrop-blur-md transition-all hover:border-white/50 hover:bg-black/80 hover:text-white cursor-pointer active:scale-95 shadow-xl"
       >
         <span>Bỏ qua Video</span>
         <span aria-hidden="true">&rarr;</span>

@@ -20,7 +20,7 @@ export function PageHero({
   imageOpacity = 0.92,
 }: PageHeroProps) {
   return (
-    <section data-floating-contact-hero className="relative isolate flex min-h-[clamp(260px,34vh,350px)] items-center overflow-hidden bg-[#161e27] px-4 py-14 text-white sm:px-6 md:py-18">
+    <section data-floating-contact-hero className="relative isolate flex min-h-[clamp(260px,34vh,350px)] items-center overflow-hidden bg-[#181818] px-4 py-14 text-white sm:px-6 md:py-18">
       {image && (
         <div className="kenburns-pulse absolute inset-0 z-0">
           <Image
@@ -35,7 +35,7 @@ export function PageHero({
         </div>
       )}
 
-      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-[#161e27]/40 to-transparent" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-[#181818]/40 to-transparent" />
 
       <div className="na-hero-content relative z-10 mx-auto w-full max-w-[1240px] space-y-4">
         <h1 className="max-w-5xl text-3xl font-extrabold leading-tight tracking-tight text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] sm:text-4xl md:text-5xl">

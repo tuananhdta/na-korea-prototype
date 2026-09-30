@@ -28,7 +28,7 @@ export function TinTucListView() {
   const listPosts = filteredBlogs;
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] flex flex-col">
+    <div className="min-h-screen bg-[#F8F8F8] flex flex-col">
       <Header />
 
       <main className="flex-1 pb-20">
@@ -43,7 +43,7 @@ export function TinTucListView() {
         />
 
         {/* Breadcrumb */}
-        <div className="border-b border-[#EAE4DC] bg-[#FAF9F6] py-3.5">
+        <div className="border-b border-[#EEEEEE] bg-[#F8F8F8] py-3.5">
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
             <nav className="flex items-center space-x-2 text-xs text-[#666666]">
               <Link href="/" className="hover:text-[#B5222A] transition-colors">Trang Chủ</Link>
@@ -66,8 +66,8 @@ export function TinTucListView() {
                   onClick={() => setSelectedCategory(cat)}
                   className={`rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 ${
                     isActive
-                      ? "bg-[#4B193E] text-white shadow-sm scale-102"
-                      : "border border-[#EAE4DC] bg-white text-[#4B4F52] hover:border-[#B5222A] hover:text-[#B5222A]"
+                      ? "bg-[#181818] text-white shadow-sm scale-102"
+                      : "border border-[#EEEEEE] bg-white text-[#333333] hover:border-[#B5222A] hover:text-[#B5222A]"
                   }`}
                 >
                   {cat}
@@ -78,9 +78,9 @@ export function TinTucListView() {
 
           {/* Featured Post Spotlight (When 'Tất cả' is selected) */}
           {selectedCategory === "Tất cả" && featuredPost && (
-            <div className="rounded-3xl border border-[#EAE4DC] bg-white p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-all duration-300">
+            <div className="rounded-3xl border border-[#EEEEEE] bg-white p-6 sm:p-8 md:p-10 shadow-sm hover:shadow-md transition-all duration-300">
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-                <div className="lg:col-span-7 relative aspect-16/10 rounded-2xl overflow-hidden bg-[#161e27] border border-[#EAE4DC] shadow-xs">
+                <div className="lg:col-span-7 relative aspect-16/10 rounded-2xl overflow-hidden bg-[#181818] border border-[#EEEEEE] shadow-xs">
                   <Image
                     src={featuredPost.image}
                     alt={featuredPost.title}
@@ -96,7 +96,7 @@ export function TinTucListView() {
 
                 <div className="lg:col-span-5 space-y-4">
                   <div className="flex items-center gap-3 text-xs text-[#888888]">
-                    <span className="rounded-md bg-[#4B193E]/10 text-[#4B193E] px-2.5 py-1 font-bold">
+                    <span className="rounded-md bg-[#181818]/10 text-[#181818] px-2.5 py-1 font-bold">
                       {featuredPost.category}
                     </span>
                     <span className="flex items-center gap-1">
@@ -107,7 +107,7 @@ export function TinTucListView() {
                     <span>{featuredPost.readTime}</span>
                   </div>
 
-                  <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-extrabold text-[#2D2D2D] leading-snug tracking-tight hover:text-[#B5222A] transition-colors">
+                  <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-extrabold text-[#111111] leading-snug tracking-tight hover:text-[#B5222A] transition-colors">
                     <Link href={`/tin-tuc/${featuredPost.id}`}>
                       {featuredPost.title}
                     </Link>
@@ -137,7 +137,7 @@ export function TinTucListView() {
               <Link
                 key={post.id}
                 href={`/tin-tuc/${post.id}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-[#EAE4DC] bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-lg"
               >
                 <div className="relative aspect-16/10 w-full overflow-hidden bg-gray-100">
                   <Image
@@ -147,7 +147,7 @@ export function TinTucListView() {
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <span className="absolute top-3 left-3 rounded-md bg-[#4B193E]/90 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-xs">
+                  <span className="absolute top-3 left-3 rounded-md bg-[#181818]/90 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur-xs">
                     {post.category}
                   </span>
                 </div>
@@ -161,11 +161,11 @@ export function TinTucListView() {
                       </div>
                       <span>•</span>
                       <div className="flex items-center gap-1">
-                        <Clock className="h-3.5 w-3.5 text-[#F0831F]" />
+                        <Clock className="h-3.5 w-3.5 text-[#D4A359]" />
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <h3 className="font-sans text-base sm:text-lg font-bold text-[#2D2D2D] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
+                    <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#666666] leading-relaxed line-clamp-3">
@@ -173,7 +173,7 @@ export function TinTucListView() {
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between border-t border-[#EAE4DC]/60 pt-3 text-xs font-bold text-[#B5222A]">
+                  <div className="flex items-center justify-between border-t border-[#EEEEEE]/60 pt-3 text-xs font-bold text-[#B5222A]">
                     <span className="group-hover:underline">Xem chi tiết bài viết</span>
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </div>

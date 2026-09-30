@@ -86,7 +86,7 @@ export default async function TinTucDetailPage({ params }: TinTucDetailPageProps
   );
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] flex flex-col">
+    <div className="min-h-screen bg-[#F8F8F8] flex flex-col">
       <Header />
       <main className="flex-1">
         <BlogDetailView

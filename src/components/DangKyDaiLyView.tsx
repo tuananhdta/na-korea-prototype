@@ -72,7 +72,7 @@ export function DangKyDaiLyView() {
   };
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] flex flex-col font-sans text-[#4B4F52]">
+    <div className="min-h-screen bg-[#F8F8F8] flex flex-col font-sans text-[#333333]">
       <Header />
 
       <main className="flex-1 pb-20">
@@ -85,7 +85,7 @@ export function DangKyDaiLyView() {
         />
 
         {/* Breadcrumb */}
-        <div className="border-b border-[#EAE4DC] bg-[#FAF9F6] py-3">
+        <div className="border-b border-[#EEEEEE] bg-[#F8F8F8] py-3">
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center space-x-2 text-xs text-[#666666]">
               <Link href="/" className="hover:text-[#B5222A] transition-colors">
@@ -100,21 +100,21 @@ export function DangKyDaiLyView() {
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 space-y-12 mt-8">
           
           {/* Section: Giới thiệu thương hiệu & Điểm tựa uy tín */}
-          <section className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xs border border-[#EAE4DC]">
+          <section className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xs border border-[#EEEEEE]">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight leading-tight">
+                <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#111111] tracking-tight leading-tight">
                   Thương Hiệu Bảo Chứng Bởi Bậc Thầy Nhân Sâm Kim Jeong Hwan
                 </h2>
-                <p className="text-sm sm:text-base text-[#4B4F52] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#333333] leading-relaxed">
                   <strong>Kim&apos;s Red Ginseng</strong> là thương hiệu hồng sâm 6 năm tuổi thượng hạng đến từ vùng đất thánh Punggi (Hàn Quốc), được chế tác dưới sự dẫn dắt của Bậc thầy Nhân sâm với quy trình kiểm định nghiêm ngặt từ nông trường đến thành phẩm.
                 </p>
-                <p className="text-sm sm:text-base text-[#4B4F52] leading-relaxed">
+                <p className="text-sm sm:text-base text-[#333333] leading-relaxed">
                   Sản phẩm đạt chuẩn <strong>HACCP, GMP, FDA Hoa Kỳ</strong> và được tỉnh Gyeongsangbuk-do lựa chọn làm <strong>Quà tặng ngoại giao quốc gia</strong>. Tại Việt Nam, <strong>NA Korea</strong> cam kết bảo hộ quyền lợi đối tác, hỗ trợ pháp lý 100% và tạo mọi điều kiện để đại lý phát triển bền vững.
                 </p>
               </div>
 
-              <div className="lg:col-span-6 relative aspect-4/3 rounded-2xl overflow-hidden shadow-md bg-[#161e27] border border-[#EAE4DC]">
+              <div className="lg:col-span-6 relative aspect-4/3 rounded-2xl overflow-hidden shadow-md bg-[#181818] border border-[#EEEEEE]">
                 <Image
                   src="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
                   alt="Kim's Red Ginseng Store"
@@ -130,7 +130,7 @@ export function DangKyDaiLyView() {
           {/* Section: 6 Chính sách hợp tác dành cho đối tác */}
           <section className="space-y-8">
             <div className="text-center max-w-3xl mx-auto space-y-2">
-              <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight">
+              <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-[#111111] tracking-tight">
                 Chính Sách Ưu Đãi Dành Riêng Cho Đối Tác & Đại Lý
               </h2>
               <p className="text-xs sm:text-sm text-[#666666] max-w-2xl mx-auto leading-relaxed">
@@ -144,12 +144,12 @@ export function DangKyDaiLyView() {
                 return (
                   <div
                     key={idx}
-                    className="group bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-[#EAE4DC] space-y-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-md"
+                    className="group bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-[#EEEEEE] space-y-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-md"
                   >
-                    <div className="w-12 h-12 rounded-2xl bg-[#FAF6F0] text-[#B5222A] border border-[#EAE4DC] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F5F3EF] text-[#B5222A] border border-[#EEEEEE] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                       <Icon className="w-6 h-6" />
                     </div>
-                    <h3 className="font-sans font-bold text-[#2D2D2D] text-base sm:text-lg leading-snug">
+                    <h3 className="font-sans font-bold text-[#111111] text-base sm:text-lg leading-snug">
                       {p.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#666666] leading-relaxed">
@@ -163,14 +163,14 @@ export function DangKyDaiLyView() {
 
           {/* Section: Centered Luxury Registration Form */}
           <section className="max-w-3xl mx-auto w-full">
-            <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xs border border-[#EAE4DC]">
+            <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xs border border-[#EEEEEE]">
               {submitted ? (
                 <div className="text-center py-10 space-y-4">
                   <div className="w-16 h-16 bg-emerald-50 border-2 border-emerald-500 text-emerald-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
                     <CheckCircle2 className="w-8 h-8" />
                   </div>
                   <div className="space-y-1.5">
-                    <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
+                    <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-[#111111] tracking-tight">
                       Đăng Ký Hợp Tác Thành Công!
                     </h3>
                     <p className="text-xs sm:text-sm text-[#666666] max-w-md mx-auto leading-relaxed">
@@ -185,7 +185,7 @@ export function DangKyDaiLyView() {
                         setSubmitted(false);
                         setFormData({ name: "", phone: "", email: "", city: "", message: "" });
                       }}
-                      className="inline-flex items-center gap-2 rounded-xl border border-[#EAE4DC] bg-[#FAF9F6] px-5 py-2 text-xs font-bold text-[#4B4F52] hover:border-[#B5222A] hover:text-[#B5222A] transition-all"
+                      className="inline-flex items-center gap-2 rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-5 py-2 text-xs font-bold text-[#333333] hover:border-[#B5222A] hover:text-[#B5222A] transition-all"
                     >
                       <span>Gửi thêm yêu cầu khác</span>
                     </button>
@@ -194,7 +194,7 @@ export function DangKyDaiLyView() {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="text-center space-y-1.5 pb-2">
-                    <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-[#2D2D2D] tracking-tight">
+                    <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-[#111111] tracking-tight">
                       Nhận Bảng Báo Giá Sỉ & Chính Sách Đại Lý
                     </h3>
                     <p className="text-xs sm:text-sm text-[#666666] max-w-lg mx-auto leading-relaxed">
@@ -204,7 +204,7 @@ export function DangKyDaiLyView() {
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="block text-xs font-bold text-[#2D2D2D]">
+                      <label className="block text-xs font-bold text-[#111111]">
                         Họ và tên người liên hệ <span className="text-[#B5222A]">*</span>
                       </label>
                       <input
@@ -213,12 +213,12 @@ export function DangKyDaiLyView() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Ví dụ: Nguyễn Văn A"
-                        className="w-full rounded-xl border border-[#EAE4DC] bg-[#FAF9F6] px-4 py-3 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block text-xs font-bold text-[#2D2D2D]">
+                      <label className="block text-xs font-bold text-[#111111]">
                         Số điện thoại / Zalo <span className="text-[#B5222A]">*</span>
                       </label>
                       <input
@@ -227,14 +227,14 @@ export function DangKyDaiLyView() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="Ví dụ: 090 340 9939"
-                        className="w-full rounded-xl border border-[#EAE4DC] bg-[#FAF9F6] px-4 py-3 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                       />
                     </div>
                   </div>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
-                      <label className="block text-xs font-bold text-[#2D2D2D]">
+                      <label className="block text-xs font-bold text-[#111111]">
                         Địa chỉ Email
                       </label>
                       <input
@@ -242,12 +242,12 @@ export function DangKyDaiLyView() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="email@example.com"
-                        className="w-full rounded-xl border border-[#EAE4DC] bg-[#FAF9F6] px-4 py-3 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                       />
                     </div>
 
                     <div className="space-y-1.5">
-                      <label className="block text-xs font-bold text-[#2D2D2D]">
+                      <label className="block text-xs font-bold text-[#111111]">
                         Tỉnh / Thành phố dự kiến phân phối <span className="text-[#B5222A]">*</span>
                       </label>
                       <input
@@ -256,13 +256,13 @@ export function DangKyDaiLyView() {
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="Ví dụ: Hà Nội, TP.HCM, Đà Nẵng..."
-                        className="w-full rounded-xl border border-[#EAE4DC] bg-[#FAF9F6] px-4 py-3 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
                       />
                     </div>
                   </div>
 
                   <div className="space-y-1.5">
-                    <label className="block text-xs font-bold text-[#2D2D2D]">
+                    <label className="block text-xs font-bold text-[#111111]">
                       Lời nhắn / Nhu cầu hợp tác
                     </label>
                     <textarea
@@ -270,7 +270,7 @@ export function DangKyDaiLyView() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Quý đối tác vui lòng chia sẻ thêm về kế hoạch kinh doanh hoặc các câu hỏi cần giải đáp..."
-                      className="w-full rounded-xl border border-[#EAE4DC] bg-[#FAF9F6] px-4 py-3 text-sm text-[#2D2D2D] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15 resize-none"
+                      className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15 resize-none"
                     />
                   </div>
 
@@ -278,7 +278,7 @@ export function DangKyDaiLyView() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#B5222A] via-[#A01C23] to-[#8C161D] py-4 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
+                      className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#B5222A] via-[#991C23] to-[#991C23] py-4 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
                     >
                       {loading ? (
                         <span>Đang gửi thông tin...</span>

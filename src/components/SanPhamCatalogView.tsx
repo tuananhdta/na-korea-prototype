@@ -172,7 +172,7 @@ export function SanPhamCatalogView() {
 
         {/* ═══ TẦNG 1: TAB ĐỐI TƯỢNG (Underline Tabs thanh lịch, không rớt dòng) ═══ */}
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-1 mb-5">
-          <div className="flex items-center gap-6 sm:gap-10 border-b border-[#EAE6E1] overflow-x-auto no-scrollbar">
+          <div className="flex items-center gap-6 sm:gap-10 border-b border-[#EEEEEE] overflow-x-auto no-scrollbar">
             {MAIN_AUDIENCE_TABS.map((tab) => {
               const isActive = selectedAudience === tab.id;
               const count = audienceCounts[tab.id as keyof typeof audienceCounts] || 0;
@@ -183,7 +183,7 @@ export function SanPhamCatalogView() {
                   className={`group relative pb-3.5 text-sm sm:text-base font-semibold whitespace-nowrap transition-colors duration-200 ${
                     isActive
                       ? "text-[#B5222A]"
-                      : "text-[#666666] hover:text-[#2D2D2D]"
+                      : "text-[#666666] hover:text-[#111111]"
                   }`}
                 >
                   <span className="flex items-center gap-2">
@@ -210,11 +210,11 @@ export function SanPhamCatalogView() {
 
         {/* ═══ TẦNG 2: THANH CÔNG CỤ & TÌM KIẾM (Utility Toolbar) ═══ */}
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mb-8">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-3 border-b border-[#EAE6E1]/80">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-3 border-b border-[#EEEEEE]/80">
             {/* Left: Counter & Form Sub-Filter */}
             <div className="flex flex-wrap items-center gap-4">
               <span className="text-xs sm:text-sm text-gray-600">
-                Hiển thị <strong className="text-[#2D2D2D] font-bold">{filteredProducts.length}</strong> sản phẩm
+                Hiển thị <strong className="text-[#111111] font-bold">{filteredProducts.length}</strong> sản phẩm
               </span>
 
               <div className="h-4 w-[1px] bg-gray-300 hidden sm:block" />
@@ -224,7 +224,7 @@ export function SanPhamCatalogView() {
                 <select
                   value={selectedForm}
                   onChange={(e) => setSelectedForm(e.target.value)}
-                  className="h-9 rounded-lg border border-[#EAE6E1] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 rounded-lg border border-[#EEEEEE] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 >
                   <option value="all">Tất cả dạng sản phẩm</option>
                   <option value="extract">Cao sâm cô đặc</option>
@@ -245,7 +245,7 @@ export function SanPhamCatalogView() {
                   placeholder="Tìm kiếm sản phẩm..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="h-9 w-full rounded-lg border border-[#EAE6E1] bg-white pl-9 pr-8 text-xs sm:text-sm text-[#2D2D2D] placeholder:text-gray-400 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 w-full rounded-lg border border-[#EEEEEE] bg-white pl-9 pr-8 text-xs sm:text-sm text-[#111111] placeholder:text-gray-400 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 />
                 {searchTerm && (
                   <button
@@ -264,7 +264,7 @@ export function SanPhamCatalogView() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                  className="h-9 rounded-lg border border-[#EAE6E1] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 rounded-lg border border-[#EEEEEE] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 >
                   <option value="default">Sắp xếp: Mặc định</option>
                   <option value="price-asc">Giá: Thấp → Cao</option>

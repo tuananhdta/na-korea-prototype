@@ -54,7 +54,7 @@ export function HeroSlider() {
         className="absolute bottom-6 right-6 z-30 flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-black/60 text-white backdrop-blur-md transition-all hover:bg-black/90 hover:scale-110 active:scale-95 cursor-pointer shadow-lg"
         title={isMuted ? "Bật âm thanh video" : "Tắt âm thanh video"}
       >
-        {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4 text-[#F0831F]" />}
+        {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4 text-[#D4A359]" />}
       </button>
     </section>
   );

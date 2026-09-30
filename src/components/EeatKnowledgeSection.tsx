@@ -3,12 +3,12 @@ import { ShieldCheck, Mountain, Award, HeartHandshake } from "lucide-react";
 export function EeatKnowledgeSection() {
   return (
     <section className="mx-auto max-w-[1240px] px-4 sm:px-6 my-12">
-      <div className="rounded-2xl border border-[#EAE6E1] bg-white p-6 sm:p-10 shadow-xs">
+      <div className="rounded-2xl border border-[#EEEEEE] bg-white p-6 sm:p-10 shadow-xs">
         <div className="max-w-3xl mb-8">
-          <span className="text-xs font-bold uppercase tracking-wider text-[#F0831F]">
+          <span className="text-xs font-bold uppercase tracking-wider text-[#D4A359]">
             Kiến thức & Tiêu chuẩn chất lượng
           </span>
-          <h2 className="mt-1 text-xl sm:text-2xl font-bold text-[#2D2D2D]">
+          <h2 className="mt-1 text-xl sm:text-2xl font-bold text-[#111111]">
             Hồng Sâm 6 Năm Tuổi Punggi Hàn Quốc
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-gray-600 leading-relaxed">
@@ -18,8 +18,8 @@ export function EeatKnowledgeSection() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-4 border-t border-gray-100">
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-[#4B193E] font-bold text-sm">
-              <Mountain className="h-4 w-4 text-[#F0831F]" />
+            <div className="flex items-center gap-2 text-[#181818] font-bold text-sm">
+              <Mountain className="h-4 w-4 text-[#D4A359]" />
               <span>Thổ nhưỡng Punggi</span>
             </div>
             <p className="text-xs text-gray-600 leading-relaxed">
@@ -28,8 +28,8 @@ export function EeatKnowledgeSection() {
           </div>
 
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-[#4B193E] font-bold text-sm">
-              <Award className="h-4 w-4 text-[#F0831F]" />
+            <div className="flex items-center gap-2 text-[#181818] font-bold text-sm">
+              <Award className="h-4 w-4 text-[#D4A359]" />
               <span>Nghệ nhân 50 năm</span>
             </div>
             <p className="text-xs text-gray-600 leading-relaxed">
@@ -38,8 +38,8 @@ export function EeatKnowledgeSection() {
           </div>
 
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-[#4B193E] font-bold text-sm">
-              <ShieldCheck className="h-4 w-4 text-[#F0831F]" />
+            <div className="flex items-center gap-2 text-[#181818] font-bold text-sm">
+              <ShieldCheck className="h-4 w-4 text-[#D4A359]" />
               <span>Chứng nhận Quốc tế</span>
             </div>
             <p className="text-xs text-gray-600 leading-relaxed">
@@ -48,8 +48,8 @@ export function EeatKnowledgeSection() {
           </div>
 
           <div className="space-y-2">
-            <div className="flex items-center gap-2 text-[#4B193E] font-bold text-sm">
-              <HeartHandshake className="h-4 w-4 text-[#F0831F]" />
+            <div className="flex items-center gap-2 text-[#181818] font-bold text-sm">
+              <HeartHandshake className="h-4 w-4 text-[#D4A359]" />
               <span>Phân phối chính ngạch</span>
             </div>
             <p className="text-xs text-gray-600 leading-relaxed">

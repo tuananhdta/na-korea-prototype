@@ -10,37 +10,37 @@ function PungiMascot({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 80 100" fill="none" className={className} aria-hidden="true">
       {/* Body - Golden ginseng root shape */}
-      <ellipse cx="40" cy="52" rx="18" ry="22" fill="#E8C87A" />
-      <ellipse cx="40" cy="52" rx="16" ry="20" fill="#F2D98B" />
+      <ellipse cx="40" cy="52" rx="18" ry="22" fill="#D4A359" />
+      <ellipse cx="40" cy="52" rx="16" ry="20" fill="#D4A359" />
       {/* Warm belly highlight */}
-      <ellipse cx="40" cy="48" rx="10" ry="12" fill="#F7E5A8" opacity="0.6" />
+      <ellipse cx="40" cy="48" rx="10" ry="12" fill="#D4A359" opacity="0.6" />
 
       {/* Root legs */}
-      <path d="M30 70 Q28 82 24 90" stroke="#D4A84A" strokeWidth="4" strokeLinecap="round" fill="none" />
-      <path d="M36 72 Q35 84 33 92" stroke="#D4A84A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-      <path d="M44 72 Q45 84 47 92" stroke="#D4A84A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-      <path d="M50 70 Q52 82 56 90" stroke="#D4A84A" strokeWidth="4" strokeLinecap="round" fill="none" />
+      <path d="M30 70 Q28 82 24 90" stroke="#D4A359" strokeWidth="4" strokeLinecap="round" fill="none" />
+      <path d="M36 72 Q35 84 33 92" stroke="#D4A359" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+      <path d="M44 72 Q45 84 47 92" stroke="#D4A359" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+      <path d="M50 70 Q52 82 56 90" stroke="#D4A359" strokeWidth="4" strokeLinecap="round" fill="none" />
 
       {/* Small root arms */}
-      <path d="M22 50 Q14 46 10 42" stroke="#D4A84A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
-      <path d="M58 50 Q66 46 70 42" stroke="#D4A84A" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+      <path d="M22 50 Q14 46 10 42" stroke="#D4A359" strokeWidth="3.5" strokeLinecap="round" fill="none" />
+      <path d="M58 50 Q66 46 70 42" stroke="#D4A359" strokeWidth="3.5" strokeLinecap="round" fill="none" />
 
       {/* Punggi farmer hat */}
       <ellipse cx="40" cy="33" rx="22" ry="6" fill="#8B6F47" />
       <path d="M24 33 Q26 18 40 15 Q54 18 56 33" fill="#A0845C" />
-      <path d="M28 33 Q30 22 40 19 Q50 22 52 33" fill="#B89A6E" />
+      <path d="M28 33 Q30 22 40 19 Q50 22 52 33" fill="#B88942" />
       {/* Hat band - brand red */}
       <rect x="26" y="31" width="28" height="3" rx="1.5" fill="#B5222A" />
 
       {/* Face */}
       {/* Eyes - happy squint */}
-      <path d="M33 46 Q35 43 37 46" stroke="#5C3A1E" strokeWidth="2" strokeLinecap="round" fill="none" />
-      <path d="M43 46 Q45 43 47 46" stroke="#5C3A1E" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M33 46 Q35 43 37 46" stroke="#181818" strokeWidth="2" strokeLinecap="round" fill="none" />
+      <path d="M43 46 Q45 43 47 46" stroke="#181818" strokeWidth="2" strokeLinecap="round" fill="none" />
       {/* Rosy cheeks */}
       <ellipse cx="30" cy="50" rx="4" ry="2.5" fill="#F4A89A" opacity="0.6" />
       <ellipse cx="50" cy="50" rx="4" ry="2.5" fill="#F4A89A" opacity="0.5" />
       {/* Smile */}
-      <path d="M35 53 Q40 58 45 53" stroke="#5C3A1E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
+      <path d="M35 53 Q40 58 45 53" stroke="#181818" strokeWidth="1.5" strokeLinecap="round" fill="none" />
 
       {/* Red scarf */}
       <path d="M26 60 Q30 65 40 66 Q50 65 54 60" stroke="#B5222A" strokeWidth="3" strokeLinecap="round" fill="none" />
@@ -48,11 +48,11 @@ function PungiMascot({ className = "" }: { className?: string }) {
 
       {/* Waving hand animation target */}
       <g className="animate-[wave_2.5s_ease-in-out_infinite]" style={{ transformOrigin: "70px 42px" }}>
-        <circle cx="70" cy="38" r="4" fill="#F2D98B" />
+        <circle cx="70" cy="38" r="4" fill="#D4A359" />
         {/* Tiny fingers */}
-        <circle cx="68" cy="34" r="1.5" fill="#F2D98B" />
-        <circle cx="71" cy="33" r="1.5" fill="#F2D98B" />
-        <circle cx="74" cy="34" r="1.5" fill="#F2D98B" />
+        <circle cx="68" cy="34" r="1.5" fill="#D4A359" />
+        <circle cx="71" cy="33" r="1.5" fill="#D4A359" />
+        <circle cx="74" cy="34" r="1.5" fill="#D4A359" />
       </g>
     </svg>
   );
@@ -85,8 +85,8 @@ function BerryMascot({ className = "" }: { className?: string }) {
       {/* Big round eyes */}
       <circle cx="34" cy="52" r="3.5" fill="white" />
       <circle cx="46" cy="52" r="3.5" fill="white" />
-      <circle cx="35" cy="52" r="2" fill="#2D1810" />
-      <circle cx="47" cy="52" r="2" fill="#2D1810" />
+      <circle cx="35" cy="52" r="2" fill="#181818" />
+      <circle cx="47" cy="52" r="2" fill="#181818" />
       {/* Eye sparkles */}
       <circle cx="36" cy="51" r="0.8" fill="white" />
       <circle cx="48" cy="51" r="0.8" fill="white" />
@@ -121,9 +121,9 @@ function BerryMascot({ className = "" }: { className?: string }) {
 function RewardCoin({ className = "" }: { className?: string }) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={className} aria-hidden="true">
-      <circle cx="12" cy="12" r="10" fill="#F0B429" stroke="#D4960A" strokeWidth="1.5" />
-      <circle cx="12" cy="12" r="7" fill="none" stroke="#D4960A" strokeWidth="0.8" opacity="0.5" />
-      <text x="12" y="16" fontSize="10" fill="#8B5E0A" fontWeight="bold" textAnchor="middle">P</text>
+      <circle cx="12" cy="12" r="10" fill="#D4A359" stroke="#D4A359" strokeWidth="1.5" />
+      <circle cx="12" cy="12" r="7" fill="none" stroke="#D4A359" strokeWidth="0.8" opacity="0.5" />
+      <text x="12" y="16" fontSize="10" fill="#B88942" fontWeight="bold" textAnchor="middle">P</text>
     </svg>
   );
 }
@@ -135,7 +135,7 @@ function DoodleCloud({ className = "" }: { className?: string }) {
       <path
         d="M8 22 Q2 22 2 17 Q2 12 8 12 Q8 6 16 6 Q22 4 26 8 Q30 4 36 6 Q42 6 42 12 Q48 12 48 17 Q48 22 42 22 Z"
         fill="white"
-        stroke="#D1C8B8"
+        stroke="#EEEEEE"
         strokeWidth="1"
       />
     </svg>
@@ -155,12 +155,12 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
 
   return (
     <div
-      className="fixed inset-x-0 top-0 z-50 h-20 sm:h-20 overflow-visible border-b border-[#E5DFD3]"
+      className="fixed inset-x-0 top-0 z-50 h-20 sm:h-20 overflow-visible border-b border-[#EEEEEE]"
       style={{
         background: `
-          linear-gradient(to right, #FFFDF8, #FFF9ED, #FFFDF8),
-          repeating-linear-gradient(0deg, transparent, transparent 19px, #EDE8DD33 19px, #EDE8DD33 20px),
-          repeating-linear-gradient(90deg, transparent, transparent 19px, #EDE8DD33 19px, #EDE8DD33 20px)
+          linear-gradient(to right, #F8F8F8, #F5F3EF, #F8F8F8),
+          repeating-linear-gradient(0deg, transparent, transparent 19px, #EEEEEE33 19px, #EEEEEE33 20px),
+          repeating-linear-gradient(90deg, transparent, transparent 19px, #EEEEEE33 19px, #EEEEEE33 20px)
         `,
       }}
     >
@@ -218,7 +218,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
         type="button"
         onClick={onClose}
         aria-label="Đóng banner"
-        className="absolute right-2.5 sm:right-5 md:right-7 lg:right-9 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full text-[#7A3B1E] transition-all duration-200 hover:bg-black/5 hover:text-[#B5222A] active:scale-95 focus-visible:outline-none cursor-pointer"
+        className="absolute right-2.5 sm:right-5 md:right-7 lg:right-9 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full text-[#181818] transition-all duration-200 hover:bg-black/5 hover:text-[#B5222A] active:scale-95 focus-visible:outline-none cursor-pointer"
       >
         <X aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
       </button>

@@ -137,14 +137,14 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
   };
 
   return (
-    <div className="bg-[#FAF9F6] min-h-screen py-4 sm:py-8 pb-24 text-[#4B4F52]">
+    <div className="bg-[#F8F8F8] min-h-screen py-4 sm:py-8 pb-24 text-[#333333]">
       {/* Toast Notification */}
       <div
         className={`fixed bottom-20 sm:bottom-24 right-4 sm:right-8 z-50 transition-all duration-300 transform ${
           showToast ? "translate-y-0 opacity-100 scale-100" : "translate-y-4 opacity-0 pointer-events-none scale-95"
         }`}
       >
-        <div className="flex items-center gap-3 rounded-2xl bg-[#2D1225]/95 text-white px-4 sm:px-5 py-3 shadow-[0_14px_34px_rgba(45,18,37,0.45)] border border-white/20 backdrop-blur-md">
+        <div className="flex items-center gap-3 rounded-2xl bg-[#181818]/95 text-white px-4 sm:px-5 py-3 shadow-[0_14px_34px_rgba(45,18,37,0.45)] border border-white/20 backdrop-blur-md">
           <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#B5222A] text-white shadow-inner shrink-0">
             <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" />
           </div>
@@ -172,7 +172,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             Sản Phẩm
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-          <span className="text-[#2D2D2D] font-semibold truncate max-w-[160px] sm:max-w-md">
+          <span className="text-[#111111] font-semibold truncate max-w-[160px] sm:max-w-md">
             {product.title}
           </span>
         </nav>
@@ -180,7 +180,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
       {/* Main Product Showcase Card */}
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-3xl shadow-xs border border-[#ECE6DE] p-4 sm:p-7 lg:p-8 transition-all duration-300">
+        <div className="bg-white rounded-3xl shadow-xs border border-[#EEEEEE] p-4 sm:p-7 lg:p-8 transition-all duration-300">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
             
             {/* LEFT COLUMN: Image Showcase & Gallery */}
@@ -190,11 +190,11 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 <div
                   aria-hidden="true"
-                  className="absolute -inset-1 bg-gradient-to-tr from-[#4B193E]/10 via-[#F0831F]/10 to-[#B5222A]/10 rounded-2xl blur-lg opacity-80 pointer-events-none"
+                  className="absolute -inset-1 bg-gradient-to-tr from-[#181818]/10 via-[#D4A359]/10 to-[#B5222A]/10 rounded-2xl blur-lg opacity-80 pointer-events-none"
                 />
 
                 {/* Main Large Image Box */}
-                <div className="relative w-full h-full bg-[#FAF9F6] rounded-2xl overflow-hidden border border-[#EAE4DC] shadow-xs group z-10">
+                <div className="relative w-full h-full bg-[#F8F8F8] rounded-2xl overflow-hidden border border-[#EEEEEE] shadow-xs group z-10">
                   
                   {/* Floating Discount Tag */}
                   {hasDiscount && (
@@ -209,7 +209,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   <button
                     type="button"
                     onClick={() => setIsLightboxOpen(true)}
-                    className="absolute top-3 right-3 z-20 h-8 w-8 rounded-full bg-white/80 hover:bg-white text-[#4B193E] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 cursor-pointer"
+                    className="absolute top-3 right-3 z-20 h-8 w-8 rounded-full bg-white/80 hover:bg-white text-[#181818] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 cursor-pointer"
                     aria-label="Phóng to ảnh"
                   >
                     <Maximize2 className="w-3.5 h-3.5" />
@@ -224,7 +224,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                           e.stopPropagation();
                           setActiveImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImages.length - 1));
                         }}
-                        className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#4B193E] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
+                        className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#181818] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
                         aria-label="Ảnh trước"
                       >
                         <ChevronLeft className="w-4 h-4" />
@@ -235,7 +235,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                           e.stopPropagation();
                           setActiveImageIndex((prev) => (prev < galleryImages.length - 1 ? prev + 1 : 0));
                         }}
-                        className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#4B193E] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
+                        className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#181818] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
                         aria-label="Ảnh kế tiếp"
                       >
                         <ChevronRight className="w-4 h-4" />
@@ -282,7 +282,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                         className={`group relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-xl overflow-hidden transition-all duration-200 cursor-pointer ${
                           isActive
                             ? "bg-white border-2 border-[#B5222A] shadow-xs opacity-100"
-                            : "bg-[#FAF9F6] border border-[#EAE4DC] opacity-60 hover:opacity-100"
+                            : "bg-[#F8F8F8] border border-[#EEEEEE] opacity-60 hover:opacity-100"
                         }`}
                         aria-label={img.label}
                       >
@@ -304,7 +304,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             <div className="lg:col-span-6 flex flex-col justify-between space-y-5 pt-1">
               <div>
                 {/* Title */}
-                <h1 className="font-sans text-xl sm:text-2xl md:text-3xl font-extrabold text-[#2D2D2D] tracking-tight leading-snug">
+                <h1 className="font-sans text-xl sm:text-2xl md:text-3xl font-extrabold text-[#111111] tracking-tight leading-snug">
                   {product.title}
                 </h1>
 
@@ -330,11 +330,11 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 {/* Quantity & CTA Buttons */}
                 <div ref={buyButtonRef} className="mt-6 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 pt-2">
                   {/* Quantity Counter */}
-                  <div className="flex items-center border border-[#D9CFC4] rounded-xl bg-[#FAFAFA] h-12 w-full sm:w-32 justify-between px-3 shrink-0">
+                  <div className="flex items-center border border-[#EEEEEE] rounded-xl bg-[#FAFAFA] h-12 w-full sm:w-32 justify-between px-3 shrink-0">
                     <button
                       type="button"
                       onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-                      className="p-1.5 text-[#666666] hover:text-[#2D2D2D] hover:bg-black/5 rounded-md transition-colors"
+                      className="p-1.5 text-[#666666] hover:text-[#111111] hover:bg-black/5 rounded-md transition-colors"
                       aria-label="Giảm số lượng"
                     >
                       <Minus className="w-4 h-4" />
@@ -343,7 +343,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                     <button
                       type="button"
                       onClick={() => setQuantity((q) => q + 1)}
-                      className="p-1.5 text-[#666666] hover:text-[#2D2D2D] hover:bg-black/5 rounded-md transition-colors"
+                      className="p-1.5 text-[#666666] hover:text-[#111111] hover:bg-black/5 rounded-md transition-colors"
                       aria-label="Tăng số lượng"
                     >
                       <Plus className="w-4 h-4" />
@@ -354,7 +354,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   <button
                     type="button"
                     onClick={handleAddToCart}
-                    className="flex-1 h-12 px-5 rounded-xl bg-[#B5222A] hover:bg-[#9E1B22] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="flex-1 h-12 px-5 rounded-xl bg-[#B5222A] hover:bg-[#991C23] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <ShoppingBag className="w-4 h-4" />
                     <span>Thêm vào giỏ hàng</span>
@@ -364,7 +364,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   <button
                     type="button"
                     onClick={handleBuyNow}
-                    className="h-12 px-6 rounded-xl bg-[#4B193E] hover:bg-[#38112E] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer shrink-0"
+                    className="h-12 px-6 rounded-xl bg-[#181818] hover:bg-[#181818] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer shrink-0"
                   >
                     <span>Mua ngay</span>
                   </button>
@@ -372,7 +372,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               </div>
 
               {/* Share Link */}
-              <div className="pt-3 border-t border-[#EAE4DC] flex items-center gap-4 text-xs text-[#7A726A]">
+              <div className="pt-3 border-t border-[#EEEEEE] flex items-center gap-4 text-xs text-[#7A726A]">
                 <button
                   type="button"
                   onClick={handleShare}
@@ -388,16 +388,16 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
         </div>
 
         {/* Detailed Information Tabs */}
-        <div className="mt-10 bg-white rounded-3xl shadow-xs border border-[#EAE4DC] overflow-hidden">
+        <div className="mt-10 bg-white rounded-3xl shadow-xs border border-[#EEEEEE] overflow-hidden">
           {/* Tabs Navigation */}
-          <div className="overflow-x-auto border-b border-[#EAE4DC] no-scrollbar bg-[#FAF9F6]">
+          <div className="overflow-x-auto border-b border-[#EEEEEE] no-scrollbar bg-[#F8F8F8]">
             <div className="flex min-w-max p-2 gap-1.5 sm:gap-2">
               <button
                 onClick={() => setActiveTab("desc")}
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   activeTab === "desc"
                     ? "bg-white text-[#B5222A] shadow-xs"
-                    : "text-[#666666] hover:text-[#2D2D2D]"
+                    : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
                 Mô Tả Sản Phẩm & Công Dụng
@@ -408,7 +408,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   activeTab === "usage"
                     ? "bg-white text-[#B5222A] shadow-xs"
-                    : "text-[#666666] hover:text-[#2D2D2D]"
+                    : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
                 Hướng Dẫn Sử Dụng
@@ -419,7 +419,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   activeTab === "origin"
                     ? "bg-white text-[#B5222A] shadow-xs"
-                    : "text-[#666666] hover:text-[#2D2D2D]"
+                    : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
                 Nguồn Gốc & Chứng Nhận
@@ -430,7 +430,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all flex items-center gap-1.5 ${
                   activeTab === "reviews"
                     ? "bg-white text-[#B5222A] shadow-xs"
-                    : "text-[#666666] hover:text-[#2D2D2D]"
+                    : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
                 <span>Đánh Giá Khách Hàng</span>
@@ -444,10 +444,10 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
           </div>
 
           {/* Tab Contents */}
-          <div className="p-5 sm:p-8 md:p-10 text-[#4B4F52] leading-relaxed text-sm sm:text-base">
+          <div className="p-5 sm:p-8 md:p-10 text-[#333333] leading-relaxed text-sm sm:text-base">
             {activeTab === "desc" && (
               <div className="space-y-4 max-w-4xl">
-                <h3 className="font-sans text-base sm:text-lg font-bold text-[#2D2D2D]">
+                <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111]">
                   Thông tin chi tiết về {product.title}
                 </h3>
                 <div
@@ -463,18 +463,18 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
             {activeTab === "reviews" && (
               <div className="space-y-6 max-w-4xl">
-                <div className="flex items-center justify-between pb-4 border-b border-[#EAE4DC]">
+                <div className="flex items-center justify-between pb-4 border-b border-[#EEEEEE]">
                   <div>
-                    <h3 className="font-sans text-base sm:text-lg font-bold text-[#2D2D2D] flex items-center gap-2">
+                    <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111] flex items-center gap-2">
                       <span>Đánh giá từ người mua hàng thực tế</span>
                     </h3>
                     <div className="flex items-center gap-2 mt-1">
-                      <div className="flex items-center text-[#F0831F]">
+                      <div className="flex items-center text-[#D4A359]">
                         {[...Array(5)].map((_, i) => (
                           <Star key={i} className="w-4 h-4 fill-current" />
                         ))}
                       </div>
-                      <span className="text-sm font-bold text-[#2D2D2D]">5.0 / 5.0</span>
+                      <span className="text-sm font-bold text-[#111111]">5.0 / 5.0</span>
                     </div>
                   </div>
                 </div>
@@ -482,15 +482,15 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 {product.reviews && product.reviews.length > 0 ? (
                   <div className="space-y-4">
                     {product.reviews.map((rev: ProductReview) => (
-                      <div key={rev.id} className="p-4 sm:p-5 rounded-xl bg-[#FAF9F6] border border-[#EAE4DC] space-y-2.5">
+                      <div key={rev.id} className="p-4 sm:p-5 rounded-xl bg-[#F8F8F8] border border-[#EEEEEE] space-y-2.5">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
                             <div className="w-7 h-7 rounded-full bg-[#B5222A] text-white font-bold flex items-center justify-center text-xs">
                               {rev.author.slice(0, 1)}
                             </div>
                             <div>
-                              <div className="font-bold text-[#2D2D2D] text-xs sm:text-sm">{rev.author}</div>
-                              <div className="flex items-center text-[#F0831F] text-xs">
+                              <div className="font-bold text-[#111111] text-xs sm:text-sm">{rev.author}</div>
+                              <div className="flex items-center text-[#D4A359] text-xs">
                                 {[...Array(rev.rating)].map((_, i) => (
                                   <Star key={i} className="w-3 h-3 fill-current" />
                                 ))}
@@ -500,11 +500,11 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                           <span className="text-[11px] text-[#888888]">{rev.date}</span>
                         </div>
 
-                        <h4 className="font-bold text-[#2D2D2D] text-xs sm:text-sm">
+                        <h4 className="font-bold text-[#111111] text-xs sm:text-sm">
                           {rev.title}
                         </h4>
 
-                        <p className="text-xs sm:text-sm text-[#4B4F52] leading-relaxed">
+                        <p className="text-xs sm:text-sm text-[#333333] leading-relaxed">
                           {rev.content}
                         </p>
                       </div>
@@ -520,8 +520,8 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
             {activeTab === "usage" && (
               <div className="space-y-4 max-w-3xl">
-                <h3 className="font-sans text-base sm:text-lg font-bold text-[#2D2D2D]">Cách dùng & Liều lượng khuyến nghị</h3>
-                <ul className="space-y-2.5 list-disc list-inside text-xs sm:text-sm text-[#4B4F52]">
+                <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111]">Cách dùng & Liều lượng khuyến nghị</h3>
+                <ul className="space-y-2.5 list-disc list-inside text-xs sm:text-sm text-[#333333]">
                   <li><strong>Người lớn:</strong> Dùng trực tiếp 1-2 lần mỗi ngày, mỗi lần 1 gói hoặc 1 thìa định lượng (đối với dạng cao cô đặc).</li>
                   <li><strong>Trẻ em dưới 15 tuổi:</strong> Sử dụng 1/2 liều lượng của người lớn hoặc dùng dòng sản phẩm chuyên biệt cho trẻ em.</li>
                   <li>Nên dùng vào buổi sáng hoặc buổi trưa sau khi ăn 15-30 phút để hấp thu tốt nhất. Tránh dùng vào buổi tối muộn.</li>
@@ -532,20 +532,20 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
             {activeTab === "origin" && (
               <div className="space-y-4 max-w-3xl">
-                <h3 className="font-sans text-base sm:text-lg font-bold text-[#2D2D2D]">Về Bậc Thầy Nhân Sâm Kim Jeong Hwan</h3>
-                <p className="text-xs sm:text-sm text-[#4B4F52]">
+                <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111]">Về Bậc Thầy Nhân Sâm Kim Jeong Hwan</h3>
+                <p className="text-xs sm:text-sm text-[#333333]">
                   Sản phẩm được nghiên cứu và sản xuất bởi Bậc thầy Nhân sâm Kim Jeong Hwan với hơn 50 năm kinh nghiệm trồng trọt và chế biến nhân sâm tại vùng núi Punggi, tỉnh Gyeongsangbuk-do, Hàn Quốc.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
-                  <div className="p-3.5 bg-[#FAF9F6] border border-[#EAE4DC] rounded-xl text-center">
+                  <div className="p-3.5 bg-[#F8F8F8] border border-[#EEEEEE] rounded-xl text-center">
                     <div className="font-bold text-[#B5222A] text-base">100% 6 Năm Tuổi</div>
                     <div className="text-[11px] text-[#666666] mt-0.5">Đủ hàm lượng Saponin cao nhất</div>
                   </div>
-                  <div className="p-3.5 bg-[#FAF9F6] border border-[#EAE4DC] rounded-xl text-center">
+                  <div className="p-3.5 bg-[#F8F8F8] border border-[#EEEEEE] rounded-xl text-center">
                     <div className="font-bold text-[#B5222A] text-base">HACCP & GMP</div>
                     <div className="text-[11px] text-[#666666] mt-0.5">Tiêu chuẩn quốc tế nghiêm ngặt</div>
                   </div>
-                  <div className="p-3.5 bg-[#FAF9F6] border border-[#EAE4DC] rounded-xl text-center">
+                  <div className="p-3.5 bg-[#F8F8F8] border border-[#EEEEEE] rounded-xl text-center">
                     <div className="font-bold text-[#B5222A] text-base">Punggi Ginseng</div>
                     <div className="text-[11px] text-[#666666] mt-0.5">Địa danh nhân sâm 500 năm lịch sử</div>
                   </div>
@@ -563,7 +563,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 <span className="text-xs font-bold text-[#B5222A] uppercase tracking-wider">
                   GỢI Ý CHO BẠN
                 </span>
-                <h2 className="font-sans text-lg sm:text-2xl font-bold text-[#2D2D2D] mt-0.5">
+                <h2 className="font-sans text-lg sm:text-2xl font-bold text-[#111111] mt-0.5">
                   Sản phẩm liên quan cùng danh mục
                 </h2>
               </div>
@@ -606,7 +606,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               <h4 className="text-xs sm:text-sm font-bold text-white truncate max-w-[140px] sm:max-w-xs md:max-w-md">
                 {product.title}
               </h4>
-              <p className="text-xs text-[#F0831F] font-extrabold">{product.price}</p>
+              <p className="text-xs text-[#D4A359] font-extrabold">{product.price}</p>
             </div>
           </div>
 
@@ -614,7 +614,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             <button
               type="button"
               onClick={handleAddToCart}
-              className="h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-[#B5222A] hover:bg-[#9E1B22] text-white text-xs sm:text-sm font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-[#B5222A] hover:bg-[#991C23] text-white text-xs sm:text-sm font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span className="hidden sm:inline">Thêm giỏ hàng</span>
@@ -622,7 +622,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             <button
               type="button"
               onClick={handleBuyNow}
-              className="h-9 sm:h-10 px-4 sm:px-5 rounded-lg bg-white text-[#4B193E] hover:bg-white/90 text-xs sm:text-sm font-extrabold shadow-xs transition-colors cursor-pointer"
+              className="h-9 sm:h-10 px-4 sm:px-5 rounded-lg bg-white text-[#181818] hover:bg-white/90 text-xs sm:text-sm font-extrabold shadow-xs transition-colors cursor-pointer"
             >
               Mua ngay
             </button>

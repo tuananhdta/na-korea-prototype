@@ -166,7 +166,7 @@ function ConsultationForm() {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         aria-label="Họ và tên"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#F0831F] focus:ring-1 focus:ring-[#F0831F]/40 focus:bg-white/15"
+        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
       />
       <div className="relative">
         <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/15 pr-2.5 text-xs text-gray-300">
@@ -180,7 +180,7 @@ function ConsultationForm() {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           aria-label="Số điện thoại"
-          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#F0831F] focus:ring-1 focus:ring-[#F0831F]/40 focus:bg-white/15"
+          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
         />
       </div>
       <input
@@ -190,11 +190,11 @@ function ConsultationForm() {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         aria-label="Lời nhắn"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#F0831F] focus:ring-1 focus:ring-[#F0831F]/40 focus:bg-white/15"
+        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
       />
       <button
         type="submit"
-        className="na-btn-primary animate-shimmer-btn group w-full h-10 text-xs uppercase tracking-wider font-bold shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98]"
+        className="na-btn-primary animate-shimmer-btn group w-full h-10 text-[13px] sm:text-sm uppercase tracking-[0.03em] font-bold shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98]"
       >
         <span>GỬI YÊU CẦU TƯ VẤN</span>
         <Send className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
@@ -271,7 +271,7 @@ const footerJsonLd = {
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#1E0A0D] text-white overflow-hidden border-t border-[#B5222A]/25">
+    <footer className="relative bg-[#1E0A0D] font-sans text-white overflow-hidden border-t border-[#B5222A]/25">
       {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
       <script
         type="application/ld+json"
@@ -309,7 +309,7 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="font-sans text-sm font-bold text-[#F0831F] tracking-wide">
+            <p className="font-sans text-sm font-bold text-[#D4A359] tracking-wide">
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 
@@ -336,7 +336,7 @@ export function Footer() {
               </a>
 
               <div className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 text-[11px] font-semibold text-gray-200 shadow-xs">
-                <ShieldCheck className="h-3.5 w-3.5 text-[#F0831F]" />
+                <ShieldCheck className="h-3.5 w-3.5 text-[#D4A359]" />
                 <span>GMP • HACCP • ISO 22000</span>
               </div>
             </div>
@@ -379,19 +379,19 @@ export function Footer() {
 
               <address className="not-italic space-y-2.5 pt-1">
                 <div className="flex items-start gap-2 text-gray-300">
-                  <MapPin className="h-4 w-4 shrink-0 text-[#F0831F] mt-0.5" />
+                  <MapPin className="h-4 w-4 shrink-0 text-[#D4A359] mt-0.5" />
                   <span>LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
                 </div>
 
                 <div className="flex items-center gap-2 text-gray-300">
-                  <Phone className="h-4 w-4 shrink-0 text-[#F0831F]" />
+                  <Phone className="h-4 w-4 shrink-0 text-[#D4A359]" />
                   <a href="tel:0903409939" className="hover:text-white transition-colors">
                     090.340.9939
                   </a>
                 </div>
 
                 <div className="flex items-center gap-2 text-gray-300">
-                  <Mail className="h-4 w-4 shrink-0 text-[#F0831F]" />
+                  <Mail className="h-4 w-4 shrink-0 text-[#D4A359]" />
                   <a href="mailto:contact@nakorea.vn" className="hover:text-white transition-colors">
                     contact@nakorea.vn
                   </a>
@@ -416,7 +416,7 @@ export function Footer() {
                       href={link.href}
                       className="group flex items-start gap-1.5 transition-all duration-200 hover:text-white hover:translate-x-1"
                     >
-                      <ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#F0831F]/70 transition-transform duration-200 group-hover:text-[#F0831F] group-hover:translate-x-1 mt-0.5" />
+                      <ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#D4A359]/70 transition-transform duration-200 group-hover:text-[#D4A359] group-hover:translate-x-1 mt-0.5" />
                       <span>{link.label}</span>
                     </Link>
                   </li>
@@ -427,9 +427,9 @@ export function Footer() {
 
           {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) (Animation #2: Glow & Shimmer) ═══ */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="rounded-2xl border border-white/15 bg-white/5 p-4 sm:p-5 backdrop-blur-md shadow-xl transition-all duration-300 hover:border-[#F0831F]/40 hover:bg-white/[0.08] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)]">
+            <div className="rounded-2xl border border-white/15 bg-white/5 p-4 sm:p-5 backdrop-blur-md shadow-xl transition-all duration-300 hover:border-[#D4A359]/40 hover:bg-white/[0.08] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)]">
               <div className="flex items-center gap-2 mb-2">
-                <FileText className="h-4 w-4 text-[#F0831F]" />
+                <FileText className="h-4 w-4 text-[#D4A359]" />
                 <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
                   Đăng ký nhận tư vấn
                 </h3>
@@ -444,7 +444,7 @@ export function Footer() {
       </div>
 
       {/* ═══ Dải đáy: Copyright & Social Links ═══ */}
-      <div className="border-t border-[#B5222A]/20 bg-[#120407]/90 py-4 px-4 sm:px-6 lg:px-8">
+      <div className="border-t border-[#B5222A]/20 bg-[#181818]/90 py-4 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-gray-400">
           <p>
             © 2026 NA Korea - Kim&apos;s Red Ginseng Vietnam. All rights reserved.

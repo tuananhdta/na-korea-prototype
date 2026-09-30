@@ -25,8 +25,8 @@ export const FlipPage = forwardRef<HTMLDivElement, FlipPageProps>(
             : isBackCover
             ? "rounded-l-sm shadow-[inset_5px_0_15px_rgba(0,0,0,0.15),0_10px_30px_rgba(0,0,0,0.25)]"
             : isEven
-            ? "border-r border-[#ECEBE9] shadow-[inset_-8px_0_12px_rgba(0,0,0,0.06)]"
-            : "border-l border-[#ECEBE9] shadow-[inset_8px_0_12px_rgba(0,0,0,0.06)]"
+            ? "border-r border-[#EEEEEE] shadow-[inset_-8px_0_12px_rgba(0,0,0,0.06)]"
+            : "border-l border-[#EEEEEE] shadow-[inset_8px_0_12px_rgba(0,0,0,0.06)]"
         }`}
       >
         {/* Subtle Spine & Paper Texture Gradient */}
@@ -43,7 +43,7 @@ export const FlipPage = forwardRef<HTMLDivElement, FlipPageProps>(
 
         {/* Loading Skeleton */}
         {!loaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-[#F4F1EA] text-xs font-medium text-[#8A8477]">
+          <div className="absolute inset-0 flex items-center justify-center bg-[#F5F3EF] text-xs font-medium text-[#8A8477]">
             <div className="flex flex-col items-center gap-2">
               <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#B5222A] border-t-transparent" />
               <span>Đang tải trang {pageNumber}...</span>

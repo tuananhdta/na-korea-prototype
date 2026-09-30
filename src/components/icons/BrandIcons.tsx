@@ -12,7 +12,7 @@ interface IconProps extends React.SVGProps<SVGSVGElement> {
  * - Green: #34A853
  * - Yellow: #FBBC04
  * - Red: #EA4335
- * - Dark Red: #C5221F
+ * - Dark Red: #B5222A
  */
 export function GoogleGmailLogo({ className = "w-6 h-6", size, ...props }: IconProps) {
   return (
@@ -49,7 +49,7 @@ export function GoogleGmailLogo({ className = "w-6 h-6", size, ...props }: IconP
       {/* Top Left Dark Red Shoulder */}
       <path
         d="M0 116.4V163l116.4 87.3V99L83.8 74.5C49.2 48.6 0 73.2 0 116.4Z"
-        fill="#C5221F"
+        fill="#B5222A"
       />
     </svg>
   );

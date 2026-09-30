@@ -53,15 +53,15 @@ export function CustomerReviewsSection({
   subtitle?: string;
 }) {
   return (
-    <section className="my-16 border-t border-b border-[#EAE6E1] bg-[#FAF7F5] py-14">
+    <section className="my-16 border-t border-b border-[#EEEEEE] bg-[#FAF7F5] py-14">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
         {/* Section Header */}
         <div className="mb-10 text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-[#4B193E]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#4B193E]">
-            <CheckCircle2 className="h-3.5 w-3.5 text-[#4B193E]" />
+          <div className="inline-flex items-center gap-1.5 rounded-full bg-[#181818]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#181818]">
+            <CheckCircle2 className="h-3.5 w-3.5 text-[#181818]" />
             <span>Chứng thực người mua hàng</span>
           </div>
-          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-[#2D2D2D] sm:text-3xl">
+          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-[#111111] sm:text-3xl">
             {title}
           </h2>
           <p className="mt-2 text-xs sm:text-sm text-gray-600 max-w-xl mx-auto leading-relaxed">
@@ -94,7 +94,7 @@ export function CustomerReviewsSection({
               </div>
 
               <div className="mt-6 border-t border-gray-100 pt-4">
-                <p className="font-bold text-xs sm:text-sm text-[#2D2D2D]">{rev.author}</p>
+                <p className="font-bold text-xs sm:text-sm text-[#111111]">{rev.author}</p>
                 <p className="text-[11px] text-gray-500">{rev.role}</p>
                 <p className="mt-1 text-[11px] font-medium text-[#B5222A]">
                   Đã mua: {rev.productName}

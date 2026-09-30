@@ -51,7 +51,7 @@ export function BackToTop() {
       <button
         onClick={scrollToTop}
         aria-label="Cuộn lên đầu trang"
-        className="group relative w-12 h-12 rounded-full bg-[#4B193E]/95 hover:bg-[#B5222A] text-white backdrop-blur-md shadow-xl border border-white/20 hover:border-transparent flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95"
+        className="group relative w-12 h-12 rounded-full bg-[#181818]/95 hover:bg-[#B5222A] text-white backdrop-blur-md shadow-xl border border-white/20 hover:border-transparent flex items-center justify-center transition-all duration-300 transform hover:scale-110 active:scale-95"
       >
         {/* SVG Circular Scroll Progress Ring */}
         <svg

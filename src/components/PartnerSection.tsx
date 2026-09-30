@@ -1,8 +1,6 @@
 "use client";
 
-import { useState, useRef, MouseEvent } from "react";
 import Image from "next/image";
-import { Globe, Building2, ShieldCheck } from "lucide-react";
 
 export interface Partner {
   id: string;
@@ -123,53 +121,13 @@ interface PartnerCardProps {
 }
 
 function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
-  const cardRef = useRef<HTMLDivElement>(null);
-  const [tilt, setTilt] = useState<{ x: number; y: number; active: boolean }>({
-    x: 0,
-    y: 0,
-    active: false,
-  });
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (!cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = e.clientX - rect.left;
-    const y = e.clientY - rect.top;
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    // Compute subtle tilt angles (max +/- 8 deg)
-    const rotateX = ((y - centerY) / centerY) * -8;
-    const rotateY = ((x - centerX) / centerX) * 8;
-    setTilt({ x: rotateX, y: rotateY, active: true });
-  };
-
-  const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0, active: false });
-  };
-
   return (
     <div
-      ref={cardRef}
       key={`${keyPrefix}-${partner.id}`}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-      style={{
-        transform: tilt.active
-          ? `perspective(800px) rotateX(${tilt.x}deg) rotateY(${tilt.y}deg) scale3d(1.05, 1.05, 1.05)`
-          : "perspective(800px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)",
-        transition: tilt.active ? "transform 100ms ease-out" : "transform 400ms ease-out",
-      }}
-      className="group/card relative flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 cursor-pointer items-center justify-center rounded-2xl bg-white/95 px-5 py-3 shadow-[0_4px_16px_rgba(0,0,0,0.03)] ring-1 ring-[#EDE8DD] backdrop-blur-md transition-shadow duration-300 hover:bg-white hover:shadow-[0_16px_36px_rgba(181,34,42,0.14)] hover:ring-[#B5222A]/40 overflow-hidden"
+      className="group/card relative flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-[#EEEEEE] bg-white px-5 py-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] duration-300 hover:border-[#B5222A]/40 hover:shadow-[0_8px_20px_rgba(181,34,42,0.10)]"
       title={`${partner.name} - ${partner.category}`}
     >
-      {/* 1. Subtle Golden Shimmer Ray Sweep Effect */}
-      <div className="animate-shimmer-sweep" />
-
-      {/* 2. Top-Right Micro Amber Glow Accent on Hover */}
-      <div className="pointer-events-none absolute -right-6 -top-6 h-16 w-16 rounded-full bg-gradient-to-br from-[#F0831F]/20 via-[#B5222A]/10 to-transparent opacity-0 blur-md transition-opacity duration-300 group-hover/card:opacity-100" />
-
-      {/* 3. Partner Logo */}
-      <div className="relative z-10 flex h-full w-full items-center justify-center">
+      <div className="flex h-full w-full items-center justify-center">
         <Image
           src={partner.logo}
           alt={partner.name}
@@ -186,35 +144,18 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
 export function PartnerSection() {
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-24 border-y border-[#EEEEEE]">
-      {/* ─── Background Subtle Dot Grid Pattern ─── */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0 opacity-[0.035]"
-        style={{
-          backgroundImage: `radial-gradient(#4B193E 1px, transparent 1px)`,
-          backgroundSize: "24px 24px",
-        }}
-      />
-
-      {/* ─── Section Content ─── */}
       <div className="relative z-10 mx-auto max-w-[1240px] px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          {/* Brand Dots */}
-          <div aria-hidden="true" className="mb-3.5 flex h-3.5 w-16 items-center justify-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#F0831F]" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
-          </div>
-
-          <span className="text-xs sm:text-sm font-bold uppercase tracking-[0.2em] text-[#B5222A]">
+          <span className="font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#B5222A]">
             Uy tín làm nên thương hiệu
           </span>
 
-          <h2 className="font-sans mt-2.5 text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#111111] tracking-tight">
+          <h2 className="font-sans mt-2.5 text-2xl sm:text-3xl md:text-[36px] lg:text-[42px] font-bold text-[#111111] tracking-[-0.015em] leading-[1.4]">
             Đối tác của Kim&apos;s Red Ginseng tại Việt Nam & Quốc tế
           </h2>
 
-          <p className="mt-3.5 text-sm sm:text-base text-[#666666] leading-relaxed max-w-2xl font-sans">
+          <p className="mt-3.5 max-w-2xl font-sans text-sm sm:text-base text-[#666666] leading-[1.7] tracking-[-0.01em]">
             Tự hào là thương hiệu Hồng sâm 6 năm tuổi Punggi được tin chọn làm quà tặng ngoại giao và đối tác chiến lược của các tập đoàn, ngân hàng hàng đầu.
           </p>
         </div>
@@ -226,12 +167,10 @@ export function PartnerSection() {
         {/* ─── DÒNG 1: Đối tác Quốc tế & Hàn Quốc (Scroll Left: Phải -> Trái) ─── */}
         <div>
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-between">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#B5222A] bg-[#B5222A]/5 px-3.5 py-1.5 rounded-full border border-[#B5222A]/15 shadow-2xs">
-              <Globe className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#B5222A] border-b border-[#B5222A]/30 pb-1">
               <span>Đối Tác Quốc Tế & Hàn Quốc</span>
             </div>
-            <span className="text-[11px] font-medium text-[#777777] hidden sm:inline-flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#B5222A]" />
+            <span className="font-sans text-[11px] font-medium leading-[1.5] text-[#777777] hidden sm:inline-flex">
               Tập đoàn công nghệ, ngân hàng & viện nghiên cứu Hàn Quốc
             </span>
           </div>
@@ -268,12 +207,10 @@ export function PartnerSection() {
         {/* ─── DÒNG 2: Đối tác & Đại lý Trong Nước (Scroll Right: Trái -> Phải) ─── */}
         <div>
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-between">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[#181818] bg-[#181818]/5 px-3.5 py-1.5 rounded-full border border-[#181818]/15 shadow-2xs">
-              <Building2 className="w-3.5 h-3.5 text-[#B5222A]" />
+            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#181818] border-b border-[#181818]/25 pb-1">
               <span>Đối Tác Doanh Nghiệp & Phân Phối Việt Nam</span>
             </div>
-            <span className="text-[11px] font-medium text-[#777777] hidden sm:inline-flex items-center gap-1.5">
-              <ShieldCheck className="w-3.5 h-3.5 text-[#B5222A]" />
+            <span className="font-sans text-[11px] font-medium leading-[1.5] text-[#777777] hidden sm:inline-flex">
               Hệ thống bán lẻ, tập đoàn đa ngành & ngân hàng tại Việt Nam
             </span>
           </div>

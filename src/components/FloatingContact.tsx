@@ -148,7 +148,7 @@ export function FloatingContact() {
             isDragging ? "cursor-grabbing shadow-2xl scale-105 opacity-95" : "cursor-grab"
           }`}
         >
-          <div className="relative group/panel flex w-[52px] sm:w-[56px] flex-col items-center overflow-visible rounded-2xl border border-white/20 bg-gradient-to-b from-[#4B193E] via-[#3a1330] to-[#250a1e] py-1.5 text-white shadow-[0_14px_30px_rgba(44,13,35,0.3)] transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] hover:shadow-[0_22px_44px_rgba(44,13,35,0.42)]">
+          <div className="relative group/panel flex w-[52px] sm:w-[56px] flex-col items-center overflow-visible rounded-lg border border-white/15 bg-[#181818] py-1.5 text-white shadow-[0_8px_24px_rgba(0,0,0,0.18)] transition-[transform,box-shadow] duration-300 hover:shadow-[0_12px_28px_rgba(0,0,0,0.24)]">
             {/* Drag handle & Title */}
             <div
               onMouseDown={handleMouseDown}
@@ -291,7 +291,7 @@ export function FloatingContact() {
             type="button"
             onClick={() => setMobileExpanded(!mobileExpanded)}
             aria-label={mobileExpanded ? "Đóng liên hệ" : "Mở liên hệ"}
-            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-white/30 bg-gradient-to-br from-[#4B193E] to-[#B5222A] px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(75,25,62,0.45)] transition-transform duration-200 active:scale-[0.98]"
+            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-white/30 bg-gradient-to-br from-[#181818] to-[#B5222A] px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(75,25,62,0.45)] transition-transform duration-200 active:scale-[0.98]"
           >
             {mobileExpanded ? (
               <X className="h-4 w-4 shrink-0" />
@@ -310,7 +310,7 @@ export function FloatingContact() {
           <Link
             href="/san-pham"
             aria-label="Xem sản phẩm"
-            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-[#B5222A]/20 bg-white px-4 text-sm font-bold text-[#4B193E] shadow-[0_8px_20px_rgba(75,25,62,0.16)] transition-transform duration-200 active:scale-[0.98]"
+            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-[#B5222A]/20 bg-white px-4 text-sm font-bold text-[#181818] shadow-[0_8px_20px_rgba(75,25,62,0.16)] transition-transform duration-200 active:scale-[0.98]"
           >
             <ShoppingBag className="h-4 w-4 shrink-0 text-[#B5222A]" />
             <span>Sản Phẩm</span>

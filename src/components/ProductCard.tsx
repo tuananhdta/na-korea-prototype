@@ -61,7 +61,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Discount Badge */}
           {discountPercent > 0 && (
             <div className="absolute left-3 top-3 z-10">
-              <span className="inline-flex items-center bg-[#B5222A] px-2 py-0.5 text-[11px] font-bold text-white font-figtree">
+              <span className="inline-flex items-center bg-[#B5222A] px-2 py-0.5 font-figtree text-[11px] font-semibold text-white leading-[1.0]">
                 -{discountPercent}%
               </span>
             </div>
@@ -71,7 +71,7 @@ export function ProductCard({ product }: ProductCardProps) {
           <div className="absolute inset-x-0 bottom-0 z-20 flex translate-y-full items-center justify-between gap-2 border-t border-[#EEEEEE] bg-white/95 p-2 backdrop-blur-sm opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
             <Link
               href={`/san-pham/${product.id}`}
-              className="flex-1 py-1.5 text-center text-xs font-bold border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-white transition-colors"
+              className="flex-1 py-1.5 text-center font-sans text-[12px] sm:text-[13px] font-semibold leading-[1.0] tracking-[0.03em] border border-[#111111] text-[#111111] hover:bg-[#111111] hover:text-white transition-colors"
               title="Xem chi tiết sản phẩm"
             >
               Chi tiết
@@ -79,7 +79,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <button
               type="button"
               onClick={() => addToCart(product, 1)}
-              className="flex-1 py-1.5 text-center text-xs font-bold bg-[#B5222A] text-white hover:bg-[#991C23] transition-colors"
+              className="flex-1 py-1.5 text-center font-sans text-[12px] sm:text-[13px] font-semibold leading-[1.0] tracking-[0.03em] bg-[#B5222A] text-white hover:bg-[#991C23] transition-colors"
               title="Thêm vào giỏ hàng"
             >
               Thêm giỏ
@@ -91,7 +91,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex flex-1 flex-col justify-between p-4">
           <div>
             <Link href={`/san-pham/${product.id}`} className="block">
-              <h3 className="line-clamp-2 text-sm sm:text-[15px] font-bold text-[#111111] leading-snug transition-colors group-hover:text-[#B5222A]">
+              <h3 className="line-clamp-2 font-sans text-[15px] sm:text-base font-semibold text-[#111111] leading-[1.35] tracking-[-0.01em] transition-colors group-hover:text-[#B5222A]">
                 {product.title}
               </h3>
             </Link>
@@ -118,7 +118,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <link itemProp="availability" href="https://schema.org/InStock" />
 
             <div className="flex items-baseline gap-2">
-              <span className="text-base sm:text-lg font-extrabold text-[#B5222A] font-figtree">
+              <span className="text-base sm:text-lg font-bold text-[#B5222A] font-figtree leading-[1.2] tracking-[-0.01em]">
                 {product.price}
               </span>
               {product.originalPrice && (

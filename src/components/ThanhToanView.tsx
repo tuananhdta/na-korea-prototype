@@ -197,18 +197,18 @@ export function ThanhToanView() {
 
       <main className="flex-1 pb-20">
         {/* Breadcrumb */}
-        <div className="bg-white border-b border-[#E5E5E5]">
+        <div className="bg-white border-b border-[#EEEEEE]">
           <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
             <nav className="flex items-center space-x-2 text-xs sm:text-sm text-[#666666]">
-              <Link href="/" className="hover:text-[#2D2D2D] transition-colors">
+              <Link href="/" className="hover:text-[#111111] transition-colors">
                 Trang Chủ
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-              <Link href="/gio-hang" className="hover:text-[#2D2D2D] transition-colors">
+              <Link href="/gio-hang" className="hover:text-[#111111] transition-colors">
                 Giỏ Hàng
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-              <span className="text-[#2D2D2D] font-semibold">Thanh Toán (Checkout)</span>
+              <span className="text-[#111111] font-semibold">Thanh Toán (Checkout)</span>
             </nav>
           </div>
         </div>
@@ -216,7 +216,7 @@ export function ThanhToanView() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-8">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-[#2D2D2D] tracking-tight">
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-[#111111] tracking-tight">
                 Thanh Toán Đơn Hàng
               </h1>
               <p className="text-xs sm:text-sm text-[#666666] mt-1">
@@ -226,9 +226,9 @@ export function ThanhToanView() {
           </div>
 
           {items.length === 0 && !isSuccessModalOpen ? (
-            <div className="bg-white rounded-2xl border border-[#E5E5E5] p-10 text-center max-w-xl mx-auto shadow-xs">
+            <div className="bg-white rounded-2xl border border-[#EEEEEE] p-10 text-center max-w-xl mx-auto shadow-xs">
               <ShoppingBag className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-              <h2 className="text-lg font-bold text-[#2D2D2D] mb-2">
+              <h2 className="text-lg font-bold text-[#111111] mb-2">
                 Không có sản phẩm nào để thanh toán
               </h2>
               <p className="text-xs text-[#666666] mb-6">
@@ -247,12 +247,12 @@ export function ThanhToanView() {
                 {/* Left Column: Customer Information & Payment Method */}
                 <div className="lg:col-span-7 space-y-6">
                   {/* Customer Information Card */}
-                  <div className="bg-white rounded-2xl border border-[#E5E5E5] p-6 sm:p-7 shadow-xs space-y-5">
-                    <div className="flex items-center gap-2.5 border-b border-[#E5E5E5] pb-4">
+                  <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-7 shadow-xs space-y-5">
+                    <div className="flex items-center gap-2.5 border-b border-[#EEEEEE] pb-4">
                       <div className="w-8 h-8 rounded-full bg-[#B5222A]/10 text-[#B5222A] flex items-center justify-center font-bold text-sm">
                         1
                       </div>
-                      <h2 className="text-lg font-bold text-[#2D2D2D]">
+                      <h2 className="text-lg font-bold text-[#111111]">
                         Thông Tin Giao Hàng
                       </h2>
                     </div>
@@ -260,7 +260,7 @@ export function ThanhToanView() {
                     <div className="space-y-4">
                       {/* Full Name */}
                       <div>
-                        <label className="block text-xs font-bold text-[#2D2D2D] mb-1.5">
+                        <label className="block text-xs font-bold text-[#111111] mb-1.5">
                           Họ và tên người nhận <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -273,10 +273,10 @@ export function ThanhToanView() {
                               setErrors((prev) => ({ ...prev, fullName: undefined }));
                             }
                           }}
-                          className={`w-full px-4 py-3 rounded-xl border text-sm text-[#2D2D2D] placeholder:text-gray-400 focus:outline-none transition-colors ${
+                          className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none transition-colors ${
                             errors.fullName
                               ? "border-red-500 focus:border-red-500 bg-red-50/20"
-                              : "border-[#E5E5E5] focus:border-[#B5222A]"
+                              : "border-[#EEEEEE] focus:border-[#B5222A]"
                           }`}
                         />
                         {errors.fullName && (
@@ -290,7 +290,7 @@ export function ThanhToanView() {
                       {/* Phone & Email */}
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <div>
-                          <label className="block text-xs font-bold text-[#2D2D2D] mb-1.5">
+                          <label className="block text-xs font-bold text-[#111111] mb-1.5">
                             Số điện thoại nhận hàng <span className="text-red-500">*</span>
                           </label>
                           <input
@@ -303,10 +303,10 @@ export function ThanhToanView() {
                                 setErrors((prev) => ({ ...prev, phone: undefined }));
                               }
                             }}
-                            className={`w-full px-4 py-3 rounded-xl border text-sm text-[#2D2D2D] placeholder:text-gray-400 focus:outline-none transition-colors ${
+                            className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none transition-colors ${
                               errors.phone
                                 ? "border-red-500 focus:border-red-500 bg-red-50/20"
-                                : "border-[#E5E5E5] focus:border-[#B5222A]"
+                                : "border-[#EEEEEE] focus:border-[#B5222A]"
                             }`}
                           />
                           {errors.phone && (
@@ -318,7 +318,7 @@ export function ThanhToanView() {
                         </div>
 
                         <div>
-                          <label className="block text-xs font-bold text-[#2D2D2D] mb-1.5">
+                          <label className="block text-xs font-bold text-[#111111] mb-1.5">
                             Email (Nhận thông báo đơn hàng)
                           </label>
                           <input
@@ -326,14 +326,14 @@ export function ThanhToanView() {
                             placeholder="email@example.com"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-4 py-3 rounded-xl border border-[#E5E5E5] text-sm text-[#2D2D2D] placeholder:text-gray-400 focus:outline-none focus:border-[#B5222A] transition-colors"
+                            className="w-full px-4 py-3 rounded-xl border border-[#EEEEEE] text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none focus:border-[#B5222A] transition-colors"
                           />
                         </div>
                       </div>
 
                       {/* Delivery Address */}
                       <div>
-                        <label className="block text-xs font-bold text-[#2D2D2D] mb-1.5">
+                        <label className="block text-xs font-bold text-[#111111] mb-1.5">
                           Địa chỉ nhận hàng chi tiết <span className="text-red-500">*</span>
                         </label>
                         <input
@@ -346,10 +346,10 @@ export function ThanhToanView() {
                               setErrors((prev) => ({ ...prev, address: undefined }));
                             }
                           }}
-                          className={`w-full px-4 py-3 rounded-xl border text-sm text-[#2D2D2D] placeholder:text-gray-400 focus:outline-none transition-colors ${
+                          className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none transition-colors ${
                             errors.address
                               ? "border-red-500 focus:border-red-500 bg-red-50/20"
-                              : "border-[#E5E5E5] focus:border-[#B5222A]"
+                              : "border-[#EEEEEE] focus:border-[#B5222A]"
                           }`}
                         />
                         {errors.address && (
@@ -362,7 +362,7 @@ export function ThanhToanView() {
 
                       {/* Order Note */}
                       <div>
-                        <label className="block text-xs font-bold text-[#2D2D2D] mb-1.5">
+                        <label className="block text-xs font-bold text-[#111111] mb-1.5">
                           Ghi chú đơn hàng (Tùy chọn)
                         </label>
                         <textarea
@@ -370,19 +370,19 @@ export function ThanhToanView() {
                           placeholder="Ghi chú thêm về thời gian giao hàng, địa chỉ cụ thể..."
                           value={note}
                           onChange={(e) => setNote(e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-[#E5E5E5] text-sm text-[#2D2D2D] placeholder:text-gray-400 focus:outline-none focus:border-[#B5222A] transition-colors resize-none"
+                          className="w-full px-4 py-3 rounded-xl border border-[#EEEEEE] text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none focus:border-[#B5222A] transition-colors resize-none"
                         />
                       </div>
                     </div>
                   </div>
 
                   {/* Payment Method Card */}
-                  <div className="bg-white rounded-2xl border border-[#E5E5E5] p-6 sm:p-7 shadow-xs space-y-5">
-                    <div className="flex items-center gap-2.5 border-b border-[#E5E5E5] pb-4">
+                  <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-7 shadow-xs space-y-5">
+                    <div className="flex items-center gap-2.5 border-b border-[#EEEEEE] pb-4">
                       <div className="w-8 h-8 rounded-full bg-[#B5222A]/10 text-[#B5222A] flex items-center justify-center font-bold text-sm">
                         2
                       </div>
-                      <h2 className="text-lg font-bold text-[#2D2D2D]">
+                      <h2 className="text-lg font-bold text-[#111111]">
                         Phương Thức Thanh Toán
                       </h2>
                     </div>
@@ -393,7 +393,7 @@ export function ThanhToanView() {
                         className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${
                           paymentMethod === "cod"
                             ? "border-[#B5222A] bg-red-50/30 ring-1 ring-[#B5222A]"
-                            : "border-[#E5E5E5] hover:border-gray-300"
+                            : "border-[#EEEEEE] hover:border-gray-300"
                         }`}
                       >
                         <input
@@ -407,7 +407,7 @@ export function ThanhToanView() {
                         <div className="flex-1">
                           <div className="flex items-center gap-2">
                             <CreditCard className="w-4 h-4 text-[#B5222A]" />
-                            <span className="font-bold text-sm text-[#2D2D2D]">
+                            <span className="font-bold text-sm text-[#111111]">
                               Thanh toán khi nhận hàng (COD)
                             </span>
                           </div>
@@ -422,7 +422,7 @@ export function ThanhToanView() {
                         className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${
                           paymentMethod === "bank_transfer"
                             ? "border-[#B5222A] bg-red-50/30 ring-1 ring-[#B5222A]"
-                            : "border-[#E5E5E5] hover:border-gray-300"
+                            : "border-[#EEEEEE] hover:border-gray-300"
                         }`}
                       >
                         <input
@@ -436,7 +436,7 @@ export function ThanhToanView() {
                         <div className="flex-1">
                           <div className="flex items-center gap-2">
                             <Building2 className="w-4 h-4 text-[#B5222A]" />
-                            <span className="font-bold text-sm text-[#2D2D2D]">
+                            <span className="font-bold text-sm text-[#111111]">
                               Chuyển khoản ngân hàng (VietQR / Internet Banking)
                             </span>
                           </div>
@@ -452,9 +452,9 @@ export function ThanhToanView() {
                 {/* Right Column: Order Review & Total Summary */}
                 <div className="lg:col-span-5 space-y-6">
                   {/* Order Summary & Product List */}
-                  <div className="bg-white rounded-2xl border border-[#E5E5E5] p-6 sm:p-7 shadow-xs space-y-5">
-                    <div className="flex items-center justify-between border-b border-[#E5E5E5] pb-4">
-                      <h2 className="text-lg font-bold text-[#2D2D2D]">
+                  <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-7 shadow-xs space-y-5">
+                    <div className="flex items-center justify-between border-b border-[#EEEEEE] pb-4">
+                      <h2 className="text-lg font-bold text-[#111111]">
                         Đơn Hàng ({items.reduce((acc, it) => acc + it.quantity, 0)})
                       </h2>
                       <Link
@@ -477,7 +477,7 @@ export function ThanhToanView() {
                             key={`${product.id}-${selectedOption || ""}`}
                             className="pt-3 first:pt-0 flex items-center gap-3.5"
                           >
-                            <div className="relative w-14 h-14 bg-[#F8F8F8] rounded-lg overflow-hidden shrink-0 border border-[#E5E5E5]">
+                            <div className="relative w-14 h-14 bg-[#F8F8F8] rounded-lg overflow-hidden shrink-0 border border-[#EEEEEE]">
                               <Image
                                 src={product.image}
                                 alt={product.title}
@@ -485,13 +485,13 @@ export function ThanhToanView() {
                                 sizes="56px"
                                 className="object-contain p-1"
                               />
-                              <span className="absolute bottom-0 right-0 bg-[#2D2D2D] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-tl-md">
+                              <span className="absolute bottom-0 right-0 bg-[#111111] text-white text-[10px] font-bold px-1.5 py-0.5 rounded-tl-md">
                                 x{quantity}
                               </span>
                             </div>
 
                             <div className="flex-1 min-w-0">
-                              <h3 className="text-xs font-semibold text-[#2D2D2D] line-clamp-1">
+                              <h3 className="text-xs font-semibold text-[#111111] line-clamp-1">
                                 {product.title}
                               </h3>
                               {selectedOption && (
@@ -509,7 +509,7 @@ export function ThanhToanView() {
                     </div>
 
                     {/* Coupon Input Form */}
-                    <div className="pt-2 border-t border-[#E5E5E5]">
+                    <div className="pt-2 border-t border-[#EEEEEE]">
                       {appliedCoupon ? (
                         <div className="flex items-center justify-between p-3 bg-red-50/60 rounded-xl border border-red-200">
                           <div className="flex items-center gap-2">
@@ -545,12 +545,12 @@ export function ThanhToanView() {
                                   handleApplyCoupon();
                                 }
                               }}
-                              className="flex-1 px-3.5 py-2.5 rounded-xl border border-[#E5E5E5] text-xs uppercase placeholder:normal-case placeholder:text-gray-400 focus:outline-none focus:border-[#B5222A]"
+                              className="flex-1 px-3.5 py-2.5 rounded-xl border border-[#EEEEEE] text-xs uppercase placeholder:normal-case placeholder:text-gray-400 focus:outline-none focus:border-[#B5222A]"
                             />
                             <button
                               type="button"
                               onClick={() => handleApplyCoupon()}
-                              className="px-4 py-2.5 bg-[#2D2D2D] text-white text-xs font-bold rounded-xl hover:bg-black transition-colors shrink-0"
+                              className="px-4 py-2.5 bg-[#111111] text-white text-xs font-bold rounded-xl hover:bg-black transition-colors shrink-0"
                             >
                               Áp dụng
                             </button>
@@ -586,10 +586,10 @@ export function ThanhToanView() {
                     </div>
 
                     {/* Price Breakdown Calculation */}
-                    <div className="space-y-2.5 border-t border-[#E5E5E5] pt-4 text-xs sm:text-sm">
+                    <div className="space-y-2.5 border-t border-[#EEEEEE] pt-4 text-xs sm:text-sm">
                       <div className="flex justify-between text-[#666666]">
                         <span>Tạm tính tiền hàng:</span>
-                        <span className="font-semibold text-[#2D2D2D]">
+                        <span className="font-semibold text-[#111111]">
                           {formatNumberToVnd(totalPrice)}
                         </span>
                       </div>
@@ -611,9 +611,9 @@ export function ThanhToanView() {
                         </div>
                       )}
 
-                      <div className="flex justify-between items-baseline border-t border-[#E5E5E5] pt-3 text-base">
+                      <div className="flex justify-between items-baseline border-t border-[#EEEEEE] pt-3 text-base">
                         <div>
-                          <span className="font-bold text-[#2D2D2D]">Tổng thanh toán:</span>
+                          <span className="font-bold text-[#111111]">Tổng thanh toán:</span>
                           <p className="text-[11px] text-[#666666] font-normal">
                             (Đã bao gồm thuế VAT)
                           </p>

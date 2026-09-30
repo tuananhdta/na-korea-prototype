@@ -74,7 +74,7 @@ export function OrderSuccessModal({
       aria-modal="true"
       aria-labelledby="order-success-title"
     >
-      <div className="relative w-full max-w-xl my-6 max-h-[92vh] overflow-y-auto rounded-2xl bg-white shadow-2xl border border-[#E5E5E5] transition-all transform animate-in zoom-in-95 duration-300">
+      <div className="relative w-full max-w-xl my-6 max-h-[92vh] overflow-y-auto rounded-2xl bg-white shadow-2xl border border-[#EEEEEE] transition-all transform animate-in zoom-in-95 duration-300">
         {/* Close Button top-right */}
         <button
           type="button"
@@ -93,13 +93,13 @@ export function OrderSuccessModal({
 
           <h2
             id="order-success-title"
-            className="text-2xl font-bold tracking-tight text-[#2D2D2D] sm:text-3xl"
+            className="text-2xl font-bold tracking-tight text-[#111111] sm:text-3xl"
           >
             Đặt Hàng Thành Công!
           </h2>
 
-          <div className="mt-2 space-y-1 text-xs sm:text-sm text-[#4B4F52] leading-relaxed max-w-md mx-auto">
-            <p className="font-medium text-[#2D2D2D]">
+          <div className="mt-2 space-y-1 text-xs sm:text-sm text-[#333333] leading-relaxed max-w-md mx-auto">
+            <p className="font-medium text-[#111111]">
               Cảm ơn Quý khách <strong className="text-[#B5222A]">{orderDetails?.customerName}</strong> đã tin tưởng lựa chọn Na Korea.
             </p>
             <p className="text-gray-500">
@@ -146,7 +146,7 @@ export function OrderSuccessModal({
                     <div className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">
                       Ngân hàng thụ hưởng
                     </div>
-                    <div className="font-bold text-[#2D2D2D] text-xs sm:text-sm">
+                    <div className="font-bold text-[#111111] text-xs sm:text-sm">
                       {SITE_CONFIG.bankInfo.bankName}
                     </div>
                   </div>
@@ -183,7 +183,7 @@ export function OrderSuccessModal({
                     <div className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">
                       Chủ tài khoản
                     </div>
-                    <div className="font-bold text-[#2D2D2D] text-xs uppercase">
+                    <div className="font-bold text-[#111111] text-xs uppercase">
                       {SITE_CONFIG.bankInfo.accountHolder}
                     </div>
                   </div>
@@ -228,8 +228,8 @@ export function OrderSuccessModal({
         {/* Order Brief Info */}
         {orderDetails && (
           <div className="px-5 sm:px-6 py-2">
-            <div className="rounded-xl border border-[#E5E5E5] bg-[#F8F8F8] p-4 text-xs sm:text-sm space-y-2.5">
-              <div className="flex items-center justify-between border-b border-[#E5E5E5] pb-2">
+            <div className="rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] p-4 text-xs sm:text-sm space-y-2.5">
+              <div className="flex items-center justify-between border-b border-[#EEEEEE] pb-2">
                 <span className="text-[#666666]">Mã đơn hàng:</span>
                 <span className="font-mono font-bold text-[#B5222A] text-sm tracking-wide">
                   {orderDetails.orderId}
@@ -238,32 +238,32 @@ export function OrderSuccessModal({
 
               <div className="flex items-center justify-between">
                 <span className="text-[#666666]">Người nhận:</span>
-                <span className="font-semibold text-[#2D2D2D]">
+                <span className="font-semibold text-[#111111]">
                   {orderDetails.customerName}
                 </span>
               </div>
 
               <div className="flex items-center justify-between">
                 <span className="text-[#666666]">Số điện thoại:</span>
-                <span className="font-medium text-[#2D2D2D]">{orderDetails.phone}</span>
+                <span className="font-medium text-[#111111]">{orderDetails.phone}</span>
               </div>
 
               <div className="flex items-start justify-between gap-3">
                 <span className="text-[#666666] shrink-0">Địa chỉ nhận hàng:</span>
-                <span className="text-right font-medium text-[#2D2D2D] line-clamp-2">
+                <span className="text-right font-medium text-[#111111] line-clamp-2">
                   {orderDetails.address}
                 </span>
               </div>
 
-              <div className="flex items-center justify-between border-t border-[#E5E5E5] pt-2">
+              <div className="flex items-center justify-between border-t border-[#EEEEEE] pt-2">
                 <span className="text-[#666666]">Phương thức thanh toán:</span>
-                <span className="font-medium text-[#2D2D2D]">
+                <span className="font-medium text-[#111111]">
                   {orderDetails.paymentMethod}
                 </span>
               </div>
 
               <div className="flex items-center justify-between">
-                <span className="font-bold text-[#2D2D2D]">Tổng thanh toán:</span>
+                <span className="font-bold text-[#111111]">Tổng thanh toán:</span>
                 <span className="text-base font-extrabold text-[#B5222A]">
                   {orderDetails.total}
                 </span>
@@ -274,13 +274,13 @@ export function OrderSuccessModal({
 
         {/* Reassurance items */}
         <div className="px-5 sm:px-6 pt-2 pb-2">
-          <div className="flex items-center justify-around rounded-xl bg-[#ECEBE9]/50 py-2.5 px-3 text-[11px] text-[#4B4F52]">
+          <div className="flex items-center justify-around rounded-xl bg-[#EEEEEE]/50 py-2.5 px-3 text-[11px] text-[#333333]">
             <div className="flex items-center gap-1.5">
               <PackageCheck className="h-3.5 w-3.5 text-[#B5222A]" />
               <span>Đóng gói cẩn thận</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <PhoneCall className="h-3.5 w-3.5 text-[#F0831F]" />
+              <PhoneCall className="h-3.5 w-3.5 text-[#D4A359]" />
               <span>Hotline: {SITE_CONFIG.hotlineDisplay}</span>
             </div>
             <div className="flex items-center gap-1.5">

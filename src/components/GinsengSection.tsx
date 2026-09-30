@@ -13,7 +13,7 @@ export function GinsengSection() {
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div aria-hidden="true" className="mb-4 flex h-4 w-16 items-center gap-1.5">
               <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
-              <span className="h-1.5 w-1.5 rounded-full bg-[#F0831F]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359]" />
               <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
             </div>
 
@@ -21,18 +21,18 @@ export function GinsengSection() {
               Lưu truyền ngàn năm qua từng hơi thở<br />kết tinh tinh hoa đất trời
             </span>
 
-            <h2 className="font-sans mt-2 text-3xl md:text-[32px] font-extrabold text-[#2D2D2D] tracking-tight">
+            <h2 className="font-sans mt-2 text-3xl md:text-[32px] font-extrabold text-[#111111] tracking-tight">
               Nhân sâm Hàn Quốc
             </h2>
 
             {/* Divider */}
-            <div className="w-24 md:w-72 h-[1px] bg-[#E5E5E5] my-6 md:my-8" />
+            <div className="w-24 md:w-72 h-[1px] bg-[#EEEEEE] my-6 md:my-8" />
 
             <div className="max-w-md">
             <h3 className="font-sans text-xl md:text-[22px] font-semibold text-[#B5222A] mb-2">
                 Nhân sâm Punggi
               </h3>
-              <p className="text-[15px] sm:text-[16px] text-[#4B4F52] leading-relaxed">
+              <p className="text-[15px] sm:text-[16px] text-[#333333] leading-relaxed">
                 Hàm lượng saponin đạt mức tối đa và vượt trội nhờ kết cấu củ rắn chắc, hương thơm sâm tự nhiên nồng nàn hơn hẳn nhân sâm từ các khu vực khác.
               </p>
             </div>

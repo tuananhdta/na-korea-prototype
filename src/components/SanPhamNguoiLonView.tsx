@@ -147,11 +147,11 @@ export function SanPhamNguoiLonView() {
 
         {/* ═══ THANH CÔNG CỤ & TÌM KIẾM (Utility Toolbar) ═══ */}
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mb-8">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-3 border-b border-[#EAE6E1]">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-3 border-b border-[#EEEEEE]">
             {/* Left: Counter & Form Sub-Filter */}
             <div className="flex flex-wrap items-center gap-4">
               <span className="text-xs sm:text-sm text-gray-600">
-                Hiển thị <strong className="text-[#2D2D2D] font-bold">{adultProducts.length}</strong> sản phẩm
+                Hiển thị <strong className="text-[#111111] font-bold">{adultProducts.length}</strong> sản phẩm
               </span>
 
               <div className="h-4 w-[1px] bg-gray-300 hidden sm:block" />
@@ -161,7 +161,7 @@ export function SanPhamNguoiLonView() {
                 <select
                   value={selectedForm}
                   onChange={(e) => setSelectedForm(e.target.value)}
-                  className="h-9 rounded-lg border border-[#EAE6E1] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 rounded-lg border border-[#EEEEEE] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 >
                   <option value="all">Tất cả dạng sản phẩm</option>
                   <option value="extract">Cao sâm cô đặc</option>
@@ -182,7 +182,7 @@ export function SanPhamNguoiLonView() {
                   placeholder="Tìm kiếm sản phẩm..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="h-9 w-full rounded-lg border border-[#EAE6E1] bg-white pl-9 pr-8 text-xs sm:text-sm text-[#2D2D2D] placeholder:text-gray-400 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 w-full rounded-lg border border-[#EEEEEE] bg-white pl-9 pr-8 text-xs sm:text-sm text-[#111111] placeholder:text-gray-400 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 />
                 {searchTerm && (
                   <button
@@ -201,7 +201,7 @@ export function SanPhamNguoiLonView() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                  className="h-9 rounded-lg border border-[#EAE6E1] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 rounded-lg border border-[#EEEEEE] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
                 >
                   <option value="default">Sắp xếp: Mặc định</option>
                   <option value="price-asc">Giá: Thấp → Cao</option>

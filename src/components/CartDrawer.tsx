@@ -39,7 +39,7 @@ export function CartDrawer() {
           }`}
         >
           {/* Header */}
-          <div className="px-6 py-5 bg-[#161e27] text-white flex items-center justify-between">
+          <div className="px-6 py-5 bg-[#181818] text-white flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <ShoppingBag className="w-5 h-5 text-[#b5222a]" />
               <h2 className="text-lg font-bold tracking-wide text-white">
@@ -55,7 +55,7 @@ export function CartDrawer() {
           </div>
 
           {/* Delivery Note */}
-          <div className="bg-[#fcf8e3] border-b border-[#faebcc] px-6 py-2.5 text-xs text-[#8a6d3b] flex items-center gap-2">
+          <div className="bg-[#fcf8e3] border-b border-[#faebcc] px-6 py-2.5 text-xs text-[#B88942] flex items-center gap-2">
             <Truck className="w-4 h-4 text-[#b5222a] shrink-0" />
             <span>Miễn phí giao hàng toàn quốc cho đơn từ 1.000.000₫</span>
           </div>
