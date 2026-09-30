@@ -5,9 +5,9 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: {
-    absolute: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
+    absolute: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
   },
-  description: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}. Phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
+  description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
   keywords: [
     "Hồng sâm Kim",
     "Nơi tận tâm trở thành kiệt tác",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.siteUrl}/`,
   },
   openGraph: {
-    title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
-    description: `${SITE_CONFIG.slogan}. Tuyệt tác Hồng sâm 6 năm tuổi Hồng Kim Sâm vùng Punggi Hàn Quốc, nhập khẩu và phân phối độc quyền bởi NA Korea.`,
+    title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
+    description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
     url: `${SITE_CONFIG.siteUrl}/`,
     siteName: `${SITE_CONFIG.brandName} - NA Korea`,
     locale: "vi_VN",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
-    description: `Tuyệt tác Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc - ${SITE_CONFIG.slogan}.`,
+    description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
   },
 };
 

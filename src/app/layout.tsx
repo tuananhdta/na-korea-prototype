@@ -18,7 +18,7 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_CONFIG.siteUrl),
   title: {
-    default: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
+    default: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
     template: `%s | ${SITE_CONFIG.brandName}`,
   },
   description: `${SITE_CONFIG.slogan}. Tổng công ty Nông nghiệp Nhân sâm Punggi - Hồng sâm 6 năm tuổi Hồng Kim Sâm phân phối độc quyền bởi NA Korea tại Việt Nam.`,
