@@ -10,18 +10,29 @@ const featuredProducts = (productsData as Product[]).slice(0, 8);
 
 export function ProductSection() {
   return (
-    <section id="products" className="py-20 md:py-24 bg-[#F8F8F8] border-t border-[#EEEEEE]">
+    <section id="products" className="py-16 md:py-24 bg-[#F8F8F8] border-t border-[#EEEEEE] font-sans">
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
-        <div className="flex flex-col items-center text-center mb-12">
-          <span className="font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#4B193E] mb-2">
-            NGHỆ NHÂN KIM JEONG HWAN
-          </span>
-          <h2 className="font-sans text-2xl sm:text-3xl md:text-[36px] font-bold text-[#111111] tracking-[-0.015em] leading-[1.4]">
+        <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
+          <div
+            aria-hidden="true"
+            className="mb-5 flex items-center justify-center gap-2"
+          >
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
+          </div>
+
+          <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
+            Nghệ nhân Kim Jeong Hwan
+          </p>
+
+          <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
             Sản Phẩm Hồng Sâm Kim&apos;s Nổi Bật
           </h2>
-          <div className="w-12 h-0.5 bg-[#4B193E] my-3.5" />
-          <p className="font-sans text-sm sm:text-base text-[#666666] max-w-xl leading-[1.7] tracking-[-0.01em]">
+
+          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-[860px] mx-auto">
             Chiết xuất từ nhân sâm 6 năm tuổi vùng núi Punggi nguyên chất 100%, bảo đảm hàm lượng Saponin và Ginsenoside cao nhất.
           </p>
         </div>

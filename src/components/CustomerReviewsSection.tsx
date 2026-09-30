@@ -56,15 +56,26 @@ export function CustomerReviewsSection({
     <section className="my-16 border-t border-b border-[#EEEEEE] bg-[#FAF7F5] py-14">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
         {/* Section Header */}
-        <div className="mb-10 text-center">
-          <div className="inline-flex items-center gap-1.5 rounded-full bg-[#181818]/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-[#181818]">
-            <CheckCircle2 className="h-3.5 w-3.5 text-[#181818]" />
-            <span>Chứng thực người mua hàng</span>
+        <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
+          <div
+            aria-hidden="true"
+            className="mb-5 flex items-center justify-center gap-2"
+          >
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
           </div>
-          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-[#111111] sm:text-3xl">
+
+          <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
+            Chứng thực người mua hàng
+          </p>
+
+          <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
             {title}
           </h2>
-          <p className="mt-2 text-xs sm:text-sm text-gray-600 max-w-xl mx-auto leading-relaxed">
+
+          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-[860px] mx-auto">
             {subtitle}
           </p>
         </div>
