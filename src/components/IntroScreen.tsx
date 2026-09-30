@@ -2,7 +2,11 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export function IntroScreen() {
+interface IntroScreenProps {
+  onFinish?: () => void;
+}
+
+export function IntroScreen({ onFinish }: IntroScreenProps) {
   // Fix Flash Of Content: Start with isVisible = true so it covers the screen on 1st frame
   const [isVisible, setIsVisible] = useState(true);
   const [isFadingOut, setIsFadingOut] = useState(false);
@@ -34,6 +38,8 @@ export function IntroScreen() {
   const finishIntro = () => {
     if (isFadingOut || isDestroyed) return;
     setIsFadingOut(true);
+    // Kích hoạt callback thông báo intro đã kết thúc để video hero bắt đầu phát
+    onFinish?.();
 
     // 850ms transition matches the cinematic curtain slide up duration
     setTimeout(() => {

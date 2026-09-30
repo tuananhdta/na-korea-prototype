@@ -3,12 +3,20 @@
 import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
-export function HeroSlider() {
+interface HeroSliderProps {
+  canPlay?: boolean;
+}
+
+export function HeroSlider({ canPlay = true }: HeroSliderProps) {
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const userInteractedRef = useRef(false);
+  const isIntersectingRef = useRef(true);
+
+  const canPlayRef = useRef(canPlay);
+  canPlayRef.current = canPlay;
 
   useEffect(() => {
     const video = videoRef.current;
@@ -24,7 +32,7 @@ export function HeroSlider() {
       if (videoRef.current) {
         videoRef.current.muted = false;
         setIsMuted(false);
-        if (!videoRef.current.paused) {
+        if (!videoRef.current.paused && canPlayRef.current) {
           videoRef.current.play().catch(() => {});
         }
       }
@@ -45,31 +53,40 @@ export function HeroSlider() {
       window.addEventListener("scroll", handleFirstGesture, { once: true, passive: true });
     };
 
+    const startPlayback = () => {
+      if (!videoRef.current || !canPlayRef.current || !isIntersectingRef.current) return;
+
+      const playPromise = videoRef.current.play();
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            if (!userInteractedRef.current && !videoRef.current?.muted) {
+              setIsMuted(false);
+            }
+          })
+          .catch(() => {
+            // Trình duyệt chặn autoplay có tiếng khi chưa tương tác -> tạm thời phát câm
+            if (videoRef.current) {
+              videoRef.current.muted = true;
+              setIsMuted(true);
+              videoRef.current.play().catch(() => {});
+              setupGestureListeners();
+            }
+          });
+      }
+    };
+
     // Intersection Observer API: Tự động Tạm dừng khi khuất màn hình và Phát tiếp khi vào tầm nhìn
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          isIntersectingRef.current = entry.isIntersecting;
           if (!videoRef.current) return;
 
           if (entry.isIntersecting) {
-            // Khi Hero nằm trong tầm nhìn -> Tự động phát tiếp
-            const playPromise = videoRef.current.play();
-            if (playPromise !== undefined) {
-              playPromise
-                .then(() => {
-                  if (!userInteractedRef.current && !videoRef.current?.muted) {
-                    setIsMuted(false);
-                  }
-                })
-                .catch(() => {
-                  // Trình duyệt chặn autoplay có tiếng khi chưa tương tác -> tạm thời phát câm
-                  if (videoRef.current) {
-                    videoRef.current.muted = true;
-                    setIsMuted(true);
-                    videoRef.current.play().catch(() => {});
-                    setupGestureListeners();
-                  }
-                });
+            // Khi Hero nằm trong tầm nhìn và được phép phát
+            if (canPlayRef.current) {
+              startPlayback();
             }
           } else {
             // Khi cuộn ra khỏi tầm nhìn -> Tạm dừng video (ngắt âm thanh & giải phóng 100% GPU/CPU)
@@ -84,11 +101,48 @@ export function HeroSlider() {
 
     observer.observe(container);
 
+    // Initial check: Chỉ phát nếu canPlay ban đầu là true
+    if (canPlay) {
+      startPlayback();
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+
     return () => {
       observer.disconnect();
       cleanupGestureListeners();
     };
   }, []);
+
+  // Khi canPlay thay đổi từ false -> true (khi video Intro kết thúc hoặc bấm bỏ qua)
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (canPlay) {
+      video.currentTime = 0;
+      if (isIntersectingRef.current) {
+        const playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              if (!userInteractedRef.current && !video.muted) {
+                setIsMuted(false);
+              }
+            })
+            .catch(() => {
+              video.muted = true;
+              setIsMuted(true);
+              video.play().catch(() => {});
+            });
+        }
+      }
+    } else {
+      video.pause();
+      video.currentTime = 0;
+    }
+  }, [canPlay]);
 
   const toggleMute = () => {
     userInteractedRef.current = true;
@@ -127,7 +181,6 @@ export function HeroSlider() {
         <video
           ref={videoRef}
           src="/videos/hero-bg.mp4"
-          autoPlay
           loop
           playsInline
           preload="auto"

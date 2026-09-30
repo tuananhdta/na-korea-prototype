@@ -14,19 +14,20 @@ import { IntroScreen } from "@/components/IntroScreen";
 
 export function HomeClientView() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isIntroFinished, setIsIntroFinished] = useState(false);
 
   return (
     <div className="relative min-h-screen flex flex-col bg-white font-sans">
       {/* Intro Screen Reveal (Only on first visit per session) */}
-      <IntroScreen />
+      <IntroScreen onFinish={() => setIsIntroFinished(true)} />
 
       {/* Header / Navbar */}
       <Header onOpenMobileMenu={() => setMobileMenuOpen(true)} overlay />
 
       {/* Main Content Sections */}
       <main className="flex-1">
-        {/* 1. Fullscreen Video Hero Background */}
-        <HeroSlider />
+        {/* 1. Fullscreen Video Hero Background (Chỉ bắt đầu chạy khi video Intro kết thúc) */}
+        <HeroSlider canPlay={isIntroFinished} />
 
         {/* 2. Brand Story & Heritage Video Section */}
         <BrandStorySection />
