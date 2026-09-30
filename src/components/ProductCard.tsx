@@ -39,7 +39,7 @@ export function ProductCard({ product }: ProductCardProps) {
     >
       <meta itemProp="name" content={product.title} />
       <meta itemProp="image" content={product.image} />
-      <meta itemProp="brand" content="Kim's Red Ginseng" />
+      <meta itemProp="brand" content="Hồng Kim Sâm" />
 
       <div className="group relative flex h-full flex-col overflow-hidden rounded bg-white border border-[#EEEEEE] transition-all duration-300 hover:border-[#4B193E] hover:shadow-md">
         {/* Thumbnail Container */}

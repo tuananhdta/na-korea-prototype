@@ -4,10 +4,10 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Tin Tức & Kiến Thức Hồng Sâm",
-  description: "Cập nhật tin tức hoạt động, sự kiện vinh danh quốc tế của Kim's Red Ginseng và kiến thức chuyên sâu về công dụng của hồng sâm 6 năm tuổi.",
+  description: "Cập nhật tin tức hoạt động, sự kiện vinh danh quốc tế của Hồng Kim Sâm và kiến thức chuyên sâu về công dụng của hồng sâm 6 năm tuổi.",
   keywords: [
     "Tin tức hồng sâm",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
     "Kiến thức nhân sâm",
     "Sự kiện NA Korea",
   ],
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Tin Tức & Kiến Thức Hồng Sâm | ${SITE_CONFIG.brandName}`,
-    description: "Cập nhật các hoạt động thương hiệu và cẩm nang chăm sóc sức khỏe cùng Kim's Red Ginseng.",
+    description: "Cập nhật các hoạt động thương hiệu và cẩm nang chăm sóc sức khỏe cùng Hồng Kim Sâm.",
     url: `${SITE_CONFIG.siteUrl}/tin-tuc`,
     type: "website",
   },

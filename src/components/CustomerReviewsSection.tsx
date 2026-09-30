@@ -48,7 +48,7 @@ const REVIEWS_DATA: ReviewItem[] = [
 
 export function CustomerReviewsSection({
   title = "Đánh giá từ khách hàng thực tế",
-  subtitle = "Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Kim's Red Ginseng",
+  subtitle = "Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Hồng Kim Sâm",
 }: {
   title?: string;
   subtitle?: string;

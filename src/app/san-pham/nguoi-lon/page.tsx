@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Hồng sâm người lớn",
     "Cao hồng sâm Hàn Quốc",
     "Nước hồng sâm Balance Time",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
     "Hồng sâm tăng cường sinh lực",
   ],
   alternates: {

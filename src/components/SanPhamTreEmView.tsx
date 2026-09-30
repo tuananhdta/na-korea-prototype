@@ -77,7 +77,7 @@ export function SanPhamTreEmView() {
       },
       {
         "@type": "ItemList",
-        "name": "Danh Mục Hồng Sâm Trẻ Em - Kim's Red Ginseng",
+        "name": "Danh Mục Hồng Sâm Trẻ Em - Hồng Kim Sâm",
         "description": "Các sản phẩm nước hồng sâm trẻ em và kẹo dẻo sâm giúp bé ăn ngon miệng, tăng cường hệ miễn dịch và hỗ trợ phát triển thể chất.",
         "numberOfItems": kidProducts.length,
         "itemListElement": kidProducts.map((p, idx) => ({

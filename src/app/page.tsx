@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   title: {
     absolute: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
   },
-  description: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}. Phân phối chính hãng Hồng sâm 6 năm tuổi Kim's Red Ginseng Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
+  description: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}. Phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
   keywords: [
     "Hồng sâm Kim",
     "Nơi tận tâm trở thành kiệt tác",
     "hongsamkim.com",
-    "Kim's Red Ginseng",
-    "Hồng sâm Kim's Red Ginseng",
+    "Hồng Kim Sâm",
+    "Hồng sâm Hồng Kim Sâm",
     "Nhân sâm Punggi 6 năm tuổi",
     "NA Korea",
     "Cao hồng sâm Hàn Quốc",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan} | ${SITE_CONFIG.subBrandName}`,
-    description: `${SITE_CONFIG.slogan}. Tuyệt tác Hồng sâm 6 năm tuổi Kim's Red Ginseng vùng Punggi Hàn Quốc, nhập khẩu và phân phối độc quyền bởi NA Korea.`,
+    description: `${SITE_CONFIG.slogan}. Tuyệt tác Hồng sâm 6 năm tuổi Hồng Kim Sâm vùng Punggi Hàn Quốc, nhập khẩu và phân phối độc quyền bởi NA Korea.`,
     url: `${SITE_CONFIG.siteUrl}/`,
     siteName: `${SITE_CONFIG.brandName} - NA Korea`,
     locale: "vi_VN",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
-    description: `Tuyệt tác Hồng sâm 6 năm tuổi Kim's Red Ginseng Punggi Hàn Quốc - ${SITE_CONFIG.slogan}.`,
+    description: `Tuyệt tác Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc - ${SITE_CONFIG.slogan}.`,
   },
 };
 
@@ -52,7 +52,7 @@ export default function Home() {
     "name": SITE_CONFIG.brandName,
     "alternateName": SITE_CONFIG.subBrandName,
     "url": SITE_CONFIG.siteUrl,
-    "description": `${SITE_CONFIG.slogan}. Nhà phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Kim's Red Ginseng tại Việt Nam.`,
+    "description": `${SITE_CONFIG.slogan}. Nhà phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm tại Việt Nam.`,
     "publisher": {
       "@type": "Organization",
       "name": SITE_CONFIG.companyName,
@@ -67,7 +67,7 @@ export default function Home() {
     "name": SITE_CONFIG.companyName,
     "alternateName": SITE_CONFIG.brandName,
     "slogan": SITE_CONFIG.slogan,
-    "description": `${SITE_CONFIG.slogan}. Đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Kim's Red Ginseng của nghệ nhân Kim Jeong Hwan từ vùng Punggi Hàn Quốc.`,
+    "description": `${SITE_CONFIG.slogan}. Đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm của nghệ nhân Kim Jeong Hwan từ vùng Punggi Hàn Quốc.`,
     "url": SITE_CONFIG.siteUrl,
     "telephone": SITE_CONFIG.hotline,
     "email": SITE_CONFIG.email,
@@ -103,7 +103,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <h1 className="sr-only">
-        Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác | Kim&apos;s Red Ginseng Punggi 6 năm tuổi Hàn Quốc
+        Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác | Hồng Kim Sâm Punggi 6 năm tuổi Hàn Quốc
       </h1>
       <HomeClientView />
     </>

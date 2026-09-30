@@ -9,21 +9,21 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Chứng Chỉ & Giải Thưởng Quốc Tế",
-  description: "Bộ chứng nhận chất lượng quốc tế của Kim's Red Ginseng: HACCP, GMP, FDA Hoa Kỳ, ISO 22000, Halal và Bằng sáng chế độc quyền từ Nghệ nhân Hàn Quốc.",
+  description: "Bộ chứng nhận chất lượng quốc tế của Hồng Kim Sâm: HACCP, GMP, FDA Hoa Kỳ, ISO 22000, Halal và Bằng sáng chế độc quyền từ Nghệ nhân Hàn Quốc.",
   keywords: [
     "Chứng chỉ chất lượng",
     "HACCP",
     "GMP",
     "FDA",
     "ISO 22000",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
   ],
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/chung-chi-chat-luong`,
   },
   openGraph: {
     title: `Chứng Chỉ & Giải Thưởng Quốc Tế | ${SITE_CONFIG.brandName}`,
-    description: "Bảo chứng chất lượng vàng chuẩn mực quốc tế của Kim's Red Ginseng.",
+    description: "Bảo chứng chất lượng vàng chuẩn mực quốc tế của Hồng Kim Sâm.",
     url: `${SITE_CONFIG.siteUrl}/chung-chi-chat-luong`,
     type: "website",
   },
@@ -38,7 +38,7 @@ const CERTIFICATE_IMAGES = [
   { src: "/images/certification/cc6.jpg", alt: "Chứng chỉ đạt được 6", title: "HACCP" },
   { src: "/images/certification/cc7.jpg", alt: "Chứng chỉ đạt được 7", title: "Korea Trademark registration" },
   { src: "/images/certification/cc8.jpg", alt: "Chứng chỉ đạt được 8", title: "Korea Trademark registration" },
-  { src: "/images/certification/cc9.jpg", alt: "Chứng chỉ đạt được 9", title: "Letter of a patent [Kim’s Red Ginseng\n& Korean Mistletoe]" },
+  { src: "/images/certification/cc9.jpg", alt: "Chứng chỉ đạt được 9", title: "Letter of a patent [Hồng Kim Sâm\n& Korean Mistletoe]" },
   { src: "/images/certification/cc10.jpg", alt: "Chứng chỉ đạt được 10", title: "Letter of a patent\n[Kim’s Honey Dipped Red Ginseng]" },
   { src: "/images/certification/cc11.jpg", alt: "Chứng chỉ đạt được 11", title: "U.S Trademark registration" },
   { src: "/images/certification/cc12.jpg", alt: "Chứng chỉ đạt được 12", title: "HALAL" },
@@ -61,7 +61,7 @@ export default function ChungChiChatLuongPage() {
           title="Chứng Chỉ Đạt Được"
           description="Chúng tôi cam kết chất lượng chuẩn mực cao nhất thông qua các chứng chỉ kiểm định an toàn thực phẩm uy tín hàng đầu Hàn Quốc và Quốc Tế."
           image="/images/sub04.jpg"
-          imageAlt="Chứng nhận chất lượng Kim's Red Ginseng"
+          imageAlt="Chứng nhận chất lượng Hồng Kim Sâm"
           imageOpacity={0.9}
         />
 

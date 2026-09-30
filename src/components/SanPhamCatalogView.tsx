@@ -112,7 +112,7 @@ export function SanPhamCatalogView() {
       },
       {
         "@type": "ItemList",
-        "name": "Danh Mục Sản Phẩm Hồng Sâm Kim's Red Ginseng",
+        "name": "Danh Mục Sản Phẩm Hồng Sâm Hồng Kim Sâm",
         "description": "Các sản phẩm hồng sâm 6 năm tuổi Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea.",
         "numberOfItems": filteredProducts.length,
         "itemListElement": filteredProducts.map((p, idx) => ({
@@ -145,10 +145,10 @@ export function SanPhamCatalogView() {
         <PageHero
           eyebrow="DANH MỤC SẢN PHẨM"
           showEyebrow={false}
-          title="Tất Cả Sản Phẩm Hồng Sâm Kim's Red Ginseng"
+          title="Tất Cả Sản Phẩm Hồng Sâm Hồng Kim Sâm"
           description="Sản phẩm bồi bổ sức khỏe cao cấp chế biến từ 100% nhân sâm 6 năm tuổi thủ phủ Punggi Hàn Quốc – Nghệ nhân Kim Jeong Hwan."
           image="/images/production.jpg"
-          imageAlt="Sản phẩm Hồng Sâm Kim's Red Ginseng"
+          imageAlt="Sản phẩm Hồng Sâm Hồng Kim Sâm"
         />
 
         {/* Breadcrumbs */}

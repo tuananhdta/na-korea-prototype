@@ -37,7 +37,7 @@ export function BrandStorySection() {
 
           <div className="max-w-[530px] text-left md:ml-0">
             <p className="font-sans text-base font-normal leading-6 text-[#111111]">
-              Hồng Sâm Kim’s Red Ginseng mang trong mình sức sống trí tuệ và khí tức của cổ nhân trải qua hàng nghìn năm cùng với linh khí và nguồn năng lượng cao quý của thời đại các vị Hoàng đế tại Triều Tiên.
+              Hồng Sâm Hồng Kim Sâm mang trong mình sức sống trí tuệ và khí tức của cổ nhân trải qua hàng nghìn năm cùng với linh khí và nguồn năng lượng cao quý của thời đại các vị Hoàng đế tại Triều Tiên.
             </p>
 
             <div className="my-8 h-px w-full max-w-[264px] bg-[#D8D2C8]" />

@@ -297,11 +297,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
           {/* ═══ Cột 1: Thương hiệu & Di sản (Col 4) ═══ */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-block group" aria-label="Trang chủ Kim's Red Ginseng">
+            <Link href="/" className="inline-block group" aria-label="Trang chủ Hồng Kim Sâm">
               <div className="relative h-14 w-48 transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={BRAND_LOGOS.horizontalWhite}
-                  alt="6년근 김정환홍삼 | Kim's Red Ginseng"
+                  alt="6년근 김정환홍삼 | Hồng Kim Sâm"
                   fill
                   sizes="200px"
                   className="object-contain object-left drop-shadow-md"
@@ -447,7 +447,7 @@ export function Footer() {
       <div className="border-t border-[#4B193E]/20 bg-[#181818]/90 py-4 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 text-xs text-[#BEB5B7] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © 2026 NA Korea - Kim&apos;s Red Ginseng Vietnam. All rights reserved.
+            © 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
             <span className="hidden text-[11px] text-[#BEB5B7] md:inline">Kết nối với chúng tôi:</span>

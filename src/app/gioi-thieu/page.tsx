@@ -8,11 +8,11 @@ import { ChevronRight, CheckCircle2 } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Về Chúng Tôi - NA Korea & Kim's Red Ginseng",
-  description: "Tổng công ty Nông nghiệp Nhân sâm Punggi – Chuyên canh tác và chế biến Nhân sâm 6 năm tuổi Kim's Red Ginseng với hơn 50 năm truyền thống gia tộc, nhập khẩu độc quyền bởi NA Korea.",
+  title: "Về Chúng Tôi - NA Korea & Hồng Kim Sâm",
+  description: "Tổng công ty Nông nghiệp Nhân sâm Punggi – Chuyên canh tác và chế biến Nhân sâm 6 năm tuổi Hồng Kim Sâm với hơn 50 năm truyền thống gia tộc, nhập khẩu độc quyền bởi NA Korea.",
   keywords: [
     "Về chúng tôi",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
     "NA Korea",
     "Nghệ nhân Kim Jeong Hwan",
     "Nhân sâm Punggi",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.siteUrl}/gioi-thieu`,
   },
   openGraph: {
-    title: `Về Chúng Tôi - NA Korea & Kim's Red Ginseng | ${SITE_CONFIG.brandName}`,
+    title: `Về Chúng Tôi - NA Korea & Hồng Kim Sâm | ${SITE_CONFIG.brandName}`,
     description: "Kế thừa tinh hoa nhân sâm 500 năm vùng núi Sobaek – Thủ phủ Punggi Hàn Quốc.",
     url: `${SITE_CONFIG.siteUrl}/gioi-thieu`,
     type: "website",
@@ -38,7 +38,7 @@ export default function GioiThieuPage() {
           eyebrow="GIỚI THIỆU CÔNG TY"
           showEyebrow={false}
           title="Về Chúng Tôi"
-          description="Tổng công ty Nông nghiệp Nhân sâm Punggi – Chuyên canh tác và chế biến Nhân sâm 6 năm tuổi Kim's Red Ginseng với hơn 50 năm truyền thống gia tộc."
+          description="Tổng công ty Nông nghiệp Nhân sâm Punggi – Chuyên canh tác và chế biến Nhân sâm 6 năm tuổi Hồng Kim Sâm với hơn 50 năm truyền thống gia tộc."
           image="/images/sub01.jpg"
           imageAlt="Trang trại nhân sâm Punggi"
           imageOpacity={0.9}
@@ -66,7 +66,7 @@ export default function GioiThieuPage() {
                   Kế Thừa Tinh Hoa Sâm Vùng Núi Sobaek
                 </h2>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Được thành lập và phát triển tại vùng đất Punggi – nơi có bề dày lịch sử hơn 500 năm trồng nhân sâm tại Hàn Quốc, Kim&apos;s Red Ginseng là kết tinh tâm huyết của Nghệ nhân Kim Jeong Hwan.
+                  Được thành lập và phát triển tại vùng đất Punggi – nơi có bề dày lịch sử hơn 500 năm trồng nhân sâm tại Hàn Quốc, Hồng Kim Sâm là kết tinh tâm huyết của Nghệ nhân Kim Jeong Hwan.
                 </p>
                 <div className="space-y-2.5 pt-2">
                   <div className="flex items-center gap-2 text-sm text-gray-800">

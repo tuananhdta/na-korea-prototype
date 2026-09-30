@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     "Hồng sâm 6 năm tuổi",
     "Quy trình hấp sấy hồng sâm",
     "Ginsenoside",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
     "Hồng sâm Hàn Quốc",
   ],
   alternates: {
@@ -255,7 +255,7 @@ export default function HongSamPage() {
             data-scroll-fade="on"
           >
             <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Khám Phá Cửa Hàng Hồng Sâm Kim&apos;s Red Ginseng
+              Khám Phá Cửa Hàng Hồng Sâm Hồng Kim Sâm
             </h2>
             <p className="text-gray-300 text-sm max-w-xl mx-auto">
               Trải nghiệm trọn bộ 32 sản phẩm chính hãng nhập khẩu nguyên hộp từ Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc.

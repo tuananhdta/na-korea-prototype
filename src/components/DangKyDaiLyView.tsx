@@ -78,9 +78,9 @@ export function DangKyDaiLyView() {
       <main className="flex-1 pb-20">
         <PageHero
           title="Chính Sách Đối Tác & Đại Lý Phân Phối"
-          description="Đồng hành cùng NA Korea phân phối thương hiệu Hồng sâm 6 năm tuổi Kim's Red Ginseng chính ngạch từ Hàn Quốc – Cơ hội gia tăng doanh thu vượt trội cho đối tác chăm sóc sức khỏe và quà biếu cao cấp."
+          description="Đồng hành cùng NA Korea phân phối thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm chính ngạch từ Hàn Quốc – Cơ hội gia tăng doanh thu vượt trội cho đối tác chăm sóc sức khỏe và quà biếu cao cấp."
           image="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
-          imageAlt="Đại lý Kim's Red Ginseng"
+          imageAlt="Đại lý Hồng Kim Sâm"
           imageOpacity={0.92}
         />
 
@@ -107,7 +107,7 @@ export function DangKyDaiLyView() {
                   Thương Hiệu Bảo Chứng Bởi Bậc Thầy Nhân Sâm Kim Jeong Hwan
                 </h2>
                 <p className="text-sm sm:text-base text-[#333333] leading-relaxed">
-                  <strong>Kim&apos;s Red Ginseng</strong> là thương hiệu hồng sâm 6 năm tuổi thượng hạng đến từ vùng đất thánh Punggi (Hàn Quốc), được chế tác dưới sự dẫn dắt của Bậc thầy Nhân sâm với quy trình kiểm định nghiêm ngặt từ nông trường đến thành phẩm.
+                  <strong>Hồng Kim Sâm</strong> là thương hiệu hồng sâm 6 năm tuổi thượng hạng đến từ vùng đất thánh Punggi (Hàn Quốc), được chế tác dưới sự dẫn dắt của Bậc thầy Nhân sâm với quy trình kiểm định nghiêm ngặt từ nông trường đến thành phẩm.
                 </p>
                 <p className="text-sm sm:text-base text-[#333333] leading-relaxed">
                   Sản phẩm đạt chuẩn <strong>HACCP, GMP, FDA Hoa Kỳ</strong> và được tỉnh Gyeongsangbuk-do lựa chọn làm <strong>Quà tặng ngoại giao quốc gia</strong>. Tại Việt Nam, <strong>NA Korea</strong> cam kết bảo hộ quyền lợi đối tác, hỗ trợ pháp lý 100% và tạo mọi điều kiện để đại lý phát triển bền vững.
@@ -117,7 +117,7 @@ export function DangKyDaiLyView() {
               <div className="lg:col-span-6 relative aspect-4/3 rounded-2xl overflow-hidden shadow-md bg-[#181818] border border-[#EEEEEE]">
                 <Image
                   src="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
-                  alt="Kim's Red Ginseng Store"
+                  alt="Hồng Kim Sâm Store"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"

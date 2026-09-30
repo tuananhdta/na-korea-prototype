@@ -8,11 +8,11 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Lịch Sử Hình Thành & Phát Triển",
-  description: "Hành trình hơn 50 năm khởi nguồn từ trang trại nhân sâm truyền thống Punggi (1968) đến thương hiệu Hồng sâm Kim's Red Ginseng vươn tầm quốc tế.",
+  description: "Hành trình hơn 50 năm khởi nguồn từ trang trại nhân sâm truyền thống Punggi (1968) đến thương hiệu Hồng sâm Hồng Kim Sâm vươn tầm quốc tế.",
   keywords: [
     "Lịch sử hình thành",
     "Trang trại sâm Punggi",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
     "Nghệ nhân Kim Jeong Hwan",
   ],
   alternates: {

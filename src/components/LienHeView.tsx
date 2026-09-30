@@ -46,9 +46,9 @@ export function LienHeView() {
         {/* Banner Hero */}
         <PageHero
           title="Liên Hệ Trực Tiếp"
-          description="Đội ngũ chuyên viên tư vấn dinh dưỡng của Kim's Red Ginseng luôn sẵn sàng lắng nghe và đồng hành chăm sóc sức khỏe cùng bạn."
+          description="Đội ngũ chuyên viên tư vấn dinh dưỡng của Hồng Kim Sâm luôn sẵn sàng lắng nghe và đồng hành chăm sóc sức khỏe cùng bạn."
           image="/images/ginseng-hero-2.jpg"
-          imageAlt="Liên hệ Kim's Red Ginseng"
+          imageAlt="Liên hệ Hồng Kim Sâm"
           imageOpacity={0.92}
         />
 
@@ -186,7 +186,7 @@ export function LienHeView() {
                       NA Korea – Phân Phối Độc Quyền
                     </h2>
                     <p className="text-xs text-[#666666] leading-relaxed">
-                      Sản phẩm Hồng sâm 6 năm tuổi Kim&apos;s Red Ginseng được nhập khẩu chính ngạch từ Hàn Quốc.
+                      Sản phẩm Hồng sâm 6 năm tuổi Hồng Kim Sâm được nhập khẩu chính ngạch từ Hàn Quốc.
                     </p>
                   </div>
 
@@ -261,7 +261,7 @@ export function LienHeView() {
                   <ShieldCheck className="h-5 w-5 text-[#4B193E] shrink-0" />
                   <div>
                     <span className="font-bold text-[#111111]">CÔNG TY TNHH TM NA KOREA</span>
-                    <span className="text-[#888888] block text-[11px]">MST: 0109946846 • Đại diện thương hiệu Kim&apos;s Red Ginseng</span>
+                    <span className="text-[#888888] block text-[11px]">MST: 0109946846 • Đại diện thương hiệu Hồng Kim Sâm</span>
                   </div>
                 </div>
 
@@ -282,7 +282,7 @@ export function LienHeView() {
                         Gửi Yêu Cầu Thành Công!
                       </h3>
                       <p className="text-sm text-[#666666] max-w-md mx-auto leading-relaxed">
-                        Cảm ơn bạn đã liên hệ. Chuyên viên tư vấn của <strong>Kim&apos;s Red Ginseng</strong> sẽ gọi lại hỗ trợ bạn trong vòng <strong>15–30 phút</strong>.
+                        Cảm ơn bạn đã liên hệ. Chuyên viên tư vấn của <strong>Hồng Kim Sâm</strong> sẽ gọi lại hỗ trợ bạn trong vòng <strong>15–30 phút</strong>.
                       </p>
                     </div>
 

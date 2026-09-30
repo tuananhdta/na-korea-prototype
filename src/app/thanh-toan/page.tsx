@@ -6,7 +6,7 @@ import { ThanhToanView } from "@/components/ThanhToanView";
 export const metadata: Metadata = {
   title: "Thanh Toán Đơn Hàng",
   description:
-    "Trang thanh toán an toàn, bảo mật đơn hàng Hồng sâm Kim's Red Ginseng tại NA Korea.",
+    "Trang thanh toán an toàn, bảo mật đơn hàng Hồng sâm Hồng Kim Sâm tại NA Korea.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/thanh-toan`,
   },

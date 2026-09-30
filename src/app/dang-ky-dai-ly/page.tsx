@@ -4,12 +4,12 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Chính Sách Hợp Tác Đại Lý & Nhà Phân Phối",
-  description: "Chương trình hợp tác đại lý, nhà thuốc, chuỗi thực phẩm chức năng và NPP phân phối độc quyền Hồng sâm 6 năm tuổi Kim's Red Ginseng cùng NA Korea.",
+  description: "Chương trình hợp tác đại lý, nhà thuốc, chuỗi thực phẩm chức năng và NPP phân phối độc quyền Hồng sâm 6 năm tuổi Hồng Kim Sâm cùng NA Korea.",
   keywords: [
     "Đăng ký đại lý",
     "Phân phối hồng sâm",
     "Chính sách sỉ hồng sâm",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
     "NA Korea",
   ],
   alternates: {

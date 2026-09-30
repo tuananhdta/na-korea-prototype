@@ -12,7 +12,7 @@ const testimonials = [
     location: "Khách hàng tại Hà Nội (62 tuổi)",
     product: "Đã mua: Cao Hồng Sâm Cô Đặc 6 Năm Tuổi",
     image: "/images/products/cao-hong-sam-kims-red-ginseng-100g-hu.jpeg",
-    imageAlt: "Cao hồng sâm cô đặc Kim's Red Ginseng",
+    imageAlt: "Cao hồng sâm cô đặc Hồng Kim Sâm",
   },
   {
     quote:
@@ -22,7 +22,7 @@ const testimonials = [
     product: "Đã mua: Nước Hồng Sâm Trẻ Em Kids Growth",
     image:
       "/images/products/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-30-goi-x-60ml.jpeg",
-    imageAlt: "Nước hồng sâm trẻ em Kim's Red Ginseng",
+    imageAlt: "Nước hồng sâm trẻ em Hồng Kim Sâm",
   },
   {
     quote:
@@ -53,7 +53,7 @@ export function TestimonialsSection() {
           </h2>
 
           <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
-            Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Kim&apos;s Red Ginseng
+            Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Hồng Kim Sâm
           </p>
         </div>
 

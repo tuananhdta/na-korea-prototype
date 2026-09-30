@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     "Nhân sâm Goryeo",
     "Nhân sâm Hàn Quốc",
     "Saponin Ginsenoside",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
   ],
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/nhan-sam`,

@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   keywords: [
     "Nghệ nhân Kim Jeong Hwan",
     "Lời chào nghệ nhân",
-    "Kim's Red Ginseng",
+    "Hồng Kim Sâm",
     "Nhân sâm Hàn Quốc",
   ],
   alternates: {
@@ -39,7 +39,7 @@ export default function LoiChaoNgheNhanPage() {
           title="Lời Chào Đầu"
           description="&quot;Hồng sâm Kim luôn giữ vững sự chân thành và bền bỉ trong từng củ nhân sâm gửi gắm đến sức khỏe quý khách hàng.&quot;"
           image="/images/sub02.jpg"
-          imageAlt="Hồng sâm Kim's Red Ginseng"
+          imageAlt="Hồng sâm Hồng Kim Sâm"
           imageOpacity={0.9}
         />
 
@@ -65,7 +65,7 @@ export default function LoiChaoNgheNhanPage() {
                   Tâm Huyết Suốt 50 Năm Của Nghệ Nhân Kim Jeong Hwan
                 </h2>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
-                  Xin chào quý khách hàng đã ghé thăm trang chính thức của Kim&apos;s Red Ginseng Việt Nam. Chúng tôi tin rằng: đất đai không bao giờ lừa dối người nông dân nếu người làm nông dốc hết lòng thành kính với thiên nhiên.
+                  Xin chào quý khách hàng đã ghé thăm trang chính thức của Hồng Kim Sâm Việt Nam. Chúng tôi tin rằng: đất đai không bao giờ lừa dối người nông dân nếu người làm nông dốc hết lòng thành kính với thiên nhiên.
                 </p>
                 <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   Mỗi củ hồng sâm 6 năm tuổi được thu hoạch và chế biến là một cam kết sắt son về chất lượng, sự an toàn và hàm lượng dinh dưỡng cao nhất để bảo vệ sức khỏe cho cả gia đình bạn.

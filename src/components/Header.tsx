@@ -133,7 +133,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             {/* White logo — fades IN when at top of page (transparent) */}
             <Image
               src={BRAND_LOGOS.horizontalWhite}
-              alt="6년근 김정환홍삼 | Kim's Red Ginseng"
+              alt="6년근 김정환홍삼 | Hồng Kim Sâm"
               fill
               sizes="(max-width: 640px) 194px, 208px"
               className={`object-contain object-left transition-opacity duration-400 ease-in-out ${

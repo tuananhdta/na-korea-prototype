@@ -36,9 +36,9 @@ export function TinTucListView() {
           eyebrow="BẢN TIN & SỰ KIỆN"
           showEyebrow={false}
           title="Tin Tức & Hoạt Động Thương Hiệu"
-          description="Cập nhật những dấu mốc vinh danh quốc tế, sự kiện hợp tác chiến lược và kiến thức chăm sóc sức khỏe cùng Kim's Red Ginseng."
+          description="Cập nhật những dấu mốc vinh danh quốc tế, sự kiện hợp tác chiến lược và kiến thức chăm sóc sức khỏe cùng Hồng Kim Sâm."
           image="/images/blog/tin-tuc.jpg"
-          imageAlt="Tin tức Kim's Red Ginseng"
+          imageAlt="Tin tức Hồng Kim Sâm"
           imageOpacity={0.9}
         />
 

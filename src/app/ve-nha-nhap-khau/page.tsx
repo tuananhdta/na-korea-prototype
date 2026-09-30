@@ -5,11 +5,11 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Về Nhà Nhập Khẩu - NA Korea",
-  description: "Công ty TNHH Thương Mại NA Korea – Đơn vị đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Kim's Red Ginseng Punggi tại Việt Nam.",
+  description: "Công ty TNHH Thương Mại NA Korea – Đơn vị đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi tại Việt Nam.",
   keywords: [
     "NA Korea",
     "Nhà nhập khẩu",
-    "Kim's Red Ginseng Việt Nam",
+    "Hồng Kim Sâm Việt Nam",
     "Hồng sâm chính ngạch",
   ],
   alternates: {
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Về Nhà Nhập Khẩu - NA Korea | ${SITE_CONFIG.brandName}`,
-    description: "Đại diện nhập khẩu và phân phối độc quyền Kim's Red Ginseng tại Việt Nam.",
+    description: "Đại diện nhập khẩu và phân phối độc quyền Hồng Kim Sâm tại Việt Nam.",
     url: `${SITE_CONFIG.siteUrl}/ve-nha-nhap-khau`,
     type: "website",
   },

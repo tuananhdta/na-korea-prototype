@@ -39,11 +39,11 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
   const heroContent = isProductCatalog
     ? {
         eyebrow: "BỘ SƯU TẬP & DI SẢN THƯƠNG HIỆU",
-        title: "Catalogue Sản Phẩm & Di Sản Kim's Red Ginseng",
+        title: "Catalogue Sản Phẩm & Di Sản Hồng Kim Sâm",
         description:
           "Trải nghiệm trọn bộ ấn phẩm Catalogue 32 chế phẩm Hồng sâm 6 năm tuổi Punggi Hàn Quốc, khám phá lịch sử 500 năm vùng trồng sâm và bí quyết chế biến gia truyền của nghệ nhân Kim Jeong Hwan.",
         image: "/images/slide_1.jpg",
-        imageAlt: "Catalogue Sản Phẩm Kim's Red Ginseng",
+        imageAlt: "Catalogue Sản Phẩm Hồng Kim Sâm",
       }
     : {
         eyebrow: "TÀI LIỆU Y KHOA & DƯỢC LÝ",
@@ -51,7 +51,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
         description:
           "Tài liệu y khoa & cẩm nang chuyên sâu về 30+ loại Ginsenoside quý hiếm trong Hồng sâm 6 năm tuổi, phân tích cơ chế tăng cường miễn dịch, bồi bổ khí huyết và các nghiên cứu khoa học chuyên sâu.",
         image: "/images/slide_2.jpg",
-        imageAlt: "Cẩm Nang Dược Tính Ginsenoside Kim's Red Ginseng",
+        imageAlt: "Cẩm Nang Dược Tính Ginsenoside Hồng Kim Sâm",
       };
 
   return (
@@ -125,7 +125,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
                 </div>
 
                 <h3 className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug !text-white">
-                  Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Kim&apos;s Red Ginseng?
+                  Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Hồng Kim Sâm?
                 </h3>
                 
                 <p className="text-sm sm:text-base text-[#EEEEEE] leading-relaxed">

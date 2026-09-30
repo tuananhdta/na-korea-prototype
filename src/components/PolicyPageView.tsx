@@ -115,7 +115,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Na Korea - Kim's Red Ginseng Việt Nam",
+      name: "Na Korea - Hồng Kim Sâm Việt Nam",
       logo: {
         "@type": "ImageObject",
         url: `${baseUrl}/images/wholesale/Logo-Na-Korea-01-300x87.png`,
@@ -128,7 +128,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
     "@context": "https://schema.org",
     "@type": ["Organization", "LocalBusiness"],
     name: "Công ty TNHH Thương mại NA Korea",
-    alternateName: "Kim's Red Ginseng Việt Nam",
+    alternateName: "Hồng Kim Sâm Việt Nam",
     url: baseUrl,
     logo: `${baseUrl}/images/wholesale/Logo-Na-Korea-01-300x87.png`,
     telephone: "+84968400141",
@@ -215,7 +215,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
               {policy.title}
             </h1>
             <p className="text-xs sm:text-sm text-white/80 max-w-2xl leading-relaxed">
-              Các điều khoản và quy định minh bạch được ban hành bởi <strong>CÔNG TY TNHH THƯƠNG MẠI NA KOREA</strong> – Đơn vị nhập khẩu & phân phối độc quyền Hồng sâm Kim&apos;s Red Ginseng tại Việt Nam.
+              Các điều khoản và quy định minh bạch được ban hành bởi <strong>CÔNG TY TNHH THƯƠNG MẠI NA KOREA</strong> – Đơn vị nhập khẩu & phân phối độc quyền Hồng sâm Hồng Kim Sâm tại Việt Nam.
             </p>
           </div>
         </div>

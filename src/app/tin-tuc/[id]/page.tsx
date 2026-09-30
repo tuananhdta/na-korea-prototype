@@ -26,14 +26,14 @@ export async function generateMetadata({ params }: TinTucDetailPageProps): Promi
 
   if (!post) {
     return {
-      title: "Bài Viết Không Tồn Tại | Kim's Red Ginseng",
+      title: "Bài Viết Không Tồn Tại | Hồng Kim Sâm",
     };
   }
 
   return {
     title: `${post.seoTitle || post.title}`,
     description: post.seoDescription || post.excerpt,
-    keywords: post.keywords || ["Kim's Red Ginseng", "Hồng sâm Hàn Quốc", "NA Korea"],
+    keywords: post.keywords || ["Hồng Kim Sâm", "Hồng sâm Hàn Quốc", "NA Korea"],
     alternates: {
       canonical: `/tin-tuc/${post.id}`,
     },

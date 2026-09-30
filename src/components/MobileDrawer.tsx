@@ -113,7 +113,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <div className="relative h-9 w-32">
             <Image
               src={BRAND_LOGOS.horizontalWhite}
-              alt="Kim's Red Ginseng"
+              alt="Hồng Kim Sâm"
               fill
               sizes="128px"
               className="object-contain object-left"
