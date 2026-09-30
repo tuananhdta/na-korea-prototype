@@ -203,15 +203,15 @@ export function MetricsSection() {
     <section
       ref={sectionRef}
       aria-label="Tổng quan năng lực & uy tín thương hiệu Hồng Sâm Kim"
-      className="relative overflow-hidden border-y border-[#E8E4DD] bg-[#F5F3EF] py-12 sm:py-16 lg:py-20"
+      className="relative overflow-hidden border-y border-[#E8E4DD] bg-[#F5F3EF] py-12 sm:py-16 lg:py-20 font-sans"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="mb-3 font-figtree text-[11px] sm:text-xs font-bold tracking-[0.06em] uppercase text-[#4B193E]">
+          <div className="mb-3 font-figtree text-[11px] sm:text-xs font-bold tracking-[0.08em] uppercase text-[#4B193E]">
             <span>Năng Lực &amp; Uy Tín Thương Hiệu</span>
           </div>
-          <h2 className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#111111] tracking-[-0.015em] leading-[1.35]">
+          <h2 className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#111111] tracking-[-0.02em] leading-[1.35]">
             Hồng Sâm Kim — Khẳng Định Vị Thế Dẫn Đầu
           </h2>
           <div className="w-14 h-1 bg-[#4B193E] mx-auto my-3.5 rounded-full" />
@@ -247,12 +247,12 @@ export function MetricsSection() {
                     </div>
                   </div>
 
-                  {/* Metric Value */}
+                  {/* Metric Value (Figtree - JungKwanJang Official Numeric Typography) */}
                   <div className="flex items-baseline justify-center gap-1 font-figtree">
-                    <span className="text-4xl font-extrabold leading-none tracking-tight text-[#4B193E] sm:text-[46px]">
+                    <span className="font-figtree text-4xl font-extrabold leading-none tracking-tight text-[#4B193E] sm:text-[46px]">
                       {currentCount}
                     </span>
-                    <span className="text-lg font-bold leading-none text-[#4B193E] sm:text-xl">
+                    <span className="font-figtree text-lg font-bold leading-none text-[#4B193E] sm:text-xl">
                       {metric.suffix}
                     </span>
                   </div>
@@ -260,13 +260,13 @@ export function MetricsSection() {
                   {/* Expandable Accent Divider Line on Hover */}
                   <div className="w-8 h-[2px] bg-[#4B193E]/20 my-3 mx-auto rounded-full transition-all duration-300 group-hover:w-14 group-hover:bg-[#4B193E]" />
 
-                  {/* Title */}
-                  <h3 className="font-sans text-sm sm:text-base font-bold uppercase leading-snug tracking-tight text-[#111111] group-hover:text-[#4B193E] transition-colors">
+                  {/* Title (Pretendard Sans) */}
+                  <h3 className="font-sans text-sm sm:text-base font-bold uppercase leading-snug tracking-[-0.01em] text-[#111111] group-hover:text-[#4B193E] transition-colors">
                     {metric.lines[0]}
                   </h3>
 
-                  {/* Description Subtitle */}
-                  <p className="mt-1 font-sans text-xs sm:text-sm text-[#666666] leading-relaxed max-w-[250px]">
+                  {/* Description Subtitle (Pretendard Sans) */}
+                  <p className="mt-1 font-sans text-xs sm:text-sm font-normal text-[#666666] leading-relaxed max-w-[250px]">
                     {metric.lines.slice(1).join(" ")}
                   </p>
                 </Link>
