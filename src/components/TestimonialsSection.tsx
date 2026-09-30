@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { CircleCheck, Quote, Star } from "lucide-react";
+import { SectionIndicator } from "@/components/SectionIndicator";
 
 const testimonials = [
   {
@@ -40,15 +41,8 @@ export function TestimonialsSection() {
     <section className="border-b border-[#EAE6DF] bg-[#F8F6F2] py-16 font-sans sm:py-20 lg:py-24">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
-          <div
-            aria-hidden="true"
-            className="mb-5 flex items-center justify-center gap-2"
-          >
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
-          </div>
+          {/* Section 5: 4 chấm + 1 thanh ngang */}
+          <SectionIndicator activeIndex={5} total={5} />
 
           <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
             Chứng thực người mua hàng

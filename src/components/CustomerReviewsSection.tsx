@@ -1,6 +1,7 @@
 "use client";
 
 import { Star, CheckCircle2, Quote } from "lucide-react";
+import { SectionIndicator } from "@/components/SectionIndicator";
 
 interface ReviewItem {
   id: string;
@@ -57,15 +58,7 @@ export function CustomerReviewsSection({
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
-          <div
-            aria-hidden="true"
-            className="mb-5 flex items-center justify-center gap-2"
-          >
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
-          </div>
+          <SectionIndicator activeIndex={5} total={5} />
 
           <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
             Chứng thực người mua hàng

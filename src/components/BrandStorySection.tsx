@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { SectionIndicator } from "@/components/SectionIndicator";
 
 export function BrandStorySection() {
   return (
@@ -11,15 +12,8 @@ export function BrandStorySection() {
     >
       <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
         <div className="mx-auto max-w-[1080px] text-center">
-          <div
-            aria-hidden="true"
-            className="mb-5 flex items-center justify-center gap-2"
-          >
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
-          </div>
+          {/* Section 1: 1 thanh ngang + 4 chấm */}
+          <SectionIndicator activeIndex={1} total={5} />
 
           <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
             Từ lời hứa của mẹ thiên nhiên

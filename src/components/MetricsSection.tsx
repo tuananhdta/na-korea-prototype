@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   Sprout,
 } from "lucide-react";
+import { SectionIndicator } from "@/components/SectionIndicator";
 
 interface MetricItem {
   id: string;
@@ -208,15 +209,8 @@ export function MetricsSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
-          <div
-            aria-hidden="true"
-            className="mb-5 flex items-center justify-center gap-2"
-          >
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
-          </div>
+          {/* Section 2: 1 chấm + 1 thanh ngang + 3 chấm */}
+          <SectionIndicator activeIndex={2} total={5} />
 
           <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
             Năng Lực &amp; Uy Tín Thương Hiệu

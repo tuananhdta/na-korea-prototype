@@ -5,6 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { ProductCard } from "@/components/ProductCard";
 import productsData from "@/data/products.json";
 import { Product } from "@/types/product";
+import { SectionIndicator } from "@/components/SectionIndicator";
 
 const featuredProducts = (productsData as Product[]).slice(0, 8);
 
@@ -14,15 +15,8 @@ export function ProductSection() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
-          <div
-            aria-hidden="true"
-            className="mb-5 flex items-center justify-center gap-2"
-          >
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
-            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
-          </div>
+          {/* Section 4: 3 chấm + 1 thanh ngang + 1 chấm */}
+          <SectionIndicator activeIndex={4} total={5} />
 
           <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
             Nghệ nhân Kim Jeong Hwan
