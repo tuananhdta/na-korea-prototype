@@ -137,7 +137,7 @@ export function FloatingContact() {
 
       {/* ─── 2 FLOATING CONTACT STICKERS PINNED TO THE LEFT EDGE ─── */}
       <div
-        className="fixed left-3 sm:left-5 bottom-20 md:bottom-28 z-50 flex flex-col items-start gap-4 select-none animate-in fade-in slide-in-from-left-4 duration-300 pointer-events-auto"
+        className="fixed left-2.5 sm:left-5 bottom-16 md:bottom-24 z-50 flex flex-col items-start gap-3 sm:gap-4 select-none animate-in fade-in slide-in-from-left-4 duration-300 pointer-events-auto"
         role="region"
         aria-label="Kênh liên hệ nhanh"
       >
@@ -148,7 +148,7 @@ export function FloatingContact() {
           className="group relative flex items-center focus:outline-none"
         >
           {/* Circular Button with Shake Animation & Ripple Rings */}
-          <div className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center shrink-0">
+          <div className="relative flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center shrink-0">
             {/* Concentric Ripple Wave Rings */}
             <span className="absolute -inset-1.5 rounded-full bg-[#28CD41]/35 animate-ping pointer-events-none" />
             <span className="absolute -inset-1 rounded-full bg-[#28CD41]/25 animate-pulse pointer-events-none" />
@@ -176,7 +176,7 @@ export function FloatingContact() {
           className="group relative flex items-center focus:outline-none"
         >
           {/* Circular Button with Shake Animation & Ripple Rings */}
-          <div className="relative flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center shrink-0">
+          <div className="relative flex h-11 w-11 sm:h-14 sm:w-14 items-center justify-center shrink-0">
             {/* Concentric Ripple Wave Rings */}
             <span className="absolute -inset-1.5 rounded-full bg-[#0068FF]/35 animate-ping pointer-events-none" />
             <span className="absolute -inset-1 rounded-full bg-[#0068FF]/25 animate-pulse pointer-events-none" />

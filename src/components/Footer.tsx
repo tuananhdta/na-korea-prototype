@@ -293,8 +293,8 @@ export function Footer() {
         <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#4B193E] to-transparent animate-border-beam" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-16 pb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8">
+      <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 sm:pb-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
           {/* ═══ Cột 1: Thương hiệu & Di sản (Col 4) ═══ */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block group" aria-label="Trang chủ Hồng Kim Sâm">

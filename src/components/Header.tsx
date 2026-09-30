@@ -126,8 +126,8 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             href="/"
             className={`relative block shrink-0 transition-all duration-300 hover:scale-[1.02] ${
               isScrolled
-                ? "h-[50px] w-[168px] sm:h-[54px] sm:w-[180px]"
-                : "h-[58px] w-[194px] sm:h-[62.4px] sm:w-[208px]"
+                ? "h-[42px] w-[142px] min-[400px]:h-[48px] min-[400px]:w-[162px] sm:h-[54px] sm:w-[180px]"
+                : "h-[48px] w-[160px] min-[400px]:h-[56px] min-[400px]:w-[188px] sm:h-[62.4px] sm:w-[208px]"
             }`}
           >
             {/* White logo — fades IN when at top of page (transparent) */}
@@ -135,7 +135,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               src={BRAND_LOGOS.horizontalWhite}
               alt="6년근 김정환홍삼 | Hồng Kim Sâm"
               fill
-              sizes="(max-width: 640px) 194px, 208px"
+              sizes="(max-width: 400px) 160px, (max-width: 640px) 188px, 208px"
               className={`object-contain object-left transition-opacity duration-400 ease-in-out ${
                 isOverlayTop ? "opacity-100" : "opacity-0"
               }`}

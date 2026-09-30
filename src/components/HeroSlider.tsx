@@ -174,7 +174,7 @@ export function HeroSlider({ canPlay = true }: HeroSliderProps) {
     <section
       ref={containerRef}
       data-floating-contact-hero
-      className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black text-white select-none"
+      className="relative w-full h-[100dvh] min-h-[500px] sm:min-h-[600px] overflow-hidden bg-black text-white select-none"
     >
       {/* ─── 1. Fullscreen Native HTML5 Local Video ─── */}
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
