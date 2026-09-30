@@ -4,9 +4,11 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import {
   Award,
+  PackageCheck,
   Store,
   Handshake,
   ShieldCheck,
+  Sprout,
   ArrowUpRight,
 } from "lucide-react";
 
@@ -23,12 +25,12 @@ interface MetricItem {
 const METRICS: MetricItem[] = [
   {
     id: "experience",
-    value: 10,
+    value: 50,
     suffix: "+",
     lines: [
-      "Năm kinh nghiệm",
-      "trong lĩnh vực nhập khẩu",
-      "và phát triển thương hiệu",
+      "Năm truyền thống",
+      "canh tác & chế biến",
+      "hồng sâm Punggi",
     ],
     icon: Award,
     href: "/gioi-thieu",
@@ -52,10 +54,10 @@ const METRICS: MetricItem[] = [
     suffix: "+",
     lines: [
       "Đối tác chiến lược",
-      "Hàn Quốc",
+      "& thị trường quốc tế",
     ],
     icon: Handshake,
-    href: "/ve-nha-nhap-khau",
+    href: "/gioi-thieu",
     badge: "Đối Tác",
   },
   {
@@ -63,12 +65,36 @@ const METRICS: MetricItem[] = [
     value: 100,
     suffix: "%",
     lines: [
-      "Sản phẩm chính hãng,",
-      "nguồn gốc rõ ràng",
+      "Sâm Punggi 6 năm tuổi,",
+      "đạt chuẩn quốc tế",
     ],
     icon: ShieldCheck,
     href: "/chung-chi-chat-luong",
     badge: "Cam Kết",
+  },
+  {
+    id: "products",
+    value: 32,
+    suffix: "+",
+    lines: [
+      "Dòng sản phẩm",
+      "Hồng sâm thượng hạng",
+    ],
+    icon: PackageCheck,
+    href: "/san-pham",
+    badge: "Danh Mục",
+  },
+  {
+    id: "ginseng",
+    value: 6,
+    suffix: "năm",
+    lines: [
+      "Hồng sâm Punggi",
+      "tuổi thượng hạng",
+    ],
+    icon: Sprout,
+    href: "/nhan-sam",
+    badge: "Nguồn Gốc",
   },
 ];
 
@@ -82,7 +108,9 @@ const CERTIFICATIONS = [
 export function MetricsSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [isVisible, setIsVisible] = useState(false);
-  const [counts, setCounts] = useState<number[]>([0, 0, 0, 0]);
+  const [counts, setCounts] = useState<number[]>(() =>
+    METRICS.map(() => 0)
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -105,7 +133,15 @@ export function MetricsSection() {
   useEffect(() => {
     if (!isVisible) return;
 
-    const duration = 1800;
+    const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? 0
+      : 1800;
+
+    if (duration === 0) {
+      setCounts(METRICS.map((m) => m.value));
+      return;
+    }
+
     const startTime = performance.now();
 
     const animate = (currentTime: number) => {
@@ -132,8 +168,8 @@ export function MetricsSection() {
   return (
     <section
       ref={sectionRef}
-      aria-label="Tổng quan năng lực & chứng chỉ NA Korea"
-      className="relative py-16 sm:py-24 bg-white border-y border-[#EEEEEE] overflow-hidden"
+      aria-label="Tổng quan năng lực & uy tín thương hiệu Hồng Sâm Kim"
+      className="relative overflow-hidden border-y border-[#E8E4DD] bg-[#F5F3EF] py-16 sm:py-24"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
@@ -142,20 +178,17 @@ export function MetricsSection() {
             <span>Năng Lực & Uy Tín Thương Hiệu</span>
           </div>
           <h2 className="font-sans text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#111111] tracking-[-0.015em] leading-[1.4]">
-            NA Korea — Khẳng Định Vị Thế Dẫn Đầu
+            Hồng Sâm Kim — Khẳng Định Vị Thế Dẫn Đầu
           </h2>
           <div className="w-16 h-1 bg-[#B5222A] mx-auto my-4 rounded-full" />
           <p className="font-sans text-sm sm:text-base text-[#666666] leading-[1.7] tracking-[-0.01em]">
-            Đại diện phân phối chính thức các dòng sản phẩm Hồng sâm 6 năm tuổi Kim&apos;s Red Ginseng thượng hạng từ vùng núi Punggi, Hàn Quốc tại Việt Nam.
+            Thương hiệu Hồng sâm 6 năm tuổi Kim&apos;s Red Ginseng thượng hạng từ vùng núi Punggi, Hàn Quốc — Kế thừa trọn vẹn tinh hoa bí quyết canh tác &amp; chế biến của Nghệ nhân Kim Jeong Hwan.
           </p>
         </div>
 
-        {/* 4 Royal Medallions Row */}
+        {/* Six interactive metric cards */}
         <div className="relative mb-16 sm:mb-20">
-          {/* Connecting Ribbon Line (Desktop) */}
-          <div className="absolute top-20 left-24 right-24 h-[2px] bg-gradient-to-r from-transparent via-[#D4A359]/40 to-transparent pointer-events-none hidden lg:block" />
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-8 justify-items-center">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {METRICS.map((metric, idx) => {
               const IconComponent = metric.icon;
               const currentCount = counts[idx];
@@ -164,59 +197,41 @@ export function MetricsSection() {
                 <Link
                   key={metric.id}
                   href={metric.href}
-                  className="group relative flex flex-col items-center text-center w-full max-w-[220px] focus:outline-none"
                   title={`Click để xem chi tiết: ${metric.lines.join(" ")}`}
+                  style={{ transitionDelay: `${idx * 90}ms` }}
+                  className={`group relative flex min-h-[284px] flex-col items-center rounded-xl border-2 border-[#B5222A]/80 bg-white px-6 pb-7 pt-14 text-center shadow-[0_8px_24px_rgba(40,28,18,0.05)] transition-[opacity,transform,border-color,box-shadow] duration-700 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#B5222A] focus-visible:ring-offset-4 motion-reduce:transition-none motion-reduce:transform-none ${
+                    isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+                  } hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-[0_14px_30px_rgba(181,34,42,0.14)] motion-reduce:translate-y-0 motion-reduce:opacity-100`}
                 >
-                  {/* Royal Dark Medallion Circle */}
-                  <div className="relative w-36 h-36 sm:w-40 sm:h-40 lg:w-44 lg:h-44 rounded-full bg-[#1E0A0D] border-2 border-[#D4A359]/40 group-hover:border-[#D4A359] shadow-xl group-hover:shadow-[0_0_30px_rgba(240,131,31,0.3)] transition-all duration-500 flex flex-col items-center justify-center p-4 overflow-hidden group-hover:-translate-y-2">
-                    
-                    {/* Inner Gold Accent Ring */}
-                    <div className="absolute inset-1.5 rounded-full border border-[#D4A359]/20 group-hover:border-[#D4A359]/50 transition-colors duration-500 pointer-events-none" />
-
-                    {/* Subtle Radial Glow Effect */}
-                    <div className="absolute inset-0 bg-radial from-[#D4A359]/15 via-transparent to-transparent opacity-50 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-
-                    {/* Top Icon Badge in Gold */}
-                    <div className="relative z-10 w-8 h-8 rounded-full bg-[#D4A359]/15 border border-[#D4A359]/30 flex items-center justify-center text-[#D4A359] group-hover:scale-110 transition-transform duration-300 mb-1">
-                      <IconComponent className="w-4 h-4" />
-                    </div>
-
-                    {/* Counter Number (Figtree) */}
-                    <div className="relative z-10 flex items-baseline justify-center gap-0.5">
-                      <span className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-white tracking-tight font-figtree">
-                        {currentCount}
-                      </span>
-                      <span className="text-xl sm:text-2xl font-extrabold text-[#D4A359] font-figtree">
-                        {metric.suffix}
-                      </span>
-                    </div>
-
-                    {/* Category Tag inside Circle bottom */}
-                    <div className="relative z-10 mt-1 px-2.5 py-0.5 rounded-full bg-[#D4A359]/10 border border-[#D4A359]/20 text-[10px] font-bold text-[#D4A359] tracking-widest uppercase font-figtree">
-                      {metric.badge}
-                    </div>
-
-                    {/* Click Arrow Hint Icon */}
-                    <div className="absolute top-2.5 right-2.5 z-20 opacity-0 group-hover:opacity-100 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300 text-[#D4A359] bg-[#D4A359]/20 p-1 rounded-full">
-                      <ArrowUpRight className="w-3.5 h-3.5" />
+                  {/* Circular icon medallion overlapping the card */}
+                  <div className="absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[#B5222A] bg-[#F5F3EF] p-1.5 transition-transform duration-500 group-hover:-translate-y-1 motion-reduce:transition-none">
+                    <div className="flex h-full w-full items-center justify-center rounded-full border border-[#D4A359] bg-[#1E0A0D] text-[#D4A359] shadow-[0_4px_12px_rgba(30,10,13,0.18)]">
+                      <IconComponent className="h-7 w-7" strokeWidth={1.8} aria-hidden="true" />
                     </div>
                   </div>
 
-                  {/* Clean Text Description OUTSIDE the Circle */}
-                  <div className="mt-4 px-2 space-y-1">
-                    <p className="font-sans text-sm sm:text-base font-semibold text-[#111111] leading-[1.45] tracking-[-0.01em] group-hover:text-[#B5222A] transition-colors">
-                      {metric.lines[0]}
-                    </p>
-                    {metric.lines.slice(1).map((line, lineIdx) => (
-                      <p key={lineIdx} className="font-sans text-[13px] sm:text-sm text-[#333333] leading-[1.6] tracking-[-0.01em]">
-                        {line}
-                      </p>
-                    ))}
+                  <div className="flex items-baseline justify-center gap-1 font-figtree">
+                    <span className="text-5xl font-extrabold leading-none tracking-[-0.04em] text-[#B5222A] sm:text-[56px]">
+                      {currentCount}
+                    </span>
+                    <span className="text-xl font-bold leading-none text-[#B5222A] sm:text-2xl">
+                      {metric.suffix}
+                    </span>
+                  </div>
 
-                    <div className="pt-1.5 inline-flex items-center gap-1 font-sans text-[12px] sm:text-[13px] font-semibold text-[#B5222A] leading-[1.5] opacity-80 group-hover:opacity-100 transition-opacity">
-                      <span>Xem chi tiết</span>
-                      <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                    </div>
+                  <h3 className="mt-4 font-sans text-base font-bold uppercase leading-[1.35] tracking-[0.02em] text-[#111111] sm:text-lg">
+                    {metric.lines[0]}
+                  </h3>
+
+                  <p className="mt-2 max-w-[250px] font-sans text-sm leading-6 text-[#666666]">
+                    {metric.lines.slice(1).join(" ")}
+                  </p>
+
+                  <div className="mt-auto flex items-center gap-2 pt-5 font-sans text-xs font-semibold uppercase tracking-[0.04em] text-[#B5222A] transition-[gap] duration-300 group-hover:gap-3">
+                    <span>Xem chi tiết</span>
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#B5222A]/50 transition-colors duration-300 group-hover:bg-[#B5222A] group-hover:text-white">
+                      <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
+                    </span>
                   </div>
                 </Link>
               );

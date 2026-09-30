@@ -179,9 +179,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     aria-expanded={item.subItems ? isHovered : undefined}
                     className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center font-sans text-[14px] leading-[1.15] tracking-[0.02em] transition-all duration-200 xl:px-2.5 ${
                       isHovered || isRouteActive
-                        ? "font-semibold text-[#B5222A]"
+                        ? isTopTransparent
+                          ? "font-semibold text-white drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
+                          : "font-semibold text-[#B5222A] drop-shadow-[0_0_7px_rgba(181,34,42,0.28)]"
                         : isTopTransparent
-                          ? "font-medium text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] hover:text-[#FFF7F7]"
+                          ? "font-medium text-white drop-shadow-[0_1px_3px_rgba(0,0,0,0.85)] hover:text-white hover:drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
                           : "font-medium text-[#111111] hover:text-[#B5222A]"
                     }`}
                   >
@@ -202,11 +204,15 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                       />
                     )}
 
-                    {/* Active / Hover underline indicator bar in BRAND RED */}
+                    {/* Active / Hover underline: white on the overlay header, brand red on light header */}
                     <span
                       aria-hidden="true"
-                      className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full bg-[#B5222A] transition-all duration-300 ${
-                        isHovered || isRouteActive ? "scale-x-100 opacity-100 shadow-[0_0_8px_rgba(181,34,42,0.4)]" : "scale-x-0 opacity-0"
+                      className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full transition-all duration-300 ${
+                        isTopTransparent
+                          ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+                          : "bg-[#B5222A] shadow-[0_0_8px_rgba(181,34,42,0.4)]"
+                      } ${
+                        isHovered || isRouteActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
                       }`}
                     />
                   </Link>
@@ -330,28 +336,37 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                           className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center font-sans text-sm leading-[1.15] tracking-[0.02em] whitespace-nowrap transition-colors duration-200 ${
                             isSubActive
                               ? isTopTransparent
-                                ? "font-semibold text-white drop-shadow-sm"
-                                : "font-semibold text-[#B5222A]"
+                                ? "font-semibold text-white drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
+                                : "font-semibold text-[#B5222A] drop-shadow-[0_0_7px_rgba(181,34,42,0.28)]"
                               : isTopTransparent
-                                ? "font-medium text-white/90 hover:text-white"
-                                : "font-medium text-[#333333] hover:text-[#B5222A]"
+                                ? "font-medium text-white/90 hover:text-white hover:drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
+                                : "font-medium text-[#333333] hover:text-[#B5222A] hover:drop-shadow-[0_0_7px_rgba(181,34,42,0.28)]"
                           }`}
                         >
                           <span className="relative inline-flex items-center gap-1.5 whitespace-nowrap py-1 transition-transform duration-200 group-hover/sub:-translate-y-0.5">
-                            {isSubActive && (
-                              <span className={`h-1.5 w-1.5 rounded-full animate-pulse ${
+                            <span
+                              aria-hidden="true"
+                              className={`h-1.5 w-1.5 shrink-0 rounded-full transition-[opacity,transform] duration-200 ${
                                 isTopTransparent
                                   ? "bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)]"
                                   : "bg-[#B5222A] shadow-[0_0_6px_rgba(181,34,42,0.5)]"
-                              }`} />
-                            )}
+                              } ${
+                                isSubActive
+                                  ? "scale-100 opacity-100 animate-pulse"
+                                  : "scale-75 opacity-0 group-hover/sub:scale-100 group-hover/sub:opacity-100"
+                              }`}
+                            />
                             <span>{sub.title}</span>
                             <span
                               aria-hidden="true"
-                              className={`absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center scale-x-0 rounded-full transition-transform duration-300 ease-out group-hover/sub:scale-x-100 ${
+                              className={`absolute -bottom-0.5 left-0 right-0 h-[2px] origin-center rounded-full transition-[opacity,transform] duration-300 ease-out ${
                                 isTopTransparent
-                                  ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.6)]"
+                                  ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)]"
                                   : "bg-[#B5222A] shadow-[0_0_8px_rgba(181,34,42,0.35)]"
+                              } ${
+                                isSubActive
+                                  ? "scale-x-100 opacity-100"
+                                  : "scale-x-0 opacity-0 group-hover/sub:scale-x-100 group-hover/sub:opacity-100"
                               }`}
                             />
                           </span>
