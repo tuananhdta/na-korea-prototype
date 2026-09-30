@@ -231,7 +231,7 @@ export function SanPhamNguoiLonView() {
               </button>
             </div>
           ) : (
-            <div className="na-stagger-grid grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="na-stagger-grid grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-3 xl:grid-cols-4">
               {adultProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}

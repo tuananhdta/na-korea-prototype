@@ -31,8 +31,8 @@ export function ProductSection() {
           </p>
         </div>
 
-        {/* Product Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7">
+        {/* Product Cards Grid (2 products per row on mobile, 4 on desktop) */}
+        <div className="grid grid-cols-2 gap-3 sm:gap-6 lg:grid-cols-4 md:gap-7">
           {featuredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}
