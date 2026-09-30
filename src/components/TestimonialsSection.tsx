@@ -52,7 +52,7 @@ export function TestimonialsSection() {
             Đánh giá từ khách hàng thực tế
           </h2>
 
-          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-[860px] mx-auto">
+          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
             Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Kim&apos;s Red Ginseng
           </p>
         </div>
@@ -94,7 +94,7 @@ export function TestimonialsSection() {
                   />
                 </div>
 
-                <p className="mt-6 flex-1 font-sans text-[15px] italic leading-7 text-[#35628A]">
+                <p className="mt-6 flex-1 font-sans text-[15px] italic leading-7 text-[#111111]">
                   {testimonial.quote}
                 </p>
 
@@ -107,7 +107,7 @@ export function TestimonialsSection() {
                   <p className="font-sans text-xs leading-5 text-[#777777]">
                     {testimonial.location}
                   </p>
-                  <p className="font-sans text-xs leading-5 text-[#F04438]">
+                  <p className="font-sans text-xs leading-5 text-[#4B193E] font-medium">
                     {testimonial.product}
                   </p>
                 </div>

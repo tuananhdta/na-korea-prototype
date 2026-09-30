@@ -159,7 +159,7 @@ export function PartnerSection() {
             Đối tác của Kim&apos;s Red Ginseng tại Việt Nam &amp; Quốc tế
           </h2>
 
-          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-[860px] mx-auto">
+          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
             Tự hào là thương hiệu Hồng sâm 6 năm tuổi Punggi được tin chọn làm quà tặng ngoại giao và đối tác chiến lược của các tập đoàn, ngân hàng hàng đầu.
           </p>
         </div>

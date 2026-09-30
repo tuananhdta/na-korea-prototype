@@ -68,7 +68,7 @@ export function CustomerReviewsSection({
             {title}
           </h2>
 
-          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-[860px] mx-auto">
+          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
             {subtitle}
           </p>
         </div>

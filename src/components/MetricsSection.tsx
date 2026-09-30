@@ -220,7 +220,7 @@ export function MetricsSection() {
             Hồng Sâm Kim — Khẳng Định Vị Thế Dẫn Đầu
           </h2>
 
-          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-[860px] mx-auto">
+          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
             Thương hiệu Hồng sâm 6 năm tuổi Kim&apos;s Red Ginseng thượng hạng từ vùng núi Punggi, Hàn Quốc — Kế thừa trọn vẹn tinh hoa bí quyết canh tác &amp; chế biến của Nghệ nhân Kim Jeong Hwan.
           </p>
         </div>
