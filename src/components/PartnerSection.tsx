@@ -156,7 +156,7 @@ export function PartnerSection() {
           </p>
 
           <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
-            Đối tác của Hồng Kim Sâm tại Việt Nam &amp; Quốc tế
+            Đối tác của Hồng Sâm Kim tại Việt Nam &amp; Quốc tế
           </h2>
 
           <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">

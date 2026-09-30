@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -9,39 +9,68 @@ import {
   MapPin,
   FileText,
   ChevronRight,
-  ShieldCheck,
   Send,
   CheckCircle2,
 } from "lucide-react";
 import { BRAND_LOGOS } from "@/lib/logos";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
-const usefulLinks = [
+const usefulLinks: Array<{
+  label: ReactNode;
+  href: string;
+}> = [
   {
-    label: "Chính sách bảo mật thông tin cá nhân",
+    label: (
+      <>
+        Chính sách bảo mật{" "}
+        <span className="inline-block">thông tin cá nhân</span>
+      </>
+    ),
     href: "/chinh-sach-bao-mat",
   },
   {
-    label: "Hướng dẫn mua hàng",
+    label: (
+      <>
+        Hướng dẫn <span className="inline-block">mua hàng</span>
+      </>
+    ),
     href: "/huong-dan-mua-hang",
   },
   {
-    label: "Chính sách đổi trả & hoàn tiền",
+    label: (
+      <>
+        Chính sách đổi trả{" "}
+        <span className="inline-block">& hoàn tiền</span>
+      </>
+    ),
     href: "/chinh-sach-doi-tra",
   },
   {
-    label: "Chính sách kiểm hàng",
+    label: (
+      <>
+        Chính sách <span className="inline-block">kiểm hàng</span>
+      </>
+    ),
     href: "/chinh-sach-kiem-hang",
   },
   {
-    label: "Chính sách giao hàng & vận chuyển",
+    label: (
+      <>
+        Chính sách giao hàng{" "}
+        <span className="inline-block">& vận chuyển</span>
+      </>
+    ),
     href: "/chinh-sach-giao-hang",
   },
   {
-    label: "Chính sách thanh toán",
+    label: (
+      <>
+        Chính sách <span className="inline-block">thanh toán</span>
+      </>
+    ),
     href: "/chinh-sach-thanh-toan",
   },
-] as const;
+];
 
 function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" | "zalo" }) {
   if (name === "facebook") {
@@ -194,10 +223,10 @@ function ConsultationForm() {
       />
       <button
         type="submit"
-        className="na-btn-primary animate-shimmer-btn group w-full h-10 text-[13px] sm:text-sm uppercase tracking-[0.03em] font-bold shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98]"
+        className="na-btn-primary animate-shimmer-btn group w-full h-10 px-2.5 sm:px-3 text-[11px] min-[360px]:text-xs sm:text-[13px] lg:text-[11px] xl:text-xs min-[1360px]:text-[13px] uppercase tracking-tight sm:tracking-normal font-bold shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap gap-1.5"
       >
         <span>GỬI YÊU CẦU TƯ VẤN</span>
-        <Send className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
+        <Send className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5" />
       </button>
     </form>
   );
@@ -317,7 +346,7 @@ export function Footer() {
               Thương hiệu Hồng sâm 6 năm tuổi thượng hạng vùng núi Punggi Hàn Quốc, được kiến tạo từ 50 năm tâm huyết và bí quyết gia truyền của nghệ nhân Kim Jeong Hwan.
             </p>
 
-            {/* Certification & Sale Notification Badge */}
+            {/* Sale Notification Badge */}
             <div className="pt-2 flex flex-wrap items-center gap-3">
               <a
                 href="http://online.gov.vn/Home/WebDetails/127493"
@@ -334,11 +363,6 @@ export function Footer() {
                   className="h-10 w-auto object-contain brightness-[1.05]"
                 />
               </a>
-
-                <div className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.08] px-2.5 py-1.5 text-[11px] font-semibold text-[#EEE8E8] shadow-xs">
-                <ShieldCheck className="h-3.5 w-3.5 text-[#D4A359]" />
-                <span>GMP • HACCP • ISO 22000</span>
-              </div>
             </div>
           </div>
 
@@ -417,7 +441,7 @@ export function Footer() {
                       className="group flex items-start gap-1.5 transition-all duration-200 hover:text-white hover:translate-x-1"
                     >
                       <ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#D4A359]/70 transition-transform duration-200 group-hover:text-[#D4A359] group-hover:translate-x-1 mt-0.5" />
-                      <span>{link.label}</span>
+                      <span className="leading-snug">{link.label}</span>
                     </Link>
                   </li>
                 ))}
@@ -427,7 +451,7 @@ export function Footer() {
 
           {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) (Animation #2: Glow & Shimmer) ═══ */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="rounded-2xl border border-[#D4A359]/30 bg-white/[0.08] p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-[#D4A359]/55 hover:bg-white/[0.11] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)] sm:p-5">
+            <div className="rounded-2xl border border-[#D4A359]/30 bg-white/[0.08] p-4 lg:p-3.5 xl:p-5 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-[#D4A359]/55 hover:bg-white/[0.11] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)]">
               <div className="flex items-center gap-2 mb-2">
                 <FileText className="h-4 w-4 text-[#D4A359]" />
                 <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
