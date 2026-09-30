@@ -6,55 +6,88 @@ import { Volume2, VolumeX } from "lucide-react";
 export function HeroSlider() {
   const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
+  const containerRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const userInteractedRef = useRef(false);
 
   useEffect(() => {
     const video = videoRef.current;
-    if (!video) return;
+    const container = containerRef.current;
+    if (!video || !container) return;
 
     video.volume = 1.0;
     video.muted = false;
 
-    // Thử phát video kèm âm thanh trực tiếp
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise
-        .then(() => {
-          setIsMuted(false);
-        })
-        .catch(() => {
-          // Trình duyệt chặn unmuted autoplay theo chính sách bảo mật -> chuyển sang phát câm tạm thời
-          if (videoRef.current) {
-            videoRef.current.muted = true;
-            setIsMuted(true);
-            videoRef.current.play().catch(() => {});
-          }
+    // Cơ chế tự động bật âm thanh khi người dùng có tương tác đầu tiên (nếu ban đầu bị trình duyệt chặn)
+    const handleFirstGesture = () => {
+      if (userInteractedRef.current) return;
+      if (videoRef.current) {
+        videoRef.current.muted = false;
+        setIsMuted(false);
+        if (!videoRef.current.paused) {
+          videoRef.current.play().catch(() => {});
+        }
+      }
+      cleanupGestureListeners();
+    };
 
-          // Tự động bật âm thanh ngay khi người dùng có bất kỳ tương tác đầu tiên nào trên trang
-          const handleFirstGesture = () => {
-            if (userInteractedRef.current) return;
-            if (videoRef.current) {
-              videoRef.current.muted = false;
-              setIsMuted(false);
-              videoRef.current.play().catch(() => {});
+    const cleanupGestureListeners = () => {
+      window.removeEventListener("click", handleFirstGesture);
+      window.removeEventListener("touchstart", handleFirstGesture);
+      window.removeEventListener("keydown", handleFirstGesture);
+      window.removeEventListener("scroll", handleFirstGesture);
+    };
+
+    const setupGestureListeners = () => {
+      window.addEventListener("click", handleFirstGesture, { once: true, passive: true });
+      window.addEventListener("touchstart", handleFirstGesture, { once: true, passive: true });
+      window.addEventListener("keydown", handleFirstGesture, { once: true, passive: true });
+      window.addEventListener("scroll", handleFirstGesture, { once: true, passive: true });
+    };
+
+    // Intersection Observer API: Tự động Tạm dừng khi khuất màn hình và Phát tiếp khi vào tầm nhìn
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (!videoRef.current) return;
+
+          if (entry.isIntersecting) {
+            // Khi Hero nằm trong tầm nhìn -> Tự động phát tiếp
+            const playPromise = videoRef.current.play();
+            if (playPromise !== undefined) {
+              playPromise
+                .then(() => {
+                  if (!userInteractedRef.current && !videoRef.current?.muted) {
+                    setIsMuted(false);
+                  }
+                })
+                .catch(() => {
+                  // Trình duyệt chặn autoplay có tiếng khi chưa tương tác -> tạm thời phát câm
+                  if (videoRef.current) {
+                    videoRef.current.muted = true;
+                    setIsMuted(true);
+                    videoRef.current.play().catch(() => {});
+                    setupGestureListeners();
+                  }
+                });
             }
-            cleanupListeners();
-          };
-
-          const cleanupListeners = () => {
-            window.removeEventListener("click", handleFirstGesture);
-            window.removeEventListener("touchstart", handleFirstGesture);
-            window.removeEventListener("keydown", handleFirstGesture);
-            window.removeEventListener("scroll", handleFirstGesture);
-          };
-
-          window.addEventListener("click", handleFirstGesture, { once: true, passive: true });
-          window.addEventListener("touchstart", handleFirstGesture, { once: true, passive: true });
-          window.addEventListener("keydown", handleFirstGesture, { once: true, passive: true });
-          window.addEventListener("scroll", handleFirstGesture, { once: true, passive: true });
+          } else {
+            // Khi cuộn ra khỏi tầm nhìn -> Tạm dừng video (ngắt âm thanh & giải phóng 100% GPU/CPU)
+            videoRef.current.pause();
+          }
         });
-    }
+      },
+      {
+        threshold: 0.15, // Kích hoạt khi ít nhất 15% diện tích Hero hiển thị trên màn hình
+      }
+    );
+
+    observer.observe(container);
+
+    return () => {
+      observer.disconnect();
+      cleanupGestureListeners();
+    };
   }, []);
 
   const toggleMute = () => {
@@ -85,6 +118,7 @@ export function HeroSlider() {
 
   return (
     <section
+      ref={containerRef}
       data-floating-contact-hero
       className="relative w-full h-screen min-h-[600px] overflow-hidden bg-black text-white select-none"
     >
