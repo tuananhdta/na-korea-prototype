@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Star, CheckCircle2, Quote } from "lucide-react";
 import { SectionIndicator } from "@/components/SectionIndicator";
 
@@ -11,6 +12,8 @@ interface ReviewItem {
   rating: number;
   date: string;
   comment: string;
+  image: string;
+  imageAlt: string;
 }
 
 const REVIEWS_DATA: ReviewItem[] = [
@@ -23,6 +26,8 @@ const REVIEWS_DATA: ReviewItem[] = [
     date: "14/08/2024",
     comment:
       "Tôi dùng cao sâm cô đặc Kim Jeong Hwan mỗi sáng pha nước ấm. Sau 3 tuần thấy ăn ngon miệng hơn, đêm ngủ sâu giấc và sáng dậy người rất khoan khoái, không còn mệt mỏi.",
+    image: "/images/products/cao-hong-sam-kims-red-ginseng-100g-hu.jpeg",
+    imageAlt: "Cao hồng sâm cô đặc Hồng Kim Sâm",
   },
   {
     id: "rev-2",
@@ -33,6 +38,9 @@ const REVIEWS_DATA: ReviewItem[] = [
     date: "02/09/2024",
     comment:
       "Bé 4 tuổi nhà mình trước đây rất biếng ăn và hay ốm vặt khi thời tiết thay đổi. Từ lúc uống sâm trẻ em vị thơm ngọt tự nhiên dễ uống, trộm vía bé ăn ngon và khỏe khoắn hơn hẳn.",
+    image:
+      "/images/products/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-30-goi-x-60ml.jpeg",
+    imageAlt: "Nước hồng sâm trẻ em Hồng Kim Sâm",
   },
   {
     id: "rev-3",
@@ -43,6 +51,9 @@ const REVIEWS_DATA: ReviewItem[] = [
     date: "18/07/2024",
     comment:
       "Dạng gói stick 10ml rất tiện mang đi làm và công tác. Vị sâm đậm đặc tự nhiên, không bị ngọt gắt đường hóa học. Uống 1 gói lúc đầu giờ chiều giúp tỉnh táo tập trung làm việc.",
+    image:
+      "/images/products/tinh-chat-hong-sam-co-dac-balancetime-30-goi-x-10ml.jpeg",
+    imageAlt: "Nước hồng sâm Balance Time dạng stick",
   },
 ];
 
@@ -73,38 +84,52 @@ export function CustomerReviewsSection({
           </p>
         </div>
 
-        {/* Reviews 3-Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Reviews 1-row-per-card on mobile (image left, content right), 3-col on desktop */}
+        <div className="grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3">
           {REVIEWS_DATA.map((rev) => (
-            <div
+            <article
               key={rev.id}
-              className="flex flex-col justify-between rounded-2xl border border-white bg-white p-6 shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1"
+              className="relative flex h-full flex-row lg:flex-col overflow-hidden rounded-2xl border border-white bg-white shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-1"
             >
-              <div>
-                {/* Rating Stars & Quote Icon */}
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center text-amber-400" aria-label={`Đánh giá 5 sao`}>
-                    {[...Array(rev.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
-                    ))}
+              {/* Left on Mobile, Top on Desktop: Image */}
+              <div className="relative w-[115px] min-[400px]:w-[135px] sm:w-[190px] lg:w-full shrink-0 overflow-hidden bg-[#F2EEE8] lg:aspect-[4/3] self-stretch">
+                <Image
+                  src={rev.image}
+                  alt={rev.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 390px, (min-width: 640px) 190px, 135px"
+                  className="object-cover object-center"
+                />
+              </div>
+
+              {/* Right on Mobile, Bottom on Desktop: Review Content */}
+              <div className="flex flex-1 flex-col justify-between p-3 min-[400px]:p-4 sm:p-5 lg:p-6 min-w-0">
+                <div>
+                  {/* Rating Stars & Quote Icon */}
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center text-amber-400" aria-label={`Đánh giá 5 sao`}>
+                      {[...Array(rev.rating)].map((_, i) => (
+                        <Star key={i} className="h-3 w-3 sm:h-3.5 sm:w-3.5 lg:h-4 lg:w-4 fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <Quote className="h-4 w-4 sm:h-5 sm:w-5 text-[#4B193E]/20" />
                   </div>
-                  <Quote className="h-5 w-5 text-[#4B193E]/20" />
+
+                  {/* Comment Text */}
+                  <p className="mt-2 sm:mt-4 text-xs sm:text-sm text-gray-700 leading-snug sm:leading-relaxed italic">
+                    &ldquo;{rev.comment}&rdquo;
+                  </p>
                 </div>
 
-                {/* Comment Text */}
-                <p className="mt-4 text-xs sm:text-sm text-gray-700 leading-relaxed italic">
-                  &ldquo;{rev.comment}&rdquo;
-                </p>
+                <div className="mt-3 sm:mt-6 border-t border-gray-100 pt-2.5 sm:pt-4">
+                  <p className="font-bold text-xs sm:text-sm text-[#111111]">{rev.author}</p>
+                  <p className="text-[10px] sm:text-[11px] text-gray-500">{rev.role}</p>
+                  <p className="mt-0.5 text-[10px] sm:text-[11px] font-medium text-[#4B193E] truncate">
+                    Đã mua: {rev.productName}
+                  </p>
+                </div>
               </div>
-
-              <div className="mt-6 border-t border-gray-100 pt-4">
-                <p className="font-bold text-xs sm:text-sm text-[#111111]">{rev.author}</p>
-                <p className="text-[11px] text-gray-500">{rev.role}</p>
-                <p className="mt-1 text-[11px] font-medium text-[#4B193E]">
-                  Đã mua: {rev.productName}
-                </p>
-              </div>
-            </div>
+            </article>
           ))}
         </div>
       </div>

@@ -57,59 +57,65 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-5 lg:grid-cols-3 lg:gap-6">
+        <div className="mt-8 sm:mt-10 grid grid-cols-1 gap-4 sm:gap-6 lg:grid-cols-3">
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
-              className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E8E4DD] bg-white shadow-[0_8px_24px_rgba(40,28,18,0.05)]"
+              className="relative flex h-full flex-row lg:flex-col overflow-hidden rounded-2xl border border-[#E8E4DD] bg-white shadow-[0_8px_24px_rgba(40,28,18,0.05)] transition-all duration-300 hover:border-[#4B193E]/40 hover:shadow-md"
             >
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F2EEE8]">
+              {/* Left on Mobile, Top on Desktop: Image */}
+              <div className="relative w-[115px] min-[400px]:w-[135px] sm:w-[190px] lg:w-full shrink-0 overflow-hidden bg-[#F2EEE8] lg:aspect-[4/3] self-stretch">
                 <Image
                   src={testimonial.image}
                   alt={testimonial.imageAlt}
                   fill
-                  sizes="(min-width: 1024px) 390px, (min-width: 640px) 600px, 100vw"
-                  className="object-cover"
+                  sizes="(min-width: 1024px) 390px, (min-width: 640px) 190px, 135px"
+                  className="object-cover object-center"
                 />
               </div>
 
-              <div className="flex flex-1 flex-col p-6 sm:p-7">
-                <div className="flex items-center justify-between">
-                  <div
-                    className="flex gap-0.5 text-[#D4A359]"
-                    aria-label="Đánh giá 5 trên 5 sao"
-                  >
-                    {Array.from({ length: 5 }).map((_, index) => (
-                      <Star
-                        key={index}
-                        className="h-4 w-4 fill-current"
-                        aria-hidden="true"
-                      />
-                    ))}
+              {/* Right on Mobile, Bottom on Desktop: Review Content */}
+              <div className="flex flex-1 flex-col justify-between p-3 min-[400px]:p-4 sm:p-5 lg:p-7 min-w-0">
+                <div>
+                  <div className="flex items-center justify-between">
+                    <div
+                      className="flex gap-0.5 text-[#D4A359]"
+                      aria-label="Đánh giá 5 trên 5 sao"
+                    >
+                      {Array.from({ length: 5 }).map((_, index) => (
+                        <Star
+                          key={index}
+                          className="h-2.5 w-2.5 min-[400px]:h-3 min-[400px]:w-3 sm:h-3.5 sm:w-3.5 lg:h-4 lg:w-4 fill-current"
+                          aria-hidden="true"
+                        />
+                      ))}
+                    </div>
+                    <Quote
+                      className="h-4 w-4 min-[400px]:h-5 min-[400px]:w-5 lg:h-7 lg:w-7 text-[#F3CFC8]"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
                   </div>
-                  <Quote
-                    className="h-7 w-7 text-[#F3CFC8]"
-                    strokeWidth={1.5}
-                    aria-hidden="true"
-                  />
+
+                  <p className="mt-1.5 min-[400px]:mt-2.5 sm:mt-4 lg:mt-6 font-sans text-xs sm:text-sm lg:text-[15px] italic leading-snug sm:leading-relaxed lg:leading-7 text-[#111111]">
+                    {testimonial.quote}
+                  </p>
                 </div>
 
-                <p className="mt-6 flex-1 font-sans text-[15px] italic leading-7 text-[#111111]">
-                  {testimonial.quote}
-                </p>
+                <div>
+                  <div className="my-2 sm:my-3 lg:my-6 h-px w-full bg-[#ECE8E2]" />
 
-                <div className="my-6 h-px w-full bg-[#ECE8E2]" />
-
-                <div className="min-w-0">
-                  <h3 className="font-sans text-base font-semibold leading-6 text-[#111111]">
-                    {testimonial.name}
-                  </h3>
-                  <p className="font-sans text-xs leading-5 text-[#777777]">
-                    {testimonial.location}
-                  </p>
-                  <p className="font-sans text-xs leading-5 text-[#4B193E] font-medium">
-                    {testimonial.product}
-                  </p>
+                  <div className="min-w-0">
+                    <h3 className="font-sans text-xs sm:text-sm lg:text-base font-semibold leading-tight sm:leading-6 text-[#111111]">
+                      {testimonial.name}
+                    </h3>
+                    <p className="font-sans text-[10px] sm:text-xs leading-tight sm:leading-5 text-[#777777] mt-0.5">
+                      {testimonial.location}
+                    </p>
+                    <p className="font-sans text-[10px] sm:text-xs leading-tight sm:leading-5 text-[#4B193E] font-medium truncate mt-0.5">
+                      {testimonial.product}
+                    </p>
+                  </div>
                 </div>
               </div>
             </article>
