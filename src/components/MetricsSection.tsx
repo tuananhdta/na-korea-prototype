@@ -225,9 +225,9 @@ export function MetricsSection() {
           </p>
         </div>
 
-        {/* Six clean luxury centered metric cards */}
+        {/* Six clean luxury centered metric cards (2 cards per row on mobile, 3 on desktop) */}
         <div className="relative">
-          <div className="grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
             {METRICS.map((metric, idx) => {
               const IconComponent = metric.icon;
               const currentCount = counts[idx];
@@ -239,39 +239,39 @@ export function MetricsSection() {
                   href={metric.href}
                   title={`Xem thông tin: ${metric.lines.join(" ")}`}
                   style={{ transitionDelay: `${idx * 80}ms` }}
-                  className={`group relative flex flex-col items-center justify-center rounded-2xl border border-[#EEEEEE] bg-white p-6 sm:p-7 text-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B193E] focus-visible:ring-offset-2 ${
+                  className={`group relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl border border-[#EEEEEE] bg-white p-3.5 sm:p-6 md:p-7 text-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B193E] focus-visible:ring-offset-2 ${
                     isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
                   } hover:-translate-y-1.5 hover:border-[#4B193E]/40 hover:shadow-[0_12px_28px_rgba(75,25,62,0.12)]`}
                 >
                   {/* Top: Themed Colorful Icon with Micro-Interaction Animation */}
-                  <div className="mb-3.5 flex items-center justify-center">
+                  <div className="mb-2 sm:mb-3.5 flex items-center justify-center">
                     <div
-                      className={`flex h-12 w-12 sm:h-13 sm:w-13 items-center justify-center rounded-2xl border ${iconBg} ${iconBorder} ${iconColor} ${glowShadow} transition-all duration-300 group-hover:scale-112 group-hover:rotate-6 shadow-xs`}
+                      className={`flex h-10 w-10 sm:h-12 sm:w-13 items-center justify-center rounded-xl sm:rounded-2xl border ${iconBg} ${iconBorder} ${iconColor} ${glowShadow} transition-all duration-300 group-hover:scale-112 group-hover:rotate-6 shadow-xs`}
                     >
-                      <IconComponent className="h-6 w-6 stroke-[2]" aria-hidden="true" />
+                      <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2]" aria-hidden="true" />
                     </div>
                   </div>
 
                   {/* Metric Value (Figtree - JungKwanJang Official Numeric Typography) */}
-                  <div className="flex items-baseline justify-center gap-1 font-figtree">
-                    <span className="font-figtree text-4xl font-extrabold leading-none tracking-tight text-[#4B193E] sm:text-[46px]">
+                  <div className="flex items-baseline justify-center gap-0.5 sm:gap-1 font-figtree">
+                    <span className="font-figtree text-2xl sm:text-4xl lg:text-[46px] font-extrabold leading-none tracking-tight text-[#4B193E]">
                       {currentCount}
                     </span>
-                    <span className="font-figtree text-lg font-bold leading-none text-[#4B193E] sm:text-xl">
+                    <span className="font-figtree text-sm sm:text-lg lg:text-xl font-bold leading-none text-[#4B193E]">
                       {metric.suffix}
                     </span>
                   </div>
 
                   {/* Expandable Accent Divider Line on Hover */}
-                  <div className="w-8 h-[2px] bg-[#4B193E]/20 my-3 mx-auto rounded-full transition-all duration-300 group-hover:w-14 group-hover:bg-[#4B193E]" />
+                  <div className="w-6 sm:w-8 h-[2px] bg-[#4B193E]/20 my-2 sm:my-3 mx-auto rounded-full transition-all duration-300 group-hover:w-14 group-hover:bg-[#4B193E]" />
 
                   {/* Title (Pretendard Sans) */}
-                  <h3 className="font-sans text-sm sm:text-base font-bold uppercase leading-snug tracking-[-0.01em] text-[#111111] group-hover:text-[#4B193E] transition-colors">
+                  <h3 className="font-sans text-xs sm:text-sm md:text-base font-bold uppercase leading-snug tracking-[-0.01em] text-[#111111] group-hover:text-[#4B193E] transition-colors">
                     {metric.lines[0]}
                   </h3>
 
                   {/* Description Subtitle (Pretendard Sans) */}
-                  <p className="mt-1 font-sans text-xs sm:text-sm font-normal text-[#666666] leading-relaxed max-w-[250px]">
+                  <p className="mt-1 font-sans text-[11px] sm:text-xs md:text-sm font-normal text-[#111111] leading-snug sm:leading-relaxed max-w-[250px]">
                     {metric.lines.slice(1).join(" ")}
                   </p>
                 </Link>
