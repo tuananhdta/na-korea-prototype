@@ -92,7 +92,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
         >
           <SocialIcon name="facebook" />
         </a>
@@ -103,7 +103,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
         >
           <SocialIcon name="instagram" />
         </a>
@@ -114,7 +114,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Tiktok"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
         >
           <SocialIcon name="tiktok" />
         </a>
@@ -125,7 +125,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Zalo"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
         >
           <SocialIcon name="zalo" />
         </a>
@@ -166,7 +166,7 @@ function ConsultationForm() {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         aria-label="Họ và tên"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
       />
       <div className="relative">
         <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/15 pr-2.5 text-xs text-gray-300">
@@ -180,7 +180,7 @@ function ConsultationForm() {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           aria-label="Số điện thoại"
-          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-xs text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
         />
       </div>
       <input
@@ -190,7 +190,7 @@ function ConsultationForm() {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         aria-label="Lời nhắn"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-gray-400 outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
       />
       <button
         type="submit"
@@ -271,7 +271,7 @@ const footerJsonLd = {
 
 export function Footer() {
   return (
-    <footer className="relative bg-[#1E0A0D] font-sans text-white overflow-hidden border-t border-[#B5222A]/25">
+    <footer className="relative overflow-hidden border-t border-[#B5222A]/35 bg-[#1E0A0D] font-sans text-white">
       {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
       <script
         type="application/ld+json"
@@ -281,7 +281,7 @@ export function Footer() {
       {/* Subtle Luxury Radial Texture */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.04]"
+        className="pointer-events-none absolute inset-0 opacity-[0.025]"
         style={{
           backgroundImage: `radial-gradient(#FFF 1px, transparent 1px)`,
           backgroundSize: "28px 28px",
@@ -313,7 +313,7 @@ export function Footer() {
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 
-            <p className="text-xs sm:text-sm text-gray-300 leading-relaxed max-w-sm">
+            <p className="max-w-sm text-xs leading-relaxed text-[#D6D0D0] sm:text-sm">
               Thương hiệu Hồng sâm 6 năm tuổi thượng hạng vùng núi Punggi Hàn Quốc, được kiến tạo từ 50 năm tâm huyết và bí quyết gia truyền của nghệ nhân Kim Jeong Hwan.
             </p>
 
@@ -335,7 +335,7 @@ export function Footer() {
                 />
               </a>
 
-              <div className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 text-[11px] font-semibold text-gray-200 shadow-xs">
+                <div className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/[0.08] px-2.5 py-1.5 text-[11px] font-semibold text-[#EEE8E8] shadow-xs">
                 <ShieldCheck className="h-3.5 w-3.5 text-[#D4A359]" />
                 <span>GMP • HACCP • ISO 22000</span>
               </div>
@@ -350,7 +350,7 @@ export function Footer() {
               </h3>
             </div>
 
-            <div className="space-y-3 text-xs leading-relaxed text-gray-300">
+            <div className="space-y-3 text-xs leading-relaxed text-[#D6D0D0]">
               <a
                 href="https://nakorea.vn/"
                 target="_blank"
@@ -372,25 +372,25 @@ export function Footer() {
                 <p className="font-bold text-white uppercase text-[13px]">
                   CÔNG TY TNHH THƯƠNG MẠI NA KOREA
                 </p>
-                <p className="text-gray-400 mt-0.5 text-[11px]">
+                <p className="mt-0.5 text-[11px] text-[#B7AEB0]">
                   GPĐKKD/MST: 0109946846 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp
                 </p>
               </div>
 
               <address className="not-italic space-y-2.5 pt-1">
-                <div className="flex items-start gap-2 text-gray-300">
+                <div className="flex items-start gap-2 text-[#D6D0D0]">
                   <MapPin className="h-4 w-4 shrink-0 text-[#D4A359] mt-0.5" />
                   <span>LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-gray-300">
+                <div className="flex items-center gap-2 text-[#D6D0D0]">
                   <Phone className="h-4 w-4 shrink-0 text-[#D4A359]" />
                   <a href="tel:0903409939" className="hover:text-white transition-colors">
                     090.340.9939
                   </a>
                 </div>
 
-                <div className="flex items-center gap-2 text-gray-300">
+                <div className="flex items-center gap-2 text-[#D6D0D0]">
                   <Mail className="h-4 w-4 shrink-0 text-[#D4A359]" />
                   <a href="mailto:contact@nakorea.vn" className="hover:text-white transition-colors">
                     contact@nakorea.vn
@@ -409,7 +409,7 @@ export function Footer() {
             </div>
 
             <nav aria-label="Liên kết chính sách">
-              <ul className="space-y-2.5 text-xs text-gray-300">
+              <ul className="space-y-2.5 text-xs text-[#D6D0D0]">
                 {usefulLinks.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -427,14 +427,14 @@ export function Footer() {
 
           {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) (Animation #2: Glow & Shimmer) ═══ */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="rounded-2xl border border-white/15 bg-white/5 p-4 sm:p-5 backdrop-blur-md shadow-xl transition-all duration-300 hover:border-[#D4A359]/40 hover:bg-white/[0.08] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)]">
+            <div className="rounded-2xl border border-[#D4A359]/30 bg-white/[0.08] p-4 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-[#D4A359]/55 hover:bg-white/[0.11] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)] sm:p-5">
               <div className="flex items-center gap-2 mb-2">
                 <FileText className="h-4 w-4 text-[#D4A359]" />
                 <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
                   Đăng ký nhận tư vấn
                 </h3>
               </div>
-              <p className="text-[11px] text-gray-300 leading-relaxed mb-3.5">
+              <p className="mb-3.5 text-[11px] leading-relaxed text-[#D6D0D0]">
                 Nhận báo giá ưu đãi & tư vấn liệu trình hồng sâm chuyên sâu từ chuyên gia.
               </p>
               <ConsultationForm />
@@ -445,12 +445,12 @@ export function Footer() {
 
       {/* ═══ Dải đáy: Copyright & Social Links ═══ */}
       <div className="border-t border-[#B5222A]/20 bg-[#181818]/90 py-4 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 sm:flex-row sm:items-center sm:justify-between text-xs text-gray-400">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 text-xs text-[#BEB5B7] sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 NA Korea - Kim&apos;s Red Ginseng Vietnam. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
-            <span className="text-gray-400 text-[11px] hidden md:inline">Kết nối với chúng tôi:</span>
+            <span className="hidden text-[11px] text-[#BEB5B7] md:inline">Kết nối với chúng tôi:</span>
             <SocialLinks />
           </div>
         </div>

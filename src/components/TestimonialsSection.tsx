@@ -59,44 +59,44 @@ export function TestimonialsSection() {
           {testimonials.map((testimonial) => (
             <article
               key={testimonial.name}
-              className="relative flex h-full flex-col rounded-2xl border border-[#E8E4DD] bg-white p-6 shadow-[0_8px_24px_rgba(40,28,18,0.05)] sm:p-7"
+              className="relative flex h-full flex-col overflow-hidden rounded-2xl border border-[#E8E4DD] bg-white shadow-[0_8px_24px_rgba(40,28,18,0.05)]"
             >
-              <div className="flex items-center justify-between">
-                <div
-                  className="flex gap-0.5 text-[#F5AA00]"
-                  aria-label="Đánh giá 5 trên 5 sao"
-                >
-                  {Array.from({ length: 5 }).map((_, index) => (
-                    <Star
-                      key={index}
-                      className="h-4 w-4 fill-current"
-                      aria-hidden="true"
-                    />
-                  ))}
-                </div>
-                <Quote
-                  className="h-7 w-7 text-[#F3CFC8]"
-                  strokeWidth={1.5}
-                  aria-hidden="true"
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[#F2EEE8]">
+                <Image
+                  src={testimonial.image}
+                  alt={testimonial.imageAlt}
+                  fill
+                  sizes="(min-width: 1024px) 390px, (min-width: 640px) 600px, 100vw"
+                  className="object-cover"
                 />
               </div>
 
-              <p className="mt-6 flex-1 font-sans text-[15px] italic leading-7 text-[#35628A]">
-                {testimonial.quote}
-              </p>
-
-              <div className="my-6 h-px w-full bg-[#ECE8E2]" />
-
-              <div className="flex items-end gap-4">
-                <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg border border-[#EEE8DF] bg-[#F7F4EF]">
-                  <Image
-                    src={testimonial.image}
-                    alt={testimonial.imageAlt}
-                    fill
-                    sizes="56px"
-                    className="object-cover"
+              <div className="flex flex-1 flex-col p-6 sm:p-7">
+                <div className="flex items-center justify-between">
+                  <div
+                    className="flex gap-0.5 text-[#D4A359]"
+                    aria-label="Đánh giá 5 trên 5 sao"
+                  >
+                    {Array.from({ length: 5 }).map((_, index) => (
+                      <Star
+                        key={index}
+                        className="h-4 w-4 fill-current"
+                        aria-hidden="true"
+                      />
+                    ))}
+                  </div>
+                  <Quote
+                    className="h-7 w-7 text-[#F3CFC8]"
+                    strokeWidth={1.5}
+                    aria-hidden="true"
                   />
                 </div>
+
+                <p className="mt-6 flex-1 font-sans text-[15px] italic leading-7 text-[#35628A]">
+                  {testimonial.quote}
+                </p>
+
+                <div className="my-6 h-px w-full bg-[#ECE8E2]" />
 
                 <div className="min-w-0">
                   <h3 className="font-sans text-base font-semibold leading-6 text-[#111111]">
