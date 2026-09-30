@@ -1,8 +1,16 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { CircleCheck, Quote, Star } from "lucide-react";
+import { Quote, Star, X, ZoomIn } from "lucide-react";
 import { SectionIndicator } from "@/components/SectionIndicator";
+
+interface ModalImageInfo {
+  src: string;
+  alt: string;
+  author: string;
+  product: string;
+}
 
 const testimonials = [
   {
@@ -37,6 +45,27 @@ const testimonials = [
 ];
 
 export function TestimonialsSection() {
+  const [selectedImage, setSelectedImage] = useState<ModalImageInfo | null>(null);
+
+  // Lock body scroll and add Escape key listener when lightbox is active
+  useEffect(() => {
+    if (selectedImage) {
+      document.body.style.overflow = "hidden";
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === "Escape") {
+          setSelectedImage(null);
+        }
+      };
+      window.addEventListener("keydown", handleKeyDown);
+      return () => {
+        document.body.style.overflow = "";
+        window.removeEventListener("keydown", handleKeyDown);
+      };
+    } else {
+      document.body.style.overflow = "";
+    }
+  }, [selectedImage]);
+
   return (
     <section className="border-b border-[#EAE6DF] bg-[#F8F6F2] py-16 font-sans sm:py-20 lg:py-24">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
@@ -63,16 +92,36 @@ export function TestimonialsSection() {
               key={testimonial.name}
               className="relative flex h-full flex-row lg:flex-col overflow-hidden rounded-2xl border border-[#E8E4DD] bg-white shadow-[0_8px_24px_rgba(40,28,18,0.05)] transition-all duration-300 hover:border-[#4B193E]/40 hover:shadow-md"
             >
-              {/* Left on Mobile, Top on Desktop: Image */}
-              <div className="relative w-[115px] min-[400px]:w-[135px] sm:w-[190px] lg:w-full shrink-0 overflow-hidden bg-[#F2EEE8] lg:aspect-[4/3] self-stretch">
+              {/* Left on Mobile, Top on Desktop: Clickable Image with Zoom Trigger */}
+              <button
+                type="button"
+                onClick={() =>
+                  setSelectedImage({
+                    src: testimonial.image,
+                    alt: testimonial.imageAlt,
+                    author: testimonial.name,
+                    product: testimonial.product,
+                  })
+                }
+                className="group/img relative w-[115px] min-[400px]:w-[135px] sm:w-[190px] lg:w-full shrink-0 overflow-hidden bg-[#F2EEE8] lg:aspect-[4/3] self-stretch cursor-zoom-in text-left focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B193E]"
+                aria-label={`Xem ảnh lớn: ${testimonial.imageAlt}`}
+                title="Nhấn để phóng to ảnh"
+              >
                 <Image
                   src={testimonial.image}
                   alt={testimonial.imageAlt}
                   fill
                   sizes="(min-width: 1024px) 390px, (min-width: 640px) 190px, 135px"
-                  className="object-cover object-center"
+                  className="object-cover object-center transition-transform duration-500 ease-out group-hover/img:scale-108"
                 />
-              </div>
+
+                {/* Hover overlay with zoom icon */}
+                <div className="absolute inset-0 bg-black/25 opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black/60 text-white backdrop-blur-xs shadow-md">
+                    <ZoomIn className="h-4 w-4" />
+                  </div>
+                </div>
+              </button>
 
               {/* Right on Mobile, Bottom on Desktop: Review Content */}
               <div className="flex flex-1 flex-col justify-between p-3 min-[400px]:p-4 sm:p-5 lg:p-7 min-w-0">
@@ -122,6 +171,55 @@ export function TestimonialsSection() {
           ))}
         </div>
       </div>
+
+      {/* ═══ FULLSCREEN IMAGE LIGHTBOX MODAL (ZOOM TOÀN MÀN HÌNH) ═══ */}
+      {selectedImage && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Xem ảnh phóng to"
+          className="fixed inset-0 z-[99999] flex flex-col items-center justify-center bg-black/92 p-4 sm:p-8 backdrop-blur-md animate-in fade-in duration-200 select-none"
+          onClick={() => setSelectedImage(null)}
+        >
+          {/* Large 'X' Close Button at Top-Right */}
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              setSelectedImage(null);
+            }}
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 z-50 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-full bg-white/20 text-white hover:bg-white/35 hover:scale-110 active:scale-95 transition-all duration-200 cursor-pointer shadow-2xl border border-white/30 backdrop-blur-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            aria-label="Đóng xem ảnh"
+            title="Đóng (Phím Esc)"
+          >
+            <X className="h-7 w-7 sm:h-8 sm:w-8 text-white stroke-[2.5]" />
+          </button>
+
+          {/* Centered High-Res Image Container */}
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="relative flex flex-col items-center justify-center max-w-4xl max-h-[85vh] w-full h-full"
+          >
+            <div className="relative w-full h-[65vh] sm:h-[75vh]">
+              <Image
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                fill
+                sizes="95vw"
+                className="object-contain animate-in zoom-in-95 duration-200 drop-shadow-2xl"
+                priority
+              />
+            </div>
+
+            {/* Bottom Caption Pill */}
+            <div className="mt-3 inline-flex items-center gap-2 rounded-full border border-white/20 bg-black/60 px-4 py-2 text-xs sm:text-sm text-white/95 backdrop-blur-md shadow-lg">
+              <span className="font-bold text-[#D4A359]">{selectedImage.author}</span>
+              <span className="text-white/40">•</span>
+              <span className="text-white/90">{selectedImage.product}</span>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
