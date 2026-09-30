@@ -100,7 +100,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
   const isTopTransparent = isOverlayTop;
   const headerBgClass = isOverlayTop
     ? "bg-transparent shadow-none border-b border-transparent"
-    : "bg-white/95 backdrop-blur-md shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#F0EDE8]";
+    : "bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#EEEEEE]";
 
   return (
     <>
@@ -115,7 +115,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
 
       <header
         onMouseLeave={() => setActiveMenu(null)}
-        className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#111111] transition-[background-color,box-shadow,backdrop-filter] duration-400 ease-in-out ${headerBgClass}`}
+        className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#111111] transition-[background-color,box-shadow] duration-300 ease-in-out ${headerBgClass}`}
       >
         <div
           className={`mx-auto flex max-w-[1240px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
@@ -289,7 +289,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               className={`absolute inset-x-0 top-full hidden transition-[opacity,transform,visibility,background-color,border-color] duration-200 lg:block ${
                 isTopTransparent
                   ? "border-t border-white/10 bg-black/30 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.2)] text-white"
-                  : "border-t border-[#F0EDE8] bg-white/98 backdrop-blur-md shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#111111]"
+                  : "border-t border-[#EEEEEE] bg-white shadow-[0_16px_32px_rgba(0,0,0,0.08)] text-[#111111]"
               } ${
                 isItemActive
                   ? "visible translate-y-0 opacity-100"

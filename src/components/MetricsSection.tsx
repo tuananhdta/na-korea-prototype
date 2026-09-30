@@ -9,7 +9,6 @@ import {
   Handshake,
   ShieldCheck,
   Sprout,
-  ArrowUpRight,
 } from "lucide-react";
 
 interface MetricItem {
@@ -20,6 +19,12 @@ interface MetricItem {
   icon: React.ElementType;
   href: string;
   badge: string;
+  colorScheme: {
+    iconColor: string;
+    iconBg: string;
+    iconBorder: string;
+    glowShadow: string;
+  };
 }
 
 const METRICS: MetricItem[] = [
@@ -35,6 +40,12 @@ const METRICS: MetricItem[] = [
     icon: Award,
     href: "/gioi-thieu",
     badge: "Kinh Nghiệm",
+    colorScheme: {
+      iconColor: "text-[#D97706]",
+      iconBg: "bg-amber-50",
+      iconBorder: "border-amber-200/90",
+      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(217,119,6,0.25)]",
+    },
   },
   {
     id: "distributors",
@@ -47,6 +58,12 @@ const METRICS: MetricItem[] = [
     icon: Store,
     href: "/dang-ky-dai-ly",
     badge: "Hệ Thống",
+    colorScheme: {
+      iconColor: "text-[#0284C7]",
+      iconBg: "bg-sky-50",
+      iconBorder: "border-sky-200/90",
+      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(2,132,199,0.25)]",
+    },
   },
   {
     id: "partners",
@@ -59,6 +76,12 @@ const METRICS: MetricItem[] = [
     icon: Handshake,
     href: "/gioi-thieu",
     badge: "Đối Tác",
+    colorScheme: {
+      iconColor: "text-[#4B193E]",
+      iconBg: "bg-[#4B193E]/5",
+      iconBorder: "border-[#4B193E]/25",
+      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(75,25,62,0.25)]",
+    },
   },
   {
     id: "quality",
@@ -71,6 +94,12 @@ const METRICS: MetricItem[] = [
     icon: ShieldCheck,
     href: "/chung-chi-chat-luong",
     badge: "Cam Kết",
+    colorScheme: {
+      iconColor: "text-[#16A34A]",
+      iconBg: "bg-emerald-50",
+      iconBorder: "border-emerald-200/90",
+      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(22,163,74,0.25)]",
+    },
   },
   {
     id: "products",
@@ -83,6 +112,12 @@ const METRICS: MetricItem[] = [
     icon: PackageCheck,
     href: "/san-pham",
     badge: "Danh Mục",
+    colorScheme: {
+      iconColor: "text-[#EA580C]",
+      iconBg: "bg-orange-50",
+      iconBorder: "border-orange-200/90",
+      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(234,88,12,0.25)]",
+    },
   },
   {
     id: "ginseng",
@@ -95,6 +130,12 @@ const METRICS: MetricItem[] = [
     icon: Sprout,
     href: "/nhan-sam",
     badge: "Nguồn Gốc",
+    colorScheme: {
+      iconColor: "text-[#E11D48]",
+      iconBg: "bg-rose-50",
+      iconBorder: "border-rose-200/90",
+      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(225,29,72,0.25)]",
+    },
   },
 ];
 
@@ -113,7 +154,7 @@ export function MetricsSection() {
           observer.disconnect();
         }
       },
-      { threshold: 0.15 }
+      { threshold: 0.12 }
     );
 
     if (sectionRef.current) {
@@ -162,70 +203,72 @@ export function MetricsSection() {
     <section
       ref={sectionRef}
       aria-label="Tổng quan năng lực & uy tín thương hiệu Hồng Sâm Kim"
-      className="relative overflow-hidden border-y border-[#E8E4DD] bg-[#F5F3EF] py-16 sm:py-24"
+      className="relative overflow-hidden border-y border-[#E8E4DD] bg-[#F5F3EF] py-12 sm:py-16 lg:py-20"
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-20">
-          <div className="mb-4 font-figtree text-[11px] sm:text-xs font-semibold tracking-[0.05em] uppercase text-[#4B193E]">
-            <span>Năng Lực & Uy Tín Thương Hiệu</span>
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
+          <div className="mb-3 font-figtree text-[11px] sm:text-xs font-bold tracking-[0.06em] uppercase text-[#4B193E]">
+            <span>Năng Lực &amp; Uy Tín Thương Hiệu</span>
           </div>
-          <h2 className="font-sans text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#111111] tracking-[-0.015em] leading-[1.4]">
+          <h2 className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-extrabold text-[#111111] tracking-[-0.015em] leading-[1.35]">
             Hồng Sâm Kim — Khẳng Định Vị Thế Dẫn Đầu
           </h2>
-          <div className="w-16 h-1 bg-[#4B193E] mx-auto my-4 rounded-full" />
-          <p className="font-sans text-sm sm:text-base text-[#666666] leading-[1.7] tracking-[-0.01em]">
+          <div className="w-14 h-1 bg-[#4B193E] mx-auto my-3.5 rounded-full" />
+          <p className="font-sans text-xs sm:text-sm md:text-base text-[#666666] leading-[1.65] tracking-[-0.01em]">
             Thương hiệu Hồng sâm 6 năm tuổi Kim&apos;s Red Ginseng thượng hạng từ vùng núi Punggi, Hàn Quốc — Kế thừa trọn vẹn tinh hoa bí quyết canh tác &amp; chế biến của Nghệ nhân Kim Jeong Hwan.
           </p>
         </div>
 
-        {/* Six interactive metric cards */}
+        {/* Six clean luxury centered metric cards */}
         <div className="relative">
-          <div className="grid grid-cols-1 gap-x-6 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {METRICS.map((metric, idx) => {
               const IconComponent = metric.icon;
               const currentCount = counts[idx];
+              const { iconColor, iconBg, iconBorder, glowShadow } = metric.colorScheme;
 
               return (
                 <Link
                   key={metric.id}
                   href={metric.href}
-                  title={`Click để xem chi tiết: ${metric.lines.join(" ")}`}
-                  style={{ transitionDelay: `${idx * 90}ms` }}
-                  className={`group relative flex min-h-[284px] flex-col items-center rounded-xl border-2 border-[#4B193E]/80 bg-white px-6 pb-7 pt-14 text-center shadow-[0_8px_24px_rgba(40,28,18,0.05)] transition-[opacity,transform,border-color,box-shadow] duration-700 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B193E] focus-visible:ring-offset-4 motion-reduce:transition-none motion-reduce:transform-none ${
+                  title={`Xem thông tin: ${metric.lines.join(" ")}`}
+                  style={{ transitionDelay: `${idx * 80}ms` }}
+                  className={`group relative flex flex-col items-center justify-center rounded-2xl border border-[#EEEEEE] bg-white p-6 sm:p-7 text-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B193E] focus-visible:ring-offset-2 ${
                     isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-                  } hover:-translate-y-1 hover:border-[#4B193E] hover:shadow-[0_14px_30px_rgba(75, 25, 62,0.14)] motion-reduce:translate-y-0 motion-reduce:opacity-100`}
+                  } hover:-translate-y-1.5 hover:border-[#4B193E]/40 hover:shadow-[0_12px_28px_rgba(75,25,62,0.12)]`}
                 >
-                  {/* Circular icon medallion overlapping the card */}
-                  <div className="absolute -top-10 flex h-20 w-20 items-center justify-center rounded-full border-2 border-[#4B193E] bg-[#F5F3EF] p-1.5 transition-transform duration-500 group-hover:-translate-y-1 motion-reduce:transition-none">
-                    <div className="flex h-full w-full items-center justify-center rounded-full border border-[#D4A359] bg-[#1E0A0D] text-[#D4A359] shadow-[0_4px_12px_rgba(30,10,13,0.18)]">
-                      <IconComponent className="h-7 w-7" strokeWidth={1.8} aria-hidden="true" />
+                  {/* Top: Themed Colorful Icon with Micro-Interaction Animation */}
+                  <div className="mb-3.5 flex items-center justify-center">
+                    <div
+                      className={`flex h-12 w-12 sm:h-13 sm:w-13 items-center justify-center rounded-2xl border ${iconBg} ${iconBorder} ${iconColor} ${glowShadow} transition-all duration-300 group-hover:scale-112 group-hover:rotate-6 shadow-xs`}
+                    >
+                      <IconComponent className="h-6 w-6 stroke-[2]" aria-hidden="true" />
                     </div>
                   </div>
 
+                  {/* Metric Value */}
                   <div className="flex items-baseline justify-center gap-1 font-figtree">
-                    <span className="text-5xl font-extrabold leading-none tracking-[-0.04em] text-[#4B193E] sm:text-[56px]">
+                    <span className="text-4xl font-extrabold leading-none tracking-tight text-[#4B193E] sm:text-[46px]">
                       {currentCount}
                     </span>
-                    <span className="text-xl font-bold leading-none text-[#4B193E] sm:text-2xl">
+                    <span className="text-lg font-bold leading-none text-[#4B193E] sm:text-xl">
                       {metric.suffix}
                     </span>
                   </div>
 
-                  <h3 className="mt-4 font-sans text-base font-bold uppercase leading-[1.35] tracking-[0.02em] text-[#111111] sm:text-lg">
+                  {/* Expandable Accent Divider Line on Hover */}
+                  <div className="w-8 h-[2px] bg-[#4B193E]/20 my-3 mx-auto rounded-full transition-all duration-300 group-hover:w-14 group-hover:bg-[#4B193E]" />
+
+                  {/* Title */}
+                  <h3 className="font-sans text-sm sm:text-base font-bold uppercase leading-snug tracking-tight text-[#111111] group-hover:text-[#4B193E] transition-colors">
                     {metric.lines[0]}
                   </h3>
 
-                  <p className="mt-2 max-w-[250px] font-sans text-sm leading-6 text-[#666666]">
+                  {/* Description Subtitle */}
+                  <p className="mt-1 font-sans text-xs sm:text-sm text-[#666666] leading-relaxed max-w-[250px]">
                     {metric.lines.slice(1).join(" ")}
                   </p>
-
-                  <div className="mt-auto flex items-center gap-2 pt-5 font-sans text-xs font-semibold uppercase tracking-[0.04em] text-[#4B193E] transition-[gap] duration-300 group-hover:gap-3">
-                    <span>Xem chi tiết</span>
-                    <span className="flex h-6 w-6 items-center justify-center rounded-full border border-[#4B193E]/50 transition-colors duration-300 group-hover:bg-[#4B193E] group-hover:text-white">
-                      <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
-                    </span>
-                  </div>
                 </Link>
               );
             })}
