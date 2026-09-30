@@ -94,11 +94,11 @@ export function BlogDetailView({
       <div className="border-b border-[#EEEEEE] bg-[#F8F8F8] py-3">
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
           <nav className="flex flex-wrap items-center gap-1.5 text-xs text-[#666666]">
-            <Link href="/" className="hover:text-[#B5222A] transition-colors">Trang Chủ</Link>
+            <Link href="/" className="hover:text-[#4B193E] transition-colors">Trang Chủ</Link>
             <ChevronRight className="h-3.5 w-3.5 text-[#A8A196]" />
-            <Link href="/tin-tuc" className="hover:text-[#B5222A] transition-colors">Tin Tức & Hoạt Động</Link>
+            <Link href="/tin-tuc" className="hover:text-[#4B193E] transition-colors">Tin Tức & Hoạt Động</Link>
             <ChevronRight className="h-3.5 w-3.5 text-[#A8A196]" />
-            <span className="font-semibold text-[#B5222A] truncate max-w-[240px] sm:max-w-md md:max-w-lg">
+            <span className="font-semibold text-[#4B193E] truncate max-w-[240px] sm:max-w-md md:max-w-lg">
               {post.title}
             </span>
           </nav>
@@ -117,7 +117,7 @@ export function BlogDetailView({
                 {/* 1. Article Header */}
                 <header className="space-y-4 pb-6 border-b border-[#EEEEEE]">
                   <div>
-                    <span className="inline-block rounded-full bg-[#B5222A]/10 px-3 py-1 text-xs font-semibold text-[#B5222A]">
+                    <span className="inline-block rounded-full bg-[#4B193E]/10 px-3 py-1 text-xs font-semibold text-[#4B193E]">
                       {post.category}
                     </span>
                   </div>
@@ -153,7 +153,7 @@ export function BlogDetailView({
                       <button
                         onClick={handleCopyLink}
                         title="Sao chép liên kết"
-                        className="flex items-center gap-1.5 rounded-full border border-[#EEEEEE] bg-[#F8F8F8] px-3 py-1.5 text-xs font-medium text-[#333333] hover:border-[#B5222A] hover:text-[#B5222A] transition-colors"
+                        className="flex items-center gap-1.5 rounded-full border border-[#EEEEEE] bg-[#F8F8F8] px-3 py-1.5 text-xs font-medium text-[#333333] hover:border-[#4B193E] hover:text-[#4B193E] transition-colors"
                       >
                         {copied ? (
                           <>
@@ -180,7 +180,7 @@ export function BlogDetailView({
                       className="flex w-full items-center justify-between text-left font-sans text-base font-bold text-[#111111]"
                     >
                       <div className="flex items-center gap-2">
-                        <ListOrdered className="h-4 w-4 text-[#B5222A]" />
+                        <ListOrdered className="h-4 w-4 text-[#4B193E]" />
                         <span>Mục lục nội dung</span>
                       </div>
                       <ChevronDown
@@ -196,7 +196,7 @@ export function BlogDetailView({
                           <li key={item.id}>
                             <a
                               href={`#${item.id}`}
-                              className="flex items-start gap-2 text-[#333333] hover:text-[#B5222A] transition-colors leading-snug py-0.5"
+                              className="flex items-start gap-2 text-[#333333] hover:text-[#4B193E] transition-colors leading-snug py-0.5"
                             >
                               <span className="font-semibold text-[#888888] shrink-0 text-xs mt-0.5">
                                 {idx + 1}.
@@ -227,7 +227,7 @@ export function BlogDetailView({
                       <Link
                         key={tag}
                         href="/tin-tuc"
-                        className="rounded-md border border-[#EEEEEE] bg-[#F8F8F8] px-2.5 py-1 text-xs text-[#555555] hover:border-[#B5222A] hover:text-[#B5222A] transition-colors"
+                        className="rounded-md border border-[#EEEEEE] bg-[#F8F8F8] px-2.5 py-1 text-xs text-[#555555] hover:border-[#4B193E] hover:text-[#4B193E] transition-colors"
                       >
                         #{tag}
                       </Link>
@@ -250,7 +250,7 @@ export function BlogDetailView({
                     <h4 className="font-sans text-sm font-bold text-[#111111]">
                       {post.author.name}
                     </h4>
-                    <p className="text-xs text-[#B5222A] font-medium">{post.author.role}</p>
+                    <p className="text-xs text-[#4B193E] font-medium">{post.author.role}</p>
                     <p className="text-xs text-[#666666] leading-relaxed pt-1">
                       {post.author.bio}
                     </p>
@@ -262,13 +262,13 @@ export function BlogDetailView({
                   {prevPost ? (
                     <Link
                       href={`/tin-tuc/${prevPost.id}`}
-                      className="group flex flex-col justify-between rounded-xl border border-[#EEEEEE] p-4 bg-[#F8F8F8] hover:border-[#B5222A] hover:bg-white transition-all"
+                      className="group flex flex-col justify-between rounded-xl border border-[#EEEEEE] p-4 bg-[#F8F8F8] hover:border-[#4B193E] hover:bg-white transition-all"
                     >
-                      <div className="flex items-center gap-1.5 text-xs text-[#888888] font-semibold group-hover:text-[#B5222A]">
+                      <div className="flex items-center gap-1.5 text-xs text-[#888888] font-semibold group-hover:text-[#4B193E]">
                         <ArrowLeft className="h-3.5 w-3.5" />
                         <span>Bài viết trước</span>
                       </div>
-                      <div className="mt-2 text-sm font-bold text-[#111111] group-hover:text-[#B5222A] line-clamp-2 transition-colors">
+                      <div className="mt-2 text-sm font-bold text-[#111111] group-hover:text-[#4B193E] line-clamp-2 transition-colors">
                         {prevPost.title}
                       </div>
                     </Link>
@@ -277,13 +277,13 @@ export function BlogDetailView({
                   {nextPost ? (
                     <Link
                       href={`/tin-tuc/${nextPost.id}`}
-                      className="group flex flex-col justify-between rounded-xl border border-[#EEEEEE] p-4 bg-[#F8F8F8] hover:border-[#B5222A] hover:bg-white transition-all text-left sm:text-right"
+                      className="group flex flex-col justify-between rounded-xl border border-[#EEEEEE] p-4 bg-[#F8F8F8] hover:border-[#4B193E] hover:bg-white transition-all text-left sm:text-right"
                     >
-                      <div className="flex items-center justify-start sm:justify-end gap-1.5 text-xs text-[#888888] font-semibold group-hover:text-[#B5222A]">
+                      <div className="flex items-center justify-start sm:justify-end gap-1.5 text-xs text-[#888888] font-semibold group-hover:text-[#4B193E]">
                         <span>Bài tiếp theo</span>
                         <ArrowRight className="h-3.5 w-3.5" />
                       </div>
-                      <div className="mt-2 text-sm font-bold text-[#111111] group-hover:text-[#B5222A] line-clamp-2 transition-colors">
+                      <div className="mt-2 text-sm font-bold text-[#111111] group-hover:text-[#4B193E] line-clamp-2 transition-colors">
                         {nextPost.title}
                       </div>
                     </Link>
@@ -299,7 +299,7 @@ export function BlogDetailView({
               {/* Widget 1: NA Korea Brand Card */}
               <div className="rounded-2xl border border-[#EEEEEE] bg-white p-6 shadow-xs space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#B5222A]/10 text-[#B5222A]">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#4B193E]/10 text-[#4B193E]">
                     <ShieldCheck className="h-5 w-5" />
                   </div>
                   <div>
@@ -311,7 +311,7 @@ export function BlogDetailView({
                   Đại diện nhập khẩu và phân phối độc quyền thương hiệu Kim&apos;s Red Ginseng (Punggi, Hàn Quốc) tại thị trường Việt Nam.
                 </p>
                 <div className="pt-2 border-t border-[#EEEEEE] flex items-center justify-between text-xs font-semibold">
-                  <Link href="/ve-nha-nhap-khau" className="text-[#B5222A] hover:underline flex items-center gap-1">
+                  <Link href="/ve-nha-nhap-khau" className="text-[#4B193E] hover:underline flex items-center gap-1">
                     <span>Về chúng tôi</span>
                     <ChevronRight className="h-3 w-3" />
                   </Link>
@@ -338,7 +338,7 @@ export function BlogDetailView({
                       <div className="text-[11px] text-[#888888]">
                         {item.formattedDate}
                       </div>
-                      <h4 className="text-xs sm:text-sm font-bold text-[#111111] line-clamp-2 group-hover:text-[#B5222A] transition-colors leading-snug">
+                      <h4 className="text-xs sm:text-sm font-bold text-[#111111] line-clamp-2 group-hover:text-[#4B193E] transition-colors leading-snug">
                         {item.title}
                       </h4>
                     </Link>
@@ -362,7 +362,7 @@ export function BlogDetailView({
               </h2>
               <Link
                 href="/tin-tuc"
-                className="inline-flex items-center gap-1 text-xs font-semibold text-[#B5222A] hover:underline"
+                className="inline-flex items-center gap-1 text-xs font-semibold text-[#4B193E] hover:underline"
               >
                 <span>Xem tất cả tin tức</span>
                 <ChevronRight className="h-3.5 w-3.5" />
@@ -374,7 +374,7 @@ export function BlogDetailView({
                 <Link
                   key={item.id}
                   href={`/tin-tuc/${item.id}`}
-                  className="group flex flex-col overflow-hidden rounded-xl border border-[#EEEEEE] bg-white transition-all hover:border-[#B5222A] hover:shadow-sm"
+                  className="group flex flex-col overflow-hidden rounded-xl border border-[#EEEEEE] bg-white transition-all hover:border-[#4B193E] hover:shadow-sm"
                 >
                   <div className="relative aspect-16/10 w-full overflow-hidden bg-gray-100">
                     <Image
@@ -392,7 +392,7 @@ export function BlogDetailView({
                         <Calendar className="h-3 w-3 text-[#888888]" />
                         <span>{item.formattedDate}</span>
                       </div>
-                      <h3 className="font-sans text-sm font-bold text-[#111111] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
+                      <h3 className="font-sans text-sm font-bold text-[#111111] leading-snug group-hover:text-[#4B193E] transition-colors line-clamp-2">
                         {item.title}
                       </h3>
                       <p className="text-xs text-[#666666] leading-relaxed line-clamp-2">
@@ -400,7 +400,7 @@ export function BlogDetailView({
                       </p>
                     </div>
 
-                    <div className="flex items-center gap-1 text-xs font-semibold text-[#B5222A] pt-2 border-t border-[#EEEEEE]">
+                    <div className="flex items-center gap-1 text-xs font-semibold text-[#4B193E] pt-2 border-t border-[#EEEEEE]">
                       <span>Xem chi tiết</span>
                       <ChevronRight className="h-3.5 w-3.5" />
                     </div>

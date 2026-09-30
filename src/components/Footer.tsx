@@ -92,7 +92,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
         >
           <SocialIcon name="facebook" />
         </a>
@@ -103,7 +103,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
         >
           <SocialIcon name="instagram" />
         </a>
@@ -114,7 +114,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Tiktok"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
         >
           <SocialIcon name="tiktok" />
         </a>
@@ -125,7 +125,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Zalo"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#B5222A] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(181,34,42,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
         >
           <SocialIcon name="zalo" />
         </a>
@@ -271,7 +271,7 @@ const footerJsonLd = {
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-[#B5222A]/35 bg-[#1E0A0D] font-sans text-white">
+    <footer className="relative overflow-hidden border-t border-[#4B193E]/35 bg-[#1E0A0D] font-sans text-white">
       {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
       <script
         type="application/ld+json"
@@ -290,7 +290,7 @@ export function Footer() {
 
       {/* Top Brand Red Accent Line with Infinite Border Beam */}
       <div className="relative h-[2px] w-full overflow-hidden bg-white/10">
-        <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#B5222A] to-transparent animate-border-beam" />
+        <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#4B193E] to-transparent animate-border-beam" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-16 pb-12">
@@ -444,7 +444,7 @@ export function Footer() {
       </div>
 
       {/* ═══ Dải đáy: Copyright & Social Links ═══ */}
-      <div className="border-t border-[#B5222A]/20 bg-[#181818]/90 py-4 px-4 sm:px-6 lg:px-8">
+      <div className="border-t border-[#4B193E]/20 bg-[#181818]/90 py-4 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 text-xs text-[#BEB5B7] sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 NA Korea - Kim&apos;s Red Ginseng Vietnam. All rights reserved.

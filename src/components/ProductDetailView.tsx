@@ -145,7 +145,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
         }`}
       >
         <div className="flex items-center gap-3 rounded-2xl bg-[#181818]/95 text-white px-4 sm:px-5 py-3 shadow-[0_14px_34px_rgba(45,18,37,0.45)] border border-white/20 backdrop-blur-md">
-          <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#B5222A] text-white shadow-inner shrink-0">
+          <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#4B193E] text-white shadow-inner shrink-0">
             <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" />
           </div>
           <div className="min-w-0">
@@ -164,11 +164,11 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
       {/* Breadcrumb Navigation */}
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-3">
         <nav className="flex items-center space-x-1.5 sm:space-x-2 text-xs sm:text-sm text-[#666666]">
-          <Link href="/" className="hover:text-[#B5222A] transition-colors">
+          <Link href="/" className="hover:text-[#4B193E] transition-colors">
             Trang Chủ
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-          <Link href="/san-pham" className="hover:text-[#B5222A] transition-colors">
+          <Link href="/san-pham" className="hover:text-[#4B193E] transition-colors">
             Sản Phẩm
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
@@ -190,7 +190,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               <div className="relative w-full aspect-square max-w-lg mx-auto">
                 <div
                   aria-hidden="true"
-                  className="absolute -inset-1 bg-gradient-to-tr from-[#181818]/10 via-[#D4A359]/10 to-[#B5222A]/10 rounded-2xl blur-lg opacity-80 pointer-events-none"
+                  className="absolute -inset-1 bg-gradient-to-tr from-[#181818]/10 via-[#D4A359]/10 to-[#4B193E]/10 rounded-2xl blur-lg opacity-80 pointer-events-none"
                 />
 
                 {/* Main Large Image Box */}
@@ -199,7 +199,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   {/* Floating Discount Tag */}
                   {hasDiscount && (
                     <div className="absolute top-3 left-3 z-20">
-                      <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#B5222A] text-white text-[11px] font-extrabold tracking-wide shadow-xs">
+                      <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-[#4B193E] text-white text-[11px] font-extrabold tracking-wide shadow-xs">
                         -{discountPercent}%
                       </span>
                     </div>
@@ -209,7 +209,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   <button
                     type="button"
                     onClick={() => setIsLightboxOpen(true)}
-                    className="absolute top-3 right-3 z-20 h-8 w-8 rounded-full bg-white/80 hover:bg-white text-[#181818] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 cursor-pointer"
+                    className="absolute top-3 right-3 z-20 h-8 w-8 rounded-full bg-white/80 hover:bg-white text-[#181818] hover:text-[#4B193E] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-80 hover:opacity-100 cursor-pointer"
                     aria-label="Phóng to ảnh"
                   >
                     <Maximize2 className="w-3.5 h-3.5" />
@@ -224,7 +224,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                           e.stopPropagation();
                           setActiveImageIndex((prev) => (prev > 0 ? prev - 1 : galleryImages.length - 1));
                         }}
-                        className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#181818] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
+                        className="absolute left-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#181818] hover:text-[#4B193E] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
                         aria-label="Ảnh trước"
                       >
                         <ChevronLeft className="w-4 h-4" />
@@ -235,7 +235,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                           e.stopPropagation();
                           setActiveImageIndex((prev) => (prev < galleryImages.length - 1 ? prev + 1 : 0));
                         }}
-                        className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#181818] hover:text-[#B5222A] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
+                        className="absolute right-2.5 top-1/2 -translate-y-1/2 z-20 h-8 w-8 rounded-full bg-white/85 hover:bg-white text-[#181818] hover:text-[#4B193E] backdrop-blur-md shadow-xs border border-white/60 flex items-center justify-center transition-all duration-200 opacity-70 sm:opacity-0 sm:group-hover:opacity-100 cursor-pointer"
                         aria-label="Ảnh kế tiếp"
                       >
                         <ChevronRight className="w-4 h-4" />
@@ -281,7 +281,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                         onClick={() => setActiveImageIndex(idx)}
                         className={`group relative h-14 w-14 sm:h-16 sm:w-16 shrink-0 rounded-xl overflow-hidden transition-all duration-200 cursor-pointer ${
                           isActive
-                            ? "bg-white border-2 border-[#B5222A] shadow-xs opacity-100"
+                            ? "bg-white border-2 border-[#4B193E] shadow-xs opacity-100"
                             : "bg-[#F8F8F8] border border-[#EEEEEE] opacity-60 hover:opacity-100"
                         }`}
                         aria-label={img.label}
@@ -310,7 +310,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
                 {/* Price Display */}
                 <div className="mt-3 sm:mt-4 flex items-baseline gap-3 pb-1">
-                  <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#B5222A] tracking-tight">
+                  <span className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#4B193E] tracking-tight">
                     {product.price}
                   </span>
                   {product.originalPrice && (
@@ -354,7 +354,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   <button
                     type="button"
                     onClick={handleAddToCart}
-                    className="flex-1 h-12 px-5 rounded-xl bg-[#B5222A] hover:bg-[#991C23] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
+                    className="flex-1 h-12 px-5 rounded-xl bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <ShoppingBag className="w-4 h-4" />
                     <span>Thêm vào giỏ hàng</span>
@@ -376,7 +376,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 <button
                   type="button"
                   onClick={handleShare}
-                  className="flex items-center gap-1.5 hover:text-[#B5222A] transition-colors"
+                  className="flex items-center gap-1.5 hover:text-[#4B193E] transition-colors"
                 >
                   <Share2 className="w-3.5 h-3.5" />
                   <span>{copied ? "Đã sao chép link!" : "Chia sẻ sản phẩm"}</span>
@@ -396,7 +396,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 onClick={() => setActiveTab("desc")}
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   activeTab === "desc"
-                    ? "bg-white text-[#B5222A] shadow-xs"
+                    ? "bg-white text-[#4B193E] shadow-xs"
                     : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
@@ -407,7 +407,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 onClick={() => setActiveTab("usage")}
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   activeTab === "usage"
-                    ? "bg-white text-[#B5222A] shadow-xs"
+                    ? "bg-white text-[#4B193E] shadow-xs"
                     : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
@@ -418,7 +418,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 onClick={() => setActiveTab("origin")}
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
                   activeTab === "origin"
-                    ? "bg-white text-[#B5222A] shadow-xs"
+                    ? "bg-white text-[#4B193E] shadow-xs"
                     : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
@@ -429,13 +429,13 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 onClick={() => setActiveTab("reviews")}
                 className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all flex items-center gap-1.5 ${
                   activeTab === "reviews"
-                    ? "bg-white text-[#B5222A] shadow-xs"
+                    ? "bg-white text-[#4B193E] shadow-xs"
                     : "text-[#666666] hover:text-[#111111]"
                 }`}
               >
                 <span>Đánh Giá Khách Hàng</span>
                 {product.reviews && product.reviews.length > 0 && (
-                  <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[#B5222A]/10 text-[#B5222A] font-extrabold">
+                  <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[#4B193E]/10 text-[#4B193E] font-extrabold">
                     {product.reviews.length}
                   </span>
                 )}
@@ -485,7 +485,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                       <div key={rev.id} className="p-4 sm:p-5 rounded-xl bg-[#F8F8F8] border border-[#EEEEEE] space-y-2.5">
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <div className="w-7 h-7 rounded-full bg-[#B5222A] text-white font-bold flex items-center justify-center text-xs">
+                            <div className="w-7 h-7 rounded-full bg-[#4B193E] text-white font-bold flex items-center justify-center text-xs">
                               {rev.author.slice(0, 1)}
                             </div>
                             <div>
@@ -538,15 +538,15 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-3">
                   <div className="p-3.5 bg-[#F8F8F8] border border-[#EEEEEE] rounded-xl text-center">
-                    <div className="font-bold text-[#B5222A] text-base">100% 6 Năm Tuổi</div>
+                    <div className="font-bold text-[#4B193E] text-base">100% 6 Năm Tuổi</div>
                     <div className="text-[11px] text-[#666666] mt-0.5">Đủ hàm lượng Saponin cao nhất</div>
                   </div>
                   <div className="p-3.5 bg-[#F8F8F8] border border-[#EEEEEE] rounded-xl text-center">
-                    <div className="font-bold text-[#B5222A] text-base">HACCP & GMP</div>
+                    <div className="font-bold text-[#4B193E] text-base">HACCP & GMP</div>
                     <div className="text-[11px] text-[#666666] mt-0.5">Tiêu chuẩn quốc tế nghiêm ngặt</div>
                   </div>
                   <div className="p-3.5 bg-[#F8F8F8] border border-[#EEEEEE] rounded-xl text-center">
-                    <div className="font-bold text-[#B5222A] text-base">Punggi Ginseng</div>
+                    <div className="font-bold text-[#4B193E] text-base">Punggi Ginseng</div>
                     <div className="text-[11px] text-[#666666] mt-0.5">Địa danh nhân sâm 500 năm lịch sử</div>
                   </div>
                 </div>
@@ -560,7 +560,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
           <div className="mt-12 sm:mt-16">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <span className="text-xs font-bold text-[#B5222A] uppercase tracking-wider">
+                <span className="text-xs font-bold text-[#4B193E] uppercase tracking-wider">
                   GỢI Ý CHO BẠN
                 </span>
                 <h2 className="font-sans text-lg sm:text-2xl font-bold text-[#111111] mt-0.5">
@@ -569,7 +569,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               </div>
               <Link
                 href="/san-pham"
-                className="text-xs sm:text-sm font-semibold text-[#B5222A] hover:underline flex items-center gap-1"
+                className="text-xs sm:text-sm font-semibold text-[#4B193E] hover:underline flex items-center gap-1"
               >
                 <span>Xem tất cả</span>
                 <ChevronRight className="w-3.5 h-3.5" />
@@ -614,7 +614,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             <button
               type="button"
               onClick={handleAddToCart}
-              className="h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-[#B5222A] hover:bg-[#991C23] text-white text-xs sm:text-sm font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
               <span className="hidden sm:inline">Thêm giỏ hàng</span>
@@ -696,7 +696,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   onClick={() => setActiveImageIndex(idx)}
                   className={`relative h-12 w-12 sm:h-14 sm:w-14 rounded-lg overflow-hidden border-2 bg-white/10 p-1 transition-all ${
                     activeImageIndex === idx
-                      ? "border-[#B5222A] scale-105"
+                      ? "border-[#4B193E] scale-105"
                       : "border-white/30 opacity-60 hover:opacity-100"
                   }`}
                 >

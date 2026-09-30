@@ -41,7 +41,7 @@ export function CartDrawer() {
           {/* Header */}
           <div className="px-6 py-5 bg-[#181818] text-white flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <ShoppingBag className="w-5 h-5 text-[#b5222a]" />
+              <ShoppingBag className="w-5 h-5 text-[#4B193E]" />
               <h2 className="text-lg font-bold tracking-wide text-white">
                 Giỏ Hàng Của Bạn ({totalCount})
               </h2>
@@ -56,7 +56,7 @@ export function CartDrawer() {
 
           {/* Delivery Note */}
           <div className="bg-[#fcf8e3] border-b border-[#faebcc] px-6 py-2.5 text-xs text-[#B88942] flex items-center gap-2">
-            <Truck className="w-4 h-4 text-[#b5222a] shrink-0" />
+            <Truck className="w-4 h-4 text-[#4B193E] shrink-0" />
             <span>Miễn phí giao hàng toàn quốc cho đơn từ 1.000.000₫</span>
           </div>
 
@@ -74,7 +74,7 @@ export function CartDrawer() {
                 <Link
                   href="/san-pham"
                   onClick={closeCart}
-                  className="px-6 py-2.5 bg-[#b5222a] text-white rounded-md text-sm font-semibold hover:bg-[#8f1920] transition-colors"
+                  className="px-6 py-2.5 bg-[#4B193E] text-white rounded-md text-sm font-semibold hover:bg-[#3A1230] transition-colors"
                 >
                   Mua sắm ngay
                 </Link>
@@ -96,7 +96,7 @@ export function CartDrawer() {
                     <Link
                       href={`/product/${product.id}`}
                       onClick={closeCart}
-                      className="font-medium text-sm text-gray-900 hover:text-[#b5222a] line-clamp-2 leading-snug transition-colors"
+                      className="font-medium text-sm text-gray-900 hover:text-[#4B193E] line-clamp-2 leading-snug transition-colors"
                     >
                       {product.title}
                     </Link>
@@ -104,7 +104,7 @@ export function CartDrawer() {
                       <p className="text-xs text-gray-500 mt-0.5">Quy cách: {selectedOption}</p>
                     )}
                     <div className="flex items-baseline gap-2 mt-1">
-                      <span className="font-bold text-[#b5222a] text-sm">{product.price}</span>
+                      <span className="font-bold text-[#4B193E] text-sm">{product.price}</span>
                       {product.originalPrice && (
                         <span className="text-xs text-gray-400 line-through">
                           {product.originalPrice}
@@ -158,7 +158,7 @@ export function CartDrawer() {
                 </div>
                 <div className="flex items-center justify-between text-base font-bold text-gray-900">
                   <span>Tổng tiền thanh toán:</span>
-                  <span className="text-xl text-[#b5222a] font-extrabold">{formattedTotalPrice}</span>
+                  <span className="text-xl text-[#4B193E] font-extrabold">{formattedTotalPrice}</span>
                 </div>
               </div>
 

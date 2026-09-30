@@ -14,13 +14,13 @@ export function ProductSection() {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         {/* Section Header */}
         <div className="flex flex-col items-center text-center mb-12">
-          <span className="font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#B5222A] mb-2">
+          <span className="font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#4B193E] mb-2">
             NGHỆ NHÂN KIM JEONG HWAN
           </span>
           <h2 className="font-sans text-2xl sm:text-3xl md:text-[36px] font-bold text-[#111111] tracking-[-0.015em] leading-[1.4]">
             Sản Phẩm Hồng Sâm Kim&apos;s Nổi Bật
           </h2>
-          <div className="w-12 h-0.5 bg-[#B5222A] my-3.5" />
+          <div className="w-12 h-0.5 bg-[#4B193E] my-3.5" />
           <p className="font-sans text-sm sm:text-base text-[#666666] max-w-xl leading-[1.7] tracking-[-0.01em]">
             Chiết xuất từ nhân sâm 6 năm tuổi vùng núi Punggi nguyên chất 100%, bảo đảm hàm lượng Saponin và Ginsenoside cao nhất.
           </p>

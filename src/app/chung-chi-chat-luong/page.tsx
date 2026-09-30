@@ -72,7 +72,7 @@ export default function ChungChiChatLuongPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <Link href="/gioi-thieu" className="hover:text-black transition-colors">Giới Thiệu</Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-medium">Chứng Chỉ Đạt Được</span>
+            <span className="text-[#4B193E] font-medium">Chứng Chỉ Đạt Được</span>
           </nav>
         </div>
 

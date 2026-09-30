@@ -50,7 +50,7 @@ export default function LoiChaoNgheNhanPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <Link href="/gioi-thieu" className="hover:text-black transition-colors">Giới Thiệu</Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-medium">Lời Chào Đầu</span>
+            <span className="text-[#4B193E] font-medium">Lời Chào Đầu</span>
           </nav>
         </div>
 
@@ -58,7 +58,7 @@ export default function LoiChaoNgheNhanPage() {
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                   BẬC THẦY NHÂN SÂM HÀN QUỐC
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">

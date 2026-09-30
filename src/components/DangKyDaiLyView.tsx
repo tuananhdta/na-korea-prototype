@@ -88,11 +88,11 @@ export function DangKyDaiLyView() {
         <div className="border-b border-[#EEEEEE] bg-[#F8F8F8] py-3">
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center space-x-2 text-xs text-[#666666]">
-              <Link href="/" className="hover:text-[#B5222A] transition-colors">
+              <Link href="/" className="hover:text-[#4B193E] transition-colors">
                 Trang Chủ
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-              <span className="text-[#B5222A] font-semibold">Chính Sách Đại Lý</span>
+              <span className="text-[#4B193E] font-semibold">Chính Sách Đại Lý</span>
             </nav>
           </div>
         </div>
@@ -144,9 +144,9 @@ export function DangKyDaiLyView() {
                 return (
                   <div
                     key={idx}
-                    className="group bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-[#EEEEEE] space-y-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-md"
+                    className="group bg-white rounded-3xl p-6 sm:p-8 shadow-xs border border-[#EEEEEE] space-y-3.5 transition-all duration-300 hover:-translate-y-1 hover:border-[#4B193E] hover:shadow-md"
                   >
-                    <div className="w-12 h-12 rounded-2xl bg-[#F5F3EF] text-[#B5222A] border border-[#EEEEEE] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+                    <div className="w-12 h-12 rounded-2xl bg-[#F5F3EF] text-[#4B193E] border border-[#EEEEEE] flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
                       <Icon className="w-6 h-6" />
                     </div>
                     <h3 className="font-sans font-bold text-[#111111] text-base sm:text-lg leading-snug">
@@ -185,7 +185,7 @@ export function DangKyDaiLyView() {
                         setSubmitted(false);
                         setFormData({ name: "", phone: "", email: "", city: "", message: "" });
                       }}
-                      className="inline-flex items-center gap-2 rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-5 py-2 text-xs font-bold text-[#333333] hover:border-[#B5222A] hover:text-[#B5222A] transition-all"
+                      className="inline-flex items-center gap-2 rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-5 py-2 text-xs font-bold text-[#333333] hover:border-[#4B193E] hover:text-[#4B193E] transition-all"
                     >
                       <span>Gửi thêm yêu cầu khác</span>
                     </button>
@@ -205,7 +205,7 @@ export function DangKyDaiLyView() {
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div className="space-y-1.5">
                       <label className="block text-xs font-bold text-[#111111]">
-                        Họ và tên người liên hệ <span className="text-[#B5222A]">*</span>
+                        Họ và tên người liên hệ <span className="text-[#4B193E]">*</span>
                       </label>
                       <input
                         type="text"
@@ -213,13 +213,13 @@ export function DangKyDaiLyView() {
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                         placeholder="Ví dụ: Nguyễn Văn A"
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
                       />
                     </div>
 
                     <div className="space-y-1.5">
                       <label className="block text-xs font-bold text-[#111111]">
-                        Số điện thoại / Zalo <span className="text-[#B5222A]">*</span>
+                        Số điện thoại / Zalo <span className="text-[#4B193E]">*</span>
                       </label>
                       <input
                         type="tel"
@@ -227,7 +227,7 @@ export function DangKyDaiLyView() {
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         placeholder="Ví dụ: 090 340 9939"
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
                       />
                     </div>
                   </div>
@@ -242,13 +242,13 @@ export function DangKyDaiLyView() {
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                         placeholder="email@example.com"
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
                       />
                     </div>
 
                     <div className="space-y-1.5">
                       <label className="block text-xs font-bold text-[#111111]">
-                        Tỉnh / Thành phố dự kiến phân phối <span className="text-[#B5222A]">*</span>
+                        Tỉnh / Thành phố dự kiến phân phối <span className="text-[#4B193E]">*</span>
                       </label>
                       <input
                         type="text"
@@ -256,7 +256,7 @@ export function DangKyDaiLyView() {
                         value={formData.city}
                         onChange={(e) => setFormData({ ...formData, city: e.target.value })}
                         placeholder="Ví dụ: Hà Nội, TP.HCM, Đà Nẵng..."
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
                       />
                     </div>
                   </div>
@@ -270,7 +270,7 @@ export function DangKyDaiLyView() {
                       value={formData.message}
                       onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                       placeholder="Quý đối tác vui lòng chia sẻ thêm về kế hoạch kinh doanh hoặc các câu hỏi cần giải đáp..."
-                      className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15 resize-none"
+                      className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15 resize-none"
                     />
                   </div>
 
@@ -278,7 +278,7 @@ export function DangKyDaiLyView() {
                     <button
                       type="submit"
                       disabled={loading}
-                      className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#B5222A] via-[#991C23] to-[#991C23] py-4 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
+                      className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#4B193E] via-[#3A1230] to-[#3A1230] py-4 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
                     >
                       {loading ? (
                         <span>Đang gửi thông tin...</span>

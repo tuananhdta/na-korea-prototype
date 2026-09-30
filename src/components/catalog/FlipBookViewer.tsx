@@ -21,7 +21,7 @@ const HTMLFlipBook: any = dynamic(
     loading: () => (
       <div className="flex h-[550px] w-full items-center justify-center rounded-2xl bg-[#F8F8F8] text-sm text-[#181818]">
         <div className="flex flex-col items-center gap-3">
-          <div className="h-9 w-9 animate-spin rounded-full border-3 border-[#B5222A] border-t-transparent" />
+          <div className="h-9 w-9 animate-spin rounded-full border-3 border-[#4B193E] border-t-transparent" />
           <span className="font-semibold tracking-wide">Đang khởi tạo E-Catalog 3D...</span>
         </div>
       </div>
@@ -246,7 +246,7 @@ export function FlipBookViewer({
           onClick={handlePrev}
           disabled={currentPage === 0}
           aria-label="Trang trước"
-          className="group absolute left-1 sm:left-2 z-30 flex h-14 w-10 sm:h-16 sm:w-12 items-center justify-center rounded-r-xl bg-black/35 text-white backdrop-blur-md transition-all hover:w-14 hover:bg-[#B5222A] disabled:pointer-events-none disabled:opacity-0"
+          className="group absolute left-1 sm:left-2 z-30 flex h-14 w-10 sm:h-16 sm:w-12 items-center justify-center rounded-r-xl bg-black/35 text-white backdrop-blur-md transition-all hover:w-14 hover:bg-[#4B193E] disabled:pointer-events-none disabled:opacity-0"
         >
           <ChevronLeft className="h-6 w-6 stroke-[2.5] transition-transform group-hover:-translate-x-0.5" />
         </button>
@@ -257,7 +257,7 @@ export function FlipBookViewer({
           onClick={handleNext}
           disabled={currentPage >= totalPages - 1}
           aria-label="Trang sau"
-          className="group absolute right-1 sm:right-2 z-30 flex h-14 w-10 sm:h-16 sm:w-12 items-center justify-center rounded-l-xl bg-black/35 text-white backdrop-blur-md transition-all hover:w-14 hover:bg-[#B5222A] disabled:pointer-events-none disabled:opacity-0"
+          className="group absolute right-1 sm:right-2 z-30 flex h-14 w-10 sm:h-16 sm:w-12 items-center justify-center rounded-l-xl bg-black/35 text-white backdrop-blur-md transition-all hover:w-14 hover:bg-[#4B193E] disabled:pointer-events-none disabled:opacity-0"
         >
           <ChevronRight className="h-6 w-6 stroke-[2.5] transition-transform group-hover:translate-x-0.5" />
         </button>

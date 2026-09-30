@@ -45,7 +45,7 @@ export const FlipPage = forwardRef<HTMLDivElement, FlipPageProps>(
         {!loaded && (
           <div className="absolute inset-0 flex items-center justify-center bg-[#F5F3EF] text-xs font-medium text-[#8A8477]">
             <div className="flex flex-col items-center gap-2">
-              <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#B5222A] border-t-transparent" />
+              <div className="h-6 w-6 animate-spin rounded-full border-2 border-[#4B193E] border-t-transparent" />
               <span>Đang tải trang {pageNumber}...</span>
             </div>
           </div>

@@ -20,9 +20,9 @@ export function FeaturedVideoSection() {
         <div className="flex flex-col items-center text-center mb-10 md:mb-14 max-w-3xl mx-auto">
           {/* Ginseng Heartbeat Dots */}
           <div aria-hidden="true" className="mb-3.5 flex h-4 w-16 items-center justify-center gap-1.5">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#4B193E]" />
             <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359]" />
-            <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#4B193E]" />
           </div>
 
           <span className="text-[#D4A359] text-xs sm:text-sm font-extrabold uppercase tracking-[0.2em] mb-2">
@@ -40,7 +40,7 @@ export function FeaturedVideoSection() {
 
         {/* 1 Featured Cinematic Video Container */}
         <div className="max-w-5xl mx-auto">
-          <div className="na-media-lift group relative aspect-video w-full overflow-hidden rounded-2xl border border-[#EEEEEE] bg-black shadow-2xl transition-all duration-500 hover:border-[#B5222A]/40 hover:shadow-[0_20px_50px_rgba(181,34,42,0.15)]">
+          <div className="na-media-lift group relative aspect-video w-full overflow-hidden rounded-2xl border border-[#EEEEEE] bg-black shadow-2xl transition-all duration-500 hover:border-[#4B193E]/40 hover:shadow-[0_20px_50px_rgba(75, 25, 62,0.15)]">
             <iframe
               src="https://www.youtube.com/embed/F0obQn6c_50?rel=0"
               title="Video giới thiệu di sản Hồng Sâm Kim - Punggi Korea"
@@ -53,7 +53,7 @@ export function FeaturedVideoSection() {
 
           {/* Caption underneath */}
           <div className="mt-4 flex items-center justify-center gap-2 text-center text-xs sm:text-sm font-medium text-[#666666]">
-            <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+            <span className="h-1.5 w-1.5 rounded-full bg-[#4B193E]" />
             <span>Phim tư liệu chính thức về di sản Hồng sâm Kim & Vùng trồng Punggi Hàn Quốc</span>
           </div>
         </div>

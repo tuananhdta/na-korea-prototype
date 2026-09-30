@@ -75,7 +75,7 @@ export function IntroScreen() {
       {/* 2. Top & Bottom Brand Red Sweep Accent Bars */}
       <div
         aria-hidden="true"
-        className={`absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-transparent via-[#B5222A] to-transparent transition-opacity duration-500 ${
+        className={`absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-transparent via-[#4B193E] to-transparent transition-opacity duration-500 ${
           isFadingOut ? "opacity-100 animate-pulse" : "opacity-0"
         }`}
       />

@@ -46,9 +46,9 @@ export function TinTucListView() {
         <div className="border-b border-[#EEEEEE] bg-[#F8F8F8] py-3.5">
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
             <nav className="flex items-center space-x-2 text-xs text-[#666666]">
-              <Link href="/" className="hover:text-[#B5222A] transition-colors">Trang Chủ</Link>
+              <Link href="/" className="hover:text-[#4B193E] transition-colors">Trang Chủ</Link>
               <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-              <span className="text-[#B5222A] font-semibold">Tin Tức & Hoạt Động</span>
+              <span className="text-[#4B193E] font-semibold">Tin Tức & Hoạt Động</span>
             </nav>
           </div>
         </div>
@@ -67,7 +67,7 @@ export function TinTucListView() {
                   className={`rounded-full px-4 py-2 text-xs sm:text-sm font-bold transition-all duration-200 ${
                     isActive
                       ? "bg-[#181818] text-white shadow-sm scale-102"
-                      : "border border-[#EEEEEE] bg-white text-[#333333] hover:border-[#B5222A] hover:text-[#B5222A]"
+                      : "border border-[#EEEEEE] bg-white text-[#333333] hover:border-[#4B193E] hover:text-[#4B193E]"
                   }`}
                 >
                   {cat}
@@ -89,7 +89,7 @@ export function TinTucListView() {
                     className="object-cover"
                     priority
                   />
-                  <span className="absolute top-4 left-4 rounded-full bg-[#B5222A] px-3.5 py-1 text-xs font-bold text-white shadow-md">
+                  <span className="absolute top-4 left-4 rounded-full bg-[#4B193E] px-3.5 py-1 text-xs font-bold text-white shadow-md">
                     TIÊU ĐIỂM
                   </span>
                 </div>
@@ -100,14 +100,14 @@ export function TinTucListView() {
                       {featuredPost.category}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Calendar className="h-3.5 w-3.5 text-[#B5222A]" />
+                      <Calendar className="h-3.5 w-3.5 text-[#4B193E]" />
                       {featuredPost.formattedDate}
                     </span>
                     <span>•</span>
                     <span>{featuredPost.readTime}</span>
                   </div>
 
-                  <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-extrabold text-[#111111] leading-snug tracking-tight hover:text-[#B5222A] transition-colors">
+                  <h2 className="font-sans text-xl sm:text-2xl md:text-3xl font-extrabold text-[#111111] leading-snug tracking-tight hover:text-[#4B193E] transition-colors">
                     <Link href={`/tin-tuc/${featuredPost.id}`}>
                       {featuredPost.title}
                     </Link>
@@ -120,7 +120,7 @@ export function TinTucListView() {
                   <div className="pt-2">
                     <Link
                       href={`/tin-tuc/${featuredPost.id}`}
-                      className="inline-flex items-center gap-2 rounded-xl bg-[#B5222A] px-6 py-3 text-sm font-bold text-white hover:bg-[#991C23] transition-all shadow-sm group"
+                      className="inline-flex items-center gap-2 rounded-xl bg-[#4B193E] px-6 py-3 text-sm font-bold text-white hover:bg-[#3A1230] transition-all shadow-sm group"
                     >
                       <span>Đọc bài phóng sự</span>
                       <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -137,7 +137,7 @@ export function TinTucListView() {
               <Link
                 key={post.id}
                 href={`/tin-tuc/${post.id}`}
-                className="group flex flex-col overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#B5222A] hover:shadow-lg"
+                className="group flex flex-col overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#4B193E] hover:shadow-lg"
               >
                 <div className="relative aspect-16/10 w-full overflow-hidden bg-gray-100">
                   <Image
@@ -156,7 +156,7 @@ export function TinTucListView() {
                   <div className="space-y-2">
                     <div className="flex items-center gap-3 text-xs text-[#888888]">
                       <div className="flex items-center gap-1">
-                        <Calendar className="h-3.5 w-3.5 text-[#B5222A]" />
+                        <Calendar className="h-3.5 w-3.5 text-[#4B193E]" />
                         <span>{post.formattedDate}</span>
                       </div>
                       <span>•</span>
@@ -165,7 +165,7 @@ export function TinTucListView() {
                         <span>{post.readTime}</span>
                       </div>
                     </div>
-                    <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111] leading-snug group-hover:text-[#B5222A] transition-colors line-clamp-2">
+                    <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111] leading-snug group-hover:text-[#4B193E] transition-colors line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-[#666666] leading-relaxed line-clamp-3">
@@ -173,7 +173,7 @@ export function TinTucListView() {
                     </p>
                   </div>
 
-                  <div className="flex items-center justify-between border-t border-[#EEEEEE]/60 pt-3 text-xs font-bold text-[#B5222A]">
+                  <div className="flex items-center justify-between border-t border-[#EEEEEE]/60 pt-3 text-xs font-bold text-[#4B193E]">
                     <span className="group-hover:underline">Xem chi tiết bài viết</span>
                     <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </div>

@@ -77,20 +77,20 @@ export default function LichSuHinhThanhPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <Link href="/gioi-thieu" className="hover:text-black transition-colors">Giới Thiệu</Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-medium">Lịch Sử Hình Thành</span>
+            <span className="text-[#4B193E] font-medium">Lịch Sử Hình Thành</span>
           </nav>
         </div>
 
         <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-6">
           <div className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
-            <div className="relative border-l-2 border-red-100 ml-4 md:ml-8 pl-6 md:pl-10 space-y-12">
+            <div className="relative border-l-2 border-[#4B193E]/20 ml-4 md:ml-8 pl-6 md:pl-10 space-y-12">
               {TIMELINE.map((item, index) => (
                 <div key={index} className="relative group">
                   {/* Dot indicator */}
-                  <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-[#b5222a] group-hover:scale-125 transition-transform" />
+                  <div className="absolute -left-[31px] md:-left-[47px] top-1.5 w-4 h-4 rounded-full bg-white border-4 border-[#4B193E] group-hover:scale-125 transition-transform" />
 
                   <div className="space-y-2">
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-red-50 text-[#b5222a]">
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold bg-[#4B193E]/10 text-[#4B193E]">
                       <Calendar className="w-3.5 h-3.5" />
                       {item.year}
                     </span>

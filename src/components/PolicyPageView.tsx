@@ -60,7 +60,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
         <Header onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
         <main className="flex-1 max-w-[1240px] mx-auto px-4 py-20 text-center">
           <h1 className="text-2xl font-bold text-[#111111]">Không tìm thấy chính sách</h1>
-          <Link href="/" className="mt-4 inline-block text-[#B5222A] hover:underline">
+          <Link href="/" className="mt-4 inline-block text-[#4B193E] hover:underline">
             Quay lại trang chủ
           </Link>
         </main>
@@ -246,7 +246,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
                 {/* Document Header */}
                 <div className="border-b border-[#EEEEEE] pb-6 mb-8">
                   <div className="flex flex-wrap items-center gap-2 mb-2">
-                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-red-100 text-[#B5222A] uppercase tracking-wider">
+                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#4B193E]/10 text-[#4B193E] uppercase tracking-wider">
                       <FileText className="w-3 h-3" />
                       Văn Bản Pháp Lý
                     </span>
@@ -265,14 +265,14 @@ export function PolicyPageView({ slug }: { slug: string }) {
 
                 {/* Main Rendered Policy HTML */}
                 <div
-                  className="policy-content text-[#333333] text-sm sm:text-[15px] leading-relaxed space-y-4 [&_h1]:text-xl [&_h1]:sm:text-2xl [&_h1]:font-bold [&_h1]:text-[#111111] [&_h1]:mt-8 [&_h1]:mb-3 [&_h2]:text-lg [&_h2]:sm:text-xl [&_h2]:font-bold [&_h2]:text-[#111111] [&_h2]:mt-8 [&_h2]:mb-3 [&_h2]:pt-4 [&_h2]:border-t [&_h2]:border-[#EEEEEE] [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-[#111111] [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:mb-3.5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-4 [&_ol]:space-y-1.5 [&_li]:leading-relaxed [&_strong]:text-[#111111] [&_strong]:font-bold [&_a]:text-[#B5222A] [&_a]:underline"
+                  className="policy-content text-[#333333] text-sm sm:text-[15px] leading-relaxed space-y-4 [&_h1]:text-xl [&_h1]:sm:text-2xl [&_h1]:font-bold [&_h1]:text-[#111111] [&_h1]:mt-8 [&_h1]:mb-3 [&_h2]:text-lg [&_h2]:sm:text-xl [&_h2]:font-bold [&_h2]:text-[#111111] [&_h2]:mt-8 [&_h2]:mb-3 [&_h2]:pt-4 [&_h2]:border-t [&_h2]:border-[#EEEEEE] [&_h3]:text-base [&_h3]:font-bold [&_h3]:text-[#111111] [&_h3]:mt-6 [&_h3]:mb-2 [&_p]:mb-3.5 [&_p]:leading-relaxed [&_ul]:list-disc [&_ul]:pl-5 [&_ul]:mb-4 [&_ul]:space-y-1.5 [&_ol]:list-decimal [&_ol]:pl-5 [&_ol]:mb-4 [&_ol]:space-y-1.5 [&_li]:leading-relaxed [&_strong]:text-[#111111] [&_strong]:font-bold [&_a]:text-[#4B193E] [&_a]:underline"
                   dangerouslySetInnerHTML={{ __html: policy.content }}
                 />
 
                 {/* Support Hotline Notice */}
                 <div className="mt-10 pt-6 border-t border-[#EEEEEE] bg-gray-50/80 rounded-xl p-5 text-xs sm:text-sm text-[#333333] space-y-2">
                   <div className="font-bold text-[#111111] flex items-center gap-2">
-                    <Phone className="w-4 h-4 text-[#B5222A]" />
+                    <Phone className="w-4 h-4 text-[#4B193E]" />
                     <span>Cần hỗ trợ trực tiếp hoặc giải đáp khiếu nại?</span>
                   </div>
                   <p className="leading-relaxed text-xs sm:text-sm">
@@ -285,7 +285,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
               {policy.faqs && policy.faqs.length > 0 && (
                 <section aria-labelledby="faq-section-title" className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-8 shadow-xs">
                   <div className="flex items-center gap-2 mb-6 border-b border-[#EEEEEE] pb-4">
-                    <HelpCircle className="w-5 h-5 text-[#B5222A]" />
+                    <HelpCircle className="w-5 h-5 text-[#4B193E]" />
                     <h3 id="faq-section-title" className="text-lg sm:text-xl font-bold text-[#111111]">
                       Câu Hỏi Thường Gặp (FAQ)
                     </h3>
@@ -302,13 +302,13 @@ export function PolicyPageView({ slug }: { slug: string }) {
                           <button
                             type="button"
                             onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                            className="w-full flex items-center justify-between p-4 text-left font-semibold text-xs sm:text-sm text-[#111111] hover:text-[#B5222A] bg-gray-50/50 hover:bg-gray-50 transition-colors"
+                            className="w-full flex items-center justify-between p-4 text-left font-semibold text-xs sm:text-sm text-[#111111] hover:text-[#4B193E] bg-gray-50/50 hover:bg-gray-50 transition-colors"
                             aria-expanded={isOpen}
                           >
                             <span className="pr-4">{faq.question}</span>
                             <ChevronDown
                               className={`w-4 h-4 text-[#666666] shrink-0 transition-transform duration-200 ${
-                                isOpen ? "rotate-180 text-[#B5222A]" : ""
+                                isOpen ? "rotate-180 text-[#4B193E]" : ""
                               }`}
                             />
                           </button>
@@ -330,7 +330,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
               {/* Other useful links navigation */}
               <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 shadow-xs space-y-4">
                 <div className="flex items-center gap-2 border-b border-[#EEEEEE] pb-4">
-                  <FileText className="w-5 h-5 text-[#B5222A]" />
+                  <FileText className="w-5 h-5 text-[#4B193E]" />
                   <h3 className="font-bold text-base text-[#111111]">
                     Liên Kết Hữu Ích
                   </h3>
@@ -345,8 +345,8 @@ export function PolicyPageView({ slug }: { slug: string }) {
                         href={item.href}
                         className={`flex items-center justify-between p-3 rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                           isActive
-                            ? "bg-[#B5222A] text-white shadow-xs"
-                            : "text-[#333333] hover:bg-gray-50 hover:text-[#B5222A]"
+                            ? "bg-[#4B193E] text-white shadow-xs"
+                            : "text-[#333333] hover:bg-gray-50 hover:text-[#4B193E]"
                         }`}
                       >
                         <span className="truncate pr-2">{item.label}</span>
@@ -364,7 +364,7 @@ export function PolicyPageView({ slug }: { slug: string }) {
               {/* GEO / Local Entity Card (Tối ưu Local Business SEO) */}
               <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 shadow-xs space-y-4">
                 <div className="flex items-center gap-2 border-b border-[#EEEEEE] pb-3">
-                  <Building2 className="w-4 h-4 text-[#B5222A]" />
+                  <Building2 className="w-4 h-4 text-[#4B193E]" />
                   <h4 className="font-bold text-sm text-[#111111]">
                     Đơn Vị Nhập Khẩu Độc Quyền
                   </h4>

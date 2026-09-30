@@ -56,11 +56,11 @@ export function LienHeView() {
         <div className="border-b border-[#EEEEEE] bg-[#F8F8F8] py-3">
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6">
             <nav className="flex items-center space-x-2 text-xs text-[#666666]">
-              <Link href="/" className="hover:text-[#B5222A] transition-colors">
+              <Link href="/" className="hover:text-[#4B193E] transition-colors">
                 Trang Chủ
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-              <span className="text-[#B5222A] font-semibold">Liên Hệ</span>
+              <span className="text-[#4B193E] font-semibold">Liên Hệ</span>
             </nav>
           </div>
         </div>
@@ -195,7 +195,7 @@ export function LienHeView() {
                     
                     {/* Location 1: Main HQ */}
                     <div className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#B5222A]">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#4B193E]">
                         <MapPin className="h-4 w-4" />
                       </div>
                       <div className="space-y-0.5">
@@ -210,7 +210,7 @@ export function LienHeView() {
 
                     {/* Location 2: Representative Office */}
                     <div className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#B5222A]">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#4B193E]">
                         <MapPin className="h-4 w-4" />
                       </div>
                       <div className="space-y-0.5">
@@ -225,7 +225,7 @@ export function LienHeView() {
 
                     {/* Location 3: South Branch */}
                     <div className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#B5222A]">
+                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#4B193E]">
                         <MapPin className="h-4 w-4" />
                       </div>
                       <div className="space-y-0.5">
@@ -258,7 +258,7 @@ export function LienHeView() {
 
                 {/* Legal Entity Trust Badge */}
                 <div className="mt-6 rounded-xl bg-[#F8F8F8] border border-[#EEEEEE] p-3.5 text-xs text-[#181818] leading-relaxed flex items-center gap-2.5">
-                  <ShieldCheck className="h-5 w-5 text-[#B5222A] shrink-0" />
+                  <ShieldCheck className="h-5 w-5 text-[#4B193E] shrink-0" />
                   <div>
                     <span className="font-bold text-[#111111]">CÔNG TY TNHH TM NA KOREA</span>
                     <span className="text-[#888888] block text-[11px]">MST: 0109946846 • Đại diện thương hiệu Kim&apos;s Red Ginseng</span>
@@ -293,7 +293,7 @@ export function LienHeView() {
                           setSubmitted(false);
                           setFormData({ name: "", phone: "", email: "", topic: "Tư vấn chọn sản phẩm", message: "" });
                         }}
-                        className="inline-flex items-center gap-2 rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-5 py-2 text-xs font-bold text-[#333333] hover:border-[#B5222A] hover:text-[#B5222A] transition-all"
+                        className="inline-flex items-center gap-2 rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-5 py-2 text-xs font-bold text-[#333333] hover:border-[#4B193E] hover:text-[#4B193E] transition-all"
                       >
                         <span>Gửi thêm yêu cầu khác</span>
                       </button>
@@ -312,7 +312,7 @@ export function LienHeView() {
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                       <div className="space-y-1.5">
                         <label className="block text-xs font-bold text-[#111111]">
-                          Họ và tên <span className="text-[#B5222A]">*</span>
+                          Họ và tên <span className="text-[#4B193E]">*</span>
                         </label>
                         <input
                           type="text"
@@ -320,13 +320,13 @@ export function LienHeView() {
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                           placeholder="Ví dụ: Nguyễn Văn A"
-                          className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                          className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
                         />
                       </div>
 
                       <div className="space-y-1.5">
                         <label className="block text-xs font-bold text-[#111111]">
-                          Số điện thoại <span className="text-[#B5222A]">*</span>
+                          Số điện thoại <span className="text-[#4B193E]">*</span>
                         </label>
                         <input
                           type="tel"
@@ -334,7 +334,7 @@ export function LienHeView() {
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="Ví dụ: 090 340 9939"
-                          className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                          className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
                         />
                       </div>
                     </div>
@@ -347,7 +347,7 @@ export function LienHeView() {
                       <select
                         value={formData.topic}
                         onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
                       >
                         <option value="Tư vấn chọn sản phẩm">Tư vấn chọn sản phẩm hồng sâm phù hợp thể trạng</option>
                         <option value="Quà biếu sức khỏe VIP">Tư vấn set quà biếu cao cấp & doanh nghiệp</option>
@@ -359,7 +359,7 @@ export function LienHeView() {
                     {/* Message */}
                     <div className="space-y-1.5">
                       <label className="block text-xs font-bold text-[#111111]">
-                        Nội dung cần tư vấn <span className="text-[#B5222A]">*</span>
+                        Nội dung cần tư vấn <span className="text-[#4B193E]">*</span>
                       </label>
                       <textarea
                         rows={3}
@@ -367,7 +367,7 @@ export function LienHeView() {
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                         placeholder="Quý khách vui lòng để lại lời nhắn hoặc câu hỏi cần giải đáp..."
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#B5222A] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#B5222A]/15 resize-none"
+                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15 resize-none"
                       />
                     </div>
 
@@ -376,7 +376,7 @@ export function LienHeView() {
                       <button
                         type="submit"
                         disabled={loading}
-                        className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#B5222A] via-[#991C23] to-[#991C23] py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
+                        className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-[#4B193E] via-[#3A1230] to-[#3A1230] py-3.5 text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
                       >
                         {loading ? (
                           <span>Đang gửi thông tin...</span>
@@ -406,7 +406,7 @@ export function LienHeView() {
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
               
               <div className="flex items-center gap-3.5">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#B5222A] border border-[#EEEEEE]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#4B193E] border border-[#EEEEEE]">
                   <Award className="h-5 w-5" />
                 </div>
                 <div className="space-y-0.5">
@@ -418,7 +418,7 @@ export function LienHeView() {
               </div>
 
               <div className="flex items-center gap-3.5">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#B5222A] border border-[#EEEEEE]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#4B193E] border border-[#EEEEEE]">
                   <ShieldCheck className="h-5 w-5" />
                 </div>
                 <div className="space-y-0.5">
@@ -430,7 +430,7 @@ export function LienHeView() {
               </div>
 
               <div className="flex items-center gap-3.5">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#B5222A] border border-[#EEEEEE]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#4B193E] border border-[#EEEEEE]">
                   <Truck className="h-5 w-5" />
                 </div>
                 <div className="space-y-0.5">
@@ -442,7 +442,7 @@ export function LienHeView() {
               </div>
 
               <div className="flex items-center gap-3.5">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#B5222A] border border-[#EEEEEE]">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] text-[#4B193E] border border-[#EEEEEE]">
                   <HeartHandshake className="h-5 w-5" />
                 </div>
                 <div className="space-y-0.5">

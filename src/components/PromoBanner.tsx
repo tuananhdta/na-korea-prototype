@@ -30,7 +30,7 @@ function PungiMascot({ className = "" }: { className?: string }) {
       <path d="M24 33 Q26 18 40 15 Q54 18 56 33" fill="#A0845C" />
       <path d="M28 33 Q30 22 40 19 Q50 22 52 33" fill="#B88942" />
       {/* Hat band - brand red */}
-      <rect x="26" y="31" width="28" height="3" rx="1.5" fill="#B5222A" />
+      <rect x="26" y="31" width="28" height="3" rx="1.5" fill="#4B193E" />
 
       {/* Face */}
       {/* Eyes - happy squint */}
@@ -43,8 +43,8 @@ function PungiMascot({ className = "" }: { className?: string }) {
       <path d="M35 53 Q40 58 45 53" stroke="#181818" strokeWidth="1.5" strokeLinecap="round" fill="none" />
 
       {/* Red scarf */}
-      <path d="M26 60 Q30 65 40 66 Q50 65 54 60" stroke="#B5222A" strokeWidth="3" strokeLinecap="round" fill="none" />
-      <path d="M50 62 Q52 68 54 72" stroke="#B5222A" strokeWidth="2.5" strokeLinecap="round" fill="none" />
+      <path d="M26 60 Q30 65 40 66 Q50 65 54 60" stroke="#4B193E" strokeWidth="3" strokeLinecap="round" fill="none" />
+      <path d="M50 62 Q52 68 54 72" stroke="#4B193E" strokeWidth="2.5" strokeLinecap="round" fill="none" />
 
       {/* Waving hand animation target */}
       <g className="animate-[wave_2.5s_ease-in-out_infinite]" style={{ transformOrigin: "70px 42px" }}>
@@ -184,7 +184,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
 
           {/* Center: Animated Slogan Capsule */}
           <div className="relative z-10 flex items-center justify-center animate-[banner-float_4s_ease-in-out_infinite]">
-            <div className="flex items-center gap-1.5 sm:gap-3 rounded-full border border-dashed border-[#B5222A]/30 bg-white/85 px-3 py-1 sm:px-6 sm:py-2 shadow-[0_4px_16px_rgba(181,34,42,0.08)] backdrop-blur-xs transition-all hover:border-[#B5222A]/60">
+            <div className="flex items-center gap-1.5 sm:gap-3 rounded-full border border-dashed border-[#4B193E]/30 bg-white/85 px-3 py-1 sm:px-6 sm:py-2 shadow-[0_4px_16px_rgba(75, 25, 62,0.08)] backdrop-blur-xs transition-all hover:border-[#4B193E]/60">
               {/* Slogan Words */}
               <div className="flex items-center text-center">
                 <span className="text-gold-shimmer font-sans text-[11px] sm:text-[15px] md:text-[17px] font-extrabold tracking-wide whitespace-nowrap">
@@ -192,7 +192,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
                 </span>
 
                 {/* Pulsing Ginseng Heartbeat dot */}
-                <span className="mx-1.5 sm:mx-2.5 inline-flex h-1.5 w-1.5 rounded-full bg-[#B5222A] animate-pulse shrink-0" />
+                <span className="mx-1.5 sm:mx-2.5 inline-flex h-1.5 w-1.5 rounded-full bg-[#4B193E] animate-pulse shrink-0" />
 
                 <span className="font-sans text-[11px] sm:text-[14px] md:text-[16px] font-bold text-[#5A2B18] tracking-tight whitespace-nowrap">
                   Nơi tận tâm trở thành kiệt tác
@@ -218,7 +218,7 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
         type="button"
         onClick={onClose}
         aria-label="Đóng banner"
-        className="absolute right-2.5 sm:right-5 md:right-7 lg:right-9 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full text-[#181818] transition-all duration-200 hover:bg-black/5 hover:text-[#B5222A] active:scale-95 focus-visible:outline-none cursor-pointer"
+        className="absolute right-2.5 sm:right-5 md:right-7 lg:right-9 top-1/2 -translate-y-1/2 z-20 flex h-8 w-8 sm:h-9 sm:w-9 items-center justify-center rounded-full text-[#181818] transition-all duration-200 hover:bg-black/5 hover:text-[#4B193E] active:scale-95 focus-visible:outline-none cursor-pointer"
       >
         <X aria-hidden="true" className="h-4 w-4 sm:h-5 sm:w-5" />
       </button>

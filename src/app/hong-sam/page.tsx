@@ -57,7 +57,7 @@ export default function HongSamPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-gray-600 font-medium">Về Nhân Sâm</span>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-bold">Hồng Sâm</span>
+            <span className="text-[#4B193E] font-bold">Hồng Sâm</span>
           </nav>
 
           {/* 2-Article Tab Control */}
@@ -70,7 +70,7 @@ export default function HongSamPage() {
             </Link>
             <Link
               href="/hong-sam"
-              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#B5222A] text-white shadow-xs transition-all"
+              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#4B193E] text-white shadow-xs transition-all"
             >
               Hồng Sâm (6 Năm Tuổi)
             </Link>
@@ -82,7 +82,7 @@ export default function HongSamPage() {
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <div className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                   QUY TRÌNH HẤP SẤY ĐỘC QUYỀN
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
@@ -111,7 +111,7 @@ export default function HongSamPage() {
           {/* Section 2: Vì sao phải là Sâm 6 năm tuổi */}
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-8">
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                 CHU KỲ SINH TRƯỞNG
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
@@ -130,11 +130,11 @@ export default function HongSamPage() {
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-red-50/70 border-2 border-[#b5222a]/40 space-y-3 relative shadow-xs">
-                <div className="absolute -top-3 right-4 bg-[#b5222a] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">
+              <div className="p-6 rounded-xl bg-[#4B193E]/5 border-2 border-[#4B193E]/40 space-y-3 relative shadow-xs">
+                <div className="absolute -top-3 right-4 bg-[#4B193E] text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase">
                   ĐỈNH CAO HOÀN HẢO
                 </div>
-                <div className="text-sm font-bold text-[#b5222a]">Đúng 6 Năm Tuổi (6-Year Old)</div>
+                <div className="text-sm font-bold text-[#4B193E]">Đúng 6 Năm Tuổi (6-Year Old)</div>
                 <p className="text-xs text-gray-800 leading-relaxed font-medium">
                   Phần đầu chắc khỏe, thân dày dặn, các rễ con phát triển đều đặn. Hàm lượng Ginsenoside Rg1, Rb1, Rg3 đạt mức tối đa và cân bằng sinh học hoàn hảo.
                 </p>
@@ -152,7 +152,7 @@ export default function HongSamPage() {
           {/* Section 3: 30 loại Saponin vượt trội của Sâm Goryeo */}
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-8">
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                 SO SÁNH QUỐC TẾ
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
@@ -176,10 +176,10 @@ export default function HongSamPage() {
                 <div className="text-xs text-gray-500">Ginsenoside</div>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#b5222a] text-white shadow-lg space-y-2 transform md:-translate-y-2">
-                <div className="text-red-100 text-xs uppercase font-bold tracking-wider">Hồng Sâm Goryeo Hàn Quốc</div>
+              <div className="p-6 rounded-xl bg-[#4B193E] text-white shadow-lg space-y-2 transform md:-translate-y-2">
+                <div className="text-white/80 text-xs uppercase font-bold tracking-wider">Hồng Sâm Goryeo Hàn Quốc</div>
                 <div className="text-4xl font-extrabold">30+ Loại</div>
-                <div className="text-xs text-red-100 font-medium">Hàm lượng Ginsenoside toàn diện nhất thế giới</div>
+                <div className="text-xs text-white/80 font-medium">Hàm lượng Ginsenoside toàn diện nhất thế giới</div>
               </div>
             </div>
           </section>
@@ -187,7 +187,7 @@ export default function HongSamPage() {
           {/* Section 4: Các dòng chế phẩm từ Hồng Sâm */}
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                 DANH MỤC THÀNH PHẨM
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">

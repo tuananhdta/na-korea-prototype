@@ -127,7 +127,7 @@ export function SanPhamTreEmView() {
               Sản Phẩm
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-medium">Hồng Sâm Trẻ Em</span>
+            <span className="text-[#4B193E] font-medium">Hồng Sâm Trẻ Em</span>
           </nav>
         </div>
 
@@ -151,7 +151,7 @@ export function SanPhamTreEmView() {
                   placeholder="Tìm kiếm sản phẩm..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="h-9 w-full rounded-lg border border-[#EEEEEE] bg-white pl-9 pr-8 text-xs sm:text-sm text-[#111111] placeholder:text-gray-400 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 w-full rounded-lg border border-[#EEEEEE] bg-white pl-9 pr-8 text-xs sm:text-sm text-[#111111] placeholder:text-gray-400 outline-none transition-colors hover:border-gray-400 focus:border-[#4B193E] shadow-2xs"
                 />
                 {searchTerm && (
                   <button
@@ -170,7 +170,7 @@ export function SanPhamTreEmView() {
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value as typeof sortBy)}
-                  className="h-9 rounded-lg border border-[#EEEEEE] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#B5222A] shadow-2xs"
+                  className="h-9 rounded-lg border border-[#EEEEEE] bg-white px-3 text-xs sm:text-sm font-medium text-gray-700 outline-none transition-colors hover:border-gray-400 focus:border-[#4B193E] shadow-2xs"
                 >
                   <option value="default">Sắp xếp: Mặc định</option>
                   <option value="price-asc">Giá: Thấp → Cao</option>
@@ -193,7 +193,7 @@ export function SanPhamTreEmView() {
                 onClick={() => {
                   setSearchTerm("");
                 }}
-                className="mt-4 px-5 py-2 bg-[#b5222a] text-white text-xs font-semibold rounded-lg hover:bg-[#8f1920] transition-colors"
+                className="mt-4 px-5 py-2 bg-[#4B193E] text-white text-xs font-semibold rounded-lg hover:bg-[#3A1230] transition-colors"
               >
                 Đặt lại bộ lọc
               </button>

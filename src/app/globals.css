@@ -13,10 +13,10 @@
 
 :root {
   /* 1. JungKwanJang Signature Brand Red */
-  --red-700: #B5222A;
-  --brand-primary: #B5222A;
-  --color-primary: #B5222A;
-  --color-primary-hover: #991C23;
+  --red-700: #4B193E;
+  --brand-primary: #4B193E;
+  --color-primary: #4B193E;
+  --color-primary-hover: #3A1230;
 
   /* 2. JungKwanJang Dark Charcoal & Luxury Black */
   --dark-bg: #181818;
@@ -155,7 +155,7 @@
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
   border-radius: 0.25rem;
-  background-color: #B5222A;
+  background-color: #4B193E;
   color: #FFFFFF;
   font-family: var(--font-sans);
   font-weight: 700;
@@ -167,8 +167,8 @@
 }
 
 .na-btn-primary:hover {
-  background-color: #991C23;
-  box-shadow: 0 4px 14px rgba(181, 34, 42, 0.3);
+  background-color: #3A1230;
+  box-shadow: 0 4px 14px rgba(75, 25, 62, 0.3);
 }
 
 /* Secondary Button (JungKwanJang Dark Charcoal) */
@@ -192,8 +192,8 @@
 }
 
 .na-btn-secondary:hover {
-  background-color: #B5222A;
-  box-shadow: 0 4px 14px rgba(181, 34, 42, 0.3);
+  background-color: #4B193E;
+  box-shadow: 0 4px 14px rgba(75, 25, 62, 0.3);
 }
 
 /* Outline Button (Clean Border) */
@@ -237,7 +237,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #B5222A;
+  background: #4B193E;
 }
 
 /* Infinite Seamless Marquee Animations */

@@ -65,7 +65,7 @@ export function GioHangView() {
               </p>
             </div>
             {totalCount > 0 && (
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-red-100 text-[#B5222A]">
+              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#4B193E]/10 text-[#4B193E]">
                 {totalCount} sản phẩm
               </span>
             )}
@@ -135,7 +135,7 @@ export function GioHangView() {
                               <div className="min-w-0 flex-1">
                                 <Link
                                   href={`/san-pham/${product.id}`}
-                                  className="font-bold text-sm text-[#111111] hover:text-[#B5222A] line-clamp-2 leading-snug transition-colors"
+                                  className="font-bold text-sm text-[#111111] hover:text-[#4B193E] line-clamp-2 leading-snug transition-colors"
                                 >
                                   {product.title}
                                 </Link>
@@ -145,7 +145,7 @@ export function GioHangView() {
                                   </p>
                                 )}
                                 <div className="mt-2 flex items-center gap-3 sm:hidden">
-                                  <span className="font-bold text-[#B5222A] text-sm">
+                                  <span className="font-bold text-[#4B193E] text-sm">
                                     {product.price}
                                   </span>
                                   <button
@@ -189,14 +189,14 @@ export function GioHangView() {
                                 </button>
                               </div>
 
-                              <div className="sm:hidden font-bold text-[#B5222A] text-sm">
+                              <div className="sm:hidden font-bold text-[#4B193E] text-sm">
                                 {formatNumberToVnd(itemTotal)}
                               </div>
                             </div>
 
                             {/* Subtotal & Delete (Desktop) */}
                             <div className="hidden sm:flex sm:col-span-2 items-center justify-end gap-3 text-right">
-                              <span className="text-sm font-bold text-[#B5222A]">
+                              <span className="text-sm font-bold text-[#4B193E]">
                                 {formatNumberToVnd(itemTotal)}
                               </span>
                               <button
@@ -218,7 +218,7 @@ export function GioHangView() {
                   <div className="p-4 sm:p-6 bg-[#F8F8F8] border-t border-[#EEEEEE] flex flex-wrap items-center justify-between gap-4">
                     <Link
                       href="/san-pham"
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#111111] hover:text-[#B5222A] transition-colors"
+                      className="inline-flex items-center gap-2 text-sm font-semibold text-[#111111] hover:text-[#4B193E] transition-colors"
                     >
                       <ArrowLeft className="w-4 h-4" />
                       <span>Tiếp tục mua hàng</span>
@@ -271,7 +271,7 @@ export function GioHangView() {
                     <div className="border-t border-[#EEEEEE] pt-4 flex items-baseline justify-between">
                       <span className="text-base font-bold text-[#111111]">Tổng thanh toán:</span>
                       <div className="text-right">
-                        <span className="text-2xl font-extrabold text-[#B5222A]">
+                        <span className="text-2xl font-extrabold text-[#4B193E]">
                           {formattedTotalPrice}
                         </span>
                         <div className="text-[11px] text-[#666666]">Đã bao gồm VAT</div>
@@ -299,7 +299,7 @@ export function GioHangView() {
                       <span>Đổi trả sản phẩm dễ dàng trong 7 ngày</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <Truck className="w-4 h-4 text-[#B5222A] shrink-0" />
+                      <Truck className="w-4 h-4 text-[#4B193E] shrink-0" />
                       <span>Kiểm tra hàng trước khi thanh toán</span>
                     </div>
                   </div>

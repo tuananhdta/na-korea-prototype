@@ -86,8 +86,8 @@ export function OrderSuccessModal({
         </button>
 
         {/* Header with decorative badge */}
-        <div className="bg-gradient-to-b from-red-50/70 via-white to-white px-6 pt-7 pb-3 text-center clear-both">
-          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#B5222A]/10 text-[#B5222A] ring-8 ring-red-50 mb-3 shadow-xs">
+        <div className="bg-gradient-to-b from-[#4B193E]/5 via-white to-white px-6 pt-7 pb-3 text-center clear-both">
+          <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#4B193E]/10 text-[#4B193E] ring-8 ring-[#4B193E]/5 mb-3 shadow-xs">
             <CheckCircle2 className="h-8 w-8 stroke-[2.2]" />
           </div>
 
@@ -100,7 +100,7 @@ export function OrderSuccessModal({
 
           <div className="mt-2 space-y-1 text-xs sm:text-sm text-[#333333] leading-relaxed max-w-md mx-auto">
             <p className="font-medium text-[#111111]">
-              Cảm ơn Quý khách <strong className="text-[#B5222A]">{orderDetails?.customerName}</strong> đã tin tưởng lựa chọn Na Korea.
+              Cảm ơn Quý khách <strong className="text-[#4B193E]">{orderDetails?.customerName}</strong> đã tin tưởng lựa chọn Na Korea.
             </p>
             <p className="text-gray-500">
               Đơn hàng của Quý khách đã được tiếp nhận và đang được xử lý.
@@ -111,13 +111,13 @@ export function OrderSuccessModal({
         {/* Bank Transfer VietQR Box (shown immediately if bank transfer chosen) */}
         {isBankTransfer && orderDetails && (
           <div className="px-5 sm:px-6 pt-2 pb-3">
-            <div className="rounded-2xl border-2 border-[#B5222A]/20 bg-gradient-to-b from-red-50/40 to-white p-4 sm:p-5 shadow-xs space-y-3.5">
-              <div className="flex items-center justify-between border-b border-red-100 pb-2.5">
-                <div className="flex items-center gap-2 text-sm font-bold text-[#B5222A]">
+            <div className="rounded-2xl border-2 border-[#4B193E]/20 bg-gradient-to-b from-[#4B193E]/5 to-white p-4 sm:p-5 shadow-xs space-y-3.5">
+              <div className="flex items-center justify-between border-b border-[#4B193E]/15 pb-2.5">
+                <div className="flex items-center gap-2 text-sm font-bold text-[#4B193E]">
                   <QrCode className="w-4 h-4" />
                   <span>Quét mã VietQR để thanh toán</span>
                 </div>
-                <span className="text-[11px] font-semibold text-[#B5222A] bg-red-100/80 px-2 py-0.5 rounded-full">
+                <span className="text-[11px] font-semibold text-[#4B193E] bg-[#4B193E]/10 px-2 py-0.5 rounded-full">
                   Xác nhận nhanh 24/7
                 </span>
               </div>
@@ -156,7 +156,7 @@ export function OrderSuccessModal({
                       <div className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">
                         Số tài khoản
                       </div>
-                      <div className="font-mono font-bold text-[#B5222A] text-sm sm:text-base tracking-wide">
+                      <div className="font-mono font-bold text-[#4B193E] text-sm sm:text-base tracking-wide">
                         {SITE_CONFIG.bankInfo.accountNumber}
                       </div>
                     </div>
@@ -193,7 +193,7 @@ export function OrderSuccessModal({
                       <div className="text-[10px] uppercase font-bold text-amber-800 tracking-wider">
                         Nội dung chuyển khoản (Bắt buộc)
                       </div>
-                      <div className="font-mono font-bold text-[#B5222A] text-xs sm:text-sm">
+                      <div className="font-mono font-bold text-[#4B193E] text-xs sm:text-sm">
                         {orderDetails.orderId}
                       </div>
                     </div>
@@ -218,8 +218,8 @@ export function OrderSuccessModal({
                 </div>
               </div>
 
-              <div className="text-[11px] text-[#666666] leading-relaxed bg-white/90 p-2.5 rounded-xl border border-red-100">
-                ⚠️ <strong>Lưu ý:</strong> Vui lòng giữ nguyên mã đơn hàng <strong className="text-[#B5222A] font-mono">{orderDetails.orderId}</strong> trong nội dung chuyển khoản để nhân viên đối soát và kích hoạt giao hàng nhanh nhất.
+              <div className="text-[11px] text-[#666666] leading-relaxed bg-white/90 p-2.5 rounded-xl border border-[#4B193E]/15">
+                ⚠️ <strong>Lưu ý:</strong> Vui lòng giữ nguyên mã đơn hàng <strong className="text-[#4B193E] font-mono">{orderDetails.orderId}</strong> trong nội dung chuyển khoản để nhân viên đối soát và kích hoạt giao hàng nhanh nhất.
               </div>
             </div>
           </div>
@@ -231,7 +231,7 @@ export function OrderSuccessModal({
             <div className="rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] p-4 text-xs sm:text-sm space-y-2.5">
               <div className="flex items-center justify-between border-b border-[#EEEEEE] pb-2">
                 <span className="text-[#666666]">Mã đơn hàng:</span>
-                <span className="font-mono font-bold text-[#B5222A] text-sm tracking-wide">
+                <span className="font-mono font-bold text-[#4B193E] text-sm tracking-wide">
                   {orderDetails.orderId}
                 </span>
               </div>
@@ -264,7 +264,7 @@ export function OrderSuccessModal({
 
               <div className="flex items-center justify-between">
                 <span className="font-bold text-[#111111]">Tổng thanh toán:</span>
-                <span className="text-base font-extrabold text-[#B5222A]">
+                <span className="text-base font-extrabold text-[#4B193E]">
                   {orderDetails.total}
                 </span>
               </div>
@@ -276,7 +276,7 @@ export function OrderSuccessModal({
         <div className="px-5 sm:px-6 pt-2 pb-2">
           <div className="flex items-center justify-around rounded-xl bg-[#EEEEEE]/50 py-2.5 px-3 text-[11px] text-[#333333]">
             <div className="flex items-center gap-1.5">
-              <PackageCheck className="h-3.5 w-3.5 text-[#B5222A]" />
+              <PackageCheck className="h-3.5 w-3.5 text-[#4B193E]" />
               <span>Đóng gói cẩn thận</span>
             </div>
             <div className="flex items-center gap-1.5">

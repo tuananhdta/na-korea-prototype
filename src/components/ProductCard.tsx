@@ -41,7 +41,7 @@ export function ProductCard({ product }: ProductCardProps) {
       <meta itemProp="image" content={product.image} />
       <meta itemProp="brand" content="Kim's Red Ginseng" />
 
-      <div className="group relative flex h-full flex-col overflow-hidden rounded bg-white border border-[#EEEEEE] transition-all duration-300 hover:border-[#B5222A] hover:shadow-md">
+      <div className="group relative flex h-full flex-col overflow-hidden rounded bg-white border border-[#EEEEEE] transition-all duration-300 hover:border-[#4B193E] hover:shadow-md">
         {/* Thumbnail Container */}
         <div className="relative aspect-square w-full overflow-hidden bg-[#FAFAFA]">
           <Link
@@ -61,7 +61,7 @@ export function ProductCard({ product }: ProductCardProps) {
           {/* Discount Badge */}
           {discountPercent > 0 && (
             <div className="absolute left-3 top-3 z-10">
-              <span className="inline-flex items-center bg-[#B5222A] px-2 py-0.5 font-figtree text-[11px] font-semibold text-white leading-[1.0]">
+              <span className="inline-flex items-center bg-[#4B193E] px-2 py-0.5 font-figtree text-[11px] font-semibold text-white leading-[1.0]">
                 -{discountPercent}%
               </span>
             </div>
@@ -79,7 +79,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <button
               type="button"
               onClick={() => addToCart(product, 1)}
-              className="flex-1 py-1.5 text-center font-sans text-[12px] sm:text-[13px] font-semibold leading-[1.0] tracking-[0.03em] bg-[#B5222A] text-white hover:bg-[#991C23] transition-colors"
+              className="flex-1 py-1.5 text-center font-sans text-[12px] sm:text-[13px] font-semibold leading-[1.0] tracking-[0.03em] bg-[#4B193E] text-white hover:bg-[#3A1230] transition-colors"
               title="Thêm vào giỏ hàng"
             >
               Thêm giỏ
@@ -91,7 +91,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="flex flex-1 flex-col justify-between p-4">
           <div>
             <Link href={`/san-pham/${product.id}`} className="block">
-              <h3 className="line-clamp-2 font-sans text-[15px] sm:text-base font-semibold text-[#111111] leading-[1.35] tracking-[-0.01em] transition-colors group-hover:text-[#B5222A]">
+              <h3 className="line-clamp-2 font-sans text-[15px] sm:text-base font-semibold text-[#111111] leading-[1.35] tracking-[-0.01em] transition-colors group-hover:text-[#4B193E]">
                 {product.title}
               </h3>
             </Link>
@@ -118,7 +118,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <link itemProp="availability" href="https://schema.org/InStock" />
 
             <div className="flex items-baseline gap-2">
-              <span className="text-base sm:text-lg font-bold text-[#B5222A] font-figtree leading-[1.2] tracking-[-0.01em]">
+              <span className="text-base sm:text-lg font-bold text-[#4B193E] font-figtree leading-[1.2] tracking-[-0.01em]">
                 {product.price}
               </span>
               {product.originalPrice && (
@@ -131,7 +131,7 @@ export function ProductCard({ product }: ProductCardProps) {
             <button
               type="button"
               onClick={() => addToCart(product, 1)}
-              className="flex h-7 w-7 items-center justify-center rounded bg-[#F5F5F5] text-[#111111] hover:bg-[#B5222A] hover:text-white transition-colors lg:hidden"
+              className="flex h-7 w-7 items-center justify-center rounded bg-[#F5F5F5] text-[#111111] hover:bg-[#4B193E] hover:text-white transition-colors lg:hidden"
               aria-label="Thêm vào giỏ"
             >
               <ShoppingBag className="h-3.5 w-3.5" />

@@ -51,7 +51,7 @@ export default function GioiThieuPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-gray-900 font-medium">Giới Thiệu</span>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-medium">Về Chúng Tôi</span>
+            <span className="text-[#4B193E] font-medium">Về Chúng Tôi</span>
           </nav>
         </div>
 
@@ -59,7 +59,7 @@ export default function GioiThieuPage() {
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                   TỔNG CÔNG TY NÔNG NGHIỆP NHÂN SÂM PUNGGI
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
@@ -70,15 +70,15 @@ export default function GioiThieuPage() {
                 </p>
                 <div className="space-y-2.5 pt-2">
                   <div className="flex items-center gap-2 text-sm text-gray-800">
-                    <CheckCircle2 className="w-4 h-4 text-[#b5222a]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#4B193E]" />
                     <span>100% Nhân sâm 6 năm tuổi canh tác hữu cơ không thuốc trừ sâu</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-800">
-                    <CheckCircle2 className="w-4 h-4 text-[#b5222a]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#4B193E]" />
                     <span>Quy trình chiết xuất nước tinh khiết nhiệt độ thấp lưu giữ trọn vẹn Ginsenoside</span>
                   </div>
                   <div className="flex items-center gap-2 text-sm text-gray-800">
-                    <CheckCircle2 className="w-4 h-4 text-[#b5222a]" />
+                    <CheckCircle2 className="w-4 h-4 text-[#4B193E]" />
                     <span>Chứng nhận quốc tế: HACCP, GMP, FDA Hoa Kỳ & ISO 22000</span>
                   </div>
                 </div>

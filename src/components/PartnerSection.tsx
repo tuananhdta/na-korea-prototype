@@ -124,7 +124,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
   return (
     <div
       key={`${keyPrefix}-${partner.id}`}
-      className="group/card relative flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-[#EEEEEE] bg-white px-5 py-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] duration-300 hover:border-[#B5222A]/40 hover:shadow-[0_8px_20px_rgba(181,34,42,0.10)]"
+      className="group/card relative flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-[#EEEEEE] bg-white px-5 py-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] duration-300 hover:border-[#4B193E]/40 hover:shadow-[0_8px_20px_rgba(75, 25, 62,0.10)]"
       title={`${partner.name} - ${partner.category}`}
     >
       <div className="flex h-full w-full items-center justify-center">
@@ -147,7 +147,7 @@ export function PartnerSection() {
       <div className="relative z-10 mx-auto max-w-[1240px] px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <span className="font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#B5222A]">
+          <span className="font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#4B193E]">
             Uy tín làm nên thương hiệu
           </span>
 
@@ -167,7 +167,7 @@ export function PartnerSection() {
         {/* ─── DÒNG 1: Đối tác Quốc tế & Hàn Quốc (Scroll Left: Phải -> Trái) ─── */}
         <div>
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-between">
-            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#B5222A] border-b border-[#B5222A]/30 pb-1">
+            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-semibold uppercase tracking-[0.05em] text-[#4B193E] border-b border-[#4B193E]/30 pb-1">
               <span>Đối Tác Quốc Tế & Hàn Quốc</span>
             </div>
             <span className="font-sans text-[11px] font-medium leading-[1.5] text-[#777777] hidden sm:inline-flex">

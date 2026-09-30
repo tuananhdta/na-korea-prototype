@@ -57,14 +57,14 @@ export default function NhanSamPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-gray-600 font-medium">Về Nhân Sâm</span>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#b5222a] font-bold">Nhân Sâm</span>
+            <span className="text-[#4B193E] font-bold">Nhân Sâm</span>
           </nav>
 
           {/* 2-Article Tab Control */}
           <div className="flex items-center gap-2 p-1.5 bg-gray-100/80 rounded-xl border border-gray-200/80 max-w-md shadow-2xs">
             <Link
               href="/nhan-sam"
-              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#B5222A] text-white shadow-xs transition-all"
+              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#4B193E] text-white shadow-xs transition-all"
             >
               Nhân Sâm (Goryeo)
             </Link>
@@ -82,7 +82,7 @@ export default function NhanSamPage() {
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <div className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+                <div className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                   KHÁI NIỆM & NGUỒN GỐC
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
@@ -111,7 +111,7 @@ export default function NhanSamPage() {
           {/* Section 2: Thành phần & Công dụng Saponin */}
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-10">
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                 GIÁ TRỊ DINH DƯỠNG
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
@@ -128,7 +128,7 @@ export default function NhanSamPage() {
             {/* 4 Core Saponin Benefits */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
                   <Flame className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-base">Phân Giải Mỡ Thừa</h3>
@@ -138,7 +138,7 @@ export default function NhanSamPage() {
               </div>
 
               <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
                   <Zap className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-base">Kích Hoạt Enzyme</h3>
@@ -148,7 +148,7 @@ export default function NhanSamPage() {
               </div>
 
               <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
                   <HeartPulse className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-base">Tổng Hợp Protein</h3>
@@ -158,7 +158,7 @@ export default function NhanSamPage() {
               </div>
 
               <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#b5222a] text-white flex items-center justify-center mx-auto shadow-sm">
+                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
                   <ShieldCheck className="w-6 h-6" />
                 </div>
                 <h3 className="font-bold text-gray-900 text-base">Phục Hồi Sức Bền</h3>
@@ -172,7 +172,7 @@ export default function NhanSamPage() {
           {/* Section 3: Phân biệt sâm Hàn Quốc vs Sâm ngoại quốc */}
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                 CẨM NANG PHÂN BIỆT
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
@@ -211,26 +211,26 @@ export default function NhanSamPage() {
               </div>
 
               {/* Korean Ginseng Card */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-red-50/60 border-2 border-[#b5222a]/30 space-y-4 shadow-sm">
-                <div className="flex items-center gap-2 text-[#b5222a] font-bold text-lg pb-2 border-b border-[#b5222a]/20">
-                  <CheckCircle2 className="w-5 h-5 text-[#b5222a]" />
+              <div className="p-6 sm:p-8 rounded-2xl bg-[#4B193E]/5 border-2 border-[#4B193E]/30 space-y-4 shadow-sm">
+                <div className="flex items-center gap-2 text-[#4B193E] font-bold text-lg pb-2 border-b border-[#4B193E]/20">
+                  <CheckCircle2 className="w-5 h-5 text-[#4B193E]" />
                   <span>Nhân Sâm Hàn Quốc (Korean Ginseng)</span>
                 </div>
                 <ul className="space-y-3 text-sm text-gray-800">
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#b5222a] mt-2 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
                     <span><strong>Bề mặt:</strong> Còn một lớp đất mỏng tự nhiên bám trên bề mặt.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#b5222a] mt-2 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
                     <span><strong>Phần đầu:</strong> Chắc khỏe, ngắn và tròn đầy đặn.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#b5222a] mt-2 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
                     <span><strong>Màu sắc:</strong> Màu vàng chanh hoặc vàng trắng óng ánh đặc trưng.</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#b5222a] mt-2 shrink-0" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
                     <span><strong>Phần chân & rễ:</strong> Chân phát triển nở nang, rễ chính dày và khỏe.</span>
                   </li>
                 </ul>
@@ -241,7 +241,7 @@ export default function NhanSamPage() {
           {/* Section 4: Các loại nhân sâm */}
           <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#b5222a]">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
                 PHÂN LOẠI THEO CHẾ BIẾN
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">

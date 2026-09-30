@@ -55,7 +55,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
       };
 
   return (
-    <div className="min-h-screen bg-[#FCFAF7] text-[#111111] selection:bg-[#B5222A] selection:text-white flex flex-col">
+    <div className="min-h-screen bg-[#FCFAF7] text-[#111111] selection:bg-[#4B193E] selection:text-white flex flex-col">
       <Header />
 
       <main className="flex-1 pb-24">
@@ -98,7 +98,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
             {/* Background Texture & Glow */}
             <div
               aria-hidden="true"
-              className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#B5222A]/20 blur-3xl"
+              className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-[#4B193E]/20 blur-3xl"
             />
             <div
               aria-hidden="true"
@@ -119,9 +119,9 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
               <div className="lg:col-span-7 space-y-4 sm:space-y-5">
                 {/* Brand Accent Dots */}
                 <div aria-hidden="true" className="flex h-3.5 items-center gap-1.5">
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#4B193E]" />
                   <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359]" />
-                  <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+                  <span className="h-1.5 w-1.5 rounded-full bg-[#4B193E]" />
                 </div>
 
                 <h3 className="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight leading-snug !text-white">

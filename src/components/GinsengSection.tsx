@@ -12,9 +12,9 @@ export function GinsengSection() {
           {/* Left Text Block */}
           <div className="lg:col-span-5 flex flex-col justify-center">
             <div aria-hidden="true" className="mb-4 flex h-4 w-16 items-center gap-1.5">
-              <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#4B193E]" />
               <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359]" />
-              <span className="h-1.5 w-1.5 rounded-full bg-[#B5222A]" />
+              <span className="h-1.5 w-1.5 rounded-full bg-[#4B193E]" />
             </div>
 
             <span className="text-[#666666] text-sm md:text-base font-normal">
@@ -29,7 +29,7 @@ export function GinsengSection() {
             <div className="w-24 md:w-72 h-[1px] bg-[#EEEEEE] my-6 md:my-8" />
 
             <div className="max-w-md">
-            <h3 className="font-sans text-xl md:text-[22px] font-semibold text-[#B5222A] mb-2">
+            <h3 className="font-sans text-xl md:text-[22px] font-semibold text-[#4B193E] mb-2">
                 Nhân sâm Punggi
               </h3>
               <p className="text-[15px] sm:text-[16px] text-[#333333] leading-relaxed">

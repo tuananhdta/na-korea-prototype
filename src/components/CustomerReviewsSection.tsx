@@ -84,7 +84,7 @@ export function CustomerReviewsSection({
                       <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
                     ))}
                   </div>
-                  <Quote className="h-5 w-5 text-[#B5222A]/20" />
+                  <Quote className="h-5 w-5 text-[#4B193E]/20" />
                 </div>
 
                 {/* Comment Text */}
@@ -96,7 +96,7 @@ export function CustomerReviewsSection({
               <div className="mt-6 border-t border-gray-100 pt-4">
                 <p className="font-bold text-xs sm:text-sm text-[#111111]">{rev.author}</p>
                 <p className="text-[11px] text-gray-500">{rev.role}</p>
-                <p className="mt-1 text-[11px] font-medium text-[#B5222A]">
+                <p className="mt-1 text-[11px] font-medium text-[#4B193E]">
                   Đã mua: {rev.productName}
                 </p>
               </div>

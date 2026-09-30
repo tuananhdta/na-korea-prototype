@@ -291,7 +291,7 @@ export function FloatingContact() {
             type="button"
             onClick={() => setMobileExpanded(!mobileExpanded)}
             aria-label={mobileExpanded ? "Đóng liên hệ" : "Mở liên hệ"}
-            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-white/30 bg-gradient-to-br from-[#181818] to-[#B5222A] px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(75,25,62,0.45)] transition-transform duration-200 active:scale-[0.98]"
+            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-white/30 bg-gradient-to-br from-[#181818] to-[#4B193E] px-4 text-sm font-bold text-white shadow-[0_8px_20px_rgba(75,25,62,0.45)] transition-transform duration-200 active:scale-[0.98]"
           >
             {mobileExpanded ? (
               <X className="h-4 w-4 shrink-0" />
@@ -310,9 +310,9 @@ export function FloatingContact() {
           <Link
             href="/san-pham"
             aria-label="Xem sản phẩm"
-            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-[#B5222A]/20 bg-white px-4 text-sm font-bold text-[#181818] shadow-[0_8px_20px_rgba(75,25,62,0.16)] transition-transform duration-200 active:scale-[0.98]"
+            className="flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-full border border-[#4B193E]/20 bg-white px-4 text-sm font-bold text-[#181818] shadow-[0_8px_20px_rgba(75,25,62,0.16)] transition-transform duration-200 active:scale-[0.98]"
           >
-            <ShoppingBag className="h-4 w-4 shrink-0 text-[#B5222A]" />
+            <ShoppingBag className="h-4 w-4 shrink-0 text-[#4B193E]" />
             <span>Sản Phẩm</span>
           </Link>
         </div>

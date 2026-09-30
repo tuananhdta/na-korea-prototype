@@ -15,10 +15,10 @@ export function BrandStorySection() {
             aria-hidden="true"
             className="mb-5 flex items-center justify-center gap-2"
           >
-            <span className="h-1 w-1 rounded-full bg-[#531C42]" />
-            <span className="h-1 w-1 rounded-full bg-[#531C42]" />
-            <span className="h-1 w-1 rounded-full bg-[#531C42]" />
-            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#531C42]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
           </div>
 
           <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
@@ -54,7 +54,7 @@ export function BrandStorySection() {
 
             <Link
               href="/gioi-thieu"
-              className="group mt-8 inline-flex items-center gap-4 rounded-lg border border-[#531C42] px-7 py-3.5 font-sans text-[15px] font-normal leading-[1] tracking-[-0.01em] text-[#531C42] transition-colors hover:bg-[#531C42] hover:text-white sm:mt-10"
+              className="group mt-8 inline-flex items-center gap-4 rounded-lg border border-[#4B193E] px-7 py-3.5 font-sans text-[15px] font-normal leading-[1] tracking-[-0.01em] text-[#4B193E] transition-colors hover:bg-[#4B193E] hover:text-white sm:mt-10"
             >
               <span>Câu chuyện thương hiệu</span>
               <span className="flex h-5 w-5 items-center justify-center rounded-full border border-current">

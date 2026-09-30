@@ -260,7 +260,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
           <a
             href="tel:0903409939"
-            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#B5222A] py-2.5 font-sans text-xs font-bold leading-[1.0] tracking-[0.03em] text-white shadow-md transition-colors hover:bg-[#991C23]"
+            className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#4B193E] py-2.5 font-sans text-xs font-bold leading-[1.0] tracking-[0.03em] text-white shadow-md transition-colors hover:bg-[#3A1230]"
           >
             <Phone className="w-4 h-4" />
             <span>HOTLINE: 090.340.9939</span>
