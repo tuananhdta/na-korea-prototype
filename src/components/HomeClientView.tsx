@@ -6,6 +6,7 @@ import { HeroSlider } from "@/components/HeroSlider";
 import { BrandStorySection } from "@/components/BrandStorySection";
 import { MetricsSection } from "@/components/MetricsSection";
 import { ProductSection } from "@/components/ProductSection";
+import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { PartnerSection } from "@/components/PartnerSection";
 import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
@@ -38,6 +39,9 @@ export function HomeClientView() {
 
         {/* 5. Products Showcase Section (Phase 4) */}
         <ProductSection />
+
+        {/* 6. Customer Testimonials */}
+        <TestimonialsSection />
       </main>
 
       {/* Footer */}

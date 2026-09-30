@@ -5,45 +5,63 @@ import { ArrowRight } from "lucide-react";
 
 export function BrandStorySection() {
   return (
-    <section className="relative py-20 md:py-28 overflow-hidden bg-white border-b border-[#EEEEEE]">
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center">
-        {/* Top Tagline */}
-        <div className="mb-6 font-figtree text-[11px] sm:text-xs font-semibold tracking-[0.05em] uppercase text-[#B5222A]">
-          <span>Hồng Sâm Kim — Nơi Tận Tâm Trở Thành Kiệt Tác</span>
-        </div>
-
-        {/* Main Title */}
-        <h2 className="font-sans text-2xl sm:text-3xl md:text-[36px] lg:text-[42px] font-bold text-[#111111] tracking-[-0.015em] leading-[1.4] mb-4">
-          Khởi Đầu Tuyệt Đẹp Từ Đất Mẹ Punggi
-        </h2>
-
-        {/* Subtitle */}
-        <p className="font-sans text-sm sm:text-base font-medium text-[#666666] tracking-[-0.01em] leading-[1.6] mb-6">
-          Lời nguyện ước cùng đất mẹ thiêng liêng và di sản 50 năm truyền thống
-        </p>
-
-        {/* Divider */}
-        <div className="w-16 h-1 bg-[#B5222A] mx-auto my-6 rounded-full" />
-
-        {/* Story Text */}
-        <div className="space-y-4 max-w-3xl mx-auto mb-10 text-[#333333] leading-relaxed">
-          <p className="font-sans text-lg sm:text-xl md:text-[24px] font-semibold text-[#111111] leading-[1.45] tracking-[-0.01em]">
-            Hồng sâm Kim&#8217;s lưu giữ trọn vẹn ở trạng thái nguyên bản trí tuệ ngàn năm của tiền nhân cùng vẻ đẹp thanh cao và nguồn sinh khí dồi dào từ triều đại Cao Ly.
-          </p>
-          <p className="font-sans text-sm sm:text-[15px] md:text-base text-[#666666] leading-[1.7] tracking-[-0.01em]">
-            Kể từ khi thành lập vào năm 1986, Tổng công ty Nông nghiệp Nhân sâm Punggi dưới sự dẫn dắt của nghệ nhân Kim Jeong Hwan luôn kiên định theo đuổi một mục tiêu duy nhất: kiến tạo những sản phẩm hồng sâm 6 năm tuổi thượng hạng nhất mang tới sức khỏe trường thọ cho mọi gia đình.
-          </p>
-        </div>
-
-        {/* Action Button */}
-        <div>
-          <Link
-            href="/gioi-thieu"
-            className="group na-btn-secondary px-8 py-3.5 text-[13px] sm:text-sm font-bold tracking-[0.03em] uppercase inline-flex items-center gap-2"
+    <section
+      className="relative overflow-hidden border-b border-[#EEEEEE] bg-white bg-left-top bg-repeat py-16 font-sans sm:py-20 lg:py-[120px]"
+      style={{ backgroundImage: "url('/images/brand-story-root.jpg')" }}
+    >
+      <div className="mx-auto max-w-[1140px] px-4 sm:px-6">
+        <div className="mx-auto max-w-[1080px] text-center">
+          <div
+            aria-hidden="true"
+            className="mb-5 flex items-center justify-center gap-2"
           >
-            <span>CÂU CHUYỆN THƯƠNG HIỆU</span>
-            <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
+            <span className="h-1 w-1 rounded-full bg-[#531C42]" />
+            <span className="h-1 w-1 rounded-full bg-[#531C42]" />
+            <span className="h-1 w-1 rounded-full bg-[#531C42]" />
+            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#531C42]" />
+          </div>
+
+          <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
+            Từ lời hứa của mẹ thiên nhiên
+          </p>
+
+          <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
+            Khởi đầu hoàn hảo cho Punggi Ginseng Farming Corp.
+          </h2>
+        </div>
+
+        <div className="mt-12 grid items-center gap-8 md:grid-cols-2 lg:mt-20 lg:gap-5">
+          <div className="relative aspect-video overflow-hidden bg-[#F5F3EF]">
+            <iframe
+              className="absolute inset-0 h-full w-full border-0"
+              src="https://www.youtube.com/embed/F0obQn6c_50?controls=1&rel=0&playsinline=0&modestbranding=0&autoplay=0"
+              title="김정환홍삼 '시간이 증명하는 진짜 홍삼'"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+
+          <div className="max-w-[530px] text-left md:ml-0">
+            <p className="font-sans text-base font-normal leading-6 text-[#111111]">
+              Hồng Sâm Kim’s Red Ginseng mang trong mình sức sống trí tuệ và khí tức của cổ nhân trải qua hàng nghìn năm cùng với linh khí và nguồn năng lượng cao quý của thời đại các vị Hoàng đế tại Triều Tiên.
+            </p>
+
+            <div className="my-8 h-px w-full max-w-[264px] bg-[#D8D2C8]" />
+
+            <p className="font-sans text-base font-normal leading-6 text-[#111111]">
+              Kể từ 1986, Punggi Ginseng Farming Corporation chỉ tập trung vào sản xuất các sản phẩm hồng sâm chất lượng cao.
+            </p>
+
+            <Link
+              href="/gioi-thieu"
+              className="group mt-8 inline-flex items-center gap-4 rounded-lg border border-[#531C42] px-7 py-3.5 font-sans text-[15px] font-normal leading-[1] tracking-[-0.01em] text-[#531C42] transition-colors hover:bg-[#531C42] hover:text-white sm:mt-10"
+            >
+              <span>Câu chuyện thương hiệu</span>
+              <span className="flex h-5 w-5 items-center justify-center rounded-full border border-current">
+                <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+              </span>
+            </Link>
+          </div>
         </div>
       </div>
     </section>
