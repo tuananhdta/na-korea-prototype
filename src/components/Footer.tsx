@@ -72,7 +72,7 @@ const usefulLinks: Array<{
   },
 ];
 
-function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" | "zalo" }) {
+function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" }) {
   if (name === "facebook") {
     return (
       <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
@@ -91,23 +91,9 @@ function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" | "zal
     );
   }
 
-  if (name === "tiktok") {
-    return (
-      <svg aria-hidden="true" viewBox="0 0 448 512" className="h-4 w-4 fill-current">
-        <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
-      </svg>
-    );
-  }
-
-  // Zalo official icon
   return (
-    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-4 w-4">
-      <g fill="currentColor">
-        <path d="M16 28.5h27c1.7 0 2.8 1.8 1.7 3.2L25.4 62.7h18.3c1.5 0 2.6 1.1 2.6 2.6v2.9c0 1.5-1.1 2.6-2.6 2.6H15.3c-1.7 0-2.8-1.8-1.7-3.2L32.8 36.7H16c-1.5 0-2.6-1.1-2.6-2.6v-2.9c0-1.6 1.1-2.7 2.6-2.7z" />
-        <path d="M60.1 40.5c5.7 0 9.7 4.3 9.7 10v20.4H62.3v-3.6c-1.9 2.5-4.9 4.2-8.5 4.2-6.4 0-10.8-4.7-10.8-11 0-6.4 4.6-11 11.4-11 2.9 0 5.3 1 7 2.5v-1.5c0-2.8-2-4.6-5-4.6-2.8 0-4.6 1.4-5 3.6l-6.8-1c1.1-5.3 5.7-8.9 12.1-8.9zm-3.1 19.6c2.8 0 5-2.1 5-5s-2.2-5-5-5-5 2.1-5 5 2.2 5 5 5z" />
-        <path d="M76.2 25.2h7.5v45.7h-7.5V25.2z" />
-        <path d="M94.5 40.5c7.4 0 13.3 5.4 13.3 12.9s-5.9 12.9-13.3 12.9-13.3-5.4-13.3-12.9 5.9-12.9 13.3-12.9zm0 18.3c3.5 0 6.1-2.5 6.1-5.4s-2.6-5.4-6.1-5.4-6.1 2.5-6.1 5.4 2.6 5.4 6.1 5.4z" />
-      </g>
+    <svg aria-hidden="true" viewBox="0 0 448 512" className="h-4 w-4 fill-current">
+      <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
     </svg>
   );
 }
@@ -146,17 +132,6 @@ function SocialLinks() {
           className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
         >
           <SocialIcon name="tiktok" />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://zalo.me/g/kogger629"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Zalo"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
-        >
-          <SocialIcon name="zalo" />
         </a>
       </li>
     </ul>

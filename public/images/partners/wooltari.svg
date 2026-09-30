@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 135" width="160" height="135">
+  <g transform="translate(80, 44)">
+    <!-- Outer orange ring -->
+    <circle cx="0" cy="0" r="34" fill="none" stroke="#F16E23" stroke-width="4"/>
+    
+    <!-- Stylized W formed by connected rounded strokes -->
+    <path d="M -21 -10 C -21 16 -7 20 -7 4 C -7 -7 -14 -7 -14 0" fill="none" stroke="#F16E23" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 21 -10 C 21 16 7 20 7 4 C 7 -7 14 -7 14 0" fill="none" stroke="#F16E23" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M -7 4 C -7 18 7 18 7 4" fill="none" stroke="#F16E23" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Bottom Text: WOOLTARI -->
+  <text x="80" y="116" font-family="'Pretendard', 'Montserrat', 'Helvetica Neue', Arial, sans-serif" font-size="19" font-weight="700" letter-spacing="2" fill="#F16E23" text-anchor="middle">
+    WOOLTARI
+  </text>
+</svg>

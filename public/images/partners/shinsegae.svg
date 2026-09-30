@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 70" width="240" height="70">
+  <g transform="translate(15, 10)">
+    <!-- Red Flower Emblem (7 petals) -->
+    <g transform="translate(24, 25) scale(0.75)">
+      <circle cx="0" cy="0" r="5" fill="#E60012"/>
+      <!-- 7 Petals -->
+      <path d="M 0 -8 C -4 -16 4 -16 0 -8 Z" fill="#E60012" transform="rotate(0)"/>
+      <path d="M 0 -8 C -4 -22 -14 -16 -6 -7 Z" fill="#E60012" transform="rotate(0)"/>
+      <circle cx="0" cy="-18" r="4.5" fill="#E60012"/>
+      <circle cx="16" cy="-9" r="4.5" fill="#E60012"/>
+      <circle cx="16" cy="9" r="4.5" fill="#E60012"/>
+      <circle cx="0" cy="18" r="4.5" fill="#E60012"/>
+      <circle cx="-16" cy="9" r="4.5" fill="#E60012"/>
+      <circle cx="-16" cy="-9" r="4.5" fill="#E60012"/>
+      <!-- Connecting petals -->
+      <path d="M -5 -5 L 5 5 M -5 5 L 5 -5" stroke="#E60012" stroke-width="4"/>
+    </g>
+
+    <!-- Korean Text: 신세계 -->
+    <text x="68" y="34" font-family="'Pretendard', 'Nanum Myeongjo', 'Batang', sans-serif" font-size="28" font-weight="800" letter-spacing="2" fill="#1C1819">
+      신세계
+    </text>
+  </g>
+</svg>

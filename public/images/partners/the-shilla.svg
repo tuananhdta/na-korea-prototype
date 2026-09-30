@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 250 85" width="250" height="85">
+  <!-- Top Text: THE SHILLA (Serif all-caps) -->
+  <text x="125" y="32" font-family="'Nanum Myeongjo', 'Batang', 'Times New Roman', 'Cinzel', serif" font-size="24" font-weight="700" letter-spacing="3.5" fill="#1C1819" text-anchor="middle">
+    THE SHILLA
+  </text>
+  
+  <!-- Bottom: [duty] in black box, [free] in red box -->
+  <g transform="translate(42, 45)">
+    <!-- duty black box -->
+    <rect x="0" y="0" width="78" height="32" rx="2" fill="#1C1819"/>
+    <text x="39" y="23" font-family="'Pretendard', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      duty
+    </text>
+    
+    <!-- free red box -->
+    <rect x="83" y="0" width="83" height="32" rx="2" fill="#E60012"/>
+    <text x="124" y="23" font-family="'Pretendard', 'Helvetica Neue', Arial, sans-serif" font-size="21" font-weight="700" fill="#FFFFFF" text-anchor="middle" letter-spacing="0.5">
+      free
+    </text>
+  </g>
+</svg>

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 75" width="220" height="75">
+  <g transform="translate(10, 6)">
+    <text x="100" y="20" font-family="'Pretendard', 'Montserrat', sans-serif" font-size="10" font-weight="700" letter-spacing="4" fill="#5F0080" text-anchor="middle">
+      MARKET
+    </text>
+    <text x="100" y="52" font-family="'Snell Roundhand', 'Brush Script MT', 'Dancing Script', cursive, serif" font-size="34" font-weight="700" font-style="italic" fill="#5F0080" text-anchor="middle">
+      Kurly
+    </text>
+  </g>
+</svg>
