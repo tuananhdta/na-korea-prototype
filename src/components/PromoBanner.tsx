@@ -184,17 +184,17 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
 
           {/* Center: Animated Slogan Capsule */}
           <div className="relative z-10 flex items-center justify-center animate-[banner-float_4s_ease-in-out_infinite]">
-            <div className="flex items-center gap-1.5 sm:gap-3 rounded-full border border-dashed border-[#4B193E]/30 bg-white/85 px-3 py-1 sm:px-6 sm:py-2 shadow-[0_4px_16px_rgba(75, 25, 62,0.08)] backdrop-blur-xs transition-all hover:border-[#4B193E]/60">
+            <div className="flex items-center gap-1 sm:gap-3 rounded-full border border-dashed border-[#4B193E]/30 bg-white/90 px-2 sm:px-6 py-1 sm:py-2 shadow-[0_4px_16px_rgba(75, 25, 62,0.08)] backdrop-blur-xs transition-all hover:border-[#4B193E]/60 max-w-[calc(100vw-50px)] sm:max-w-none">
               {/* Slogan Words */}
               <div className="flex items-center text-center">
-                <span className="text-gold-shimmer font-sans text-[11px] sm:text-[15px] md:text-[17px] font-extrabold tracking-wide whitespace-nowrap">
-                  Hồng sâm Kim
+                <span className="text-gold-shimmer font-sans text-[10px] sm:text-[15px] md:text-[17px] font-extrabold tracking-wide whitespace-nowrap">
+                  Hồng Kim Sâm
                 </span>
 
                 {/* Pulsing Ginseng Heartbeat dot */}
-                <span className="mx-1.5 sm:mx-2.5 inline-flex h-1.5 w-1.5 rounded-full bg-[#4B193E] animate-pulse shrink-0" />
+                <span className="mx-1 sm:mx-2.5 inline-flex h-1.5 w-1.5 rounded-full bg-[#4B193E] animate-pulse shrink-0" />
 
-                <span className="font-sans text-[11px] sm:text-[14px] md:text-[16px] font-bold text-[#5A2B18] tracking-tight whitespace-nowrap">
+                <span className="font-sans text-[10px] sm:text-[14px] md:text-[16px] font-bold text-[#5A2B18] tracking-tight whitespace-nowrap">
                   Nơi tận tâm trở thành kiệt tác
                 </span>
               </div>
