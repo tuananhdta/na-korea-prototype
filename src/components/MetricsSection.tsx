@@ -207,15 +207,26 @@ export function MetricsSection() {
     >
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
-          <div className="mb-3 font-figtree text-[11px] sm:text-xs font-bold tracking-[0.08em] uppercase text-[#4B193E]">
-            <span>Năng Lực &amp; Uy Tín Thương Hiệu</span>
+        <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
+          <div
+            aria-hidden="true"
+            className="mb-5 flex items-center justify-center gap-2"
+          >
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="h-1 w-1 rounded-full bg-[#4B193E]" />
+            <span className="ml-0.5 h-1 w-9 rounded-full bg-[#4B193E]" />
           </div>
-          <h2 className="font-sans text-2xl sm:text-3xl lg:text-[34px] font-bold text-[#111111] tracking-[-0.02em] leading-[1.35]">
+
+          <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
+            Năng Lực &amp; Uy Tín Thương Hiệu
+          </p>
+
+          <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
             Hồng Sâm Kim — Khẳng Định Vị Thế Dẫn Đầu
           </h2>
-          <div className="w-14 h-1 bg-[#4B193E] mx-auto my-3.5 rounded-full" />
-          <p className="font-sans text-xs sm:text-sm md:text-base text-[#666666] leading-[1.65] tracking-[-0.01em]">
+
+          <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-[860px] mx-auto">
             Thương hiệu Hồng sâm 6 năm tuổi Kim&apos;s Red Ginseng thượng hạng từ vùng núi Punggi, Hàn Quốc — Kế thừa trọn vẹn tinh hoa bí quyết canh tác &amp; chế biến của Nghệ nhân Kim Jeong Hwan.
           </p>
         </div>
