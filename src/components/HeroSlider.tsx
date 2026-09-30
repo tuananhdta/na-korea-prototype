@@ -4,26 +4,66 @@ import { useEffect, useRef, useState } from "react";
 import { Volume2, VolumeX } from "lucide-react";
 
 export function HeroSlider() {
-  const [isMuted, setIsMuted] = useState(true);
+  const [isMuted, setIsMuted] = useState(false);
   const [progress, setProgress] = useState(0);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const userInteractedRef = useRef(false);
 
   useEffect(() => {
-    // Ensure video starts playing immediately across all browser policies
-    if (videoRef.current) {
-      videoRef.current.defaultMuted = true;
-      videoRef.current.muted = true;
-      videoRef.current.play().catch(() => {
-        // Safe fallback if browser requires user gesture
-      });
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.volume = 1.0;
+    video.muted = false;
+
+    // Thử phát video kèm âm thanh trực tiếp
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setIsMuted(false);
+        })
+        .catch(() => {
+          // Trình duyệt chặn unmuted autoplay theo chính sách bảo mật -> chuyển sang phát câm tạm thời
+          if (videoRef.current) {
+            videoRef.current.muted = true;
+            setIsMuted(true);
+            videoRef.current.play().catch(() => {});
+          }
+
+          // Tự động bật âm thanh ngay khi người dùng có bất kỳ tương tác đầu tiên nào trên trang
+          const handleFirstGesture = () => {
+            if (userInteractedRef.current) return;
+            if (videoRef.current) {
+              videoRef.current.muted = false;
+              setIsMuted(false);
+              videoRef.current.play().catch(() => {});
+            }
+            cleanupListeners();
+          };
+
+          const cleanupListeners = () => {
+            window.removeEventListener("click", handleFirstGesture);
+            window.removeEventListener("touchstart", handleFirstGesture);
+            window.removeEventListener("keydown", handleFirstGesture);
+            window.removeEventListener("scroll", handleFirstGesture);
+          };
+
+          window.addEventListener("click", handleFirstGesture, { once: true, passive: true });
+          window.addEventListener("touchstart", handleFirstGesture, { once: true, passive: true });
+          window.addEventListener("keydown", handleFirstGesture, { once: true, passive: true });
+          window.addEventListener("scroll", handleFirstGesture, { once: true, passive: true });
+        });
     }
   }, []);
 
   const toggleMute = () => {
+    userInteractedRef.current = true;
     if (videoRef.current) {
-      videoRef.current.muted = !isMuted;
+      const nextMuted = !isMuted;
+      videoRef.current.muted = nextMuted;
+      setIsMuted(nextMuted);
     }
-    setIsMuted(!isMuted);
   };
 
   const handleTimeUpdate = () => {
@@ -54,7 +94,6 @@ export function HeroSlider() {
           ref={videoRef}
           src="/videos/hero-bg.mp4"
           autoPlay
-          muted
           loop
           playsInline
           preload="auto"
@@ -74,7 +113,7 @@ export function HeroSlider() {
         className="absolute bottom-8 right-5 sm:bottom-9 sm:right-8 z-30 flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full border border-white/20 bg-black/50 text-white backdrop-blur-md transition-all hover:bg-black/80 hover:scale-105 active:scale-95 cursor-pointer shadow-lg"
         title={isMuted ? "Bật âm thanh video" : "Tắt âm thanh video"}
       >
-        {isMuted ? <VolumeX className="h-4 w-4" /> : <Volume2 className="h-4 w-4 text-[#D4A359]" />}
+        {isMuted ? <VolumeX className="h-4 w-4 text-white/70" /> : <Volume2 className="h-4 w-4 text-[#D4A359]" />}
       </button>
 
       {/* ─── 4. Sleek Horizontal Video Progress Bar (bottom-5, dày 3px, màu Trắng) ─── */}
