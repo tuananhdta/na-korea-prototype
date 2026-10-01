@@ -33,8 +33,8 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
                 href={item.href}
                 className={`relative py-1 transition-all duration-200 shrink-0 ${
                   isActive
-                    ? "text-white font-bold drop-shadow-sm border-b-2 border-white"
-                    : "text-white/80 hover:text-white font-medium drop-shadow-xs hover:drop-shadow-sm"
+                    ? "text-white font-bold border-b-2 border-white"
+                    : "text-white/80 hover:text-white font-medium"
                 }`}
               >
                 {item.title}
