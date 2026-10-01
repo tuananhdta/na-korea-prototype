@@ -8,8 +8,6 @@ import { MobileDrawer } from "@/components/MobileDrawer";
 import { ProductCard } from "@/components/ProductCard";
 import { PageHero } from "@/components/PageHero";
 import { SAN_PHAM_SUB_NAV } from "@/lib/subNavItems";
-import { CustomerReviewsSection } from "@/components/CustomerReviewsSection";
-import { EeatKnowledgeSection } from "@/components/EeatKnowledgeSection";
 import productsData from "@/data/products.json";
 import { Product } from "@/types/product";
 import { Search, SlidersHorizontal, ChevronRight } from "lucide-react";
@@ -305,12 +303,6 @@ export function SanPhamCatalogView() {
             </div>
           )}
         </div>
-
-        {/* Customer Reviews Section (Social Proof) */}
-        <CustomerReviewsSection />
-
-        {/* E-E-A-T Knowledge Section (Authoritative SEO content) */}
-        <EeatKnowledgeSection />
       </main>
 
       <Footer />
