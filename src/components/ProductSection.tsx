@@ -55,18 +55,17 @@ export function ProductSection() {
 
         {/* ════════════════════════════════════════════════════════════════
            UNIFIED BENTO SHOWCASE (1 Hero + 4 Secondary 2x2 Grid)
-           1. Ảnh vuông chuẩn 1:1 (aspect-square)
-           2. Sửa triệt để khoảng trống thừa ở SP 4 & 5 (nhóm sát thông tin bên dưới)
-           3. Xóa bỏ hoàn toàn trùng lặp Giá ở SP lớn
-           4. Khung & góc bo ăn khớp đồng nhất, không bị lộ viền kép
-           5. Hover zoom 25% + Trượt hiện Giá & Nút thêm giỏ bên trong ảnh mượt mà
+           Fixes applied:
+           1. Sửa triệt để lỗi góc viền lòi góc xám (thêm rounded-b cho overlay + transform-gpu)
+           2. Xóa hoàn toàn Giá phía dưới ở các SP nhỏ (Giá chỉ hiện khi Hover trượt lên)
+           3. Cắt bỏ hoàn toàn khoảng trắng thừa ở dưới các Card SP nhỏ
            ════════════════════════════════════════════════════════════════ */}
         <div className="bg-white rounded-2xl border border-[#EEEEEE] shadow-sm overflow-hidden p-0">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#EEEEEE]">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#EEEEEE] items-stretch">
             
             {/* ═══════════ TOP 1 HERO CARD (LEFT 7 COLS) ═══════════ */}
             <div
-              className="md:col-span-7 group/hero relative bg-white p-4 sm:p-6 flex flex-col justify-start transition-colors duration-300 ease-out cursor-pointer hover:bg-[#FAF9F7]"
+              className="md:col-span-7 group/hero relative bg-white p-5 sm:p-7 flex flex-col justify-start transition-colors duration-300 ease-out cursor-pointer hover:bg-[#FAF9F7]"
               itemScope
               itemType="https://schema.org/Product"
             >
@@ -74,7 +73,7 @@ export function ProductSection() {
               <meta itemProp="image" content={heroProduct.image} />
 
               {/* Image Container (Aspect Square 1:1) */}
-              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-[#FAFAFA] mb-4">
+              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-[#FAFAFA] mb-4 transform-gpu isolate">
                 <Link href={`/san-pham/${heroProduct.id}`} className="relative block h-full w-full">
                   <Image
                     src={heroProduct.image}
@@ -98,7 +97,7 @@ export function ProductSection() {
                 </span>
 
                 {/* Hover Overlay Inside Image (Bottom Slide-up: Price + Add to Cart Button) */}
-                <div className="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-3 p-3.5 bg-white/95 backdrop-blur-md border-t border-[#EEEEEE] transition-transform duration-400 ease-out translate-y-full group-hover/hero:translate-y-0">
+                <div className="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-3 p-3.5 bg-white/95 backdrop-blur-md border-t border-[#EEEEEE] rounded-b-xl transition-transform duration-400 ease-out translate-y-full group-hover/hero:translate-y-0">
                   <div className="flex flex-col">
                     <span className="text-sm sm:text-base font-bold text-[#4B193E] font-figtree leading-none">
                       {heroProduct.price}
@@ -143,23 +142,12 @@ export function ProductSection() {
                 <span className="text-xs text-[#888888] font-figtree">({heroReviewCount} đánh giá)</span>
               </div>
 
-              {/* Title & Price Below */}
+              {/* Title */}
               <Link href={`/san-pham/${heroProduct.id}`} className="block">
                 <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111] leading-snug tracking-[-0.01em] transition-colors group-hover/hero:text-[#4B193E]">
                   {heroProduct.title}
                 </h3>
               </Link>
-
-              <div className="mt-2.5 flex items-baseline gap-2">
-                <span className="text-base sm:text-lg font-bold text-[#4B193E] font-figtree">
-                  {heroProduct.price}
-                </span>
-                {heroProduct.originalPrice && (
-                  <span className="text-xs text-[#888888] line-through font-figtree">
-                    {heroProduct.originalPrice}
-                  </span>
-                )}
-              </div>
             </div>
 
             {/* ═══════════ 4 SECONDARY CARDS (RIGHT 5 COLS - 2x2 GRID) ═══════════ */}
@@ -169,10 +157,10 @@ export function ProductSection() {
                 return (
                   <div
                     key={product.id}
-                    className="group/card relative bg-white p-3.5 sm:p-4 flex flex-col justify-start transition-colors duration-300 ease-out cursor-pointer hover:bg-[#FAF9F7]"
+                    className="group/card relative bg-white p-3.5 sm:p-4.5 flex flex-col justify-start transition-colors duration-300 ease-out cursor-pointer hover:bg-[#FAF9F7]"
                   >
                     {/* Image Container (Aspect Square 1:1) */}
-                    <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-[#FAFAFA] mb-3">
+                    <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-[#FAFAFA] mb-3 transform-gpu isolate">
                       <Link href={`/san-pham/${product.id}`} className="block h-full w-full">
                         <Image
                           src={product.image}
@@ -190,7 +178,7 @@ export function ProductSection() {
                       )}
 
                       {/* Hover Overlay Inside Image (Bottom Slide-up: Price + Add to Cart Button) */}
-                      <div className="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-1 p-2 bg-white/95 backdrop-blur-md border-t border-[#EEEEEE] transition-transform duration-400 ease-out translate-y-full group-hover/card:translate-y-0">
+                      <div className="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-1 p-2 bg-white/95 backdrop-blur-md border-t border-[#EEEEEE] rounded-b-lg transition-transform duration-400 ease-out translate-y-full group-hover/card:translate-y-0">
                         <span className="text-xs font-bold text-[#4B193E] font-figtree leading-none">
                           {product.price}
                         </span>
@@ -214,13 +202,6 @@ export function ProductSection() {
                         {product.title}
                       </h4>
                     </Link>
-
-                    {/* Price right under title */}
-                    <div className="mt-2 flex items-baseline gap-1.5">
-                      <span className="text-xs sm:text-sm font-bold text-[#4B193E] font-figtree">
-                        {product.price}
-                      </span>
-                    </div>
                   </div>
                 );
               })}
