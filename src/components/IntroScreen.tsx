@@ -60,10 +60,10 @@ export function IntroScreen({ onFinish }: IntroScreenProps) {
   return (
     <div
       aria-label="Video Giới Thiệu Thương Hiệu Hồng Sâm Kim"
-      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-black select-none transition-all duration-[850ms] ease-[cubic-bezier(0.77,0,0.175,1)] ${
+      className={`fixed inset-0 z-[9999] flex items-center justify-center bg-black select-none transition-all duration-[750ms] ease-in-out ${
         isFadingOut
-          ? "-translate-y-full opacity-90 scale-[1.02] filter blur-xs"
-          : "translate-y-0 opacity-100 scale-100"
+          ? "opacity-0 scale-[1.03] pointer-events-none"
+          : "opacity-100 scale-100"
       }`}
     >
       {/* 1. Video Element (Full screen object-cover) */}
@@ -78,15 +78,7 @@ export function IntroScreen({ onFinish }: IntroScreenProps) {
         className="h-full w-full object-cover object-center"
       />
 
-      {/* 2. Top & Bottom Brand Red Sweep Accent Bars */}
-      <div
-        aria-hidden="true"
-        className={`absolute inset-x-0 bottom-0 h-1.5 bg-gradient-to-r from-transparent via-[#4B193E] to-transparent transition-opacity duration-500 ${
-          isFadingOut ? "opacity-100 animate-pulse" : "opacity-0"
-        }`}
-      />
-
-      {/* 3. Minimalist Skip Button (Bottom Right) */}
+      {/* 2. Minimalist Skip Button (Bottom Right) */}
       <button
         type="button"
         onClick={handleSkip}
