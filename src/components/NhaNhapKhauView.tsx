@@ -85,8 +85,8 @@ export function NhaNhapKhauView() {
           imageOpacity={0.92}
         />
 
-        {/* Breadcrumb Navigation */}
-        <div className="border-b border-[#EEEEEE] bg-[#F8F8F8] py-3">
+        {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}
+        <div className="border-b border-[#EEEEEE] bg-white py-3">
           <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center space-x-2 font-sans text-xs text-[#666666]">
               <Link href="/" className="hover:text-[#4B193E] transition-colors">
@@ -98,10 +98,11 @@ export function NhaNhapKhauView() {
           </div>
         </div>
 
-        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 space-y-16 mt-10">
+        {/* Main Content: Quy chuẩn Spacing mt-4 đồng nhất */}
+        <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 space-y-12 mt-4">
           
           {/* Section 1: Giới thiệu thương hiệu & Điểm tựa uy tín */}
-          <section className="bg-white rounded-3xl p-6 sm:p-10 lg:p-12 shadow-xs border border-[#EEEEEE]">
+          <section className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-[#EEEEEE]">
             <div className="mx-auto max-w-[1080px] text-center mb-8 sm:mb-12">
               <SectionIndicator activeIndex={1} total={3} />
               <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">

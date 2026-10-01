@@ -9,8 +9,8 @@ import { TimelineTabs } from "@/components/TimelineTabs";
 import { ERA_DATA } from "@/data/timelineData";
 
 export const metadata: Metadata = {
-  title: "Lịch Sử Hình Thành & Phát Triển | Hồng Sâm Kim",
-  description: "Hành trình di sản 35+ năm từ năm 1986 của Hồng Sâm Kim (Red Ginseng) – Bậc thầy Nhân sâm Hàn Quốc Kim Jeong Hwan, nhập khẩu chính ngạch bởi CÔNG TY TNHH THƯƠNG MẠI NA KOREA.",
+  title: "Lịch Sử Hình Thành Thương Hiệu Hồng Sâm Kim | Di Sản 35+ Năm Punggi",
+  description: "Hành trình di sản từ năm 1986 của Hồng Sâm Kim (Red Ginseng) – Bậc thầy Nhân sâm Hàn Quốc Kim Jeong Hwan, nhập khẩu chính ngạch bởi CÔNG TY TNHH THƯƠNG MẠI NA KOREA.",
   keywords: [
     "Lịch sử hình thành",
     "Lịch sử Hồng Sâm Kim",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     canonical: `${SITE_CONFIG.siteUrl}/lich-su-hinh-thanh`,
   },
   openGraph: {
-    title: `Lịch Sử Hình Thành & Phát Triển | ${SITE_CONFIG.brandName}`,
+    title: `Lịch Sử Hình Thành Thương Hiệu Hồng Sâm Kim | ${SITE_CONFIG.brandName}`,
     description: "Chi tiết mốc lịch sử hình thành và phát triển từ năm 1986 đến nay của Hồng Sâm Kim Hàn Quốc.",
     url: `${SITE_CONFIG.siteUrl}/lich-su-hinh-thanh`,
     type: "website",
@@ -40,7 +40,7 @@ export default function LichSuHinhThanhPage() {
         "@type": "WebPage",
         "@id": `${SITE_CONFIG.siteUrl}/lich-su-hinh-thanh#webpage`,
         "url": `${SITE_CONFIG.siteUrl}/lich-su-hinh-thanh`,
-        "name": "Lịch Sử Hình Thành & Phát Triển | Hồng Sâm Kim",
+        "name": "Lịch Sử Hình Thành Thương Hiệu Hồng Sâm Kim",
         "description": "Hành trình di sản từ năm 1986 của Hồng Sâm Kim Hàn Quốc.",
       },
       {
@@ -84,19 +84,19 @@ export default function LichSuHinhThanhPage() {
       <Header />
 
       <main className="flex-1 pb-20">
-        {/* Page Hero */}
+        {/* Page Hero - Chuẩn SEO & GEO tinh gọn */}
         <PageHero
-          eyebrow="HÀNH TRÌNH HƠN 35 NĂM DI SẢN"
+          eyebrow="DI SẢN PUNGGI HÀN QUỐC"
           showEyebrow={true}
-          title="Lịch Sử Hình Thành"
-          description="&quot;Chúng tôi giữ vững sự kiên trì và chân thành trong việc nuôi trồng, chế biến nhân sâm 6 năm tuổi tại thủ phủ Punggi Hàn Quốc.&quot;"
+          title="Lịch Sử Hình Thành Thương Hiệu Hồng Sâm Kim"
+          description="&quot;Hành trình hơn 35 năm gìn giữ sự chân thành trong nuôi trồng và chế biến nhân sâm 6 năm tuổi từ thủ phủ Punggi.&quot;"
           image="/images/sub03.jpg"
           imageAlt="Lịch sử hình thành và phát triển Hồng Sâm Kim Punggi Hàn Quốc"
           imageOpacity={0.9}
         />
 
-        {/* Breadcrumb */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
+        {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-3 border-b border-gray-100">
           <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
             <Link href="/" className="hover:text-black transition-colors">
               Trang Chủ
@@ -110,22 +110,19 @@ export default function LichSuHinhThanhPage() {
           </nav>
         </div>
 
-        {/* Main Section: Interactive Era Timeline Tabs (Option 1) */}
-        <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-2">
-          <div className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
-            <div className="mb-8 border-b border-gray-100 pb-6">
-              <span className="text-xs font-extrabold text-[#4B193E] uppercase tracking-wider block mb-1">
+        {/* Main Section: Quy chuẩn khoảng cách mt-4 & pt-6 đồng nhất */}
+        <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-4">
+          <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-gray-200">
+            <div className="mb-8 border-b border-gray-100 pb-5">
+              <span className="text-[11px] font-extrabold text-[#4B193E] uppercase tracking-wider block mb-1">
                 PUNGGI GINSENG FARMING CORP
               </span>
-              <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                Các Giai Đoạn Lịch Sử Phát Triển Quốc Tế
+              <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900">
+                Hành Trình Phát Triển Qua Các Giai Đoạn
               </h2>
-              <p className="text-xs sm:text-sm text-gray-500 mt-1.5 max-w-3xl">
-                Chọn từng giai đoạn chiến lược bên dưới để khám phá hành trình hơn 35 năm từ nhà máy sản xuất sâm truyền thống Punggi năm 1986 đến thương hiệu quốc tế phân phối chính ngạch tại Việt Nam.
-              </p>
             </div>
 
-            {/* Component Tab Giai Đoạn (Giao diện chuẩn UI/UX + SEO/GEO) */}
+            {/* Component Tab Giai Đoạn (Giao diện chuẩn JungKwanJang 2 cột) */}
             <TimelineTabs />
           </div>
         </section>

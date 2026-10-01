@@ -83,8 +83,8 @@ export default function LoiChaoNgheNhanPage() {
           imageOpacity={0.9}
         />
 
-        {/* Breadcrumb */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
+        {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-3 border-b border-gray-100">
           <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
             <Link href="/" className="hover:text-black transition-colors">
               Trang Chủ
@@ -98,9 +98,9 @@ export default function LoiChaoNgheNhanPage() {
           </nav>
         </div>
 
-        {/* Section 1: Main Greeting Block */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-2">
-          <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
+        {/* Section 1: Quy chuẩn khoảng cách mt-4 & pt-6 đồng nhất */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-4">
+          <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-gray-200">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               {/* Cột trái: Văn bản SEO & Lời chào */}
               <div className="lg:col-span-7 space-y-5">
@@ -182,7 +182,7 @@ export default function LoiChaoNgheNhanPage() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Thẻ 1 */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-xs hover:shadow-md transition-shadow">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#4B193E]/10 flex items-center justify-center text-[#4B193E] mb-5">
                 <Award className="w-6 h-6" />
               </div>
@@ -195,7 +195,7 @@ export default function LoiChaoNgheNhanPage() {
             </div>
 
             {/* Thẻ 2 */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-xs hover:shadow-md transition-shadow">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#4B193E]/10 flex items-center justify-center text-[#4B193E] mb-5">
                 <Globe className="w-6 h-6" />
               </div>
@@ -208,7 +208,7 @@ export default function LoiChaoNgheNhanPage() {
             </div>
 
             {/* Thẻ 3 */}
-            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-100 shadow-xs hover:shadow-md transition-shadow">
+            <div className="bg-white p-6 sm:p-8 rounded-2xl border border-gray-200 shadow-2xs hover:shadow-md transition-shadow">
               <div className="w-12 h-12 rounded-xl bg-[#4B193E]/10 flex items-center justify-center text-[#4B193E] mb-5">
                 <ShieldCheck className="w-6 h-6" />
               </div>
