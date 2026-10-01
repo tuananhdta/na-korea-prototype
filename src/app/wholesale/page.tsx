@@ -1,3 +1,5 @@
-import DangKyDaiLyPage, { metadata } from "../dang-ky-dai-ly/page";
-export { metadata };
-export default DangKyDaiLyPage;
+import { redirect } from "next/navigation";
+
+export default function WholesalePage() {
+  redirect("/nha-nhap-khau");
+}

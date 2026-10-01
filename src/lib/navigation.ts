@@ -49,8 +49,8 @@ export const navItems: NavItem[] = [
     ],
   },
   {
-    title: "Đăng Ký Đại Lý",
-    href: "/dang-ky-dai-ly",
+    title: "Nhà Nhập Khẩu",
+    href: "/nha-nhap-khau",
   },
   {
     title: "Tin Tức",

@@ -84,7 +84,7 @@
   - **Dòng 1 (Đối tác Quốc tế & Hàn Quốc):** Hiển thị logo/tên các tập đoàn Shinhan Bank, KEB Hana Bank, Samsung SDS, Punggi Agricultural Corp, KCI, K-Market. Chạy liên tục từ **Phải sang Trái** (`animate-marquee-left`).
   - **Dòng 2 (Đối tác Doanh nghiệp & Phân phối Việt Nam):** Hiển thị logo/tên Vingroup, FPT, Viettel, Vietcombank, BIDV, Vietnam Airlines, Văn Phú - Invest. Chạy liên tục từ **Trái sang Phải** (`animate-marquee-right`).
   - **Hiệu ứng:** Infinite Seamless CSS loop keyframes, tự động dừng (`hover:paused`), mặt nạ mờ Gradient Masks 2 bên viền, thẻ card bo góc sang trọng chuẩn phong cách JungKwanJang.
-  - **CTA:** Khối kết nối đăng ký đại lý và đối tác quà tặng doanh nghiệp (`/dang-ky-dai-ly`).
+  - **CTA:** Khối kết nối đăng ký đại lý và đối tác quà tặng doanh nghiệp (`/nha-nhap-khau`).
 
 ---
 

@@ -57,7 +57,7 @@ const METRICS: MetricItem[] = [
       "đại lý trên toàn quốc",
     ],
     icon: Store,
-    href: "/dang-ky-dai-ly",
+    href: "/nha-nhap-khau",
     badge: "Hệ Thống",
     colorScheme: {
       iconColor: "text-[#0284C7]",

@@ -134,7 +134,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
 
                 <div className="pt-2 sm:pt-3 flex flex-wrap items-center gap-3.5">
                   <Link
-                    href="/dang-ky-dai-ly"
+                    href="/nha-nhap-khau"
                     className="na-btn-primary group px-6 sm:px-7 py-3.5 text-xs sm:text-sm font-bold uppercase tracking-wider"
                   >
                     <span>ĐĂNG KÝ HỢP TÁC ĐẠI LÝ</span>
