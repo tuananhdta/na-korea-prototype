@@ -68,23 +68,16 @@ export function LienHeView() {
 
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 mt-10 space-y-12">
           
-          {/* ─── 3 VIP QUICK-CONTACT CARDS ─── */}
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+          {/* ─── 3 SLIM COMPACT QUICK-CONTACT BADGES ─── */}
+          <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-3">
             
             {/* Card 1: Hotline 24/7 */}
             <a
               href="tel:0903409939"
-              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500 hover:shadow-[0_12px_28px_rgba(16,185,129,0.18)] active:scale-[0.99]"
+              className="group relative flex items-center gap-3.5 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xs transition-all duration-300 hover:border-emerald-500 hover:shadow-sm active:scale-[0.99]"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-emerald-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
-
-              <div className="relative flex h-13 w-13 shrink-0 items-center justify-center">
-                <span className="absolute inset-0 rounded-2xl bg-emerald-400/35 animate-ring-wave pointer-events-none" />
-                <span className="absolute -inset-0.5 rounded-2xl bg-emerald-500/20 animate-ping opacity-60 pointer-events-none group-hover:opacity-100" />
-                
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-green-600 text-white shadow-[0_4px_14px_rgba(16,185,129,0.38)] transition-all duration-300 group-hover:scale-108 group-hover:shadow-[0_6px_20px_rgba(16,185,129,0.5)]">
-                  <PhoneCallFilledIcon className="h-5 w-5 text-white animate-phone-ring transition-transform duration-300 group-hover:scale-110" />
-                </div>
+              <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-green-600 text-white shadow-[0_3px_10px_rgba(16,185,129,0.3)] transition-transform duration-300 group-hover:scale-105">
+                <PhoneCallFilledIcon className="h-5 w-5 text-white animate-phone-ring" />
               </div>
 
               <div className="relative min-w-0 flex-1">
@@ -92,11 +85,8 @@ export function LienHeView() {
                   <span>Hotline 24/7</span>
                   <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
                 </div>
-                <div className="font-sans text-lg font-extrabold text-[#15803D] group-hover:text-emerald-600 transition-colors truncate">
+                <div className="font-figtree text-base sm:text-lg font-extrabold text-[#15803D] group-hover:text-emerald-600 transition-colors truncate">
                   090.340.9939
-                </div>
-                <div className="font-sans text-xs text-[#666666] truncate">
-                  Tư vấn sản phẩm &amp; đơn hàng
                 </div>
               </div>
             </a>
@@ -106,15 +96,10 @@ export function LienHeView() {
               href="https://zalo.me/0903409939"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#0068FF] hover:shadow-[0_12px_28px_rgba(0,104,255,0.18)] active:scale-[0.99]"
+              className="group relative flex items-center gap-3.5 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xs transition-all duration-300 hover:border-[#0068FF] hover:shadow-sm active:scale-[0.99]"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
-
-              <div className="relative flex h-13 w-13 shrink-0 items-center justify-center">
-                <span className="absolute inset-0 rounded-2xl bg-blue-400/35 animate-ring-wave pointer-events-none" />
-                <div className="relative flex h-12 w-12 items-center justify-center transition-all duration-300 group-hover:scale-108">
-                  <ZaloLogo className="h-12 w-12 rounded-xl shadow-[0_4px_14px_rgba(0,104,255,0.38)] group-hover:shadow-[0_6px_20px_rgba(0,104,255,0.5)] animate-float-gentle" />
-                </div>
+              <div className="relative flex h-11 w-11 shrink-0 items-center justify-center transition-transform duration-300 group-hover:scale-105">
+                <ZaloLogo className="h-11 w-11 rounded-xl shadow-[0_3px_10px_rgba(0,104,255,0.3)]" />
               </div>
 
               <div className="relative min-w-0 flex-1">
@@ -122,11 +107,8 @@ export function LienHeView() {
                   <span>Chat Zalo Trực Tuyến</span>
                   <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#0068FF] animate-pulse" />
                 </div>
-                <div className="font-sans text-lg font-extrabold text-[#111111] group-hover:text-[#0068FF] transition-colors truncate">
+                <div className="font-sans text-sm sm:text-base font-bold text-[#111111] group-hover:text-[#0068FF] transition-colors truncate">
                   Zalo OA Kim&apos;s Ginseng
-                </div>
-                <div className="font-sans text-xs text-[#666666] truncate">
-                  Giải đáp &amp; hỗ trợ 1:1 nhanh
                 </div>
               </div>
             </a>
@@ -134,18 +116,10 @@ export function LienHeView() {
             {/* Card 3: Google Gmail */}
             <a
               href="mailto:Kimsredginseng@gmail.com"
-              className="group relative flex items-center gap-4 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white p-5 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-[#EA4335] hover:shadow-[0_12px_28px_rgba(234,67,53,0.18)] active:scale-[0.99]"
+              className="group relative flex items-center gap-3.5 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xs transition-all duration-300 hover:border-[#EA4335] hover:shadow-sm active:scale-[0.99]"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-red-50/70 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none" />
-
-              <div className="relative flex h-13 w-13 shrink-0 items-center justify-center">
-                <span className="absolute inset-0 rounded-2xl bg-red-400/30 animate-ring-wave pointer-events-none" />
-                
-                <div className="relative flex h-12 w-12 items-center justify-center rounded-xl bg-white border border-[#EEEEEE] shadow-[0_4px_14px_rgba(234,67,53,0.18)] transition-all duration-300 group-hover:scale-108 group-hover:border-[#EA4335]/40 group-hover:shadow-[0_6px_20px_rgba(234,67,53,0.3)]">
-                  <div className="animate-float-gentle transition-transform duration-300 group-hover:scale-110">
-                    <GoogleGmailLogo className="h-6 w-6" />
-                  </div>
-                </div>
+              <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white border border-[#EEEEEE] shadow-2xs transition-transform duration-300 group-hover:scale-105 group-hover:border-[#EA4335]/40">
+                <GoogleGmailLogo className="h-5.5 w-5.5" />
               </div>
 
               <div className="relative min-w-0 flex-1">
@@ -153,11 +127,8 @@ export function LienHeView() {
                   <span>Hộp Thư Tiếp Nhận</span>
                   <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#EA4335] animate-pulse" />
                 </div>
-                <div className="font-sans text-base font-extrabold text-[#111111] group-hover:text-[#EA4335] transition-colors truncate">
+                <div className="font-sans text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#EA4335] transition-colors truncate">
                   Kimsredginseng@gmail.com
-                </div>
-                <div className="font-sans text-xs text-[#666666] truncate">
-                  Phản hồi trong vòng 2 giờ
                 </div>
               </div>
             </a>
