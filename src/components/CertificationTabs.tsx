@@ -92,7 +92,7 @@ export function CertificationTabs() {
         </div>
       </div>
 
-      {/* CỘT PHẢI (Content 8/12): Grid Ảnh Siêu Tối Giản (Chỉ gồm Ảnh + Title Tiếng Việt) */}
+      {/* CỘT PHẢI (Content 8/12): Grid Ảnh Siêu Tối Giản */}
       <div className="lg:col-span-8 space-y-6">
         {/* Tóm tắt Danh mục đang chọn */}
         <div className="bg-white border border-gray-200 p-5 sm:p-6 rounded-xl shadow-2xs flex items-center justify-between gap-4">
@@ -186,7 +186,7 @@ export function CertificationTabs() {
         </div>
       </div>
 
-      {/* Lightbox / Modal Popup Chi Tiết: Hiển thị đầy đủ thông tin khi click */}
+      {/* Lightbox / Modal Popup Chi Tiết: Tối giản, đã ẩn dòng lặp bảo chứng */}
       {selectedCertificate && (
         <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fadeIn"
@@ -229,15 +229,9 @@ export function CertificationTabs() {
                   </p>
                 </div>
 
-                <div className="space-y-3 pt-4 border-t border-gray-200 text-xs">
-                  <div>
-                    <span className="font-semibold text-gray-700 block">Cơ quan thẩm định & cấp bằng:</span>
-                    <span className="text-gray-600">{selectedCertificate.issuingBody}</span>
-                  </div>
-                  <div>
-                    <span className="font-semibold text-gray-700 block">Thương hiệu & Đơn vị bảo chứng:</span>
-                    <span className="text-gray-600">Hồng Sâm Kim (Kim's Red Ginseng) — Nhập khẩu bởi Công ty TNHH Thương Mại NA Korea</span>
-                  </div>
+                <div className="pt-4 border-t border-gray-200 text-xs">
+                  <span className="font-semibold text-gray-700 block mb-0.5">Cơ quan thẩm định & cấp bằng:</span>
+                  <span className="text-gray-600">{selectedCertificate.issuingBody}</span>
                 </div>
 
                 <button
