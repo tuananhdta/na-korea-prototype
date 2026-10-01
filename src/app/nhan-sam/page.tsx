@@ -442,7 +442,6 @@ export default function NhanSamPage() {
                   Giải Đáp Thắc Mắc Nguồn Gốc & Công Dụng Nhân Sâm
                 </h3>
               </div>
-              <span className="text-xs text-gray-400 font-medium">Chuẩn GEO AI</span>
             </div>
 
             <div className="space-y-3">

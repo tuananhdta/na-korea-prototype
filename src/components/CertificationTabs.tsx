@@ -152,7 +152,6 @@ export function CertificationTabs() {
                 Giải Đáp Thắc Mắc Kiểm Định (FAQ)
               </h3>
             </div>
-            <span className="text-[11px] text-gray-400">Chuẩn GEO AI</span>
           </div>
 
           <div className="space-y-2">

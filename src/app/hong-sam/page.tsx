@@ -376,7 +376,6 @@ export default function HongSamPage() {
                   Giải Đáp Thắc Mắc Về Quy Trình Chế Biến Hồng Sâm
                 </h3>
               </div>
-              <span className="text-xs text-gray-400 font-medium">Chuẩn GEO AI</span>
             </div>
 
             <div className="space-y-3">
