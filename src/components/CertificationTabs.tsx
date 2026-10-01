@@ -9,7 +9,7 @@ import {
   CertificateItem,
 } from "@/data/certificationData";
 import { SITE_CONFIG } from "@/lib/siteConfig";
-import { ChevronDown, Eye, ShieldCheck, Award, X, Building2, Phone } from "lucide-react";
+import { ChevronDown, Eye, Award, X, Building2, Phone } from "lucide-react";
 
 export function CertificationTabs() {
   const [activeCategory, setActiveCategory] = useState<string>("tat-ca");
@@ -31,7 +31,7 @@ export function CertificationTabs() {
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
-      {/* CỘT TRÁI (Sidebar 4/12): Tabs điều hướng tinh gọn + Khung định danh NA Korea */}
+      {/* CỘT TRÁI (Sidebar 4/12): Tabs điều hướng nằm dọc + Khung thông tin NA Korea */}
       <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-5">
         <div className="space-y-2">
           <div className="text-[11px] font-bold uppercase tracking-widest text-gray-400 px-1">
@@ -71,7 +71,7 @@ export function CertificationTabs() {
           </div>
         </div>
 
-        {/* Khung Định danh Thực thể (GEO Anchor Box) Tinh gọn 2 Dòng */}
+        {/* Khung Định danh Thực thể (GEO Anchor Box) Tinh gọn */}
         <div className="hidden lg:block bg-white border border-gray-200 rounded-xl p-4 space-y-2 shadow-2xs">
           <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-[#500028]">
             <Building2 className="w-3.5 h-3.5" />
@@ -92,9 +92,9 @@ export function CertificationTabs() {
         </div>
       </div>
 
-      {/* CỘT PHẢI (Content 8/12): Grid Ảnh Tối Giản & FAQ Trích Xuất AI */}
+      {/* CỘT PHẢI (Content 8/12): Grid Ảnh Siêu Tối Giản (Chỉ gồm Ảnh + Title Tiếng Việt) */}
       <div className="lg:col-span-8 space-y-6">
-        {/* Tóm tắt Danh mục đang chọn - Gọn gàng 1 Dòng */}
+        {/* Tóm tắt Danh mục đang chọn */}
         <div className="bg-white border border-gray-200 p-5 sm:p-6 rounded-xl shadow-2xs flex items-center justify-between gap-4">
           <div>
             <span className="text-[10px] font-bold text-[#500028] tracking-widest uppercase block mb-1">
@@ -109,15 +109,15 @@ export function CertificationTabs() {
           </span>
         </div>
 
-        {/* Certificate Cards Grid: Tinh gọn, loại bỏ text thừa trên thẻ mặt ngoài */}
+        {/* Certificate Cards Grid: Chỉ bao gồm Ảnh + Title Tiếng Việt */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
           {filteredCertificates.map((cert) => (
             <article
               key={cert.id}
               onClick={() => setSelectedCertificate(cert)}
-              className="group cursor-pointer flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xs transition-all duration-300 hover:-translate-y-1 hover:border-[#500028]/30 hover:shadow-md"
+              className="group cursor-pointer flex flex-col overflow-hidden rounded-xl border border-gray-200 bg-white shadow-2xs transition-all duration-300 hover:-translate-y-1 hover:border-[#500028]/40 hover:shadow-md"
             >
-              {/* Image Preview Container */}
+              {/* Image Container với Nút Xem chi tiết khi Hover */}
               <div className="relative aspect-3/4 w-full overflow-hidden bg-gray-50/60 p-4 border-b border-gray-100">
                 <Image
                   src={cert.src}
@@ -127,27 +127,17 @@ export function CertificationTabs() {
                   className="object-contain p-2 transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/40 opacity-0 transition-opacity duration-300 group-hover:opacity-100 flex items-center justify-center">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/95 text-xs font-semibold text-gray-900 shadow-sm">
-                    <Eye className="w-3.5 h-3.5 text-[#500028]" /> Phóng to xem chi tiết
+                  <span className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-full bg-white/95 text-xs font-semibold text-gray-900 shadow-sm">
+                    <Eye className="w-3.5 h-3.5 text-[#500028]" /> Xem chi tiết
                   </span>
                 </div>
               </div>
 
-              {/* Card Information: Tối giản sắc nét */}
-              <div className="flex flex-1 flex-col justify-between p-4 space-y-2">
-                <div>
-                  <span className="text-[10px] font-semibold text-[#500028] uppercase tracking-wider bg-[#500028]/5 px-2 py-0.5 rounded-xs w-fit inline-block mb-1.5">
-                    {cert.englishTitle}
-                  </span>
-                  <h3 className="text-xs sm:text-sm font-bold text-gray-900 leading-snug group-hover:text-[#500028] transition-colors line-clamp-2">
-                    {cert.title}
-                  </h3>
-                </div>
-
-                <div className="pt-2 border-t border-gray-100 flex items-center justify-between text-[11px] text-gray-400">
-                  <span className="truncate max-w-[170px] text-gray-500">{cert.issuingBody}</span>
-                  <span className="text-[#500028] font-semibold group-hover:underline shrink-0">Xem thêm &rarr;</span>
-                </div>
+              {/* Title Tiếng Việt Tối Giản */}
+              <div className="p-4 text-center">
+                <h3 className="text-xs sm:text-sm font-bold text-gray-900 leading-snug group-hover:text-[#500028] transition-colors">
+                  {cert.title}
+                </h3>
               </div>
             </article>
           ))}
@@ -196,7 +186,7 @@ export function CertificationTabs() {
         </div>
       </div>
 
-      {/* Lightbox / Modal View: Nơi hiển thị đầy đủ thông tin chi tiết nhất */}
+      {/* Lightbox / Modal Popup Chi Tiết: Hiển thị đầy đủ thông tin khi click */}
       {selectedCertificate && (
         <div
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fadeIn"
@@ -225,7 +215,7 @@ export function CertificationTabs() {
                 />
               </div>
 
-              {/* Details view */}
+              {/* Popup details view */}
               <div className="flex flex-col justify-between space-y-4">
                 <div>
                   <span className="inline-block text-xs font-semibold text-[#500028] bg-[#500028]/10 px-2.5 py-1 rounded-full mb-3">
@@ -252,9 +242,9 @@ export function CertificationTabs() {
 
                 <button
                   onClick={() => setSelectedCertificate(null)}
-                  className="w-full py-2.5 px-4 bg-[#500028] text-white text-xs font-semibold rounded-lg hover:bg-[#3d001f] transition-colors shadow-xs"
+                  className="w-full py-2.5 px-4 bg-[#500028] text-white text-xs font-semibold rounded-lg hover:bg-[#3d001f] transition-colors shadow-xs cursor-pointer"
                 >
-                  Hoàn Tất Xem Chứng Nhận
+                  Hoàn Tất Xem Chi Tiết
                 </button>
               </div>
             </div>
