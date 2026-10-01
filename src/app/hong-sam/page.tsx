@@ -140,8 +140,8 @@ export default function HongSamPage() {
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-4 pb-12 font-sans">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             
-            {/* CỘT TRÁI (Sidebar 4/12): Tabs Dọc + Mục Lục + Khung NA Korea */}
-            <div className="lg:col-span-4 lg:sticky lg:top-28 space-y-5">
+            {/* CỘT TRÁI (Sidebar 3/12 - 25%): Tabs Dọc + Mục Lục + Khung NA Korea */}
+            <div className="lg:col-span-3 lg:sticky lg:top-28 space-y-5">
               
               {/* Card 1: Danh mục về Nhân Sâm */}
               <div className="space-y-2">
@@ -227,8 +227,8 @@ export default function HongSamPage() {
               </div>
             </div>
 
-            {/* CỘT PHẢI (Content 8/12): Nội dung bài viết Hồng sâm */}
-            <div className="lg:col-span-8 space-y-12">
+            {/* CỘT PHẢI (Content 9/12 - 75%): Nội dung bài viết Hồng sâm */}
+            <div className="lg:col-span-9 space-y-12">
               
               {/* Top Sub-heading */}
               <div className="border-b border-gray-200 pb-6 font-sans">
