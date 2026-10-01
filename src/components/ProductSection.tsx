@@ -54,100 +54,100 @@ export function ProductSection() {
         </div>
 
         {/* ════════════════════════════════════════════════════════════════
-           UNIFIED BENTO SHOWCASE (1 Hero + 4 Secondary 2x2 Grid)
-           Fixes applied:
-           1. Sửa triệt để lỗi góc viền lòi góc xám (thêm rounded-b cho overlay + transform-gpu)
-           2. Xóa hoàn toàn Giá phía dưới ở các SP nhỏ (Giá chỉ hiện khi Hover trượt lên)
-           3. Cắt bỏ hoàn toàn khoảng trắng thừa ở dưới các Card SP nhỏ
+           GIẢI PHÁP 1: UNIFIED BENTO BOX 1PX + 3D POP & VIỀN ĐỎ
+           - 1 Khung liền kề phân tách bằng viền 1px (divide-x divide-y)
+           - Khi hover ô nào: ô đó nổi 3D (z-20, scale, shadow), viền Đỏ Sâm (#4B193E)
+           - Hiện đầy đủ Giá & Nút mua hàng mượt mà khi hover
            ════════════════════════════════════════════════════════════════ */}
         <div className="bg-white rounded-2xl border border-[#EEEEEE] shadow-sm overflow-hidden p-0">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#EEEEEE] items-stretch">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-0 divide-y md:divide-y-0 md:divide-x divide-[#EEEEEE]">
             
             {/* ═══════════ TOP 1 HERO CARD (LEFT 7 COLS) ═══════════ */}
             <div
-              className="md:col-span-7 group/hero relative bg-white p-5 sm:p-7 flex flex-col justify-start transition-colors duration-300 ease-out cursor-pointer hover:bg-[#FAF9F7]"
+              className="md:col-span-7 group/hero relative bg-white p-5 sm:p-7 flex flex-col justify-between transition-all duration-300 hover:z-20 hover:scale-[1.012] hover:shadow-2xl border-2 border-transparent hover:border-[#4B193E] rounded-xl cursor-pointer"
               itemScope
               itemType="https://schema.org/Product"
             >
               <meta itemProp="name" content={heroProduct.title} />
               <meta itemProp="image" content={heroProduct.image} />
 
-              {/* Image Container (Aspect Square 1:1) */}
-              <div className="relative aspect-square w-full overflow-hidden rounded-xl bg-[#FAFAFA] mb-4 transform-gpu isolate">
-                <Link href={`/san-pham/${heroProduct.id}`} className="relative block h-full w-full">
-                  <Image
-                    src={heroProduct.image}
-                    alt={heroProduct.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 58vw"
-                    className="object-cover object-center transition-transform duration-700 ease-out group-hover/hero:scale-[1.25]"
-                    priority
-                  />
-                </Link>
+              <div>
+                {/* Image Container */}
+                <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg bg-[#FAFAFA] mb-4">
+                  <Link href={`/san-pham/${heroProduct.id}`} className="relative block h-full w-full">
+                    <Image
+                      src={heroProduct.image}
+                      alt={heroProduct.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 58vw"
+                      className="object-cover object-center transition-transform duration-500 group-hover/hero:scale-105"
+                      priority
+                    />
+                  </Link>
 
-                {/* Badges */}
-                {getDiscountPercent(heroProduct) > 0 && (
-                  <span className="absolute left-3 top-3 z-10 bg-[#4B193E] text-white px-2.5 py-1 font-figtree text-xs font-semibold rounded shadow-xs">
-                    -{getDiscountPercent(heroProduct)}%
-                  </span>
-                )}
-
-                <span className="absolute right-3 top-3 z-10 bg-[#D4A359] text-white px-2.5 py-1 text-[11px] font-bold rounded uppercase tracking-wider shadow-xs">
-                  ★ Best Seller
-                </span>
-
-                {/* Hover Overlay Inside Image (Bottom Slide-up: Price + Add to Cart Button) */}
-                <div className="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-3 p-3.5 bg-white/95 backdrop-blur-md border-t border-[#EEEEEE] rounded-b-xl transition-transform duration-400 ease-out translate-y-full group-hover/hero:translate-y-0">
-                  <div className="flex flex-col">
-                    <span className="text-sm sm:text-base font-bold text-[#4B193E] font-figtree leading-none">
-                      {heroProduct.price}
+                  {getDiscountPercent(heroProduct) > 0 && (
+                    <span className="absolute left-3 top-3 bg-[#4B193E] text-white px-2.5 py-0.5 font-figtree text-xs font-semibold rounded shadow-xs">
+                      -{getDiscountPercent(heroProduct)}%
                     </span>
-                    {heroProduct.originalPrice && (
-                      <span className="text-[11px] text-[#888888] line-through font-figtree mt-0.5">
-                        {heroProduct.originalPrice}
-                      </span>
-                    )}
-                  </div>
+                  )}
 
-                  <div className="flex items-center gap-2">
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        addToCart(heroProduct, 1);
-                      }}
-                      className="flex items-center gap-1.5 px-3.5 py-2 bg-[#4B193E] text-white text-xs font-bold rounded hover:bg-[#3A1230] transition-colors cursor-pointer shadow-xs"
-                    >
-                      <ShoppingBag className="h-3.5 w-3.5" />
-                      <span>Thêm giỏ</span>
-                    </button>
-                    <Link
-                      href={`/san-pham/${heroProduct.id}`}
-                      className="px-3 py-2 text-xs font-bold border border-[#111111] text-[#111111] rounded hover:bg-[#111111] hover:text-white transition-colors"
-                    >
-                      Chi tiết
-                    </Link>
-                  </div>
+                  <span className="absolute right-3 top-3 bg-[#D4A359] text-white px-2.5 py-0.5 text-[11px] font-bold rounded uppercase tracking-wider shadow-xs">
+                    ★ Best Seller
+                  </span>
                 </div>
+
+                {/* Rating */}
+                <div className="flex items-center gap-1.5 mb-2">
+                  <div className="flex items-center text-amber-500">
+                    {[...Array(5)].map((_, i) => (
+                      <Star key={i} className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
+                    ))}
+                  </div>
+                  <span className="font-bold text-[#333333] text-xs font-figtree">{heroRating.toFixed(1)}</span>
+                  <span className="text-xs text-[#888888] font-figtree">({heroReviewCount} đánh giá)</span>
+                </div>
+
+                {/* Title */}
+                <Link href={`/san-pham/${heroProduct.id}`} className="block">
+                  <h3 className="font-sans text-lg sm:text-xl font-bold text-[#111111] leading-snug tracking-[-0.01em] transition-colors group-hover/hero:text-[#4B193E]">
+                    {heroProduct.title}
+                  </h3>
+                </Link>
               </div>
 
-              {/* Rating */}
-              <div className="flex items-center gap-1.5 mb-2">
-                <div className="flex items-center text-amber-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="h-3.5 w-3.5 fill-amber-500 text-amber-500" />
-                  ))}
+              {/* Price & Action Bar (Trượt hiện khi Hover trên Desktop) */}
+              <div className="mt-5 pt-4 border-t border-[#EEEEEE] flex flex-wrap items-center justify-between gap-3 opacity-90 lg:opacity-0 group-hover/hero:lg:opacity-100 transition-opacity duration-300">
+                <div className="flex items-baseline gap-2">
+                  <span className="text-xl sm:text-2xl font-bold text-[#4B193E] font-figtree">
+                    {heroProduct.price}
+                  </span>
+                  {heroProduct.originalPrice && (
+                    <span className="text-xs text-[#888888] line-through font-figtree">
+                      {heroProduct.originalPrice}
+                    </span>
+                  )}
                 </div>
-                <span className="font-bold text-[#333333] text-xs font-figtree">{heroRating.toFixed(1)}</span>
-                <span className="text-xs text-[#888888] font-figtree">({heroReviewCount} đánh giá)</span>
-              </div>
 
-              {/* Title */}
-              <Link href={`/san-pham/${heroProduct.id}`} className="block">
-                <h3 className="font-sans text-base sm:text-lg font-bold text-[#111111] leading-snug tracking-[-0.01em] transition-colors group-hover/hero:text-[#4B193E]">
-                  {heroProduct.title}
-                </h3>
-              </Link>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      addToCart(heroProduct, 1);
+                    }}
+                    className="flex items-center gap-1.5 px-4 py-2 bg-[#4B193E] text-white text-xs font-bold rounded hover:bg-[#3A1230] transition-colors cursor-pointer shadow-xs"
+                  >
+                    <ShoppingBag className="h-3.5 w-3.5" />
+                    <span>Thêm giỏ</span>
+                  </button>
+                  <Link
+                    href={`/san-pham/${heroProduct.id}`}
+                    className="px-4 py-2 text-xs font-bold border border-[#111111] text-[#111111] rounded hover:bg-[#111111] hover:text-white transition-colors"
+                  >
+                    Chi tiết →
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* ═══════════ 4 SECONDARY CARDS (RIGHT 5 COLS - 2x2 GRID) ═══════════ */}
@@ -157,51 +157,54 @@ export function ProductSection() {
                 return (
                   <div
                     key={product.id}
-                    className="group/card relative bg-white p-3.5 sm:p-4.5 flex flex-col justify-start transition-colors duration-300 ease-out cursor-pointer hover:bg-[#FAF9F7]"
+                    className="group/card relative bg-white p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 hover:z-20 hover:scale-[1.03] hover:shadow-xl border-2 border-transparent hover:border-[#4B193E] rounded-lg cursor-pointer"
                   >
-                    {/* Image Container (Aspect Square 1:1) */}
-                    <div className="relative aspect-square w-full overflow-hidden rounded-lg bg-[#FAFAFA] mb-3 transform-gpu isolate">
-                      <Link href={`/san-pham/${product.id}`} className="block h-full w-full">
-                        <Image
-                          src={product.image}
-                          alt={product.title}
-                          fill
-                          sizes="(max-width: 640px) 50vw, 25vw"
-                          className="object-cover object-center transition-transform duration-700 ease-out group-hover/card:scale-[1.25]"
-                        />
-                      </Link>
-
-                      {discount > 0 && (
-                        <span className="absolute left-2 top-2 z-10 bg-[#4B193E] text-white text-[10px] font-bold px-1.5 py-0.5 rounded font-figtree">
-                          -{discount}%
-                        </span>
-                      )}
-
-                      {/* Hover Overlay Inside Image (Bottom Slide-up: Price + Add to Cart Button) */}
-                      <div className="absolute inset-x-0 bottom-0 z-20 flex items-center justify-between gap-1 p-2 bg-white/95 backdrop-blur-md border-t border-[#EEEEEE] rounded-b-lg transition-transform duration-400 ease-out translate-y-full group-hover/card:translate-y-0">
-                        <span className="text-xs font-bold text-[#4B193E] font-figtree leading-none">
-                          {product.price}
-                        </span>
-                        <button
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            addToCart(product, 1);
-                          }}
-                          className="flex items-center gap-1 px-2 py-1 bg-[#4B193E] text-white text-[10px] font-bold rounded hover:bg-[#3A1230] transition-colors cursor-pointer shadow-xs shrink-0"
-                        >
-                          <ShoppingBag className="w-3 h-3" />
-                          <span>Thêm giỏ</span>
-                        </button>
+                    <div>
+                      {/* Image */}
+                      <div className="relative aspect-square w-full overflow-hidden rounded bg-[#FAFAFA] mb-3">
+                        <Link href={`/san-pham/${product.id}`} className="block h-full w-full">
+                          <Image
+                            src={product.image}
+                            alt={product.title}
+                            fill
+                            sizes="(max-width: 640px) 50vw, 25vw"
+                            className="object-cover object-center transition-transform duration-500 group-hover/card:scale-105"
+                          />
+                        </Link>
+                        {discount > 0 && (
+                          <span className="absolute left-2 top-2 bg-[#4B193E] text-white text-[10px] font-bold px-1.5 py-0.5 rounded font-figtree">
+                            -{discount}%
+                          </span>
+                        )}
                       </div>
+
+                      {/* Title */}
+                      <Link href={`/san-pham/${product.id}`} className="block">
+                        <h4 className="line-clamp-2 text-xs sm:text-sm font-bold text-[#111111] leading-snug group-hover/card:text-[#4B193E]">
+                          {product.title}
+                        </h4>
+                      </Link>
                     </div>
 
-                    {/* Title */}
-                    <Link href={`/san-pham/${product.id}`} className="block">
-                      <h4 className="line-clamp-2 text-xs font-bold text-[#111111] leading-snug group-hover/card:text-[#4B193E]">
-                        {product.title}
-                      </h4>
-                    </Link>
+                    {/* Price & Hover Cart Button */}
+                    <div className="mt-3 pt-2 border-t border-[#EEEEEE]">
+                      <div className="flex items-baseline gap-1.5">
+                        <span className="text-sm sm:text-base font-bold text-[#4B193E] font-figtree">
+                          {product.price}
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          addToCart(product, 1);
+                        }}
+                        className="mt-2 w-full py-1.5 bg-[#4B193E] text-white text-[11px] font-bold rounded opacity-100 lg:opacity-0 group-hover/card:lg:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-1 cursor-pointer shadow-xs"
+                      >
+                        <ShoppingBag className="w-3 h-3" />
+                        <span>Thêm giỏ</span>
+                      </button>
+                    </div>
                   </div>
                 );
               })}
