@@ -18,7 +18,7 @@ export const CAM_NANG_SUB_NAV = [
 ];
 
 export const NHA_NHAP_KHAU_SUB_NAV = [
-  { title: "Nhà Nhập Khẩu NA Korea", href: "/ve-nha-nhap-khau" },
+  { title: "Nhà Nhập Khẩu NA Korea", href: "/nha-nhap-khau" },
   { title: "Đăng Ký Đại Lý", href: "/dang-ky-dai-ly" },
 ];
 

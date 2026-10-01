@@ -85,7 +85,7 @@ export function NhaNhapKhauView() {
           imageAlt="Nhà nhập khẩu NA Korea - Hồng Kim Sâm"
           imageOpacity={0.92}
           subNavItems={NHA_NHAP_KHAU_SUB_NAV}
-          currentHref="/ve-nha-nhap-khau"
+          currentHref="/nha-nhap-khau"
         />
 
         {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}
@@ -96,7 +96,11 @@ export function NhaNhapKhauView() {
                 Trang Chủ
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-              <span className="font-semibold text-[#4B193E]">Nhà Nhập Khẩu</span>
+              <Link href="/nha-nhap-khau" className="hover:text-[#4B193E] transition-colors">
+                Nhà Nhập Khẩu
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
+              <span className="font-semibold text-[#4B193E]">Nhà Nhập Khẩu NA Korea</span>
             </nav>
           </div>
         </div>

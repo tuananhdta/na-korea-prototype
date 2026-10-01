@@ -64,7 +64,11 @@ export function LienHeView() {
                 Trang Chủ
               </Link>
               <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-              <span className="font-semibold text-[#4B193E]">Liên Hệ</span>
+              <Link href="/lien-he" className="hover:text-[#4B193E] transition-colors">
+                Liên Hệ
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
+              <span className="font-semibold text-[#4B193E]">Thông Tin Liên Hệ</span>
             </nav>
           </div>
         </div>

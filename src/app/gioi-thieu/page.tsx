@@ -106,7 +106,7 @@ export default function GioiThieuPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-gray-900 font-medium">Giới Thiệu</span>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#4B193E] font-medium">Lời Hứa Từ Đất Mẹ</span>
+            <span className="text-[#4B193E] font-medium">Thương Hiệu</span>
           </nav>
         </div>
 

@@ -51,7 +51,9 @@ export function TinTucListView() {
             <nav className="flex items-center space-x-2 text-xs text-[#666666]">
               <Link href="/" className="hover:text-[#4B193E] transition-colors">Trang Chủ</Link>
               <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
-              <span className="text-[#4B193E] font-semibold">Tin Tức & Hoạt Động</span>
+              <Link href="/tin-tuc" className="hover:text-[#4B193E] transition-colors">Tin Tức</Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
+              <span className="text-[#4B193E] font-semibold">Tất Cả Bản Tin</span>
             </nav>
           </div>
         </div>

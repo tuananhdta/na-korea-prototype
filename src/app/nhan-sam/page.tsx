@@ -133,9 +133,7 @@ export default function NhanSamPage() {
               Giới Thiệu
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-gray-600 font-medium">Về Nhân Sâm</span>
-            <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#500028] font-bold">Nhân Sâm Goryeo</span>
+            <span className="text-[#500028] font-bold">Nguồn Gốc Nhân Sâm</span>
           </nav>
         </div>
 

@@ -96,7 +96,9 @@ export function BlogDetailView({
           <nav className="flex flex-wrap items-center gap-1.5 text-xs text-[#666666]">
             <Link href="/" className="hover:text-[#4B193E] transition-colors">Trang Chủ</Link>
             <ChevronRight className="h-3.5 w-3.5 text-[#A8A196]" />
-            <Link href="/tin-tuc" className="hover:text-[#4B193E] transition-colors">Tin Tức & Hoạt Động</Link>
+            <Link href="/tin-tuc" className="hover:text-[#4B193E] transition-colors">Tin Tức</Link>
+            <ChevronRight className="h-3.5 w-3.5 text-[#A8A196]" />
+            <Link href="/tin-tuc" className="hover:text-[#4B193E] transition-colors">Tất Cả Bản Tin</Link>
             <ChevronRight className="h-3.5 w-3.5 text-[#A8A196]" />
             <span className="font-semibold text-[#4B193E] truncate max-w-[240px] sm:max-w-md md:max-w-lg">
               {post.title}

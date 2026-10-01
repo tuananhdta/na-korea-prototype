@@ -15,6 +15,7 @@ import {
 } from "@/data/catalogs";
 import {
   ArrowRight,
+  ChevronRight,
   Eye,
 } from "lucide-react";
 
@@ -72,6 +73,25 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
           subNavItems={CAM_NANG_SUB_NAV}
           currentHref={activeTab === "product-2026" ? "/cam-nang" : "/cam-nang/ginsenoside"}
         />
+
+        {/* Breadcrumb Navigation */}
+        <div className="border-b border-[#EEEEEE] bg-white py-3">
+          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
+            <nav className="flex items-center space-x-2 font-sans text-xs text-[#666666]">
+              <Link href="/" className="hover:text-[#4B193E] transition-colors">
+                Trang Chủ
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
+              <Link href="/cam-nang" className="hover:text-[#4B193E] transition-colors">
+                Cẩm Nang
+              </Link>
+              <ChevronRight className="w-3.5 h-3.5 text-[#A8A196]" />
+              <span className="font-semibold text-[#4B193E]">
+                {activeTab === "product-2026" ? "Catalogue 2026" : "Cẩm Nang Ginsenoside"}
+              </span>
+            </nav>
+          </div>
+        </div>
 
         {/* ═══ Main Content Section ═══ */}
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8">

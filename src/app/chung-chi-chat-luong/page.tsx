@@ -107,7 +107,7 @@ export default function ChungChiChatLuongPage() {
               Giới Thiệu
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#500028] font-medium">Chứng Chỉ & Bằng Sáng Chế</span>
+            <span className="text-[#500028] font-medium">Chứng Chỉ Quốc Tế</span>
           </nav>
         </div>
 
