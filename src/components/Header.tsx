@@ -190,34 +190,36 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                           : "font-medium text-[#111111] hover:text-[#4B193E]"
                     }`}
                   >
-                    <span>{item.title}</span>
+                    <span className="relative flex h-full items-center justify-center">
+                      <span>{item.title}</span>
+
+                      {/* Active / Hover underline: exact width of text, placed at bottom-0 */}
+                      <span
+                        aria-hidden="true"
+                        className={`absolute bottom-0 left-0 right-0 h-[2.5px] origin-center rounded-t-full transition-all duration-300 ${
+                          isTopTransparent
+                            ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+                            : "bg-[#4B193E] shadow-[0_0_8px_rgba(75, 25, 62,0.4)]"
+                        } ${
+                          isHovered || isRouteActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
+                        }`}
+                      />
+                    </span>
 
                     {item.subItems && (
                       <ChevronDown
                         aria-hidden="true"
                         className={`h-3 w-3 shrink-0 transition-transform duration-200 ${
-                          isHovered
-                            ? "rotate-180 text-[#4B193E]"
-                            : isRouteActive
+                          isHovered ? "rotate-180" : ""
+                        } ${
+                          isTopTransparent
+                            ? "text-white"
+                            : isHovered || isRouteActive
                               ? "text-[#4B193E]"
-                              : isTopTransparent
-                                ? "text-white/90"
-                                : "text-[#666666]"
+                              : "text-[#666666]"
                         }`}
                       />
                     )}
-
-                    {/* Active / Hover underline: white on the overlay header, brand red on light header */}
-                    <span
-                      aria-hidden="true"
-                      className={`absolute bottom-0 left-2 right-2 h-[2.5px] origin-center rounded-t-full transition-all duration-300 ${
-                        isTopTransparent
-                          ? "bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)]"
-                          : "bg-[#4B193E] shadow-[0_0_8px_rgba(75, 25, 62,0.4)]"
-                      } ${
-                        isHovered || isRouteActive ? "scale-x-100 opacity-100" : "scale-x-0 opacity-0"
-                      }`}
-                    />
                   </Link>
                 </div>
               );
