@@ -275,7 +275,7 @@ const footerJsonLd = {
 
 export function Footer() {
   return (
-    <footer className="relative overflow-hidden border-t border-[#4B193E]/35 bg-[#1E0A0D] font-sans text-white">
+    <footer className="relative overflow-hidden border-t border-[#D4A359]/35 bg-gradient-to-b from-[#4A163D] via-[#3B0F30] to-[#2B0823] font-sans text-white">
       {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
       <script
         type="application/ld+json"
@@ -285,16 +285,16 @@ export function Footer() {
       {/* Subtle Luxury Radial Texture */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.025]"
+        className="pointer-events-none absolute inset-0 opacity-[0.03]"
         style={{
-          backgroundImage: `radial-gradient(#FFF 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(#D4A359 1px, transparent 1px)`,
           backgroundSize: "28px 28px",
         }}
       />
 
-      {/* Top Brand Red Accent Line with Infinite Border Beam */}
+      {/* Top Brand Gold Accent Line with Infinite Border Beam */}
       <div className="relative h-[2px] w-full overflow-hidden bg-white/10">
-        <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#4B193E] to-transparent animate-border-beam" />
+        <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#D4A359] to-transparent animate-border-beam" />
       </div>
 
       <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 sm:pb-12">
@@ -317,7 +317,7 @@ export function Footer() {
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 
-            <p className="max-w-sm text-xs leading-relaxed text-[#D6D0D0] sm:text-sm">
+            <p className="max-w-sm text-xs leading-relaxed text-[#E5D7DE] sm:text-sm">
               Thương hiệu Hồng sâm 6 năm tuổi thượng hạng vùng núi Punggi Hàn Quốc, được kiến tạo từ 50 năm tâm huyết và bí quyết gia truyền của nghệ nhân Kim Jeong Hwan.
             </p>
 
@@ -343,13 +343,13 @@ export function Footer() {
 
           {/* ═══ Cột 2: Đơn vị nhập khẩu & Trụ sở (Col 3) ═══ */}
           <div className="lg:col-span-3 space-y-4">
-            <div className="border-b border-white/10 pb-2">
+            <div className="border-b border-white/15 pb-2">
               <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
                 Đơn vị nhập khẩu
               </h3>
             </div>
 
-            <div className="space-y-3 text-xs leading-relaxed text-[#D6D0D0]">
+            <div className="space-y-3 text-xs leading-relaxed text-[#E5D7DE]">
               <a
                 href="https://nakorea.vn/"
                 target="_blank"
@@ -371,25 +371,25 @@ export function Footer() {
                 <p className="font-bold text-white uppercase text-[13px]">
                   CÔNG TY TNHH THƯƠNG MẠI NA KOREA
                 </p>
-                <p className="mt-0.5 text-[11px] text-[#B7AEB0]">
+                <p className="mt-0.5 text-[11px] text-[#CBBAC4]">
                   GPĐKKD/MST: 0109946846 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp
                 </p>
               </div>
 
               <address className="not-italic space-y-2.5 pt-1">
-                <div className="flex items-start gap-2 text-[#D6D0D0]">
+                <div className="flex items-start gap-2 text-[#E5D7DE]">
                   <MapPin className="h-4 w-4 shrink-0 text-[#D4A359] mt-0.5" />
                   <span>LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-[#D6D0D0]">
+                <div className="flex items-center gap-2 text-[#E5D7DE]">
                   <Phone className="h-4 w-4 shrink-0 text-[#D4A359]" />
                   <a href="tel:0903409939" className="hover:text-white transition-colors">
                     090.340.9939
                   </a>
                 </div>
 
-                <div className="flex items-center gap-2 text-[#D6D0D0]">
+                <div className="flex items-center gap-2 text-[#E5D7DE]">
                   <Mail className="h-4 w-4 shrink-0 text-[#D4A359]" />
                   <a href="mailto:contact@nakorea.vn" className="hover:text-white transition-colors">
                     contact@nakorea.vn
@@ -401,21 +401,21 @@ export function Footer() {
 
           {/* ═══ Cột 3: Chính sách & Hỗ trợ (Col 2) ═══ */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="border-b border-white/10 pb-2">
+            <div className="border-b border-white/15 pb-2">
               <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
                 Chính sách
               </h3>
             </div>
 
             <nav aria-label="Liên kết chính sách">
-              <ul className="space-y-2.5 text-xs text-[#D6D0D0]">
+              <ul className="space-y-2.5 text-xs text-[#E5D7DE]">
                 {usefulLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
                       className="group flex items-start gap-1.5 transition-all duration-200 hover:text-white hover:translate-x-1"
                     >
-                      <ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#D4A359]/70 transition-transform duration-200 group-hover:text-[#D4A359] group-hover:translate-x-1 mt-0.5" />
+                      <ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#D4A359] transition-transform duration-200 group-hover:text-white group-hover:translate-x-1 mt-0.5" />
                       <span className="leading-snug">{link.label}</span>
                     </Link>
                   </li>
@@ -426,14 +426,14 @@ export function Footer() {
 
           {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) (Animation #2: Glow & Shimmer) ═══ */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="rounded-2xl border border-[#D4A359]/30 bg-white/[0.08] p-4 lg:p-3.5 xl:p-5 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-[#D4A359]/55 hover:bg-white/[0.11] hover:shadow-[0_12px_36px_rgba(75,25,62,0.5)]">
+            <div className="rounded-2xl border border-[#D4A359]/35 bg-white/[0.08] p-4 lg:p-3.5 xl:p-5 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-[#D4A359]/60 hover:bg-white/[0.12] hover:shadow-[0_12px_36px_rgba(75,25,62,0.6)]">
               <div className="flex items-center gap-2 mb-2">
                 <FileText className="h-4 w-4 text-[#D4A359]" />
                 <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
                   Đăng ký nhận tư vấn
                 </h3>
               </div>
-              <p className="mb-3.5 text-[11px] leading-relaxed text-[#D6D0D0]">
+              <p className="mb-3.5 text-[11px] leading-relaxed text-[#E5D7DE]">
                 Nhận báo giá ưu đãi & tư vấn liệu trình hồng sâm chuyên sâu từ chuyên gia.
               </p>
               <ConsultationForm />
@@ -443,13 +443,13 @@ export function Footer() {
       </div>
 
       {/* ═══ Dải đáy: Copyright & Social Links ═══ */}
-      <div className="border-t border-[#4B193E]/20 bg-[#181818]/90 py-4 px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 text-xs text-[#BEB5B7] sm:flex-row sm:items-center sm:justify-between">
+      <div className="border-t border-white/10 bg-[#24061D]/90 py-4 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 text-xs text-[#CBBAC4] sm:flex-row sm:items-center sm:justify-between">
           <p>
             © 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.
           </p>
           <div className="flex items-center gap-3">
-            <span className="hidden text-[11px] text-[#BEB5B7] md:inline">Kết nối với chúng tôi:</span>
+            <span className="hidden text-[11px] text-[#CBBAC4] md:inline">Kết nối với chúng tôi:</span>
             <SocialLinks />
           </div>
         </div>
@@ -457,5 +457,6 @@ export function Footer() {
     </footer>
   );
 }
+
 
 
