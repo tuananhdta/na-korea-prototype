@@ -127,25 +127,25 @@ export default function LichSuHinhThanhPage() {
           </div>
         </section>
 
-        {/* Footer CTA */}
+        {/* Footer CTA - Phong cách Tối Giản JungKwanJang (Nền Trắng Viền Mảnh 1px, Không Tím Khối) */}
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-8">
-          <div className="bg-gradient-to-r from-[#4B193E] to-[#6b2659] text-white rounded-2xl p-6 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
             <div className="space-y-2 text-center sm:text-left">
-              <div className="inline-flex items-center gap-2 bg-white/10 px-3 py-1 rounded-full text-xs font-semibold">
-                <Award className="w-3.5 h-3.5 text-amber-300" />
+              <div className="inline-flex items-center gap-2 bg-[#4B193E]/5 text-[#4B193E] px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                <Award className="w-3.5 h-3.5 text-[#4B193E]" />
                 CAM KẾT CHẤT LƯỢNG THƯỢNG HẠNG
               </div>
-              <h3 className="text-xl sm:text-2xl font-bold">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900">
                 Khám Phá Các Dòng Sản Phẩm Hồng Sâm Kim
               </h3>
-              <p className="text-xs sm:text-sm text-purple-100 max-w-xl">
+              <p className="text-xs sm:text-sm text-gray-600 max-w-xl">
                 Sản phẩm được nhập khẩu 100% chính ngạch từ Hàn Quốc, phân phối độc quyền tại Việt Nam bởi CÔNG TY TNHH THƯƠNG MẠI NA KOREA.
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0">
               <Link
                 href="/san-pham"
-                className="inline-flex items-center gap-2 bg-white text-[#4B193E] font-bold px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-[#4B193E] text-white font-bold px-6 py-3 rounded-xl hover:bg-[#38132e] transition-colors text-sm shadow-2xs"
               >
                 Xem Danh Mục Sản Phẩm
                 <ArrowRight className="w-4 h-4" />

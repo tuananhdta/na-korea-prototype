@@ -222,28 +222,28 @@ export default function LoiChaoNgheNhanPage() {
           </div>
         </div>
 
-        {/* Section 3: Call to Action Banner */}
+        {/* Section 3: Call to Action Banner - Minimalist JungKwanJang Style */}
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-8">
-          <div className="bg-gradient-to-r from-[#4B193E] to-[#6b2659] text-white rounded-2xl p-6 sm:p-10 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-md">
+          <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
             <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-xl sm:text-2xl font-bold">
+              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900">
                 Khám Phá Các Sản Phẩm Hồng Sâm Kim Chính Hãng
               </h3>
-              <p className="text-xs sm:text-sm text-purple-100">
+              <p className="text-xs sm:text-sm text-gray-600">
                 Tìm hiểu thêm thông tin chi tiết về từng dòng sản phẩm hồng sâm 6 năm tuổi Punggi Hàn Quốc.
               </p>
             </div>
             <div className="flex items-center gap-3 shrink-0">
               <Link
                 href="/san-pham"
-                className="inline-flex items-center gap-2 bg-white text-[#4B193E] font-bold px-6 py-3 rounded-xl hover:bg-gray-100 transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-[#4B193E] text-white font-bold px-6 py-3 rounded-xl hover:bg-[#38132e] transition-colors text-sm shadow-2xs"
               >
                 Xem Sản Phẩm
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/lien-he"
-                className="inline-flex items-center gap-2 bg-[#4B193E]/40 border border-white/20 text-white font-medium px-5 py-3 rounded-xl hover:bg-white/10 transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-gray-50 border border-gray-200 text-gray-800 font-semibold px-5 py-3 rounded-xl hover:bg-gray-100 transition-colors text-sm"
               >
                 Liên Hệ Tư Vấn
               </Link>
