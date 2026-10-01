@@ -48,7 +48,7 @@ export default function HongSamPage() {
         />
 
         {/* Standard Breadcrumb & 2-Tab Navigation */}
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 space-y-4">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 space-y-4 font-sans">
           <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
             <Link href="/" className="hover:text-black transition-colors">
               Trang Chủ
@@ -64,7 +64,7 @@ export default function HongSamPage() {
           </nav>
 
           {/* Tab buttons */}
-          <div className="flex items-center gap-2 p-1.5 bg-gray-100/90 rounded-xl border border-gray-200/80 max-w-md shadow-2xs">
+          <div className="flex items-center gap-2 p-1.5 bg-gray-100/90 rounded-xl border border-gray-200/80 max-w-md shadow-2xs font-sans">
             <Link
               href="/nhan-sam"
               className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-white/80 transition-all"
@@ -81,14 +81,14 @@ export default function HongSamPage() {
         </div>
 
         {/* Top Sub-heading */}
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-6 mb-12 text-center">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif text-gray-900 leading-snug font-normal">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-6 mb-12 text-center font-sans">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug tracking-tight">
             Dấu ấn ngàn năm hòa quyện giữa dòng chảy thời gian, con người và vạn vật
           </h2>
           <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-4" />
         </div>
 
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 space-y-16">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 space-y-16 font-sans">
           {/* SECTION 1: Hồng sâm là gì & Chi tiết quá trình sinh trưởng 6 năm */}
           <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xs border border-gray-200">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
@@ -103,26 +103,26 @@ export default function HongSamPage() {
               </div>
 
               <div className="lg:col-span-7 space-y-4">
-                <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 font-normal">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
                   Hồng sâm là gì?
                 </h2>
 
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                   Hồng sâm được tạo ra bằng cách hấp và sấy khô nhân sâm từ 4 năm tuổi trở lên. Chất lượng hồng sâm được phân loại thành ba cấp độ: thiên, địa, nhân.
                 </p>
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                   Quá trình hấp và sấy khô làm cho thân nhân sâm cứng lại đồng thời tiêu diệt hoàn toàn các enzyme oxy hóa, giúp bảo quản hồng sâm trong thời gian dài. Nhân sâm thay đổi hình dạng trong quá trình sinh trưởng. Đến năm thứ nhất, rễ bắt đầu dày lên và mọc ra khoảng 30 đến 40 rễ con. Đến năm thứ ba, chiều dài rễ chính và số lượng rễ con ổn định. Đến năm thứ tư hoặc năm thứ năm, rễ chính trở nên chắc khỏe, rễ con phát triển hoàn thiện, tạo nên hình dạng điển hình của nhân sâm.
                 </p>
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                   Đối với nhân sâm 6 tuổi, phần đầu chắc khỏe, dài từ 7 đến 10cm, đường kính từ 2 đến 3cm. Có nhiều rễ con, tổng chiều dài khoảng 34cm, trọng lượng từ 40 đến 120g, thậm chí có thể lên đến 300g.
                 </p>
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                   Nếu nhân sâm già hơn 7 năm, hình dạng của nó sẽ bị biến dạng và vỏ cứng lại. Nhiều cây có xu hướng bị rỗng hoặc trắng bên trong khi được chế biến.
                 </p>
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                   Đó là lý do tại sao các chuyên gia coi nhân sâm 6 tuổi là chất lượng tốt nhất. Quá trình xử lý nhiệt để tạo ra hồng sâm tạo ra nhiều thành phần có lợi không có trong nhân sâm tươi hoặc nhân sâm trắng. Về mặt chất, nhân sâm chứa 30 thành phần saponin khác nhau, được gọi chung là Ginsenoside, chiếm từ 1 đến 3%. Saponin có nghĩa là &quot;tạo bọt&quot; trong tiếng Hy Lạp. Khi bạn lắc hỗn hợp nước và một ít saponin, bạn có thể thấy tạo ra bọt. Thành phần này có trong nhiều loại cây như cam thảo và hoa chuông.
                 </p>
-                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                   Nhân sâm 6 tuổi có hiệu quả tuyệt vời. Phần lớn saponin tồn tại gần bề mặt của nhân sâm, có nghĩa là hồng sâm hiệu quả hơn nhân sâm trắng không có vỏ. Có tổng cộng 30 loại saponin khác nhau trong nhân sâm Cao Ly (Goryeo), nhiều hơn 14 loại trong nhân sâm Mỹ và 15 loại trong nhân sâm Trung Quốc.
                 </p>
               </div>
@@ -132,7 +132,7 @@ export default function HongSamPage() {
           {/* SECTION 2: Type of Ginseng */}
           <section className="space-y-8">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 font-normal">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
                 Type of Ginseng
               </h2>
               <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-3" />
@@ -150,13 +150,13 @@ export default function HongSamPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm font-serif">
+                <h3 className="font-bold text-gray-900 text-sm">
                   Nhân Sâm Nguyên Thể
                 </h3>
-                <p className="text-xs text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-700 leading-relaxed text-justify">
                   Nhân sâm nguyên thể là nhân sâm được sản xuất mà không tách riêng đầu, thân và chân.
                 </p>
-                <p className="text-xs text-gray-600 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed text-justify">
                   Hồng sâm phổ biến thuộc loại này. Nó được phân loại thành nhân sâm thiên, địa, nhân và các loại khác tùy theo hình dạng sản phẩm, và được chia thành từ 10 đến 70 ngón tay theo kích thước.
                 </p>
               </div>
@@ -172,13 +172,13 @@ export default function HongSamPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm font-serif">
+                <h3 className="font-bold text-gray-900 text-sm">
                   Hồng Sâm Cắt Lát
                 </h3>
-                <p className="text-xs text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-700 leading-relaxed text-justify">
                   Hồng sâm cắt thành những miếng nhỏ vừa ăn.
                 </p>
-                <p className="text-xs text-gray-600 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed text-justify">
                   Thân chính của hồng sâm được cắt thành kích thước đều đặn theo chiều ngang, dọc hoặc chéo.
                 </p>
               </div>
@@ -194,13 +194,13 @@ export default function HongSamPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm font-serif">
+                <h3 className="font-bold text-gray-900 text-sm">
                   Rễ Hồng Sâm
                 </h3>
-                <p className="text-xs text-gray-700 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-700 leading-relaxed text-justify">
                   Phần được gọi là rễ của hồng sâm. Nó chỉ phần rễ của hồng sâm và đề cập đến các rễ con ngoại trừ thân của nhân sâm tươi.
                 </p>
-                <p className="text-xs text-gray-600 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed text-justify">
                   Nó chứa nhiều saponin, thành phần chính của hồng sâm, và có vị đắng mạnh.
                 </p>
               </div>
@@ -210,7 +210,7 @@ export default function HongSamPage() {
           {/* SECTION 3: Phân loại sản phẩm */}
           <section className="space-y-8">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 font-normal">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
                 Phân loại sản phẩm
               </h2>
               <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-3" />
@@ -228,10 +228,10 @@ export default function HongSamPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm font-serif">
+                <h3 className="font-bold text-gray-900 text-sm">
                   Hồng Sâm Cô Đặc
                 </h3>
-                <p className="text-xs text-gray-600 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed text-justify">
                   Là sản phẩm dạng đặc được cô đặc bằng cách chiết xuất hồng sâm 6 năm tuổi ở nhiệt độ thấp nhiều lần, bao gồm cả viên hồng sâm nổi tiếng, v.v.
                 </p>
               </div>
@@ -247,10 +247,10 @@ export default function HongSamPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm font-serif">
+                <h3 className="font-bold text-gray-900 text-sm">
                   Hồng Sâm Lỏng
                 </h3>
-                <p className="text-xs text-gray-600 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed text-justify">
                   Là sản phẩm dạng lỏng được sản xuất bằng cách chiết xuất hồng sâm 6 năm tuổi ở nhiệt độ thấp.
                 </p>
               </div>
@@ -266,10 +266,10 @@ export default function HongSamPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm font-serif">
+                <h3 className="font-bold text-gray-900 text-sm">
                   Hồng Sâm Ngâm
                 </h3>
-                <p className="text-xs text-gray-600 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed text-justify">
                   Là sản phẩm được ngâm trong dung dịch đường như mật ong và sấy khô, thường dùng làm quà tặng và đồ ăn nhẹ.
                 </p>
               </div>
@@ -285,10 +285,10 @@ export default function HongSamPage() {
                     className="object-cover"
                   />
                 </div>
-                <h3 className="font-bold text-gray-900 text-sm font-serif">
+                <h3 className="font-bold text-gray-900 text-sm">
                   Hồng Sâm Bột
                 </h3>
-                <p className="text-xs text-gray-600 leading-relaxed font-sans text-justify">
+                <p className="text-xs text-gray-600 leading-relaxed text-justify">
                   Là sản phẩm dạng bột được làm bằng cách nghiền mịn hồng sâm đã được rửa sạch.
                 </p>
               </div>

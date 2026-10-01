@@ -49,7 +49,7 @@ export default function NhanSamPage() {
 
         {/* Standard Breadcrumb & 2-Tab Navigation */}
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 space-y-4">
-          <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
+          <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500 font-sans">
             <Link href="/" className="hover:text-black transition-colors">
               Trang Chủ
             </Link>
@@ -64,7 +64,7 @@ export default function NhanSamPage() {
           </nav>
 
           {/* Tab buttons */}
-          <div className="flex items-center gap-2 p-1.5 bg-gray-100/90 rounded-xl border border-gray-200/80 max-w-md shadow-2xs">
+          <div className="flex items-center gap-2 p-1.5 bg-gray-100/90 rounded-xl border border-gray-200/80 max-w-md shadow-2xs font-sans">
             <Link
               href="/nhan-sam"
               className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#500028] text-white shadow-xs transition-all"
@@ -80,9 +80,9 @@ export default function NhanSamPage() {
           </div>
         </div>
 
-        {/* Top Sub-heading */}
+        {/* Top Sub-heading (Sử dụng Font Sans chuẩn Website) */}
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 mt-6 mb-12 text-center">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-serif text-gray-900 leading-snug font-normal">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug tracking-tight font-sans">
             Dấu ấn ngàn năm hòa quyện giữa dòng chảy thời gian, con người và vạn vật
           </h2>
           <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-4" />
@@ -102,7 +102,7 @@ export default function NhanSamPage() {
                   className="object-cover"
                 />
               </div>
-              <h2 className="text-xl sm:text-2xl font-serif text-gray-900 pt-2 font-normal">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 pt-2 tracking-tight font-sans">
                 Nhân sâm Goryeo là gì?
               </h2>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
@@ -121,7 +121,7 @@ export default function NhanSamPage() {
                   className="object-cover"
                 />
               </div>
-              <h2 className="text-xl sm:text-2xl font-serif text-gray-900 pt-2 font-normal">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 pt-2 tracking-tight font-sans">
                 Nhân sâm Goryeo: Thành phần và Công dụng
               </h2>
               <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
@@ -135,17 +135,17 @@ export default function NhanSamPage() {
             {/* Background texture overlay */}
             <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
-            <div className="relative z-10 max-w-4xl mx-auto space-y-8">
+            <div className="relative z-10 max-w-4xl mx-auto space-y-8 font-sans">
               <div className="text-center space-y-3">
-                <h2 className="text-2xl sm:text-3xl font-serif text-white font-normal tracking-wide">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight">
                   Công dụng của Saponin trong Nhân sâm Goryeo
                 </h2>
-                <div className="inline-block bg-[#443836] px-4 py-1.5 rounded text-xs text-gray-300 italic tracking-wider font-serif">
+                <div className="inline-block bg-[#443836] px-4 py-1.5 rounded text-xs text-gray-300 italic tracking-wider">
                   Men may deceive the Earth, but the Earth never deceives Men.
                 </div>
               </div>
 
-              {/* 2x2 Grid Box with thin 1px white border grid lines */}
+              {/* 2x2 Grid Box */}
               <div className="grid grid-cols-1 md:grid-cols-2 border border-white/20 rounded-xl overflow-hidden divide-y md:divide-y-0 md:divide-x divide-white/20 bg-white/5">
                 {/* Item 1 */}
                 <div className="p-6 sm:p-8 flex flex-col items-center justify-center text-center space-y-4 hover:bg-white/10 transition-colors border-b border-white/20 md:border-b">
@@ -199,16 +199,16 @@ export default function NhanSamPage() {
           </section>
 
           {/* SECTION 3: Distinguishing Method (Phân biệt sâm Foreign vs Korean) */}
-          <section className="space-y-8">
+          <section className="space-y-8 font-sans">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 font-normal">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
                 Distinguishing Method
               </h2>
               <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-3" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-11 gap-6 items-start max-w-4xl mx-auto">
-              {/* Foreign Ginseng (Left 5 Cols) */}
+              {/* Foreign Ginseng */}
               <div className="md:col-span-5 space-y-4 bg-white p-5 rounded-xl border border-gray-200 shadow-2xs">
                 <div className="border border-gray-300 rounded overflow-hidden">
                   <div className="relative aspect-4/3 w-full bg-white p-2">
@@ -219,12 +219,12 @@ export default function NhanSamPage() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="bg-[#9c9384] text-white text-center py-2 text-xs font-serif tracking-wider">
+                  <div className="bg-[#9c9384] text-white text-center py-2 text-xs font-bold tracking-wider uppercase">
                     • Foreign ginseng •
                   </div>
                 </div>
 
-                <ul className="space-y-2 text-xs text-gray-700 pl-4 list-disc font-sans leading-relaxed">
+                <ul className="space-y-2 text-xs text-gray-700 pl-4 list-disc leading-relaxed">
                   <li>Sạch, không có đất bám trên bề mặt.</li>
                   <li>Đầu dài, phát triển kém.</li>
                   <li>Bề mặt màu trắng.</li>
@@ -235,14 +235,14 @@ export default function NhanSamPage() {
                 </ul>
               </div>
 
-              {/* VS Divider (Middle 1 Col) */}
+              {/* VS Divider */}
               <div className="md:col-span-1 flex items-center justify-center py-4 md:py-24">
-                <span className="text-2xl font-extrabold text-[#7e6d65] tracking-widest font-serif">
+                <span className="text-2xl font-extrabold text-[#7e6d65] tracking-widest">
                   VS
                 </span>
               </div>
 
-              {/* Korean Ginseng (Right 5 Cols) */}
+              {/* Korean Ginseng */}
               <div className="md:col-span-5 space-y-4 bg-white p-5 rounded-xl border border-gray-200 shadow-2xs">
                 <div className="border border-gray-300 rounded overflow-hidden">
                   <div className="relative aspect-4/3 w-full bg-white">
@@ -253,12 +253,12 @@ export default function NhanSamPage() {
                       className="object-cover"
                     />
                   </div>
-                  <div className="bg-[#661630] text-white text-center py-2 text-xs font-serif tracking-wider">
+                  <div className="bg-[#500028] text-white text-center py-2 text-xs font-bold tracking-wider uppercase">
                     • Korean ginseng •
                   </div>
                 </div>
 
-                <ul className="space-y-2 text-xs text-gray-800 pl-4 list-disc font-sans leading-relaxed font-medium">
+                <ul className="space-y-2 text-xs text-gray-800 pl-4 list-disc leading-relaxed font-medium">
                   <li>Có một ít đất bám trên bề mặt.</li>
                   <li>Đầu chắc khỏe, ngắn.</li>
                   <li>Bề mặt màu vàng trắng.</li>
@@ -271,9 +271,9 @@ export default function NhanSamPage() {
           </section>
 
           {/* SECTION 4: Các loại nhân sâm (Tươi, Khô, Hồng Sâm) */}
-          <section className="space-y-10">
+          <section className="space-y-10 font-sans">
             <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-serif text-gray-900 font-normal">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
                 Các loại nhân sâm
               </h2>
               <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-3" />
@@ -292,13 +292,13 @@ export default function NhanSamPage() {
                   />
                 </div>
                 <div className="md:col-span-7 space-y-3">
-                  <h3 className="text-lg font-bold text-gray-900 font-serif">
+                  <h3 className="text-lg font-bold text-gray-900">
                     Nhân sâm tươi
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Nhân sâm tươi được khai thác trực tiếp từ nông trại, chứa đến 75% độ ẩm trong tổng thành phần. Đây là loại nhân sâm phổ biến nhất, được thu hoạch khi cây từ 4 đến 6 tuổi. Nhân sâm tươi là nguyên liệu cơ bản cho các loại nhân sâm khác như nhân sâm đỏ và nhân sâm trắng.
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Nhân sâm tươi rất thích hợp làm quà tặng và được sử dụng rộng rãi trong nấu ăn, ăn nhẹ và các mục đích khác.
                   </p>
                 </div>
@@ -316,19 +316,19 @@ export default function NhanSamPage() {
                   />
                 </div>
                 <div className="md:col-span-7 space-y-3">
-                  <h3 className="text-lg font-bold text-gray-900 font-serif">
+                  <h3 className="text-lg font-bold text-gray-900">
                     Nhân Sâm Khô
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Nhân sâm tươi được sấy khô để tạo thành nhân sâm khô có màu vàng nhạt. Nhân sâm khô được phân loại thành nhân sâm trắng (đã loại bỏ vỏ) và nhân sâm trắng có vỏ. Ngoài ra, nó còn được phân loại dựa trên hình dạng như nhân sâm thẳng (rễ được xử lý thẳng), nhân sâm cong (sấy khô khi rễ bị cong) và nhân sâm nửa cong.
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Nó chứa ít hơn 14% độ ẩm và có thể được sấy khô bằng nhiệt độ mặt trời tự nhiên, gió nóng hoặc các phương pháp khác mà không cần hấp. Nhân sâm khô có thể rất cứng và được sử dụng làm nguyên liệu cơ bản cho nhân sâm đỏ phổ biến như một loại thảo dược phương Đông.
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Ví dụ, nếu bạn sấy khô 15 đơn vị nhân sâm tươi tổng cộng 750g, sẽ có 15 đơn vị sản phẩm khoảng 150 đến 200g. Nói cách khác, nếu bạn sấy khô 15 đơn vị nhân sâm tươi, có nghĩa là bạn đã chế biến được 25 đơn vị nhân sâm khô 300g. Nếu bạn sấy khô 8 đến 10 đơn vị nhân sâm tươi, sẽ thu được 15 đơn vị nhân sâm khô 300g.
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Nhìn chung, nhân sâm khô được nghiền thành bột và bán dưới dạng &quot;bột nhân sâm&quot; hoặc &quot;viên nén bột&quot; hoặc có thể được bán nguyên trạng ở trạng thái khô, giúp khách hàng dễ dàng bảo quản và sử dụng. Một số phòng khám y học cổ truyền sử dụng nó như một thành phần thuốc và một số nhà hàng sử dụng nó trong các món ăn khác nhau như súp gà nhân sâm.
                   </p>
                 </div>
@@ -346,19 +346,19 @@ export default function NhanSamPage() {
                   />
                 </div>
                 <div className="md:col-span-7 space-y-3">
-                  <h3 className="text-lg font-bold text-gray-900 font-serif">
+                  <h3 className="text-lg font-bold text-gray-900">
                     Hồng Sâm
                   </h3>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Nhân sâm tươi từ 4 đến 6 tuổi được hấp bằng nước, tạo ra nhân sâm màu nâu đỏ gọi là Hồng sâm. Nó được phân loại thành ba cấp độ: thiên, địa, nhân dựa trên chất lượng. Phần lớn được xuất khẩu ra nước ngoài như Hồng Kông, Đài Loan và Nhật Bản, chỉ một phần nhỏ được phân phối trong nước. Tuy nhiên, với sự quan tâm ngày càng tăng đối với thực phẩm bổ sung sức khỏe trên thị trường nội địa, phân phối nội địa đang tăng lên, góp phần phát triển ngành công nghiệp chế biến nhân sâm.
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Hồng sâm được chế biến qua quá trình hấp và sấy khô, tạo ra hàm lượng nước dưới 14%. Quá trình nâu hóa không enzyme xảy ra trong quá trình chế biến, làm cho nhân sâm có màu nâu đậm và kết cấu cứng. Điều này cho phép nhân sâm có thời hạn sử dụng dài lên đến khoảng 10 năm, và nhiều người gọi đây là một cuộc cách mạng trong việc bảo quản nhân sâm.
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Người ta ước tính rằng lịch sử sản xuất hồng sâm kéo dài khoảng 1000 năm vì có một tài liệu tham khảo trong một biên niên sử cổ (năm 1123 dưới thời nhà Goryeo) rằng có nhân sâm hấp và nhân sâm sống (nhân sâm trắng). Đặc biệt là vào thời Joseon khi nhân sâm trắng được tiêu thụ nhiều, số lượng hồng sâm tăng nhanh chóng trong những năm cuối khi được người Trung Quốc tiêu thụ nhiều thức ăn dầu mỡ và lầm tưởng rằng nhân sâm trắng gây kích thích dạ dày. Năm 1895 (năm thứ 32 triều vua Gojong), Luật về chế biến và giao dịch hồng sâm được ban hành, và năm 1908, chế độ thực dân Nhật Bản độc quyền lợi nhuận liên quan đến hồng sâm, từ đó thống trị thương mại với Trung Quốc. Cho đến nay, Luật đã được sửa đổi và bổ sung nhiều lần.
                   </p>
-                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed font-sans text-justify">
+                  <p className="text-xs sm:text-sm text-gray-700 leading-relaxed text-justify">
                     Cho đến năm 1995, chỉ chính phủ mới được phép sản xuất hồng sâm, nhưng từ năm 1996, ngành công nghiệp này được mở cửa cho công chúng và bất kỳ ai có cơ sở vật chất phù hợp và đầy đủ đều có thể chế biến và bán. Theo quy định hiện hành, hồng sâm được định nghĩa là &quot;nhân sâm hấp hoặc bột nhân sâm hóa gel&quot;.
                   </p>
                 </div>
@@ -367,7 +367,7 @@ export default function NhanSamPage() {
           </section>
 
           {/* Standard Minimalist CTA Banner */}
-          <section className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 lg:p-10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
+          <section className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 lg:p-10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto font-sans">
             <div className="space-y-2 text-center md:text-left max-w-2xl">
               <h2 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
                 Khám Phá Tiếp Quy Trình Chế Biến Hồng Sâm 6 Năm Tuổi
