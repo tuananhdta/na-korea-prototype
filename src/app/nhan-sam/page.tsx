@@ -4,13 +4,13 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
-import { ChevronRight, ArrowRight, Award, ChevronDown, CheckCircle2, XCircle } from "lucide-react";
+import { ChevronRight, ArrowRight, Award } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Nguồn Gốc & Công Dụng Nhân Sâm Goryeo 6 Năm Tuổi | Hồng Sâm Kim",
   description:
-    "Tìm hiểu nguồn gốc Nhân sâm Goryeo (Cao Ly) chính thống Hàn Quốc, thành phần Saponin Ginsenoside vượt trội, cẩm nang phân biệt sâm Hàn Quốc và sâm ngoại quốc. Nhập khẩu chính ngạch bởi NA Korea.",
+    "Tìm hiểu nguồn gốc Nhân sâm Goryeo (Cao Ly) chính thống Hàn Quốc, thành phần Saponin Ginsenoside vượt trội, cẩm nang phân biệt sâm Hàn Quốc và sâm ngoại quốc. Nhập khẩu chính ngạch bởi Công ty TNHH Thương Mại NA Korea.",
   keywords: [
     "Nhân sâm Goryeo",
     "Nhân sâm Cao Ly",
@@ -265,11 +265,11 @@ export default function NhanSamPage() {
             </div>
           </section>
 
-          {/* SECTION 3: Distinguishing Method */}
+          {/* SECTION 3: Phương Pháp Phân Biệt Sâm Hàn Quốc & Ngoại Quốc */}
           <section className="space-y-8 font-sans">
             <div className="text-center">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
-                Distinguishing Method
+                Phương Pháp Phân Biệt Nhân Sâm
               </h2>
               <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-3" />
             </div>
@@ -287,7 +287,7 @@ export default function NhanSamPage() {
                     />
                   </div>
                   <div className="bg-[#9c9384] text-white text-center py-2 text-xs font-bold tracking-wider uppercase">
-                    • Foreign ginseng •
+                    • Nhân sâm Ngoại quốc •
                   </div>
                 </div>
 
@@ -321,7 +321,7 @@ export default function NhanSamPage() {
                     />
                   </div>
                   <div className="bg-[#500028] text-white text-center py-2 text-xs font-bold tracking-wider uppercase">
-                    • Korean ginseng •
+                    • Nhân sâm Hàn Quốc (Goryeo) •
                   </div>
                 </div>
 

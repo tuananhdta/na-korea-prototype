@@ -205,7 +205,7 @@ export default function HongSamPage() {
           <section className="space-y-8">
             <div className="text-center">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
-                Type of Ginseng
+                Phân Loại Hình Thái Hồng Sâm
               </h2>
               <div className="w-16 h-0.5 bg-[#500028]/30 mx-auto mt-3" />
             </div>
