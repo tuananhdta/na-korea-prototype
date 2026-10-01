@@ -4,13 +4,13 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
-import { ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronRight, ArrowRight, Award } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Về Hồng Sâm 6 Năm Tuổi Thượng Hạng | Hồng Sâm Kim",
+  title: "Quy Trình Hấp SẤY & Chế Biến Hồng Sâm 6 Năm Tuổi | Hồng Sâm Kim",
   description:
-    "Tìm hiểu quy trình hấp sấy độc quyền chuyển hóa nhân sâm 6 năm tuổi thành Hồng sâm với hơn 30 loại Ginsenoside quý hiếm tại Punggi Hàn Quốc.",
+    "Khám phá quy trình hấp sấy độc quyền chuyển hóa nhân sâm 6 năm tuổi thành Hồng sâm với hơn 30 loại Ginsenoside quý hiếm tại Punggi Hàn Quốc. Nhập khẩu chính ngạch bởi NA Korea.",
   keywords: [
     "Hồng sâm 6 năm tuổi",
     "Hồng sâm là gì",
@@ -18,22 +18,94 @@ export const metadata: Metadata = {
     "Saponin Ginsenoside",
     "Hồng sâm Hàn Quốc",
     "Hồng Sâm Kim",
-    "NA Korea",
+    "Công ty TNHH Thương Mại NA Korea",
   ],
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/hong-sam`,
   },
   openGraph: {
-    title: `Về Hồng Sâm 6 Năm Tuổi Thượng Hạng | ${SITE_CONFIG.brandName}`,
+    title: `Quy Trình Hấp SẤY & Chế Biến Hồng Sâm 6 Năm Tuổi | ${SITE_CONFIG.brandName}`,
     description: "Sự biến đổi kỳ diệu từ nhân sâm tươi thành Hồng sâm 6 năm tuổi thượng hạng.",
     url: `${SITE_CONFIG.siteUrl}/hong-sam`,
-    type: "website",
+    type: "article",
   },
 };
 
+const RED_GINSENG_FAQS = [
+  {
+    question: "Hồng sâm là gì và khác gì so với nhân sâm tươi?",
+    answer:
+      "Hồng sâm được tạo ra bằng cách hấp chín bằng nước và sấy khô nhân sâm tươi 4 đến 6 năm tuổi ở nhiệt độ thấp. Quá trình xử lý nhiệt tiêu diệt hoàn toàn enzyme oxy hóa, giúp bảo quản tới 10 năm và sản sinh hơn 30 loại Ginsenoside quý hiếm mà sâm tươi không hề có.",
+  },
+  {
+    question: "Vì sao Nhân sâm 6 năm tuổi lại được xem là tiêu chuẩn vàng để làm hồng sâm?",
+    answer:
+      "Đến năm thứ 6, nhân sâm đạt đỉnh cao về hình dáng (thân dài 7-10cm, rễ 34cm) và tích lũy hàm lượng Ginsenoside tối đa. Nếu để sâm già hơn 7 năm, củ sẽ bị biến dạng, xơ cứng vỏ ngoài và phần ruột bên trong bị xốp rỗng suy giảm hoạt chất.",
+  },
+  {
+    question: "Tại sao Hồng sâm Cao Ly Hàn Quốc lại chứa nhiều Saponin hơn sâm Mỹ và Trung Quốc?",
+    answer:
+      "Thổ nhưỡng và thời tiết vùng đất Punggi chân núi Sobaek Hàn Quốc tạo điều kiện sinh trưởng lý tưởng giúp Hồng sâm Cao Ly chứa tới 30 loại Ginsenoside khác nhau – vượt trội hơn sâm Mỹ (14 loại) và sâm Trung Quốc (15 loại).",
+  },
+  {
+    question: "Các dạng chế phẩm Hồng sâm phổ biến trên thị trường gồm những loại nào?",
+    answer:
+      "Các thành phẩm Hồng sâm Kim cao cấp nhập khẩu bởi NA Korea gồm có: Cao hồng sâm cô đặc, Nước uống hồng sâm (dạng stick gói tiện lợi), Hồng sâm nguyên củ/lát ngâm mật ong và Bột hồng sâm sấy mịn.",
+  },
+];
+
 export default function HongSamPage() {
+  // Article Schema
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: "Quy Trình Chế Biến Hồng Sâm 6 Năm Tuổi Thượng Hạng Punggi",
+    description: metadata.description,
+    image: [`${SITE_CONFIG.siteUrl}/images/ginseng/sub02_hero.jpg`],
+    author: {
+      "@type": "Person",
+      name: "Kim Jung-hwan (Nghệ nhân Nhân sâm Hàn Quốc)",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: SITE_CONFIG.companyName,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_CONFIG.siteUrl}/images/wholesale/logo-kimsredginseng-3.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${SITE_CONFIG.siteUrl}/hong-sam`,
+    },
+  };
+
+  // FAQ Schema for GEO AI Crawlers
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: RED_GINSENG_FAQS.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="min-h-screen bg-white flex flex-col font-sans">
+      {/* Structured Data Scripts for SEO & GEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <Header />
 
       <main className="flex-1 pb-20">
@@ -43,7 +115,7 @@ export default function HongSamPage() {
           title="Hồng sâm là gì?"
           description="Chúng tôi sẽ tiếp tục duy trì sự bền bỉ của nghề trồng nhân sâm 6 năm tuổi ở Punggi."
           image="/images/ginseng/sub02_hero.jpg"
-          imageAlt="Hồng sâm 6 năm tuổi thượng hạng Punggi"
+          imageAlt="Quy trình chế biến Hồng sâm 6 năm tuổi thượng hạng Punggi - Hồng Sâm Kim"
           imageOpacity={0.96}
         />
 
@@ -95,7 +167,7 @@ export default function HongSamPage() {
               <div className="lg:col-span-5 relative aspect-4/3 w-full rounded-xl overflow-hidden bg-gray-100 border border-gray-200">
                 <Image
                   src="/images/ginseng/red1.jpg"
-                  alt="Hồng sâm 6 năm tuổi"
+                  alt="Hồng sâm 6 năm tuổi chế biến từ củ sâm tươi Punggi - Hồng Sâm Kim"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
@@ -144,7 +216,7 @@ export default function HongSamPage() {
                 <div className="relative aspect-4/3 w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
                   <Image
                     src="/images/ginseng/red2.jpg"
-                    alt="Nhân Sâm Nguyên Thể"
+                    alt="Nhân Sâm Nguyên Thể xếp hạng Thiên Địa Nhân - Hồng Sâm Kim"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
@@ -166,7 +238,7 @@ export default function HongSamPage() {
                 <div className="relative aspect-4/3 w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
                   <Image
                     src="/images/ginseng/red3.jpg"
-                    alt="Hồng Sâm Cắt Lát"
+                    alt="Hồng Sâm Cắt Lát dẻo thơm tiện lợi - Hồng Sâm Kim"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
@@ -188,7 +260,7 @@ export default function HongSamPage() {
                 <div className="relative aspect-4/3 w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
                   <Image
                     src="/images/ginseng/red4.jpg"
-                    alt="Rễ Hồng Sâm"
+                    alt="Rễ Hồng Sâm chứa hàm lượng Saponin cao - Hồng Sâm Kim"
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
@@ -222,7 +294,7 @@ export default function HongSamPage() {
                 <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
                   <Image
                     src="/images/ginseng/red5.jpg"
-                    alt="Hồng Sâm Cô Đặc"
+                    alt="Hồng Sâm Cô Đặc dạng cao 6 năm tuổi - Hồng Sâm Kim"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
@@ -241,7 +313,7 @@ export default function HongSamPage() {
                 <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
                   <Image
                     src="/images/ginseng/red6.jpg"
-                    alt="Hồng Sâm Lỏng"
+                    alt="Hồng Sâm Lỏng tinh chất uống dạng stick gói - Hồng Sâm Kim"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
@@ -260,7 +332,7 @@ export default function HongSamPage() {
                 <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
                   <Image
                     src="/images/ginseng/red7.jpg"
-                    alt="Hồng Sâm Ngâm"
+                    alt="Hồng Sâm Ngâm Mật Ong tự nhiên dẻo ngọt - Hồng Sâm Kim"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
@@ -279,7 +351,7 @@ export default function HongSamPage() {
                 <div className="relative aspect-video w-full rounded-lg overflow-hidden bg-gray-50 border border-gray-200">
                   <Image
                     src="/images/ginseng/dry_ginseng.jpg"
-                    alt="Hồng Sâm Bột"
+                    alt="Hồng Sâm Bột nghiền mịn pha trà - Hồng Sâm Kim"
                     fill
                     sizes="(max-width: 640px) 100vw, 25vw"
                     className="object-cover"
@@ -295,6 +367,38 @@ export default function HongSamPage() {
             </div>
           </section>
 
+          {/* SECTION 4: GEO AI Answer Extraction Block - FAQ Section */}
+          <section className="bg-white rounded-2xl border border-gray-200 p-6 sm:p-8 max-w-4xl mx-auto space-y-6 shadow-2xs font-sans">
+            <div className="flex items-center justify-between border-b border-gray-100 pb-3">
+              <div className="flex items-center gap-2">
+                <Award className="w-5 h-5 text-[#500028]" />
+                <h3 className="text-base sm:text-lg font-bold text-gray-900">
+                  Giải Đáp Thắc Mắc Về Quy Trình Chế Biến Hồng Sâm
+                </h3>
+              </div>
+              <span className="text-xs text-gray-400 font-medium">Chuẩn GEO AI</span>
+            </div>
+
+            <div className="space-y-3">
+              {RED_GINSENG_FAQS.map((faq, idx) => (
+                <details
+                  key={idx}
+                  className="group border border-gray-200 rounded-xl overflow-hidden bg-white transition-colors"
+                >
+                  <summary className="w-full text-left p-4 flex items-center justify-between gap-3 font-bold text-xs sm:text-sm text-gray-900 cursor-pointer hover:bg-gray-50/80 transition-colors list-none">
+                    <span className="flex-1 leading-snug">{faq.question}</span>
+                    <span className="text-[#500028] font-bold text-base transition-transform group-open:rotate-180">
+                      ↓
+                    </span>
+                  </summary>
+                  <div className="px-4 pb-4 text-xs sm:text-sm text-gray-600 leading-relaxed border-t border-gray-100 pt-3 bg-gray-50/30 text-justify">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
+            </div>
+          </section>
+
           {/* Standard Minimalist CTA Banner */}
           <section className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 lg:p-10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6 max-w-4xl mx-auto">
             <div className="space-y-2 text-center md:text-left max-w-2xl">
@@ -302,13 +406,13 @@ export default function HongSamPage() {
                 Khám Phá Cửa Hàng Hồng Sâm Kim Chính Hãng
               </h2>
               <p className="text-sm text-gray-600 leading-relaxed">
-                Trải nghiệm trọn bộ sản phẩm chính hãng nhập khẩu nguyên hộp từ Punggi Hàn Quốc do Công ty TNHH Thương Mại NA Korea phân phối.
+                Trải nghiệm trọn bộ sản phẩm chính hãng nhập khẩu nguyên hộp từ Punggi Hàn Quốc do {SITE_CONFIG.companyName} phân phối.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
               <Link
                 href="/san-pham"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#500028] text-white text-sm font-semibold hover:bg-[#3d001f] transition-all shadow-xs"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#500028] text-[#ffffff] text-sm font-semibold hover:bg-[#3d001f] transition-all shadow-xs"
               >
                 <span>Xem Cửa Hàng Sản Phẩm</span>
                 <ArrowRight className="w-4 h-4" />
