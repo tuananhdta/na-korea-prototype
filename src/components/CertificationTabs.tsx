@@ -186,22 +186,23 @@ export function CertificationTabs() {
         </div>
       </div>
 
-      {/* Lightbox / Modal Popup Chi Tiết: Chỉ đóng khi bấm nút X lớn */}
+      {/* Lightbox / Modal Popup Chi Tiết: Chuẩn Spacing & Align Top */}
       {selectedCertificate && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fadeIn">
-          <div className="relative bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-gray-100 my-auto">
-            {/* Nút X lớn tăng kích thước 50% (w-7 h-7 / w-8 h-8) */}
+          <div className="relative bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 lg:p-10 shadow-2xl border border-gray-100 my-auto">
+            {/* Nút X lớn chuẩn vị trí mép phải */}
             <button
               onClick={() => setSelectedCertificate(null)}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors z-10 cursor-pointer"
+              className="absolute top-5 right-5 sm:top-6 sm:right-6 p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors z-10 cursor-pointer"
               aria-label="Đóng popup"
             >
               <X className="w-8 h-8" />
             </button>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            {/* Grid 2 cột Align Top (items-start) chuẩn chuyên nghiệp */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-start">
               {/* Image view */}
-              <div className="relative aspect-3/4 w-full bg-gray-50 rounded-xl p-4 border border-gray-200 overflow-hidden">
+              <div className="relative aspect-3/4 w-full bg-gray-50 rounded-xl p-4 border border-gray-200 overflow-hidden shrink-0">
                 <Image
                   src={selectedCertificate.src}
                   alt={selectedCertificate.alt}
@@ -210,21 +211,19 @@ export function CertificationTabs() {
                 />
               </div>
 
-              {/* Popup details view */}
-              <div className="flex flex-col justify-between space-y-4">
-                <div>
-                  <span className="inline-block text-xs font-semibold text-[#500028] bg-[#500028]/10 px-2.5 py-1 rounded-full mb-3">
-                    {selectedCertificate.englishTitle}
-                  </span>
-                  <h3 className="text-xl font-bold text-gray-900 leading-snug">
-                    {selectedCertificate.title}
-                  </h3>
-                  <p className="mt-3 text-sm text-gray-600 leading-relaxed">
-                    {selectedCertificate.description}
-                  </p>
-                </div>
+              {/* Popup details view: Đẩy lên Top bằng flex-col items-start */}
+              <div className="flex flex-col items-start justify-start pt-1 space-y-4">
+                <span className="inline-block text-[11px] font-semibold text-[#500028] bg-[#500028]/10 px-3 py-1 rounded-full">
+                  {selectedCertificate.englishTitle}
+                </span>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-snug">
+                  {selectedCertificate.title}
+                </h3>
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                  {selectedCertificate.description}
+                </p>
 
-                <div className="pt-4 border-t border-gray-200 text-xs">
+                <div className="w-full pt-4 mt-2 border-t border-gray-200 text-xs">
                   <span className="font-semibold text-gray-700 block mb-0.5">Cơ quan thẩm định & cấp bằng:</span>
                   <span className="text-gray-600">{selectedCertificate.issuingBody}</span>
                 </div>
