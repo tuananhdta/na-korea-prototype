@@ -136,11 +136,11 @@ export default function NhanSamPage() {
           </nav>
         </div>
 
-        {/* Main 2-Column Unified Layout (Solution 1) */}
+        {/* Main 2-Column Unified Layout (Solution 1: 30% Sidebar / 70% Content) */}
         <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-4 pb-12 font-sans">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-10 items-start">
             
-            {/* CỘT TRÁI (Sidebar 3/12 - 25%): Tabs Dọc + Mục Lục + Khung NA Korea */}
+            {/* CỘT TRÁI (Sidebar 3/10 - Đúng 30% Width): Tabs Dọc + Mục Lục + Khung NA Korea */}
             <div className="lg:col-span-3 lg:sticky lg:top-28 space-y-5">
               
               {/* Card 1: Danh mục về Nhân Sâm */}
@@ -154,7 +154,7 @@ export default function NhanSamPage() {
                     href="/nhan-sam"
                     className="w-full text-left py-3 px-3.5 rounded-lg text-xs sm:text-sm transition-all shrink-0 border-l-2 flex items-center justify-between bg-gray-50 border-[#500028] text-gray-900 font-extrabold shadow-2xs"
                   >
-                    <span className="truncate pr-2 text-xs sm:text-sm tracking-tight">Nhân Sâm Cao Ly (Goryeo)</span>
+                    <span className="text-xs sm:text-sm tracking-tight pr-1">Nhân Sâm Cao Ly (Goryeo)</span>
                     <span className="px-2 py-0.5 text-[10px] rounded-full font-bold shrink-0 bg-[#500028] text-white">
                       Đang xem
                     </span>
@@ -164,7 +164,7 @@ export default function NhanSamPage() {
                     href="/hong-sam"
                     className="w-full text-left py-3 px-3.5 rounded-lg text-xs sm:text-sm transition-all shrink-0 border-l-2 flex items-center justify-between bg-transparent border-transparent text-gray-500 hover:text-gray-900 hover:bg-gray-50/60 font-medium"
                   >
-                    <span className="truncate pr-2 text-xs sm:text-sm tracking-tight">Hồng Sâm (6 Năm Tuổi)</span>
+                    <span className="text-xs sm:text-sm tracking-tight pr-1">Hồng Sâm (6 Năm Tuổi)</span>
                     <span className="px-2 py-0.5 text-[10px] rounded-full font-bold shrink-0 bg-gray-100 text-gray-400">
                       Xem bài
                     </span>
@@ -233,8 +233,8 @@ export default function NhanSamPage() {
               </div>
             </div>
 
-            {/* CỘT PHẢI (Content 9/12 - 75%): Nội dung bài viết Nhân sâm */}
-            <div className="lg:col-span-9 space-y-12">
+            {/* CỘT PHẢI (Content 7/10 - Đúng 70% Width): Nội dung bài viết Nhân sâm */}
+            <div className="lg:col-span-7 space-y-12">
               
               {/* Top Sub-heading */}
               <div className="border-b border-gray-200 pb-6 font-sans">
