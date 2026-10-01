@@ -5,6 +5,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { LIEN_HE_SUB_NAV } from "@/lib/subNavItems";
 import { SectionIndicator } from "@/components/SectionIndicator";
 import { ZaloLogo, GoogleGmailLogo, PhoneCallFilledIcon } from "@/components/icons/BrandIcons";
 import {
@@ -41,7 +42,7 @@ export function LienHeView() {
 
   return (
     <div className="min-h-screen bg-[#F8F8F8] flex flex-col font-sans text-[#333333] antialiased">
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         {/* Banner Hero */}
@@ -51,6 +52,8 @@ export function LienHeView() {
           image="/images/ginseng-hero-2.jpg"
           imageAlt="Liên hệ Hồng Kim Sâm"
           imageOpacity={0.92}
+          subNavItems={LIEN_HE_SUB_NAV}
+          currentHref="/lien-he"
         />
 
         {/* Breadcrumb Navigation */}

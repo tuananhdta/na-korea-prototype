@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
 import { ProductCard } from "@/components/ProductCard";
 import { PageHero } from "@/components/PageHero";
+import { SAN_PHAM_SUB_NAV } from "@/lib/subNavItems";
 import { CustomerReviewsSection } from "@/components/CustomerReviewsSection";
 import { EeatKnowledgeSection } from "@/components/EeatKnowledgeSection";
 import productsData from "@/data/products.json";
@@ -113,7 +114,7 @@ export function SanPhamNguoiLonView() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(adultJsonLd) }}
       />
 
-      <Header onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
+      <Header overlay onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
       <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
@@ -128,6 +129,8 @@ export function SanPhamNguoiLonView() {
           description="Các dòng sản phẩm Cao hồng sâm cô đặc 6 năm tuổi, Nước sâm Balance Time, Củ sâm tẩm mật ong giúp tăng cường thể lực, bồi bổ sức khỏe và nâng cao hệ miễn dịch."
           image="/images/production.jpg"
           imageAlt="Sản phẩm Hồng Sâm Người Lớn"
+          subNavItems={SAN_PHAM_SUB_NAV}
+          currentHref="/san-pham/nguoi-lon"
         />
 
         {/* Breadcrumb */}

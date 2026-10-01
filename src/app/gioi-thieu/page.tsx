@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { GIOI_THIEU_SUB_NAV } from "@/lib/subNavItems";
 import { ChevronRight, CheckCircle2, Award, Sparkles, ShieldCheck, ArrowRight, Mountain } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
@@ -80,7 +81,7 @@ export default function GioiThieuPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
       />
 
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         {/* Hero Section */}
@@ -92,6 +93,8 @@ export default function GioiThieuPage() {
           image="/images/sub01.jpg"
           imageAlt="Trang trại nhân sâm 6 năm tuổi Punggi Hàn Quốc – Hồng Sâm Kim"
           imageOpacity={0.9}
+          subNavItems={GIOI_THIEU_SUB_NAV}
+          currentHref="/gioi-thieu"
         />
 
         {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}

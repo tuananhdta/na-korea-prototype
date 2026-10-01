@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
 import { ProductCard } from "@/components/ProductCard";
 import { PageHero } from "@/components/PageHero";
+import { SAN_PHAM_SUB_NAV } from "@/lib/subNavItems";
 import { CustomerReviewsSection } from "@/components/CustomerReviewsSection";
 import { EeatKnowledgeSection } from "@/components/EeatKnowledgeSection";
 import productsData from "@/data/products.json";
@@ -99,7 +100,7 @@ export function SanPhamTreEmView() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(kidsJsonLd) }}
       />
 
-      <Header onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
+      <Header overlay onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
       <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
@@ -114,6 +115,8 @@ export function SanPhamTreEmView() {
           description="Dòng sản phẩm Hồng sâm Easy & High, Hồng sâm lê hoa chuông giúp bé ăn ngon miệng, tăng cường sức đề kháng và hỗ trợ phát triển thể chất tự nhiên."
           image="/images/production.jpg"
           imageAlt="Sản phẩm Hồng Sâm dành cho trẻ em"
+          subNavItems={SAN_PHAM_SUB_NAV}
+          currentHref="/san-pham/tre-em"
         />
 
         {/* Breadcrumb */}

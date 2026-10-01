@@ -98,8 +98,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
   const isOverlayTop = overlay && !isScrolled;
   // Transparent even while a submenu is open — stays transparent until user scrolls
   const isTopTransparent = isOverlayTop;
+  const isHomepage = pathname === "/";
   const headerBgClass = isOverlayTop
-    ? "bg-transparent shadow-none border-b border-transparent"
+    ? isHomepage
+      ? "bg-transparent shadow-none border-b border-transparent"
+      : "bg-transparent shadow-none border-b border-white/20"
     : "bg-white shadow-[0_4px_20px_rgba(0,0,0,0.06)] border-b border-[#EEEEEE]";
 
   return (
@@ -177,7 +180,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     href={item.href}
                     aria-haspopup={item.subItems ? "menu" : undefined}
                     aria-expanded={item.subItems ? isHovered : undefined}
-                    className={`relative flex h-full min-w-[74px] max-w-[136px] items-center justify-center gap-1.5 px-2 text-center font-sans text-[14px] leading-[1.15] tracking-[0.02em] transition-all duration-200 xl:px-2.5 ${
+                    className={`relative flex h-full min-w-[78px] max-w-[144px] items-center justify-center gap-1.5 px-2 text-center font-sans text-[15px] leading-[1.15] tracking-[0.02em] transition-all duration-200 xl:px-2.5 ${
                       isHovered || isRouteActive
                         ? isTopTransparent
                           ? "font-semibold text-white drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"

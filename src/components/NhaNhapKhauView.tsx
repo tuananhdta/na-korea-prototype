@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { NHA_NHAP_KHAU_SUB_NAV } from "@/lib/subNavItems";
 import { SectionIndicator } from "@/components/SectionIndicator";
 import {
   ChevronRight,
@@ -74,7 +75,7 @@ export function NhaNhapKhauView() {
 
   return (
     <div className="min-h-screen bg-[#F8F8F8] flex flex-col font-sans text-[#333333] antialiased">
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         <PageHero
@@ -83,6 +84,8 @@ export function NhaNhapKhauView() {
           image="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
           imageAlt="Nhà nhập khẩu NA Korea - Hồng Kim Sâm"
           imageOpacity={0.92}
+          subNavItems={NHA_NHAP_KHAU_SUB_NAV}
+          currentHref="/ve-nha-nhap-khau"
         />
 
         {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}

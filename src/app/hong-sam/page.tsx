@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { GIOI_THIEU_SUB_NAV } from "@/lib/subNavItems";
 import { ChevronRight, ArrowRight, Award, Building2, FileText } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
@@ -106,7 +107,7 @@ export default function HongSamPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         <PageHero
@@ -117,6 +118,8 @@ export default function HongSamPage() {
           image="/images/ginseng/sub02_hero.jpg"
           imageAlt="Quy trình chế biến Hồng sâm 6 năm tuổi thượng hạng Punggi - Hồng Sâm Kim"
           imageOpacity={0.96}
+          subNavItems={GIOI_THIEU_SUB_NAV}
+          currentHref="/hong-sam"
         />
 
         {/* Standard Breadcrumb Bar */}

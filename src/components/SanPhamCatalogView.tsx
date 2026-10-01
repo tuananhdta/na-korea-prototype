@@ -7,6 +7,7 @@ import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
 import { ProductCard } from "@/components/ProductCard";
 import { PageHero } from "@/components/PageHero";
+import { SAN_PHAM_SUB_NAV } from "@/lib/subNavItems";
 import { CustomerReviewsSection } from "@/components/CustomerReviewsSection";
 import { EeatKnowledgeSection } from "@/components/EeatKnowledgeSection";
 import productsData from "@/data/products.json";
@@ -134,7 +135,7 @@ export function SanPhamCatalogView() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(catalogJsonLd) }}
       />
 
-      <Header onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
+      <Header overlay onOpenMobileMenu={() => setIsMobileMenuOpen(true)} />
       <MobileDrawer
         isOpen={isMobileMenuOpen}
         onClose={() => setIsMobileMenuOpen(false)}
@@ -149,6 +150,8 @@ export function SanPhamCatalogView() {
           description="Sản phẩm bồi bổ sức khỏe cao cấp chế biến từ 100% nhân sâm 6 năm tuổi thủ phủ Punggi Hàn Quốc – Nghệ nhân Kim Jeong Hwan."
           image="/images/production.jpg"
           imageAlt="Sản phẩm Hồng Sâm Hồng Kim Sâm"
+          subNavItems={SAN_PHAM_SUB_NAV}
+          currentHref="/san-pham"
         />
 
         {/* Breadcrumbs */}

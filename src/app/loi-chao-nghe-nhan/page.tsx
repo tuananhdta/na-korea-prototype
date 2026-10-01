@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { GIOI_THIEU_SUB_NAV } from "@/lib/subNavItems";
 import { ChevronRight, Award, Globe, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
@@ -69,7 +70,7 @@ export default function LoiChaoNgheNhanPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
       />
 
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         {/* Hero Section */}
@@ -81,6 +82,8 @@ export default function LoiChaoNgheNhanPage() {
           image="/images/sub02.jpg"
           imageAlt="Nghệ nhân Nhân sâm Punggi Hàn Quốc Kim Jeong Hwan – Thương hiệu Hồng Sâm Kim"
           imageOpacity={0.9}
+          subNavItems={GIOI_THIEU_SUB_NAV}
+          currentHref="/loi-chao-nghe-nhan"
         />
 
         {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}

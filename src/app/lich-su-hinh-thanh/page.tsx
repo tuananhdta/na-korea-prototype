@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { GIOI_THIEU_SUB_NAV } from "@/lib/subNavItems";
 import { ChevronRight, Award, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 import { TimelineTabs } from "@/components/TimelineTabs";
@@ -81,7 +82,7 @@ export default function LichSuHinhThanhPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdData) }}
       />
 
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         {/* Page Hero - Chuẩn SEO & GEO tinh gọn */}
@@ -93,6 +94,8 @@ export default function LichSuHinhThanhPage() {
           image="/images/sub03.jpg"
           imageAlt="Lịch sử hình thành và phát triển Hồng Sâm Kim Punggi Hàn Quốc"
           imageOpacity={0.9}
+          subNavItems={GIOI_THIEU_SUB_NAV}
+          currentHref="/lich-su-hinh-thanh"
         />
 
         {/* Breadcrumb Navigation - Quy chuẩn Spacing py-3 */}

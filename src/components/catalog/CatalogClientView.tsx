@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { CAM_NANG_SUB_NAV } from "@/lib/subNavItems";
 import { FlipBookViewer } from "@/components/catalog/FlipBookViewer";
 import {
   CATALOG_PRODUCTS_2026,
@@ -56,7 +57,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
 
   return (
     <div className="min-h-screen bg-[#FCFAF7] text-[#111111] selection:bg-[#4B193E] selection:text-white flex flex-col">
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-24">
         {/* ═══ Page Hero Banner ═══ */}
@@ -68,6 +69,8 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
           image={heroContent.image}
           imageAlt={heroContent.imageAlt}
           imageOpacity={0.92}
+          subNavItems={CAM_NANG_SUB_NAV}
+          currentHref={activeTab === "product-2026" ? "/cam-nang" : "/cam-nang/ginsenoside"}
         />
 
         {/* ═══ Main Content Section ═══ */}

@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { TIN_TUC_SUB_NAV } from "@/lib/subNavItems";
 import { ChevronRight, Calendar, Clock, ArrowRight } from "lucide-react";
 import blogsData from "@/data/blogs.json";
 import { BlogPost } from "@/types/blog";
@@ -29,7 +30,7 @@ export function TinTucListView() {
 
   return (
     <div className="min-h-screen bg-[#F8F8F8] flex flex-col">
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         <PageHero
@@ -40,6 +41,8 @@ export function TinTucListView() {
           image="/images/blog/tin-tuc.jpg"
           imageAlt="Tin tức Hồng Kim Sâm"
           imageOpacity={0.9}
+          subNavItems={TIN_TUC_SUB_NAV}
+          currentHref="/tin-tuc"
         />
 
         {/* Breadcrumb */}

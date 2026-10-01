@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
+import { GIOI_THIEU_SUB_NAV } from "@/lib/subNavItems";
 import { ChevronRight, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 import { CertificationTabs } from "@/components/CertificationTabs";
@@ -80,7 +81,7 @@ export default function ChungChiChatLuongPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
-      <Header />
+      <Header overlay />
 
       <main className="flex-1 pb-20">
         <PageHero
@@ -91,6 +92,8 @@ export default function ChungChiChatLuongPage() {
           image="/images/sub04.jpg"
           imageAlt="Chứng nhận chất lượng Hồng Sâm Kim Hàn Quốc"
           imageOpacity={0.9}
+          subNavItems={GIOI_THIEU_SUB_NAV}
+          currentHref="/chung-chi-chat-luong"
         />
 
         {/* Standardized Breadcrumb Spacing py-3 */}
