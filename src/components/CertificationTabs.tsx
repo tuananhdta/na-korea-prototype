@@ -186,22 +186,17 @@ export function CertificationTabs() {
         </div>
       </div>
 
-      {/* Lightbox / Modal Popup Chi Tiết: Tối giản, đã ẩn dòng lặp bảo chứng */}
+      {/* Lightbox / Modal Popup Chi Tiết: Chỉ đóng khi bấm nút X lớn */}
       {selectedCertificate && (
-        <div
-          className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fadeIn"
-          onClick={() => setSelectedCertificate(null)}
-        >
-          <div
-            className="relative bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-gray-100 my-auto"
-            onClick={(e) => e.stopPropagation()}
-          >
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs flex items-center justify-center p-4 sm:p-6 overflow-y-auto animate-fadeIn">
+          <div className="relative bg-white rounded-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 shadow-2xl border border-gray-100 my-auto">
+            {/* Nút X lớn tăng kích thước 50% (w-7 h-7 / w-8 h-8) */}
             <button
               onClick={() => setSelectedCertificate(null)}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-700 hover:bg-gray-100 rounded-full transition-colors z-10"
-              aria-label="Đóng modal"
+              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-gray-900 hover:bg-gray-100 rounded-full transition-colors z-10 cursor-pointer"
+              aria-label="Đóng popup"
             >
-              <X className="w-5 h-5" />
+              <X className="w-8 h-8" />
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
@@ -233,13 +228,6 @@ export function CertificationTabs() {
                   <span className="font-semibold text-gray-700 block mb-0.5">Cơ quan thẩm định & cấp bằng:</span>
                   <span className="text-gray-600">{selectedCertificate.issuingBody}</span>
                 </div>
-
-                <button
-                  onClick={() => setSelectedCertificate(null)}
-                  className="w-full py-2.5 px-4 bg-[#500028] text-white text-xs font-semibold rounded-lg hover:bg-[#3d001f] transition-colors shadow-xs cursor-pointer"
-                >
-                  Hoàn Tất Xem Chi Tiết
-                </button>
               </div>
             </div>
           </div>
