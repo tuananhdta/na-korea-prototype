@@ -68,7 +68,7 @@ export function LienHeView() {
 
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 mt-10 space-y-12">
           
-          {/* ─── 3 VIP QUICK-CONTACT CARDS (Styling đồng bộ PartnerSection) ─── */}
+          {/* ─── 3 VIP QUICK-CONTACT CARDS ─── */}
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             
             {/* Card 1: Hotline 24/7 */}
@@ -164,63 +164,64 @@ export function LienHeView() {
 
           </div>
 
-          {/* ─── MAIN 2-COLUMN SECTION (Corporate Info vs Streamlined Form) ─── */}
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12 items-stretch">
+          {/* ─── MAIN 2-COLUMN SECTION (Balanced 6/6 Grid with Pixel-Perfect Alignment) ─── */}
+          <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 items-stretch">
             
-            {/* ─── LEFT COLUMN: CONCISE CORPORATE INFO & LOCATIONS (5/12) ─── */}
-            <div className="lg:col-span-5 flex flex-col justify-between space-y-6">
-              <div className="h-full rounded-3xl border border-[#EEEEEE] bg-white p-6 sm:p-8 shadow-xs flex flex-col justify-between">
+            {/* ─── LEFT COLUMN: THÔNG TIN TRỤ SỞ (6/12) ─── */}
+            <div className="lg:col-span-6 flex flex-col">
+              <div className="h-full rounded-3xl border border-[#EEEEEE] bg-white p-6 sm:p-8 md:p-9 shadow-xs flex flex-col justify-between">
                 
-                <div className="space-y-5">
-                  <div className="pb-4 border-b border-[#EEEEEE]">
+                <div>
+                  {/* Symmetrical Header */}
+                  <div className="pb-4 border-b border-[#EEEEEE] mb-6">
                     <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px]">
                       Thông tin trụ sở
                     </h2>
                   </div>
 
-                  {/* Concise Locations List */}
-                  <div className="space-y-4 font-sans text-xs sm:text-sm">
+                  {/* Balanced Locations List */}
+                  <div className="space-y-5 font-sans text-xs sm:text-sm py-1">
                     
                     {/* Location 1: Representative Office */}
-                    <div className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#4B193E]">
+                    <div className="flex items-start gap-3.5">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-[#4B193E] shadow-2xs">
                         <MapPin className="h-4 w-4" />
                       </div>
-                      <div className="space-y-0.5">
-                        <strong className="block font-sans text-sm font-bold text-[#111111]">
+                      <div className="space-y-1 pt-0.5">
+                        <strong className="block font-sans text-sm sm:text-base font-bold text-[#111111]">
                           Văn phòng Thanh Xuân
                         </strong>
-                        <p className="font-sans text-xs text-[#666666] leading-relaxed">
+                        <p className="font-sans text-xs sm:text-sm text-[#666666] leading-relaxed">
                           LK 19-TT1, Khu nhà ở 96-96B Nguyễn Huy Tưởng, Hà Nội
                         </p>
                       </div>
                     </div>
 
                     {/* Location 2: South Branch */}
-                    <div className="flex items-start gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#4B193E]">
+                    <div className="flex items-start gap-3.5">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#4B193E] shadow-2xs">
                         <MapPin className="h-4 w-4" />
                       </div>
-                      <div className="space-y-0.5">
-                        <strong className="block font-sans text-sm font-bold text-[#111111]">
+                      <div className="space-y-1 pt-0.5">
+                        <strong className="block font-sans text-sm sm:text-base font-bold text-[#111111]">
                           Chi nhánh TP. Hồ Chí Minh
                         </strong>
-                        <p className="font-sans text-xs text-[#666666] leading-relaxed">
+                        <p className="font-sans text-xs sm:text-sm text-[#666666] leading-relaxed">
                           41/10D/29 Đường Gò Cát, P. Phú Hữu, TP. Thủ Đức, TP. HCM
                         </p>
                       </div>
                     </div>
 
                     {/* Working Hours */}
-                    <div className="flex items-start gap-3 pt-1">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-[#F5F3EF] border border-[#EEEEEE] text-[#181818]">
+                    <div className="flex items-start gap-3.5 pt-1">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-[#181818] shadow-2xs">
                         <Clock className="h-4 w-4 text-[#D4A359]" />
                       </div>
-                      <div className="space-y-0.5">
-                        <strong className="block font-sans text-sm font-bold text-[#111111]">
+                      <div className="space-y-1 pt-0.5">
+                        <strong className="block font-sans text-sm sm:text-base font-bold text-[#111111]">
                           Thời gian phục vụ
                         </strong>
-                        <p className="font-sans text-xs text-[#666666] leading-relaxed">
+                        <p className="font-sans text-xs sm:text-sm text-[#666666] leading-relaxed">
                           08:00 – 18:00 (Thứ Hai – Chủ Nhật)
                         </p>
                       </div>
@@ -229,24 +230,24 @@ export function LienHeView() {
                   </div>
                 </div>
 
-                {/* Legal Entity Trust Badge */}
-                <div className="mt-6 rounded-xl bg-[#F8F8F8] border border-[#EEEEEE] p-3.5 font-sans text-xs text-[#181818] leading-relaxed flex items-center gap-2.5">
+                {/* Legal Entity Trust Badge (Aligned with Right Bottom Note) */}
+                <div className="mt-8 rounded-2xl bg-[#F8F8F8] border border-[#EEEEEE] p-4 font-sans text-xs text-[#181818] leading-relaxed flex items-center gap-3">
                   <ShieldCheck className="h-5 w-5 text-[#4B193E] shrink-0" />
                   <div>
-                    <span className="font-bold text-[#111111]">CÔNG TY TNHH THƯƠNG MẠI NA KOREA</span>
-                    <span className="text-[#888888] block text-[11px]">MST: 0109946846 • Đại diện thương hiệu Hồng Kim Sâm</span>
+                    <span className="font-bold text-[#111111] block text-xs sm:text-sm">CÔNG TY TNHH THƯƠNG MẠI NA KOREA</span>
+                    <span className="text-[#888888] block text-[11px] sm:text-xs">MST: 0109946846 • Đại diện thương hiệu Hồng Kim Sâm</span>
                   </div>
                 </div>
 
               </div>
             </div>
 
-            {/* ─── RIGHT COLUMN: STREAMLINED CONSULTATION FORM (7/12) ─── */}
-            <div className="lg:col-span-7">
-              <div className="h-full rounded-3xl border border-[#EEEEEE] bg-white p-6 sm:p-8 md:p-10 shadow-xs flex flex-col justify-center">
+            {/* ─── RIGHT COLUMN: ĐĂNG KÝ NHẬN TƯ VẤN TRỰC TIẾP (6/12) ─── */}
+            <div className="lg:col-span-6 flex flex-col">
+              <div className="h-full rounded-3xl border border-[#EEEEEE] bg-white p-6 sm:p-8 md:p-9 shadow-xs flex flex-col justify-between">
                 
                 {submitted ? (
-                  <div className="py-12 text-center space-y-5">
+                  <div className="py-12 text-center space-y-5 my-auto">
                     <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-50 border-2 border-emerald-500 text-emerald-600 shadow-sm animate-bounce">
                       <CheckCircle2 className="h-8 w-8" />
                     </div>
@@ -273,85 +274,70 @@ export function LienHeView() {
                     </div>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="h-full flex flex-col justify-between space-y-6">
                     
-                    <div className="space-y-1 pb-1">
-                      <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
-                        Đăng ký nhận tư vấn trực tiếp
-                      </p>
-                      <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px]">
-                        Tư Vấn Sức Khỏe &amp; Sản Phẩm
-                      </h2>
-                      <p className="mt-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666]">
-                        Quý khách vui lòng để lại thông tin, chuyên viên sẽ tư vấn giải pháp phù hợp thể trạng.
-                      </p>
-                    </div>
-
-                    {/* Name & Phone */}
-                    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                      <div className="space-y-1.5">
-                        <label className="block font-sans text-xs font-bold text-[#111111]">
-                          Họ và tên <span className="text-[#4B193E]">*</span>
-                        </label>
-                        <input
-                          type="text"
-                          required
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          placeholder="Ví dụ: Nguyễn Văn A"
-                          className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
-                        />
+                    <div>
+                      {/* Symmetrical Header */}
+                      <div className="pb-4 border-b border-[#EEEEEE] mb-6">
+                        <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px]">
+                          Đăng ký nhận tư vấn trực tiếp
+                        </h2>
                       </div>
 
-                      <div className="space-y-1.5">
-                        <label className="block font-sans text-xs font-bold text-[#111111]">
-                          Số điện thoại <span className="text-[#4B193E]">*</span>
-                        </label>
-                        <input
-                          type="tel"
-                          required
-                          value={formData.phone}
-                          onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                          placeholder="Ví dụ: 090 340 9939"
-                          className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
-                        />
+                      {/* Inputs Container */}
+                      <div className="space-y-4">
+                        {/* Name & Phone */}
+                        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                          <div className="space-y-1.5">
+                            <label className="block font-sans text-xs font-bold text-[#111111]">
+                              Họ và tên <span className="text-[#4B193E]">*</span>
+                            </label>
+                            <input
+                              type="text"
+                              required
+                              value={formData.name}
+                              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                              placeholder="Ví dụ: Nguyễn Văn A"
+                              className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
+                            />
+                          </div>
+
+                          <div className="space-y-1.5">
+                            <label className="block font-sans text-xs font-bold text-[#111111]">
+                              Số điện thoại <span className="text-[#4B193E]">*</span>
+                            </label>
+                            <input
+                              type="tel"
+                              required
+                              value={formData.phone}
+                              onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                              placeholder="Ví dụ: 090 340 9939"
+                              className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
+                            />
+                          </div>
+                        </div>
+
+                        {/* Topic Select */}
+                        <div className="space-y-1.5">
+                          <label className="block font-sans text-xs font-bold text-[#111111]">
+                            Nhu cầu hỗ trợ
+                          </label>
+                          <select
+                            value={formData.topic}
+                            onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
+                            className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
+                          >
+                            <option value="Tư vấn chọn sản phẩm">Tư vấn chọn sản phẩm hồng sâm phù hợp thể trạng</option>
+                            <option value="Quà biếu sức khỏe VIP">Tư vấn set quà biếu cao cấp &amp; doanh nghiệp</option>
+                            <option value="Hỗ trợ đơn hàng &amp; giao nhận">Hỗ trợ tra cứu đơn hàng &amp; vận chuyển</option>
+                            <option value="Khác">Nội dung câu hỏi khác</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
 
-                    {/* Topic Select */}
-                    <div className="space-y-1.5">
-                      <label className="block font-sans text-xs font-bold text-[#111111]">
-                        Nhu cầu hỗ trợ
-                      </label>
-                      <select
-                        value={formData.topic}
-                        onChange={(e) => setFormData({ ...formData, topic: e.target.value })}
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 font-sans text-sm text-[#111111] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
-                      >
-                        <option value="Tư vấn chọn sản phẩm">Tư vấn chọn sản phẩm hồng sâm phù hợp thể trạng</option>
-                        <option value="Quà biếu sức khỏe VIP">Tư vấn set quà biếu cao cấp &amp; doanh nghiệp</option>
-                        <option value="Hỗ trợ đơn hàng &amp; giao nhận">Hỗ trợ tra cứu đơn hàng &amp; vận chuyển</option>
-                        <option value="Khác">Nội dung câu hỏi khác</option>
-                      </select>
-                    </div>
-
-                    {/* Message */}
-                    <div className="space-y-1.5">
-                      <label className="block font-sans text-xs font-bold text-[#111111]">
-                        Nội dung cần tư vấn <span className="text-[#4B193E]">*</span>
-                      </label>
-                      <textarea
-                        rows={3}
-                        required
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Quý khách vui lòng để lại lời nhắn hoặc câu hỏi cần giải đáp..."
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-3.5 py-2.5 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15 resize-none"
-                      />
-                    </div>
-
-                    {/* Submit Button */}
-                    <div className="pt-2">
+                    {/* Submit Button & Security Note */}
+                    <div className="space-y-3 pt-2">
                       <button
                         type="submit"
                         disabled={loading}
@@ -366,11 +352,11 @@ export function LienHeView() {
                           </>
                         )}
                       </button>
-                    </div>
 
-                    <p className="text-center font-sans text-[11px] text-[#888888] pt-1">
-                      🔒 Cam kết bảo mật thông tin cá nhân khách hàng tuyệt đối 100%.
-                    </p>
+                      <p className="text-center font-sans text-[11px] sm:text-xs text-[#888888]">
+                        🔒 Cam kết bảo mật thông tin cá nhân khách hàng tuyệt đối 100%.
+                      </p>
+                    </div>
 
                   </form>
                 )}
