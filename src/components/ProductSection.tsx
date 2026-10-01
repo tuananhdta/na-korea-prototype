@@ -23,7 +23,7 @@ export function ProductSection() {
           </p>
 
           <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
-            Sản Phẩm Hồng Sâm Kim&apos;s Nổi Bật
+            Sản Phẩm Hồng Sâm Kim Nổi Bật
           </h2>
 
           <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
