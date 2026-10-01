@@ -4,25 +4,28 @@ import Link from "next/link";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
-import { ChevronRight, ShieldCheck, HeartPulse, Zap, Flame, CheckCircle2, XCircle } from "lucide-react";
+import { ChevronRight, ArrowRight, CheckCircle2, XCircle } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
-  title: "Khám Phá Vùng Đất Nhân Sâm Punggi 500 Năm",
-  description: "Tìm hiểu nguồn gốc Nhân sâm Goryeo (Cao Ly) và truyền thống canh tác nhân sâm 6 năm tuổi hơn 500 năm tại thủ phủ Punggi – Chân núi Sobaek Hàn Quốc.",
+  title: "Về Nhân Sâm Goryeo (Cao Ly) | Hồng Sâm Kim",
+  description:
+    "Tìm hiểu nguồn gốc Nhân sâm Goryeo (Cao Ly) chính thống Hàn Quốc, thành phần Saponin vượt trội, cẩm nang phân biệt nhân sâm tươi và nhân sâm khô.",
   keywords: [
-    "Nhân sâm Punggi",
     "Nhân sâm Goryeo",
+    "Nhân sâm Cao Ly",
     "Nhân sâm Hàn Quốc",
+    "Phân biệt nhân sâm",
     "Saponin Ginsenoside",
-    "Hồng Kim Sâm",
+    "Hồng Sâm Kim",
+    "NA Korea",
   ],
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/nhan-sam`,
   },
   openGraph: {
-    title: `Khám Phá Vùng Đất Nhân Sâm Punggi 500 Năm | ${SITE_CONFIG.brandName}`,
-    description: "Di sản 500 năm nhân sâm Punggi huyền thoại dưới chân núi Sobaek Hàn Quốc.",
+    title: `Về Nhân Sâm Goryeo (Cao Ly) | ${SITE_CONFIG.brandName}`,
+    description: "Khám phá nguồn gốc và công dụng di sản ngàn năm của Nhân sâm Goryeo Hàn Quốc.",
     url: `${SITE_CONFIG.siteUrl}/nhan-sam`,
     type: "website",
   },
@@ -35,17 +38,17 @@ export default function NhanSamPage() {
 
       <main className="flex-1 pb-20">
         <PageHero
-          eyebrow="DI SẢN 500 NĂM PUNGGI"
+          eyebrow="DI SẢN NGÀN NĂM PUNGGI"
           showEyebrow={false}
           title="Nhân Sâm Là Gì?"
-          description="Chúng tôi sẽ tiếp tục duy trì sự bền bỉ của nghề trồng nhân sâm 6 năm tuổi ở vùng đất Punggi huyền thoại. Dấu ấn ngàn năm hòa quyện giữa dòng chảy thời gian, con người và vạn vật."
-          image="/images/ginseng.jpg"
-          imageAlt="Nhân sâm Punggi"
+          description="Chúng tôi sẽ tiếp tục duy trì sự bền bỉ của nghề trồng nhân sâm 6 năm tuổi ở Punggi. Dấu ấn ngàn năm hòa quyện giữa dòng chảy thời gian, con người và vạn vật."
+          image="/images/ginseng/sub01_hero.jpg"
+          imageAlt="Nguồn gốc Nhân sâm Goryeo Punggi Hàn Quốc"
           imageOpacity={0.96}
         />
 
-        {/* Breadcrumb & Navigation Tabs */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 pt-4 pb-2 space-y-4">
+        {/* Standardized Breadcrumb & Navigation Tabs */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-3 space-y-4">
           <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
             <Link href="/" className="hover:text-black transition-colors">
               Trang Chủ
@@ -57,49 +60,49 @@ export default function NhanSamPage() {
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-gray-600 font-medium">Về Nhân Sâm</span>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-[#4B193E] font-bold">Nhân Sâm</span>
+            <span className="text-[#500028] font-bold">Nhân Sâm Goryeo</span>
           </nav>
 
-          {/* 2-Article Tab Control */}
-          <div className="flex items-center gap-2 p-1.5 bg-gray-100/80 rounded-xl border border-gray-200/80 max-w-md shadow-2xs">
+          {/* 2-Article Tab Navigation */}
+          <div className="flex items-center gap-2 p-1.5 bg-gray-100/90 rounded-xl border border-gray-200/80 max-w-md shadow-2xs">
             <Link
               href="/nhan-sam"
-              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#4B193E] text-white shadow-xs transition-all"
+              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-bold bg-[#500028] text-white shadow-xs transition-all"
             >
               Nhân Sâm (Goryeo)
             </Link>
             <Link
               href="/hong-sam"
-              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-white/60 transition-all"
+              className="flex-1 text-center py-2.5 px-4 rounded-lg text-xs sm:text-sm font-semibold text-gray-600 hover:text-gray-900 hover:bg-white/80 transition-all"
             >
               Hồng Sâm (6 Năm Tuổi)
             </Link>
           </div>
         </div>
 
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-16 mt-4">
-          {/* Section 1: Nhân sâm Goryeo là gì */}
-          <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 space-y-12 mt-4">
+          {/* Section 1: Khái niệm & Nguồn gốc Nhân sâm Goryeo */}
+          <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xs border border-gray-200">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
               <div className="lg:col-span-6 space-y-4">
-                <div className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
-                  KHÁI NIỆM & NGUỒN GỐC
-                </div>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#500028] bg-[#500028]/5 px-3 py-1 rounded-full">
+                  Khái Niệm & Nguồn Gốc
+                </span>
                 <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
                   Nhân Sâm Goryeo (Cao Ly) Là Gì?
                 </h2>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   Nhân sâm Goryeo, một loại thảo dược quý hiếm, chỉ mọc ở vùng Viễn Đông châu Á, bao gồm Hàn Quốc (vĩ độ 33,7º – 43,1º), Trung Quốc (Mãn Châu, vĩ độ 43º – 47º) và Nga (vùng Primorsky, vĩ độ 40º – 48º), tất cả đều nằm trong khoảng vĩ độ bắc từ 30º đến 48º.
                 </p>
-                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
                   Nhân sâm là loại cây vô cùng khó trồng ở những vùng không có điều kiện khí hậu thích hợp. Hàn Quốc là một trong số ít những nơi trên thế giới có điều kiện lý tưởng để trồng nhân sâm và được biết đến đặc biệt với tên gọi <strong>“Nhân Sâm Goryeo”</strong>, được người tiêu dùng trên toàn thế giới ưa chuộng suốt nhiều thế kỷ.
                 </p>
               </div>
 
-              <div className="lg:col-span-6 relative aspect-4/3 rounded-xl overflow-hidden shadow-md bg-gray-50 border border-gray-100">
+              <div className="lg:col-span-6 relative aspect-4/3 rounded-xl overflow-hidden shadow-xs bg-gray-50 border border-gray-200">
                 <Image
-                  src="/images/ginseng/인삼에대하여-1.jpg"
-                  alt="Nhân sâm Goryeo"
+                  src="/images/ginseng/ginseng_about_1.jpg"
+                  alt="Nhân sâm Goryeo Hàn Quốc chính thống"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
@@ -109,208 +112,260 @@ export default function NhanSamPage() {
           </section>
 
           {/* Section 2: Thành phần & Công dụng Saponin */}
-          <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-10">
+          <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xs border border-gray-200 space-y-8">
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
-                GIÁ TRỊ DINH DƯỠNG
+              <span className="text-xs font-bold uppercase tracking-wider text-[#500028] bg-[#500028]/5 px-3 py-1 rounded-full">
+                Giá Trị Dinh Dưỡng
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                Thành Phần & Công Dụng Của Saponin
+                Nhân Sâm Goryeo: Thành Phần & Công Dụng Saponin
               </h2>
-              <p className="text-sm text-gray-600 italic">
+              <p className="text-xs sm:text-sm text-gray-500 italic">
                 &quot;Men may deceive the Earth, but the Earth never deceives Men.&quot;
               </p>
-              <p className="text-sm text-gray-600 leading-relaxed">
-                Nhân sâm Goryeo chủ yếu được cấu tạo từ carbohydrate (tinh bột, polysaccharide và cellulose, chiếm 60–70%). Đặc biệt, nó chứa <strong>Saponin (Ginsenoside)</strong> – tinh chất linh hồn của nhân sâm, cùng protein, peptide, alkaloid, hợp chất phenolic và 3 thành phần polyacetylene quý hiếm: <em>panaxydol, panaxynol và panaxytriol</em>.
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Nhân Sâm Goryeo chủ yếu được cấu tạo từ các loại carbohydrate như tinh bột, polysaccharide và cellulose, chiếm tới khoảng 60 đến 70% tổng thành phần. Ngoài ra, nó còn chứa <strong>saponin – tinh chất của nhân sâm</strong>, và nhiều hợp chất hóa học chứa nitơ như protein, peptide, alkaloid, hợp chất phenolic và polyacetylene, thành phần dầu, chất tan trong dầu như phytosterol và nhiều loại vitamin. Người ta đã tìm thấy khoảng 20 loại chất polyacetylene khác nhau trong nhân sâm và ba thành phần chính là <em>panaxydol, panaxynol và panaxytriol</em>.
               </p>
             </div>
 
-            {/* 4 Core Saponin Benefits */}
+            {/* 4 Icon Benefit Cards */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
-                  <Flame className="w-6 h-6" />
+              <div className="p-6 rounded-xl bg-gray-50/80 border border-gray-200 text-center space-y-3 hover:border-[#500028]/30 transition-all">
+                <div className="relative w-14 h-14 mx-auto">
+                  <Image
+                    src="/images/ginseng/icon01.png"
+                    alt="Phân giải mỡ thừa"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="font-bold text-gray-900 text-base">Phân Giải Mỡ Thừa</h3>
+                <h3 className="font-bold text-gray-900 text-sm">Phân Giải Mỡ Thừa</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  Tác dụng phân giải mỡ cao trong cơ thể, hỗ trợ tiêu hóa và hấp thụ các dưỡng chất thiết yếu một cách tối ưu.
+                  Tác dụng phân giải mỡ cao trong cơ thể và hỗ trợ quá trình hấp thụ, tiêu hóa chất dinh dưỡng.
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
-                  <Zap className="w-6 h-6" />
+              <div className="p-6 rounded-xl bg-gray-50/80 border border-gray-200 text-center space-y-3 hover:border-[#500028]/30 transition-all">
+                <div className="relative w-14 h-14 mx-auto">
+                  <Image
+                    src="/images/ginseng/icon02.png"
+                    alt="Kích hoạt enzyme"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="font-bold text-gray-900 text-base">Kích Hoạt Enzyme</h3>
+                <h3 className="font-bold text-gray-900 text-sm">Kích Hoạt Enzyme</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  Thúc đẩy quá trình trao đổi chất của cơ thể thông qua kích hoạt mạnh mẽ các enzyme nội bào.
+                  Thúc đẩy quá trình trao đổi chất bằng cách kích hoạt các enzyme trong tế bào.
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
-                  <HeartPulse className="w-6 h-6" />
+              <div className="p-6 rounded-xl bg-gray-50/80 border border-gray-200 text-center space-y-3 hover:border-[#500028]/30 transition-all">
+                <div className="relative w-14 h-14 mx-auto">
+                  <Image
+                    src="/images/ginseng/icon03.png"
+                    alt="Tổng hợp protein"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="font-bold text-gray-900 text-base">Tổng Hợp Protein</h3>
+                <h3 className="font-bold text-gray-900 text-sm">Tổng Hợp Protein</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  Thúc đẩy quá trình tổng hợp protein huyết thanh, hỗ trợ tuần hoàn máu và lưu thông khí huyết.
+                  Thúc đẩy quá trình tổng hợp protein huyết thanh, hỗ trợ tuần hoàn khí huyết.
                 </p>
               </div>
 
-              <div className="p-6 rounded-xl bg-[#F5F3EF] border border-[#EEEEEE] text-center space-y-3">
-                <div className="w-12 h-12 rounded-full bg-[#4B193E] text-white flex items-center justify-center mx-auto shadow-sm">
-                  <ShieldCheck className="w-6 h-6" />
+              <div className="p-6 rounded-xl bg-gray-50/80 border border-gray-200 text-center space-y-3 hover:border-[#500028]/30 transition-all">
+                <div className="relative w-14 h-14 mx-auto">
+                  <Image
+                    src="/images/ginseng/icon04.png"
+                    alt="Phục hồi sức bền"
+                    fill
+                    className="object-contain"
+                  />
                 </div>
-                <h3 className="font-bold text-gray-900 text-base">Phục Hồi Sức Bền</h3>
+                <h3 className="font-bold text-gray-900 text-sm">Phục Hồi Sức Bền</h3>
                 <p className="text-xs text-gray-600 leading-relaxed">
-                  Tăng cường năng lượng, chống suy nhược, xua tan căng thẳng mệt mỏi và cải thiện chứng chán ăn.
+                  Tăng cường năng lượng, phục hồi sức bền, chống mệt mỏi, bất lực và chán ăn.
                 </p>
               </div>
             </div>
           </section>
 
-          {/* Section 3: Phân biệt sâm Hàn Quốc vs Sâm ngoại quốc */}
-          <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-8">
+          {/* Section 3: Distinguishing Method (Phân biệt Sâm Hàn Quốc & Ngoại Quốc) */}
+          <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xs border border-gray-200 space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
-                CẨM NANG PHÂN BIỆT
+              <span className="text-xs font-bold uppercase tracking-wider text-[#500028] bg-[#500028]/5 px-3 py-1 rounded-full">
+                Cẩm Nang Nhận Biết
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
-                Phân Biệt Nhân Sâm Hàn Quốc & Sâm Ngoại Quốc
+                Phương Pháp Phân Biệt Sâm Hàn Quốc & Sâm Ngoại Quốc
               </h2>
               <p className="text-xs sm:text-sm text-gray-500">
-                Nhân sâm Hàn Quốc chính thống luôn có những đặc điểm nhận dạng rõ ràng về hình dáng củ, rễ và màu sắc.
+                Nhân sâm Hàn Quốc chính thống luôn có đặc điểm nhận dạng rõ ràng về vỏ, đầu, chân và màu sắc.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* Foreign Ginseng Card */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-gray-50 border border-gray-200 space-y-4">
-                <div className="flex items-center gap-2 text-gray-700 font-bold text-lg pb-2 border-b border-gray-200">
-                  <XCircle className="w-5 h-5 text-gray-400" />
-                  <span>Nhân Sâm Ngoại Quốc (Foreign Ginseng)</span>
-                </div>
-                <ul className="space-y-3 text-sm text-gray-600">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" />
-                    <span><strong>Bề mặt:</strong> Sạch, không có đất bám trên bề mặt củ.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" />
-                    <span><strong>Phần đầu:</strong> Dài, phát triển kém, hơi mảnh.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" />
-                    <span><strong>Màu sắc:</strong> Trắng sữa hoặc màu nâu nhạt.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 shrink-0" />
-                    <span><strong>Phần chân & rễ:</strong> Chân ngắn, phát triển kém; nhiều rễ râu vụn.</span>
-                  </li>
-                </ul>
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+              {/* Image view */}
+              <div className="lg:col-span-5 relative aspect-4/3 rounded-xl overflow-hidden bg-gray-50 border border-gray-200">
+                <Image
+                  src="/images/ginseng/korean_vs_foreign.jpg"
+                  alt="Đặc điểm nhân sâm Hàn Quốc vs sâm ngoại quốc"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-contain p-2"
+                />
               </div>
 
-              {/* Korean Ginseng Card */}
-              <div className="p-6 sm:p-8 rounded-2xl bg-[#4B193E]/5 border-2 border-[#4B193E]/30 space-y-4 shadow-sm">
-                <div className="flex items-center gap-2 text-[#4B193E] font-bold text-lg pb-2 border-b border-[#4B193E]/20">
-                  <CheckCircle2 className="w-5 h-5 text-[#4B193E]" />
-                  <span>Nhân Sâm Hàn Quốc (Korean Ginseng)</span>
+              {/* Comparison details */}
+              <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                {/* Foreign Ginseng */}
+                <div className="p-5 sm:p-6 rounded-xl bg-gray-50 border border-gray-200 space-y-3">
+                  <div className="flex items-center gap-2 text-gray-700 font-bold text-sm pb-2 border-b border-gray-200">
+                    <XCircle className="w-4 h-4 text-gray-400" />
+                    <span>Foreign Ginseng (Sâm Ngoại Quốc)</span>
+                  </div>
+                  <ul className="space-y-2 text-xs text-gray-600">
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 shrink-0" />
+                      <span>Sạch, không có đất bám trên bề mặt.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 shrink-0" />
+                      <span>Đầu dài, phát triển kém, hơi mảnh.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 shrink-0" />
+                      <span>Bề mặt màu trắng sữa hoặc nâu nhạt.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-gray-400 mt-1.5 shrink-0" />
+                      <span>Nhiều rễ râu, chân ngắn, phát triển kém.</span>
+                    </li>
+                  </ul>
                 </div>
-                <ul className="space-y-3 text-sm text-gray-800">
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
-                    <span><strong>Bề mặt:</strong> Còn một lớp đất mỏng tự nhiên bám trên bề mặt.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
-                    <span><strong>Phần đầu:</strong> Chắc khỏe, ngắn và tròn đầy đặn.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
-                    <span><strong>Màu sắc:</strong> Màu vàng chanh hoặc vàng trắng óng ánh đặc trưng.</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#4B193E] mt-2 shrink-0" />
-                    <span><strong>Phần chân & rễ:</strong> Chân phát triển nở nang, rễ chính dày và khỏe.</span>
-                  </li>
-                </ul>
+
+                {/* Korean Ginseng */}
+                <div className="p-5 sm:p-6 rounded-xl bg-[#500028]/5 border-2 border-[#500028]/30 space-y-3">
+                  <div className="flex items-center gap-2 text-[#500028] font-bold text-sm pb-2 border-b border-[#500028]/20">
+                    <CheckCircle2 className="w-4 h-4 text-[#500028]" />
+                    <span>Korean Ginseng (Sâm Hàn Quốc)</span>
+                  </div>
+                  <ul className="space-y-2 text-xs text-gray-800">
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#500028] mt-1.5 shrink-0" />
+                      <span>Có một ít đất bám trên bề mặt củ.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#500028] mt-1.5 shrink-0" />
+                      <span>Đầu chắc khỏe, tròn và ngắn.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#500028] mt-1.5 shrink-0" />
+                      <span>Bề mặt màu vàng chanh hoặc vàng trắng đặc trưng.</span>
+                    </li>
+                    <li className="flex items-start gap-1.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#500028] mt-1.5 shrink-0" />
+                      <span>Chân phát triển nở nang, rễ ngắn và dày.</span>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </section>
 
           {/* Section 4: Các loại nhân sâm */}
-          <section className="bg-white rounded-2xl p-6 sm:p-10 lg:p-12 shadow-xs border border-gray-100 space-y-8">
+          <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-xs border border-gray-200 space-y-8">
             <div className="text-center max-w-2xl mx-auto space-y-2">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#4B193E]">
-                PHÂN LOẠI THEO CHẾ BIẾN
+              <span className="text-xs font-bold uppercase tracking-wider text-[#500028] bg-[#500028]/5 px-3 py-1 rounded-full">
+                Phân Loại Theo Chế Biến
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900">
                 Các Loại Nhân Sâm Phổ Biến
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Nhân sâm tươi */}
-              <div className="flex gap-6 p-6 rounded-xl bg-gray-50 border border-gray-100 items-start">
-                <div className="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden bg-white shadow-xs">
+              <div className="flex flex-col p-5 rounded-xl bg-gray-50 border border-gray-200 space-y-4">
+                <div className="relative aspect-4/3 w-full rounded-lg overflow-hidden bg-white border border-gray-100">
                   <Image
-                    src="/images/ginseng/수.jpg"
-                    alt="Nhân sâm tươi"
+                    src="/images/ginseng/fresh_ginseng.jpg"
+                    alt="Nhân sâm tươi (Thủy sâm)"
                     fill
-                    sizes="112px"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
                 </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-bold text-gray-900 text-base">Nhân Sâm Tươi (Thủy Sâm)</h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    Khai thác trực tiếp từ nông trại, chứa khoảng 75% độ ẩm. Thu hoạch khi cây từ 4 đến 6 tuổi, là nguyên liệu gốc quý giá để chế biến thành hồng sâm, thái cực sâm và bạch sâm.
+                <div className="space-y-2 flex-1 flex flex-col justify-between">
+                  <h3 className="font-bold text-gray-900 text-sm">1. Nhân Sâm Tươi (Thủy Sâm)</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Nhân sâm tươi được khai thác trực tiếp từ nông trại, chứa đến 75% độ ẩm trong tổng thành phần. Thu hoạch khi cây từ 4 đến 6 tuổi, là nguyên liệu cơ bản cho các loại nhân sâm đỏ và nhân sâm trắng. Thích hợp làm quà tặng và chế biến món ăn bổ dưỡng.
                   </p>
                 </div>
               </div>
 
               {/* Nhân sâm khô */}
-              <div className="flex gap-6 p-6 rounded-xl bg-gray-50 border border-gray-100 items-start">
-                <div className="relative w-28 h-28 shrink-0 rounded-lg overflow-hidden bg-white shadow-xs">
+              <div className="flex flex-col p-5 rounded-xl bg-gray-50 border border-gray-200 space-y-4">
+                <div className="relative aspect-4/3 w-full rounded-lg overflow-hidden bg-white border border-gray-100">
                   <Image
-                    src="/images/ginseng/건.jpg"
-                    alt="Nhân sâm khô"
+                    src="/images/ginseng/dry_ginseng.jpg"
+                    alt="Nhân sâm khô (Bạch sâm)"
                     fill
-                    sizes="112px"
+                    sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover"
                   />
                 </div>
-                <div className="space-y-1.5">
-                  <h3 className="font-bold text-gray-900 text-base">Nhân Sâm Khô (Bạch Sâm)</h3>
-                  <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
-                    Nhân sâm tươi được sấy khô tự nhiên có màu vàng nhạt hoặc trắng ngà, bảo quản được lâu và tiện lợi trong việc sắc trà hoặc bài thuốc đông y cổ truyền.
+                <div className="space-y-2 flex-1 flex flex-col justify-between">
+                  <h3 className="font-bold text-gray-900 text-sm">2. Nhân Sâm Khô (Bạch Sâm)</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Nhân sâm tươi sấy khô có màu vàng nhạt hoặc trắng ngà, độ ẩm dưới 14%. Bảo quản lâu dài mà không cần dùng hóa chất, thường nghiền thành bột nhân sâm, viên nén hoặc bài thuốc y học cổ truyền.
+                  </p>
+                </div>
+              </div>
+
+              {/* Hồng sâm */}
+              <div className="flex flex-col p-5 rounded-xl bg-gray-50 border border-gray-200 space-y-4">
+                <div className="relative aspect-4/3 w-full rounded-lg overflow-hidden bg-white border border-gray-100">
+                  <Image
+                    src="/images/ginseng/red1.jpg"
+                    alt="Hồng sâm 6 năm tuổi"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="space-y-2 flex-1 flex flex-col justify-between">
+                  <h3 className="font-bold text-gray-900 text-sm">3. Hồng Sâm (6 Năm Tuổi)</h3>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    Nhân sâm tươi từ 4 đến 6 tuổi hấp chín bằng hơi nước rồi sấy khô thành màu nâu đỏ. Kết cấu cứng cáp, bảo quản lên tới 10 năm và sản sinh hàm lượng Saponin Ginsenoside quý vượt trội hoàn toàn.
                   </p>
                 </div>
               </div>
             </div>
           </section>
 
-          {/* CTA Link to Red Ginseng */}
-          <div
-            className="bg-[#181818] text-white rounded-2xl p-8 sm:p-12 text-center space-y-4"
-            data-scroll-fade="on"
-          >
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
-              Khám Phá Tiếp: Hồng Sâm 6 Năm Tuổi
-            </h2>
-            <p className="text-gray-300 text-sm max-w-xl mx-auto">
-              Tìm hiểu quy trình hấp sấy độc quyền của nghệ nhân Kim Jeong Hwan giúp chuyển hóa nhân sâm thành Hồng sâm với hàm lượng Ginsenoside vượt trội.
-            </p>
-            <div className="pt-2">
+          {/* Standard Minimalist CTA Banner */}
+          <section className="rounded-2xl border border-gray-200 bg-white p-6 sm:p-8 lg:p-10 shadow-xs flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="space-y-2 text-center md:text-left max-w-2xl">
+              <h2 className="text-xl sm:text-2xl font-bold text-gray-900 tracking-tight">
+                Tìm Hiểu Quy Trình Hấp Sấy Chế Biến Hồng Sâm 6 Năm Tuổi
+              </h2>
+              <p className="text-sm text-gray-600 leading-relaxed">
+                Khám phá bí quyết tạo nên hơn 30 loại Saponin Ginsenoside đỉnh cao từ Nghệ nhân Nhân sâm Hàn Quốc Kim Jung-hwan.
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:w-auto shrink-0">
               <Link
                 href="/hong-sam"
-                className="na-btn-primary px-8 py-3.5 text-sm"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl bg-[#500028] text-white text-sm font-semibold hover:bg-[#3d001f] transition-all shadow-xs"
               >
-                <span>TÌM HIỂU VỀ HỒNG SÂM</span>
-                <ChevronRight className="w-4 h-4" />
+                <span>Xem Quy Trình Hồng Sâm</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
-          </div>
+          </section>
         </div>
       </main>
 
