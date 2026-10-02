@@ -121,7 +121,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
         className={`fixed left-0 right-0 ${headerOffset} z-40 text-[#111111] transition-[background-color,box-shadow] duration-300 ease-in-out ${headerBgClass}`}
       >
         <div
-          className={`mx-auto flex max-w-[1240px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
+          className={`mx-auto flex max-w-[1320px] items-center justify-between px-4 sm:px-6 lg:px-8 transition-all duration-400 ease-in-out ${
             isScrolled ? "h-20" : "h-[88px] sm:h-[96px]"
           }`}
         >
@@ -159,7 +159,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
           </Link>
 
           {/* Desktop Nav */}
-          <nav className="hidden h-full flex-1 items-center justify-end gap-0.5 lg:flex xl:gap-1.5">
+          <nav className="hidden h-full flex-1 items-center justify-end gap-1 lg:flex xl:gap-2">
             {navItems.map((item) => {
               const isHovered = activeMenu === item.title;
               const isRouteActive = isNavActive(item.href, item.subItems);
@@ -180,23 +180,23 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     href={item.href}
                     aria-haspopup={item.subItems ? "menu" : undefined}
                     aria-expanded={item.subItems ? isHovered : undefined}
-                    className={`relative flex h-full min-w-[78px] max-w-[144px] items-center justify-center gap-1.5 px-2 text-center font-sans text-[15px] leading-[1.15] tracking-[0.02em] transition-all duration-200 xl:px-2.5 ${
+                    className={`relative flex h-full min-w-[84px] max-w-[160px] items-center justify-center gap-1.5 px-2.5 text-center font-sans text-[16px] leading-[1.15] tracking-[0.01em] transition-all duration-200 xl:px-3.5 xl:text-[17px] ${
                       isHovered || isRouteActive
                         ? isTopTransparent
-                          ? "font-semibold text-white"
-                          : "font-semibold text-[#4B193E]"
+                          ? "font-bold text-white"
+                          : "font-bold text-[#4B193E]"
                         : isTopTransparent
-                          ? "font-medium text-white hover:text-white"
-                          : "font-medium text-[#111111] hover:text-[#4B193E]"
+                          ? "font-semibold text-white hover:text-white"
+                          : "font-semibold text-[#111111] hover:text-[#4B193E]"
                     }`}
                   >
                     <span className="relative flex h-full items-center justify-center">
                       <span>{item.title}</span>
 
-                      {/* Active / Hover underline: clean solid 2px bar matching sub-menu line style */}
+                      {/* Active / Hover underline: clean solid 2.5px bar matching sub-menu line style */}
                       <span
                         aria-hidden="true"
-                        className={`absolute bottom-0 left-0 right-0 h-[2px] transition-all duration-200 ${
+                        className={`absolute bottom-0 left-0 right-0 h-[2.5px] transition-all duration-200 ${
                           isTopTransparent
                             ? "bg-white"
                             : "bg-[#4B193E]"
@@ -209,7 +209,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     {item.subItems && (
                       <ChevronDown
                         aria-hidden="true"
-                        className={`h-3 w-3 shrink-0 transition-transform duration-200 ${
+                        className={`h-3.5 w-3.5 shrink-0 transition-transform duration-200 ${
                           isHovered ? "rotate-180" : ""
                         } ${
                           isTopTransparent
@@ -231,7 +231,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               type="button"
               onClick={openCart}
               aria-label="Giỏ hàng"
-              className={`relative ml-2 flex h-[50px] min-w-[64px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 transition-all duration-200 cursor-pointer ${
+              className={`relative ml-3 flex h-[54px] min-w-[72px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-xl px-3 transition-all duration-200 cursor-pointer ${
                 isCartShaking ? "animate-cart-shake" : ""
               } ${
                 isTopTransparent
@@ -239,10 +239,10 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                   : "text-[#111111] hover:bg-gray-100 hover:text-[#4B193E]"
               }`}
             >
-              <ShoppingBag className="h-5 w-5" />
+              <ShoppingBag className="h-6 w-6 sm:h-6.5 sm:w-6.5" />
               {totalCount > 0 && (
                 <span
-                  className={`absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[10px] font-extrabold text-white ring-2 ring-white ${
+                  className={`absolute right-1 top-1 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[11px] font-extrabold text-white ring-2 ring-white ${
                     isBadgePopping ? "animate-badge-pop" : ""
                   }`}
                 >
@@ -253,14 +253,14 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
           </nav>
 
           {/* Mobile Right Controls (Cart + Hamburger) */}
-          <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
+          <div className="flex items-center gap-1.5 sm:gap-2.5 lg:hidden">
             <button
               id="header-mobile-cart-icon"
               data-cart-icon="true"
               type="button"
               onClick={openCart}
               aria-label="Giỏ hàng"
-              className={`relative rounded-lg p-2 transition-colors cursor-pointer ${
+              className={`relative rounded-xl p-2.5 transition-colors cursor-pointer ${
                 isCartShaking ? "animate-cart-shake" : ""
               } ${
                 isTopTransparent
@@ -268,10 +268,10 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                   : "text-[#111111] hover:bg-gray-100 hover:text-[#4B193E]"
               }`}
             >
-              <ShoppingBag className="h-6 w-6" />
+              <ShoppingBag className="h-6.5 w-6.5 sm:h-7 sm:w-7" />
               {totalCount > 0 && (
                 <span
-                  className={`absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[10px] font-bold text-white ring-2 ring-white ${
+                  className={`absolute -right-0.5 -top-0.5 flex h-4.5 w-4.5 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[11px] font-extrabold text-white ring-2 ring-white ${
                     isBadgePopping ? "animate-badge-pop" : ""
                   }`}
                 >
@@ -288,13 +288,13 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                 }
               }}
               aria-label="Mở menu điều hướng"
-              className={`rounded-lg p-2 transition-colors cursor-pointer ${
+              className={`rounded-xl p-2.5 transition-colors cursor-pointer ${
                 isTopTransparent
                   ? "text-white hover:bg-white/10"
                   : "text-[#111111] hover:bg-gray-100 hover:text-[#4B193E]"
               }`}
             >
-              <Menu className="h-6 w-6" />
+              <Menu className="h-6.5 w-6.5 sm:h-7 sm:w-7" />
             </button>
           </div>
         </div>
@@ -318,7 +318,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                   : "invisible -translate-y-2 opacity-0 pointer-events-none"
               }`}
             >
-              <div className="mx-auto max-w-[1240px] px-4 py-3.5 sm:px-6 lg:px-8">
+              <div className="mx-auto max-w-[1320px] px-4 py-3.5 sm:px-6 lg:px-8">
                 <div className="mx-auto flex flex-wrap items-center justify-center gap-x-6 gap-y-2 sm:gap-x-8 lg:gap-x-11">
                   {item.subItems.map((sub) => {
                     const isSubActive = (() => {
@@ -355,7 +355,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                       >
                         <Link
                           href={sub.href}
-                          className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-2.5 py-2 text-center font-sans text-sm leading-[1.15] tracking-[0.02em] whitespace-nowrap transition-colors duration-200 ${
+                          className={`group/link relative flex min-h-11 shrink-0 items-center justify-center px-3 py-2 text-center font-sans text-[15px] sm:text-base leading-[1.15] tracking-[0.01em] whitespace-nowrap transition-colors duration-200 ${
                             isSubActive
                               ? isTopTransparent
                                 ? "font-semibold text-white"

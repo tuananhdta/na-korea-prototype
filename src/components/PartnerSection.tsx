@@ -212,7 +212,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
 export function PartnerSection() {
   return (
     <section className="relative overflow-hidden bg-white py-16 md:py-24 border-y border-[#EEEEEE]">
-      <div className="relative z-10 mx-auto max-w-[1240px] px-4 sm:px-6">
+      <div className="relative z-10 mx-auto max-w-[1320px] px-4 sm:px-6">
         {/* Section Header */}
         <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
           {/* Section 3: 2 chấm + 1 thanh ngang + 2 chấm */}
@@ -237,7 +237,7 @@ export function PartnerSection() {
         
         {/* ─── DÒNG 1: Đối tác Quốc tế & Hàn Quốc (Header bên TRÁI - Scroll Left) ─── */}
         <div>
-          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-start">
+          <div className="mx-auto max-w-[1320px] px-4 sm:px-6 mb-3.5 flex items-center justify-start">
             <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-bold uppercase tracking-[0.05em] text-[#111111] border-b-2 border-[#4B193E] pb-1">
               <span>Đối Tác Quốc Tế &amp; Hàn Quốc</span>
             </div>
@@ -270,7 +270,7 @@ export function PartnerSection() {
 
         {/* ─── DÒNG 2: Đối tác & Đại lý Trong Nước (Header bên TRÁI - Scroll Right) ─── */}
         <div>
-          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-start">
+          <div className="mx-auto max-w-[1320px] px-4 sm:px-6 mb-3.5 flex items-center justify-start">
             <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-bold uppercase tracking-[0.05em] text-[#111111] border-b-2 border-[#4B193E] pb-1">
               <span>Đối Tác Doanh Nghiệp &amp; Phân Phối Việt Nam</span>
             </div>

@@ -324,7 +324,7 @@ export function Footer() {
         <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#D4A359] to-transparent animate-border-beam" />
       </div>
 
-      <div className="relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 sm:pb-12">
+      <div className="relative z-10 mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16 pb-8 sm:pb-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
           {/* ═══ Cột 1: Thương hiệu & Di sản (Col 4) ═══ */}
           <div className="lg:col-span-4 space-y-4">
@@ -481,7 +481,7 @@ export function Footer() {
           isSlate ? "bg-[#1E2B2A]/95" : "bg-[#24061D]/90"
         }`}
       >
-        <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 text-xs text-[#CBBAC4] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-xs text-[#CBBAC4] sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-3">
             <p>© 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.</p>
 
