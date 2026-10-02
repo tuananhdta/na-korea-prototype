@@ -12,42 +12,16 @@ import productsData from "@/data/products.json";
 import { Product } from "@/types/product";
 import { Search, SlidersHorizontal, ChevronRight } from "lucide-react";
 
-const MAIN_AUDIENCE_TABS = [
-  { id: "all", label: "Tất Cả Sản Phẩm" },
-  { id: "adults", label: "Hồng Sâm Người Lớn" },
-  { id: "kids", label: "Hồng Sâm Trẻ Em" },
-];
-
 export function SanPhamCatalogView() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [selectedAudience, setSelectedAudience] = useState("all");
   const [selectedForm, setSelectedForm] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [sortBy, setSortBy] = useState<"default" | "price-asc" | "price-desc" | "name">("default");
 
   const products = productsData as Product[];
 
-  // Pre-calculate counts for audience tabs
-  const audienceCounts = useMemo(() => {
-    return {
-      all: products.length,
-      adults: products.filter((p) => p.categories.some((c) => c.toLowerCase().includes("người lớn"))).length,
-      kids: products.filter((p) => p.categories.some((c) => c.toLowerCase().includes("trẻ") || c.toLowerCase().includes("em") || p.title.toLowerCase().includes("trẻ") || p.title.toLowerCase().includes("easy"))).length,
-    };
-  }, [products]);
-
   const filteredProducts = useMemo(() => {
     return products
-      .filter((p) => {
-        // Audience filter
-        if (selectedAudience === "adults") {
-          return p.categories.some((c) => c.toLowerCase().includes("người lớn"));
-        }
-        if (selectedAudience === "kids") {
-          return p.categories.some((c) => c.toLowerCase().includes("trẻ") || c.toLowerCase().includes("em") || p.title.toLowerCase().includes("trẻ") || p.title.toLowerCase().includes("easy"));
-        }
-        return true;
-      })
       .filter((p) => {
         // Form sub-filter
         if (selectedForm === "extract") {
@@ -86,7 +60,7 @@ export function SanPhamCatalogView() {
         }
         return 0;
       });
-  }, [products, selectedAudience, selectedForm, searchTerm, sortBy]);
+  }, [products, selectedForm, searchTerm, sortBy]);
 
   // Schema.org Structured Data (JSON-LD) for SEO & GEO
   const catalogJsonLd = {
@@ -126,7 +100,7 @@ export function SanPhamCatalogView() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8f9fa] flex flex-col">
+    <div className="min-h-screen bg-[#f8f9fa] flex flex-col font-sans">
       {/* Schema.org Structured Data */}
       <script
         type="application/ld+json"
@@ -153,64 +127,18 @@ export function SanPhamCatalogView() {
         />
 
         {/* Breadcrumbs */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4">
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 py-4 border-b border-gray-100">
           <nav className="flex items-center space-x-2 text-xs sm:text-sm text-gray-500">
             <Link href="/" className="hover:text-black transition-colors">
               Trang Chủ
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-            <span className="text-gray-900 font-medium">Sản Phẩm</span>
-            {selectedAudience !== "all" && (
-              <>
-                <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
-                <span className="text-[#4B193E] font-medium">
-                  {MAIN_AUDIENCE_TABS.find((c) => c.id === selectedAudience)?.label}
-                </span>
-              </>
-            )}
+            <span className="text-[#4B193E] font-medium">Sản Phẩm</span>
           </nav>
         </div>
 
-        {/* ═══ TẦNG 1: TAB ĐỐI TƯỢNG (Underline Tabs thanh lịch, không rớt dòng) ═══ */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-1 mb-5">
-          <div className="flex items-center gap-6 sm:gap-10 border-b border-[#EEEEEE] overflow-x-auto no-scrollbar">
-            {MAIN_AUDIENCE_TABS.map((tab) => {
-              const isActive = selectedAudience === tab.id;
-              const count = audienceCounts[tab.id as keyof typeof audienceCounts] || 0;
-              return (
-                <button
-                  key={tab.id}
-                  onClick={() => setSelectedAudience(tab.id)}
-                  className={`group relative pb-3.5 text-sm sm:text-base font-semibold whitespace-nowrap transition-colors duration-200 ${
-                    isActive
-                      ? "text-[#4B193E]"
-                      : "text-[#666666] hover:text-[#111111]"
-                  }`}
-                >
-                  <span className="flex items-center gap-2">
-                    {tab.label}
-                    <span
-                      className={`inline-flex items-center justify-center rounded-full px-2 py-0.5 text-xs font-bold transition-colors ${
-                        isActive
-                          ? "bg-[#4B193E]/10 text-[#4B193E]"
-                          : "bg-gray-100 text-gray-500 group-hover:bg-gray-200 group-hover:text-gray-700"
-                      }`}
-                    >
-                      {count}
-                    </span>
-                  </span>
-                  {/* Active Underline Accent */}
-                  {isActive && (
-                    <span className="absolute inset-x-0 bottom-0 h-0.5 bg-[#4B193E] rounded-full" />
-                  )}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        {/* ═══ TẦNG 2: THANH CÔNG CỤ & TÌM KIẾM (Utility Toolbar) ═══ */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mb-8">
+        {/* ═══ THANH CÔNG CỤ & TÌM KIẾM (Utility Toolbar) ═══ */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mb-8 mt-2">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 py-3 border-b border-[#EEEEEE]/80">
             {/* Left: Counter & Form Sub-Filter */}
             <div className="flex flex-wrap items-center gap-4">
@@ -286,7 +214,6 @@ export function SanPhamCatalogView() {
               </p>
               <button
                 onClick={() => {
-                  setSelectedAudience("all");
                   setSelectedForm("all");
                   setSearchTerm("");
                 }}
