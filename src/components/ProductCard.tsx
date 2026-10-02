@@ -78,7 +78,7 @@ export function ProductCard({ product }: ProductCardProps) {
             </Link>
             <button
               type="button"
-              onClick={() => addToCart(product, 1)}
+              onClick={(e) => addToCart(product, 1, undefined, e)}
               className="flex-1 py-1.5 text-center font-sans text-[12px] sm:text-[13px] font-semibold leading-[1.0] tracking-[0.03em] bg-[#4B193E] text-white hover:bg-[#3A1230] transition-colors cursor-pointer"
               title="Thêm vào giỏ hàng"
             >
@@ -130,7 +130,7 @@ export function ProductCard({ product }: ProductCardProps) {
 
             <button
               type="button"
-              onClick={() => addToCart(product, 1)}
+              onClick={(e) => addToCart(product, 1, undefined, e)}
               className="flex h-6 w-6 sm:h-7 sm:w-7 shrink-0 items-center justify-center rounded bg-[#F5F5F5] text-[#111111] hover:bg-[#4B193E] hover:text-white transition-colors lg:hidden cursor-pointer"
               aria-label="Thêm vào giỏ"
             >

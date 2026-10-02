@@ -83,7 +83,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const { totalCount, openCart } = useCart();
+  const { totalCount, openCart, isCartShaking, isBadgePopping } = useCart();
   // Keep the navigation directly below the 80px promo banner on every mobile
   // viewport. The old mobile `top-24` left a visible 16px strip between them.
   const headerOffset = isBannerVisible ? "top-20" : "top-0";
@@ -226,9 +226,14 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             })}
 
             <button
+              id="header-cart-icon"
+              data-cart-icon="true"
               type="button"
               onClick={openCart}
+              aria-label="Giỏ hàng"
               className={`relative ml-2 flex h-[50px] min-w-[64px] shrink-0 flex-col items-center justify-center gap-0.5 rounded-lg px-2 transition-all duration-200 cursor-pointer ${
+                isCartShaking ? "animate-cart-shake" : ""
+              } ${
                 isTopTransparent
                   ? "text-white hover:bg-white/10 hover:text-white"
                   : "text-[#111111] hover:bg-gray-100 hover:text-[#4B193E]"
@@ -236,7 +241,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             >
               <ShoppingBag className="h-5 w-5" />
               {totalCount > 0 && (
-                <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#4B193E] font-figtree text-[10px] font-extrabold text-white ring-2 ring-white">
+                <span
+                  className={`absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[10px] font-extrabold text-white ring-2 ring-white ${
+                    isBadgePopping ? "animate-badge-pop" : ""
+                  }`}
+                >
                   {totalCount}
                 </span>
               )}
@@ -246,10 +255,14 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
           {/* Mobile Right Controls (Cart + Hamburger) */}
           <div className="flex items-center gap-1 sm:gap-2 lg:hidden">
             <button
+              id="header-mobile-cart-icon"
+              data-cart-icon="true"
               type="button"
               onClick={openCart}
               aria-label="Giỏ hàng"
               className={`relative rounded-lg p-2 transition-colors cursor-pointer ${
+                isCartShaking ? "animate-cart-shake" : ""
+              } ${
                 isTopTransparent
                   ? "text-white hover:bg-white/10"
                   : "text-[#111111] hover:bg-gray-100 hover:text-[#4B193E]"
@@ -257,7 +270,11 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             >
               <ShoppingBag className="h-6 w-6" />
               {totalCount > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#4B193E] font-figtree text-[10px] font-bold text-white ring-2 ring-white">
+                <span
+                  className={`absolute -right-0.5 -top-0.5 flex h-4 w-4 items-center justify-center rounded-full bg-[#B5222A] font-figtree text-[10px] font-bold text-white ring-2 ring-white ${
+                    isBadgePopping ? "animate-badge-pop" : ""
+                  }`}
+                >
                   {totalCount}
                 </span>
               )}

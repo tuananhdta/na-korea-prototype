@@ -282,3 +282,92 @@
 .group-marquee:hover .animate-marquee-right {
   animation-play-state: paused;
 }
+
+/* ════════════════════════════════════════════════════════════════════
+   CART FLYING & SHAKE ANIMATIONS
+   ════════════════════════════════════════════════════════════════════ */
+
+@keyframes cart-shake {
+  0% { transform: scale(1) rotate(0deg); }
+  15% { transform: scale(1.24) rotate(-14deg); }
+  30% { transform: scale(1.24) rotate(14deg); }
+  45% { transform: scale(1.15) rotate(-10deg); }
+  60% { transform: scale(1.12) rotate(8deg); }
+  75% { transform: scale(1.06) rotate(-4deg); }
+  90% { transform: scale(1.02) rotate(2deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes badge-pop {
+  0% { transform: scale(0.35); opacity: 0.5; }
+  50% { transform: scale(1.55); }
+  75% { transform: scale(0.9); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.animate-cart-shake {
+  animation: cart-shake 0.65s cubic-bezier(0.36, 0.07, 0.19, 0.97) both !important;
+}
+
+.animate-badge-pop {
+  animation: badge-pop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both !important;
+}
+
+/* Flying particle from clicked button to header cart icon */
+.cart-fly-particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 52px;
+  height: 52px;
+  z-index: 99999;
+  pointer-events: none;
+  will-change: transform, opacity;
+  animation: fly-to-cart-x 0.55s cubic-bezier(0.2, 0.6, 0.35, 1) forwards;
+}
+
+.cart-fly-inner {
+  width: 100%;
+  height: 100%;
+  animation: fly-to-cart-y 0.55s cubic-bezier(0.4, 0, 1, 1) forwards,
+             fly-to-cart-scale 0.55s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+@keyframes fly-to-cart-x {
+  0% {
+    transform: translateX(var(--start-x));
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(var(--target-x));
+    opacity: 0.25;
+  }
+}
+
+@keyframes fly-to-cart-y {
+  0% {
+    transform: translateY(var(--start-y));
+  }
+  25% {
+    transform: translateY(calc(var(--start-y) - 45px));
+  }
+  100% {
+    transform: translateY(var(--target-y));
+  }
+}
+
+@keyframes fly-to-cart-scale {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  40% {
+    transform: scale(0.9) rotate(-15deg);
+  }
+  100% {
+    transform: scale(0.25) rotate(20deg);
+  }
+}
+

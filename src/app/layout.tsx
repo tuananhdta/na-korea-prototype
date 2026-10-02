@@ -3,6 +3,8 @@ import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import { CartDrawer } from "@/components/CartDrawer";
+import { CartFlyOverlay } from "@/components/CartFlyOverlay";
+import { CartNotificationToast } from "@/components/CartNotificationToast";
 import { BackToTop } from "@/components/BackToTop";
 import { FloatingContact } from "@/components/FloatingContact";
 import { ScrollFade } from "@/components/ScrollFade";
@@ -42,6 +44,8 @@ export default function RootLayout({
         <CartProvider>
           {children}
           <ScrollFade />
+          <CartFlyOverlay />
+          <CartNotificationToast />
           <CartDrawer />
           <FloatingContact />
           <BackToTop />

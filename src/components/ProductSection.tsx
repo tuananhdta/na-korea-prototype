@@ -117,7 +117,7 @@ export function ProductSection() {
                       type="button"
                       onClick={(e) => {
                         e.preventDefault();
-                        addToCart(heroProduct, 1);
+                        addToCart(heroProduct, 1, undefined, e);
                       }}
                       className="py-2 px-3 bg-[#4B193E] text-white text-xs sm:text-sm font-bold rounded hover:bg-[#3A1230] transition-colors text-center cursor-pointer shadow-md flex items-center justify-center"
                     >
@@ -251,7 +251,7 @@ export function ProductSection() {
                           type="button"
                           onClick={(e) => {
                             e.preventDefault();
-                            addToCart(product, 1);
+                            addToCart(product, 1, undefined, e);
                           }}
                           className="py-1.5 sm:py-2 px-1 sm:px-2 bg-[#4B193E] text-white text-[11px] sm:text-xs font-bold rounded hover:bg-[#3A1230] transition-colors text-center cursor-pointer shadow-md flex items-center justify-center whitespace-nowrap"
                         >

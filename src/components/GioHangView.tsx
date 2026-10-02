@@ -60,9 +60,6 @@ export function GioHangView() {
               <h1 className="text-2xl sm:text-3xl font-extrabold text-[#111111] tracking-tight">
                 Giỏ Hàng Của Bạn
               </h1>
-              <p className="text-xs sm:text-sm text-[#666666] mt-1">
-                Quản lý các sản phẩm hồng sâm bạn đã lựa chọn
-              </p>
             </div>
             {totalCount > 0 && (
               <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-[#4B193E]/10 text-[#4B193E]">
@@ -77,12 +74,9 @@ export function GioHangView() {
               <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-5 text-gray-300">
                 <ShoppingBag className="w-10 h-10" />
               </div>
-              <h2 className="text-xl font-bold text-[#111111] mb-2">
+              <h2 className="text-xl font-bold text-[#111111] mb-6">
                 Giỏ hàng của bạn đang trống
               </h2>
-              <p className="text-sm text-[#666666] max-w-md mx-auto mb-8 leading-relaxed">
-                Hãy khám phá các dòng sản phẩm Hồng sâm 6 năm tuổi thượng hạng nhập khẩu chính hãng từ vùng núi Punggi, Hàn Quốc.
-              </p>
               <Link
                 href="/san-pham"
                 className="na-btn-primary px-8 py-3.5 text-sm"
@@ -98,15 +92,19 @@ export function GioHangView() {
               <div className="lg:col-span-8 space-y-4">
                 <div className="bg-white rounded-2xl border border-[#EEEEEE] shadow-xs overflow-hidden">
                   {/* Table Header (Desktop) */}
-                  <div className="hidden sm:grid sm:grid-cols-12 gap-4 px-6 py-4 bg-[#EEEEEE]/40 border-b border-[#EEEEEE] text-xs font-bold text-[#333333] uppercase tracking-wider">
+                  <div className="sticky top-0 z-10 hidden sm:grid sm:grid-cols-12 gap-4 px-6 py-4 bg-[#F8F8F8] border-b border-[#EEEEEE] text-xs font-bold text-[#333333] uppercase tracking-wider">
                     <div className="sm:col-span-6">Sản phẩm</div>
                     <div className="sm:col-span-2 text-center">Đơn giá</div>
                     <div className="sm:col-span-2 text-center">Số lượng</div>
                     <div className="sm:col-span-2 text-right">Thành tiền</div>
                   </div>
 
-                  {/* Items List */}
-                  <div className="divide-y divide-[#EEEEEE]">
+                  {/* Items List - Scrollable when more than 10 items */}
+                  <div
+                    className={`divide-y divide-[#EEEEEE] ${
+                      items.length > 10 ? "max-h-[780px] overflow-y-auto pr-1" : ""
+                    }`}
+                  >
                     {items.map(({ product, quantity, selectedOption }) => {
                       const unitPrice = parsePriceToNumber(product.price);
                       const itemTotal = unitPrice * quantity;
@@ -246,7 +244,7 @@ export function GioHangView() {
               </div>
 
               {/* Order Summary (Right Column) */}
-              <div className="lg:col-span-4 space-y-4">
+              <div className="lg:col-span-4 space-y-4 lg:sticky lg:top-28">
                 <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 shadow-xs space-y-5">
                   <h2 className="text-lg font-bold text-[#111111] border-b border-[#EEEEEE] pb-4">
                     Tóm Tắt Đơn Hàng

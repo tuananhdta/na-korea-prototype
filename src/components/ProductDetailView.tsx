@@ -117,13 +117,12 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
     }, 3800);
   };
 
-  const handleAddToCart = () => {
-    addToCart(product, quantity);
-    triggerToast(`Đã thêm ${quantity} x sản phẩm vào giỏ hàng`);
+  const handleAddToCart = (e?: React.MouseEvent) => {
+    addToCart(product, quantity, undefined, e);
   };
 
-  const handleBuyNow = () => {
-    addToCart(product, quantity);
+  const handleBuyNow = (e?: React.MouseEvent) => {
+    addToCart(product, quantity, undefined, e);
     router.push("/thanh-toan");
   };
 
@@ -138,28 +137,6 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
   return (
     <div className="bg-[#F8F8F8] min-h-screen py-4 sm:py-8 pb-24 text-[#333333]">
-      {/* Toast Notification */}
-      <div
-        className={`fixed bottom-20 sm:bottom-24 right-4 sm:right-8 z-50 transition-all duration-300 transform ${
-          showToast ? "translate-y-0 opacity-100 scale-100" : "translate-y-4 opacity-0 pointer-events-none scale-95"
-        }`}
-      >
-        <div className="flex items-center gap-3 rounded-2xl bg-[#181818]/95 text-white px-4 sm:px-5 py-3 shadow-[0_14px_34px_rgba(45,18,37,0.45)] border border-white/20 backdrop-blur-md">
-          <div className="flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center rounded-full bg-[#4B193E] text-white shadow-inner shrink-0">
-            <CheckCircle2 className="h-4 w-4 sm:h-5 sm:w-5" />
-          </div>
-          <div className="min-w-0">
-            <p className="text-[11px] font-semibold text-white/70">Giỏ hàng</p>
-            <p className="text-xs sm:text-sm font-bold text-white truncate max-w-[180px] sm:max-w-none">{toastMessage}</p>
-          </div>
-          <button
-            onClick={openCart}
-            className="ml-1 rounded-lg bg-white/15 px-2.5 py-1 text-xs font-bold text-white hover:bg-white/25 transition-colors shrink-0"
-          >
-            Xem giỏ
-          </button>
-        </div>
-      </div>
 
       {/* Breadcrumb Navigation */}
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-3">
@@ -353,7 +330,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   {/* Add to Cart Button */}
                   <button
                     type="button"
-                    onClick={handleAddToCart}
+                    onClick={(e) => handleAddToCart(e)}
                     className="flex-1 h-12 px-5 rounded-xl bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
                   >
                     <ShoppingBag className="w-4 h-4" />
@@ -363,7 +340,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                   {/* Buy Now Button */}
                   <button
                     type="button"
-                    onClick={handleBuyNow}
+                    onClick={(e) => handleBuyNow(e)}
                     className="h-12 px-6 rounded-xl bg-[#181818] hover:bg-[#181818] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer shrink-0"
                   >
                     <span>Mua ngay</span>
@@ -613,7 +590,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
           <div className="flex items-center gap-2 shrink-0">
             <button
               type="button"
-              onClick={handleAddToCart}
+              onClick={(e) => handleAddToCart(e)}
               className="h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
             >
               <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
@@ -621,7 +598,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             </button>
             <button
               type="button"
-              onClick={handleBuyNow}
+              onClick={(e) => handleBuyNow(e)}
               className="h-9 sm:h-10 px-4 sm:px-5 rounded-lg bg-white text-[#181818] hover:bg-white/90 text-xs sm:text-sm font-extrabold shadow-xs transition-colors cursor-pointer"
             >
               Mua ngay
