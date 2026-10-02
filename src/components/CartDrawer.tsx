@@ -16,12 +16,7 @@ import {
   Check,
 } from "lucide-react";
 import { useCart, parsePriceToNumber } from "@/context/CartContext";
-
-const AVAILABLE_VOUCHERS = [
-  { code: "KIMS50", desc: "Giảm 50.000₫ cho đơn hàng", minSpend: 500000 },
-  { code: "NAKOREA", desc: "Giảm 10% tổng đơn hàng", minSpend: 1000000 },
-  { code: "TRIAN", desc: "Giảm 100.000₫ tri ân khách hàng", minSpend: 2000000 },
-];
+import { VoucherModal, Voucher } from "@/components/VoucherModal";
 
 export function CartDrawer() {
   const router = useRouter();
@@ -38,30 +33,17 @@ export function CartDrawer() {
     toggleSelectAll,
     isAllSelected,
     selectedCount,
+    selectedTotalPrice,
     formattedSelectedTotalPrice,
     savingsTotalPrice,
     formattedSavingsTotalPrice,
   } = useCart();
 
-  const [isVoucherOpen, setIsVoucherOpen] = useState(false);
-  const [voucherInput, setVoucherInput] = useState("");
-  const [appliedVoucher, setAppliedVoucher] = useState<string | null>(null);
-  const [voucherError, setVoucherError] = useState("");
+  const [isVoucherModalOpen, setIsVoucherModalOpen] = useState(false);
+  const [appliedVoucher, setAppliedVoucher] = useState<Voucher | null>(null);
 
-  const handleApplyVoucher = (codeToApply?: string) => {
-    const code = (codeToApply || voucherInput).trim().toUpperCase();
-    if (!code) {
-      setVoucherError("Vui lòng nhập mã ưu đãi");
-      return;
-    }
-    const found = AVAILABLE_VOUCHERS.find((v) => v.code === code);
-    if (found) {
-      setAppliedVoucher(found.code);
-      setVoucherError("");
-      setVoucherInput(found.code);
-    } else {
-      setVoucherError("Mã ưu đãi không hợp lệ hoặc đã hết hạn");
-    }
+  const handleApplyVoucher = (voucher: Voucher) => {
+    setAppliedVoucher(voucher);
   };
 
   const handleCheckout = () => {
@@ -277,81 +259,23 @@ export function CartDrawer() {
               <div className="border border-[#EEEEEE] rounded-lg p-3 bg-[#FAFAFA]">
                 <button
                   type="button"
-                  onClick={() => setIsVoucherOpen(!isVoucherOpen)}
+                  onClick={() => setIsVoucherModalOpen(true)}
                   className="w-full flex items-center justify-between text-xs sm:text-[13px] text-[#111111] font-medium cursor-pointer"
                 >
                   <div className="flex items-center gap-2">
-                    <Tag className="w-4 h-4 text-[#4B193E]" />
+                    <Tag className="w-4 h-4 text-[#B5222A]" />
                     <span className="font-semibold">Mã ưu đãi</span>
                     {appliedVoucher && (
-                      <span className="bg-[#4B193E] text-white px-2 py-0.5 rounded text-[10px] font-bold">
-                        {appliedVoucher}
+                      <span className="bg-[#B5222A] text-white px-2 py-0.5 rounded text-[10px] font-bold">
+                        {appliedVoucher.code}
                       </span>
                     )}
                   </div>
                   <div className="flex items-center gap-1 text-[#666666] hover:text-[#111111]">
-                    <span>{appliedVoucher ? "Đã áp dụng" : "Chọn hoặc nhập mã"}</span>
-                    <ChevronRight
-                      className={`w-4 h-4 transition-transform ${
-                        isVoucherOpen ? "rotate-90" : ""
-                      }`}
-                    />
+                    <span>{appliedVoucher ? "Đã chọn mã" : "Chọn hoặc nhập mã"}</span>
+                    <ChevronRight className="w-4 h-4" />
                   </div>
                 </button>
-
-                {/* Voucher Expansion Area */}
-                {isVoucherOpen && (
-                  <div className="mt-3 pt-3 border-t border-gray-200 space-y-2.5 animate-in fade-in duration-200">
-                    <div className="flex gap-2">
-                      <input
-                        type="text"
-                        value={voucherInput}
-                        onChange={(e) => setVoucherInput(e.target.value)}
-                        placeholder="Nhập mã giảm giá..."
-                        className="flex-1 px-3 py-1.5 border border-gray-300 rounded text-xs uppercase font-medium focus:outline-hidden focus:border-[#4B193E]"
-                      />
-                      <button
-                        type="button"
-                        onClick={() => handleApplyVoucher()}
-                        className="px-3.5 py-1.5 bg-[#181818] hover:bg-[#4B193E] text-white rounded text-xs font-bold transition-colors cursor-pointer"
-                      >
-                        Áp dụng
-                      </button>
-                    </div>
-
-                    {voucherError && (
-                      <p className="text-[11px] text-red-600">{voucherError}</p>
-                    )}
-
-                    {/* Quick Voucher List */}
-                    <div className="space-y-1.5 pt-1">
-                      <p className="text-[11px] font-semibold text-[#666666]">
-                        Mã khuyến mãi có sẵn:
-                      </p>
-                      {AVAILABLE_VOUCHERS.map((v) => (
-                        <div
-                          key={v.code}
-                          onClick={() => handleApplyVoucher(v.code)}
-                          className={`p-2 rounded border text-xs flex items-center justify-between cursor-pointer transition-colors ${
-                            appliedVoucher === v.code
-                              ? "border-[#4B193E] bg-[#4B193E]/5"
-                              : "border-gray-200 hover:border-gray-300 bg-white"
-                          }`}
-                        >
-                          <div>
-                            <span className="font-bold text-[#4B193E] font-figtree mr-2">
-                              {v.code}
-                            </span>
-                            <span className="text-[11px] text-gray-600">{v.desc}</span>
-                          </div>
-                          {appliedVoucher === v.code && (
-                            <Check className="w-3.5 h-3.5 text-[#4B193E]" />
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
               </div>
 
               {/* Subtotal Calculation */}
@@ -408,6 +332,15 @@ export function CartDrawer() {
           )}
         </div>
       </div>
+
+      {/* Voucher Selector Modal */}
+      <VoucherModal
+        isOpen={isVoucherModalOpen}
+        onClose={() => setIsVoucherModalOpen(false)}
+        onApply={handleApplyVoucher}
+        currentCode={appliedVoucher?.code}
+        orderTotal={selectedTotalPrice}
+      />
     </div>
   );
 }

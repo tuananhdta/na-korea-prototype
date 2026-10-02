@@ -21,14 +21,17 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileDrawer } from "@/components/MobileDrawer";
 import { OrderSuccessModal, OrderDetails } from "@/components/OrderSuccessModal";
+import { VoucherModal, Voucher } from "@/components/VoucherModal";
 import { useCart, parsePriceToNumber, formatNumberToVnd } from "@/context/CartContext";
 
 const VALID_COUPONS: Record<
   string,
   { type: "percent" | "fixed"; value: number; label: string }
 > = {
-  NAKOREA: { type: "percent", value: 10, label: "Giảm 10% tổng đơn hàng" },
+  BANMOI80: { type: "fixed", value: 80000, label: "Giảm 80.000₫" },
+  CANIFA50: { type: "fixed", value: 50000, label: "Giảm 50.000₫" },
   KIMS50: { type: "fixed", value: 50000, label: "Giảm 50.000₫" },
+  NAKOREA: { type: "percent", value: 10, label: "Giảm 10% tổng đơn hàng" },
   TRIAN: { type: "fixed", value: 100000, label: "Giảm 100.000₫ cho khách hàng thân thiết" },
 };
 
@@ -42,8 +45,8 @@ export function ThanhToanView() {
   const [phone, setPhone] = useState("");
   const [address, setAddress] = useState("");
 
-  // Coupon state
-  const [couponInput, setCouponInput] = useState("");
+  // Coupon / Voucher modal state
+  const [isVoucherModalOpen, setIsVoucherModalOpen] = useState(false);
   const [appliedCoupon, setAppliedCoupon] = useState<{
     code: string;
     discountAmount: number;
@@ -81,40 +84,23 @@ export function ThanhToanView() {
 
   const isButtonDisabled = isSubmitting || items.length === 0 || !isFormComplete;
 
-  const handleApplyCoupon = (e?: React.FormEvent) => {
-    if (e) e.preventDefault();
-    setCouponError("");
-
-    const code = couponInput.trim().toUpperCase();
-    if (!code) {
-      setCouponError("Vui lòng nhập mã giảm giá");
-      return;
-    }
-
-    const coupon = VALID_COUPONS[code];
-    if (!coupon) {
-      setCouponError("Mã giảm giá không hợp lệ hoặc đã hết hạn");
-      return;
-    }
-
+  const handleApplyVoucher = (voucher: Voucher) => {
     let calculatedDiscount = 0;
-    if (coupon.type === "percent") {
-      calculatedDiscount = Math.round((totalPrice * coupon.value) / 100);
+    if (voucher.type === "percent") {
+      calculatedDiscount = Math.round((totalPrice * voucher.value) / 100);
     } else {
-      calculatedDiscount = Math.min(totalPrice, coupon.value);
+      calculatedDiscount = Math.min(totalPrice, voucher.value);
     }
 
     setAppliedCoupon({
-      code,
+      code: voucher.code,
       discountAmount: calculatedDiscount,
-      label: coupon.label,
+      label: voucher.title,
     });
-    setCouponInput("");
   };
 
   const handleRemoveCoupon = () => {
     setAppliedCoupon(null);
-    setCouponError("");
   };
 
   const validateForm = () => {
@@ -453,80 +439,53 @@ export function ThanhToanView() {
                       })}
                     </div>
 
-                    {/* Coupon Input Form */}
+                    {/* Coupon / Voucher Selection */}
                     <div className="pt-2 border-t border-[#EEEEEE]">
                       {appliedCoupon ? (
-                        <div className="flex items-center justify-between p-3 bg-[#4B193E]/5 rounded-xl border border-[#4B193E]/20">
-                          <div className="flex items-center gap-2">
-                            <Tag className="w-4 h-4 text-[#4B193E]" />
-                            <div>
-                              <p className="text-xs font-bold text-[#4B193E]">
+                        <div className="flex items-center justify-between p-3.5 bg-[#FDF8F8] rounded-xl border border-[#B5222A]/20">
+                          <div className="flex items-center gap-2.5 min-w-0">
+                            <Tag className="w-4 h-4 text-[#B5222A] shrink-0" />
+                            <div className="min-w-0">
+                              <p className="text-xs font-bold text-[#B5222A] truncate">
                                 Mã: {appliedCoupon.code}
                               </p>
-                              <p className="text-[11px] text-[#666666]">
+                              <p className="text-[11px] text-[#666666] truncate">
                                 {appliedCoupon.label} (-{formatNumberToVnd(appliedCoupon.discountAmount)})
                               </p>
                             </div>
                           </div>
-                          <button
-                            type="button"
-                            onClick={handleRemoveCoupon}
-                            className="text-xs font-semibold text-red-600 hover:text-red-800 underline ml-2"
-                          >
-                            Gỡ bỏ
-                          </button>
+                          <div className="flex items-center gap-2 shrink-0 ml-2">
+                            <button
+                              type="button"
+                              onClick={() => setIsVoucherModalOpen(true)}
+                              className="text-xs font-semibold text-[#111111] hover:underline cursor-pointer"
+                            >
+                              Đổi mã
+                            </button>
+                            <button
+                              type="button"
+                              onClick={handleRemoveCoupon}
+                              className="text-xs font-semibold text-red-600 hover:text-red-800 underline cursor-pointer"
+                            >
+                              Gỡ
+                            </button>
+                          </div>
                         </div>
                       ) : (
-                        <div className="space-y-2">
-                          <div className="flex gap-2">
-                            <input
-                              type="text"
-                              placeholder="Mã giảm giá (ví dụ: NAKOREA)"
-                              value={couponInput}
-                              onChange={(e) => setCouponInput(e.target.value)}
-                              onKeyDown={(e) => {
-                                if (e.key === "Enter") {
-                                  e.preventDefault();
-                                  handleApplyCoupon();
-                                }
-                              }}
-                              className="flex-1 px-3.5 py-2.5 rounded-xl border border-[#EEEEEE] text-xs uppercase placeholder:normal-case placeholder:text-gray-400 focus:outline-none focus:border-[#4B193E]"
-                            />
-                            <button
-                              type="button"
-                              onClick={() => handleApplyCoupon()}
-                              className="px-4 py-2.5 bg-[#111111] text-white text-xs font-bold rounded-xl hover:bg-black transition-colors shrink-0"
-                            >
-                              Áp dụng
-                            </button>
+                        <button
+                          type="button"
+                          onClick={() => setIsVoucherModalOpen(true)}
+                          className="w-full flex items-center justify-between p-3.5 bg-[#FAFAFA] hover:bg-[#F3F4F6] border border-[#EEEEEE] rounded-xl text-xs sm:text-[13px] text-[#111111] transition-colors cursor-pointer"
+                        >
+                          <div className="flex items-center gap-2">
+                            <Tag className="w-4 h-4 text-[#B5222A]" />
+                            <span className="font-semibold">Mã ưu đãi</span>
                           </div>
-                          {couponError && (
-                            <p className="text-xs text-red-500 flex items-center gap-1">
-                              <AlertCircle className="w-3.5 h-3.5" />
-                              <span>{couponError}</span>
-                            </p>
-                          )}
-                          <div className="flex flex-wrap gap-1.5 pt-1">
-                            <button
-                              type="button"
-                              onClick={() => {
-                                setCouponInput("NAKOREA");
-                              }}
-                              className="text-[10px] px-2 py-0.5 rounded bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium"
-                            >
-                              Mã NAKOREA (-10%)
-                            </button>
-                            <button
-                              type="button"
-                              onClick={() => {
-                                setCouponInput("KIMS50");
-                              }}
-                              className="text-[10px] px-2 py-0.5 rounded bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium"
-                            >
-                              Mã KIMS50 (-50k)
-                            </button>
+                          <div className="flex items-center gap-1 text-[#666666]">
+                            <span>Chọn hoặc nhập mã</span>
+                            <ChevronRight className="w-4 h-4" />
                           </div>
-                        </div>
+                        </button>
                       )}
                     </div>
 
@@ -627,6 +586,15 @@ export function ThanhToanView() {
         onClose={handleCloseModal}
         onContinueShopping={handleContinueShopping}
         orderDetails={completedOrder}
+      />
+
+      {/* Discount Voucher Selector Modal */}
+      <VoucherModal
+        isOpen={isVoucherModalOpen}
+        onClose={() => setIsVoucherModalOpen(false)}
+        onApply={handleApplyVoucher}
+        currentCode={appliedCoupon?.code}
+        orderTotal={totalPrice}
       />
     </div>
   );
