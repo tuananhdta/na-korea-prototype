@@ -263,15 +263,17 @@
 .animate-marquee-left {
   display: flex;
   width: max-content;
-  animation: marquee-scroll-left 40s linear infinite;
+  animation: marquee-scroll-left 45s linear infinite;
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .animate-marquee-right {
   display: flex;
   width: max-content;
-  animation: marquee-scroll-right 40s linear infinite;
+  animation: marquee-scroll-right 45s linear infinite;
   will-change: transform;
+  backface-visibility: hidden;
 }
 
 .animate-marquee:hover,

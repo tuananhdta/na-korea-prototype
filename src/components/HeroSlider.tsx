@@ -9,7 +9,6 @@ interface HeroSliderProps {
 
 export function HeroSlider({ canPlay = true }: HeroSliderProps) {
   const [isMuted, setIsMuted] = useState(false);
-  const [progress, setProgress] = useState(0);
   const containerRef = useRef<HTMLElement>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
   const userInteractedRef = useRef(false);
@@ -153,23 +152,6 @@ export function HeroSlider({ canPlay = true }: HeroSliderProps) {
     }
   };
 
-  const handleTimeUpdate = () => {
-    if (videoRef.current && videoRef.current.duration) {
-      const cur = videoRef.current.currentTime;
-      const dur = videoRef.current.duration;
-      const pct = (cur / dur) * 100;
-      setProgress(pct);
-    }
-  };
-
-  const handleSeek = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (!videoRef.current || !videoRef.current.duration) return;
-    const rect = e.currentTarget.getBoundingClientRect();
-    const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
-    videoRef.current.currentTime = ratio * videoRef.current.duration;
-    setProgress(ratio * 100);
-  };
-
   return (
     <section
       ref={containerRef}
@@ -184,8 +166,6 @@ export function HeroSlider({ canPlay = true }: HeroSliderProps) {
           loop
           playsInline
           preload="auto"
-          onTimeUpdate={handleTimeUpdate}
-          onLoadedMetadata={handleTimeUpdate}
           className="h-full w-full object-cover object-center scale-105"
         />
       </div>
@@ -202,19 +182,6 @@ export function HeroSlider({ canPlay = true }: HeroSliderProps) {
       >
         {isMuted ? <VolumeX className="h-4 w-4 text-white/70" /> : <Volume2 className="h-4 w-4 text-[#D4A359]" />}
       </button>
-
-      {/* ─── 4. Sleek Horizontal Video Progress Bar (bottom-5, dày 3px, màu Trắng) ─── */}
-      <div
-        onClick={handleSeek}
-        className="group/progress absolute bottom-5 inset-x-0 z-20 h-[3px] w-full cursor-pointer bg-white/20 transition-all hover:h-1"
-        title="Nhấp để chuyển đến đoạn video tương ứng"
-      >
-        {/* Active filled line (màu Trắng tinh tế, dày 3px) */}
-        <div
-          style={{ width: `${progress}%` }}
-          className="relative h-full bg-white transition-[width] duration-100 ease-linear shadow-[0_0_8px_rgba(255,255,255,0.7)]"
-        />
-      </div>
     </section>
   );
 }

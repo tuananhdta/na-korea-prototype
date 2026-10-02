@@ -10,6 +10,7 @@ export interface Partner {
   logo: string;
   width: number;
   height: number;
+  imgClass?: string;
 }
 
 /* ═══ 1. Đối tác Quốc tế & Hàn Quốc (Dòng 1 - Scroll Left) ═══ */
@@ -19,88 +20,99 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     name: "The Shilla Duty Free (Hàn Quốc)",
     category: "Hệ thống Bán lẻ & Miễn thuế Cao cấp",
     logo: "/images/partners/the-shilla.svg",
-    width: 160,
-    height: 50,
+    width: 400,
+    height: 140,
+    imgClass: "h-12 sm:h-16",
   },
   {
     id: "lotte-duty-free",
     name: "Lotte Duty Free (Hàn Quốc)",
     category: "Hệ thống Bán lẻ & Miễn thuế Quốc tế",
     logo: "/images/partners/lotte.svg",
-    width: 130,
-    height: 60,
+    width: 360,
+    height: 160,
+    imgClass: "h-13 sm:h-16",
   },
   {
     id: "shinsegae",
     name: "Tập đoàn Bách hóa Shinsegae (Hàn Quốc)",
     category: "Tập đoàn Bán lẻ & Trung tâm Thương mại",
     logo: "/images/partners/shinsegae.svg",
-    width: 150,
-    height: 48,
+    width: 400,
+    height: 130,
+    imgClass: "h-12 sm:h-15",
   },
   {
     id: "coupang",
     name: "Coupang (Hàn Quốc)",
     category: "Sàn Thương mại Điện tử Toàn cầu",
     logo: "/images/partners/coupang.svg",
-    width: 150,
-    height: 48,
+    width: 400,
+    height: 130,
+    imgClass: "h-13 sm:h-17",
   },
   {
     id: "market-kurly",
     name: "Market Kurly (Hàn Quốc)",
     category: "Sàn Thực phẩm Cao cấp & Tiêu chuẩn Premium",
     logo: "/images/partners/market-kurly.svg",
-    width: 140,
-    height: 48,
+    width: 380,
+    height: 130,
+    imgClass: "h-14 sm:h-18",
   },
   {
     id: "wooltari",
     name: "Wooltari (Hoa Kỳ)",
     category: "Hệ thống Phân phối K-Food Bắc Mỹ",
     logo: "/images/partners/wooltari.svg",
-    width: 130,
-    height: 60,
+    width: 360,
+    height: 160,
+    imgClass: "h-16 sm:h-20",
   },
   {
     id: "t-brothers",
     name: "T-Brothers Food & Trading (Quốc tế)",
     category: "Hệ thống Chuỗi Cung ứng K-Food Toàn cầu",
     logo: "/images/partners/t-brothers.svg",
-    width: 160,
-    height: 48,
+    width: 400,
+    height: 130,
+    imgClass: "h-12 sm:h-16",
   },
   {
     id: "shinhan-bank",
     name: "Shinhan Bank (Hàn Quốc)",
     category: "Tài chính - Ngân hàng Quốc tế",
     logo: "/images/partners/shinhan-bank.svg",
-    width: 150,
-    height: 48,
+    width: 400,
+    height: 130,
+    imgClass: "h-13 sm:h-16",
   },
   {
     id: "hana-bank",
     name: "KEB Hana Bank (Hàn Quốc)",
     category: "Ngân hàng Quốc tế",
     logo: "/images/partners/hana-bank.webp",
-    width: 150,
-    height: 48,
+    width: 400,
+    height: 130,
+    imgClass: "h-13 sm:h-16",
   },
   {
     id: "samsung-sds",
     name: "Samsung SDS (Hàn Quốc)",
     category: "Công nghệ Toàn cầu",
     logo: "/images/partners/samsung-sds.png",
-    width: 150,
-    height: 48,
+    width: 400,
+    height: 130,
+    imgClass: "h-11 sm:h-14",
   },
   {
     id: "k-market",
     name: "K-Market Chuỗi Bán lẻ Hàn Quốc",
     category: "Hệ thống Bán lẻ & Phân phối Quốc tế",
     logo: "/images/partners/k-market.jpg",
-    width: 140,
-    height: 55,
+    width: 380,
+    height: 150,
+    imgClass: "h-14 sm:h-18",
   },
 ];
 
@@ -111,56 +123,63 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     name: "Tập đoàn Vingroup",
     category: "Tập đoàn Đa ngành",
     logo: "/images/partners/vingroup.png",
-    width: 140,
-    height: 55,
+    width: 380,
+    height: 150,
+    imgClass: "h-13 sm:h-17",
   },
   {
     id: "fpt",
     name: "Tập đoàn FPT",
     category: "Công nghệ & Viễn thông",
     logo: "/images/partners/fpt.png",
-    width: 140,
-    height: 55,
+    width: 380,
+    height: 150,
+    imgClass: "h-12 sm:h-15",
   },
   {
     id: "viettel",
     name: "Tập đoàn Viettel",
     category: "Công nghệ & Viễn thông",
     logo: "/images/partners/viettel.png",
-    width: 130,
-    height: 50,
+    width: 360,
+    height: 140,
+    imgClass: "h-18 sm:h-24",
   },
   {
     id: "vietcombank",
     name: "Ngân hàng Vietcombank",
     category: "Tài chính - Ngân hàng",
     logo: "/images/partners/vietcombank.webp",
-    width: 140,
-    height: 50,
+    width: 380,
+    height: 140,
+    imgClass: "h-12 sm:h-15",
   },
   {
     id: "bidv",
     name: "Ngân hàng BIDV",
     category: "Tài chính - Ngân hàng",
     logo: "/images/partners/bidv.png",
-    width: 140,
-    height: 50,
+    width: 380,
+    height: 140,
+    imgClass: "h-11 sm:h-14",
   },
   {
     id: "vietnam-airlines",
     name: "Vietnam Airlines",
     category: "Hàng không & Dịch vụ",
     logo: "/images/partners/vietnam-airlines.png",
-    width: 140,
-    height: 50,
+    width: 400,
+    height: 140,
+    imgClass: "h-12 sm:h-16",
   },
   {
     id: "vanphu-invest",
     name: "Văn Phú - Invest",
     category: "Bất động sản & Đầu tư",
     logo: "/images/partners/vanphu-invest.webp",
-    width: 140,
-    height: 48,
+    width: 380,
+    height: 130,
+    imgClass: "h-14 sm:h-18",
   },
 ];
 
@@ -173,7 +192,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
   return (
     <div
       key={`${keyPrefix}-${partner.id}`}
-      className="group/card relative flex h-20 w-44 sm:h-24 sm:w-56 shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg border border-[#EEEEEE] bg-white px-5 py-3 shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-[border-color,box-shadow] duration-300 hover:border-[#4B193E]/40 hover:shadow-[0_8px_20px_rgba(75,25,62,0.10)]"
+      className="group/card relative flex h-28 w-60 sm:h-36 sm:w-72 shrink-0 cursor-pointer items-center justify-center px-6 sm:px-8 transition-transform duration-300 hover:scale-105"
       title={`${partner.name} - ${partner.category}`}
     >
       <div className="flex h-full w-full items-center justify-center">
@@ -182,7 +201,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
           alt={partner.name}
           width={partner.width}
           height={partner.height}
-          className="max-h-12 sm:max-h-14 w-auto object-contain filter grayscale-[20%] opacity-85 transition-all duration-300 group-hover/card:grayscale-0 group-hover/card:opacity-100 group-hover/card:scale-105"
+          className={`w-auto object-contain mix-blend-multiply opacity-90 transition-all duration-300 group-hover/card:opacity-100 ${partner.imgClass || "h-14 sm:h-18"}`}
           unoptimized
         />
       </div>
@@ -236,7 +255,7 @@ export function PartnerSection() {
             />
 
             {/* Continuous Marquee Track (Left Direction) */}
-            <div className="animate-marquee-left flex gap-5 sm:gap-7 items-center py-2">
+            <div className="animate-marquee-left flex gap-6 sm:gap-8 items-center py-2">
               {/* Loop 1 */}
               {INTERNATIONAL_PARTNERS.map((partner, index) => (
                 <CinematicPartnerCard key={`r1-l1-${partner.id}-${index}`} partner={partner} keyPrefix="r1-l1" />
@@ -245,17 +264,13 @@ export function PartnerSection() {
               {INTERNATIONAL_PARTNERS.map((partner, index) => (
                 <CinematicPartnerCard key={`r1-l2-${partner.id}-${index}`} partner={partner} keyPrefix="r1-l2" />
               ))}
-              {/* Loop 3 */}
-              {INTERNATIONAL_PARTNERS.map((partner, index) => (
-                <CinematicPartnerCard key={`r1-l3-${partner.id}-${index}`} partner={partner} keyPrefix="r1-l3" />
-              ))}
             </div>
           </div>
         </div>
 
-        {/* ─── DÒNG 2: Đối tác & Đại lý Trong Nước (Header bên PHẢI - Scroll Right) ─── */}
+        {/* ─── DÒNG 2: Đối tác & Đại lý Trong Nước (Header bên TRÁI - Scroll Right) ─── */}
         <div>
-          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-end text-right">
+          <div className="mx-auto max-w-[1240px] px-4 sm:px-6 mb-3.5 flex items-center justify-start">
             <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-bold uppercase tracking-[0.05em] text-[#111111] border-b-2 border-[#4B193E] pb-1">
               <span>Đối Tác Doanh Nghiệp &amp; Phân Phối Việt Nam</span>
             </div>
@@ -273,7 +288,7 @@ export function PartnerSection() {
             />
 
             {/* Continuous Marquee Track (Right Direction) */}
-            <div className="animate-marquee-right flex gap-5 sm:gap-7 items-center py-2">
+            <div className="animate-marquee-right flex gap-6 sm:gap-8 items-center py-2">
               {/* Loop 1 */}
               {DOMESTIC_PARTNERS.map((partner, index) => (
                 <CinematicPartnerCard key={`r2-l1-${partner.id}-${index}`} partner={partner} keyPrefix="r2-l1" />
@@ -281,10 +296,6 @@ export function PartnerSection() {
               {/* Loop 2 */}
               {DOMESTIC_PARTNERS.map((partner, index) => (
                 <CinematicPartnerCard key={`r2-l2-${partner.id}-${index}`} partner={partner} keyPrefix="r2-l2" />
-              ))}
-              {/* Loop 3 */}
-              {DOMESTIC_PARTNERS.map((partner, index) => (
-                <CinematicPartnerCard key={`r2-l3-${partner.id}-${index}`} partner={partner} keyPrefix="r2-l3" />
               ))}
             </div>
           </div>
