@@ -112,7 +112,7 @@ export default function LoiChaoNgheNhanPage() {
                   BẬC THẦY NHÂN SÂM HÀN QUỐC
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
+                <h2 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
                   Hồng Sâm Kim — Hành Trình Trao Gửi Sức Khỏe Từ Vùng Đất Punggi Đến Việt Nam
                 </h2>
 
@@ -229,10 +229,10 @@ export default function LoiChaoNgheNhanPage() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-8">
           <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
             <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900">
+              <h3 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px]">
                 Khám Phá Các Sản Phẩm Hồng Sâm Kim Chính Hãng
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600">
+              <p className="font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666]">
                 Tìm hiểu thêm thông tin chi tiết về từng dòng sản phẩm hồng sâm 6 năm tuổi Punggi Hàn Quốc.
               </p>
             </div>

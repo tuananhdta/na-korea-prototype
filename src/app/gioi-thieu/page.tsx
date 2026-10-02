@@ -121,7 +121,7 @@ export default function GioiThieuPage() {
                   BẬC THẦY NHÂN SÂM HÀN QUỐC (2005)
                 </div>
 
-                <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight">
+                <h2 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
                   Hồng Sâm Kim — Hành Trình Khai Phá Núi Sâm Gangwon & Triết Lý &quot;SẠCH – QUÝ GIÁ&quot;
                 </h2>
 
@@ -259,10 +259,10 @@ export default function GioiThieuPage() {
         <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-8">
           <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
             <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900">
+              <h3 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px]">
                 Tìm Hiểu Thêm Về Lịch Sử & Sản Phẩm Hồng Sâm Kim
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600">
+              <p className="font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666]">
                 Ghé thăm danh mục sản phẩm chính hãng hoặc liên hệ với chuyên viên tư vấn của NA KOREA.
               </p>
             </div>

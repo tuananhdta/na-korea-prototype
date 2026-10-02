@@ -117,10 +117,10 @@ export default function LichSuHinhThanhPage() {
         <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-4">
           <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-gray-200">
             <div className="mb-8 border-b border-gray-100 pb-5">
-              <span className="text-[11px] font-extrabold text-[#4B193E] uppercase tracking-wider block mb-1">
+              <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-[#4B193E] block mb-2">
                 PUNGGI GINSENG FARMING CORP
               </span>
-              <h2 className="text-xl sm:text-2xl font-extrabold text-gray-900">
+              <h2 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
                 Hành Trình Phát Triển Qua Các Giai Đoạn
               </h2>
             </div>
@@ -138,10 +138,10 @@ export default function LichSuHinhThanhPage() {
                 <Award className="w-3.5 h-3.5 text-[#4B193E]" />
                 CAM KẾT CHẤT LƯỢNG THƯỢNG HẠNG
               </div>
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900">
+              <h3 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px]">
                 Khám Phá Các Dòng Sản Phẩm Hồng Sâm Kim
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 max-w-xl">
+              <p className="font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-xl">
                 Sản phẩm được nhập khẩu 100% chính ngạch từ Hàn Quốc, phân phối độc quyền tại Việt Nam bởi CÔNG TY TNHH THƯƠNG MẠI NA KOREA.
               </p>
             </div>

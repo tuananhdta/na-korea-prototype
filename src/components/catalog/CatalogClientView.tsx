@@ -85,7 +85,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-[#4B193E] font-medium">
-              {activeTab === "product-2026" ? "Catalogue 2026" : "Cẩm Nang Ginsenoside"}
+              {activeTab === "product-2026" ? "Di Sản Hồng Kim Sâm" : "Công Dụng Ginsenoside"}
             </span>
           </nav>
         </div>
@@ -116,10 +116,10 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
           {/* ═══ Minimalist Call To Action Banner (Đồng bộ phong cách /gioi-thieu & /loi-chao-nghe-nhan) ═══ */}
           <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
             <div className="space-y-2 text-center sm:text-left">
-              <h3 className="text-xl sm:text-2xl font-extrabold text-gray-900 leading-snug">
+              <h3 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
                 Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Hồng Kim Sâm?
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-2xl">
+              <p className="font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-2xl">
                 NA Korea cung cấp chính sách chiết khấu đại lý hấp dẫn, hỗ trợ tài liệu in ấn Catalog, chứng từ nguồn gốc xuất xứ CO/CQ và đào tạo chuyên sâu về dược tính Ginsenoside cho đội ngũ tư vấn.
               </p>
             </div>

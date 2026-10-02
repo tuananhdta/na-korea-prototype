@@ -113,7 +113,7 @@ export function SanPhamTreEmView() {
           showEyebrow={false}
           title="Hồng Sâm Trẻ Em"
           description="Dòng sản phẩm Hồng sâm Easy & High, Hồng sâm lê hoa chuông giúp bé ăn ngon miệng, tăng cường sức đề kháng và hỗ trợ phát triển thể chất tự nhiên."
-          image="/images/production.jpg"
+          image="/images/tre-em-hero.jpg"
           imageAlt="Sản phẩm Hồng Sâm dành cho trẻ em"
           subNavItems={SAN_PHAM_SUB_NAV}
           currentHref="/san-pham/tre-em"

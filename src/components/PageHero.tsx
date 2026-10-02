@@ -53,21 +53,21 @@ export function PageHero({
 
       <div className="absolute inset-0 z-[1] bg-gradient-to-r from-black/60 via-[#181818]/40 to-transparent" />
 
-      {/* [TẦNG 2] HERO CONTENT BLOCK - GIỮ NGUYÊN 100% THIẾT KẾ HIỆN TẠI */}
+      {/* [TẦNG 2] HERO CONTENT BLOCK - ĐỒNG BỘ 100% CHUẨN TRANG CHỦ (BRANDSTORYSECTION & PRODUCTSECTION) */}
       <div className="na-hero-content relative z-10 mx-auto w-full max-w-[1240px] px-4 sm:px-6 lg:px-8 space-y-3 sm:space-y-4 my-auto py-8">
         {showEyebrow && eyebrow && (
-          <p className="font-sans text-xs sm:text-sm font-semibold uppercase tracking-wider text-[#D4A359]">
+          <p className="font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#D4A359]">
             {eyebrow}
           </p>
         )}
         <h1
-          className={`max-w-5xl font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] sm:text-[28px] lg:text-[32px] ${
+          className={`max-w-5xl font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-white sm:text-[28px] lg:text-[32px] drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] ${
             titleClassName || ""
           }`}
         >
           {title}
         </h1>
-        <p className="max-w-2xl font-sans text-xs sm:text-sm md:text-base leading-relaxed text-white/95 drop-shadow-[0_1px_5px_rgba(0,0,0,0.55)]">
+        <p className="max-w-3xl font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#EEEEEE] drop-shadow-[0_1px_5px_rgba(0,0,0,0.55)]">
           {description}
         </p>
       </div>

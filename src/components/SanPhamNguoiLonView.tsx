@@ -127,7 +127,7 @@ export function SanPhamNguoiLonView() {
           showEyebrow={false}
           title="Hồng Sâm Người Lớn"
           description="Các dòng sản phẩm Cao hồng sâm cô đặc 6 năm tuổi, Nước sâm Balance Time, Củ sâm tẩm mật ong giúp tăng cường thể lực, bồi bổ sức khỏe và nâng cao hệ miễn dịch."
-          image="/images/production.jpg"
+          image="/images/nguoi-lon-hero.jpg"
           imageAlt="Sản phẩm Hồng Sâm Người Lớn"
           subNavItems={SAN_PHAM_SUB_NAV}
           currentHref="/san-pham/nguoi-lon"

@@ -20,7 +20,7 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
       <div className="max-w-[1240px] mx-auto px-4 sm:px-6">
         <nav
           aria-label="Menu danh mục con"
-          className="flex items-center justify-start sm:justify-center gap-5 sm:gap-8 overflow-x-auto py-3.5 text-xs sm:text-sm font-medium scrollbar-none whitespace-nowrap"
+          className="flex items-center justify-start sm:justify-center gap-6 sm:gap-9 overflow-x-auto py-3.5 text-sm sm:text-base font-semibold tracking-wide scrollbar-none whitespace-nowrap"
         >
           {items.map((item) => {
             const isActive =
@@ -34,7 +34,7 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
                 className={`relative py-1 transition-all duration-200 shrink-0 ${
                   isActive
                     ? "text-white font-bold border-b-2 border-white"
-                    : "text-white/80 hover:text-white font-medium"
+                    : "text-white/80 hover:text-white font-semibold"
                 }`}
               >
                 {item.title}

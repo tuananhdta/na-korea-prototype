@@ -44,8 +44,8 @@ export const navItems: NavItem[] = [
     title: "Cẩm Nang",
     href: "/cam-nang",
     subItems: [
-      { title: "Hồng Kim Sâm", href: "/cam-nang" },
-      { title: "Công dụng Ginsenoside", href: "/cam-nang/ginsenoside" },
+      { title: "Di Sản Hồng Kim Sâm", href: "/cam-nang" },
+      { title: "Công Dụng Ginsenoside", href: "/cam-nang/ginsenoside" },
     ],
   },
   {

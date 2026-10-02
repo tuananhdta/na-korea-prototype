@@ -52,9 +52,14 @@ test("Cẩm Nang flipbook headers do not render badge or file-size text", async 
   assert.doesNotMatch(clientSource, /badge=\{/);
 });
 
-test("Cẩm Nang CTA renders the selected catalog image below its actions", async () => {
-  const source = await read("src/components/catalog/CatalogClientView.tsx");
+test("Cẩm Nang sub menu titles are properly configured", async () => {
+  const [navSource, subNavSource] = await Promise.all([
+    read("src/lib/navigation.ts"),
+    read("src/lib/subNavItems.ts"),
+  ]);
 
-  assert.match(source, /src=\{heroContent\.image\}/);
-  assert.match(source, /alt=\{heroContent\.imageAlt\}/);
+  assert.match(navSource, /title: "Di Sản Hồng Kim Sâm"/);
+  assert.match(navSource, /title: "Công Dụng Ginsenoside"/);
+  assert.match(subNavSource, /title: "Di Sản Hồng Kim Sâm"/);
+  assert.match(subNavSource, /title: "Công Dụng Ginsenoside"/);
 });
