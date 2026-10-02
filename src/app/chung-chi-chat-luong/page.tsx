@@ -112,7 +112,7 @@ export default function ChungChiChatLuongPage() {
         </div>
 
         {/* Main Content Section */}
-        <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-4">
+        <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-6 sm:mt-8">
           <CertificationTabs />
         </section>
 

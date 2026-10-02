@@ -5,7 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { GIOI_THIEU_SUB_NAV } from "@/lib/subNavItems";
-import { ChevronRight, Award, Globe, ShieldCheck, Sparkles, ArrowRight } from "lucide-react";
+import { ChevronRight, Award, Globe, ShieldCheck, ArrowRight } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
@@ -101,17 +101,12 @@ export default function LoiChaoNgheNhanPage() {
           </nav>
         </div>
 
-        {/* Section 1: Quy chuẩn khoảng cách mt-4 & pt-6 đồng nhất */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-4">
+        {/* Section 1: Khoảng cách tiêu chuẩn mt-6 sm:mt-8 */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-6 sm:mt-8">
           <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-gray-200">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
               {/* Cột trái: Văn bản SEO & Lời chào */}
               <div className="lg:col-span-7 space-y-5">
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#4B193E]/5 text-[#4B193E] rounded-full text-xs font-bold tracking-wide uppercase">
-                  <Sparkles className="w-3.5 h-3.5 text-[#4B193E]" />
-                  BẬC THẦY NHÂN SÂM HÀN QUỐC
-                </div>
-
                 <h2 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
                   Hồng Sâm Kim — Hành Trình Trao Gửi Sức Khỏe Từ Vùng Đất Punggi Đến Việt Nam
                 </h2>

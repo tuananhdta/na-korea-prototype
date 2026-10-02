@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -41,8 +41,21 @@ export function CartDrawer() {
   const [isVoucherModalOpen, setIsVoucherModalOpen] = useState(false);
   const [appliedVoucher, setAppliedVoucher] = useState<Voucher | null>(null);
 
+  // Restore voucher from localStorage on mount
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem("kims_applied_voucher");
+      if (saved) {
+        setAppliedVoucher(JSON.parse(saved));
+      }
+    } catch {}
+  }, []);
+
   const handleApplyVoucher = (voucher: Voucher) => {
     setAppliedVoucher(voucher);
+    try {
+      localStorage.setItem("kims_applied_voucher", JSON.stringify(voucher));
+    } catch {}
   };
 
   const handleCheckout = () => {

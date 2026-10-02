@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -84,6 +84,27 @@ export function ThanhToanView() {
 
   const isButtonDisabled = isSubmitting || items.length === 0 || !isFormComplete;
 
+  // Restore applied voucher from localStorage on mount
+  useEffect(() => {
+    try {
+      const savedStr = localStorage.getItem("kims_applied_voucher");
+      if (savedStr) {
+        const voucher: Voucher = JSON.parse(savedStr);
+        let calculatedDiscount = 0;
+        if (voucher.type === "percent") {
+          calculatedDiscount = Math.round((totalPrice * voucher.value) / 100);
+        } else {
+          calculatedDiscount = Math.min(totalPrice, voucher.value);
+        }
+        setAppliedCoupon({
+          code: voucher.code,
+          discountAmount: calculatedDiscount,
+          label: voucher.title,
+        });
+      }
+    } catch {}
+  }, [totalPrice]);
+
   const handleApplyVoucher = (voucher: Voucher) => {
     let calculatedDiscount = 0;
     if (voucher.type === "percent") {
@@ -97,10 +118,16 @@ export function ThanhToanView() {
       discountAmount: calculatedDiscount,
       label: voucher.title,
     });
+    try {
+      localStorage.setItem("kims_applied_voucher", JSON.stringify(voucher));
+    } catch {}
   };
 
   const handleRemoveCoupon = () => {
     setAppliedCoupon(null);
+    try {
+      localStorage.removeItem("kims_applied_voucher");
+    } catch {}
   };
 
   const validateForm = () => {
@@ -169,12 +196,18 @@ export function ThanhToanView() {
 
   const handleCloseModal = () => {
     setIsSuccessModalOpen(false);
+    try {
+      localStorage.removeItem("kims_applied_voucher");
+    } catch {}
     clearCart();
     router.push("/");
   };
 
   const handleContinueShopping = () => {
     setIsSuccessModalOpen(false);
+    try {
+      localStorage.removeItem("kims_applied_voucher");
+    } catch {}
     clearCart();
     router.push("/san-pham");
   };

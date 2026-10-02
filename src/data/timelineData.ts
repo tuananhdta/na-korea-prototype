@@ -10,7 +10,7 @@ export interface EraGroup {
   badge: string;
   summaryTitle: string;
   summaryDesc: string;
-  icon: "Award" | "Globe" | "ShieldCheck" | "Sparkles";
+  icon: "Award" | "Globe" | "ShieldCheck";
   items: TimelineEvent[];
 }
 
@@ -21,7 +21,7 @@ export const ERA_DATA: EraGroup[] = [
     badge: "GIAI ĐOẠN I: KHỞI NGUỒN & NỀN MÓNG",
     summaryTitle: "Thành Lập Cơ Sở Punggi & Bằng Khen Tổng Thống Hàn Quốc (1996)",
     summaryDesc: "Khởi đầu từ xưởng sơ chế sâm truyền thống tại thủ phủ Punggi năm 1986, mở rộng thị trường xuất khẩu sang Đài Loan, Hồng Kông và vinh dự nhận Giải thưởng New Korean Award từ Tổng thống Hàn Quốc năm 1996.",
-    icon: "Sparkles",
+    icon: "Award",
     items: [
       {
         year: "1986",

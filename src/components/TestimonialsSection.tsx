@@ -67,7 +67,7 @@ export function TestimonialsSection() {
   }, [selectedImage]);
 
   return (
-    <section className="border-b border-[#EAE6DF] bg-[#F8F6F2] py-16 font-sans sm:py-20 lg:py-24">
+    <section className="border-t border-b border-[#EEEEEE] bg-white py-16 font-sans sm:py-20 lg:py-24">
       <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-[1080px] text-center mb-10 sm:mb-14">
           {/* Section 5: 4 chấm + 1 thanh ngang */}

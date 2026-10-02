@@ -4,75 +4,14 @@ import React, { useState } from "react";
 import { X, CheckCircle2, AlertCircle } from "lucide-react";
 import { formatNumberToVnd } from "@/context/CartContext";
 
-export interface Voucher {
-  code: string;
-  title: string;
-  description: string;
-  type: "percent" | "fixed";
-  value: number;
-  minSpend: number;
-  badge?: string;
-  expiryDate: string;
-  terms: string;
-}
+import {
+  Voucher,
+  SYSTEM_VOUCHERS,
+  findOrCreateVoucher,
+} from "@/data/vouchersData";
 
-export const SYSTEM_VOUCHERS: Voucher[] = [
-  {
-    code: "BANMOI80",
-    title: "Voucher 80K",
-    description: "Giảm 80k cho đơn Online đầu tiên từ 399k",
-    type: "fixed",
-    value: 80000,
-    minSpend: 399000,
-    badge: "Lựa chọn tốt nhất",
-    expiryDate: "2026-12-31",
-    terms: "Áp dụng cho khách hàng mới và đơn hàng từ 399.000₫ trở lên.",
-  },
-  {
-    code: "CANIFA50",
-    title: "Voucher 50K",
-    description: "Giảm 50k cho đơn từ 699k",
-    type: "fixed",
-    value: 50000,
-    minSpend: 699000,
-    badge: "Ưu đãi riêng bạn",
-    expiryDate: "2026-12-31",
-    terms: "Áp dụng cho đơn hàng từ 699.000₫ trở lên.",
-  },
-  {
-    code: "KIMS50",
-    title: "Voucher 50K",
-    description: "Giảm 50.000₫ cho đơn từ 500k",
-    type: "fixed",
-    value: 50000,
-    minSpend: 500000,
-    badge: "Ưu đãi riêng bạn",
-    expiryDate: "2026-12-31",
-    terms: "Áp dụng cho đơn hàng từ 500.000₫ trở lên.",
-  },
-  {
-    code: "NAKOREA",
-    title: "Voucher 10%",
-    description: "Giảm 10% tổng giá trị đơn hàng từ 1.000.000₫",
-    type: "percent",
-    value: 10,
-    minSpend: 1000000,
-    badge: "Lựa chọn tốt nhất",
-    expiryDate: "2026-12-31",
-    terms: "Giảm tối đa 10% trên tổng giá trị sản phẩm khi đơn hàng đạt từ 1.000.000₫.",
-  },
-  {
-    code: "TRIAN",
-    title: "Voucher 100K",
-    description: "Giảm 100.000₫ tri ân khách hàng thân thiết cho đơn từ 2.000.000₫",
-    type: "fixed",
-    value: 100000,
-    minSpend: 2000000,
-    badge: "Khách hàng thân thiết",
-    expiryDate: "2026-12-31",
-    terms: "Áp dụng cho đơn hàng từ 2.000.000₫ trở lên.",
-  },
-];
+export type { Voucher };
+export { SYSTEM_VOUCHERS };
 
 interface VoucherModalProps {
   isOpen: boolean;
@@ -89,7 +28,7 @@ export function VoucherModal({
   currentCode,
   orderTotal,
 }: VoucherModalProps) {
-  const [selectedCode, setSelectedCode] = useState<string>(currentCode || "BANMOI80");
+  const [selectedCode, setSelectedCode] = useState<string>(currentCode || "KIMS50K");
   const [inputCode, setInputCode] = useState<string>("");
   const [errorMsg, setErrorMsg] = useState<string>("");
   const [activeConditionCode, setActiveConditionCode] = useState<string | null>(null);
@@ -104,11 +43,7 @@ export function VoucherModal({
       return;
     }
 
-    const found = SYSTEM_VOUCHERS.find((v) => v.code === clean);
-    if (!found) {
-      setErrorMsg("Mã ưu đãi không hợp lệ hoặc đã hết hạn");
-      return;
-    }
+    const found = findOrCreateVoucher(clean);
 
     if (orderTotal < found.minSpend) {
       setErrorMsg(
@@ -123,7 +58,7 @@ export function VoucherModal({
 
   const handleConfirm = () => {
     setErrorMsg("");
-    const voucher = SYSTEM_VOUCHERS.find((v) => v.code === selectedCode);
+    const voucher = findOrCreateVoucher(selectedCode);
     if (!voucher) {
       setErrorMsg("Vui lòng chọn một mã ưu đãi");
       return;

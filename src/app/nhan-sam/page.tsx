@@ -138,7 +138,7 @@ export default function NhanSamPage() {
         </div>
 
         {/* Main 2-Column Unified Layout (Solution 1: 30% Sidebar / 70% Content) */}
-        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-4 pb-12 font-sans">
+        <div className="max-w-[1200px] mx-auto px-4 sm:px-6 pt-6 sm:pt-8 pb-12 font-sans">
           <div className="grid grid-cols-1 lg:grid-cols-10 gap-8 lg:gap-10 items-start">
             
             {/* CỘT TRÁI (Sidebar 3/10 - Đúng 30% Width): Tabs Dọc + Mục Lục + Khung NA Korea */}

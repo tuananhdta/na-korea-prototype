@@ -113,13 +113,10 @@ export default function LichSuHinhThanhPage() {
           </nav>
         </div>
 
-        {/* Main Section: Quy chuẩn khoảng cách mt-4 & pt-6 đồng nhất */}
-        <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-4">
+        {/* Main Section: Khoảng cách tiêu chuẩn mt-6 sm:mt-8 */}
+        <section className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-6 sm:mt-8">
           <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-gray-200">
             <div className="mb-8 border-b border-gray-100 pb-5">
-              <span className="font-sans text-xs sm:text-sm font-bold uppercase tracking-[0.15em] text-[#4B193E] block mb-2">
-                PUNGGI GINSENG FARMING CORP
-              </span>
               <h2 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
                 Hành Trình Phát Triển Qua Các Giai Đoạn
               </h2>
