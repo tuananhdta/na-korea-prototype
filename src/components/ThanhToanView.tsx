@@ -240,7 +240,7 @@ export function ThanhToanView() {
                 <div>
                   <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-7 shadow-xs space-y-5">
                     <div className="flex items-center gap-2.5 border-b border-[#EEEEEE] pb-4">
-                      <CreditCard className="w-5 h-5 text-[#4B193E]" />
+                      <Truck className="w-5 h-5 text-[#4B193E]" />
                       <h2 className="text-lg font-bold text-[#111111]">
                         Thông Tin Giao Hàng &amp; Thanh Toán
                       </h2>
