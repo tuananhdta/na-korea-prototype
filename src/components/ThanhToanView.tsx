@@ -7,6 +7,7 @@ import { useRouter } from "next/navigation";
 import {
   ShieldCheck,
   ChevronRight,
+  ChevronDown,
   ShoppingBag,
   CreditCard,
   Truck,
@@ -39,9 +40,7 @@ export function ThanhToanView() {
   // Form Fields
   const [fullName, setFullName] = useState("");
   const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
   const [address, setAddress] = useState("");
-  const [note, setNote] = useState("");
 
   // Coupon state
   const [couponInput, setCouponInput] = useState("");
@@ -72,6 +71,15 @@ export function ThanhToanView() {
   const discountAmount = appliedCoupon ? appliedCoupon.discountAmount : 0;
   const finalTotalNumber = Math.max(0, totalPrice - discountAmount);
   const formattedFinalTotal = formatNumberToVnd(finalTotalNumber);
+
+  // Form completion check (All delivery & payment fields must be filled)
+  const isFormComplete =
+    fullName.trim().length > 0 &&
+    phone.trim().length >= 9 &&
+    address.trim().length > 0 &&
+    Boolean(paymentMethod);
+
+  const isButtonDisabled = isSubmitting || items.length === 0 || !isFormComplete;
 
   const handleApplyCoupon = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
@@ -117,7 +125,7 @@ export function ThanhToanView() {
     } = {};
 
     if (!fullName.trim()) {
-      newErrors.fullName = "Vui lòng nhập họ và tên";
+      newErrors.fullName = "Vui lòng nhập tên người nhận";
     }
 
     const cleanPhone = phone.replace(/[^0-9]/g, "");
@@ -160,9 +168,7 @@ export function ThanhToanView() {
       orderId: generatedOrderId,
       customerName: fullName.trim(),
       phone: phone.trim(),
-      email: email.trim() || undefined,
       address: address.trim(),
-      note: note.trim() || undefined,
       paymentMethod: paymentLabel,
       total: formattedFinalTotal,
       itemCount: items.reduce((acc, it) => acc + it.quantity, 0),
@@ -243,17 +249,14 @@ export function ThanhToanView() {
             </div>
           ) : (
             <form onSubmit={handleSubmitOrder}>
-              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                {/* Left Column: Customer Information & Payment Method */}
-                <div className="lg:col-span-7 space-y-6">
-                  {/* Customer Information Card */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+                {/* Left Column: Customer Information & Payment Method Form (50%) */}
+                <div>
                   <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-7 shadow-xs space-y-5">
                     <div className="flex items-center gap-2.5 border-b border-[#EEEEEE] pb-4">
-                      <div className="w-8 h-8 rounded-full bg-[#4B193E]/10 text-[#4B193E] flex items-center justify-center font-bold text-sm">
-                        1
-                      </div>
+                      <CreditCard className="w-5 h-5 text-[#4B193E]" />
                       <h2 className="text-lg font-bold text-[#111111]">
-                        Thông Tin Giao Hàng
+                        Thông Tin Giao Hàng &amp; Thanh Toán
                       </h2>
                     </div>
 
@@ -261,7 +264,7 @@ export function ThanhToanView() {
                       {/* Full Name */}
                       <div>
                         <label className="block text-xs font-bold text-[#111111] mb-1.5">
-                          Họ và tên người nhận <span className="text-red-500">*</span>
+                          Tên người nhận <span className="text-red-500">*</span>
                         </label>
                         <input
                           type="text"
@@ -287,48 +290,33 @@ export function ThanhToanView() {
                         )}
                       </div>
 
-                      {/* Phone & Email */}
-                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div>
-                          <label className="block text-xs font-bold text-[#111111] mb-1.5">
-                            Số điện thoại nhận hàng <span className="text-red-500">*</span>
-                          </label>
-                          <input
-                            type="tel"
-                            placeholder="Ví dụ: 0903409939"
-                            value={phone}
-                            onChange={(e) => {
-                              setPhone(e.target.value);
-                              if (errors.phone) {
-                                setErrors((prev) => ({ ...prev, phone: undefined }));
-                              }
-                            }}
-                            className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none transition-colors ${
-                              errors.phone
-                                ? "border-red-500 focus:border-red-500 bg-red-50/20"
-                                : "border-[#EEEEEE] focus:border-[#4B193E]"
-                            }`}
-                          />
-                          {errors.phone && (
-                            <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
-                              <AlertCircle className="w-3.5 h-3.5" />
-                              <span>{errors.phone}</span>
-                            </p>
-                          )}
-                        </div>
-
-                        <div>
-                          <label className="block text-xs font-bold text-[#111111] mb-1.5">
-                            Email (Nhận thông báo đơn hàng)
-                          </label>
-                          <input
-                            type="email"
-                            placeholder="email@example.com"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            className="w-full px-4 py-3 rounded-xl border border-[#EEEEEE] text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none focus:border-[#4B193E] transition-colors"
-                          />
-                        </div>
+                      {/* Phone */}
+                      <div>
+                        <label className="block text-xs font-bold text-[#111111] mb-1.5">
+                          Số điện thoại nhận hàng <span className="text-red-500">*</span>
+                        </label>
+                        <input
+                          type="tel"
+                          placeholder="Ví dụ: 0903409939"
+                          value={phone}
+                          onChange={(e) => {
+                            setPhone(e.target.value);
+                            if (errors.phone) {
+                              setErrors((prev) => ({ ...prev, phone: undefined }));
+                            }
+                          }}
+                          className={`w-full px-4 py-3 rounded-xl border text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none transition-colors ${
+                            errors.phone
+                              ? "border-red-500 focus:border-red-500 bg-red-50/20"
+                              : "border-[#EEEEEE] focus:border-[#4B193E]"
+                          }`}
+                        />
+                        {errors.phone && (
+                          <p className="text-xs text-red-500 mt-1 flex items-center gap-1">
+                            <AlertCircle className="w-3.5 h-3.5" />
+                            <span>{errors.phone}</span>
+                          </p>
+                        )}
                       </div>
 
                       {/* Delivery Address */}
@@ -360,97 +348,54 @@ export function ThanhToanView() {
                         )}
                       </div>
 
-                      {/* Order Note */}
+                      {/* Payment Method Select (Placed right below Delivery Address) */}
                       <div>
                         <label className="block text-xs font-bold text-[#111111] mb-1.5">
-                          Ghi chú đơn hàng (Tùy chọn)
+                          Phương thức thanh toán <span className="text-red-500">*</span>
                         </label>
-                        <textarea
-                          rows={3}
-                          placeholder="Ghi chú thêm về thời gian giao hàng, địa chỉ cụ thể..."
-                          value={note}
-                          onChange={(e) => setNote(e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-[#EEEEEE] text-sm text-[#111111] placeholder:text-gray-400 focus:outline-none focus:border-[#4B193E] transition-colors resize-none"
-                        />
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Payment Method Card */}
-                  <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-7 shadow-xs space-y-5">
-                    <div className="flex items-center gap-2.5 border-b border-[#EEEEEE] pb-4">
-                      <div className="w-8 h-8 rounded-full bg-[#4B193E]/10 text-[#4B193E] flex items-center justify-center font-bold text-sm">
-                        2
-                      </div>
-                      <h2 className="text-lg font-bold text-[#111111]">
-                        Phương Thức Thanh Toán
-                      </h2>
-                    </div>
-
-                    <div className="space-y-3.5">
-                      {/* COD Option */}
-                      <label
-                        className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${
-                          paymentMethod === "cod"
-                            ? "border-[#4B193E] bg-[#4B193E]/5 ring-1 ring-[#4B193E]"
-                            : "border-[#EEEEEE] hover:border-gray-300"
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name="paymentMethod"
-                          value="cod"
-                          checked={paymentMethod === "cod"}
-                          onChange={() => setPaymentMethod("cod")}
-                          className="mt-1 text-[#4B193E] focus:ring-[#4B193E]"
-                        />
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2">
-                            <CreditCard className="w-4 h-4 text-[#4B193E]" />
-                            <span className="font-bold text-sm text-[#111111]">
-                              Thanh toán khi nhận hàng (COD)
-                            </span>
-                          </div>
-                          <p className="text-xs text-[#666666] mt-1 leading-relaxed">
-                            Quý khách được kiểm tra sản phẩm trước khi thanh toán tiền mặt trực tiếp cho bưu tá giao hàng.
-                          </p>
-                        </div>
-                      </label>
-
-                      {/* Bank Transfer Option */}
-                      <label
-                        className={`flex items-start gap-4 p-4 rounded-xl border cursor-pointer transition-all ${
-                          paymentMethod === "bank_transfer"
-                            ? "border-[#4B193E] bg-[#4B193E]/5 ring-1 ring-[#4B193E]"
-                            : "border-[#EEEEEE] hover:border-gray-300"
-                        }`}
-                      >
-                        <input
-                          type="radio"
-                          name="paymentMethod"
-                          value="bank_transfer"
-                          checked={paymentMethod === "bank_transfer"}
-                          onChange={() => setPaymentMethod("bank_transfer")}
-                          className="mt-1 text-[#4B193E] focus:ring-[#4B193E]"
-                        />
-                        <div className="flex-1">
-                          <div className="flex items-center gap-2">
-                            <Building2 className="w-4 h-4 text-[#4B193E]" />
-                            <span className="font-bold text-sm text-[#111111]">
+                        <div className="relative">
+                          <select
+                            value={paymentMethod}
+                            onChange={(e) =>
+                              setPaymentMethod(e.target.value as "cod" | "bank_transfer")
+                            }
+                            className="w-full px-4 py-3 pr-10 rounded-xl border border-[#EEEEEE] text-sm text-[#111111] bg-white focus:outline-none focus:border-[#4B193E] transition-colors appearance-none cursor-pointer"
+                          >
+                            <option value="cod">Thanh toán khi nhận hàng (COD)</option>
+                            <option value="bank_transfer">
                               Chuyển khoản ngân hàng (VietQR / Internet Banking)
-                            </span>
+                            </option>
+                          </select>
+                          <div className="absolute inset-y-0 right-0 flex items-center pr-3.5 pointer-events-none text-gray-500">
+                            <ChevronDown className="w-4 h-4" />
                           </div>
-                          <p className="text-xs text-[#666666] mt-1 leading-relaxed">
-                            Chuyển khoản nhanh 24/7. Mã VietQR kèm số tiền và mã đơn hàng sẽ hiển thị ngay sau khi Quý khách xác nhận <strong>&ldquo;Đặt Hàng Ngay&rdquo;</strong>.
-                          </p>
                         </div>
-                      </label>
+
+                        {/* Helper Note for Selected Payment Method */}
+                        <div className="mt-2.5 p-3.5 bg-[#F8F8F8] rounded-xl border border-[#EEEEEE] flex items-start gap-2.5 text-xs text-[#666666]">
+                          {paymentMethod === "cod" ? (
+                            <>
+                              <CreditCard className="w-4 h-4 text-[#4B193E] shrink-0 mt-0.5" />
+                              <p className="leading-relaxed">
+                                Quý khách được kiểm tra sản phẩm trước khi thanh toán tiền mặt trực tiếp cho bưu tá giao hàng.
+                              </p>
+                            </>
+                          ) : (
+                            <>
+                              <Building2 className="w-4 h-4 text-[#4B193E] shrink-0 mt-0.5" />
+                              <p className="leading-relaxed">
+                                Chuyển khoản nhanh 24/7. Mã VietQR kèm số tiền và mã đơn hàng sẽ hiển thị ngay sau khi Quý khách xác nhận <strong>&ldquo;Đặt Hàng Ngay&rdquo;</strong>.
+                              </p>
+                            </>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Right Column: Order Review & Total Summary */}
-                <div className="lg:col-span-5 space-y-6">
+                {/* Right Column: Order Review & Total Summary (50%) */}
+                <div className="space-y-6">
                   {/* Order Summary & Product List */}
                   <div className="bg-white rounded-2xl border border-[#EEEEEE] p-6 sm:p-7 shadow-xs space-y-5">
                     <div className="flex items-center justify-between border-b border-[#EEEEEE] pb-4">
@@ -627,11 +572,11 @@ export function ThanhToanView() {
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      disabled={isSubmitting || items.length === 0}
+                      disabled={isButtonDisabled}
                       className={`w-full py-4 rounded-xl text-white font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-md ${
-                        isSubmitting || items.length === 0
-                          ? "bg-gray-400 cursor-not-allowed"
-                          : "bg-[#4B193E] hover:bg-[#3A1230] hover:shadow-lg active:scale-[0.99]"
+                        isButtonDisabled
+                          ? "bg-gray-300 text-gray-500 cursor-not-allowed shadow-none"
+                          : "bg-[#4B193E] hover:bg-[#3A1230] hover:shadow-lg active:scale-[0.99] cursor-pointer"
                       }`}
                     >
                       {isSubmitting ? (
