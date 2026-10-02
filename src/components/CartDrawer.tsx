@@ -26,7 +26,6 @@ export function CartDrawer() {
     closeCart,
     updateQuantity,
     removeFromCart,
-    clearCart,
     totalCount,
     selectedItemIds,
     toggleSelectItem,
@@ -311,23 +310,6 @@ export function CartDrawer() {
               >
                 {selectedCount > 0 ? "THANH TOÁN" : "VUI LÒNG CHỌN SẢN PHẨM"}
               </button>
-
-              <div className="flex items-center justify-between pt-1">
-                <button
-                  type="button"
-                  onClick={clearCart}
-                  className="text-xs text-gray-400 hover:text-red-600 transition-colors cursor-pointer"
-                >
-                  Xóa tất cả
-                </button>
-                <Link
-                  href="/gio-hang"
-                  onClick={closeCart}
-                  className="text-xs text-[#666666] hover:text-black font-medium transition-colors"
-                >
-                  Xem giỏ hàng chi tiết →
-                </Link>
-              </div>
             </div>
           )}
         </div>
