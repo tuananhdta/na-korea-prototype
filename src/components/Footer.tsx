@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { useState, useEffect, type ReactNode } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -274,8 +274,31 @@ const footerJsonLd = {
 };
 
 export function Footer() {
+  const [theme, setTheme] = useState<"slate" | "purple">("slate");
+
+  useEffect(() => {
+    const saved = localStorage.getItem("na_footer_theme");
+    if (saved === "purple" || saved === "slate") {
+      setTheme(saved);
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "slate" ? "purple" : "slate";
+    setTheme(nextTheme);
+    localStorage.setItem("na_footer_theme", nextTheme);
+  };
+
+  const isSlate = theme === "slate";
+
   return (
-    <footer className="relative overflow-hidden border-t border-[#D4A359]/35 bg-gradient-to-b from-[#4A163D] via-[#3B0F30] to-[#2B0823] font-sans text-white">
+    <footer
+      className={`relative overflow-hidden border-t transition-colors duration-500 font-sans text-white ${
+        isSlate
+          ? "border-[#D4A359]/40 bg-gradient-to-b from-[#577674] via-[#3E5654] to-[#2B3D3B]"
+          : "border-[#D4A359]/35 bg-gradient-to-b from-[#4A163D] via-[#3B0F30] to-[#2B0823]"
+      }`}
+    >
       {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
       <script
         type="application/ld+json"
@@ -426,7 +449,13 @@ export function Footer() {
 
           {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) (Animation #2: Glow & Shimmer) ═══ */}
           <div className="lg:col-span-3 space-y-3">
-            <div className="rounded-2xl border border-[#D4A359]/35 bg-white/[0.08] p-4 lg:p-3.5 xl:p-5 shadow-xl backdrop-blur-md transition-all duration-300 hover:border-[#D4A359]/60 hover:bg-white/[0.12] hover:shadow-[0_12px_36px_rgba(75,25,62,0.6)]">
+            <div
+              className={`rounded-2xl border p-4 lg:p-3.5 xl:p-5 shadow-xl backdrop-blur-md transition-all duration-300 ${
+                isSlate
+                  ? "border-[#D4A359]/40 bg-black/20 hover:border-[#D4A359]/70 hover:bg-black/30 hover:shadow-[0_12px_36px_rgba(43,61,59,0.7)]"
+                  : "border-[#D4A359]/35 bg-white/[0.08] hover:border-[#D4A359]/60 hover:bg-white/[0.12] hover:shadow-[0_12px_36px_rgba(75,25,62,0.6)]"
+              }`}
+            >
               <div className="flex items-center gap-2 mb-2">
                 <FileText className="h-4 w-4 text-[#D4A359]" />
                 <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
@@ -442,12 +471,31 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ═══ Dải đáy: Copyright & Social Links ═══ */}
-      <div className="border-t border-white/10 bg-[#24061D]/90 py-4 px-4 sm:px-6 lg:px-8">
+      {/* ═══ Dải đáy: Copyright, Demo Theme Toggle & Social Links ═══ */}
+      <div
+        className={`border-t border-white/10 py-4 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
+          isSlate ? "bg-[#1E2B2A]/95" : "bg-[#24061D]/90"
+        }`}
+      >
         <div className="mx-auto flex w-full max-w-[1240px] flex-col gap-3 text-xs text-[#CBBAC4] sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.
-          </p>
+          <div className="flex flex-wrap items-center gap-3">
+            <p>© 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.</p>
+
+            {/* Demo Theme Switcher Button */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[11px] font-medium text-white transition-all hover:bg-white/20 hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+              title="Bấm để chuyển đổi màu giao diện Footer (Demo)"
+            >
+              <span
+                className="h-2.5 w-2.5 rounded-full border border-white/40 shadow-inner transition-colors duration-300"
+                style={{ backgroundColor: isSlate ? "#4A163D" : "#577674" }}
+              />
+              <span>Đổi màu Footer: {isSlate ? "Tím Mận" : "Xám Xanh Đậm"}</span>
+            </button>
+          </div>
+
           <div className="flex items-center gap-3">
             <span className="hidden text-[11px] text-[#CBBAC4] md:inline">Kết nối với chúng tôi:</span>
             <SocialLinks />
