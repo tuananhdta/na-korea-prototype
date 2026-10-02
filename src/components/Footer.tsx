@@ -138,7 +138,7 @@ function SocialLinks() {
   );
 }
 
-function ConsultationForm() {
+function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
 
@@ -198,7 +198,11 @@ function ConsultationForm() {
       />
       <button
         type="submit"
-        className="na-btn-primary animate-shimmer-btn group w-full h-10 px-2.5 sm:px-3 text-[11px] min-[360px]:text-xs sm:text-[13px] lg:text-[11px] xl:text-xs min-[1360px]:text-[13px] uppercase tracking-tight sm:tracking-normal font-bold shadow-lg transition-transform hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap gap-1.5"
+        className={`group flex items-center justify-center w-full h-10 px-2.5 sm:px-3 text-[11px] min-[360px]:text-xs sm:text-[13px] lg:text-[11px] xl:text-xs min-[1360px]:text-[13px] uppercase tracking-tight sm:tracking-normal font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap gap-1.5 cursor-pointer ${
+          isSlate
+            ? "bg-white text-[#1E2B2A] hover:bg-gray-100 hover:text-black"
+            : "bg-white text-[#4A163D] hover:bg-gray-100 hover:text-[#3B0F30]"
+        }`}
       >
         <span>GỬI YÊU CẦU TƯ VẤN</span>
         <Send className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5" />
@@ -465,7 +469,7 @@ export function Footer() {
               <p className="mb-3.5 text-[11px] leading-relaxed text-[#E5D7DE]">
                 Nhận báo giá ưu đãi & tư vấn liệu trình hồng sâm chuyên sâu từ chuyên gia.
               </p>
-              <ConsultationForm />
+              <ConsultationForm isSlate={isSlate} />
             </div>
           </div>
         </div>
