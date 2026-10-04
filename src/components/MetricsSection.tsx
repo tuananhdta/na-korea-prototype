@@ -2,14 +2,6 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import {
-  Award,
-  PackageCheck,
-  Store,
-  Handshake,
-  ShieldCheck,
-  Sprout,
-} from "lucide-react";
 import { SectionIndicator } from "@/components/SectionIndicator";
 
 interface MetricItem {
@@ -17,126 +9,44 @@ interface MetricItem {
   value: number;
   suffix: string;
   lines: string[];
-  icon: React.ElementType;
   href: string;
-  badge: string;
-  colorScheme: {
-    iconColor: string;
-    iconBg: string;
-    iconBorder: string;
-    glowShadow: string;
-  };
 }
 
 const METRICS: MetricItem[] = [
   {
     id: "experience",
-    value: 50,
+    value: 40,
     suffix: "+",
-    lines: [
-      "Năm truyền thống",
-      "canh tác & chế biến",
-      "hồng sâm Punggi",
-    ],
-    icon: Award,
-    href: "/gioi-thieu",
-    badge: "Kinh Nghiệm",
-    colorScheme: {
-      iconColor: "text-[#D97706]",
-      iconBg: "bg-amber-50",
-      iconBorder: "border-amber-200/90",
-      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(217,119,6,0.25)]",
-    },
+    lines: ["Năm hành trình", "phát triển"],
+    href: "/lich-su-hinh-thanh",
   },
   {
-    id: "distributors",
-    value: 130,
+    id: "countries",
+    value: 50,
     suffix: "+",
-    lines: [
-      "Nhà phân phối &",
-      "đại lý trên toàn quốc",
-    ],
-    icon: Store,
-    href: "/nha-nhap-khau",
-    badge: "Hệ Thống",
-    colorScheme: {
-      iconColor: "text-[#0284C7]",
-      iconBg: "bg-sky-50",
-      iconBorder: "border-sky-200/90",
-      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(2,132,199,0.25)]",
-    },
+    lines: ["Quốc gia", "trên Thế Giới"],
+    href: "/gioi-thieu",
   },
   {
     id: "partners",
-    value: 11,
+    value: 60,
     suffix: "+",
-    lines: [
-      "Đối tác chiến lược",
-      "& thị trường quốc tế",
-    ],
-    icon: Handshake,
+    lines: ["Đối tác", "chiến lược"],
     href: "/gioi-thieu",
-    badge: "Đối Tác",
-    colorScheme: {
-      iconColor: "text-[#4B193E]",
-      iconBg: "bg-[#4B193E]/5",
-      iconBorder: "border-[#4B193E]/25",
-      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(75,25,62,0.25)]",
-    },
+  },
+  {
+    id: "certificates",
+    value: 20,
+    suffix: "+",
+    lines: ["Chứng chỉ", "Quốc Tế"],
+    href: "/chung-chi-chat-luong",
   },
   {
     id: "quality",
     value: 100,
     suffix: "%",
-    lines: [
-      "Sâm Punggi 6 năm tuổi,",
-      "đạt chuẩn quốc tế",
-    ],
-    icon: ShieldCheck,
-    href: "/chung-chi-chat-luong",
-    badge: "Cam Kết",
-    colorScheme: {
-      iconColor: "text-[#16A34A]",
-      iconBg: "bg-emerald-50",
-      iconBorder: "border-emerald-200/90",
-      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(22,163,74,0.25)]",
-    },
-  },
-  {
-    id: "products",
-    value: 32,
-    suffix: "+",
-    lines: [
-      "Dòng sản phẩm",
-      "Hồng sâm thượng hạng",
-    ],
-    icon: PackageCheck,
-    href: "/san-pham",
-    badge: "Danh Mục",
-    colorScheme: {
-      iconColor: "text-[#EA580C]",
-      iconBg: "bg-orange-50",
-      iconBorder: "border-orange-200/90",
-      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(234,88,12,0.25)]",
-    },
-  },
-  {
-    id: "ginseng",
-    value: 6,
-    suffix: "năm",
-    lines: [
-      "Hồng sâm Punggi",
-      "tuổi thượng hạng",
-    ],
-    icon: Sprout,
+    lines: ["Hồng sâm 6 năm tuổi", "Punggi"],
     href: "/nhan-sam",
-    badge: "Nguồn Gốc",
-    colorScheme: {
-      iconColor: "text-[#E11D48]",
-      iconBg: "bg-rose-50",
-      iconBorder: "border-rose-200/90",
-      glowShadow: "group-hover:shadow-[0_8px_20px_rgba(225,29,72,0.25)]",
-    },
   },
 ];
 
@@ -225,59 +135,60 @@ export function MetricsSection() {
           </p>
         </div>
 
-        {/* Six clean luxury centered metric cards (2 cards per row on mobile, 3 on desktop) */}
-        <div className="relative">
-          <div className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3">
-            {METRICS.map((metric, idx) => {
-              const IconComponent = metric.icon;
-              const currentCount = counts[idx];
-              const { iconColor, iconBg, iconBorder, glowShadow } = metric.colorScheme;
+        {/* 5 Circular Metric Badges (Option B: Circle badge on top + Text underneath) */}
+        <div className="flex flex-wrap items-start justify-center gap-5 sm:gap-8 lg:gap-6 xl:gap-8 max-w-[1320px] mx-auto">
+          {METRICS.map((metric, idx) => {
+            const currentCount = counts[idx];
 
-              return (
-                <Link
-                  key={metric.id}
-                  href={metric.href}
-                  title={`Xem thông tin: ${metric.lines.join(" ")}`}
-                  style={{ transitionDelay: `${idx * 80}ms` }}
-                  className={`group relative flex flex-col items-center justify-center rounded-xl sm:rounded-2xl border border-[#EEEEEE] bg-white p-3.5 sm:p-6 md:p-7 text-center shadow-[0_4px_16px_rgba(0,0,0,0.04)] transition-all duration-300 ease-out focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B193E] focus-visible:ring-offset-2 ${
-                    isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-                  } hover:-translate-y-1.5 hover:border-[#4B193E]/40 hover:shadow-[0_12px_28px_rgba(75,25,62,0.12)]`}
-                >
-                  {/* Top: Themed Colorful Icon with Micro-Interaction Animation */}
-                  <div className="mb-2 sm:mb-3.5 flex items-center justify-center">
-                    <div
-                      className={`flex h-10 w-10 sm:h-12 sm:w-13 items-center justify-center rounded-xl sm:rounded-2xl border ${iconBg} ${iconBorder} ${iconColor} ${glowShadow} transition-all duration-300 group-hover:scale-112 group-hover:rotate-6 shadow-xs`}
-                    >
-                      <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2]" aria-hidden="true" />
-                    </div>
-                  </div>
+            return (
+              <Link
+                key={metric.id}
+                href={metric.href}
+                title={`Xem thông tin: ${metric.lines.join(" ")}`}
+                style={{ transitionDelay: `${idx * 80}ms` }}
+                className={`group relative flex flex-col items-center justify-start text-center focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2D4543] focus-visible:ring-offset-2 transition-all duration-300 ease-out ${
+                  isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+                } w-[135px] min-[380px]:w-[155px] sm:w-[185px] lg:w-[190px] xl:w-[210px]`}
+              >
+                {/* Circle badge with Dark Slate / Green background matching Footer */}
+                <div className="relative flex h-28 w-28 min-[380px]:h-32 min-[380px]:w-32 sm:h-36 sm:w-36 md:h-40 md:w-40 items-center justify-center rounded-full bg-gradient-to-b from-[#577674] via-[#3E5654] to-[#243533] border-2 border-[#D4A359]/40 shadow-[0_8px_20px_rgba(30,43,42,0.2)] transition-all duration-300 group-hover:scale-108 group-hover:border-[#D4A359] group-hover:shadow-[0_12px_28px_rgba(212,163,89,0.35)] overflow-hidden">
+                  {/* Inner subtle glow and radial texture */}
+                  <div
+                    aria-hidden="true"
+                    className="pointer-events-none absolute inset-0 opacity-10"
+                    style={{
+                      backgroundImage: `radial-gradient(#D4A359 1px, transparent 1px)`,
+                      backgroundSize: "12px 12px",
+                    }}
+                  />
+                  <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20" />
 
-                  {/* Metric Value (Figtree - JungKwanJang Official Numeric Typography) */}
-                  <div className="flex items-baseline justify-center gap-0.5 sm:gap-1 font-figtree">
-                    <span className="font-figtree text-2xl sm:text-4xl lg:text-[46px] font-extrabold leading-none tracking-tight text-[#4B193E]">
+                  {/* Metric Number with elevated & enlarged superscript suffix (+ / %) */}
+                  <div className="relative z-10 flex items-start justify-center font-figtree">
+                    <span className="font-figtree text-3xl min-[380px]:text-4xl sm:text-4xl md:text-[44px] font-extrabold leading-none tracking-tight text-white drop-shadow-sm">
                       {currentCount}
                     </span>
-                    <span className="font-figtree text-sm sm:text-lg lg:text-xl font-bold leading-none text-[#4B193E]">
+                    <span className="font-figtree text-xl min-[380px]:text-2xl sm:text-[26px] md:text-3xl font-extrabold leading-none text-white ml-0.5 sm:ml-1 -mt-1 sm:-mt-2 drop-shadow-sm">
                       {metric.suffix}
                     </span>
                   </div>
+                </div>
 
-                  {/* Expandable Accent Divider Line on Hover */}
-                  <div className="w-6 sm:w-8 h-[2px] bg-[#4B193E]/20 my-2 sm:my-3 mx-auto rounded-full transition-all duration-300 group-hover:w-14 group-hover:bg-[#4B193E]" />
+                {/* Expandable Accent Gold Dash */}
+                <div className="w-5 sm:w-6 h-[2px] bg-[#D4A359]/40 my-2.5 sm:my-3 mx-auto rounded-full transition-all duration-300 group-hover:w-10 group-hover:bg-[#D4A359]" />
 
-                  {/* Title (Pretendard Sans) */}
-                  <h3 className="font-sans text-xs sm:text-sm md:text-base font-bold uppercase leading-snug tracking-[-0.01em] text-[#111111] group-hover:text-[#4B193E] transition-colors">
+                {/* Text description underneath */}
+                <div className="space-y-0.5">
+                  <h3 className="font-sans text-xs min-[380px]:text-sm sm:text-base font-bold text-[#111111] uppercase tracking-tight sm:tracking-normal group-hover:text-[#2D4543] transition-colors">
                     {metric.lines[0]}
                   </h3>
-
-                  {/* Description Subtitle (Pretendard Sans) */}
-                  <p className="mt-1 font-sans text-[11px] sm:text-xs md:text-sm font-normal text-[#111111] leading-snug sm:leading-relaxed max-w-[250px]">
-                    {metric.lines.slice(1).join(" ")}
+                  <p className="font-sans text-[11px] min-[380px]:text-xs sm:text-sm text-[#444444] font-medium leading-snug">
+                    {metric.lines[1]}
                   </p>
-                </Link>
-              );
-            })}
-          </div>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>

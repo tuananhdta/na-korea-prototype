@@ -150,8 +150,8 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
 
   if (submitted) {
     return (
-      <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-4 text-center text-xs font-medium leading-relaxed text-emerald-200">
-        <div className="flex items-center justify-center gap-2 mb-1.5 text-emerald-400 font-bold">
+      <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-4 text-center text-[13px] font-medium leading-relaxed text-emerald-200">
+        <div className="flex items-center justify-center gap-2 mb-1.5 text-emerald-400 font-bold text-sm">
           <CheckCircle2 className="h-4 w-4" />
           <span>Đã gửi thành công!</span>
         </div>
@@ -170,10 +170,10 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         aria-label="Họ và tên"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
       />
       <div className="relative">
-        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/15 pr-2.5 text-xs text-gray-300">
+        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/15 pr-2.5 text-[13px] text-gray-300">
           +84
         </span>
         <input
@@ -184,7 +184,7 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           aria-label="Số điện thoại"
-          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-xs text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
         />
       </div>
       <input
@@ -194,11 +194,11 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         aria-label="Lời nhắn"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-xs text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
       />
       <button
         type="submit"
-        className={`group flex items-center justify-center w-full h-10 px-2.5 sm:px-3 text-[11px] min-[360px]:text-xs sm:text-[13px] lg:text-[11px] xl:text-xs min-[1360px]:text-[13px] uppercase tracking-tight sm:tracking-normal font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap gap-1.5 cursor-pointer ${
+        className={`group flex items-center justify-center w-full h-10 px-2.5 sm:px-3 text-xs sm:text-sm lg:text-xs min-[1360px]:text-sm uppercase tracking-tight sm:tracking-normal font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap gap-1.5 cursor-pointer ${
           isSlate
             ? "bg-white text-[#1E2B2A] hover:bg-gray-100 hover:text-black"
             : "bg-white text-[#4A163D] hover:bg-gray-100 hover:text-[#3B0F30]"
@@ -340,11 +340,11 @@ export function Footer() {
               </div>
             </Link>
 
-            <p className="font-sans text-sm font-bold text-[#D4A359] tracking-wide">
+            <p className="font-sans text-[15px] font-bold text-[#D4A359] tracking-wide">
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 
-            <p className="max-w-sm text-xs leading-relaxed text-[#E5D7DE] sm:text-sm">
+            <p className="max-w-sm text-[13px] leading-relaxed text-[#E5D7DE] sm:text-[15px]">
               Thương hiệu Hồng sâm 6 năm tuổi thượng hạng vùng núi Punggi Hàn Quốc, được kiến tạo từ 50 năm tâm huyết và bí quyết gia truyền của nghệ nhân Kim Jeong Hwan.
             </p>
 
@@ -371,12 +371,12 @@ export function Footer() {
           {/* ═══ Cột 2: Đơn vị nhập khẩu & Trụ sở (Col 3) ═══ */}
           <div className="lg:col-span-3 space-y-4">
             <div className="border-b border-white/15 pb-2">
-              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
+              <h3 className="font-sans text-[15px] font-bold uppercase tracking-wider text-white">
                 Đơn vị nhập khẩu
               </h3>
             </div>
 
-            <div className="space-y-3 text-xs leading-relaxed text-[#E5D7DE]">
+            <div className="space-y-3 text-[13px] sm:text-[13.5px] leading-relaxed text-[#E5D7DE]">
               <a
                 href="https://nakorea.vn/"
                 target="_blank"
@@ -395,10 +395,10 @@ export function Footer() {
               </a>
 
               <div>
-                <p className="font-bold text-white uppercase text-[13px]">
+                <p className="font-bold text-white uppercase text-[14px]">
                   CÔNG TY TNHH THƯƠNG MẠI NA KOREA
                 </p>
-                <p className="mt-0.5 text-[11px] text-[#CBBAC4]">
+                <p className="mt-0.5 text-[12px] text-[#CBBAC4]">
                   GPĐKKD/MST: 0109946846 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp
                 </p>
               </div>
@@ -429,13 +429,13 @@ export function Footer() {
           {/* ═══ Cột 3: Chính sách & Hỗ trợ (Col 2) ═══ */}
           <div className="lg:col-span-2 space-y-4">
             <div className="border-b border-white/15 pb-2">
-              <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
+              <h3 className="font-sans text-[15px] font-bold uppercase tracking-wider text-white">
                 Chính sách
               </h3>
             </div>
 
             <nav aria-label="Liên kết chính sách">
-              <ul className="space-y-2.5 text-xs text-[#E5D7DE]">
+              <ul className="space-y-2.5 text-[13px] sm:text-[13.5px] text-[#E5D7DE]">
                 {usefulLinks.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -462,11 +462,11 @@ export function Footer() {
             >
               <div className="flex items-center gap-2 mb-2">
                 <FileText className="h-4 w-4 text-[#D4A359]" />
-                <h3 className="font-sans text-sm font-bold uppercase tracking-wider text-white">
+                <h3 className="font-sans text-[15px] font-bold uppercase tracking-wider text-white">
                   Đăng ký nhận tư vấn
                 </h3>
               </div>
-              <p className="mb-3.5 text-[11px] leading-relaxed text-[#E5D7DE]">
+              <p className="mb-3.5 text-[12px] leading-relaxed text-[#E5D7DE]">
                 Nhận báo giá ưu đãi & tư vấn liệu trình hồng sâm chuyên sâu từ chuyên gia.
               </p>
               <ConsultationForm isSlate={isSlate} />
@@ -481,7 +481,7 @@ export function Footer() {
           isSlate ? "bg-[#1E2B2A]/95" : "bg-[#24061D]/90"
         }`}
       >
-        <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-xs text-[#CBBAC4] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-[13px] text-[#CBBAC4] sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-3">
             <p>© 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.</p>
 
@@ -489,7 +489,7 @@ export function Footer() {
             <button
               type="button"
               onClick={toggleTheme}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[11px] font-medium text-white transition-all hover:bg-white/20 hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[12px] font-medium text-white transition-all hover:bg-white/20 hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
               title="Bấm để chuyển đổi màu giao diện Footer (Demo)"
             >
               <span
@@ -501,7 +501,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="hidden text-[11px] text-[#CBBAC4] md:inline">Kết nối với chúng tôi:</span>
+            <span className="hidden text-[12px] text-[#CBBAC4] md:inline">Kết nối với chúng tôi:</span>
             <SocialLinks />
           </div>
         </div>
