@@ -75,25 +75,25 @@ const usefulLinks: Array<{
 function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" }) {
   if (name === "facebook") {
     return (
-      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-current">
-        <path d="M14.3 21v-7h2.4l.4-2.8h-2.8V9.4c0-.8.2-1.4 1.4-1.4h1.5V5.5c-.3 0-1.1-.1-2.1-.1-2.1 0-3.5 1.3-3.5 3.6v2.2H9.2V14h2.4v7h2.7Z" />
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-current">
+        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
       </svg>
     );
   }
 
   if (name === "instagram") {
     return (
-      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-4 w-4 fill-none stroke-current" strokeWidth="2">
-        <rect x="3.5" y="3.5" width="17" height="17" rx="4.5" />
-        <circle cx="12" cy="12" r="4" />
-        <circle cx="17.5" cy="6.7" r="1" className="fill-current stroke-none" />
+      <svg aria-hidden="true" viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-none stroke-current" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
       </svg>
     );
   }
 
   return (
-    <svg aria-hidden="true" viewBox="0 0 448 512" className="h-4 w-4 fill-current">
-      <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z" />
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="h-[18px] w-[18px] fill-current">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z" />
     </svg>
   );
 }
@@ -107,7 +107,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-        className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white border border-white/25 shadow-sm transition-all duration-300 hover:bg-[#D4A359] hover:border-[#D4A359] hover:text-black hover:scale-110 hover:shadow-[0_0_14px_rgba(212,163,89,0.7)] active:scale-95"
         >
           <SocialIcon name="facebook" />
         </a>
@@ -118,7 +118,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white border border-white/25 shadow-sm transition-all duration-300 hover:bg-[#D4A359] hover:border-[#D4A359] hover:text-black hover:scale-110 hover:shadow-[0_0_14px_rgba(212,163,89,0.7)] active:scale-95"
         >
           <SocialIcon name="instagram" />
         </a>
@@ -129,7 +129,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Tiktok"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/12 text-white/90 transition-all duration-300 hover:bg-[#4B193E] hover:text-white hover:scale-115 hover:shadow-[0_0_14px_rgba(75, 25, 62,0.7)] active:scale-95"
+          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white border border-white/25 shadow-sm transition-all duration-300 hover:bg-[#D4A359] hover:border-[#D4A359] hover:text-black hover:scale-110 hover:shadow-[0_0_14px_rgba(212,163,89,0.7)] active:scale-95"
         >
           <SocialIcon name="tiktok" />
         </a>
@@ -299,7 +299,7 @@ export function Footer() {
     <footer
       className={`relative overflow-hidden border-t transition-colors duration-500 font-sans text-white ${
         isSlate
-          ? "border-[#D4A359]/40 bg-gradient-to-b from-[#577674] via-[#3E5654] to-[#2B3D3B]"
+          ? "border-[#D4A359]/40 bg-gradient-to-b from-[#03403B] via-[#062F2B] to-[#021A17]"
           : "border-[#D4A359]/35 bg-gradient-to-b from-[#4A163D] via-[#3B0F30] to-[#2B0823]"
       }`}
     >
@@ -319,8 +319,67 @@ export function Footer() {
         }}
       />
 
+      {/* Korean Traditional Mountain Waves at Footer Base (Above Bottom Bar) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-[58px] sm:bottom-[62px] left-0 right-0 z-0 h-44 sm:h-56 lg:h-72 w-full opacity-90 transition-opacity duration-500"
+      >
+        <Image
+          src={isSlate ? "/images/footer/korean-mountains-teal.svg" : "/images/footer/korean-mountains-plum.svg"}
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-bottom"
+          priority={false}
+        />
+      </div>
+
+      {/* Traditional Korean Golden Cloud (Gureum) - Top Left */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-4 left-4 sm:top-6 sm:left-8 z-0 w-28 sm:w-36 lg:w-44 opacity-40 sm:opacity-60 transition-transform duration-1000 hover:scale-105"
+      >
+        <Image
+          src="/images/footer/korean-cloud.svg"
+          alt=""
+          width={160}
+          height={90}
+          className="w-full h-auto drop-shadow-md"
+        />
+      </div>
+
+      {/* Traditional Korean Golden Cloud (Gureum) - Top Right */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute top-8 right-2 sm:top-10 sm:right-12 z-0 w-24 sm:w-32 lg:w-36 opacity-30 sm:opacity-45 scale-x-[-1]"
+      >
+        <Image
+          src="/images/footer/korean-cloud.svg"
+          alt=""
+          width={160}
+          height={90}
+          className="w-full h-auto drop-shadow-md"
+        />
+      </div>
+
+
+      {/* Korean Samulnori / Nongak Folk Dancer with Sangmo Ribbon Swirls (Right Wing) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-6 sm:-right-4 lg:-right-8 -top-4 sm:-top-6 lg:-top-10 z-0 w-52 sm:w-64 lg:w-80 xl:w-96 opacity-45 sm:opacity-80 lg:opacity-95 drop-shadow-[0_16px_36px_rgba(0,0,0,0.6)] select-none transition-transform duration-700 hover:scale-105"
+      >
+        <Image
+          src="/images/footer/korean-dancer-art.png"
+          alt=""
+          width={817}
+          height={890}
+          className="w-full h-auto object-contain object-right-top"
+          priority={false}
+        />
+      </div>
+
       {/* Top Brand Gold Accent Line with Infinite Border Beam */}
-      <div className="relative h-[2px] w-full overflow-hidden bg-white/10">
+      <div className="relative z-10 h-[2px] w-full overflow-hidden bg-white/10">
         <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#D4A359] to-transparent animate-border-beam" />
       </div>
 
@@ -456,7 +515,7 @@ export function Footer() {
             <div
               className={`rounded-2xl border p-4 lg:p-3.5 xl:p-5 shadow-xl backdrop-blur-md transition-all duration-300 ${
                 isSlate
-                  ? "border-[#D4A359]/40 bg-black/20 hover:border-[#D4A359]/70 hover:bg-black/30 hover:shadow-[0_12px_36px_rgba(43,61,59,0.7)]"
+                  ? "border-[#D4A359]/40 bg-black/30 hover:border-[#D4A359]/70 hover:bg-black/40 hover:shadow-[0_12px_36px_rgba(2,26,23,0.8)]"
                   : "border-[#D4A359]/35 bg-white/[0.08] hover:border-[#D4A359]/60 hover:bg-white/[0.12] hover:shadow-[0_12px_36px_rgba(75,25,62,0.6)]"
               }`}
             >
@@ -475,21 +534,23 @@ export function Footer() {
         </div>
       </div>
 
-      {/* ═══ Dải đáy: Copyright, Demo Theme Toggle & Social Links ═══ */}
+      {/* ═══ Dải đáy: Copyright, Demo Theme Toggle & Social Links (Top Layer) ═══ */}
       <div
-        className={`border-t border-white/10 py-4 px-4 sm:px-6 lg:px-8 transition-colors duration-500 ${
-          isSlate ? "bg-[#1E2B2A]/95" : "bg-[#24061D]/90"
+        className={`relative z-20 border-t py-4 px-4 sm:px-6 lg:px-8 transition-colors duration-500 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] ${
+          isSlate
+            ? "border-[#D4A359]/30 bg-[#011412]"
+            : "border-[#D4A359]/30 bg-[#140210]"
         }`}
       >
-        <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-[13px] text-[#CBBAC4] sm:flex-row sm:items-center sm:justify-between">
+        <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-[13px] text-white sm:flex-row sm:items-center sm:justify-between">
           <div className="flex flex-wrap items-center gap-3">
-            <p>© 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.</p>
+            <p className="font-semibold text-white/95">© 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.</p>
 
             {/* Demo Theme Switcher Button */}
             <button
               type="button"
               onClick={toggleTheme}
-              className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-white/10 px-2.5 py-1 text-[12px] font-medium text-white transition-all hover:bg-white/20 hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[#D4A359]/40 bg-white/10 px-3 py-1 text-[12px] font-semibold text-white transition-all hover:bg-[#D4A359]/20 hover:border-[#D4A359] hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
               title="Bấm để chuyển đổi màu giao diện Footer (Demo)"
             >
               <span
@@ -501,7 +562,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="hidden text-[12px] text-[#CBBAC4] md:inline">Kết nối với chúng tôi:</span>
+            <span className="hidden text-[13px] font-bold text-white md:inline tracking-wide">Kết nối với chúng tôi:</span>
             <SocialLinks />
           </div>
         </div>

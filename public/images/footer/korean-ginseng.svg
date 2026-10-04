@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 550" fill="none" class="w-full h-full">
+  <defs>
+    <!-- Gradients for Root Body -->
+    <linearGradient id="rootMain" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#F3DCB3"/>
+      <stop offset="35%" stop-color="#E1B877"/>
+      <stop offset="70%" stop-color="#C29148"/>
+      <stop offset="100%" stop-color="#936224"/>
+    </linearGradient>
+    <linearGradient id="rootHighlight" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFF5DF" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#E8C385" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#A5732D" stop-opacity="0.9"/>
+    </linearGradient>
+    <!-- Gradients for Leaves -->
+    <linearGradient id="leafGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#68BB59"/>
+      <stop offset="40%" stop-color="#3C8B3E"/>
+      <stop offset="100%" stop-color="#1B5528"/>
+    </linearGradient>
+    <linearGradient id="leafGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#7ECC66"/>
+      <stop offset="50%" stop-color="#469D48"/>
+      <stop offset="100%" stop-color="#1E5C2C"/>
+    </linearGradient>
+    <!-- Gradients for Berries -->
+    <radialGradient id="berryRed" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="45%" stop-color="#E61E2B"/>
+      <stop offset="85%" stop-color="#A70D18"/>
+      <stop offset="100%" stop-color="#6E050D"/>
+    </radialGradient>
+    <!-- Stem Gradient -->
+    <linearGradient id="stemGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#A5732D"/>
+      <stop offset="30%" stop-color="#80A045"/>
+      <stop offset="100%" stop-color="#3C8B3E"/>
+    </linearGradient>
+    <!-- Glow filter -->
+    <filter id="goldGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#D4A359" flood-opacity="0.25"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#goldGlow)">
+    <!-- ═══ 1. STEMS (Cuống sâm) ═══ -->
+    <!-- Main central stem -->
+    <path d="M250,300 C252,260 255,210 260,160" stroke="url(#stemGrad)" stroke-width="6.5" stroke-linecap="round"/>
+    <!-- Branch to leaves left -->
+    <path d="M256,210 C230,195 190,185 150,175" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M258,185 C220,165 170,140 120,115" stroke="url(#stemGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Branch to leaves right -->
+    <path d="M258,195 C290,180 330,170 370,165" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round"/>
+    <path d="M260,170 C300,150 350,130 400,110" stroke="url(#stemGrad)" stroke-width="3.5" stroke-linecap="round"/>
+    <!-- Central stalk to berry cluster -->
+    <path d="M260,160 C262,120 264,80 265,55" stroke="url(#stemGrad)" stroke-width="4" stroke-linecap="round"/>
+
+    <!-- ═══ 2. PALMATE LEAVES (Lá ngũ gia bì / 5 lá sâm) ═══ -->
+    <!-- Left Leaf Cluster -->
+    <g>
+      <!-- Leaf 1 (top left) -->
+      <path d="M120,115 C100,80 70,60 40,55 C55,80 75,105 120,115 Z" fill="url(#leafGrad1)"/>
+      <path d="M120,115 C95,95 65,75 40,55" stroke="#9BE57E" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <!-- Leaf 2 (mid left) -->
+      <path d="M120,115 C85,100 50,100 20,110 C45,125 80,130 120,115 Z" fill="url(#leafGrad2)"/>
+      <path d="M120,115 C85,110 50,110 20,110" stroke="#9BE57E" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <!-- Leaf 3 (lower left) -->
+      <path d="M150,175 C110,170 70,180 45,205 C75,210 115,200 150,175 Z" fill="url(#leafGrad1)"/>
+      <!-- Leaf 4 (upper center-left) -->
+      <path d="M180,140 C160,100 140,70 125,50 C145,80 165,110 180,140 Z" fill="url(#leafGrad2)"/>
+      <!-- Leaf 5 (inner left) -->
+      <path d="M200,160 C170,145 140,140 110,145 C135,160 170,168 200,160 Z" fill="url(#leafGrad1)"/>
+    </g>
+
+    <!-- Right Leaf Cluster -->
+    <g>
+      <!-- Leaf 1 (top right) -->
+      <path d="M400,110 C425,75 455,55 485,50 C470,75 450,100 400,110 Z" fill="url(#leafGrad2)"/>
+      <path d="M400,110 C430,90 460,70 485,50" stroke="#9BE57E" stroke-width="1.2" stroke-linecap="round" opacity="0.7"/>
+      <!-- Leaf 2 (mid right) -->
+      <path d="M400,110 C435,95 470,95 495,105 C470,120 435,125 400,110 Z" fill="url(#leafGrad1)"/>
+      <!-- Leaf 3 (lower right) -->
+      <path d="M370,165 C410,160 450,170 475,195 C445,200 405,190 370,165 Z" fill="url(#leafGrad2)"/>
+      <!-- Leaf 4 (upper center-right) -->
+      <path d="M340,135 C360,95 380,65 395,45 C375,75 355,105 340,135 Z" fill="url(#leafGrad1)"/>
+      <!-- Leaf 5 (inner right) -->
+      <path d="M320,155 C350,140 380,135 410,140 C385,155 350,163 320,155 Z" fill="url(#leafGrad2)"/>
+    </g>
+
+    <!-- ═══ 3. GINSENG BERRIES (Quả hồng sâm đỏ mọng hình bán cầu) ═══ -->
+    <g>
+      <!-- Pedicel rays -->
+      <path d="M265,55 L245,35 M265,55 L255,25 M265,55 L265,20 M265,55 L275,25 M265,55 L285,35 M265,55 L240,45 M265,55 L290,45" stroke="#5D8B38" stroke-width="1.8"/>
+      
+      <!-- Individual Berries in rounded crown -->
+      <circle cx="245" cy="35" r="7" fill="url(#berryRed)"/>
+      <circle cx="235" cy="42" r="6.5" fill="url(#berryRed)"/>
+      <circle cx="255" cy="25" r="7" fill="url(#berryRed)"/>
+      <circle cx="265" cy="18" r="7.5" fill="url(#berryRed)"/>
+      <circle cx="275" cy="25" r="7" fill="url(#berryRed)"/>
+      <circle cx="285" cy="35" r="7" fill="url(#berryRed)"/>
+      <circle cx="295" cy="42" r="6.5" fill="url(#berryRed)"/>
+      <circle cx="250" cy="45" r="7" fill="url(#berryRed)"/>
+      <circle cx="265" cy="32" r="7.5" fill="url(#berryRed)"/>
+      <circle cx="280" cy="45" r="7" fill="url(#berryRed)"/>
+      <circle cx="265" cy="48" r="7" fill="url(#berryRed)"/>
+      <!-- Berry dots (tiny black center dot) -->
+      <circle cx="265" cy="17" r="1" fill="#400005"/>
+      <circle cx="255" cy="24" r="1" fill="#400005"/>
+      <circle cx="275" cy="24" r="1" fill="#400005"/>
+      <circle cx="245" cy="34" r="1" fill="#400005"/>
+      <circle cx="285" cy="34" r="1" fill="#400005"/>
+    </g>
+
+    <!-- ═══ 4. GINSENG ROOT BODY (Thân & Củ sâm hoàng kim 6 năm tuổi) ═══ -->
+    <!-- Head / Reed Rhizome (Đầu sâm & vết sẹo đốt sâm) -->
+    <path d="M238,290 C238,280 262,280 262,290 C265,298 235,298 238,290 Z" fill="#9C6B28" stroke="#684210" stroke-width="1.5"/>
+    <ellipse cx="250" cy="293" rx="10" ry="4" fill="#C29148"/>
+    <circle cx="244" cy="292" r="1.5" fill="#684210"/>
+    <circle cx="254" cy="294" r="1.5" fill="#684210"/>
+
+    <!-- Main Root Trunk -->
+    <!-- Shape: Upper body bulbous, tapering into 2 primary legs and graceful root hairs -->
+    <path d="M236,295 
+             C215,315 205,340 210,370 
+             C215,395 210,420 190,450 
+             C180,465 160,490 130,520 
+             C125,525 135,528 142,520 
+             C165,495 190,465 205,435
+             C215,415 225,430 235,465
+             C245,500 250,535 255,548
+             C258,550 262,548 261,540
+             C258,515 252,475 250,440
+             C248,405 260,390 275,420
+             C290,450 310,490 340,530
+             C345,535 352,530 348,522
+             C325,485 305,440 295,400
+             C290,370 295,335 285,315
+             C275,295 255,292 236,295 Z" 
+          fill="url(#rootMain)" 
+          stroke="#936224" 
+          stroke-width="2.5" 
+          stroke-linejoin="round"/>
+
+    <!-- Root Ring Wrinkles (Đốt vân sâm 6 năm tuổi) -->
+    <path d="M218,325 C235,335 265,335 280,325" stroke="#A7742F" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M213,340 C235,352 265,352 285,340" stroke="#A7742F" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M212,358 C235,370 265,370 286,358" stroke="#A7742F" stroke-width="2" stroke-linecap="round" fill="none" opacity="0.85"/>
+    <path d="M215,375 C235,385 265,385 282,375" stroke="#A7742F" stroke-width="1.8" stroke-linecap="round" fill="none" opacity="0.8"/>
+    <path d="M220,392 C238,400 258,400 272,392" stroke="#A7742F" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.75"/>
+
+    <!-- Spreading Fine Rootlets (Rễ tơ uốn lượn tự nhiên) -->
+    <!-- Left rootlets -->
+    <path d="M190,450 C160,460 120,455 80,440 C70,436 65,445 75,448 C115,465 155,470 185,462" stroke="#B8853A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M165,480 C135,500 95,510 50,505 C42,504 40,512 48,514 C92,522 132,510 160,490" stroke="#B8853A" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <path d="M140,505 C110,530 75,540 30,542 C22,542 22,550 30,549 C75,548 110,538 138,515" stroke="#B8853A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    
+    <!-- Right rootlets -->
+    <path d="M295,410 C335,420 375,415 420,395 C428,391 432,400 424,404 C380,425 340,430 298,422" stroke="#B8853A" stroke-width="2" stroke-linecap="round" fill="none"/>
+    <path d="M310,450 C350,470 395,475 445,465 C454,463 456,472 447,474 C398,485 352,480 312,460" stroke="#B8853A" stroke-width="1.8" stroke-linecap="round" fill="none"/>
+    <path d="M330,490 C370,515 410,525 460,520 C468,519 470,527 462,529 C412,536 370,525 328,500" stroke="#B8853A" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M255,470 C280,495 305,530 315,550" stroke="#B8853A" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>

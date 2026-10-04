@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" fill="none" class="w-full h-full">
+  <defs>
+    <linearGradient id="plumGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3D1232" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#1F0619" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="plumGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4C183F" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#26081F" stop-opacity="0.99"/>
+    </linearGradient>
+    <linearGradient id="plumGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2D0A24" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#14020F" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="goldStrokePlum" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D4A359" stop-opacity="0.3"/>
+      <stop offset="30%" stop-color="#E8C37E" stop-opacity="0.8"/>
+      <stop offset="70%" stop-color="#D4A359" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#B88942" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Back Mountain Ridge -->
+  <path d="M0,160 Q240,80 480,140 T960,110 Q1200,60 1440,130 L1440,320 L0,320 Z" fill="url(#plumGrad1)"/>
+  <path d="M0,160 Q240,80 480,140 T960,110 Q1200,60 1440,130" stroke="url(#goldStrokePlum)" stroke-width="1.5" fill="none" opacity="0.6"/>
+
+  <!-- Mid Mountain Ridge -->
+  <path d="M0,200 Q360,130 720,180 T1440,150 L1440,320 L0,320 Z" fill="url(#plumGrad2)"/>
+  <path d="M0,200 Q360,130 720,180 T1440,150" stroke="url(#goldStrokePlum)" stroke-width="2" fill="none" opacity="0.75"/>
+
+  <!-- Front Mountain Ridge -->
+  <path d="M0,245 Q280,195 560,230 T1120,210 Q1280,240 1440,225 L1440,320 L0,320 Z" fill="url(#plumGrad3)"/>
+  <path d="M0,245 Q280,195 560,230 T1120,210 Q1280,240 1440,225" stroke="url(#goldStrokePlum)" stroke-width="1.8" fill="none" opacity="0.9"/>
+</svg>

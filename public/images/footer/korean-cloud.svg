@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 90" fill="none">
+  <defs>
+    <linearGradient id="cloudGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E4B7" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#D4A359" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#A1752E" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="cloudBorderGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE8B5" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#D4A359" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#996E25" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <!-- Cloud body -->
+  <path d="M30,65 C15,65 5,55 5,42 C5,30 16,22 28,23 C32,12 45,5 60,5 C76,5 88,14 93,25 C98,22 105,21 112,22 C125,24 135,34 135,46 C145,47 155,55 155,65 C155,75 145,83 132,83 L35,83 C20,83 10,75 15,65 C20,55 30,65 30,65 Z" fill="url(#cloudGoldGrad)" stroke="url(#cloudBorderGold)" stroke-width="1.5"/>
+  <!-- Internal cloud swirls -->
+  <path d="M35,60 C42,50 55,50 62,58 C68,64 78,65 85,58" stroke="url(#cloudBorderGold)" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.75"/>
+  <path d="M85,38 C92,30 105,32 110,40 C114,46 122,48 130,42" stroke="url(#cloudBorderGold)" stroke-width="1.2" stroke-linecap="round" fill="none" opacity="0.75"/>
+</svg>

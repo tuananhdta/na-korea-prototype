@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" fill="none" class="w-full h-full">
+  <defs>
+    <!-- Ribbon Gold & Light Gradient -->
+    <linearGradient id="ribbonGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF8E7"/>
+      <stop offset="30%" stop-color="#FFD166"/>
+      <stop offset="70%" stop-color="#D4A359"/>
+      <stop offset="100%" stop-color="#A26B1E"/>
+    </linearGradient>
+    <linearGradient id="ribbonWhiteGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="50%" stop-color="#F4F4F4" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#E2D4B7" stop-opacity="0.7"/>
+    </linearGradient>
+    
+    <!-- Hanbok White Shading -->
+    <linearGradient id="hanbokWhite" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="70%" stop-color="#F2F4F7"/>
+      <stop offset="100%" stop-color="#D5DBE1"/>
+    </linearGradient>
+    <!-- Vest Dark Blue/Black -->
+    <linearGradient id="vestBlack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2C3440"/>
+      <stop offset="100%" stop-color="#141920"/>
+    </linearGradient>
+    <!-- Sash Colors -->
+    <linearGradient id="sashRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E63946"/>
+      <stop offset="100%" stop-color="#9E1B25"/>
+    </linearGradient>
+    <linearGradient id="sashBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1D3557"/>
+      <stop offset="100%" stop-color="#0E1D31"/>
+    </linearGradient>
+    <linearGradient id="sashYellow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFB703"/>
+      <stop offset="100%" stop-color="#FB8500"/>
+    </linearGradient>
+    <!-- Drum Wood Gradient -->
+    <linearGradient id="drumWood" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B87333"/>
+      <stop offset="50%" stop-color="#E09F56"/>
+      <stop offset="100%" stop-color="#8B4513"/>
+    </linearGradient>
+
+    <!-- Drop Shadow Filter -->
+    <filter id="dancerShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#dancerShadow)">
+    <!-- ═══ 1. BACKGROUND SANGMO RIBBON SWIRLS (Dải lụa xoay 3D) ═══ -->
+    <!-- Large Outer Swirl Arc 1 -->
+    <path d="M260,130 
+             C380,40 480,110 460,240 
+             C440,360 320,440 220,420 
+             C140,400 90,300 130,220 
+             C160,160 230,120 310,140" 
+          stroke="url(#ribbonGoldGrad)" 
+          stroke-width="7" 
+          stroke-linecap="round" 
+          fill="none" 
+          opacity="0.85"/>
+    <path d="M260,130 
+             C380,40 480,110 460,240 
+             C440,360 320,440 220,420 
+             C140,400 90,300 130,220 
+             C160,160 230,120 310,140" 
+          stroke="url(#ribbonWhiteGrad)" 
+          stroke-width="3" 
+          stroke-linecap="round" 
+          fill="none" 
+          opacity="0.95"/>
+
+    <!-- Bottom Secondary Swirl Arc 2 -->
+    <path d="M240,430 
+             C340,460 420,510 390,560 
+             C350,600 240,580 180,530 
+             C130,490 110,430 160,390" 
+          stroke="url(#ribbonGoldGrad)" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          fill="none" 
+          opacity="0.75"/>
+
+    <!-- ═══ 2. DANCER BODY (Nghệ nhân múa dân gian Nongak) ═══ -->
+    
+    <!-- Left Leg (Pants / Baji - Stepping high in dance) -->
+    <path d="M210,380 C180,410 140,435 110,430 C100,428 95,445 105,450 C140,460 190,430 225,395 Z" fill="url(#hanbokWhite)" stroke="#C5CDD6" stroke-width="1.5"/>
+    <!-- Left Traditional Shoe (Kipsin / Beoseon) -->
+    <path d="M100,435 C90,440 85,450 95,455 C105,458 115,450 110,440 Z" fill="#FFFFFF" stroke="#495057" stroke-width="1.2"/>
+    <!-- Shoe ankle tie (Daenim) -->
+    <rect x="105" y="438" width="8" height="12" rx="2" fill="#E63946" transform="rotate(20 105 438)"/>
+
+    <!-- Right Leg (Supporting / leaping) -->
+    <path d="M255,385 C275,425 295,475 315,515 C322,530 335,530 335,518 C325,470 305,420 280,380 Z" fill="url(#hanbokWhite)" stroke="#C5CDD6" stroke-width="1.5"/>
+    <!-- Right Shoe -->
+    <path d="M315,518 C320,535 338,542 345,532 C350,522 340,515 330,512 Z" fill="#FFFFFF" stroke="#495057" stroke-width="1.2"/>
+    <!-- Right ankle tie (Daenim) -->
+    <rect x="320" y="512" width="10" height="8" rx="2" fill="#1D3557"/>
+
+    <!-- Torso: White Jeogori Jacket -->
+    <path d="M200,240 C190,290 195,350 205,390 C235,400 265,395 285,385 C295,340 295,290 285,240 Z" fill="url(#hanbokWhite)" stroke="#CBD3DC" stroke-width="1.5"/>
+
+    <!-- Black Vest (Baeja / Kkwaeja) -->
+    <path d="M210,242 L200,350 C230,360 260,355 280,345 L272,242 C255,248 230,248 210,242 Z" fill="url(#vestBlack)"/>
+    <!-- Vest Yellow trim collar -->
+    <path d="M210,242 C230,250 255,250 272,242" stroke="#FFB703" stroke-width="2" fill="none"/>
+
+    <!-- Traditional Tri-color Sashes (Sam Saek Tti) across chest & hanging -->
+    <!-- Red Sash diagonal -->
+    <path d="M208,248 Q235,290 265,345" stroke="url(#sashRed)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Blue Sash opposite diagonal -->
+    <path d="M270,248 Q240,295 212,345" stroke="url(#sashBlue)" stroke-width="7" stroke-linecap="round"/>
+    <!-- Yellow Waist belt with flowing tails -->
+    <path d="M198,345 C235,358 268,352 288,340" stroke="url(#sashYellow)" stroke-width="8" stroke-linecap="round"/>
+    <!-- Hanging Sash ribbon tail -->
+    <path d="M225,355 C220,390 210,430 200,470 C208,472 215,465 218,435 C225,395 232,365 235,355 Z" fill="url(#sashYellow)"/>
+    <path d="M235,355 C240,395 245,435 250,475 C256,475 260,468 258,435 C252,395 248,365 245,355 Z" fill="url(#sashRed)"/>
+
+    <!-- Left Arm & Hand holding small Gong / Drum (Sogo) -->
+    <!-- Left Arm raising drum -->
+    <path d="M205,250 C170,230 140,205 125,185 C118,192 130,215 155,240 C175,260 195,275 205,280 Z" fill="url(#hanbokWhite)" stroke="#CBD3DC" stroke-width="1.5"/>
+    <!-- Left Hand -->
+    <circle cx="120" cy="180" r="7" fill="#FAD2B0"/>
+    <!-- Small Hand Drum (Sogo) -->
+    <circle cx="110" cy="165" r="22" fill="url(#drumWood)" stroke="#5C2C08" stroke-width="2"/>
+    <circle cx="110" cy="165" r="17" fill="#FDF0D5" stroke="#B87333" stroke-width="1.5"/>
+    <!-- Drum handle -->
+    <rect x="118" y="175" width="6" height="24" rx="2" fill="#8B4513" transform="rotate(35 118 175)"/>
+    <!-- Red tassel on drum -->
+    <path d="M130,195 C140,215 145,235 140,250" stroke="#E63946" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right Arm holding drum stick (Chae) -->
+    <path d="M280,255 C310,240 345,225 365,210 C370,218 355,238 330,260 C305,280 290,285 280,285 Z" fill="url(#hanbokWhite)" stroke="#CBD3DC" stroke-width="1.5"/>
+    <!-- Right Hand -->
+    <circle cx="370" cy="208" r="7" fill="#FAD2B0"/>
+    <!-- Drum Stick -->
+    <line x1="360" y1="225" x2="395" y2="175" stroke="#E0A96D" stroke-width="3.5" stroke-linecap="round"/>
+    <circle cx="395" cy="175" r="4" fill="#E63946"/>
+
+    <!-- ═══ 3. HEAD & SANGMO HAT (Đầu & Mũ múa xoay dải lụa Sangmo) ═══ -->
+    <!-- Neck -->
+    <rect x="236" y="220" width="12" height="15" fill="#FAD2B0"/>
+    
+    <!-- Face / Head turned joyfully -->
+    <ellipse cx="242" cy="205" rx="14" ry="16" fill="#FAD2B0"/>
+    <!-- Friendly smiling eye / brow -->
+    <path d="M246,202 C248,199 252,200 253,203" stroke="#4A2810" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+    <path d="M248,210 C250,213 254,213 255,210" stroke="#B04A30" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+
+    <!-- Black Hat Dome (Sangmo Hat Base / Beonji) -->
+    <path d="M226,198 C226,175 258,175 258,198 Z" fill="#141920"/>
+    <!-- Hat Brim (black with gold band) -->
+    <ellipse cx="242" cy="198" rx="20" ry="6" fill="#1E232B" stroke="#D4A359" stroke-width="1.2"/>
+    <!-- Chin strap (Heukseon) tied under chin -->
+    <path d="M228,198 C232,215 240,225 246,224 C250,224 254,215 256,198" stroke="#141920" stroke-width="2" fill="none"/>
+
+    <!-- Sangmo Spinning Mechanism (Gusul / Bopul - Quả cầu lông trắng trên đỉnh) -->
+    <circle cx="242" cy="174" r="5.5" fill="#FFFFFF" stroke="#E2D4B7" stroke-width="1.2"/>
+    <!-- Feather plume base / turning pivot (Kkokji) -->
+    <line x1="242" y1="174" x2="250" y2="155" stroke="#D4A359" stroke-width="2.5" stroke-linecap="round"/>
+    <circle cx="250" cy="155" r="3" fill="#E63946"/>
+    <!-- White Paper Feather / Ribbon connection (Chae) -->
+    <path d="M250,155 C255,145 260,135 265,130" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+  </g>
+</svg>
