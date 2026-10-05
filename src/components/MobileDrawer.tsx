@@ -139,24 +139,16 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                   <Link
                     href={item.href}
                     onClick={onClose}
-                    className={`group/mobile relative flex items-center gap-2 font-sans text-sm leading-[1.15] tracking-[0.02em] transition-all ${
+                    className={`group/mobile flex items-center gap-2 rounded-lg px-2 py-1.5 font-sans text-sm leading-[1.15] tracking-[0.02em] transition-all ${
                       isRouteActive
-                        ? "font-semibold text-white drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
-                        : "font-medium text-white/90 hover:text-white hover:drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
+                        ? "font-bold text-[#D4A359] bg-white/10"
+                        : "font-medium text-white/90 hover:text-white hover:bg-white/5"
                     }`}
                   >
                     {isRouteActive && (
-                      <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)] animate-pulse" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#D4A359] shadow-[0_0_6px_rgba(212,163,89,0.8)] animate-pulse shrink-0" />
                     )}
                     <span className="whitespace-nowrap">{item.title}</span>
-                    <span
-                      aria-hidden="true"
-                      className={`absolute -bottom-1 left-0 right-0 h-[2px] origin-left rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)] transition-[opacity,transform] duration-300 ${
-                        isRouteActive
-                          ? "scale-x-100 opacity-100"
-                          : "scale-x-0 opacity-0 group-hover/mobile:scale-x-100 group-hover/mobile:opacity-100"
-                      }`}
-                    />
                   </Link>
 
                   {item.subItems && (
@@ -176,7 +168,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
 
                 {/* Sub Items Accordion */}
                 {item.subItems && expanded === item.title && (
-                  <div className="space-y-1 rounded-xl bg-white/5 p-3 my-1">
+                  <div className="space-y-1 rounded-xl bg-white/5 p-2 my-1">
                     {item.subItems.map((sub) => {
                       const isSubActive = pathname === sub.href;
 
@@ -185,29 +177,21 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                           <Link
                             href={sub.href}
                             onClick={onClose}
-                            className={`group/mobile-sub relative flex items-center gap-2 py-1.5 font-sans text-[13px] leading-[1.15] tracking-[0.02em] transition-all ${
+                            className={`group/mobile-sub flex items-center gap-2 rounded-lg px-2.5 py-1.5 font-sans text-[13px] leading-[1.15] tracking-[0.02em] transition-all ${
                               isSubActive
-                                ? "font-semibold text-white drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
-                                : "text-white/70 hover:text-white hover:drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
+                                ? "font-bold text-[#D4A359] bg-white/10"
+                                : "text-white/70 hover:text-white hover:bg-white/5"
                             }`}
                           >
                             <span
                               aria-hidden="true"
-                              className={`h-1.5 w-1.5 shrink-0 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)] transition-[opacity,transform] duration-200 ${
+                              className={`h-1.5 w-1.5 shrink-0 rounded-full transition-all duration-200 ${
                                 isSubActive
-                                  ? "scale-100 opacity-100"
-                                  : "scale-75 opacity-0 group-hover/mobile-sub:scale-100 group-hover/mobile-sub:opacity-100"
+                                  ? "bg-[#D4A359] scale-100 shadow-[0_0_6px_rgba(212,163,89,0.8)]"
+                                  : "bg-white/30 scale-75 group-hover/mobile-sub:bg-white group-hover/mobile-sub:scale-100"
                               }`}
                             />
                             <span>{sub.title}</span>
-                            <span
-                              aria-hidden="true"
-                              className={`absolute -bottom-0.5 left-0 right-0 h-[2px] origin-left rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)] transition-[opacity,transform] duration-300 ${
-                                isSubActive
-                                  ? "scale-x-100 opacity-100"
-                                  : "scale-x-0 opacity-0 group-hover/mobile-sub:scale-x-100 group-hover/mobile-sub:opacity-100"
-                              }`}
-                            />
                           </Link>
 
                           {/* 3rd Level Sub-Items */}
@@ -218,21 +202,13 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                                   key={child.title}
                                   href={child.href}
                                   onClick={onClose}
-                                  className={`group/mobile-child relative block py-1 font-sans text-xs leading-[1.15] tracking-[0.02em] transition-all ${
+                                  className={`group/mobile-child block rounded-md px-2 py-1 font-sans text-xs leading-[1.15] tracking-[0.02em] transition-all ${
                                     pathname === child.href
-                                      ? "font-semibold text-white drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
-                                      : "text-white/50 hover:text-white hover:drop-shadow-[0_0_7px_rgba(255,255,255,0.58)]"
+                                      ? "font-bold text-[#D4A359] bg-white/10"
+                                      : "text-white/50 hover:text-white hover:bg-white/5"
                                   }`}
                                 >
                                   {child.title}
-                                  <span
-                                    aria-hidden="true"
-                                    className={`absolute -bottom-0.5 left-0 right-0 h-[1.5px] origin-left rounded-full bg-white shadow-[0_0_7px_rgba(255,255,255,0.65)] transition-[opacity,transform] duration-300 ${
-                                      pathname === child.href
-                                        ? "scale-x-100 opacity-100"
-                                        : "scale-x-0 opacity-0 group-hover/mobile-child:scale-x-100 group-hover/mobile-child:opacity-100"
-                                    }`}
-                                  />
                                 </Link>
                               ))}
                             </div>

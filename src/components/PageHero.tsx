@@ -31,10 +31,10 @@ export function PageHero({
   return (
     <section
       data-floating-contact-hero
-      className={`relative isolate flex flex-col justify-between overflow-hidden bg-[#181818] text-white ${
+      className={`relative isolate flex flex-col justify-between overflow-hidden bg-[#181818] text-white transition-[padding] duration-300 ${
         hasSubNav
-          ? "min-h-[clamp(300px,36vh,340px)] sm:min-h-[clamp(380px,42vh,420px)] lg:min-h-[clamp(480px,50vh,520px)] pt-28 sm:pt-32 md:pt-36 lg:pt-40"
-          : "min-h-[clamp(280px,32vh,420px)] px-4 pt-28 pb-10 sm:px-6 sm:pt-36 sm:pb-14 md:pt-40 md:pb-16"
+          ? "min-h-[clamp(340px,38vh,380px)] sm:min-h-[clamp(380px,42vh,420px)] lg:min-h-[clamp(480px,50vh,520px)] pt-[calc(var(--header-offset,80px)+96px)] sm:pt-32 md:pt-36 lg:pt-40"
+          : "min-h-[clamp(300px,34vh,420px)] px-4 pt-[calc(var(--header-offset,80px)+96px)] pb-10 sm:px-6 sm:pt-36 sm:pb-14 md:pt-40 md:pb-16"
       }`}
     >
       {image && (

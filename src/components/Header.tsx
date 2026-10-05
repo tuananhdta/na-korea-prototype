@@ -83,6 +83,13 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.documentElement.style.setProperty(
+      "--header-offset",
+      isBannerVisible ? "80px" : "0px"
+    );
+  }, [isBannerVisible]);
+
   const { totalCount, openCart, isCartShaking, isBadgePopping } = useCart();
   // Keep the navigation directly below the 80px promo banner on every mobile
   // viewport. The old mobile `top-24` left a visible 16px strip between them.
