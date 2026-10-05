@@ -436,7 +436,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
               <div className="flex min-w-max gap-1.5 sm:gap-2">
                 <button
                   onClick={() => setActiveTab("desc")}
-                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-lg transition-all ${
                     activeTab === "desc"
                       ? "bg-white text-[#4B193E] shadow-xs"
                       : "text-[#666666] hover:text-[#111111]"
@@ -447,7 +447,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
                 <button
                   onClick={() => setActiveTab("usage")}
-                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-lg transition-all ${
                     activeTab === "usage"
                       ? "bg-white text-[#4B193E] shadow-xs"
                       : "text-[#666666] hover:text-[#111111]"
@@ -458,7 +458,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
                 <button
                   onClick={() => setActiveTab("origin")}
-                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-lg transition-all ${
                     activeTab === "origin"
                       ? "bg-white text-[#4B193E] shadow-xs"
                       : "text-[#666666] hover:text-[#111111]"
@@ -469,7 +469,7 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
                 <button
                   onClick={() => setActiveTab("reviews")}
-                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all flex items-center gap-1.5 ${
+                  className={`px-4 sm:px-5 py-2 sm:py-2.5 text-xs sm:text-sm font-bold rounded-lg transition-all flex items-center gap-1.5 ${
                     activeTab === "reviews"
                       ? "bg-white text-[#4B193E] shadow-xs"
                       : "text-[#666666] hover:text-[#111111]"

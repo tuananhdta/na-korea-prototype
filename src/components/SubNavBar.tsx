@@ -57,7 +57,7 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
           <button
             type="button"
             onClick={() => scroll("left")}
-            className="absolute left-1.5 top-1/2 -translate-y-1/2 z-30 w-7 h-7 rounded-full bg-black/70 hover:bg-black/90 text-white backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center transition-all cursor-pointer"
+            className="absolute left-1.5 top-1/2 -translate-y-1/2 z-30 w-7 h-7 rounded-lg bg-black/70 hover:bg-black/90 text-white backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center transition-all cursor-pointer"
             aria-label="Cuộn menu sang trái"
           >
             <ChevronLeft className="w-4 h-4" />
@@ -69,7 +69,7 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
           <button
             type="button"
             onClick={() => scroll("right")}
-            className="absolute right-1.5 top-1/2 -translate-y-1/2 z-30 w-7 h-7 rounded-full bg-black/70 hover:bg-black/90 text-white backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center transition-all cursor-pointer animate-pulse"
+            className="absolute right-1.5 top-1/2 -translate-y-1/2 z-30 w-7 h-7 rounded-lg bg-black/70 hover:bg-black/90 text-white backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center transition-all cursor-pointer animate-pulse"
             aria-label="Cuộn menu sang phải"
           >
             <ChevronRight className="w-4 h-4" />
@@ -80,7 +80,7 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
         <nav
           ref={navRef}
           aria-label="Menu danh mục con"
-          className="flex items-center justify-start sm:justify-center gap-2.5 sm:gap-4 overflow-x-auto py-2.5 px-7 sm:px-0 text-xs sm:text-sm font-semibold tracking-wide scrollbar-none scroll-smooth whitespace-nowrap"
+          className="flex items-center justify-start sm:justify-center gap-2 sm:gap-3 overflow-x-auto py-3 px-6 sm:px-0 text-xs sm:text-sm font-semibold tracking-wide scrollbar-none scroll-smooth whitespace-nowrap"
         >
           {items.map((item) => {
             const isActive =
@@ -91,10 +91,10 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`relative px-3.5 py-1.5 rounded-full transition-all duration-200 shrink-0 ${
+                className={`relative px-4 py-2 rounded-lg transition-all duration-200 shrink-0 ${
                   isActive
-                    ? "bg-white text-[#181818] font-bold shadow-sm"
-                    : "text-white/80 hover:text-white hover:bg-white/10 font-medium"
+                    ? "bg-white text-[#181818] font-bold shadow-xs"
+                    : "text-white/85 hover:text-white hover:bg-white/10 font-medium"
                 }`}
               >
                 {item.title}
