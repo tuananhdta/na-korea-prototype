@@ -48,35 +48,77 @@ function PhoneStickerIcon({ className = "w-7 h-7" }: { className?: string }) {
 export function FloatingContact() {
   const pathname = usePathname();
   const [isHeroPassed, setIsHeroPassed] = useState(false);
+  const [isAtFooter, setIsAtFooter] = useState(false);
 
-  // Activation threshold logic (remains 100% intact as before)
+  // Activation threshold & footer detection logic
   useEffect(() => {
     const hero = document.querySelector<HTMLElement>("[data-floating-contact-hero]");
+    const footer = document.querySelector<HTMLElement>("footer");
 
-    if (!hero) {
-      const frame = window.requestAnimationFrame(() => setIsHeroPassed(true));
-      return () => window.cancelAnimationFrame(frame);
+    let heroObserver: IntersectionObserver | null = null;
+    let footerObserver: IntersectionObserver | null = null;
+
+    const checkVisibility = () => {
+      // 1. Check Hero passed: scroll position strictly below hero element bottom
+      if (hero) {
+        const heroRect = hero.getBoundingClientRect();
+        setIsHeroPassed(heroRect.bottom <= 0);
+      } else {
+        // Fallback for subpages without a hero element: show stickers after scrolling 200px
+        setIsHeroPassed(window.scrollY > 200);
+      }
+
+      // 2. Check Footer / Bottom reached (kịch chân web)
+      const scrollPosition = window.innerHeight + window.scrollY;
+      const isBottom = scrollPosition >= document.documentElement.scrollHeight - 30;
+
+      if (footer) {
+        const footerRect = footer.getBoundingClientRect();
+        const isFooterInView = footerRect.top <= window.innerHeight;
+        setIsAtFooter(isBottom || isFooterInView);
+      } else {
+        setIsAtFooter(isBottom);
+      }
+    };
+
+    if (typeof window.IntersectionObserver !== "undefined") {
+      if (hero) {
+        heroObserver = new IntersectionObserver(
+          ([entry]) => {
+            setIsHeroPassed(!entry.isIntersecting && entry.boundingClientRect.bottom <= 0);
+          },
+          { threshold: 0 }
+        );
+        heroObserver.observe(hero);
+      } else {
+        setIsHeroPassed(window.scrollY > 200);
+      }
+
+      if (footer) {
+        footerObserver = new IntersectionObserver(
+          ([entry]) => {
+            setIsAtFooter(entry.isIntersecting || entry.boundingClientRect.top <= window.innerHeight);
+          },
+          { threshold: 0 }
+        );
+        footerObserver.observe(footer);
+      }
     }
 
-    if (typeof window.IntersectionObserver === "undefined") {
-      const frame = window.requestAnimationFrame(() => {
-        setIsHeroPassed(hero.getBoundingClientRect().bottom <= 0);
-      });
-      return () => window.cancelAnimationFrame(frame);
-    }
+    // Scroll & resize listeners for initial state and precise boundary tracking
+    window.addEventListener("scroll", checkVisibility, { passive: true });
+    window.addEventListener("resize", checkVisibility, { passive: true });
+    checkVisibility();
 
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsHeroPassed(!entry.isIntersecting && entry.boundingClientRect.bottom <= 0);
-      },
-      { threshold: 0 },
-    );
-
-    observer.observe(hero);
-    return () => observer.disconnect();
+    return () => {
+      if (heroObserver) heroObserver.disconnect();
+      if (footerObserver) footerObserver.disconnect();
+      window.removeEventListener("scroll", checkVisibility);
+      window.removeEventListener("resize", checkVisibility);
+    };
   }, [pathname]);
 
-  if (!isHeroPassed) return null;
+  const isVisible = isHeroPassed && !isAtFooter;
 
   return (
     <>
@@ -137,9 +179,14 @@ export function FloatingContact() {
 
       {/* ─── 2 FLOATING CONTACT STICKERS PINNED TO THE LEFT EDGE ─── */}
       <div
-        className="fixed left-2.5 sm:left-5 bottom-16 md:bottom-24 z-50 flex flex-col items-start gap-3 sm:gap-4 select-none animate-in fade-in slide-in-from-left-4 duration-300 pointer-events-auto"
+        className={`fixed left-2.5 sm:left-5 bottom-16 md:bottom-24 z-50 flex flex-col items-start gap-3 sm:gap-4 select-none transition-all duration-300 ${
+          isVisible
+            ? "opacity-100 pointer-events-auto translate-y-0 scale-100"
+            : "opacity-0 pointer-events-none translate-y-4 scale-95"
+        }`}
         role="region"
         aria-label="Kênh liên hệ nhanh"
+        aria-hidden={!isVisible}
       >
         {/* 1. STICKER GỌI (PHONE CALL) */}
         <a
