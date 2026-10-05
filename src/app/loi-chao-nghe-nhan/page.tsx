@@ -101,10 +101,10 @@ export default function LoiChaoNgheNhanPage() {
           </nav>
         </div>
 
-        {/* Section 1: Khoảng cách tiêu chuẩn mt-6 sm:mt-8 */}
-        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-6 sm:mt-8">
-          <section className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-gray-200">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        {/* Section 1: Khoảng cách tiêu chuẩn mt-4 sm:mt-6 */}
+        <div className="max-w-[1240px] mx-auto px-4 sm:px-6 mt-4 sm:mt-6">
+          <section className="bg-white rounded-2xl p-6 sm:p-8 shadow-2xs border border-gray-200">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
               {/* Cột trái: Văn bản SEO & Lời chào */}
               <div className="lg:col-span-7 space-y-5">
                 <h2 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
