@@ -16,11 +16,11 @@ export function BrandStorySection() {
           <SectionIndicator activeIndex={1} total={5} />
 
           <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
-            Từ lời hứa của mẹ thiên nhiên
+            Từ nơi trồng nhân sâm bán hoang dã tại Triều Tiên
           </p>
 
-          <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
-            Khởi đầu hoàn hảo cho Punggi Ginseng Farming Corp.
+          <h2 className="mb-0 font-sans text-2xl font-bold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
+            Cùng lịch sử 500 năm vùng Punggi vươn mình ra Thế Giới
           </h2>
         </div>
 
@@ -37,18 +37,14 @@ export function BrandStorySection() {
 
           <div className="max-w-[530px] text-left md:ml-0">
             <p className="font-sans text-base font-normal leading-6 text-[#111111]">
-              Hồng Sâm Hồng Kim Sâm mang trong mình sức sống trí tuệ và khí tức của cổ nhân trải qua hàng nghìn năm cùng với linh khí và nguồn năng lượng cao quý của thời đại các vị Hoàng đế tại Triều Tiên.
-            </p>
-
-            <div className="my-8 h-px w-full max-w-[264px] bg-[#D8D2C8]" />
-
-            <p className="font-sans text-base font-normal leading-6 text-[#111111]">
-              Kể từ 1986, Punggi Ginseng Farming Corporation chỉ tập trung vào sản xuất các sản phẩm hồng sâm chất lượng cao.
+              Hồng sâm được tạo nên bởi sự chân thành. Điều{" "}
+              <strong className="font-bold">Hồng Sâm Kim</strong> muốn mang đến chính
+              là sức khoẻ và một trái tim chân thành đến người tiêu dùng.
             </p>
 
             <Link
               href="/gioi-thieu"
-              className="group mt-8 inline-flex items-center gap-4 rounded-lg border border-[#4B193E] px-7 py-3.5 font-sans text-[15px] font-normal leading-[1] tracking-[-0.01em] text-[#4B193E] transition-colors hover:bg-[#4B193E] hover:text-white sm:mt-10"
+              className="group mt-8 inline-flex items-center gap-4 rounded-lg bg-[#4B193E] px-7 py-3.5 font-sans text-[15px] font-bold leading-[1] tracking-[-0.01em] text-white transition-colors hover:bg-[#3A1230] sm:mt-10"
             >
               <span>Câu chuyện thương hiệu</span>
               <span className="flex h-5 w-5 items-center justify-center rounded-full border border-current">
