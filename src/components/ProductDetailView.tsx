@@ -14,6 +14,7 @@ import {
   X,
   ChevronLeft,
   CheckCircle2,
+  Zap,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Product, ProductReview } from "@/types/product";
@@ -38,9 +39,40 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState("");
   const [showStickyBar, setShowStickyBar] = useState(false);
+  const [canScrollLeft, setCanScrollLeft] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
   const buyButtonRef = useRef<HTMLDivElement>(null);
+  const tabsRef = useRef<HTMLDivElement>(null);
   const { addToCart, openCart } = useCart();
+
+  const checkTabScroll = () => {
+    if (tabsRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = tabsRef.current;
+      setCanScrollLeft(scrollLeft > 5);
+      setCanScrollRight(scrollLeft + clientWidth < scrollWidth - 5);
+    }
+  };
+
+  useEffect(() => {
+    checkTabScroll();
+    const el = tabsRef.current;
+    if (el) {
+      el.addEventListener("scroll", checkTabScroll, { passive: true });
+      window.addEventListener("resize", checkTabScroll);
+      return () => {
+        el.removeEventListener("scroll", checkTabScroll);
+        window.removeEventListener("resize", checkTabScroll);
+      };
+    }
+  }, []);
+
+  const scrollTabs = (direction: "left" | "right") => {
+    if (tabsRef.current) {
+      const scrollAmount = direction === "left" ? -180 : 180;
+      tabsRef.current.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  };
 
   // Authentic gallery generation strictly for this specific product
   const getProductGallery = (prod: Product) => {
@@ -327,24 +359,28 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                     </button>
                   </div>
 
-                  {/* Add to Cart Button */}
-                  <button
-                    type="button"
-                    onClick={(e) => handleAddToCart(e)}
-                    className="flex-1 h-12 px-5 rounded-xl bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <ShoppingBag className="w-4 h-4" />
-                    <span>Thêm vào giỏ hàng</span>
-                  </button>
+                  {/* CTA Buttons: 1 Line Equal Width on Mobile */}
+                  <div className="grid grid-cols-2 gap-2.5 w-full sm:flex sm:flex-1 sm:items-center sm:gap-3">
+                    {/* Add to Cart Button */}
+                    <button
+                      type="button"
+                      onClick={(e) => handleAddToCart(e)}
+                      className="h-12 w-full sm:flex-1 px-2.5 sm:px-5 rounded-xl bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer"
+                    >
+                      <ShoppingBag className="w-4 h-4 shrink-0" />
+                      <span className="truncate">Thêm vào giỏ hàng</span>
+                    </button>
 
-                  {/* Buy Now Button */}
-                  <button
-                    type="button"
-                    onClick={(e) => handleBuyNow(e)}
-                    className="h-12 px-6 rounded-xl bg-[#181818] hover:bg-[#181818] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer shrink-0"
-                  >
-                    <span>Mua ngay</span>
-                  </button>
+                    {/* Buy Now Button */}
+                    <button
+                      type="button"
+                      onClick={(e) => handleBuyNow(e)}
+                      className="h-12 w-full sm:flex-1 px-2.5 sm:px-6 rounded-xl bg-[#181818] hover:bg-[#000000] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer"
+                    >
+                      <Zap className="w-4 h-4 shrink-0 text-[#D4A359]" />
+                      <span className="truncate">Mua ngay</span>
+                    </button>
+                  </div>
                 </div>
               </div>
 
@@ -366,57 +402,87 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
 
         {/* Detailed Information Tabs */}
         <div className="mt-10 bg-white rounded-3xl shadow-xs border border-[#EEEEEE] overflow-hidden">
-          {/* Tabs Navigation */}
-          <div className="overflow-x-auto border-b border-[#EEEEEE] no-scrollbar bg-[#F8F8F8]">
-            <div className="flex min-w-max p-2 gap-1.5 sm:gap-2">
+          {/* Tabs Navigation Header */}
+          <div className="relative border-b border-[#EEEEEE] bg-[#F8F8F8]">
+            {/* Left Scroll Arrow */}
+            {canScrollLeft && (
               <button
-                onClick={() => setActiveTab("desc")}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
-                  activeTab === "desc"
-                    ? "bg-white text-[#4B193E] shadow-xs"
-                    : "text-[#666666] hover:text-[#111111]"
-                }`}
+                type="button"
+                onClick={() => scrollTabs("left")}
+                className="absolute left-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white shadow-md border border-[#EEEEEE] flex items-center justify-center text-[#4B193E] hover:bg-[#F8F8F8] transition-all cursor-pointer"
+                aria-label="Cuộn tab sang trái"
               >
-                Mô Tả Sản Phẩm & Công Dụng
+                <ChevronLeft className="w-4 h-4" />
               </button>
+            )}
 
+            {/* Right Scroll Arrow */}
+            {canScrollRight && (
               <button
-                onClick={() => setActiveTab("usage")}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
-                  activeTab === "usage"
-                    ? "bg-white text-[#4B193E] shadow-xs"
-                    : "text-[#666666] hover:text-[#111111]"
-                }`}
+                type="button"
+                onClick={() => scrollTabs("right")}
+                className="absolute right-1.5 top-1/2 -translate-y-1/2 z-10 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white shadow-md border border-[#EEEEEE] flex items-center justify-center text-[#4B193E] hover:bg-[#F8F8F8] transition-all cursor-pointer animate-pulse"
+                aria-label="Cuộn tab sang phải"
               >
-                Hướng Dẫn Sử Dụng
+                <ChevronRight className="w-4 h-4" />
               </button>
+            )}
 
-              <button
-                onClick={() => setActiveTab("origin")}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
-                  activeTab === "origin"
-                    ? "bg-white text-[#4B193E] shadow-xs"
-                    : "text-[#666666] hover:text-[#111111]"
-                }`}
-              >
-                Nguồn Gốc & Chứng Nhận
-              </button>
+            {/* Scrollable Container */}
+            <div
+              ref={tabsRef}
+              className="overflow-x-auto no-scrollbar scroll-smooth px-7 sm:px-8 p-2"
+            >
+              <div className="flex min-w-max gap-1.5 sm:gap-2">
+                <button
+                  onClick={() => setActiveTab("desc")}
+                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+                    activeTab === "desc"
+                      ? "bg-white text-[#4B193E] shadow-xs"
+                      : "text-[#666666] hover:text-[#111111]"
+                  }`}
+                >
+                  Mô Tả Sản Phẩm & Công Dụng
+                </button>
 
-              <button
-                onClick={() => setActiveTab("reviews")}
-                className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all flex items-center gap-1.5 ${
-                  activeTab === "reviews"
-                    ? "bg-white text-[#4B193E] shadow-xs"
-                    : "text-[#666666] hover:text-[#111111]"
-                }`}
-              >
-                <span>Đánh Giá Khách Hàng</span>
-                {product.reviews && product.reviews.length > 0 && (
-                  <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[#4B193E]/10 text-[#4B193E] font-extrabold">
-                    {product.reviews.length}
-                  </span>
-                )}
-              </button>
+                <button
+                  onClick={() => setActiveTab("usage")}
+                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+                    activeTab === "usage"
+                      ? "bg-white text-[#4B193E] shadow-xs"
+                      : "text-[#666666] hover:text-[#111111]"
+                  }`}
+                >
+                  Hướng Dẫn Sử Dụng
+                </button>
+
+                <button
+                  onClick={() => setActiveTab("origin")}
+                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all ${
+                    activeTab === "origin"
+                      ? "bg-white text-[#4B193E] shadow-xs"
+                      : "text-[#666666] hover:text-[#111111]"
+                  }`}
+                >
+                  Nguồn Gốc & Chứng Nhận
+                </button>
+
+                <button
+                  onClick={() => setActiveTab("reviews")}
+                  className={`px-4 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-bold rounded-xl transition-all flex items-center gap-1.5 ${
+                    activeTab === "reviews"
+                      ? "bg-white text-[#4B193E] shadow-xs"
+                      : "text-[#666666] hover:text-[#111111]"
+                  }`}
+                >
+                  <span>Đánh Giá Khách Hàng</span>
+                  {product.reviews && product.reviews.length > 0 && (
+                    <span className="px-1.5 py-0.5 text-[10px] rounded-full bg-[#4B193E]/10 text-[#4B193E] font-extrabold">
+                      {product.reviews.length}
+                    </span>
+                  )}
+                </button>
+              </div>
             </div>
           </div>
 
