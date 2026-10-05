@@ -381,7 +381,7 @@ export function Footer() {
       {/* Korean Samulnori / Nongak Folk Dancer with Sangmo Ribbon Swirls (Right Wing) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 sm:-right-4 lg:-right-8 -top-4 sm:-top-6 lg:-top-10 z-0 w-52 sm:w-64 lg:w-80 xl:w-96 opacity-45 sm:opacity-80 lg:opacity-95 drop-shadow-[0_16px_36px_rgba(0,0,0,0.6)] select-none transition-transform duration-700 hover:scale-105"
+        className="pointer-events-none absolute -right-6 sm:-right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-0 w-42 sm:w-52 lg:w-64 xl:w-76 opacity-45 sm:opacity-80 lg:opacity-95 drop-shadow-[0_16px_36px_rgba(0,0,0,0.6)] select-none transition-transform duration-700 hover:scale-105"
       >
         <Image
           src="/images/footer/korean-dancer-art.png"
