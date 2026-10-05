@@ -227,7 +227,7 @@ function ConsultationForm({ theme }: { theme?: FooterTheme }) {
             ? "bg-white text-[#4A163D] hover:bg-gray-100 hover:text-[#3B0F30]"
             : theme === "beige"
             ? "bg-[#B5222A] text-white hover:bg-[#991C23] shadow-md"
-            : "bg-white text-[#1E2B2A] hover:bg-gray-100 hover:text-black"
+            : "bg-white text-[#084D46] hover:bg-gray-100 hover:text-black"
         }`}
       >
         <span>GỬI YÊU CẦU TƯ VẤN</span>
@@ -335,7 +335,7 @@ export function Footer() {
     <footer
       className={`relative overflow-hidden border-t transition-colors duration-500 font-sans ${
         isSlate
-          ? "border-[#D4A359]/40 bg-gradient-to-b from-[#03403B] via-[#062F2B] to-[#021A17] text-white"
+          ? "border-[#D4A359]/40 bg-gradient-to-b from-[#0E695F] via-[#084D46] to-[#04332D] text-white"
           : isPurple
           ? "border-[#D4A359]/35 bg-gradient-to-b from-[#4A163D] via-[#3B0F30] to-[#2B0823] text-white"
           : "border-[#D4A359]/50 bg-[#FFEFD5] text-[#2D2118]"
@@ -576,7 +576,7 @@ export function Footer() {
                   ? "border-[#D4A359]/35 bg-white/[0.08] hover:border-[#D4A359]/60 hover:bg-white/[0.12] hover:shadow-[0_12px_36px_rgba(75,25,62,0.6)]"
                   : isBeige
                   ? "border-[#D4A359]/40 bg-white/80 hover:border-[#D4A359]/70 hover:bg-white/95 hover:shadow-[0_12px_36px_rgba(180,140,80,0.2)]"
-                  : "border-[#D4A359]/40 bg-black/30 hover:border-[#D4A359]/70 hover:bg-black/40 hover:shadow-[0_12px_36px_rgba(2,26,23,0.8)]"
+                  : "border-[#D4A359]/40 bg-black/25 hover:border-[#D4A359]/70 hover:bg-black/35 hover:shadow-[0_12px_36px_rgba(4,38,34,0.8)]"
               }`}
             >
               <div className="flex items-center gap-2 mb-2">
@@ -601,7 +601,7 @@ export function Footer() {
             ? "border-[#D4A359]/30 bg-[#140210] text-white"
             : isBeige
             ? "border-[#D4A359]/30 bg-[#F7E5C8] text-[#2D2118]"
-            : "border-[#D4A359]/30 bg-[#011412] text-white"
+            : "border-[#D4A359]/30 bg-[#032622] text-white"
         }`}
       >
         <div className={`mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-[13px] sm:flex-row sm:items-center sm:justify-between ${
@@ -630,7 +630,7 @@ export function Footer() {
                 style={{
                   backgroundColor:
                     isSlate
-                      ? "#03403B"
+                      ? "#0E695F"
                       : isPurple
                       ? "#4A163D"
                       : "#FFEFD5",
@@ -639,7 +639,7 @@ export function Footer() {
               <span>
                 Đổi màu Footer:{" "}
                 {isSlate
-                  ? "Xám Xanh Đậm"
+                  ? "Xanh Ngọc Sáng"
                   : isPurple
                   ? "Tím Mận"
                   : "Màu Be Pure (#FFEFD5)"}
