@@ -348,6 +348,21 @@ export function Footer() {
         />
       </div>
 
+      {/* Fresh 6-Year Korean Ginseng Root with Berries (Left Wing - Below Golden Cloud) */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute bottom-[50px] left-[10px] z-0 w-42 sm:w-54 lg:w-66 xl:w-78 opacity-40 sm:opacity-65 lg:opacity-80 drop-shadow-[0_12px_28px_rgba(0,0,0,0.5)] select-none transition-transform duration-700 hover:scale-105"
+      >
+        <Image
+          src="/images/footer/korean-ginseng-user.png"
+          alt=""
+          width={1024}
+          height={1024}
+          className="w-full h-auto object-contain object-left-bottom"
+          priority={false}
+        />
+      </div>
+
       {/* Traditional Korean Golden Cloud (Gureum) - Top Right */}
       <div
         aria-hidden="true"
@@ -373,7 +388,7 @@ export function Footer() {
           alt=""
           width={817}
           height={890}
-          className="w-full h-auto object-contain object-right-top"
+          className="w-full h-auto object-contain object-right-top scale-x-[-1]"
           priority={false}
         />
       </div>
