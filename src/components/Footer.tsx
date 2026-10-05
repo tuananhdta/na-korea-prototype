@@ -403,12 +403,12 @@ export function Footer() {
           {/* ═══ Cột 1: Thương hiệu & Di sản (Col 4) ═══ */}
           <div className="lg:col-span-4 space-y-4">
             <Link href="/" className="inline-block group" aria-label="Trang chủ Hồng Kim Sâm">
-              <div className="relative h-14 w-48 transition-transform duration-300 group-hover:scale-105">
+              <div className="relative h-[67.2px] w-[230.4px] transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={BRAND_LOGOS.horizontalWhite}
                   alt="6년근 김정환홍삼 | Hồng Kim Sâm"
                   fill
-                  sizes="200px"
+                  sizes="230px"
                   className="object-contain object-left drop-shadow-md"
                 />
               </div>
@@ -434,9 +434,9 @@ export function Footer() {
                 <Image
                   src="/images/wholesale/logoSaleNoti.png"
                   alt="Đã thông báo Bộ Công Thương"
-                  width={140}
-                  height={53}
-                  className="h-10 w-auto object-contain brightness-[1.05]"
+                  width={168}
+                  height={64}
+                  className="h-12 w-auto object-contain brightness-[1.05]"
                 />
               </a>
             </div>

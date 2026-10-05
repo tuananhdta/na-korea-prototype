@@ -129,8 +129,8 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             href="/"
             className={`relative block shrink-0 transition-all duration-300 hover:scale-[1.02] ${
               isScrolled
-                ? "h-[42px] w-[142px] min-[400px]:h-[48px] min-[400px]:w-[162px] sm:h-[54px] sm:w-[180px]"
-                : "h-[48px] w-[160px] min-[400px]:h-[56px] min-[400px]:w-[188px] sm:h-[62.4px] sm:w-[208px]"
+                ? "h-[50.4px] w-[170.4px] min-[400px]:h-[57.6px] min-[400px]:w-[194.4px] sm:h-[64.8px] sm:w-[216px]"
+                : "h-[57.6px] w-[192px] min-[400px]:h-[67.2px] min-[400px]:w-[225.6px] sm:h-[74.88px] sm:w-[249.6px]"
             }`}
           >
             {/* White logo — fades IN when at top of page (transparent) */}
@@ -138,7 +138,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               src={BRAND_LOGOS.horizontalWhite}
               alt="6년근 김정환홍삼 | Hồng Kim Sâm"
               fill
-              sizes="(max-width: 400px) 160px, (max-width: 640px) 188px, 208px"
+              sizes="(max-width: 400px) 192px, (max-width: 640px) 226px, 250px"
               className={`object-contain object-left transition-opacity duration-400 ease-in-out ${
                 isOverlayTop ? "opacity-100" : "opacity-0"
               }`}
@@ -150,7 +150,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
               alt=""
               aria-hidden="true"
               fill
-              sizes="(max-width: 640px) 194px, 208px"
+              sizes="(max-width: 640px) 226px, 250px"
               className={`object-contain object-left transition-opacity duration-400 ease-in-out ${
                 isOverlayTop ? "opacity-0" : "opacity-100"
               }`}
@@ -180,7 +180,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                     href={item.href}
                     aria-haspopup={item.subItems ? "menu" : undefined}
                     aria-expanded={item.subItems ? isHovered : undefined}
-                    className={`relative flex h-full min-w-[84px] max-w-[160px] items-center justify-center gap-1.5 px-2.5 text-center font-sans text-[16px] leading-[1.15] tracking-[0.01em] transition-all duration-200 xl:px-3.5 xl:text-[17px] ${
+                    className={`relative flex h-full shrink-0 items-center justify-center gap-1.5 px-2.5 text-center font-sans text-[15px] leading-[1.15] tracking-[0.01em] whitespace-nowrap transition-all duration-200 xl:px-3.5 xl:text-[16px] ${
                       isHovered || isRouteActive
                         ? isTopTransparent
                           ? "font-bold text-white"
@@ -190,8 +190,8 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
                           : "font-semibold text-[#111111] hover:text-[#4B193E]"
                     }`}
                   >
-                    <span className="relative flex h-full items-center justify-center">
-                      <span>{item.title}</span>
+                    <span className="relative flex h-full items-center justify-center whitespace-nowrap">
+                      <span className="whitespace-nowrap">{item.title}</span>
 
                       {/* Active / Hover underline: clean solid 2.5px bar matching sub-menu line style */}
                       <span

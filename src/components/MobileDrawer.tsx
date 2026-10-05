@@ -110,12 +110,12 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
       >
         {/* Drawer Header with Logo & Close Button */}
         <div className="flex items-center justify-between border-b border-white/10 px-5 py-4 bg-[#241320]">
-          <div className="relative h-9 w-32">
+          <div className="relative h-[43.2px] w-[153.6px]">
             <Image
               src={BRAND_LOGOS.horizontalWhite}
               alt="Hồng Kim Sâm"
               fill
-              sizes="128px"
+              sizes="154px"
               className="object-contain object-left"
             />
           </div>
@@ -148,7 +148,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
                     {isRouteActive && (
                       <span className="h-1.5 w-1.5 rounded-full bg-white shadow-[0_0_6px_rgba(255,255,255,0.8)] animate-pulse" />
                     )}
-                    <span>{item.title}</span>
+                    <span className="whitespace-nowrap">{item.title}</span>
                     <span
                       aria-hidden="true"
                       className={`absolute -bottom-1 left-0 right-0 h-[2px] origin-left rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.7)] transition-[opacity,transform] duration-300 ${
