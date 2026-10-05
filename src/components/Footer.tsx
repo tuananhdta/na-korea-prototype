@@ -98,7 +98,12 @@ function SocialIcon({ name }: { name: "facebook" | "instagram" | "tiktok" }) {
   );
 }
 
-function SocialLinks() {
+function SocialLinks({ theme }: { theme?: FooterTheme }) {
+  const isBeige = theme === "beige";
+  const linkClass = isBeige
+    ? "flex h-9 w-9 items-center justify-center rounded-full bg-[#2D2118]/10 text-[#2D2118] border border-[#2D2118]/20 shadow-sm transition-all duration-300 hover:bg-[#B5222A] hover:border-[#B5222A] hover:text-white hover:scale-110 hover:shadow-[0_0_14px_rgba(181,34,42,0.4)] active:scale-95"
+    : "flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white border border-white/25 shadow-sm transition-all duration-300 hover:bg-[#D4A359] hover:border-[#D4A359] hover:text-black hover:scale-110 hover:shadow-[0_0_14px_rgba(212,163,89,0.7)] active:scale-95";
+
   return (
     <ul className="flex items-center gap-2.5" aria-label="Mạng xã hội">
       <li>
@@ -107,7 +112,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Facebook"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white border border-white/25 shadow-sm transition-all duration-300 hover:bg-[#D4A359] hover:border-[#D4A359] hover:text-black hover:scale-110 hover:shadow-[0_0_14px_rgba(212,163,89,0.7)] active:scale-95"
+          className={linkClass}
         >
           <SocialIcon name="facebook" />
         </a>
@@ -118,7 +123,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Instagram"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white border border-white/25 shadow-sm transition-all duration-300 hover:bg-[#D4A359] hover:border-[#D4A359] hover:text-black hover:scale-110 hover:shadow-[0_0_14px_rgba(212,163,89,0.7)] active:scale-95"
+          className={linkClass}
         >
           <SocialIcon name="instagram" />
         </a>
@@ -129,7 +134,7 @@ function SocialLinks() {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Tiktok"
-          className="flex h-9 w-9 items-center justify-center rounded-full bg-white/20 text-white border border-white/25 shadow-sm transition-all duration-300 hover:bg-[#D4A359] hover:border-[#D4A359] hover:text-black hover:scale-110 hover:shadow-[0_0_14px_rgba(212,163,89,0.7)] active:scale-95"
+          className={linkClass}
         >
           <SocialIcon name="tiktok" />
         </a>
@@ -138,9 +143,12 @@ function SocialLinks() {
   );
 }
 
-function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
+type FooterTheme = "slate" | "purple" | "beige";
+
+function ConsultationForm({ theme }: { theme?: FooterTheme }) {
   const [formData, setFormData] = useState({ name: "", phone: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
+  const isBeige = theme === "beige";
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -150,8 +158,14 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
 
   if (submitted) {
     return (
-      <div className="rounded-xl border border-emerald-500/30 bg-emerald-950/40 p-4 text-center text-[13px] font-medium leading-relaxed text-emerald-200">
-        <div className="flex items-center justify-center gap-2 mb-1.5 text-emerald-400 font-bold text-sm">
+      <div className={`rounded-xl border p-4 text-center text-[13px] font-medium leading-relaxed ${
+        isBeige
+          ? "border-emerald-600/40 bg-emerald-50 text-emerald-900"
+          : "border-emerald-500/30 bg-emerald-950/40 text-emerald-200"
+      }`}>
+        <div className={`flex items-center justify-center gap-2 mb-1.5 font-bold text-sm ${
+          isBeige ? "text-emerald-700" : "text-emerald-400"
+        }`}>
           <CheckCircle2 className="h-4 w-4" />
           <span>Đã gửi thành công!</span>
         </div>
@@ -159,6 +173,14 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
       </div>
     );
   }
+
+  const inputClass = isBeige
+    ? "h-10 w-full rounded-lg border border-[#D4A359]/40 bg-white px-3 text-[13px] text-[#1C130D] placeholder:text-[#8C7A6B] outline-none transition-all duration-200 focus:border-[#9E6C15] focus:ring-1 focus:ring-[#9E6C15]/40"
+    : "h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15";
+
+  const phoneInputClass = isBeige
+    ? "h-10 w-full rounded-lg border border-[#D4A359]/40 bg-white pl-14 pr-3 text-[13px] text-[#1C130D] placeholder:text-[#8C7A6B] outline-none transition-all duration-200 focus:border-[#9E6C15] focus:ring-1 focus:ring-[#9E6C15]/40"
+    : "h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-2.5" aria-label="Đăng ký nhận tư vấn">
@@ -170,10 +192,12 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
         value={formData.name}
         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
         aria-label="Họ và tên"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+        className={inputClass}
       />
       <div className="relative">
-        <span className="pointer-events-none absolute inset-y-0 left-3 flex items-center border-r border-white/15 pr-2.5 text-[13px] text-gray-300">
+        <span className={`pointer-events-none absolute inset-y-0 left-3 flex items-center border-r pr-2.5 text-[13px] ${
+          isBeige ? "border-[#D4A359]/30 text-[#5C4838]" : "border-white/15 text-gray-300"
+        }`}>
           +84
         </span>
         <input
@@ -184,7 +208,7 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
           value={formData.phone}
           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
           aria-label="Số điện thoại"
-          className="h-10 w-full rounded-lg border border-white/15 bg-white/10 pl-14 pr-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+          className={phoneInputClass}
         />
       </div>
       <input
@@ -194,14 +218,16 @@ function ConsultationForm({ isSlate }: { isSlate?: boolean }) {
         value={formData.message}
         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
         aria-label="Lời nhắn"
-        className="h-10 w-full rounded-lg border border-white/15 bg-white/10 px-3 text-[13px] text-white placeholder:text-[#C6BBBD] outline-none transition-all duration-200 focus:border-[#D4A359] focus:ring-1 focus:ring-[#D4A359]/40 focus:bg-white/15"
+        className={inputClass}
       />
       <button
         type="submit"
         className={`group flex items-center justify-center w-full h-10 px-2.5 sm:px-3 text-xs sm:text-sm lg:text-xs min-[1360px]:text-sm uppercase tracking-tight sm:tracking-normal font-bold rounded-lg shadow-lg transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] whitespace-nowrap gap-1.5 cursor-pointer ${
-          isSlate
-            ? "bg-white text-[#1E2B2A] hover:bg-gray-100 hover:text-black"
-            : "bg-white text-[#4A163D] hover:bg-gray-100 hover:text-[#3B0F30]"
+          theme === "purple"
+            ? "bg-white text-[#4A163D] hover:bg-gray-100 hover:text-[#3B0F30]"
+            : theme === "beige"
+            ? "bg-[#B5222A] text-white hover:bg-[#991C23] shadow-md"
+            : "bg-white text-[#1E2B2A] hover:bg-gray-100 hover:text-black"
         }`}
       >
         <span>GỬI YÊU CẦU TƯ VẤN</span>
@@ -278,29 +304,41 @@ const footerJsonLd = {
 };
 
 export function Footer() {
-  const [theme, setTheme] = useState<"slate" | "purple">("slate");
+  const [theme, setTheme] = useState<FooterTheme>("slate");
 
   useEffect(() => {
-    const saved = localStorage.getItem("na_footer_theme");
-    if (saved === "purple" || saved === "slate") {
+    const saved = localStorage.getItem("na_footer_theme") as FooterTheme;
+    if (saved === "purple" || saved === "slate" || saved === "beige") {
       setTheme(saved);
     }
   }, []);
 
   const toggleTheme = () => {
-    const nextTheme = theme === "slate" ? "purple" : "slate";
+    const nextTheme: FooterTheme =
+      theme === "slate" ? "purple" : theme === "purple" ? "beige" : "slate";
     setTheme(nextTheme);
     localStorage.setItem("na_footer_theme", nextTheme);
   };
 
+  const mountainSrc =
+    theme === "slate"
+      ? "/images/footer/korean-mountains-teal.svg"
+      : theme === "purple"
+      ? "/images/footer/korean-mountains-plum.svg"
+      : "/images/footer/korean-mountains-beige.svg";
+
+  const isBeige = theme === "beige";
   const isSlate = theme === "slate";
+  const isPurple = theme === "purple";
 
   return (
     <footer
-      className={`relative overflow-hidden border-t transition-colors duration-500 font-sans text-white ${
+      className={`relative overflow-hidden border-t transition-colors duration-500 font-sans ${
         isSlate
-          ? "border-[#D4A359]/40 bg-gradient-to-b from-[#03403B] via-[#062F2B] to-[#021A17]"
-          : "border-[#D4A359]/35 bg-gradient-to-b from-[#4A163D] via-[#3B0F30] to-[#2B0823]"
+          ? "border-[#D4A359]/40 bg-gradient-to-b from-[#03403B] via-[#062F2B] to-[#021A17] text-white"
+          : isPurple
+          ? "border-[#D4A359]/35 bg-gradient-to-b from-[#4A163D] via-[#3B0F30] to-[#2B0823] text-white"
+          : "border-[#D4A359]/50 bg-[#FFEFD5] text-[#2D2118]"
       }`}
     >
       {/* Schema.org Structured Data (JSON-LD) for SEO & GEO AI Crawlers */}
@@ -312,9 +350,9 @@ export function Footer() {
       {/* Subtle Luxury Radial Texture */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
+        className="pointer-events-none absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `radial-gradient(#D4A359 1px, transparent 1px)`,
+          backgroundImage: `radial-gradient(${isBeige ? "#B88636" : "#D4A359"} 1px, transparent 1px)`,
           backgroundSize: "28px 28px",
         }}
       />
@@ -325,7 +363,7 @@ export function Footer() {
         className="pointer-events-none absolute bottom-[58px] sm:bottom-[62px] left-0 right-0 z-0 h-44 sm:h-56 lg:h-72 w-full opacity-90 transition-opacity duration-500"
       >
         <Image
-          src={isSlate ? "/images/footer/korean-mountains-teal.svg" : "/images/footer/korean-mountains-plum.svg"}
+          src={mountainSrc}
           alt=""
           fill
           sizes="100vw"
@@ -351,7 +389,7 @@ export function Footer() {
       {/* Fresh 6-Year Korean Ginseng Root with Berries (Left Wing - Below Golden Cloud) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute bottom-[50px] left-[10px] z-0 w-42 sm:w-54 lg:w-66 xl:w-78 opacity-40 sm:opacity-65 lg:opacity-80 drop-shadow-[0_12px_28px_rgba(0,0,0,0.5)] select-none transition-transform duration-700 hover:scale-105"
+        className="pointer-events-none absolute bottom-[50px] left-[10px] z-0 w-42 sm:w-54 lg:w-66 xl:w-78 opacity-40 sm:opacity-65 lg:opacity-80 drop-shadow-[0_12px_28px_rgba(0,0,0,0.3)] select-none transition-transform duration-700 hover:scale-105"
       >
         <Image
           src="/images/footer/korean-ginseng-user.png"
@@ -377,11 +415,10 @@ export function Footer() {
         />
       </div>
 
-
       {/* Korean Samulnori / Nongak Folk Dancer with Sangmo Ribbon Swirls (Right Wing) */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-6 sm:-right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-0 w-42 sm:w-52 lg:w-64 xl:w-76 opacity-45 sm:opacity-80 lg:opacity-95 drop-shadow-[0_16px_36px_rgba(0,0,0,0.6)] select-none transition-transform duration-700 hover:scale-105"
+        className="pointer-events-none absolute -right-6 sm:-right-4 lg:-right-8 top-1/2 -translate-y-1/2 z-0 w-42 sm:w-52 lg:w-64 xl:w-76 opacity-45 sm:opacity-80 lg:opacity-95 drop-shadow-[0_16px_36px_rgba(0,0,0,0.4)] select-none transition-transform duration-700 hover:scale-105"
       >
         <Image
           src="/images/footer/korean-dancer-art.png"
@@ -394,7 +431,7 @@ export function Footer() {
       </div>
 
       {/* Top Brand Gold Accent Line with Infinite Border Beam */}
-      <div className="relative z-10 h-[2px] w-full overflow-hidden bg-white/10">
+      <div className={`relative z-10 h-[2px] w-full overflow-hidden ${isBeige ? "bg-[#D4A359]/20" : "bg-white/10"}`}>
         <div className="absolute inset-y-0 w-1/3 bg-gradient-to-r from-transparent via-[#D4A359] to-transparent animate-border-beam" />
       </div>
 
@@ -405,20 +442,20 @@ export function Footer() {
             <Link href="/" className="inline-block group" aria-label="Trang chủ Hồng Kim Sâm">
               <div className="relative h-[67.2px] w-[230.4px] transition-transform duration-300 group-hover:scale-105">
                 <Image
-                  src={BRAND_LOGOS.horizontalWhite}
+                  src={isBeige ? BRAND_LOGOS.horizontal : BRAND_LOGOS.horizontalWhite}
                   alt="6년근 김정환홍삼 | Hồng Kim Sâm"
                   fill
                   sizes="230px"
-                  className="object-contain object-left drop-shadow-md"
+                  className="object-contain object-left drop-shadow-sm"
                 />
               </div>
             </Link>
 
-            <p className="font-sans text-[15px] font-bold text-[#D4A359] tracking-wide">
+            <p className={`font-sans text-[15px] font-bold tracking-wide ${isBeige ? "text-[#9E6C15]" : "text-[#D4A359]"}`}>
               Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác
             </p>
 
-            <p className="max-w-sm text-[13px] leading-relaxed text-[#E5D7DE] sm:text-[15px]">
+            <p className={`max-w-sm text-[13px] leading-relaxed sm:text-[15px] ${isBeige ? "text-[#4A382A]" : "text-[#E5D7DE]"}`}>
               Thương hiệu Hồng sâm 6 năm tuổi thượng hạng vùng núi Punggi Hàn Quốc, được kiến tạo từ 50 năm tâm huyết và bí quyết gia truyền của nghệ nhân Kim Jeong Hwan.
             </p>
 
@@ -444,13 +481,13 @@ export function Footer() {
 
           {/* ═══ Cột 2: Đơn vị nhập khẩu & Trụ sở (Col 3) ═══ */}
           <div className="lg:col-span-3 space-y-4">
-            <div className="border-b border-white/15 pb-2">
-              <h3 className="font-sans text-[15px] font-bold uppercase tracking-wider text-white">
+            <div className={`border-b pb-2 ${isBeige ? "border-[#D4A359]/30" : "border-white/15"}`}>
+              <h3 className={`font-sans text-[15px] font-bold uppercase tracking-wider ${isBeige ? "text-[#1C130D]" : "text-white"}`}>
                 Đơn vị nhập khẩu
               </h3>
             </div>
 
-            <div className="space-y-3 text-[13px] sm:text-[13.5px] leading-relaxed text-[#E5D7DE]">
+            <div className={`space-y-3 text-[13px] sm:text-[13.5px] leading-relaxed ${isBeige ? "text-[#4A382A]" : "text-[#E5D7DE]"}`}>
               <a
                 href="https://nakorea.vn/"
                 target="_blank"
@@ -469,30 +506,30 @@ export function Footer() {
               </a>
 
               <div>
-                <p className="font-bold text-white uppercase text-[14px]">
+                <p className={`font-bold uppercase text-[14px] ${isBeige ? "text-[#1C130D]" : "text-white"}`}>
                   CÔNG TY TNHH THƯƠNG MẠI NA KOREA
                 </p>
-                <p className="mt-0.5 text-[12px] text-[#CBBAC4]">
+                <p className={`mt-0.5 text-[12px] ${isBeige ? "text-[#6E5440]" : "text-[#CBBAC4]"}`}>
                   GPĐKKD/MST: 0109946846 do Sở Kế hoạch và Đầu tư TP. Hà Nội cấp
                 </p>
               </div>
 
               <address className="not-italic space-y-2.5 pt-1">
-                <div className="flex items-start gap-2 text-[#E5D7DE]">
-                  <MapPin className="h-4 w-4 shrink-0 text-[#D4A359] mt-0.5" />
+                <div className={`flex items-start gap-2 ${isBeige ? "text-[#4A382A]" : "text-[#E5D7DE]"}`}>
+                  <MapPin className={`h-4 w-4 shrink-0 mt-0.5 ${isBeige ? "text-[#9E6C15]" : "text-[#D4A359]"}`} />
                   <span>LK 19-TT1, khu nhà ở 96-96B Nguyễn Huy Tưởng, Thanh Xuân, Hà Nội</span>
                 </div>
 
-                <div className="flex items-center gap-2 text-[#E5D7DE]">
-                  <Phone className="h-4 w-4 shrink-0 text-[#D4A359]" />
-                  <a href="tel:0903409939" className="hover:text-white transition-colors">
+                <div className={`flex items-center gap-2 ${isBeige ? "text-[#4A382A]" : "text-[#E5D7DE]"}`}>
+                  <Phone className={`h-4 w-4 shrink-0 ${isBeige ? "text-[#9E6C15]" : "text-[#D4A359]"}`} />
+                  <a href="tel:0903409939" className={`transition-colors ${isBeige ? "hover:text-[#B5222A]" : "hover:text-white"}`}>
                     090.340.9939
                   </a>
                 </div>
 
-                <div className="flex items-center gap-2 text-[#E5D7DE]">
-                  <Mail className="h-4 w-4 shrink-0 text-[#D4A359]" />
-                  <a href="mailto:contact@nakorea.vn" className="hover:text-white transition-colors">
+                <div className={`flex items-center gap-2 ${isBeige ? "text-[#4A382A]" : "text-[#E5D7DE]"}`}>
+                  <Mail className={`h-4 w-4 shrink-0 ${isBeige ? "text-[#9E6C15]" : "text-[#D4A359]"}`} />
+                  <a href="mailto:contact@nakorea.vn" className={`transition-colors ${isBeige ? "hover:text-[#B5222A]" : "hover:text-white"}`}>
                     contact@nakorea.vn
                   </a>
                 </div>
@@ -502,21 +539,27 @@ export function Footer() {
 
           {/* ═══ Cột 3: Chính sách & Hỗ trợ (Col 2) ═══ */}
           <div className="lg:col-span-2 space-y-4">
-            <div className="border-b border-white/15 pb-2">
-              <h3 className="font-sans text-[15px] font-bold uppercase tracking-wider text-white">
+            <div className={`border-b pb-2 ${isBeige ? "border-[#D4A359]/30" : "border-white/15"}`}>
+              <h3 className={`font-sans text-[15px] font-bold uppercase tracking-wider ${isBeige ? "text-[#1C130D]" : "text-white"}`}>
                 Chính sách
               </h3>
             </div>
 
             <nav aria-label="Liên kết chính sách">
-              <ul className="space-y-2.5 text-[13px] sm:text-[13.5px] text-[#E5D7DE]">
+              <ul className={`space-y-2.5 text-[13px] sm:text-[13.5px] ${isBeige ? "text-[#4A382A]" : "text-[#E5D7DE]"}`}>
                 {usefulLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="group flex items-start gap-1.5 transition-all duration-200 hover:text-white hover:translate-x-1"
+                      className={`group flex items-start gap-1.5 transition-all duration-200 hover:translate-x-1 ${
+                        isBeige ? "hover:text-[#B5222A]" : "hover:text-white"
+                      }`}
                     >
-                      <ChevronRight className="h-3.5 w-3.5 shrink-0 text-[#D4A359] transition-transform duration-200 group-hover:text-white group-hover:translate-x-1 mt-0.5" />
+                      <ChevronRight className={`h-3.5 w-3.5 shrink-0 transition-transform duration-200 mt-0.5 ${
+                        isBeige
+                          ? "text-[#9E6C15] group-hover:text-[#B5222A] group-hover:translate-x-1"
+                          : "text-[#D4A359] group-hover:text-white group-hover:translate-x-1"
+                      }`} />
                       <span className="leading-snug">{link.label}</span>
                     </Link>
                   </li>
@@ -525,25 +568,27 @@ export function Footer() {
             </nav>
           </div>
 
-          {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) (Animation #2: Glow & Shimmer) ═══ */}
+          {/* ═══ Cột 4: Đăng ký nhận tư vấn VIP (Col 3) ═══ */}
           <div className="lg:col-span-3 space-y-3">
             <div
               className={`rounded-2xl border p-4 lg:p-3.5 xl:p-5 shadow-xl backdrop-blur-md transition-all duration-300 ${
-                isSlate
-                  ? "border-[#D4A359]/40 bg-black/30 hover:border-[#D4A359]/70 hover:bg-black/40 hover:shadow-[0_12px_36px_rgba(2,26,23,0.8)]"
-                  : "border-[#D4A359]/35 bg-white/[0.08] hover:border-[#D4A359]/60 hover:bg-white/[0.12] hover:shadow-[0_12px_36px_rgba(75,25,62,0.6)]"
+                isPurple
+                  ? "border-[#D4A359]/35 bg-white/[0.08] hover:border-[#D4A359]/60 hover:bg-white/[0.12] hover:shadow-[0_12px_36px_rgba(75,25,62,0.6)]"
+                  : isBeige
+                  ? "border-[#D4A359]/40 bg-white/80 hover:border-[#D4A359]/70 hover:bg-white/95 hover:shadow-[0_12px_36px_rgba(180,140,80,0.2)]"
+                  : "border-[#D4A359]/40 bg-black/30 hover:border-[#D4A359]/70 hover:bg-black/40 hover:shadow-[0_12px_36px_rgba(2,26,23,0.8)]"
               }`}
             >
               <div className="flex items-center gap-2 mb-2">
-                <FileText className="h-4 w-4 text-[#D4A359]" />
-                <h3 className="font-sans text-[15px] font-bold uppercase tracking-wider text-white">
+                <FileText className={`h-4 w-4 ${isBeige ? "text-[#9E6C15]" : "text-[#D4A359]"}`} />
+                <h3 className={`font-sans text-[15px] font-bold uppercase tracking-wider ${isBeige ? "text-[#1C130D]" : "text-white"}`}>
                   Đăng ký nhận tư vấn
                 </h3>
               </div>
-              <p className="mb-3.5 text-[12px] leading-relaxed text-[#E5D7DE]">
+              <p className={`mb-3.5 text-[12px] leading-relaxed ${isBeige ? "text-[#5C4838]" : "text-[#E5D7DE]"}`}>
                 Nhận báo giá ưu đãi & tư vấn liệu trình hồng sâm chuyên sâu từ chuyên gia.
               </p>
-              <ConsultationForm isSlate={isSlate} />
+              <ConsultationForm theme={theme} />
             </div>
           </div>
         </div>
@@ -551,34 +596,62 @@ export function Footer() {
 
       {/* ═══ Dải đáy: Copyright, Demo Theme Toggle & Social Links (Top Layer) ═══ */}
       <div
-        className={`relative z-20 border-t py-4 px-4 sm:px-6 lg:px-8 transition-colors duration-500 shadow-[0_-4px_20px_rgba(0,0,0,0.4)] ${
-          isSlate
-            ? "border-[#D4A359]/30 bg-[#011412]"
-            : "border-[#D4A359]/30 bg-[#140210]"
+        className={`relative z-20 border-t py-4 px-4 sm:px-6 lg:px-8 transition-colors duration-500 shadow-[0_-4px_20px_rgba(0,0,0,0.06)] ${
+          isPurple
+            ? "border-[#D4A359]/30 bg-[#140210] text-white"
+            : isBeige
+            ? "border-[#D4A359]/30 bg-[#F7E5C8] text-[#2D2118]"
+            : "border-[#D4A359]/30 bg-[#011412] text-white"
         }`}
       >
-        <div className="mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-[13px] text-white sm:flex-row sm:items-center sm:justify-between">
+        <div className={`mx-auto flex w-full max-w-[1320px] flex-col gap-3 text-[13px] sm:flex-row sm:items-center sm:justify-between ${
+          isBeige ? "text-[#2D2118]" : "text-white"
+        }`}>
           <div className="flex flex-wrap items-center gap-3">
-            <p className="font-semibold text-white/95">© 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.</p>
+            <p className={`font-semibold ${isBeige ? "text-[#2D2118]" : "text-white/95"}`}>
+              © 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.
+            </p>
 
             {/* Demo Theme Switcher Button */}
             <button
               type="button"
               onClick={toggleTheme}
-              className="inline-flex items-center gap-1.5 rounded-full border border-[#D4A359]/40 bg-white/10 px-3 py-1 text-[12px] font-semibold text-white transition-all hover:bg-[#D4A359]/20 hover:border-[#D4A359] hover:scale-105 active:scale-95 cursor-pointer shadow-sm"
+              className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[12px] font-semibold transition-all hover:scale-105 active:scale-95 cursor-pointer shadow-sm ${
+                isBeige
+                  ? "border-[#D4A359]/60 bg-white/80 text-[#2D2118] hover:bg-white hover:border-[#9E6C15]"
+                  : "border-[#D4A359]/40 bg-white/10 text-white hover:bg-[#D4A359]/20 hover:border-[#D4A359]"
+              }`}
               title="Bấm để chuyển đổi màu giao diện Footer (Demo)"
             >
               <span
-                className="h-2.5 w-2.5 rounded-full border border-white/40 shadow-inner transition-colors duration-300"
-                style={{ backgroundColor: isSlate ? "#4A163D" : "#577674" }}
+                className={`h-2.5 w-2.5 rounded-full shadow-inner transition-colors duration-300 ${
+                  isBeige ? "border border-[#9E6C15]" : "border border-white/40"
+                }`}
+                style={{
+                  backgroundColor:
+                    isSlate
+                      ? "#03403B"
+                      : isPurple
+                      ? "#4A163D"
+                      : "#FFEFD5",
+                }}
               />
-              <span>Đổi màu Footer: {isSlate ? "Tím Mận" : "Xám Xanh Đậm"}</span>
+              <span>
+                Đổi màu Footer:{" "}
+                {isSlate
+                  ? "Xám Xanh Đậm"
+                  : isPurple
+                  ? "Tím Mận"
+                  : "Màu Be Pure (#FFEFD5)"}
+              </span>
             </button>
           </div>
 
           <div className="flex items-center gap-3">
-            <span className="hidden text-[13px] font-bold text-white md:inline tracking-wide">Kết nối với chúng tôi:</span>
-            <SocialLinks />
+            <span className={`hidden text-[13px] font-bold md:inline tracking-wide ${isBeige ? "text-[#2D2118]" : "text-white"}`}>
+              Kết nối với chúng tôi:
+            </span>
+            <SocialLinks theme={theme} />
           </div>
         </div>
       </div>

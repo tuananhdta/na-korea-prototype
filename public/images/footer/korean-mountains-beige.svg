@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" fill="none" class="w-full h-full">
+  <defs>
+    <linearGradient id="beigeGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F7E6CA" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#EED6B2" stop-opacity="0.98"/>
+    </linearGradient>
+    <linearGradient id="beigeGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EED6B2" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#E2C59A" stop-opacity="0.99"/>
+    </linearGradient>
+    <linearGradient id="beigeGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E2C59A" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#D4B282" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="goldStrokeBeige" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#B88636" stop-opacity="0.4"/>
+      <stop offset="30%" stop-color="#9E7026" stop-opacity="0.85"/>
+      <stop offset="70%" stop-color="#B88636" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#8C5F1C" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Back Mountain Ridge -->
+  <path d="M0,160 Q240,80 480,140 T960,110 Q1200,60 1440,130 L1440,320 L0,320 Z" fill="url(#beigeGrad1)"/>
+  <path d="M0,160 Q240,80 480,140 T960,110 Q1200,60 1440,130" stroke="url(#goldStrokeBeige)" stroke-width="1.5" fill="none" opacity="0.7"/>
+
+  <!-- Mid Mountain Ridge -->
+  <path d="M0,200 Q360,130 720,180 T1440,150 L1440,320 L0,320 Z" fill="url(#beigeGrad2)"/>
+  <path d="M0,200 Q360,130 720,180 T1440,150" stroke="url(#goldStrokeBeige)" stroke-width="2" fill="none" opacity="0.85"/>
+
+  <!-- Front Mountain Ridge -->
+  <path d="M0,245 Q280,195 560,230 T1120,210 Q1280,240 1440,225 L1440,320 L0,320 Z" fill="url(#beigeGrad3)"/>
+  <path d="M0,245 Q280,195 560,230 T1120,210 Q1280,240 1440,225" stroke="url(#goldStrokeBeige)" stroke-width="1.8" fill="none" opacity="0.95"/>
+</svg>
