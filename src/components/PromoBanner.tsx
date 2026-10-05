@@ -13,16 +13,16 @@ export function PromoBanner({ visible, onClose }: PromoBannerProps) {
 
   return (
     <div className="fixed inset-x-0 top-0 z-50 h-20 overflow-hidden border-b border-[#EEEEEE] bg-[#F8F7F2]">
-      {/* Centered 2000px Banner Container (100% Clone from goldsammall.com) */}
-      <div className="relative h-20 w-full max-w-full overflow-hidden flex items-center justify-center">
-        <div className="relative h-20 w-[2000px] shrink-0 left-1/2 -translate-x-1/2 flex items-center justify-center">
+      {/* 100% Perfectly Centered Banner Image Container */}
+      <div className="relative h-20 w-full flex items-center justify-center overflow-hidden px-10 sm:px-12">
+        <div className="relative h-20 w-[1400px] max-w-full shrink-0 flex items-center justify-center">
           <Image
             src="/images/top_banner_goldsammall.jpg"
             alt="Gold Sam Mall Top Banner"
             fill
-            sizes="2000px"
+            sizes="1400px"
             priority
-            className="object-cover object-center pointer-events-none select-none"
+            className="object-contain sm:object-cover object-center pointer-events-none select-none"
           />
         </div>
       </div>
