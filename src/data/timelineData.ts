@@ -219,6 +219,35 @@ export const ERA_DATA: EraGroup[] = [
         ],
       },
       {
+        year: "2016",
+        events: [
+          "Đăng ký cửa hàng miễn thuế đầu tiên tại thành phố Yeongju.",
+          "Mở rộng thị trường xuất khẩu sang Châu Âu (Cộng hòa Séc).",
+          "Khai trương nhà phân phối chính thức tại Malaysia.",
+          "Đạt chứng nhận Thương hiệu xuất sắc nhất Tỉnh Gyeongsangbuk (Gyeongsangbuk-do).",
+        ],
+        highlight: true,
+      },
+      {
+        year: "2017",
+        events: [
+          "Đạt chứng nhận Halal (MUI) chính thức cho thị trường Indonesia.",
+        ],
+      },
+      {
+        year: "2018",
+        events: [
+          "Hoàn thành xây dựng và đưa vào vận hành Nhà máy sản xuất thứ 2.",
+        ],
+        highlight: true,
+      },
+      {
+        year: "2019",
+        events: [
+          "Đạt chứng nhận An toàn Thực phẩm Quốc tế HACCP.",
+        ],
+      },
+      {
         year: "Hiện Nay",
         events: [
           "Chính thức nhập khẩu chính ngạch 100% và phân phối độc quyền tại thị trường Việt Nam bởi CÔNG TY TNHH THƯƠNG MẠI NA KOREA.",
