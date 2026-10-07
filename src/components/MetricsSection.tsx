@@ -152,15 +152,7 @@ export function MetricsSection() {
               >
                 {/* Circle badge with Dark Slate / Green background matching Footer */}
                 <div className="relative flex h-28 w-28 min-[380px]:h-32 min-[380px]:w-32 sm:h-36 sm:w-36 md:h-40 md:w-40 items-center justify-center rounded-full bg-gradient-to-b from-[#577674] via-[#3E5654] to-[#243533] border-2 border-[#D4A359]/40 shadow-[0_8px_20px_rgba(30,43,42,0.2)] transition-all duration-300 group-hover:scale-108 group-hover:border-[#D4A359] group-hover:shadow-[0_12px_28px_rgba(212,163,89,0.35)] overflow-hidden">
-                  {/* Inner subtle glow and radial texture */}
-                  <div
-                    aria-hidden="true"
-                    className="pointer-events-none absolute inset-0 opacity-10"
-                    style={{
-                      backgroundImage: `radial-gradient(#D4A359 1px, transparent 1px)`,
-                      backgroundSize: "12px 12px",
-                    }}
-                  />
+                  {/* Inner subtle glow */}
                   <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-white/20" />
 
                   {/* Metric Number with elevated & enlarged superscript suffix (+ / %) */}
