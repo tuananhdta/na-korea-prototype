@@ -58,8 +58,8 @@ test("Cẩm Nang sub menu titles are properly configured", async () => {
     read("src/lib/subNavItems.ts"),
   ]);
 
-  assert.match(navSource, /title: "Di Sản Hồng Kim Sâm"/);
+  assert.match(navSource, /title: "Di Sản Hồng Sâm Kim"/);
   assert.match(navSource, /title: "Công Dụng Ginsenoside"/);
-  assert.match(subNavSource, /title: "Di Sản Hồng Kim Sâm"/);
+  assert.match(subNavSource, /title: "Di Sản Hồng Sâm Kim"/);
   assert.match(subNavSource, /title: "Công Dụng Ginsenoside"/);
 });

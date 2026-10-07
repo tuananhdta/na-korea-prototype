@@ -143,7 +143,7 @@ export function Header({ onOpenMobileMenu, overlay = false }: HeaderProps) {
             {/* White logo — fades IN when at top of page (transparent) */}
             <Image
               src={BRAND_LOGOS.horizontalWhite}
-              alt="6년근 김정환홍삼 | Hồng Kim Sâm"
+              alt="6년근 김정환홍삼 | Hồng Sâm Kim"
               fill
               sizes="(max-width: 400px) 192px, (max-width: 640px) 226px, 250px"
               className={`object-contain object-left transition-opacity duration-400 ease-in-out ${

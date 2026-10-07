@@ -40,11 +40,11 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
   const heroContent = isProductCatalog
     ? {
         eyebrow: "BỘ SƯU TẬP & DI SẢN THƯƠNG HIỆU",
-        title: "Catalogue Sản Phẩm & Di Sản Hồng Kim Sâm",
+        title: "Catalogue Sản Phẩm & Di Sản Hồng Sâm Kim",
         description:
           "Trải nghiệm trọn bộ ấn phẩm Catalogue 32 chế phẩm Hồng sâm 6 năm tuổi Punggi Hàn Quốc, khám phá lịch sử 500 năm vùng trồng sâm và bí quyết chế biến gia truyền của nghệ nhân Kim Jeong Hwan.",
         image: "/images/slide_1.jpg",
-        imageAlt: "Catalogue Sản Phẩm Hồng Kim Sâm",
+        imageAlt: "Catalogue Sản Phẩm Hồng Sâm Kim",
       }
     : {
         eyebrow: "TÀI LIỆU Y KHOA & DƯỢC LÝ",
@@ -52,7 +52,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
         description:
           "Tài liệu y khoa & cẩm nang chuyên sâu về 30+ loại Ginsenoside quý hiếm trong Hồng sâm 6 năm tuổi, phân tích cơ chế tăng cường miễn dịch, bồi bổ khí huyết và các nghiên cứu khoa học chuyên sâu.",
         image: "/images/slide_2.jpg",
-        imageAlt: "Cẩm Nang Dược Tính Ginsenoside Hồng Kim Sâm",
+        imageAlt: "Cẩm Nang Dược Tính Ginsenoside Hồng Sâm Kim",
       };
 
   return (
@@ -85,7 +85,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
             </Link>
             <ChevronRight className="w-3.5 h-3.5 text-gray-400" />
             <span className="text-[#4B193E] font-medium">
-              {activeTab === "product-2026" ? "Di Sản Hồng Kim Sâm" : "Công Dụng Ginsenoside"}
+              {activeTab === "product-2026" ? "Di Sản Hồng Sâm Kim" : "Công Dụng Ginsenoside"}
             </span>
           </nav>
         </div>
@@ -117,7 +117,7 @@ export function CatalogClientView({ initialTab = "product-2026" }: CatalogClient
           <div className="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-2xs">
             <div className="space-y-2 text-center sm:text-left">
               <h3 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
-                Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Hồng Kim Sâm?
+                Bạn Muốn Hợp Tác Phân Phối Sản Phẩm Hồng Sâm Kim?
               </h3>
               <p className="font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-2xl">
                 NA Korea cung cấp chính sách chiết khấu đại lý hấp dẫn, hỗ trợ tài liệu in ấn Catalog, chứng từ nguồn gốc xuất xứ CO/CQ và đào tạo chuyên sâu về dược tính Ginsenoside cho đội ngũ tư vấn.

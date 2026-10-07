@@ -48,9 +48,9 @@ export function LienHeView() {
         {/* Banner Hero */}
         <PageHero
           title="Liên Hệ & Hỗ Trợ Khách Hàng"
-          description="Đội ngũ chuyên viên tư vấn dinh dưỡng của Hồng Kim Sâm luôn sẵn sàng lắng nghe và đồng hành chăm sóc sức khỏe cùng bạn."
+          description="Đội ngũ chuyên viên tư vấn dinh dưỡng của Hồng Sâm Kim luôn sẵn sàng lắng nghe và đồng hành chăm sóc sức khỏe cùng bạn."
           image="/images/ginseng-hero-2.jpg"
-          imageAlt="Liên hệ Hồng Kim Sâm"
+          imageAlt="Liên hệ Hồng Sâm Kim"
           imageOpacity={0.92}
           subNavItems={LIEN_HE_SUB_NAV}
           currentHref="/lien-he"
@@ -213,7 +213,7 @@ export function LienHeView() {
                   <ShieldCheck className="h-5 w-5 text-[#4B193E] shrink-0" />
                   <div>
                     <span className="font-bold text-[#111111] block text-xs sm:text-sm">CÔNG TY TNHH THƯƠNG MẠI NA KOREA</span>
-                    <span className="text-[#888888] block text-[11px] sm:text-xs">MST: 0109946846 • Đại diện thương hiệu Hồng Kim Sâm</span>
+                    <span className="text-[#888888] block text-[11px] sm:text-xs">MST: 0109946846 • Đại diện thương hiệu Hồng Sâm Kim</span>
                   </div>
                 </div>
 
@@ -234,7 +234,7 @@ export function LienHeView() {
                         Gửi Yêu Cầu Thành Công!
                       </h2>
                       <p className="font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#666666] max-w-md mx-auto">
-                        Cảm ơn bạn đã liên hệ. Chuyên viên tư vấn của <strong>Hồng Kim Sâm</strong> sẽ gọi lại hỗ trợ bạn trong vòng <strong>15–30 phút</strong>.
+                        Cảm ơn bạn đã liên hệ. Chuyên viên tư vấn của <strong>Hồng Sâm Kim</strong> sẽ gọi lại hỗ trợ bạn trong vòng <strong>15–30 phút</strong>.
                       </p>
                     </div>
 

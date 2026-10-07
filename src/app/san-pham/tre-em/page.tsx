@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Hồng sâm trẻ em",
     "Nước hồng sâm cho bé",
     "Hồng sâm lê hoa chuông",
-    "Hồng Kim Sâm Kids",
+    "Hồng Sâm Kim Kids",
     "Tăng đề kháng cho trẻ",
   ],
   alternates: {

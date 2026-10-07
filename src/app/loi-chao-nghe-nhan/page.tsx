@@ -49,7 +49,7 @@ export default function LoiChaoNgheNhanPage() {
       {
         "@type": "Brand",
         "name": "Hồng Sâm Kim",
-        "alternateName": ["Red Ginseng Punggi", "Hồng Kim Sâm"],
+        "alternateName": ["Red Ginseng Punggi", "Hồng Sâm Kim"],
         "description": "Thương hiệu Hồng sâm 6 năm tuổi nhập khẩu chính ngạch từ Hàn Quốc",
         "url": SITE_CONFIG.siteUrl,
       },

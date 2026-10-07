@@ -90,7 +90,7 @@ export function SanPhamNguoiLonView() {
       },
       {
         "@type": "ItemList",
-        "name": "Danh Mục Hồng Sâm Người Lớn - Hồng Kim Sâm",
+        "name": "Danh Mục Hồng Sâm Người Lớn - Hồng Sâm Kim",
         "description": "Các dòng sản phẩm Cao hồng sâm cô đặc, Nước hồng sâm Balance Time giúp bồi bổ sức khỏe, tăng cường sinh lực và tuần hoàn máu.",
         "numberOfItems": adultProducts.length,
         "itemListElement": adultProducts.map((p, idx) => ({

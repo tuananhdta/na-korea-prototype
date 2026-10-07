@@ -37,9 +37,9 @@ export function TinTucListView() {
           eyebrow="BẢN TIN & SỰ KIỆN"
           showEyebrow={false}
           title="Tin Tức & Hoạt Động Thương Hiệu"
-          description="Cập nhật những dấu mốc vinh danh quốc tế, sự kiện hợp tác chiến lược và kiến thức chăm sóc sức khỏe cùng Hồng Kim Sâm."
+          description="Cập nhật những dấu mốc vinh danh quốc tế, sự kiện hợp tác chiến lược và kiến thức chăm sóc sức khỏe cùng Hồng Sâm Kim."
           image="/images/blog/tin-tuc.jpg"
-          imageAlt="Tin tức Hồng Kim Sâm"
+          imageAlt="Tin tức Hồng Sâm Kim"
           imageOpacity={0.9}
           subNavItems={TIN_TUC_SUB_NAV}
           currentHref="/tin-tuc"

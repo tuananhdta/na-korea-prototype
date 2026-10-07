@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     default: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
     template: `%s | ${SITE_CONFIG.brandName}`,
   },
-  description: `${SITE_CONFIG.slogan}. Tổng công ty Nông nghiệp Nhân sâm Punggi - Hồng sâm 6 năm tuổi Hồng Kim Sâm phân phối độc quyền bởi NA Korea tại Việt Nam.`,
+  description: `${SITE_CONFIG.slogan}. Tổng công ty Nông nghiệp Nhân sâm Punggi - Hồng sâm 6 năm tuổi Hồng Sâm Kim phân phối độc quyền bởi NA Korea tại Việt Nam.`,
   icons: {
     icon: [{ url: "/favicon.ico" }],
   },

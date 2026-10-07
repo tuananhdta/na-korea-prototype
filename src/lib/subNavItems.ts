@@ -13,7 +13,7 @@ export const SAN_PHAM_SUB_NAV = [
 ];
 
 export const CAM_NANG_SUB_NAV = [
-  { title: "Di Sản Hồng Kim Sâm", href: "/cam-nang" },
+  { title: "Di Sản Hồng Sâm Kim", href: "/cam-nang" },
   { title: "Công Dụng Ginsenoside", href: "/cam-nang/ginsenoside" },
 ];
 

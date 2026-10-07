@@ -70,7 +70,7 @@ export function BlogDetailView({
     ],
     publisher: {
       "@type": "Organization",
-      name: "NA Korea - Hồng Kim Sâm Vietnam",
+      name: "NA Korea - Hồng Sâm Kim Vietnam",
       logo: {
         "@type": "ImageObject",
         url: "https://kimsredginseng.com/wp-content/uploads/2024/07/logo-kimsredginseng-3.png",
@@ -310,7 +310,7 @@ export function BlogDetailView({
                   </div>
                 </div>
                 <p className="text-xs sm:text-sm text-[#666666] leading-relaxed">
-                  Đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng Kim Sâm (Punggi, Hàn Quốc) tại thị trường Việt Nam.
+                  Đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng Sâm Kim (Punggi, Hàn Quốc) tại thị trường Việt Nam.
                 </p>
                 <div className="pt-2 border-t border-[#EEEEEE] flex items-center justify-between text-xs font-semibold">
                   <Link href="/ve-nha-nhap-khau" className="text-[#4B193E] hover:underline flex items-center gap-1">

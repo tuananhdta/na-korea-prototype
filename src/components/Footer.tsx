@@ -439,11 +439,11 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-8">
           {/* ═══ Cột 1: Thương hiệu & Di sản (Col 4) ═══ */}
           <div className="lg:col-span-4 space-y-4">
-            <Link href="/" className="inline-block group" aria-label="Trang chủ Hồng Kim Sâm">
+            <Link href="/" className="inline-block group" aria-label="Trang chủ Hồng Sâm Kim">
               <div className="relative h-[67.2px] w-[230.4px] transition-transform duration-300 group-hover:scale-105">
                 <Image
                   src={isBeige ? BRAND_LOGOS.horizontal : BRAND_LOGOS.horizontalWhite}
-                  alt="6년근 김정환홍삼 | Hồng Kim Sâm"
+                  alt="6년근 김정환홍삼 | Hồng Sâm Kim"
                   fill
                   sizes="230px"
                   className="object-contain object-left drop-shadow-sm"
@@ -609,7 +609,7 @@ export function Footer() {
         }`}>
           <div className="flex flex-wrap items-center gap-3">
             <p className={`font-semibold ${isBeige ? "text-[#2D2118]" : "text-white/95"}`}>
-              © 2026 NA Korea - Hồng Kim Sâm Vietnam. All rights reserved.
+              © 2026 NA Korea - Hồng Sâm Kim Vietnam. All rights reserved.
             </p>
 
             {/* Demo Theme Switcher Button */}

@@ -7,13 +7,13 @@ export const metadata: Metadata = {
   title: {
     absolute: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
   },
-  description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
+  description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Sâm Kim Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
   keywords: [
     "Hồng sâm Kim",
     "Nơi tận tâm trở thành kiệt tác",
     "hongsamkim.com",
-    "Hồng Kim Sâm",
-    "Hồng sâm Hồng Kim Sâm",
+    "Hồng Sâm Kim",
+    "Hồng sâm Hồng Sâm Kim",
     "Nhân sâm Punggi 6 năm tuổi",
     "NA Korea",
     "Cao hồng sâm Hàn Quốc",
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
-    description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
+    description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Sâm Kim Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
     url: `${SITE_CONFIG.siteUrl}/`,
     siteName: `${SITE_CONFIG.brandName} - NA Korea`,
     locale: "vi_VN",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: `${SITE_CONFIG.brandName} - ${SITE_CONFIG.slogan}`,
-    description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
+    description: `${SITE_CONFIG.brandName}, phân phối chính hãng Hồng sâm 6 năm tuổi Hồng Sâm Kim Punggi Hàn Quốc bởi NA Korea: cao hồng sâm, nước hồng sâm, củ khô, bộ quà biếu thượng hạng.`,
   },
 };
 
@@ -52,7 +52,7 @@ export default function Home() {
     "name": SITE_CONFIG.brandName,
     "alternateName": SITE_CONFIG.subBrandName,
     "url": SITE_CONFIG.siteUrl,
-    "description": `${SITE_CONFIG.slogan}. Nhà phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm tại Việt Nam.`,
+    "description": `${SITE_CONFIG.slogan}. Nhà phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Sâm Kim tại Việt Nam.`,
     "publisher": {
       "@type": "Organization",
       "name": SITE_CONFIG.companyName,
@@ -67,7 +67,7 @@ export default function Home() {
     "name": SITE_CONFIG.companyName,
     "alternateName": SITE_CONFIG.brandName,
     "slogan": SITE_CONFIG.slogan,
-    "description": `${SITE_CONFIG.slogan}. Đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm của nghệ nhân Kim Jeong Hwan từ vùng Punggi Hàn Quốc.`,
+    "description": `${SITE_CONFIG.slogan}. Đại diện nhập khẩu và phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Sâm Kim của nghệ nhân Kim Jeong Hwan từ vùng Punggi Hàn Quốc.`,
     "url": SITE_CONFIG.siteUrl,
     "telephone": SITE_CONFIG.hotline,
     "email": SITE_CONFIG.email,
@@ -103,7 +103,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
       />
       <h1 className="sr-only">
-        Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác | Hồng Kim Sâm Punggi 6 năm tuổi Hàn Quốc
+        Hồng sâm Kim - Nơi tận tâm trở thành kiệt tác | Hồng Sâm Kim Punggi 6 năm tuổi Hàn Quốc
       </h1>
       <HomeClientView />
     </>

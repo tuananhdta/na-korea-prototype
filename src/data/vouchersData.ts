@@ -56,7 +56,7 @@ export const SYSTEM_VOUCHERS: Voucher[] = [
     terms: "Áp dụng cho đơn hàng từ 1.500.000₫ trở lên.",
   },
   {
-    code: "HONGKIMSAM",
+    code: "HONGSAMKIM",
     title: "Voucher 15%",
     description: "Giảm 15% đặc quyền cho đơn Hồng Sâm từ 2.000.000₫",
     type: "percent",

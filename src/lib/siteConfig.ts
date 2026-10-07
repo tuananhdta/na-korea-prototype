@@ -2,7 +2,7 @@ export const SITE_CONFIG = {
   domain: "hongsamkim.com",
   siteUrl: "https://hongsamkim.com",
   brandName: "Hồng Sâm Kim",
-  subBrandName: "Hồng Kim Sâm",
+  subBrandName: "Hồng Sâm Kim",
   companyName: "Công ty TNHH Thương Mại NA Korea",
   taxId: "0109946846",
   slogan: "Nơi tận tâm trở thành kiệt tác",

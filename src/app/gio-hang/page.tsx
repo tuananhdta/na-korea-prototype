@@ -4,7 +4,7 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Giỏ Hàng Của Bạn",
-  description: "Quản lý giỏ hàng sản phẩm Hồng sâm Hồng Kim Sâm Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea.",
+  description: "Quản lý giỏ hàng sản phẩm Hồng sâm Hồng Sâm Kim Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea.",
   alternates: {
     canonical: `${SITE_CONFIG.siteUrl}/gio-hang`,
   },

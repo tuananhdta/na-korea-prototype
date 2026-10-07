@@ -113,7 +113,7 @@ export function MobileDrawer({ isOpen, onClose }: MobileDrawerProps) {
           <div className="relative h-[43.2px] w-[153.6px]">
             <Image
               src={BRAND_LOGOS.horizontalWhite}
-              alt="Hồng Kim Sâm"
+              alt="Hồng Sâm Kim"
               fill
               sizes="154px"
               className="object-contain object-left"

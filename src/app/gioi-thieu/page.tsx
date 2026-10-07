@@ -60,7 +60,7 @@ export default function GioiThieuPage() {
       {
         "@type": "Brand",
         "name": "Hồng Sâm Kim",
-        "alternateName": ["Red Ginseng Punggi", "Hồng Kim Sâm"],
+        "alternateName": ["Red Ginseng Punggi", "Hồng Sâm Kim"],
         "foundingDate": "1986",
         "description": "Thương hiệu Hồng sâm 6 năm tuổi nguyên bản Punggi Hàn Quốc",
       },

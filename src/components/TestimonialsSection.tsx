@@ -20,7 +20,7 @@ const testimonials = [
     location: "Khách hàng tại Hà Nội (62 tuổi)",
     product: "Đã mua: Cao Hồng Sâm Cô Đặc 6 Năm Tuổi",
     image: "/images/products/cao-hong-sam-kims-red-ginseng-100g-hu.jpeg",
-    imageAlt: "Cao hồng sâm cô đặc Hồng Kim Sâm",
+    imageAlt: "Cao hồng sâm cô đặc Hồng Sâm Kim",
   },
   {
     quote:
@@ -30,7 +30,7 @@ const testimonials = [
     product: "Đã mua: Nước Hồng Sâm Trẻ Em Kids Growth",
     image:
       "/images/products/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-30-goi-x-60ml.jpeg",
-    imageAlt: "Nước hồng sâm trẻ em Hồng Kim Sâm",
+    imageAlt: "Nước hồng sâm trẻ em Hồng Sâm Kim",
   },
   {
     quote:
@@ -50,7 +50,7 @@ const testimonials = [
     product: "Đã mua: Hồng Sâm Lựu Collagen Thượng Hạng",
     image:
       "/images/products/hong-sam-luu-collagen-thuong-hang-kims-red-ginseng-30-goi-x-12gr.png",
-    imageAlt: "Hồng sâm lựu collagen thượng hạng Hồng Kim Sâm",
+    imageAlt: "Hồng sâm lựu collagen thượng hạng Hồng Sâm Kim",
   },
   {
     quote:
@@ -60,7 +60,7 @@ const testimonials = [
     product: "Đã mua: Hồng Sâm Nguyên Củ Tẩm Mật Ong 320g",
     image:
       "/images/products/hong-sam-nguyen-cu-tam-mat-ong-320g-8-cu.jpeg",
-    imageAlt: "Hồng sâm nguyên củ tẩm mật ong Hồng Kim Sâm",
+    imageAlt: "Hồng sâm nguyên củ tẩm mật ong Hồng Sâm Kim",
   },
   {
     quote:
@@ -80,7 +80,7 @@ const testimonials = [
     product: "Đã mua: Hồng Sâm 6 Năm Tuổi Thái Lát Tẩm Mật Ong",
     image:
       "/images/products/hong-sam-6-nam-tuoi-thai-lat-tam-mat-ong-kims-red-ginseng.png",
-    imageAlt: "Hồng sâm thái lát tẩm mật ong Hồng Kim Sâm",
+    imageAlt: "Hồng sâm thái lát tẩm mật ong Hồng Sâm Kim",
   },
   {
     quote:
@@ -90,17 +90,17 @@ const testimonials = [
     product: "Đã mua: Hồng Sâm Tăng Chiều Cao Trẻ Em Kids High",
     image:
       "/images/products/hong-sam-tang-chieu-cao-kims-red-ginseng-30-goi-x-10gr.png",
-    imageAlt: "Hồng sâm tăng chiều cao trẻ em Hồng Kim Sâm",
+    imageAlt: "Hồng sâm tăng chiều cao trẻ em Hồng Sâm Kim",
   },
   {
     quote:
-      "“Đợt Tết vừa rồi con gái mua tặng bộ quà biếu Hồng Kim Sâm. Hộp gỗ dập kim sang trọng vô cùng, sản phẩm đa dạng từ nước sâm đến củ khô. Món quà sức khỏe rất ý nghĩa.”",
+      "“Đợt Tết vừa rồi con gái mua tặng bộ quà biếu Hồng Sâm Kim. Hộp gỗ dập kim sang trọng vô cùng, sản phẩm đa dạng từ nước sâm đến củ khô. Món quà sức khỏe rất ý nghĩa.”",
     name: "Bác Phạm Minh Đức",
     location: "Khách hàng tại Nghệ An (67 tuổi)",
     product: "Đã mua: Bộ Quà Biếu Hồng Sâm Thượng Hạng Hanneul",
     image:
       "/images/products/set-qua-bieu-kims-red-ginseng-3-san-pham-thuong-hang.png",
-    imageAlt: "Bộ quà biếu hồng sâm thượng hạng Hồng Kim Sâm",
+    imageAlt: "Bộ quà biếu hồng sâm thượng hạng Hồng Sâm Kim",
   },
   {
     quote:
@@ -168,7 +168,7 @@ export function TestimonialsSection() {
           </h2>
 
           <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
-            Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Hồng Kim Sâm
+            Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Hồng Sâm Kim
           </p>
         </div>
 

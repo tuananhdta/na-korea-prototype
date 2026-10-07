@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: SanPhamPageProps): Promise<Me
 
   const cleanDescription = product.description
     ? product.description.replace(/<[^>]*>?/gm, "").slice(0, 160)
-    : `${product.title} - Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea. Giá ${product.price}.`;
+    : `${product.title} - Hồng sâm 6 năm tuổi Hồng Sâm Kim Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea. Giá ${product.price}.`;
 
   return {
     title: product.title,
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: SanPhamPageProps): Promise<Me
     keywords: [
       product.title,
       "Hồng sâm Kim",
-      "Hồng Kim Sâm",
+      "Hồng Sâm Kim",
       "Hồng sâm Hàn Quốc",
       "Nhân sâm Punggi",
       ...product.categories,

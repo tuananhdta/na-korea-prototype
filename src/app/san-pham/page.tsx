@@ -4,11 +4,11 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Sản Phẩm Hồng Sâm Hàn Quốc Cao Cấp",
-  description: "Khám phá bộ sưu tập Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc: cao hồng sâm cô đặc, nước hồng sâm stick, củ sâm khô, sâm lát mật ong chính ngạch.",
+  description: "Khám phá bộ sưu tập Hồng sâm 6 năm tuổi Hồng Sâm Kim Punggi Hàn Quốc: cao hồng sâm cô đặc, nước hồng sâm stick, củ sâm khô, sâm lát mật ong chính ngạch.",
   keywords: [
     "Sản phẩm hồng sâm",
     "Hồng sâm Hàn Quốc",
-    "Hồng Kim Sâm",
+    "Hồng Sâm Kim",
     "Cao hồng sâm 6 năm tuổi",
     "Nước hồng sâm",
     "Hồng sâm Punggi",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: `Sản Phẩm Hồng Sâm Hàn Quốc Cao Cấp | ${SITE_CONFIG.brandName}`,
-    description: "Bộ sưu tập Hồng sâm 6 năm tuổi Hồng Kim Sâm Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea.",
+    description: "Bộ sưu tập Hồng sâm 6 năm tuổi Hồng Sâm Kim Punggi Hàn Quốc nhập khẩu chính ngạch bởi NA Korea.",
     url: `${SITE_CONFIG.siteUrl}/san-pham`,
     type: "website",
   },

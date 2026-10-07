@@ -28,7 +28,7 @@ const REVIEWS_DATA: ReviewItem[] = [
     comment:
       "Tôi dùng cao sâm cô đặc Kim Jeong Hwan mỗi sáng pha nước ấm. Sau 3 tuần thấy ăn ngon miệng hơn, đêm ngủ sâu giấc và sáng dậy người rất khoan khoái, không còn mệt mỏi.",
     image: "/images/products/cao-hong-sam-kims-red-ginseng-100g-hu.jpeg",
-    imageAlt: "Cao hồng sâm cô đặc Hồng Kim Sâm",
+    imageAlt: "Cao hồng sâm cô đặc Hồng Sâm Kim",
   },
   {
     id: "rev-2",
@@ -41,7 +41,7 @@ const REVIEWS_DATA: ReviewItem[] = [
       "Bé 4 tuổi nhà mình trước đây rất biếng ăn và hay ốm vặt khi thời tiết thay đổi. Từ lúc uống sâm trẻ em vị thơm ngọt tự nhiên dễ uống, trộm vía bé ăn ngon và khỏe khoắn hơn hẳn.",
     image:
       "/images/products/hong-sam-le-hoa-chuong-thuong-hang-cho-tre-em-30-goi-x-60ml.jpeg",
-    imageAlt: "Nước hồng sâm trẻ em Hồng Kim Sâm",
+    imageAlt: "Nước hồng sâm trẻ em Hồng Sâm Kim",
   },
   {
     id: "rev-3",
@@ -67,7 +67,7 @@ const REVIEWS_DATA: ReviewItem[] = [
       "Tôi dùng Hồng sâm lựu Collagen được 2 tháng nay, da dẻ hồng hào hẳn ra, vết nám mờ đi rõ rệt. Vị lựu chua ngọt rất dễ uống, gói nhỏ tiện mang theo đi du lịch hay đi làm.",
     image:
       "/images/products/hong-sam-luu-collagen-thuong-hang-kims-red-ginseng-30-goi-x-12gr.png",
-    imageAlt: "Hồng sâm lựu collagen thượng hạng Hồng Kim Sâm",
+    imageAlt: "Hồng sâm lựu collagen thượng hạng Hồng Sâm Kim",
   },
   {
     id: "rev-5",
@@ -80,7 +80,7 @@ const REVIEWS_DATA: ReviewItem[] = [
       "Sâm củ dẻo ngon, thơm nồng vị mật ong rừng quyện cùng sâm Punggi. Mỗi sáng nhấm nháp 2-3 lát giúp huyết áp ổn định, xương khớp bớt đau nhức hẳn khi trời trở lạnh.",
     image:
       "/images/products/hong-sam-nguyen-cu-tam-mat-ong-320g-8-cu.jpeg",
-    imageAlt: "Hồng sâm nguyên củ tẩm mật ong Hồng Kim Sâm",
+    imageAlt: "Hồng sâm nguyên củ tẩm mật ong Hồng Sâm Kim",
   },
   {
     id: "rev-6",
@@ -106,7 +106,7 @@ const REVIEWS_DATA: ReviewItem[] = [
       "Sâm thái lát đóng gói từng khay rất vệ sinh. Vị ngọt nhẹ không gắt, miếng sâm dai dẻo thơm. Lái xe đường dài ngậm 1-2 lát là tỉnh táo tinh thần ngay lập tức.",
     image:
       "/images/products/hong-sam-6-nam-tuoi-thai-lat-tam-mat-ong-kims-red-ginseng.png",
-    imageAlt: "Hồng sâm thái lát tẩm mật ong Hồng Kim Sâm",
+    imageAlt: "Hồng sâm thái lát tẩm mật ong Hồng Sâm Kim",
   },
   {
     id: "rev-8",
@@ -119,7 +119,7 @@ const REVIEWS_DATA: ReviewItem[] = [
       "Bé nhà mình 7 tuổi uống hết 2 hộp thấy tăng chiều cao rõ rệt và nhanh nhẹn hơn. Sản phẩm chuẩn nội địa Hàn Quốc nhập khẩu chính ngạch nên gia đình rất yên tâm.",
     image:
       "/images/products/hong-sam-tang-chieu-cao-kims-red-ginseng-30-goi-x-10gr.png",
-    imageAlt: "Hồng sâm tăng chiều cao trẻ em Hồng Kim Sâm",
+    imageAlt: "Hồng sâm tăng chiều cao trẻ em Hồng Sâm Kim",
   },
   {
     id: "rev-9",
@@ -129,10 +129,10 @@ const REVIEWS_DATA: ReviewItem[] = [
     rating: 5,
     date: "12/09/2024",
     comment:
-      "Đợt Tết vừa rồi con gái mua tặng bộ quà biếu Hồng Kim Sâm. Hộp gỗ dập kim sang trọng vô cùng, sản phẩm đa dạng từ nước sâm đến củ khô. Món quà sức khỏe rất ý nghĩa.",
+      "Đợt Tết vừa rồi con gái mua tặng bộ quà biếu Hồng Sâm Kim. Hộp gỗ dập kim sang trọng vô cùng, sản phẩm đa dạng từ nước sâm đến củ khô. Món quà sức khỏe rất ý nghĩa.",
     image:
       "/images/products/set-qua-bieu-kims-red-ginseng-3-san-pham-thuong-hang.png",
-    imageAlt: "Bộ quà biếu hồng sâm thượng hạng Hồng Kim Sâm",
+    imageAlt: "Bộ quà biếu hồng sâm thượng hạng Hồng Sâm Kim",
   },
   {
     id: "rev-10",
@@ -151,7 +151,7 @@ const REVIEWS_DATA: ReviewItem[] = [
 
 export function CustomerReviewsSection({
   title = "Đánh giá từ khách hàng thực tế",
-  subtitle = "Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Hồng Kim Sâm",
+  subtitle = "Trải nghiệm sức khỏe chân thực từ hơn 10.000 khách hàng tin dùng Hồng Sâm Kim",
 }: {
   title?: string;
   subtitle?: string;

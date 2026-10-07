@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "Hoạt chất Saponin trong hồng sâm",
     "Ginsenoside Rg1 Rb1 Rg3",
     "Tác dụng của hồng sâm 6 năm tuổi",
-    "Hồng Kim Sâm",
+    "Hồng Sâm Kim",
     "NA Korea",
   ],
   alternates: {

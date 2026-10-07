@@ -80,9 +80,9 @@ export function NhaNhapKhauView() {
       <main className="flex-1 pb-20">
         <PageHero
           title="Nhà Nhập Khẩu & Chính Sách Hợp Tác Phân Phối"
-          description="Đồng hành cùng NA Korea — Nhà nhập khẩu & phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm chính ngạch từ Hàn Quốc. Cơ hội gia tăng doanh thu vượt trội cho đối tác chăm sóc sức khỏe và quà biếu cao cấp."
+          description="Đồng hành cùng NA Korea — Nhà nhập khẩu & phân phối độc quyền thương hiệu Hồng sâm 6 năm tuổi Hồng Sâm Kim chính ngạch từ Hàn Quốc. Cơ hội gia tăng doanh thu vượt trội cho đối tác chăm sóc sức khỏe và quà biếu cao cấp."
           image="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
-          imageAlt="Nhà nhập khẩu NA Korea - Hồng Kim Sâm"
+          imageAlt="Nhà nhập khẩu NA Korea - Hồng Sâm Kim"
           imageOpacity={0.92}
           subNavItems={NHA_NHAP_KHAU_SUB_NAV}
           currentHref="/nha-nhap-khau"
@@ -123,7 +123,7 @@ export function NhaNhapKhauView() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
               <div className="lg:col-span-6 space-y-5">
                 <p className="font-sans text-base font-normal leading-6 text-[#111111]">
-                  <strong>Hồng Kim Sâm</strong> là thương hiệu hồng sâm 6 năm tuổi thượng hạng đến từ vùng đất thánh Punggi (Hàn Quốc), được chế tác dưới sự dẫn dắt của Bậc thầy Nhân sâm với quy trình kiểm định nghiêm ngặt từ nông trường đến thành phẩm.
+                  <strong>Hồng Sâm Kim</strong> là thương hiệu hồng sâm 6 năm tuổi thượng hạng đến từ vùng đất thánh Punggi (Hàn Quốc), được chế tác dưới sự dẫn dắt của Bậc thầy Nhân sâm với quy trình kiểm định nghiêm ngặt từ nông trường đến thành phẩm.
                 </p>
                 <div className="h-px w-full max-w-[264px] bg-[#D8D2C8] my-4" />
                 <p className="font-sans text-base font-normal leading-6 text-[#111111]">
@@ -134,7 +134,7 @@ export function NhaNhapKhauView() {
               <div className="lg:col-span-6 relative aspect-4/3 rounded-2xl overflow-hidden shadow-md bg-[#181818] border border-[#EEEEEE]">
                 <Image
                   src="/images/wholesale/kimsredginseng_20221206_p_2987154700109645423_1_2987154689942648125.jpg"
-                  alt="Hồng Kim Sâm Store"
+                  alt="Hồng Sâm Kim Store"
                   fill
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"

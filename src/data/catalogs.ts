@@ -19,7 +19,7 @@ export const CATALOG_PRODUCTS_2026: CatalogItem = {
   id: "product-2026",
   tabKey: "product-2026",
   title: "Catalogue Sản Phẩm & Di Sản 2026",
-  subtitle: "Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc (Hồng Kim Sâm)",
+  subtitle: "Tổng công ty Nông nghiệp Nhân sâm Punggi Hàn Quốc (Hồng Sâm Kim)",
   badge: "BỘ CATALOGUE 2026",
   totalPages: 60,
   aspectRatio: "portrait",

@@ -4,12 +4,12 @@ import { SITE_CONFIG } from "@/lib/siteConfig";
 
 export const metadata: Metadata = {
   title: "Nhà Nhập Khẩu & Chính Sách Hợp Tác Phân Phối",
-  description: "Thông tin Nhà nhập khẩu chính ngạch NA Korea - Chương trình hợp tác phân phối độc quyền Hồng sâm 6 năm tuổi Hồng Kim Sâm tại Việt Nam.",
+  description: "Thông tin Nhà nhập khẩu chính ngạch NA Korea - Chương trình hợp tác phân phối độc quyền Hồng sâm 6 năm tuổi Hồng Sâm Kim tại Việt Nam.",
   keywords: [
     "Nhà nhập khẩu",
     "Nhà nhập khẩu hồng sâm",
     "NA Korea",
-    "Hồng Kim Sâm",
+    "Hồng Sâm Kim",
     "Phân phối hồng sâm",
     "Chính sách sỉ hồng sâm",
   ],

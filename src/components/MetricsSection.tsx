@@ -131,7 +131,7 @@ export function MetricsSection() {
           </h2>
 
           <p className="mt-4 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#111111] max-w-[860px] mx-auto">
-            Thương hiệu Hồng sâm 6 năm tuổi Hồng Kim Sâm thượng hạng từ vùng núi Punggi, Hàn Quốc — Kế thừa trọn vẹn tinh hoa bí quyết canh tác &amp; chế biến của Nghệ nhân Kim Jeong Hwan.
+            Thương hiệu Hồng sâm 6 năm tuổi Hồng Sâm Kim thượng hạng từ vùng núi Punggi, Hàn Quốc — Kế thừa trọn vẹn tinh hoa bí quyết canh tác &amp; chế biến của Nghệ nhân Kim Jeong Hwan.
           </p>
         </div>
 
