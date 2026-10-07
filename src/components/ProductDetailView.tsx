@@ -4,7 +4,6 @@ import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  ShoppingBag,
   Plus,
   Minus,
   ChevronRight,
@@ -14,7 +13,6 @@ import {
   X,
   ChevronLeft,
   CheckCircle2,
-  Zap,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Product, ProductReview } from "@/types/product";
@@ -365,9 +363,8 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                     <button
                       type="button"
                       onClick={(e) => handleAddToCart(e)}
-                      className="h-12 w-full sm:flex-1 px-2.5 sm:px-5 rounded-xl bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer"
+                      className="h-12 w-full sm:flex-1 px-2.5 sm:px-5 rounded-xl bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer"
                     >
-                      <ShoppingBag className="w-4 h-4 shrink-0" />
                       <span className="truncate">Thêm vào giỏ hàng</span>
                     </button>
 
@@ -375,9 +372,8 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
                     <button
                       type="button"
                       onClick={(e) => handleBuyNow(e)}
-                      className="h-12 w-full sm:flex-1 px-2.5 sm:px-6 rounded-xl bg-[#181818] hover:bg-[#000000] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center gap-1.5 sm:gap-2 cursor-pointer"
+                      className="h-12 w-full sm:flex-1 px-2.5 sm:px-6 rounded-xl bg-[#B5222A] hover:bg-[#991C23] text-white text-xs sm:text-sm font-bold shadow-sm active:scale-[0.98] transition-all flex items-center justify-center cursor-pointer"
                     >
-                      <Zap className="w-4 h-4 shrink-0 text-[#D4A359]" />
                       <span className="truncate">Mua ngay</span>
                     </button>
                   </div>
@@ -657,17 +653,16 @@ export function ProductDetailView({ product, relatedProducts }: ProductDetailVie
             <button
               type="button"
               onClick={(e) => handleAddToCart(e)}
-              className="h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-xs transition-colors flex items-center gap-1.5 cursor-pointer"
+              className="h-9 sm:h-10 px-3 sm:px-4 rounded-lg bg-[#4B193E] hover:bg-[#3A1230] text-white text-xs sm:text-sm font-bold shadow-xs transition-colors flex items-center justify-center cursor-pointer"
             >
-              <ShoppingBag className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-              <span className="hidden sm:inline">Thêm giỏ hàng</span>
+              <span>Thêm giỏ hàng</span>
             </button>
             <button
               type="button"
               onClick={(e) => handleBuyNow(e)}
-              className="h-9 sm:h-10 px-4 sm:px-5 rounded-lg bg-white text-[#181818] hover:bg-white/90 text-xs sm:text-sm font-extrabold shadow-xs transition-colors cursor-pointer"
+              className="h-9 sm:h-10 px-4 sm:px-5 rounded-lg bg-[#B5222A] hover:bg-[#991C23] text-white text-xs sm:text-sm font-extrabold shadow-xs transition-colors cursor-pointer"
             >
-              Mua ngay
+              <span>Mua ngay</span>
             </button>
           </div>
         </div>
