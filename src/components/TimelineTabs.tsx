@@ -32,7 +32,7 @@ export function TimelineTabs() {
               >
                 <div className="text-sm tracking-tight">{era.label}</div>
                 <div className="text-[11px] text-gray-400 mt-0.5 truncate font-normal">
-                  {era.badge.replace(/^GIAI ĐOẠN [I|V]+:\s*/, "")}
+                  {era.badge.includes(": ") ? era.badge.split(": ")[1] : era.badge}
                 </div>
               </button>
             );

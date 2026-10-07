@@ -172,11 +172,11 @@ export const ERA_DATA: EraGroup[] = [
     ],
   },
   {
-    id: "era-2010-2019",
-    label: "2010 – 2019",
-    badge: "GIAI ĐOẠN III: VƯƠN TẦM QUỐC TẾ & KHẮT KHE ISO 22000",
-    summaryTitle: "Phục Vụ Tại Davos Forum 2010 & Thành Lập Viện Nghiên Cứu R&D",
-    summaryDesc: "Sản phẩm Hồng Sâm Kim vinh dự được lựa chọn phục vụ các nguyên thủ tại Diễn đàn Kinh tế Thế giới Davos 2010, thành lập Trung tâm R&D chuyên sâu và đạt chứng nhận an toàn thực phẩm ISO 22000.",
+    id: "era-2010-present",
+    label: "2010 – Hiện nay",
+    badge: "GIAI ĐOẠN III: VƯƠN TẦM QUỐC TẾ & PHÂN PHỐI ĐỘC QUYỀN TẠI VIỆT NAM",
+    summaryTitle: "Phục Vụ Tại Davos Forum 2010, Đạt ISO 22000 & Phân Phối Độc Quyền Tại Việt Nam",
+    summaryDesc: "Sản phẩm Hồng Sâm Kim vinh dự được lựa chọn phục vụ các nguyên thủ tại Diễn đàn Kinh tế Thế giới Davos 2010, thành lập Trung tâm R&D chuyên sâu, đạt chứng nhận ISO 22000 và được CÔNG TY TNHH THƯƠNG MẠI NA KOREA nhập khẩu chính ngạch 100%, phân phối độc quyền tại Việt Nam.",
     icon: "Globe",
     items: [
       {
@@ -218,16 +218,6 @@ export const ERA_DATA: EraGroup[] = [
           "Được chứng nhận là Doanh nghiệp Tăng trưởng Mới xuất sắc Hàn Quốc.",
         ],
       },
-    ],
-  },
-  {
-    id: "era-present",
-    label: "Hiện Nay",
-    badge: "GIAI ĐOẠN IV: PHÂN PHỐI ĐỘC QUYỀN TẠI VIỆT NAM",
-    summaryTitle: "Chính Thức Hiện Diện Tại Việt Nam Qua Nhà Phân Phối NA Korea",
-    summaryDesc: "Nhập khẩu chính ngạch 100% từ Hàn Quốc, phân phối độc quyền bởi CÔNG TY TNHH THƯƠNG MẠI NA KOREA với đầy đủ kiểm định y tế và tiêu chuẩn chất lượng cao nhất.",
-    icon: "ShieldCheck",
-    items: [
       {
         year: "Hiện Nay",
         events: [
