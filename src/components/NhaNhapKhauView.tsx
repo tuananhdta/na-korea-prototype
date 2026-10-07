@@ -1,6 +1,5 @@
 "use client";
 
-import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Header } from "@/components/Header";
@@ -10,14 +9,13 @@ import { NHA_NHAP_KHAU_SUB_NAV } from "@/lib/subNavItems";
 import { SectionIndicator } from "@/components/SectionIndicator";
 import {
   ChevronRight,
-  CheckCircle2,
   DollarSign,
   Truck,
   Award,
   BookOpen,
   Image as ImageIcon,
-  Send,
   ShieldCheck,
+  ExternalLink,
 } from "lucide-react";
 
 const POLICIES = [
@@ -54,25 +52,6 @@ const POLICIES = [
 ];
 
 export function NhaNhapKhauView() {
-  const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({
-    name: "",
-    phone: "",
-    email: "",
-    city: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 500);
-  };
-
   return (
     <div className="min-h-screen bg-[#F8F8F8] flex flex-col font-sans text-[#333333] antialiased">
       <Header overlay />
@@ -111,7 +90,7 @@ export function NhaNhapKhauView() {
           {/* Section 1: Giới thiệu thương hiệu & Điểm tựa uy tín */}
           <section className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 shadow-2xs border border-[#EEEEEE]">
             <div className="mx-auto max-w-[1080px] text-center mb-8 sm:mb-12">
-              <SectionIndicator activeIndex={1} total={3} />
+              <SectionIndicator activeIndex={1} total={2} />
               <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
                 Đơn vị nhập khẩu &amp; phân phối độc quyền
               </p>
@@ -129,6 +108,17 @@ export function NhaNhapKhauView() {
                 <p className="font-sans text-base font-normal leading-6 text-[#111111]">
                   Sản phẩm đạt chuẩn <strong>HACCP, GMP, FDA Hoa Kỳ</strong> và được tỉnh Gyeongsangbuk-do lựa chọn làm <strong>Quà tặng ngoại giao quốc gia</strong>. Tại Việt Nam, <strong>NA Korea</strong> cam kết bảo hộ quyền lợi đối tác, hỗ trợ pháp lý 100% và tạo mọi điều kiện để đại lý phát triển bền vững.
                 </p>
+                <div className="pt-2">
+                  <a
+                    href="http://nakorea.vn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-xl bg-[#B5222A] hover:bg-[#991C23] px-5 py-3 font-sans text-sm font-bold text-white shadow-sm transition-all duration-300 hover:shadow-md hover:-translate-y-0.5 active:scale-[0.98]"
+                  >
+                    <span>Truy cập Website NA Korea (nakorea.vn)</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
 
               <div className="lg:col-span-6 relative aspect-4/3 rounded-2xl overflow-hidden shadow-md bg-[#181818] border border-[#EEEEEE]">
@@ -147,7 +137,7 @@ export function NhaNhapKhauView() {
           {/* Section 2: 6 Chính sách hợp tác dành cho đối tác */}
           <section className="space-y-10">
             <div className="mx-auto max-w-[1080px] text-center mb-8 sm:mb-12">
-              <SectionIndicator activeIndex={2} total={3} />
+              <SectionIndicator activeIndex={2} total={2} />
               <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
                 Quyền lợi &amp; chính sách ưu đãi
               </p>
@@ -179,148 +169,6 @@ export function NhaNhapKhauView() {
                   </div>
                 );
               })}
-            </div>
-          </section>
-
-          {/* Section 3: Centered Luxury Registration Form */}
-          <section className="max-w-3xl mx-auto w-full">
-            <div className="bg-white rounded-3xl p-6 sm:p-10 md:p-12 shadow-xs border border-[#EEEEEE]">
-              {submitted ? (
-                <div className="text-center py-10 space-y-4">
-                  <div className="w-16 h-16 bg-emerald-50 border-2 border-emerald-500 text-emerald-600 rounded-full flex items-center justify-center mx-auto animate-bounce">
-                    <CheckCircle2 className="w-8 h-8" />
-                  </div>
-                  <div className="space-y-1.5">
-                    <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111]">
-                      Đăng Ký Hợp Tác Thành Công!
-                    </h2>
-                    <p className="font-sans text-base font-normal leading-6 text-[#666666] max-w-md mx-auto">
-                      Giám đốc kinh doanh phụ trách khu vực của <strong>NA Korea</strong> sẽ trực tiếp liên hệ và gửi bảng chính sách chiết khấu chi tiết tới bạn trong thời gian sớm nhất.
-                    </p>
-                  </div>
-
-                  <div className="pt-2">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        setSubmitted(false);
-                        setFormData({ name: "", phone: "", email: "", city: "", message: "" });
-                      }}
-                      className="inline-flex items-center gap-2 rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-5 py-2.5 font-sans text-xs font-bold text-[#333333] hover:border-[#4B193E] hover:text-[#4B193E] transition-all"
-                    >
-                      <span>Gửi thêm yêu cầu khác</span>
-                    </button>
-                  </div>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="mx-auto text-center mb-6">
-                    <SectionIndicator activeIndex={3} total={3} />
-                    <p className="mb-3 font-sans text-base font-normal leading-6 tracking-[-0.01em] text-[#888888]">
-                      Đăng ký trực tiếp với Nhà nhập khẩu
-                    </p>
-                    <h2 className="mb-0 font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px]">
-                      Nhận Bảng Báo Giá Sỉ &amp; Chính Sách Nhà Nhập Khẩu
-                    </h2>
-                    <p className="mt-3 font-sans text-base font-normal leading-6 text-[#666666] max-w-lg mx-auto">
-                      Vui lòng điền thông tin bên dưới để nhận chính sách chiết khấu và quyền lợi phân phối độc quyền từ NA Korea.
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="block font-sans text-xs font-bold text-[#111111]">
-                        Họ và tên người liên hệ <span className="text-[#4B193E]">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        placeholder="Ví dụ: Nguyễn Văn A"
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
-                      />
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <label className="block font-sans text-xs font-bold text-[#111111]">
-                        Số điện thoại / Zalo <span className="text-[#4B193E]">*</span>
-                      </label>
-                      <input
-                        type="tel"
-                        required
-                        value={formData.phone}
-                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        placeholder="Ví dụ: 090 340 9939"
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="space-y-1.5">
-                      <label className="block font-sans text-xs font-bold text-[#111111]">
-                        Địa chỉ Email
-                      </label>
-                      <input
-                        type="email"
-                        value={formData.email}
-                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        placeholder="email@example.com"
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
-                      />
-                    </div>
-
-                    <div className="space-y-1.5">
-                      <label className="block font-sans text-xs font-bold text-[#111111]">
-                        Tỉnh / Thành phố dự kiến phân phối <span className="text-[#4B193E]">*</span>
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.city}
-                        onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                        placeholder="Ví dụ: Hà Nội, TP.HCM, Đà Nẵng..."
-                        className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label className="block font-sans text-xs font-bold text-[#111111]">
-                      Lời nhắn / Nhu cầu hợp tác
-                    </label>
-                    <textarea
-                      rows={3}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                      placeholder="Quý đối tác vui lòng chia sẻ thêm về kế hoạch kinh doanh hoặc các câu hỏi cần giải đáp..."
-                      className="w-full rounded-xl border border-[#EEEEEE] bg-[#F8F8F8] px-4 py-3 font-sans text-sm text-[#111111] placeholder-[#A8A196] transition-all focus:border-[#4B193E] focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#4B193E]/15 resize-none"
-                    />
-                  </div>
-
-                  <div className="pt-2">
-                    <button
-                      type="submit"
-                      disabled={loading}
-                      className="group relative flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-[#4B193E] hover:bg-[#3A1230] py-4 font-sans text-sm font-bold uppercase tracking-wider text-white shadow-md transition-all duration-300 hover:shadow-lg hover:scale-[1.005] active:scale-[0.99] disabled:opacity-70"
-                    >
-                      {loading ? (
-                        <span>Đang gửi thông tin...</span>
-                      ) : (
-                        <>
-                          <span>NHẬN CHÍNH SÁCH NHÀ NHẬP KHẨU NGAY</span>
-                          <Send className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        </>
-                      )}
-                    </button>
-                  </div>
-
-                  <p className="text-center font-sans text-[11px] text-[#888888] pt-1">
-                    🔒 Thông tin đối tác được bảo mật tuyệt đối theo chính sách bảo hộ phân phối của NA Korea.
-                  </p>
-                </form>
-              )}
             </div>
           </section>
 
