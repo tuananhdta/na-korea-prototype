@@ -106,7 +106,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/the-shilla.svg",
     width: 400,
     height: 140,
-    imgClass: "h-12 sm:h-16",
   },
   {
     id: "lotte-duty-free",
@@ -115,7 +114,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/lotte.svg",
     width: 360,
     height: 160,
-    imgClass: "h-13 sm:h-16",
   },
   {
     id: "shinsegae",
@@ -124,7 +122,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/shinsegae.svg",
     width: 400,
     height: 130,
-    imgClass: "h-12 sm:h-15",
   },
   {
     id: "coupang",
@@ -133,7 +130,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/coupang.svg",
     width: 400,
     height: 130,
-    imgClass: "h-13 sm:h-17",
   },
   {
     id: "market-kurly",
@@ -142,7 +138,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/market-kurly.svg",
     width: 380,
     height: 130,
-    imgClass: "h-14 sm:h-18",
   },
   {
     id: "wooltari",
@@ -151,7 +146,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/wooltari.svg",
     width: 360,
     height: 160,
-    imgClass: "h-16 sm:h-20",
   },
   {
     id: "t-brothers",
@@ -160,7 +154,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/t-brothers.svg",
     width: 400,
     height: 130,
-    imgClass: "h-12 sm:h-16",
   },
   {
     id: "shinhan-bank",
@@ -169,7 +162,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/shinhan-bank.svg",
     width: 400,
     height: 130,
-    imgClass: "h-13 sm:h-16",
   },
   {
     id: "hana-bank",
@@ -178,7 +170,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/hana-bank.webp",
     width: 400,
     height: 130,
-    imgClass: "h-13 sm:h-16",
   },
   {
     id: "samsung-sds",
@@ -187,7 +178,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/samsung-sds.png",
     width: 400,
     height: 130,
-    imgClass: "h-11 sm:h-14",
   },
   {
     id: "k-market",
@@ -196,7 +186,6 @@ export const INTERNATIONAL_PARTNERS: Partner[] = [
     logo: "/images/partners/k-market.jpg",
     width: 380,
     height: 150,
-    imgClass: "h-14 sm:h-18",
   },
 ];
 
@@ -209,7 +198,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     logo: "/images/partners/vingroup.png",
     width: 380,
     height: 150,
-    imgClass: "h-13 sm:h-17",
   },
   {
     id: "fpt",
@@ -218,7 +206,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     logo: "/images/partners/fpt.png",
     width: 380,
     height: 150,
-    imgClass: "h-12 sm:h-15",
   },
   {
     id: "viettel",
@@ -227,7 +214,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     logo: "/images/partners/viettel.png",
     width: 360,
     height: 140,
-    imgClass: "h-18 sm:h-24",
   },
   {
     id: "vietcombank",
@@ -236,7 +222,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     logo: "/images/partners/vietcombank.webp",
     width: 380,
     height: 140,
-    imgClass: "h-12 sm:h-15",
   },
   {
     id: "bidv",
@@ -245,7 +230,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     logo: "/images/partners/bidv.png",
     width: 380,
     height: 140,
-    imgClass: "h-11 sm:h-14",
   },
   {
     id: "vietnam-airlines",
@@ -254,7 +238,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     logo: "/images/partners/vietnam-airlines.png",
     width: 400,
     height: 140,
-    imgClass: "h-12 sm:h-16",
   },
   {
     id: "vanphu-invest",
@@ -263,7 +246,6 @@ export const DOMESTIC_PARTNERS: Partner[] = [
     logo: "/images/partners/vanphu-invest.webp",
     width: 380,
     height: 130,
-    imgClass: "h-14 sm:h-18",
   },
 ];
 
@@ -276,7 +258,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
   return (
     <div
       key={`${keyPrefix}-${partner.id}`}
-      className="group/card relative flex h-28 w-60 sm:h-36 sm:w-72 shrink-0 cursor-pointer items-center justify-center px-6 sm:px-8 transition-transform duration-300 hover:scale-105"
+      className="group/card relative flex h-20 sm:h-24 w-44 sm:w-52 shrink-0 cursor-pointer items-center justify-center px-4 sm:px-5 transition-transform duration-300 hover:scale-105"
       title={`${partner.name} - ${partner.category}`}
     >
       <div className="flex h-full w-full items-center justify-center">
@@ -285,7 +267,7 @@ function CinematicPartnerCard({ partner, keyPrefix }: PartnerCardProps) {
           alt={partner.name}
           width={partner.width}
           height={partner.height}
-          className={`w-auto object-contain mix-blend-multiply opacity-90 transition-all duration-300 group-hover/card:opacity-100 ${partner.imgClass || "h-14 sm:h-18"}`}
+          className={`max-h-10 sm:max-h-12 max-w-[140px] sm:max-w-[170px] w-auto h-auto object-contain mix-blend-multiply opacity-90 transition-all duration-300 group-hover/card:opacity-100 ${partner.imgClass || ""}`}
           unoptimized
         />
       </div>
@@ -376,7 +358,7 @@ export function PartnerSection() {
             />
 
             {/* Continuous Marquee Track (Left Direction) */}
-            <div className="animate-marquee-left flex gap-6 sm:gap-8 items-center py-2">
+            <div className="animate-marquee-left flex gap-10 sm:gap-14 items-center py-2">
               {/* Loop 1 */}
               {INTERNATIONAL_PARTNERS.map((partner, index) => (
                 <CinematicPartnerCard key={`r1-l1-${partner.id}-${index}`} partner={partner} keyPrefix="r1-l1" />
@@ -409,7 +391,7 @@ export function PartnerSection() {
             />
 
             {/* Continuous Marquee Track (Right Direction) */}
-            <div className="animate-marquee-right flex gap-6 sm:gap-8 items-center py-2">
+            <div className="animate-marquee-right flex gap-10 sm:gap-14 items-center py-2">
               {/* Loop 1 */}
               {DOMESTIC_PARTNERS.map((partner, index) => (
                 <CinematicPartnerCard key={`r2-l1-${partner.id}-${index}`} partner={partner} keyPrefix="r2-l1" />
