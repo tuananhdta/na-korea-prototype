@@ -280,7 +280,7 @@ export function GioHangView() {
                   {/* Proceed to Checkout CTA Button */}
                   <Link
                     href="/thanh-toan"
-                    className="na-btn-primary w-full py-4 text-sm sm:text-base tracking-wide"
+                    className="w-full py-4 px-6 rounded-xl bg-[#B5222A] hover:bg-[#991C23] text-white text-sm sm:text-base font-bold tracking-wider transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2 cursor-pointer active:scale-[0.99]"
                   >
                     <span>TIẾN HÀNH THANH TOÁN</span>
                     <ArrowRight className="w-4 h-4" />

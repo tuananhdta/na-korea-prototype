@@ -39,22 +39,31 @@ export function CartDrawer() {
   } = useCart();
 
   const [isVoucherModalOpen, setIsVoucherModalOpen] = useState(false);
-  const [appliedVoucher, setAppliedVoucher] = useState<Voucher | null>(null);
+  const [appliedVouchers, setAppliedVouchers] = useState<Voucher[]>([]);
 
-  // Restore voucher from localStorage on mount
+  // Restore vouchers from localStorage on mount
   useEffect(() => {
     try {
-      const saved = localStorage.getItem("kims_applied_voucher");
-      if (saved) {
-        setAppliedVoucher(JSON.parse(saved));
+      const savedMulti = localStorage.getItem("kims_applied_vouchers");
+      if (savedMulti) {
+        const parsed: Voucher[] = JSON.parse(savedMulti);
+        if (Array.isArray(parsed)) {
+          setAppliedVouchers(parsed);
+          return;
+        }
+      }
+      const savedSingle = localStorage.getItem("kims_applied_voucher");
+      if (savedSingle) {
+        const single = JSON.parse(savedSingle);
+        if (single) setAppliedVouchers([single]);
       }
     } catch {}
   }, []);
 
-  const handleApplyVoucher = (voucher: Voucher) => {
-    setAppliedVoucher(voucher);
+  const handleApplyVouchers = (vouchers: Voucher[]) => {
+    setAppliedVouchers(vouchers);
     try {
-      localStorage.setItem("kims_applied_voucher", JSON.stringify(voucher));
+      localStorage.setItem("kims_applied_vouchers", JSON.stringify(vouchers));
     } catch {}
   };
 
@@ -277,14 +286,14 @@ export function CartDrawer() {
                   <div className="flex items-center gap-2">
                     <Tag className="w-4 h-4 text-[#B5222A]" />
                     <span className="font-semibold">Mã ưu đãi</span>
-                    {appliedVoucher && (
+                    {appliedVouchers.length > 0 && (
                       <span className="bg-[#B5222A] text-white px-2 py-0.5 rounded text-[10px] font-bold">
-                        {appliedVoucher.code}
+                        Đã chọn ({appliedVouchers.length})
                       </span>
                     )}
                   </div>
                   <div className="flex items-center gap-1 text-[#666666] hover:text-[#111111]">
-                    <span>{appliedVoucher ? "Đã chọn mã" : "Chọn hoặc nhập mã"}</span>
+                    <span>{appliedVouchers.length > 0 ? `${appliedVouchers.length} mã đã áp dụng` : "Chọn hoặc nhập mã"}</span>
                     <ChevronRight className="w-4 h-4" />
                   </div>
                 </button>
@@ -332,8 +341,8 @@ export function CartDrawer() {
       <VoucherModal
         isOpen={isVoucherModalOpen}
         onClose={() => setIsVoucherModalOpen(false)}
-        onApply={handleApplyVoucher}
-        currentCode={appliedVoucher?.code}
+        onApply={handleApplyVouchers}
+        currentCodes={appliedVouchers.map((v) => v.code)}
         orderTotal={selectedTotalPrice}
       />
     </div>

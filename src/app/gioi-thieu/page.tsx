@@ -117,7 +117,8 @@ export default function GioiThieuPage() {
               {/* Cột trái: Nội dung câu chuyện thương hiệu */}
               <div className="lg:col-span-7 space-y-5">
                 <h2 className="font-sans text-2xl font-semibold leading-[1.25] tracking-[-0.02em] text-[#111111] sm:text-[28px] lg:text-[32px]">
-                  Hồng Sâm Kim — Hành Trình Khai Phá Núi Sâm Gangwon & Triết Lý &quot;SẠCH – QUÝ GIÁ&quot;
+                  Hồng Sâm Kim - Hành Trình Khai Phá Vùng Trồng Sâm Punggi
+ & Triết Lý &quot;SẠCH – QUÝ GIÁ&quot;
                 </h2>
 
                 <div className="space-y-4 text-sm sm:text-base text-gray-600 leading-relaxed">

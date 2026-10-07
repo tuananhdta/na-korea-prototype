@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
-import { X, CheckCircle2, AlertCircle } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { X, CheckCircle2, AlertCircle, Check } from "lucide-react";
 import { formatNumberToVnd } from "@/context/CartContext";
 
 import {
@@ -16,8 +16,8 @@ export { SYSTEM_VOUCHERS };
 interface VoucherModalProps {
   isOpen: boolean;
   onClose: () => void;
-  onApply: (voucher: Voucher) => void;
-  currentCode?: string | null;
+  onApply: (vouchers: Voucher[]) => void;
+  currentCodes?: string[] | string | null;
   orderTotal: number;
 }
 
@@ -25,15 +25,35 @@ export function VoucherModal({
   isOpen,
   onClose,
   onApply,
-  currentCode,
+  currentCodes,
   orderTotal,
 }: VoucherModalProps) {
-  const [selectedCode, setSelectedCode] = useState<string>(currentCode || "KIMS50K");
+  const [selectedCodes, setSelectedCodes] = useState<string[]>([]);
   const [inputCode, setInputCode] = useState<string>("");
   const [errorMsg, setErrorMsg] = useState<string>("");
   const [activeConditionCode, setActiveConditionCode] = useState<string | null>(null);
 
+  useEffect(() => {
+    if (isOpen) {
+      const normalized = Array.isArray(currentCodes)
+        ? currentCodes
+        : currentCodes
+        ? [currentCodes]
+        : ["KIMS50K"];
+      setSelectedCodes(normalized);
+      setErrorMsg("");
+      setInputCode("");
+    }
+  }, [isOpen, currentCodes]);
+
   if (!isOpen) return null;
+
+  const toggleSelectCode = (code: string) => {
+    setErrorMsg("");
+    setSelectedCodes((prev) =>
+      prev.includes(code) ? prev.filter((c) => c !== code) : [...prev, code]
+    );
+  };
 
   const handleApplyInput = () => {
     setErrorMsg("");
@@ -47,31 +67,35 @@ export function VoucherModal({
 
     if (orderTotal < found.minSpend) {
       setErrorMsg(
-        `Đơn hàng cần đạt tối thiểu ${formatNumberToVnd(found.minSpend)} để sử dụng mã này`
+        `Đơn hàng cần đạt tối thiểu ${formatNumberToVnd(found.minSpend)} để sử dụng mã [${found.code}]`
       );
       return;
     }
 
-    setSelectedCode(found.code);
+    if (!selectedCodes.includes(found.code)) {
+      setSelectedCodes((prev) => [...prev, found.code]);
+    }
+    setInputCode("");
     setErrorMsg("");
   };
 
   const handleConfirm = () => {
     setErrorMsg("");
-    const voucher = findOrCreateVoucher(selectedCode);
-    if (!voucher) {
-      setErrorMsg("Vui lòng chọn một mã ưu đãi");
-      return;
+    const validVouchers: Voucher[] = [];
+    for (const code of selectedCodes) {
+      const v = findOrCreateVoucher(code);
+      if (v) {
+        if (orderTotal < v.minSpend) {
+          setErrorMsg(
+            `Mã [${v.code}] yêu cầu đơn hàng từ ${formatNumberToVnd(v.minSpend)}`
+          );
+          return;
+        }
+        validVouchers.push(v);
+      }
     }
 
-    if (orderTotal < voucher.minSpend) {
-      setErrorMsg(
-        `Đơn hàng cần đạt tối thiểu ${formatNumberToVnd(voucher.minSpend)} để sử dụng mã này`
-      );
-      return;
-    }
-
-    onApply(voucher);
+    onApply(validVouchers);
     onClose();
   };
 
@@ -87,10 +111,13 @@ export function VoucherModal({
         onClick={(e) => e.stopPropagation()}
       >
         {/* Modal Header */}
-        <div className="relative px-6 py-4.5 border-b border-[#EEEEEE] flex items-center justify-center bg-white shrink-0">
+        <div className="relative px-6 py-4.5 border-b border-[#EEEEEE] flex flex-col items-center justify-center bg-white shrink-0">
           <h3 className="font-bold text-base sm:text-lg text-[#111111] uppercase tracking-wide text-center">
             MÃ ƯU ĐÃI
           </h3>
+          <p className="text-xs text-[#666666] mt-0.5">
+            Có thể chọn áp dụng nhiều mã giảm giá cùng lúc
+          </p>
           <button
             type="button"
             onClick={onClose}
@@ -119,7 +146,7 @@ export function VoucherModal({
                     handleApplyInput();
                   }
                 }}
-                placeholder="Nhập mã ưu đãi"
+                placeholder="NHẬP MÃ ƯU ĐÃI"
                 className="flex-1 px-4 py-2.5 rounded-lg border border-[#D0D7DE] text-xs sm:text-sm text-[#111111] placeholder:text-[#888888] uppercase focus:outline-none focus:border-[#B5222A] bg-white transition-colors"
               />
               <button
@@ -147,16 +174,13 @@ export function VoucherModal({
           {/* Vouchers List */}
           <div className="space-y-4 pt-1">
             {SYSTEM_VOUCHERS.map((v) => {
-              const isSelected = selectedCode === v.code;
+              const isSelected = selectedCodes.includes(v.code);
               const isEligible = orderTotal >= v.minSpend;
 
               return (
                 <div
                   key={v.code}
-                  onClick={() => {
-                    setSelectedCode(v.code);
-                    setErrorMsg("");
-                  }}
+                  onClick={() => toggleSelectCode(v.code)}
                   className={`relative rounded-xl border transition-all duration-200 cursor-pointer flex items-stretch ${
                     v.badge ? "mt-3" : ""
                   } ${
@@ -218,18 +242,16 @@ export function VoucherModal({
                     )}
                   </div>
 
-                  {/* Vertical Dashed Line & Selector */}
+                  {/* Vertical Dashed Line & Checkbox Selector */}
                   <div className="w-14 sm:w-16 border-l border-dashed border-[#CCD4DE] flex items-center justify-center bg-transparent shrink-0">
                     <div
-                      className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-all ${
+                      className={`w-6 h-6 rounded-md border-2 flex items-center justify-center transition-all ${
                         isSelected
-                          ? "border-[#D32F2F] bg-white ring-2 ring-[#D32F2F]/20"
-                          : "border-[#9CA3AF] bg-white"
+                          ? "border-[#D32F2F] bg-[#D32F2F] text-white shadow-xs"
+                          : "border-[#9CA3AF] bg-white hover:border-[#D32F2F]"
                       }`}
                     >
-                      {isSelected && (
-                        <div className="w-2.5 h-2.5 rounded-full bg-[#D32F2F]" />
-                      )}
+                      {isSelected && <Check className="w-4 h-4 stroke-[3]" />}
                     </div>
                   </div>
                 </div>
@@ -239,13 +261,16 @@ export function VoucherModal({
         </div>
 
         {/* Modal Footer */}
-        <div className="p-4 sm:p-5 border-t border-[#EEEEEE] bg-white shrink-0">
+        <div className="p-4 sm:p-5 border-t border-[#EEEEEE] bg-white shrink-0 flex items-center justify-between gap-3">
+          <div className="text-xs text-[#666666]">
+            Đã chọn: <strong className="text-[#B5222A]">{selectedCodes.length}</strong> mã ưu đãi
+          </div>
           <button
             type="button"
             onClick={handleConfirm}
-            className="w-full py-3.5 sm:py-4 rounded-lg bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-bold text-sm sm:text-base uppercase tracking-wider transition-all duration-200 shadow-md cursor-pointer active:scale-[0.99]"
+            className="flex-1 py-3.5 sm:py-4 rounded-lg bg-[#D32F2F] hover:bg-[#B71C1C] text-white font-bold text-sm sm:text-base uppercase tracking-wider transition-all duration-200 shadow-md cursor-pointer active:scale-[0.99]"
           >
-            ÁP DỤNG
+            ÁP DỤNG ({selectedCodes.length})
           </button>
         </div>
       </div>

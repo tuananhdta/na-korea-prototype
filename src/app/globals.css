@@ -154,8 +154,8 @@
   justify-content: center;
   gap: 0.5rem;
   padding: 0.75rem 1.75rem;
-  border-radius: 0.25rem;
-  background-color: #4B193E;
+  border-radius: 0.5rem;
+  background-color: #B5222A;
   color: #FFFFFF;
   font-family: var(--font-sans);
   font-weight: 700;
@@ -167,8 +167,8 @@
 }
 
 .na-btn-primary:hover {
-  background-color: #3A1230;
-  box-shadow: 0 4px 14px rgba(75, 25, 62, 0.3);
+  background-color: #991C23;
+  box-shadow: 0 4px 14px rgba(181, 34, 42, 0.3);
 }
 
 /* Secondary Button (JungKwanJang Dark Charcoal) */

@@ -47,12 +47,7 @@ export function ThanhToanView() {
 
   // Coupon / Voucher modal state
   const [isVoucherModalOpen, setIsVoucherModalOpen] = useState(false);
-  const [appliedCoupon, setAppliedCoupon] = useState<{
-    code: string;
-    discountAmount: number;
-    label: string;
-  } | null>(null);
-  const [couponError, setCouponError] = useState("");
+  const [appliedVouchers, setAppliedVouchers] = useState<Voucher[]>([]);
 
   // Payment method: "cod" or "bank_transfer"
   const [paymentMethod, setPaymentMethod] = useState<"cod" | "bank_transfer">("cod");
@@ -70,8 +65,15 @@ export function ThanhToanView() {
   const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
   const [completedOrder, setCompletedOrder] = useState<OrderDetails | null>(null);
 
-  // Calculate discounts and totals
-  const discountAmount = appliedCoupon ? appliedCoupon.discountAmount : 0;
+  // Calculate total discounts across all applied vouchers
+  const discountAmount = appliedVouchers.reduce((sum, v) => {
+    if (totalPrice < v.minSpend) return sum;
+    if (v.type === "percent") {
+      return sum + Math.round((totalPrice * v.value) / 100);
+    }
+    return sum + v.value;
+  }, 0);
+
   const finalTotalNumber = Math.max(0, totalPrice - discountAmount);
   const formattedFinalTotal = formatNumberToVnd(finalTotalNumber);
 
@@ -84,49 +86,41 @@ export function ThanhToanView() {
 
   const isButtonDisabled = isSubmitting || items.length === 0 || !isFormComplete;
 
-  // Restore applied voucher from localStorage on mount
+  // Restore applied vouchers from localStorage on mount
   useEffect(() => {
     try {
-      const savedStr = localStorage.getItem("kims_applied_voucher");
-      if (savedStr) {
-        const voucher: Voucher = JSON.parse(savedStr);
-        let calculatedDiscount = 0;
-        if (voucher.type === "percent") {
-          calculatedDiscount = Math.round((totalPrice * voucher.value) / 100);
-        } else {
-          calculatedDiscount = Math.min(totalPrice, voucher.value);
+      const savedMulti = localStorage.getItem("kims_applied_vouchers");
+      if (savedMulti) {
+        const parsed: Voucher[] = JSON.parse(savedMulti);
+        if (Array.isArray(parsed)) {
+          setAppliedVouchers(parsed);
+          return;
         }
-        setAppliedCoupon({
-          code: voucher.code,
-          discountAmount: calculatedDiscount,
-          label: voucher.title,
-        });
+      }
+
+      // Legacy fallback
+      const savedSingle = localStorage.getItem("kims_applied_voucher");
+      if (savedSingle) {
+        const single: Voucher = JSON.parse(savedSingle);
+        if (single) {
+          setAppliedVouchers([single]);
+        }
       }
     } catch {}
-  }, [totalPrice]);
+  }, []);
 
-  const handleApplyVoucher = (voucher: Voucher) => {
-    let calculatedDiscount = 0;
-    if (voucher.type === "percent") {
-      calculatedDiscount = Math.round((totalPrice * voucher.value) / 100);
-    } else {
-      calculatedDiscount = Math.min(totalPrice, voucher.value);
-    }
-
-    setAppliedCoupon({
-      code: voucher.code,
-      discountAmount: calculatedDiscount,
-      label: voucher.title,
-    });
+  const handleApplyVouchers = (vouchers: Voucher[]) => {
+    setAppliedVouchers(vouchers);
     try {
-      localStorage.setItem("kims_applied_voucher", JSON.stringify(voucher));
+      localStorage.setItem("kims_applied_vouchers", JSON.stringify(vouchers));
     } catch {}
   };
 
-  const handleRemoveCoupon = () => {
-    setAppliedCoupon(null);
+  const handleRemoveSingleVoucher = (code: string) => {
+    const updated = appliedVouchers.filter((v) => v.code !== code);
+    setAppliedVouchers(updated);
     try {
-      localStorage.removeItem("kims_applied_voucher");
+      localStorage.setItem("kims_applied_vouchers", JSON.stringify(updated));
     } catch {}
   };
 
@@ -474,34 +468,54 @@ export function ThanhToanView() {
 
                     {/* Coupon / Voucher Selection */}
                     <div className="pt-2 border-t border-[#EEEEEE]">
-                      {appliedCoupon ? (
-                        <div className="flex items-center justify-between p-3.5 bg-[#FDF8F8] rounded-xl border border-[#B5222A]/20">
-                          <div className="flex items-center gap-2.5 min-w-0">
-                            <Tag className="w-4 h-4 text-[#B5222A] shrink-0" />
-                            <div className="min-w-0">
-                              <p className="text-xs font-bold text-[#B5222A] truncate">
-                                Mã: {appliedCoupon.code}
-                              </p>
-                              <p className="text-[11px] text-[#666666] truncate">
-                                {appliedCoupon.label} (-{formatNumberToVnd(appliedCoupon.discountAmount)})
-                              </p>
+                      {appliedVouchers.length > 0 ? (
+                        <div className="space-y-2 p-3.5 bg-[#FDF8F8] rounded-xl border border-[#B5222A]/20">
+                          <div className="flex items-center justify-between">
+                            <div className="flex items-center gap-2 text-xs font-bold text-[#B5222A]">
+                              <Tag className="w-4 h-4 text-[#B5222A]" />
+                              <span>Đã áp dụng {appliedVouchers.length} mã ưu đãi</span>
                             </div>
-                          </div>
-                          <div className="flex items-center gap-2 shrink-0 ml-2">
                             <button
                               type="button"
                               onClick={() => setIsVoucherModalOpen(true)}
                               className="text-xs font-semibold text-[#111111] hover:underline cursor-pointer"
                             >
-                              Đổi mã
+                              Sửa mã
                             </button>
-                            <button
-                              type="button"
-                              onClick={handleRemoveCoupon}
-                              className="text-xs font-semibold text-red-600 hover:text-red-800 underline cursor-pointer"
-                            >
-                              Gỡ
-                            </button>
+                          </div>
+
+                          <div className="space-y-1.5 pt-1">
+                            {appliedVouchers.map((v) => {
+                              const itemDiscount =
+                                totalPrice < v.minSpend
+                                  ? 0
+                                  : v.type === "percent"
+                                  ? Math.round((totalPrice * v.value) / 100)
+                                  : v.value;
+
+                              return (
+                                <div
+                                  key={v.code}
+                                  className="flex items-center justify-between text-xs bg-white p-2 rounded-lg border border-[#EEEEEE]"
+                                >
+                                  <div className="flex items-center gap-1.5 min-w-0">
+                                    <span className="font-bold text-[#111111] font-mono bg-[#EBF0F5] px-2 py-0.5 rounded text-[11px] shrink-0">
+                                      {v.code}
+                                    </span>
+                                    <span className="text-[11px] text-[#666666] truncate">
+                                      {v.title} (-{formatNumberToVnd(itemDiscount)})
+                                    </span>
+                                  </div>
+                                  <button
+                                    type="button"
+                                    onClick={() => handleRemoveSingleVoucher(v.code)}
+                                    className="text-[11px] font-semibold text-red-600 hover:text-red-800 underline cursor-pointer shrink-0 ml-2"
+                                  >
+                                    Gỡ
+                                  </button>
+                                </div>
+                              );
+                            })}
                           </div>
                         </div>
                       ) : (
@@ -625,8 +639,8 @@ export function ThanhToanView() {
       <VoucherModal
         isOpen={isVoucherModalOpen}
         onClose={() => setIsVoucherModalOpen(false)}
-        onApply={handleApplyVoucher}
-        currentCode={appliedCoupon?.code}
+        onApply={handleApplyVouchers}
+        currentCodes={appliedVouchers.map((v) => v.code)}
         orderTotal={totalPrice}
       />
     </div>
