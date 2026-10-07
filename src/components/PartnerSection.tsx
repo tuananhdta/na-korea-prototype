@@ -13,6 +13,38 @@ export interface Partner {
   imgClass?: string;
 }
 
+export interface PartnerPhoto {
+  id: string;
+  title: string;
+  subtitle: string;
+  tag: string;
+  image: string;
+}
+
+export const FEATURED_PARTNER_PHOTOS: PartnerPhoto[] = [
+  {
+    id: "davos-diplomacy",
+    title: "Quà Tặng Ngoại Giao Tại Davos Forum 2010",
+    subtitle: "Sản phẩm Hồng Sâm Kim vinh dự đại diện quốc gia phục vụ các nguyên thủ quốc tế.",
+    tag: "Ngoại Giao Quốc Tế",
+    image: "/images/sub01.jpg",
+  },
+  {
+    id: "retail-display",
+    title: "Hệ Thống Trưng Bày Bán Lẻ Cao Cấp",
+    subtitle: "Hiện diện tại chuỗi cửa hàng miễn thuế Shilla, Lotte Duty Free và các trung tâm thương mại lớn.",
+    tag: "Bán Lẻ & Miễn Thuế",
+    image: "/images/sub02.jpg",
+  },
+  {
+    id: "punggi-factory",
+    title: "Nhà Máy & Dây Chuyền Chuẩn ISO 22000",
+    subtitle: "Quy trình chế biến sâm 6 năm tuổi hiện đại của Nghệ nhân Kim Jeong Hwan tại Punggi.",
+    tag: "Nhà Máy & Chế Biến",
+    image: "/images/production.jpg",
+  },
+];
+
 /* ═══ 1. Đối tác Quốc tế & Hàn Quốc (Dòng 1 - Scroll Left) ═══ */
 export const INTERNATIONAL_PARTNERS: Partner[] = [
   {
@@ -298,6 +330,50 @@ export function PartnerSection() {
                 <CinematicPartnerCard key={`r2-l2-${partner.id}-${index}`} partner={partner} keyPrefix="r2-l2" />
               ))}
             </div>
+          </div>
+        </div>
+
+        {/* ─── DÒNG 3: Hình Ảnh Hợp Tác Thực Tế & Sự Kiện (Photo Grid Banner) ─── */}
+        <div className="mx-auto max-w-[1320px] px-4 sm:px-6 pt-10 border-t border-[#EEEEEE]">
+          <div className="mb-6 flex items-center justify-between">
+            <div className="inline-flex items-center font-figtree text-[11px] sm:text-xs font-bold uppercase tracking-[0.05em] text-[#111111] border-b-2 border-[#4B193E] pb-1">
+              <span>Hình Ảnh Hợp Tác &amp; Hoạt Động Thương Hiệu</span>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {FEATURED_PARTNER_PHOTOS.map((photo) => (
+              <div
+                key={photo.id}
+                className="group relative overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white shadow-2xs transition-all duration-300 hover:shadow-md hover:border-[#D4A359]"
+              >
+                {/* Image Container */}
+                <div className="relative h-52 sm:h-60 w-full overflow-hidden bg-gray-100">
+                  <Image
+                    src={photo.image}
+                    alt={photo.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 transition-opacity group-hover:opacity-70" />
+                  
+                  {/* Tag Badge */}
+                  <div className="absolute top-3 left-3 bg-[#4B193E]/90 text-white text-[11px] font-bold px-3 py-1 rounded-full backdrop-blur-xs tracking-wider uppercase shadow-xs">
+                    {photo.tag}
+                  </div>
+                </div>
+
+                {/* Content Details */}
+                <div className="p-5 space-y-2">
+                  <h3 className="font-sans text-base font-bold text-[#111111] group-hover:text-[#4B193E] transition-colors leading-snug">
+                    {photo.title}
+                  </h3>
+                  <p className="font-sans text-xs text-[#666666] leading-relaxed">
+                    {photo.subtitle}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
