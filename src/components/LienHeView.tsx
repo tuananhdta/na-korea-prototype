@@ -7,7 +7,6 @@ import { Footer } from "@/components/Footer";
 import { PageHero } from "@/components/PageHero";
 import { LIEN_HE_SUB_NAV } from "@/lib/subNavItems";
 import { SectionIndicator } from "@/components/SectionIndicator";
-import { ZaloLogo, GoogleGmailLogo, PhoneCallFilledIcon } from "@/components/icons/BrandIcons";
 import {
   ChevronRight,
   MapPin,
@@ -74,73 +73,6 @@ export function LienHeView() {
         </div>
 
         <div className="mx-auto max-w-[1240px] px-4 sm:px-6 lg:px-8 mt-10 space-y-12">
-          
-          {/* ─── 3 SLIM COMPACT QUICK-CONTACT BADGES ─── */}
-          <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-3">
-            
-            {/* Card 1: Hotline 24/7 */}
-            <a
-              href="tel:0903409939"
-              className="group relative flex items-center gap-3.5 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xs transition-all duration-300 hover:border-emerald-500 hover:shadow-sm active:scale-[0.99]"
-            >
-              <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 via-emerald-600 to-green-600 text-white shadow-[0_3px_10px_rgba(16,185,129,0.3)] transition-transform duration-300 group-hover:scale-105">
-                <PhoneCallFilledIcon className="h-5 w-5 text-white animate-phone-ring" />
-              </div>
-
-              <div className="relative min-w-0 flex-1">
-                <div className="flex items-center gap-1.5 font-sans text-[11px] font-bold uppercase tracking-wider text-[#888888]">
-                  <span>Hotline 24/7</span>
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                </div>
-                <div className="font-figtree text-base sm:text-lg font-extrabold text-[#15803D] group-hover:text-emerald-600 transition-colors truncate">
-                  090.340.9939
-                </div>
-              </div>
-            </a>
-
-            {/* Card 2: Zalo VIP */}
-            <a
-              href="https://zalo.me/0903409939"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative flex items-center gap-3.5 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xs transition-all duration-300 hover:border-[#0068FF] hover:shadow-sm active:scale-[0.99]"
-            >
-              <div className="relative flex h-11 w-11 shrink-0 items-center justify-center transition-transform duration-300 group-hover:scale-105">
-                <ZaloLogo className="h-11 w-11 rounded-xl shadow-[0_3px_10px_rgba(0,104,255,0.3)]" />
-              </div>
-
-              <div className="relative min-w-0 flex-1">
-                <div className="flex items-center gap-1.5 font-sans text-[11px] font-bold uppercase tracking-wider text-[#888888]">
-                  <span>Chat Zalo Trực Tuyến</span>
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#0068FF] animate-pulse" />
-                </div>
-                <div className="font-sans text-sm sm:text-base font-bold text-[#111111] group-hover:text-[#0068FF] transition-colors truncate">
-                  Zalo OA Kim&apos;s Ginseng
-                </div>
-              </div>
-            </a>
-
-            {/* Card 3: Google Gmail */}
-            <a
-              href="mailto:Kimsredginseng@gmail.com"
-              className="group relative flex items-center gap-3.5 overflow-hidden rounded-2xl border border-[#EEEEEE] bg-white px-4 py-3 sm:px-5 sm:py-3.5 shadow-2xs transition-all duration-300 hover:border-[#EA4335] hover:shadow-sm active:scale-[0.99]"
-            >
-              <div className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-white border border-[#EEEEEE] shadow-2xs transition-transform duration-300 group-hover:scale-105 group-hover:border-[#EA4335]/40">
-                <GoogleGmailLogo className="h-5.5 w-5.5" />
-              </div>
-
-              <div className="relative min-w-0 flex-1">
-                <div className="flex items-center gap-1.5 font-sans text-[11px] font-bold uppercase tracking-wider text-[#888888]">
-                  <span>Hộp Thư Tiếp Nhận</span>
-                  <span className="inline-block h-1.5 w-1.5 rounded-full bg-[#EA4335] animate-pulse" />
-                </div>
-                <div className="font-sans text-xs sm:text-sm font-bold text-[#111111] group-hover:text-[#EA4335] transition-colors truncate">
-                  Kimsredginseng@gmail.com
-                </div>
-              </div>
-            </a>
-
-          </div>
 
           {/* ─── MAIN 2-COLUMN SECTION (Balanced 6/6 Grid with Pixel-Perfect Alignment) ─── */}
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-12 items-stretch">
