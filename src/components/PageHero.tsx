@@ -26,7 +26,7 @@ export function PageHero({
   subNavItems,
   currentHref = "",
 }: PageHeroProps) {
-  const hasSubNav = subNavItems && subNavItems.length > 0;
+  const hasSubNav = subNavItems && subNavItems.length > 1;
 
   return (
     <section

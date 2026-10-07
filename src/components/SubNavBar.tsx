@@ -47,7 +47,7 @@ export function SubNavBar({ items, currentHref }: SubNavBarProps) {
     }
   };
 
-  if (!items || items.length === 0) return null;
+  if (!items || items.length <= 1) return null;
 
   return (
     <div className="relative w-full border-t border-white/15 bg-black/25 backdrop-blur-xs text-white z-20">
