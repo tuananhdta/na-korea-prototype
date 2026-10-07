@@ -568,7 +568,7 @@ export function ThanhToanView() {
                       className={`w-full py-4 rounded-xl text-white font-bold text-sm uppercase tracking-wider transition-all duration-300 shadow-md ${
                         isButtonDisabled
                           ? "bg-gray-300 text-gray-500 cursor-not-allowed shadow-none"
-                          : "bg-[#4B193E] hover:bg-[#3A1230] hover:shadow-lg active:scale-[0.99] cursor-pointer"
+                          : "bg-[#B5222A] hover:bg-[#991C23] hover:shadow-lg active:scale-[0.99] cursor-pointer"
                       }`}
                     >
                       {isSubmitting ? (
